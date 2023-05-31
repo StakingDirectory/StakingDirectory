@@ -19,7 +19,7 @@ export default function Header({ windowSize, environment }) {
     return (
         <>
             <Box bg={useColorModeValue("pageBackground.light", "pageBackground.dark")}>
-                <Flex h={20} alignItems={"center"} justifyContent={"space-between"}>
+                <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
                     <HStack spacing={3} alignItems={"center"}>
                         <Image
                             onClick={navigateHome}

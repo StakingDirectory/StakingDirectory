@@ -30,8 +30,11 @@ const App = () => {
     return (
         <Box minH="100vh" minW="100vw" bg={useColorModeValue("pageBackground.light", "pageBackground.dark")}>
             <Flex direction="column" justifyContent="center" alignItems="center">
-                <Box width="100%" px={"3rem"}>
-                    <Header windowSize={windowSize} environment={environment} />
+                {/* TODO: Don't hardcode colors */}
+                <Box width="100%" borderBottom={useColorModeValue("solid 1px rgb(223 223 223)", "solid 1px rgb(51 51 51)")}>
+                    <Box width="100%" px={"3rem"} maxW="1780px">
+                        <Header windowSize={windowSize} environment={environment} />
+                    </Box>
                 </Box>
             </Flex>
         </Box>
