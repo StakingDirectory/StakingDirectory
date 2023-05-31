@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, IconButton, useColorModeValue, Image } from "@chakra-ui/react"
+import { Box, Flex, HStack, useColorModeValue, Image } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons"
@@ -33,34 +33,17 @@ export default function Header({ windowSize, environment }) {
                             StakingBeat
                         </Box>
                     </HStack>
-                    <HStack spacing={3}>
+                    <HStack spacing={5}>
                         <Link href={"https://twitter.com/StakingBeat"} target="_blank">
-                            <IconButton
-                                bg={useColorModeValue("contentBackground.color.light", "contentBackground.color.dark")}
-                                _hover={{
-                                    bg: useColorModeValue("contentBackground.hoverColor.light", "contentBackground.hoverColor.dark"),
-                                }}
-                                borderRadius={"20px"}
-                                aria-label={"StakingBeat Twitter Profile"}
-                            >
-                                <FontAwesomeIcon icon={faTwitter} size={"lg"} />
-                            </IconButton>
+                            <Box w="24px" cursor={"pointer"} aria-label={"StakingBeat Twitter Profile"}>
+                                <FontAwesomeIcon icon={faTwitter} size={"xl"} />
+                            </Box>
                         </Link>
-                        {/* <Link href={"https://github.com/"} target="_blank">
-                            <IconButton
-                                bg={useColorModeValue(customTheme.contentBackground.color.light, customTheme.contentBackground.color.dark)}
-                                _hover={{
-                                    bg: useColorModeValue(
-                                        customTheme.contentBackground.hoverColor.light,
-                                        customTheme.contentBackground.hoverColor.dark
-                                    ),
-                                }}
-                                borderRadius={"20px"}
-                                aria-label={"View GitHub Source"}
-                            >
-                                <FontAwesomeIcon icon={faGithub} size={"lg"} />
-                            </IconButton>
-                        </Link> */}
+                        <Link href={"https://github.com/StakingBeat/StakingBeat"} target="_blank">
+                            <Box w="24px" cursor={"pointer"} aria-label={"View GitHub Source"}>
+                                <FontAwesomeIcon icon={faGithub} size={"xl"} />
+                            </Box>
+                        </Link>
                         <ColorModeToggle />
                         <Flex alignItems={"center"}></Flex>
                     </HStack>

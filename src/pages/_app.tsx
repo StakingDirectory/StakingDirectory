@@ -19,14 +19,8 @@ const customTheme = extendTheme({
             dark: "#1B1B1B",
         },
         contentBackground: {
-            color: {
-                light: "#EDF2F7",
-                dark: "#272A2F",
-            },
-            hoverColor: {
-                light: "#E2E8F0",
-                dark: "#323539",
-            },
+            light: "#EDF2F7",
+            dark: "#272A2F",
         },
     },
 })

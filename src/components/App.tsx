@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import Header from "./Header/Header"
 
-import { useTheme, useColorModeValue, Container, Box, Flex } from "@chakra-ui/react"
+import { useColorModeValue, Container, Box, Flex } from "@chakra-ui/react"
 
 const App = () => {
     const environment = process.env.NODE_ENV
@@ -29,13 +29,11 @@ const App = () => {
 
     return (
         <Box minH="100vh" minW="100vw" bg={useColorModeValue("pageBackground.light", "pageBackground.dark")}>
-            <Container maxW="100%" bg={useColorModeValue("pageBackground.light", "pageBackground.dark")} px={{ base: 2, xl: 16 }} pb={24}>
-                <Flex direction="column" justifyContent="center" alignItems="center">
-                    <Box width="100%" maxW={"8xl"}>
-                        <Header windowSize={windowSize} environment={environment} />
-                    </Box>
-                </Flex>
-            </Container>
+            <Flex direction="column" justifyContent="center" alignItems="center">
+                <Box width="100%" px={"3rem"}>
+                    <Header windowSize={windowSize} environment={environment} />
+                </Box>
+            </Flex>
         </Box>
     )
 }
