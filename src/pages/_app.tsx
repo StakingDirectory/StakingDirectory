@@ -3,35 +3,13 @@ import { Analytics } from "@vercel/analytics/react"
 import { useState, useEffect } from "react"
 
 import "../styles/globals.css"
+import customTheme from "../styles/customTheme"
 
 import { ChakraProvider, ColorModeScript, useColorModeValue } from "@chakra-ui/react"
-import { extendTheme } from "@chakra-ui/react"
 
 import { config } from "@fortawesome/fontawesome-svg-core"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 config.autoAddCss = false
-
-// Custom theme colors
-const customTheme = extendTheme({
-    colors: {
-        pageBackground: {
-            light: "#FFFFFF",
-            dark: "#1B1B1B",
-        },
-        contentBackground: {
-            light: "#EDF2F7",
-            dark: "#272A2F",
-        },
-        border: {
-            light: "#D3D3D3",
-            dark: "#333333",
-        },
-        divider: {
-            light: "#dfdfdf",
-            dark: "#565656",
-        },
-    },
-})
 
 // Set the HTML background color to match the Chakra UI background color
 const HtmlBackgroundColor = () => {
