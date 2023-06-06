@@ -31,7 +31,13 @@ const App = () => {
         <Box minH="100vh" minW="100vw" bg={useColorModeValue("pageBackground.light", "pageBackground.dark")}>
             <Flex direction="column" justifyContent="center" alignItems="center">
                 {/* TODO: Don't hardcode colors */}
-                <Box width="100%" borderBottom={useColorModeValue("solid 1px rgb(223 223 223)", "solid 1px rgb(51 51 51)")}>
+                {/* TODO: Move box sixing inside Header component */}
+                <Box
+                    width="100%"
+                    borderBottomWidth={"1"}
+                    borderBottom={"solid"}
+                    borderColor={useColorModeValue("pageBackground.light", "pageBackground.light")}
+                >
                     <Box width="100%" px={"3rem"} maxW="1780px">
                         <Header windowSize={windowSize} environment={environment} />
                     </Box>

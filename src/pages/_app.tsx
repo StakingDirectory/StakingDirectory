@@ -50,10 +50,19 @@ function MyApp({ Component, pageProps }: AppProps) {
         }
     }, [currentColorMode, isColorModeReady])
 
+    // Use this style to stop a default blue flash on page load when dark mode is used
+    // This does create a dark flash on light mode, but I don't have a better solution yet
+    const style = `
+      #__next {
+        background-color: ${customTheme.colors.pageBackground.dark};
+      }
+    `
+
     return (
         <ChakraProvider theme={customTheme}>
             <HtmlBackgroundColor />
             <ColorModeScript initialColorMode="dark" />
+            <style>{style}</style>
             <div id="app" className="hideUntilReady">
                 <Component {...pageProps} />
                 <Analytics />
