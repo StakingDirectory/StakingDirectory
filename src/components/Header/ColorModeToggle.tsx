@@ -8,13 +8,12 @@ export default function ColorModeToggle(props: ButtonProps) {
     return (
         <Flex h="100vh" justifyContent="center" alignItems="center">
             <Box
-                marginLeft={"20px"}
                 aria-label="Toggle Color Mode"
                 onClick={() => {
                     toggleColorMode()
                 }}
                 cursor={"pointer"}
-                w="24px"
+                w={6}
             >
                 {colorMode === "light" ? <FontAwesomeIcon icon={faMoon} size={"xl"} /> : <FontAwesomeIcon icon={faSun} size={"xl"} />}
             </Box>

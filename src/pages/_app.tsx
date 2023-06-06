@@ -22,6 +22,14 @@ const customTheme = extendTheme({
             light: "#EDF2F7",
             dark: "#272A2F",
         },
+        border: {
+            light: "#D3D3D3",
+            dark: "#333333",
+        },
+        divider: {
+            light: "#dfdfdf",
+            dark: "#565656",
+        },
     },
 })
 

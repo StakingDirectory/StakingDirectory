@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import Header from "./Header/Header"
 
-import { useColorModeValue, Container, Box, Flex } from "@chakra-ui/react"
+import { useColorModeValue, Box, Flex } from "@chakra-ui/react"
 
 const App = () => {
     const environment = process.env.NODE_ENV
@@ -30,18 +30,7 @@ const App = () => {
     return (
         <Box minH="100vh" minW="100vw" bg={useColorModeValue("pageBackground.light", "pageBackground.dark")}>
             <Flex direction="column" justifyContent="center" alignItems="center">
-                {/* TODO: Don't hardcode colors */}
-                {/* TODO: Move box sixing inside Header component */}
-                <Box
-                    width="100%"
-                    borderBottomWidth={"1"}
-                    borderBottom={"solid"}
-                    borderColor={useColorModeValue("pageBackground.light", "pageBackground.light")}
-                >
-                    <Box width="100%" px={"3rem"} maxW="1780px">
-                        <Header windowSize={windowSize} environment={environment} />
-                    </Box>
-                </Box>
+                <Header windowSize={windowSize} environment={environment} />
             </Flex>
         </Box>
     )
