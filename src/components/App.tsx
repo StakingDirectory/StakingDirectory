@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import Header from "./Header/Header"
+import DataTable from "./DataTable/DataTable"
 
 import { useColorModeValue, Box, Flex } from "@chakra-ui/react"
 
@@ -31,6 +32,7 @@ const App = () => {
         <Box minH="100vh" minW="100vw" bg={useColorModeValue("pageBackground.light", "pageBackground.dark")}>
             <Flex direction="column" justifyContent="center" alignItems="center">
                 <Header windowSize={windowSize} environment={environment} />
+                <DataTable windowSize={windowSize} environment={environment} />
             </Flex>
         </Box>
     )
