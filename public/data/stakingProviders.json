@@ -1,0 +1,20 @@
+[
+    {
+        "id": "2DEC86",
+        "name": "Lido",
+        "type": "LST",
+        "fee": "10%",
+        "minStake": "Any amount",
+        "security": { "openSource": true, "audited": true, "bugBounty": true, "battleTested": true },
+        "ethereumAligned": { "nonCensoringRelays": true, "permissionlessUsage": true, "permissionlessOperators": false, "diverseClients": false }
+    },
+    {
+        "id": "EGJLX2",
+        "name": "Lido",
+        "type": "LST",
+        "fee": "10%",
+        "minStake": "Any amount",
+        "security": { "openSource": true, "audited": true, "bugBounty": false, "battleTested": true },
+        "ethereumAligned": { "nonCensoringRelays": true, "permissionlessUsage": true, "permissionlessOperators": true, "diverseClients": true }
+    }
+]
