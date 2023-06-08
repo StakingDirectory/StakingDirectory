@@ -1,11 +1,34 @@
-import { Flex, Grid, Box, Image, useColorModeValue, Table, Thead, Tbody, Tr, Th, Td, TableContainer } from "@chakra-ui/react"
+import {
+    Flex,
+    Grid,
+    Box,
+    Image,
+    useColorModeValue,
+    Table,
+    Thead,
+    Tbody,
+    Tr,
+    Th,
+    Td,
+    TableContainer,
+    Menu,
+    MenuButton,
+    MenuList,
+    MenuOptionGroup,
+    MenuItemOption,
+    MenuDivider,
+    IconButton,
+    Text,
+    Tooltip,
+} from "@chakra-ui/react"
+
+import React, { useState } from "react"
 
 import DataRowMenuButton from "./DataRowMenuButton"
-
 import stakingProviders from "../../../public/data/stakingProviders.json"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faUserAstronaut, faBuilding, faCode, faCoins, faUsers, faServer } from "@fortawesome/free-solid-svg-icons"
+import { faUserAstronaut, faBuilding, faCode, faCoins, faUsers, faServer, faFilter, faFilterCircleXmark } from "@fortawesome/free-solid-svg-icons"
 
 export default function DataTable({ windowSize, environment }) {
     const isSSR = typeof window === "undefined"
@@ -17,7 +40,7 @@ export default function DataTable({ windowSize, environment }) {
                 justifyContent={"center"}
                 alignContent={"center"}
                 gap={1}
-                color={provider.type == "LST" ? "green" : provider.type == "Pooled" ? "blue" : "gold"}
+                color={provider.type == "LST" ? "gold" : provider.type == "Pooled" ? "blue" : "green"}
                 fontWeight={"bold"}
             >
                 {provider.type == "LST" && <FontAwesomeIcon icon={faCoins} />}
@@ -124,6 +147,58 @@ export default function DataTable({ windowSize, environment }) {
         )
     }
 
+    const HeaderButton = ({ text }) => {
+        const textElements = text.split("<br />").map((item, index) => (
+            <React.Fragment key={index}>
+                {item}
+                {index !== text.split("<br />").length - 1 && <br />}
+            </React.Fragment>
+        ))
+        return (
+            <MenuButton>
+                <Flex gap={1} alignItems={"end"}>
+                    <Box>{textElements}</Box>
+                    <Box>
+                        <FontAwesomeIcon icon={faFilter} />
+                    </Box>
+                </Flex>
+            </MenuButton>
+        )
+    }
+
+    const HeaderMenuType = () => {
+        return (
+            <MenuList minWidth={1}>
+                <MenuOptionGroup defaultValue={["dedicated", "pooled", "lst"]} type="checkbox">
+                    <MenuItemOption value="dedicated" color={"green"} fontSize={"lg"}>
+                        <Flex gap={2}>
+                            <Box width={6}>
+                                <FontAwesomeIcon icon={faServer} />
+                            </Box>
+                            <Text>Dedicated</Text>
+                        </Flex>
+                    </MenuItemOption>
+                    <MenuItemOption value="pooled" color={"blue"} fontSize={"lg"}>
+                        <Flex gap={2}>
+                            <Box width={6}>
+                                <FontAwesomeIcon icon={faUsers} />
+                            </Box>
+                            <Text>Pooled</Text>
+                        </Flex>
+                    </MenuItemOption>
+                    <MenuItemOption value="lst" color={"gold"} fontSize={"lg"}>
+                        <Flex gap={2}>
+                            <Box width={6}>
+                                <FontAwesomeIcon icon={faCoins} />
+                            </Box>
+                            <Text>LST</Text>
+                        </Flex>
+                    </MenuItemOption>
+                </MenuOptionGroup>
+            </MenuList>
+        )
+    }
+
     return (
         <Box mt={10} mb={50} width={"100%"} maxW={"1216px"} px={{ base: 0, lg: 20 }}>
             <TableContainer>
@@ -131,31 +206,67 @@ export default function DataTable({ windowSize, environment }) {
                     <Thead>
                         <Tr borderBottomWidth={1}>
                             <Th></Th>
-                            <Th textAlign={"start"}>Name</Th>
-                            <Th textOverflow={"wrap"}>
-                                Validator
-                                <br />
-                                Type
-                            </Th>
-                            <Th>Fee</Th>
-                            <Th>Min Stake</Th>
-                            <Th>
-                                Validator
-                                <br />
-                                Key Owner
+                            <Th textAlign={"start"}>
+                                <Menu variant={"DataTableHeader"} closeOnSelect={false}>
+                                    <Box ml={"-10px"}>
+                                        <HeaderButton text="NAME" />
+                                    </Box>
+                                    <HeaderMenuType />
+                                </Menu>
                             </Th>
                             <Th>
-                                Withdrawal
-                                <br />
-                                Key Owner
+                                <Menu variant={"DataTableHeader"} closeOnSelect={false}>
+                                    <HeaderButton text="TYPE" />
+                                    <HeaderMenuType />
+                                </Menu>
                             </Th>
-                            <Th>Security</Th>
                             <Th>
-                                Ethereum
-                                <br />
-                                Aligned
+                                <Menu variant={"DataTableHeader"} closeOnSelect={false}>
+                                    <HeaderButton text="FEE" />
+                                    <HeaderMenuType />
+                                </Menu>
                             </Th>
-                            <Th></Th>
+                            <Th>
+                                <Menu variant={"DataTableHeader"} closeOnSelect={false}>
+                                    <HeaderButton text="MIN STAKE" />
+                                    <HeaderMenuType />
+                                </Menu>
+                            </Th>
+                            <Th>
+                                <Menu variant={"DataTableHeader"} closeOnSelect={false}>
+                                    <HeaderButton text="VALIDATOR <br /> KEY OWNER" />
+                                    <HeaderMenuType />
+                                </Menu>
+                            </Th>
+                            <Th>
+                                <Menu variant={"DataTableHeader"} closeOnSelect={false}>
+                                    <HeaderButton text="WITHDRAWAL <br /> KEY OWNER" />
+                                    <HeaderMenuType />
+                                </Menu>
+                            </Th>
+                            <Th>
+                                <Menu variant={"DataTableHeader"} closeOnSelect={false}>
+                                    <HeaderButton text="SECURITY" />
+                                    <HeaderMenuType />
+                                </Menu>
+                            </Th>
+                            <Th>
+                                <Menu variant={"DataTableHeader"} closeOnSelect={false}>
+                                    <HeaderButton text="ETHEREUM <br /> ALIGNED" />
+                                    <HeaderMenuType />
+                                </Menu>
+                            </Th>
+                            <Th>
+                                <Tooltip gutter={4} label="Clear filters" openDelay={300}>
+                                    <IconButton
+                                        color="red"
+                                        variant="ghost"
+                                        aria-label="Clear filters"
+                                        size="sm"
+                                        icon={<FontAwesomeIcon icon={faFilterCircleXmark} />}
+                                    ></IconButton>
+                                </Tooltip>
+                            </Th>
                         </Tr>
                     </Thead>
                     <Tbody>

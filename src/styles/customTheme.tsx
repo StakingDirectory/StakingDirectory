@@ -8,7 +8,10 @@ const customTheme = extendTheme({
                 DataTable: (props: StyleFunctionProps) => ({
                     th: {
                         borderColor: props.colorMode === "dark" ? "tableBorder.dark" : "tableBorder.light",
-                        padding: "0.5rem",
+                        paddingTop: "0.5rem",
+                        paddingLeft: "0.5rem",
+                        paddingRight: "0.5rem",
+                        paddingBottom: "0",
                         fontWeight: "800",
                         verticalAlign: "bottom",
                         textAlign: "center",
@@ -28,8 +31,21 @@ const customTheme = extendTheme({
                 }),
             },
         },
+        Tooltip: {
+            baseStyle: (props: StyleFunctionProps) => ({
+                bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
+                color: props.colorMode === "dark" ? "text.dark" : "text.light",
+                borderRadius: "5px",
+                fontWeight: "bold",
+                fontSize: "sm",
+                padding: "0.6rem",
+                boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.2)",
+                _arrow: {
+                    bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
+                },
+            }),
+        },
         Menu: {
-            parts: ["list", "item", "button"],
             baseStyle: (props: StyleFunctionProps) => ({
                 list: {
                     bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
@@ -45,14 +61,28 @@ const customTheme = extendTheme({
                         bg: props.colorMode === "dark" ? "contentBackgroundHover.dark" : "contentBackgroundHover.light",
                     },
                 },
-                button: {
-                    transition: "none",
-                    _hover: {
-                        border: "2px solid",
-                        borderColor: props.colorMode === "dark" ? "tableBorder.dark" : "tableBorder.light",
-                    },
-                },
             }),
+            variants: {
+                DataTableOption: (props: StyleFunctionProps) => ({
+                    button: {
+                        transition: "none",
+                        _hover: {
+                            border: "2px solid",
+                            borderColor: props.colorMode === "dark" ? "tableBorder.dark" : "tableBorder.light",
+                        },
+                    },
+                }),
+                DataTableHeader: (props: StyleFunctionProps) => ({
+                    button: {
+                        padding: "10px",
+                        fontWeight: "bold",
+                        borderRadius: "10px",
+                        _hover: {
+                            bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",
+                        },
+                    },
+                }),
+            },
         },
     },
     colors: {
