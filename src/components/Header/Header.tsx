@@ -18,7 +18,7 @@ export default function Header({ windowSize, environment }) {
 
     return (
         <Box width="100%" borderBottomWidth={1} borderColor={useColorModeValue("border.light", "border.dark")}>
-            <Box width="100%" px={"3rem"} maxW="1780px">
+            <Box width="100%" px={{ base: "10px", sm: "3rem" }} maxW="1780px">
                 <Box bg={useColorModeValue("pageBackground.light", "pageBackground.dark")}>
                     <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
                         <HStack spacing={3} alignItems={"center"}>
@@ -30,7 +30,7 @@ export default function Header({ windowSize, environment }) {
                                 src={"./EthereumLogo.svg"}
                                 alt={"StakingBeat Logo"}
                             />
-                            <Box pr={2} minW={40} fontWeight="bold" fontSize="xl" sx={{ cursor: "default" }}>
+                            <Box pr={2} minW={30} fontWeight="bold" fontSize="xl" sx={{ cursor: "default" }}>
                                 StakingBeat
                             </Box>
                         </HStack>
