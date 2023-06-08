@@ -20,6 +20,7 @@ import {
     IconButton,
     Text,
     Tooltip,
+    Input,
 } from "@chakra-ui/react"
 
 import React, { useState } from "react"
@@ -166,6 +167,14 @@ export default function DataTable({ windowSize, environment }) {
         )
     }
 
+    const HeaderMenuName = () => {
+        return (
+            <MenuList p={0} borderRadius={5}>
+                <Input borderRadius={4} placeholder="Search names..." />
+            </MenuList>
+        )
+    }
+
     const HeaderMenuType = () => {
         return (
             <MenuList minWidth={1}>
@@ -207,51 +216,51 @@ export default function DataTable({ windowSize, environment }) {
                         <Tr borderBottomWidth={1}>
                             <Th></Th>
                             <Th textAlign={"start"}>
-                                <Menu variant={"DataTableHeader"} closeOnSelect={false}>
+                                <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                     <Box ml={"-10px"}>
                                         <HeaderButton text="NAME" />
                                     </Box>
-                                    <HeaderMenuType />
+                                    <HeaderMenuName />
                                 </Menu>
                             </Th>
                             <Th>
-                                <Menu variant={"DataTableHeader"} closeOnSelect={false}>
+                                <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                     <HeaderButton text="TYPE" />
                                     <HeaderMenuType />
                                 </Menu>
                             </Th>
                             <Th>
-                                <Menu variant={"DataTableHeader"} closeOnSelect={false}>
+                                <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                     <HeaderButton text="FEE" />
                                     <HeaderMenuType />
                                 </Menu>
                             </Th>
                             <Th>
-                                <Menu variant={"DataTableHeader"} closeOnSelect={false}>
+                                <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                     <HeaderButton text="MIN STAKE" />
                                     <HeaderMenuType />
                                 </Menu>
                             </Th>
                             <Th>
-                                <Menu variant={"DataTableHeader"} closeOnSelect={false}>
+                                <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                     <HeaderButton text="VALIDATOR <br /> KEY OWNER" />
                                     <HeaderMenuType />
                                 </Menu>
                             </Th>
                             <Th>
-                                <Menu variant={"DataTableHeader"} closeOnSelect={false}>
+                                <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                     <HeaderButton text="WITHDRAWAL <br /> KEY OWNER" />
                                     <HeaderMenuType />
                                 </Menu>
                             </Th>
                             <Th>
-                                <Menu variant={"DataTableHeader"} closeOnSelect={false}>
+                                <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                     <HeaderButton text="SECURITY" />
                                     <HeaderMenuType />
                                 </Menu>
                             </Th>
                             <Th>
-                                <Menu variant={"DataTableHeader"} closeOnSelect={false}>
+                                <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                     <HeaderButton text="ETHEREUM <br /> ALIGNED" />
                                     <HeaderMenuType />
                                 </Menu>
