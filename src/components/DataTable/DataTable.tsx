@@ -4,8 +4,47 @@ import DataRowMenuButton from "./DataRowMenuButton"
 
 import stakingProviders from "../../../public/data/stakingProviders.json"
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faUserAstronaut, faBuilding, faCode, faCoins, faUsers, faServer } from "@fortawesome/free-solid-svg-icons"
+
 export default function DataTable({ windowSize, environment }) {
     const isSSR = typeof window === "undefined"
+
+    const ProviderType = ({ provider }) => {
+        return (
+            <Flex
+                direction={"column"}
+                justifyContent={"center"}
+                alignContent={"center"}
+                gap={1}
+                color={provider.type == "LST" ? "green" : provider.type == "Pooled" ? "blue" : "gold"}
+                fontWeight={"bold"}
+            >
+                {provider.type == "LST" && <FontAwesomeIcon icon={faCoins} />}
+                {provider.type == "Pooled" && <FontAwesomeIcon icon={faUsers} />}
+                {provider.type == "Dedicated" && <FontAwesomeIcon icon={faServer} />}
+                {provider.type}
+            </Flex>
+        )
+    }
+
+    const ValidatorKey = ({ provider }) => {
+        return (
+            <Flex justifyContent={"center"} gap={5}>
+                {provider.validatorKey.includes("user") && <FontAwesomeIcon icon={faUserAstronaut} size="lg" />}
+                {provider.validatorKey.includes("service") && <FontAwesomeIcon icon={faBuilding} size="lg" />}
+            </Flex>
+        )
+    }
+
+    const WithdrawalKey = ({ provider }) => {
+        return (
+            <Flex justifyContent={"center"} gap={5}>
+                {provider.withdrawalKey.includes("user") && <FontAwesomeIcon icon={faUserAstronaut} size="lg" />}
+                {provider.withdrawalKey.includes("smartContract") && <FontAwesomeIcon icon={faCode} size="lg" />}
+            </Flex>
+        )
+    }
 
     const StatusCircle = ({ provider, column }) => {
         let option1
@@ -92,11 +131,24 @@ export default function DataTable({ windowSize, environment }) {
                     <Thead>
                         <Tr borderBottomWidth={1}>
                             <Th></Th>
-                            <Th>Name</Th>
-                            <Th>Type</Th>
+                            <Th textAlign={"start"}>Name</Th>
+                            <Th textOverflow={"wrap"}>
+                                Validator
+                                <br />
+                                Type
+                            </Th>
                             <Th>Fee</Th>
-                            <Th>Min Deposit</Th>
-                            <Th>Trust</Th>
+                            <Th>Min Stake</Th>
+                            <Th>
+                                Validator
+                                <br />
+                                Key Owner
+                            </Th>
+                            <Th>
+                                Withdrawal
+                                <br />
+                                Key Owner
+                            </Th>
                             <Th>Security</Th>
                             <Th>
                                 Ethereum
@@ -110,22 +162,20 @@ export default function DataTable({ windowSize, environment }) {
                         {stakingProviders.map((provider, providerIndex) => (
                             <Tr key={provider.id} borderBottomWidth={1} h={14}>
                                 <Td w={12} minW={12}>
-                                    <Image
-                                        objectFit="contain"
-                                        width={8}
-                                        height={8}
-                                        src="./images/LidoLogo.png"
-                                        alt={"Lido Logo"}
-                                        borderRadius={"100%"}
-                                    />
+                                    <Image objectFit="contain" boxSize={8} src={provider.logo} alt={"Lido Logo"} borderRadius={"100%"} />
                                 </Td>
-                                <Td textAlign={"end"} fontWeight={"extrabold"}>
-                                    {provider.name}
+                                <Td fontWeight={"extrabold"}>{provider.name}</Td>
+                                <Td textAlign={"center"}>
+                                    <ProviderType provider={provider} />
                                 </Td>
-                                <Td>{provider.type}</Td>
-                                <Td>{provider.fee}</Td>
-                                <Td>{provider.minStake}</Td>
-                                <Td>Smart</Td>
+                                <Td textAlign={"center"}>{provider.fee}</Td>
+                                <Td textAlign={"center"}>{provider.minStake}</Td>
+                                <Td>
+                                    <ValidatorKey provider={provider} />
+                                </Td>
+                                <Td>
+                                    <WithdrawalKey provider={provider} />
+                                </Td>
                                 <Td>
                                     <StatusCircle provider={provider} column={"security"} />
                                 </Td>

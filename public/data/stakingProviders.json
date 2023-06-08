@@ -1,19 +1,37 @@
 [
     {
         "id": "2DEC86",
+        "logo": "./images/LidoLogo.png",
         "name": "Lido",
         "type": "LST",
         "fee": "10%",
         "minStake": "Any amount",
+        "validatorKey": ["user", "service"],
+        "withdrawalKey": ["user"],
         "security": { "openSource": true, "audited": true, "bugBounty": true, "battleTested": true },
         "ethereumAligned": { "nonCensoringRelays": true, "permissionlessUsage": true, "permissionlessOperators": false, "diverseClients": false }
     },
     {
         "id": "EGJLX2",
-        "name": "Lido",
-        "type": "LST",
+        "logo": "./images/LidoLogo.png",
+        "name": "Lido long name",
+        "type": "Pooled",
         "fee": "10%",
         "minStake": "Any amount",
+        "validatorKey": ["user"],
+        "withdrawalKey": ["smartContract"],
+        "security": { "openSource": true, "audited": true, "bugBounty": false, "battleTested": true },
+        "ethereumAligned": { "nonCensoringRelays": true, "permissionlessUsage": true, "permissionlessOperators": true, "diverseClients": true }
+    },
+    {
+        "id": "AAAAAA",
+        "logo": "./images/LidoLogo.png",
+        "name": "Lido",
+        "type": "Dedicated",
+        "fee": "10%",
+        "minStake": "Any amount",
+        "validatorKey": ["user"],
+        "withdrawalKey": ["smartContract"],
         "security": { "openSource": true, "audited": true, "bugBounty": false, "battleTested": true },
         "ethereumAligned": { "nonCensoringRelays": true, "permissionlessUsage": true, "permissionlessOperators": true, "diverseClients": true }
     }

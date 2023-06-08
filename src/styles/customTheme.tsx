@@ -13,15 +13,16 @@ const customTheme = extendTheme({
                         verticalAlign: "bottom",
                         textAlign: "center",
                     },
-                    tr: {
-                        _hover: {
-                            bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",
-                        },
-                        td: {
-                            borderColor: props.colorMode === "dark" ? "tableBorder.dark" : "tableBorder.light",
-                            paddingX: "0.5rem",
-                            paddingY: "0",
-                            textAlign: "center",
+                    tbody: {
+                        tr: {
+                            _hover: {
+                                bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",
+                            },
+                            td: {
+                                borderColor: props.colorMode === "dark" ? "tableBorder.dark" : "tableBorder.light",
+                                paddingX: "0.5rem",
+                                paddingY: "0",
+                            },
                         },
                     },
                 }),
@@ -82,6 +83,7 @@ const customTheme = extendTheme({
         gold: "#e7c60d",
         red: "#EC420C",
         green: "#16913f",
+        blue: "#0da6d8",
     },
 })
 
