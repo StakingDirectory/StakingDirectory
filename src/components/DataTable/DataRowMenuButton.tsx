@@ -1,22 +1,12 @@
-import { Flex, Box, useColorModeValue, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react"
+import { Flex, Box, useColorModeValue, Button, Menu, MenuButton, MenuList, MenuItem } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEllipsisV, faEdit } from "@fortawesome/free-solid-svg-icons"
 
 export default function DataRowMenuButton() {
-    const hoverBorderColor = useColorModeValue("tableBorder.light", "tableBorder.dark")
-
     return (
         <Menu>
-            <MenuButton
-                as={Box}
-                aria-label="Options"
-                borderRadius={6}
-                w={6}
-                h={8}
-                cursor={"pointer"}
-                _hover={{ border: "2px solid", borderColor: hoverBorderColor }}
-            >
+            <MenuButton aria-label="Options" borderRadius={6} w={6} h={8} cursor={"pointer"}>
                 <Flex justifyContent={"center"} alignItems={"center"} height={"100%"}>
                     <FontAwesomeIcon icon={faEllipsisV} />
                 </Flex>

@@ -27,9 +27,8 @@ const customTheme = extendTheme({
                 }),
             },
         },
-
         Menu: {
-            parts: ["list", "item"],
+            parts: ["list", "item", "button"],
             baseStyle: (props: StyleFunctionProps) => ({
                 list: {
                     bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
@@ -43,6 +42,13 @@ const customTheme = extendTheme({
                     },
                     focus: {
                         bg: props.colorMode === "dark" ? "contentBackgroundHover.dark" : "contentBackgroundHover.light",
+                    },
+                },
+                button: {
+                    transition: "none",
+                    _hover: {
+                        border: "2px solid",
+                        borderColor: props.colorMode === "dark" ? "tableBorder.dark" : "tableBorder.light",
                     },
                 },
             }),
