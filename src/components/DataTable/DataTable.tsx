@@ -23,15 +23,14 @@ import {
     Input,
 } from "@chakra-ui/react"
 
-import React, { useState } from "react"
+import React from "react"
 
 import DataRowMenuButton from "./DataRowMenuButton"
-import stakingProviders from "../../../public/data/stakingProviders.json"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUserAstronaut, faBuilding, faCode, faCoins, faUsers, faServer, faFilter, faFilterCircleXmark } from "@fortawesome/free-solid-svg-icons"
 
-export default function DataTable({ windowSize, environment }) {
+export default function DataTable({ windowSize, environment, stakingProviders }) {
     const isSSR = typeof window === "undefined"
 
     const ProviderType = ({ provider }) => {
@@ -178,7 +177,7 @@ export default function DataTable({ windowSize, environment }) {
     const HeaderMenuType = () => {
         return (
             <MenuList minWidth={1}>
-                <MenuOptionGroup defaultValue={["dedicated", "pooled", "lst"]} type="checkbox">
+                <MenuOptionGroup type="checkbox">
                     <MenuItemOption value="dedicated" color={"green"} fontSize={"lg"}>
                         <Flex gap={2}>
                             <Box width={6}>
@@ -201,6 +200,47 @@ export default function DataTable({ windowSize, environment }) {
                                 <FontAwesomeIcon icon={faCoins} />
                             </Box>
                             <Text>LST</Text>
+                        </Flex>
+                    </MenuItemOption>
+                </MenuOptionGroup>
+            </MenuList>
+        )
+    }
+
+    const HeaderMenuSecurity = () => {
+        return (
+            <MenuList minWidth={1}>
+                <MenuOptionGroup type="checkbox">
+                    <MenuItemOption value="openSource" color={"green"} fontSize={"lg"}>
+                        <Flex gap={2}>
+                            <Box width={6}>
+                                <FontAwesomeIcon icon={faServer} />
+                            </Box>
+                            <Text>Open Source</Text>
+                        </Flex>
+                    </MenuItemOption>
+                    <MenuItemOption value="audited" color={"blue"} fontSize={"lg"}>
+                        <Flex gap={2}>
+                            <Box width={6}>
+                                <FontAwesomeIcon icon={faUsers} />
+                            </Box>
+                            <Text>Audited</Text>
+                        </Flex>
+                    </MenuItemOption>
+                    <MenuItemOption value="bugBounty" color={"gold"} fontSize={"lg"}>
+                        <Flex gap={2}>
+                            <Box width={6}>
+                                <FontAwesomeIcon icon={faCoins} />
+                            </Box>
+                            <Text>Bug Bounty</Text>
+                        </Flex>
+                    </MenuItemOption>
+                    <MenuItemOption value="battleTested" color={"gold"} fontSize={"lg"}>
+                        <Flex gap={2}>
+                            <Box width={6}>
+                                <FontAwesomeIcon icon={faCoins} />
+                            </Box>
+                            <Text>Battle Tested</Text>
                         </Flex>
                     </MenuItemOption>
                 </MenuOptionGroup>
@@ -256,7 +296,7 @@ export default function DataTable({ windowSize, environment }) {
                             <Th>
                                 <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                     <HeaderButton text="SECURITY" />
-                                    <HeaderMenuType />
+                                    <HeaderMenuSecurity />
                                 </Menu>
                             </Th>
                             <Th>

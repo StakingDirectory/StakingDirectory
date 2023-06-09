@@ -2,6 +2,8 @@ import { useState, useEffect } from "react"
 import Header from "./Header/Header"
 import DataTable from "./DataTable/DataTable"
 
+import stakingProviders from "../../public/data/stakingProviders.json"
+
 import { useColorModeValue, Box, Flex } from "@chakra-ui/react"
 
 const App = () => {
@@ -28,11 +30,14 @@ const App = () => {
         }
     }, [])
 
+    // Data Filtering State
+    const [dataFilter, setDataFilter] = useState()
+
     return (
         <Box minH="100vh" minW="100vw" bg={useColorModeValue("pageBackground.light", "pageBackground.dark")}>
             <Flex direction="column" justifyContent="center" alignItems="center">
                 <Header windowSize={windowSize} environment={environment} />
-                <DataTable windowSize={windowSize} environment={environment} />
+                <DataTable windowSize={windowSize} environment={environment} stakingProviders={stakingProviders} />
             </Flex>
         </Box>
     )
