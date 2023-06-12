@@ -23,6 +23,8 @@ import {
     Text,
     Tooltip,
     Input,
+    InputGroup,
+    InputRightElement,
 } from "@chakra-ui/react"
 
 import React from "react"
@@ -30,12 +32,24 @@ import React from "react"
 import DataRowMenuButton from "./DataRowMenuButton"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faUserAstronaut, faBuilding, faCode, faCoins, faUsers, faServer, faFilter, faFilterCircleXmark } from "@fortawesome/free-solid-svg-icons"
+import {
+    faUserAstronaut,
+    faBuilding,
+    faCode,
+    faCoins,
+    faUsers,
+    faServer,
+    faFilter,
+    faFilterCircleXmark,
+    faTimesCircle,
+} from "@fortawesome/free-solid-svg-icons"
 
 export default function DataTable({ windowSize, environment, stakingProviders, dataFilter, setDataFilter }) {
     const isSSR = typeof window === "undefined"
 
-    const [isNameOpen, setIsNameOpen] = useState(false)
+    const nameInputRef = useRef<HTMLInputElement>(null)
+
+    const filterDisabledColor = useColorModeValue("rgba(0, 0, 0, 0.1)", "rgba(255, 255, 255, 0.1)")
 
     const ProviderType = ({ provider }) => {
         return (
@@ -151,18 +165,19 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
         )
     }
 
-    const HeaderButton = ({ text }) => {
+    const HeaderButton = ({ id, text }) => {
         const textElements = text.split("<br />").map((item, index) => (
             <React.Fragment key={index}>
                 {item}
                 {index !== text.split("<br />").length - 1 && <br />}
             </React.Fragment>
         ))
+
         return (
             <MenuButton>
                 <Flex gap={1} alignItems={"end"}>
                     <Box>{textElements}</Box>
-                    <Box>
+                    <Box color={dataFilter[id] ? "blue" : filterDisabledColor}>
                         <FontAwesomeIcon icon={faFilter} />
                     </Box>
                 </Flex>
@@ -170,22 +185,44 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
         )
     }
 
-    const HeaderMenuName = () => {
-        const inputRef = useRef<HTMLInputElement>(null)
-
+    const HeaderMenuName = ({ isOpen }) => {
+        // Keep the focus on the input when typing
         useEffect(() => {
-            if (isNameOpen && inputRef.current) {
-                inputRef.current.focus()
+            if (nameInputRef.current) {
+                nameInputRef.current.focus()
             }
-        }, [isNameOpen])
+        }, [isOpen])
 
         const updateNameFilter = (e) => {
-            setDataFilter({ ...dataFilter, name: e.target.value })
+            if (e.target.value === "") {
+                let newDataFilter = { ...dataFilter }
+                delete newDataFilter.name
+                setDataFilter(newDataFilter)
+            } else {
+                setDataFilter({ ...dataFilter, name: e.target.value })
+            }
         }
 
         return (
             <MenuList p={0} overflow={"hidden"}>
-                <Input ref={inputRef} onChange={updateNameFilter} border={0} placeholder="Search names..." value={dataFilter.name} />
+                <InputGroup borderRadius="lg">
+                    <Input ref={nameInputRef} onChange={updateNameFilter} border={0} placeholder="Search names..." value={dataFilter.name} />
+                    {dataFilter.name && (
+                        <InputRightElement>
+                            <IconButton
+                                icon={<FontAwesomeIcon icon={faTimesCircle} size="sm" />}
+                                variant="ghost"
+                                borderRadius={8}
+                                onClick={() => {
+                                    let newDataFilter = { ...dataFilter }
+                                    delete newDataFilter.name
+                                    setDataFilter(newDataFilter)
+                                }}
+                                aria-label="Clear search"
+                            />
+                        </InputRightElement>
+                    )}
+                </InputGroup>
             </MenuList>
         )
     }
@@ -264,83 +301,94 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
         )
     }
 
+    const ClearFiltersButton = () => {
+        return (
+            <>
+                {Object.keys(dataFilter).length > 0 ? (
+                    <Tooltip gutter={4} label="Clear filters" openDelay={300}>
+                        <IconButton
+                            color="blue"
+                            variant="ghost"
+                            aria-label="Clear filters"
+                            size="sm"
+                            icon={<FontAwesomeIcon icon={faFilterCircleXmark} />}
+                            onClick={() => {
+                                setDataFilter({})
+                            }}
+                        ></IconButton>
+                    </Tooltip>
+                ) : (
+                    <></>
+                )}
+            </>
+        )
+    }
+
     return (
         <Box mt={10} mb={50} width={"100%"} maxW={"1216px"} px={{ base: 0, lg: 20 }}>
             <TableContainer>
                 <Table variant="DataTable">
                     <Thead>
                         <Tr borderBottomWidth={1}>
-                            <Th></Th>
+                            <Th>
+                                <ClearFiltersButton />
+                            </Th>
                             <Th textAlign={"start"}>
-                                <Menu
-                                    variant={"DataTableHeader"}
-                                    isOpen={isNameOpen}
-                                    onOpen={() => setIsNameOpen(true)}
-                                    onClose={() => setIsNameOpen(false)}
-                                    closeOnSelect={false}
-                                    gutter={2}
-                                >
-                                    <Box ml={"-10px"}>
-                                        <HeaderButton text="NAME" />
-                                    </Box>
-                                    <HeaderMenuName />
+                                <Menu placement="right" variant={"DataTableHeader"} gutter={2} initialFocusRef={nameInputRef}>
+                                    {({ isOpen }) => (
+                                        <>
+                                            <Box ml={"-10px"}>
+                                                <HeaderButton id="name" text="NAME" />
+                                            </Box>
+                                            <HeaderMenuName isOpen={isOpen} />
+                                        </>
+                                    )}
                                 </Menu>
                             </Th>
                             <Th>
                                 <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                    <HeaderButton text="TYPE" />
+                                    <HeaderButton id="type" text="TYPE" />
                                     <HeaderMenuType />
                                 </Menu>
                             </Th>
                             <Th>
                                 <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                    <HeaderButton text="FEE" />
+                                    <HeaderButton id="fee" text="FEE" />
                                     <HeaderMenuType />
                                 </Menu>
                             </Th>
                             <Th>
                                 <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                    <HeaderButton text="MIN STAKE" />
+                                    <HeaderButton id="minStake" text="MIN STAKE" />
                                     <HeaderMenuType />
                                 </Menu>
                             </Th>
                             <Th>
                                 <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                    <HeaderButton text="VALIDATOR <br /> KEY OWNER" />
+                                    <HeaderButton id="validatorKey" text="VALIDATOR <br /> KEY OWNER" />
                                     <HeaderMenuType />
                                 </Menu>
                             </Th>
                             <Th>
                                 <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                    <HeaderButton text="WITHDRAWAL <br /> KEY OWNER" />
+                                    <HeaderButton id="withdrawalKey" text="WITHDRAWAL <br /> KEY OWNER" />
                                     <HeaderMenuType />
                                 </Menu>
                             </Th>
                             <Th>
                                 <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                    <HeaderButton text="SECURITY" />
+                                    <HeaderButton id="security" text="SECURITY" />
                                     <HeaderMenuSecurity />
                                 </Menu>
                             </Th>
                             <Th>
                                 <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                    <HeaderButton text="ETHEREUM <br /> ALIGNED" />
+                                    <HeaderButton id="ethereumAligned" text="ETHEREUM <br /> ALIGNED" />
                                     <HeaderMenuType />
                                 </Menu>
                             </Th>
                             <Th>
-                                <Tooltip gutter={4} label="Clear filters" openDelay={300}>
-                                    <IconButton
-                                        color="red"
-                                        variant="ghost"
-                                        aria-label="Clear filters"
-                                        size="sm"
-                                        icon={<FontAwesomeIcon icon={faFilterCircleXmark} />}
-                                        onClick={() => {
-                                            setDataFilter({})
-                                        }}
-                                    ></IconButton>
-                                </Tooltip>
+                                <ClearFiltersButton />
                             </Th>
                         </Tr>
                     </Thead>

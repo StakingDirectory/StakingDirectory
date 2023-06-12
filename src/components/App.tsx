@@ -54,7 +54,7 @@ const App = () => {
         }
     })
 
-    // write a useEffect function that logs the value of dataFilter whenever it changes
+    // TODO: Testing only - Remove this console.log
     useEffect(() => {
         console.log(dataFilter)
     }, [dataFilter])
