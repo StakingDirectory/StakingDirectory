@@ -33,8 +33,6 @@ const App = () => {
     // Data Filtering State
     const [dataFilter, setDataFilter] = useState({})
 
-    // const dataFilter = { name: "Lido", type: ["LST", "Dedicated", "Pooled"] }
-
     const filteredStakingProviders = stakingProviders.filter((provider) => {
         if (dataFilter) {
             for (let key in dataFilter) {

@@ -58,13 +58,27 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                 justifyContent={"center"}
                 alignContent={"center"}
                 gap={1}
-                color={provider.type == "LST" ? "gold" : provider.type == "Pooled" ? "blue" : "green"}
+                color={provider.type == "lst" ? "gold" : provider.type == "pooled" ? "blue" : "green"}
                 fontWeight={"bold"}
             >
-                {provider.type == "LST" && <FontAwesomeIcon icon={faCoins} />}
-                {provider.type == "Pooled" && <FontAwesomeIcon icon={faUsers} />}
-                {provider.type == "Dedicated" && <FontAwesomeIcon icon={faServer} />}
-                {provider.type}
+                {provider.type == "lst" && (
+                    <>
+                        <FontAwesomeIcon icon={faCoins} />
+                        LST
+                    </>
+                )}
+                {provider.type == "pooled" && (
+                    <>
+                        <FontAwesomeIcon icon={faUsers} />
+                        Pooled
+                    </>
+                )}
+                {provider.type == "dedicated" && (
+                    <>
+                        <FontAwesomeIcon icon={faServer} />
+                        Dedicated
+                    </>
+                )}
             </Flex>
         )
     }
@@ -177,7 +191,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
             <MenuButton>
                 <Flex gap={1} alignItems={"end"}>
                     <Box>{textElements}</Box>
-                    <Box color={dataFilter[id] ? "blue" : filterDisabledColor}>
+                    <Box color={dataFilter && dataFilter[id] ? "blue" : filterDisabledColor}>
                         <FontAwesomeIcon icon={faFilter} />
                     </Box>
                 </Flex>
@@ -195,9 +209,12 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
 
         const updateNameFilter = (e) => {
             if (e.target.value === "") {
-                let newDataFilter = { ...dataFilter }
-                delete newDataFilter.name
-                setDataFilter(newDataFilter)
+                setDataFilter(
+                    ((newDataFilter) => {
+                        delete newDataFilter.name
+                        return newDataFilter
+                    })({ ...dataFilter })
+                )
             } else {
                 setDataFilter({ ...dataFilter, name: e.target.value })
             }
@@ -206,8 +223,8 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
         return (
             <MenuList p={0} overflow={"hidden"}>
                 <InputGroup borderRadius="lg">
-                    <Input ref={nameInputRef} onChange={updateNameFilter} border={0} placeholder="Search names..." value={dataFilter.name} />
-                    {dataFilter.name && (
+                    <Input ref={nameInputRef} onChange={updateNameFilter} border={0} placeholder="Search names..." value={dataFilter?.name} />
+                    {dataFilter?.name && (
                         <InputRightElement>
                             <IconButton
                                 icon={<FontAwesomeIcon icon={faTimesCircle} size="sm" />}
@@ -228,10 +245,28 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
     }
 
     const HeaderMenuType = () => {
+        const updateTypeFilter = (values) => {
+            if (values.length === 0) {
+                setDataFilter(
+                    ((newDataFilter) => {
+                        delete newDataFilter.type
+                        return newDataFilter
+                    })({ ...dataFilter })
+                )
+            } else {
+                setDataFilter({ ...dataFilter, type: values })
+            }
+        }
+
         return (
             <MenuList minWidth={1}>
-                <MenuOptionGroup type="checkbox">
-                    <MenuItemOption value="dedicated" color={"green"} fontSize={"lg"}>
+                <MenuOptionGroup defaultValue={dataFilter.type} type="checkbox" onChange={updateTypeFilter}>
+                    <MenuItemOption
+                        value="dedicated"
+                        color={"green"}
+                        fontSize={"lg"}
+                        isChecked={dataFilter.type && Array.isArray(dataFilter.type) && dataFilter.type.includes("dedicated")}
+                    >
                         <Flex gap={2}>
                             <Box width={6}>
                                 <FontAwesomeIcon icon={faServer} />
@@ -239,7 +274,12 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                             <Text>Dedicated</Text>
                         </Flex>
                     </MenuItemOption>
-                    <MenuItemOption value="pooled" color={"blue"} fontSize={"lg"}>
+                    <MenuItemOption
+                        value="pooled"
+                        color={"blue"}
+                        fontSize={"lg"}
+                        isChecked={dataFilter.type && Array.isArray(dataFilter.type) && dataFilter.type.includes("pooled")}
+                    >
                         <Flex gap={2}>
                             <Box width={6}>
                                 <FontAwesomeIcon icon={faUsers} />
@@ -247,7 +287,12 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                             <Text>Pooled</Text>
                         </Flex>
                     </MenuItemOption>
-                    <MenuItemOption value="lst" color={"gold"} fontSize={"lg"}>
+                    <MenuItemOption
+                        value="lst"
+                        color={"gold"}
+                        fontSize={"lg"}
+                        isChecked={dataFilter.type && Array.isArray(dataFilter.type) && dataFilter.type.includes("lst")}
+                    >
                         <Flex gap={2}>
                             <Box width={6}>
                                 <FontAwesomeIcon icon={faCoins} />
@@ -304,7 +349,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
     const ClearFiltersButton = () => {
         return (
             <>
-                {Object.keys(dataFilter).length > 0 ? (
+                {dataFilter && Object.keys(dataFilter).length > 0 ? (
                     <Tooltip gutter={4} label="Clear filters" openDelay={300}>
                         <IconButton
                             color="blue"
