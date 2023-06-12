@@ -244,68 +244,56 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
         )
     }
 
-    const HeaderMenuType = () => {
-        const updateTypeFilter = (values) => {
+    const headerMenuCheckboxValues = [
+        {
+            id: "type",
+            options: [
+                { value: "dedicated", text: "Dedicated", color: "green", icon: faServer },
+                { value: "pooled", text: "Pooled", color: "blue", icon: faUsers },
+                { value: "lst", text: "LST", color: "gold", icon: faCoins },
+            ],
+        },
+    ]
+    const HeaderMenuCheckbox = ({ id }) => {
+        const updateFilter = (values) => {
             if (values.length === 0) {
                 setDataFilter(
                     ((newDataFilter) => {
-                        delete newDataFilter.type
+                        delete newDataFilter[id]
                         return newDataFilter
                     })({ ...dataFilter })
                 )
             } else {
-                setDataFilter({ ...dataFilter, type: values })
+                setDataFilter({ ...dataFilter, [id]: values })
             }
         }
 
         return (
             <MenuList minWidth={1}>
-                <MenuOptionGroup defaultValue={dataFilter.type} type="checkbox" onChange={updateTypeFilter}>
-                    <MenuItemOption
-                        value="dedicated"
-                        color={"green"}
-                        fontSize={"lg"}
-                        isChecked={dataFilter.type && Array.isArray(dataFilter.type) && dataFilter.type.includes("dedicated")}
-                    >
-                        <Flex gap={2}>
-                            <Box width={6}>
-                                <FontAwesomeIcon icon={faServer} />
-                            </Box>
-                            <Text>Dedicated</Text>
-                        </Flex>
-                    </MenuItemOption>
-                    <MenuItemOption
-                        value="pooled"
-                        color={"blue"}
-                        fontSize={"lg"}
-                        isChecked={dataFilter.type && Array.isArray(dataFilter.type) && dataFilter.type.includes("pooled")}
-                    >
-                        <Flex gap={2}>
-                            <Box width={6}>
-                                <FontAwesomeIcon icon={faUsers} />
-                            </Box>
-                            <Text>Pooled</Text>
-                        </Flex>
-                    </MenuItemOption>
-                    <MenuItemOption
-                        value="lst"
-                        color={"gold"}
-                        fontSize={"lg"}
-                        isChecked={dataFilter.type && Array.isArray(dataFilter.type) && dataFilter.type.includes("lst")}
-                    >
-                        <Flex gap={2}>
-                            <Box width={6}>
-                                <FontAwesomeIcon icon={faCoins} />
-                            </Box>
-                            <Text>LST</Text>
-                        </Flex>
-                    </MenuItemOption>
+                <MenuOptionGroup defaultValue={dataFilter[id]} type="checkbox" onChange={updateFilter}>
+                    {headerMenuCheckboxValues
+                        .find((obj) => obj.id === id)
+                        ?.options.map((option) => (
+                            <MenuItemOption
+                                value={option.value}
+                                color={option.color}
+                                fontSize={"lg"}
+                                isChecked={dataFilter[id] && Array.isArray(dataFilter[id]) && dataFilter[id].includes(option.value)}
+                            >
+                                <Flex gap={2}>
+                                    <Box width={6}>
+                                        <FontAwesomeIcon icon={option.icon} />
+                                    </Box>
+                                    <Text>{option.text}</Text>
+                                </Flex>
+                            </MenuItemOption>
+                        ))}
                 </MenuOptionGroup>
                 <Box
                     onClick={() => {
                         setDataFilter(
                             ((newDataFilter) => {
-                                delete newDataFilter.type
+                                delete newDataFilter[id]
                                 return newDataFilter
                             })({ ...dataFilter })
                         )
@@ -405,31 +393,31 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                             <Th>
                                 <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                     <HeaderButton id="type" text="TYPE" />
-                                    <HeaderMenuType />
+                                    <HeaderMenuCheckbox id="type" />
                                 </Menu>
                             </Th>
                             <Th>
                                 <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                     <HeaderButton id="fee" text="FEE" />
-                                    <HeaderMenuType />
+                                    <HeaderMenuCheckbox id="fee" />
                                 </Menu>
                             </Th>
                             <Th>
                                 <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                     <HeaderButton id="minStake" text="MIN STAKE" />
-                                    <HeaderMenuType />
+                                    <HeaderMenuCheckbox id="minStake" />
                                 </Menu>
                             </Th>
                             <Th>
                                 <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                     <HeaderButton id="validatorKey" text="VALIDATOR <br /> KEY OWNER" />
-                                    <HeaderMenuType />
+                                    <HeaderMenuCheckbox id="validatorKey" />
                                 </Menu>
                             </Th>
                             <Th>
                                 <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                     <HeaderButton id="withdrawalKey" text="WITHDRAWAL <br /> KEY OWNER" />
-                                    <HeaderMenuType />
+                                    <HeaderMenuCheckbox id="withdrawalKey" />
                                 </Menu>
                             </Th>
                             <Th>
@@ -441,7 +429,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                             <Th>
                                 <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                     <HeaderButton id="ethereumAligned" text="ETHEREUM <br /> ALIGNED" />
-                                    <HeaderMenuType />
+                                    <HeaderMenuCheckbox id="ethereumAligned" />
                                 </Menu>
                             </Th>
                             <Th>
