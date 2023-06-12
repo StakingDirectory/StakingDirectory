@@ -301,6 +301,18 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                         </Flex>
                     </MenuItemOption>
                 </MenuOptionGroup>
+                <Box
+                    onClick={() => {
+                        setDataFilter(
+                            ((newDataFilter) => {
+                                delete newDataFilter.type
+                                return newDataFilter
+                            })({ ...dataFilter })
+                        )
+                    }}
+                >
+                    Clear filters
+                </Box>
             </MenuList>
         )
     }
@@ -443,7 +455,9 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                 <Td w={12} minW={12}>
                                     <Image objectFit="contain" boxSize={8} src={provider.logo} alt={"Lido Logo"} borderRadius={"100%"} />
                                 </Td>
-                                <Td fontWeight={"extrabold"}>{provider.name}</Td>
+                                <Td fontWeight={"extrabold"} w={"15%"}>
+                                    {provider.name}
+                                </Td>
                                 <Td textAlign={"center"}>
                                     <ProviderType provider={provider} />
                                 </Td>
