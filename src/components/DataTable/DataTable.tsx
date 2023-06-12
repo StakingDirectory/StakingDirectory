@@ -1,3 +1,5 @@
+import { useRef, useEffect, useState } from "react"
+
 import {
     Flex,
     Grid,
@@ -32,6 +34,8 @@ import { faUserAstronaut, faBuilding, faCode, faCoins, faUsers, faServer, faFilt
 
 export default function DataTable({ windowSize, environment, stakingProviders, dataFilter, setDataFilter }) {
     const isSSR = typeof window === "undefined"
+
+    const [isNameOpen, setIsNameOpen] = useState(false)
 
     const ProviderType = ({ provider }) => {
         return (
@@ -167,9 +171,21 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
     }
 
     const HeaderMenuName = () => {
+        const inputRef = useRef<HTMLInputElement>(null)
+
+        useEffect(() => {
+            if (isNameOpen && inputRef.current) {
+                inputRef.current.focus()
+            }
+        }, [isNameOpen])
+
+        const updateNameFilter = (e) => {
+            setDataFilter({ ...dataFilter, name: e.target.value })
+        }
+
         return (
-            <MenuList p={0} borderRadius={5}>
-                <Input borderRadius={4} placeholder="Search names..." />
+            <MenuList p={0} overflow={"hidden"}>
+                <Input ref={inputRef} onChange={updateNameFilter} border={0} placeholder="Search names..." value={dataFilter.name} />
             </MenuList>
         )
     }
@@ -256,7 +272,14 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                         <Tr borderBottomWidth={1}>
                             <Th></Th>
                             <Th textAlign={"start"}>
-                                <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
+                                <Menu
+                                    variant={"DataTableHeader"}
+                                    isOpen={isNameOpen}
+                                    onOpen={() => setIsNameOpen(true)}
+                                    onClose={() => setIsNameOpen(false)}
+                                    closeOnSelect={false}
+                                    gutter={2}
+                                >
                                     <Box ml={"-10px"}>
                                         <HeaderButton text="NAME" />
                                     </Box>
@@ -313,6 +336,9 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                         aria-label="Clear filters"
                                         size="sm"
                                         icon={<FontAwesomeIcon icon={faFilterCircleXmark} />}
+                                        onClick={() => {
+                                            setDataFilter({})
+                                        }}
                                     ></IconButton>
                                 </Tooltip>
                             </Th>

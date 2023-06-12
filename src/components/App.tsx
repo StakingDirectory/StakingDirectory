@@ -31,7 +31,33 @@ const App = () => {
     }, [])
 
     // Data Filtering State
-    const [dataFilter, setDataFilter] = useState([])
+    const [dataFilter, setDataFilter] = useState({})
+
+    // const dataFilter = { name: "Lido", type: ["LST", "Dedicated", "Pooled"] }
+
+    const filteredStakingProviders = stakingProviders.filter((provider) => {
+        if (dataFilter) {
+            for (let key in dataFilter) {
+                if (Array.isArray(dataFilter[key])) {
+                    // If filter value is an array, check if the item's value is included in the array.
+                    if (!dataFilter[key].includes(provider[key])) return false
+                } else if (key === "name") {
+                    // If the filter key is 'name', check if the item's name contains the filter name.
+                    if (!provider[key].toLowerCase().includes(dataFilter[key].toLowerCase())) return false
+                } else {
+                    // If filter value is not an array, directly compare the values.
+                    if (dataFilter[key] !== provider[key]) return false
+                }
+            }
+            // If item passed all filter checks, include it.
+            return true
+        }
+    })
+
+    // write a useEffect function that logs the value of dataFilter whenever it changes
+    useEffect(() => {
+        console.log(dataFilter)
+    }, [dataFilter])
 
     return (
         <Box minH="100vh" minW="100vw" bg={useColorModeValue("pageBackground.light", "pageBackground.dark")}>
@@ -40,7 +66,7 @@ const App = () => {
                 <DataTable
                     windowSize={windowSize}
                     environment={environment}
-                    stakingProviders={stakingProviders}
+                    stakingProviders={filteredStakingProviders}
                     dataFilter={dataFilter}
                     setDataFilter={setDataFilter}
                 />
