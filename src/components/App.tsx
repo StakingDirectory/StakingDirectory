@@ -31,13 +31,19 @@ const App = () => {
     }, [])
 
     // Data Filtering State
-    const [dataFilter, setDataFilter] = useState()
+    const [dataFilter, setDataFilter] = useState([])
 
     return (
         <Box minH="100vh" minW="100vw" bg={useColorModeValue("pageBackground.light", "pageBackground.dark")}>
             <Flex direction="column" justifyContent="center" alignItems="center">
                 <Header windowSize={windowSize} environment={environment} />
-                <DataTable windowSize={windowSize} environment={environment} stakingProviders={stakingProviders} />
+                <DataTable
+                    windowSize={windowSize}
+                    environment={environment}
+                    stakingProviders={stakingProviders}
+                    dataFilter={dataFilter}
+                    setDataFilter={setDataFilter}
+                />
             </Flex>
         </Box>
     )

@@ -30,7 +30,7 @@ import DataRowMenuButton from "./DataRowMenuButton"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faUserAstronaut, faBuilding, faCode, faCoins, faUsers, faServer, faFilter, faFilterCircleXmark } from "@fortawesome/free-solid-svg-icons"
 
-export default function DataTable({ windowSize, environment, stakingProviders }) {
+export default function DataTable({ windowSize, environment, stakingProviders, dataFilter, setDataFilter }) {
     const isSSR = typeof window === "undefined"
 
     const ProviderType = ({ provider }) => {
@@ -84,7 +84,7 @@ export default function DataTable({ windowSize, environment, stakingProviders })
             option1 = provider.ethereumAligned.permissionlessUsage
             option2 = provider.ethereumAligned.nonCensoringRelays
             option3 = provider.ethereumAligned.permissionlessOperators
-            option4 = provider.ethereumAligned.diverseClients
+            option4 = provider.ethereumAligned.diverseExecutionClients && provider.ethereumAligned.diverseBeaconClients
         }
 
         const allTrue = Object.values(provider[column]).every((value) => value === true)

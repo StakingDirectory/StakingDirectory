@@ -9,7 +9,13 @@
         "validatorKey": ["user", "service"],
         "withdrawalKey": ["user"],
         "security": { "openSource": true, "audited": true, "bugBounty": true, "battleTested": true },
-        "ethereumAligned": { "nonCensoringRelays": true, "permissionlessUsage": true, "permissionlessOperators": false, "diverseClients": false }
+        "ethereumAligned": {
+            "nonCensoringRelays": true,
+            "permissionlessUsage": true,
+            "permissionlessOperators": false,
+            "diverseExecutionClients": false,
+            "diverseBeaconClients": false
+        }
     },
     {
         "id": "EGJLX2",
@@ -21,7 +27,13 @@
         "validatorKey": ["user"],
         "withdrawalKey": ["smartContract"],
         "security": { "openSource": true, "audited": true, "bugBounty": false, "battleTested": true },
-        "ethereumAligned": { "nonCensoringRelays": true, "permissionlessUsage": true, "permissionlessOperators": true, "diverseClients": true }
+        "ethereumAligned": {
+            "nonCensoringRelays": true,
+            "permissionlessUsage": true,
+            "permissionlessOperators": true,
+            "diverseExecutionClients": true,
+            "diverseBeaconClients": true
+        }
     },
     {
         "id": "AAAAAA",
@@ -33,6 +45,12 @@
         "validatorKey": ["user"],
         "withdrawalKey": ["smartContract"],
         "security": { "openSource": true, "audited": true, "bugBounty": false, "battleTested": true },
-        "ethereumAligned": { "nonCensoringRelays": true, "permissionlessUsage": true, "permissionlessOperators": true, "diverseClients": true }
+        "ethereumAligned": {
+            "nonCensoringRelays": true,
+            "permissionlessUsage": true,
+            "permissionlessOperators": true,
+            "diverseExecutionClients": true,
+            "diverseBeaconClients": false
+        }
     }
 ]
