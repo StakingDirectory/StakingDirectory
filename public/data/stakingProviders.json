@@ -8,14 +8,15 @@
         "minStake": "Any amount",
         "validatorKey": ["user", "service"],
         "withdrawalKey": ["user"],
-        "security": { "openSource": true, "audited": true, "bugBounty": true, "battleTested": true },
-        "ethereumAligned": {
-            "nonCensoringRelays": true,
-            "permissionlessUsage": true,
-            "permissionlessOperators": false,
-            "diverseExecutionClients": false,
-            "diverseBeaconClients": false
-        }
+        "openSource": { "value": true },
+        "audited": { "value": true },
+        "bugBounty": { "value": true },
+        "battleTested": { "value": true },
+        "nonCensoringRelays": { "value": true },
+        "permissionlessUsage": { "value": true },
+        "permissionlessOperators": { "value": true },
+        "diverseExecutionClients": { "value": true },
+        "diverseBeaconClients": { "value": true }
     },
     {
         "id": "EGJLX2",
@@ -26,14 +27,15 @@
         "minStake": "Any amount",
         "validatorKey": ["user"],
         "withdrawalKey": ["smartContract"],
-        "security": { "openSource": true, "audited": true, "bugBounty": false, "battleTested": true },
-        "ethereumAligned": {
-            "nonCensoringRelays": true,
-            "permissionlessUsage": true,
-            "permissionlessOperators": true,
-            "diverseExecutionClients": true,
-            "diverseBeaconClients": true
-        }
+        "openSource": { "value": true },
+        "audited": { "value": true },
+        "bugBounty": { "value": false },
+        "battleTested": { "value": true },
+        "nonCensoringRelays": { "value": true },
+        "permissionlessUsage": { "value": true },
+        "permissionlessOperators": { "value": true },
+        "diverseExecutionClients": { "value": true },
+        "diverseBeaconClients": { "value": true }
     },
     {
         "id": "AAAAAA",
@@ -44,13 +46,14 @@
         "minStake": "Any amount",
         "validatorKey": ["user"],
         "withdrawalKey": ["smartContract"],
-        "security": { "openSource": false, "audited": false, "bugBounty": false, "battleTested": false },
-        "ethereumAligned": {
-            "nonCensoringRelays": true,
-            "permissionlessUsage": true,
-            "permissionlessOperators": true,
-            "diverseExecutionClients": true,
-            "diverseBeaconClients": false
-        }
+        "openSource": { "value": false },
+        "audited": { "value": false },
+        "bugBounty": { "value": false },
+        "battleTested": { "value": false },
+        "nonCensoringRelays": { "value": true },
+        "permissionlessUsage": { "value": true },
+        "permissionlessOperators": { "value": true },
+        "diverseExecutionClients": { "value": true },
+        "diverseBeaconClients": { "value": false }
     }
 ]

@@ -40,7 +40,7 @@ const App = () => {
                     if (!provider[key].toLowerCase().includes(dataFilter[key].toLowerCase())) return false
                 } else if (key === "security") {
                     for (let feature of ["openSource", "audited", "bugBounty", "battleTested"]) {
-                        if (dataFilter[key].includes(feature) && !provider[key][feature]) return false
+                        if (dataFilter[key].includes(feature) && !provider[feature].value) return false
                     }
                 } else if (Array.isArray(dataFilter[key])) {
                     // If filter value is an array, check if the item's value is included in the array.

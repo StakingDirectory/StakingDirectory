@@ -108,18 +108,18 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
         let option4
 
         if (column === "security") {
-            option1 = provider.security.audited
-            option2 = provider.security.openSource
-            option3 = provider.security.bugBounty
-            option4 = provider.security.battleTested
+            option1 = provider.audited.value
+            option2 = provider.openSource.value
+            option3 = provider.bugBounty.value
+            option4 = provider.battleTested.value
         } else if (column === "ethereumAligned") {
-            option1 = provider.ethereumAligned.permissionlessUsage
-            option2 = provider.ethereumAligned.nonCensoringRelays
-            option3 = provider.ethereumAligned.permissionlessOperators
-            option4 = provider.ethereumAligned.diverseExecutionClients && provider.ethereumAligned.diverseBeaconClients
+            option1 = provider.permissionlessUsage.value
+            option2 = provider.nonCensoringRelays.value
+            option3 = provider.permissionlessOperators.value
+            option4 = provider.diverseExecutionClients.value && provider.diverseBeaconClients.value
         }
 
-        const allTrue = Object.values(provider[column]).every((value) => value === true)
+        const allTrue = option1 && option2 && option3 && option4
 
         return (
             <Flex justifyContent={"center"}>
