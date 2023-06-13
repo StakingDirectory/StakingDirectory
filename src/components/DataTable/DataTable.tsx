@@ -1,8 +1,7 @@
-import { useRef, useEffect, useState } from "react"
+import React, { useRef, useEffect, useState } from "react"
 
 import {
     Flex,
-    Grid,
     Box,
     Image,
     useColorModeValue,
@@ -14,7 +13,6 @@ import {
     Td,
     TableContainer,
     Menu,
-    MenuButton,
     MenuList,
     MenuOptionGroup,
     MenuItemOption,
@@ -27,357 +25,20 @@ import {
     InputRightElement,
 } from "@chakra-ui/react"
 
-import React from "react"
-
 import DataRowMenuButton from "./DataRowMenuButton"
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import {
-    faUserAstronaut,
-    faBuilding,
-    faCode,
-    faCoins,
-    faUsers,
-    faServer,
-    faFilter,
-    faFilterCircleXmark,
-    faTimesCircle,
-} from "@fortawesome/free-solid-svg-icons"
+import HeaderButton from "./HeaderButton"
+import StatusCircle from "./StatusCircle"
+import ProviderType from "./ProviderType"
+import WithdrawalKeyOwner from "./WithdrawalKeyOwner"
+import ValidatorKeyOwner from "./ValidatorKeyOwner"
+import HeaderMenuCheckbox from "./HeaderMenuCheckbox"
+import HeaderMenuNameSearch from "./HeaderMenuNameSearch"
+import ClearFiltersButton from "./ClearFiltersButton"
 
 export default function DataTable({ windowSize, environment, stakingProviders, dataFilter, setDataFilter }) {
     const isSSR = typeof window === "undefined"
-
     const nameInputRef = useRef<HTMLInputElement>(null)
-
     const filterDisabledColor = useColorModeValue("rgba(0, 0, 0, 0.1)", "rgba(255, 255, 255, 0.1)")
-
-    const ProviderType = ({ provider }) => {
-        return (
-            <Flex
-                direction={"column"}
-                justifyContent={"center"}
-                alignContent={"center"}
-                gap={1}
-                color={provider.type == "lst" ? "gold" : provider.type == "pooled" ? "blue" : "green"}
-                fontWeight={"bold"}
-            >
-                {provider.type == "lst" && (
-                    <>
-                        <FontAwesomeIcon icon={faCoins} />
-                        LST
-                    </>
-                )}
-                {provider.type == "pooled" && (
-                    <>
-                        <FontAwesomeIcon icon={faUsers} />
-                        Pooled
-                    </>
-                )}
-                {provider.type == "dedicated" && (
-                    <>
-                        <FontAwesomeIcon icon={faServer} />
-                        Dedicated
-                    </>
-                )}
-            </Flex>
-        )
-    }
-
-    const ValidatorKey = ({ provider }) => {
-        return (
-            <Flex justifyContent={"center"} gap={5}>
-                {provider.validatorKey.includes("user") && <FontAwesomeIcon icon={faUserAstronaut} size="lg" />}
-                {provider.validatorKey.includes("service") && <FontAwesomeIcon icon={faBuilding} size="lg" />}
-            </Flex>
-        )
-    }
-
-    const WithdrawalKey = ({ provider }) => {
-        return (
-            <Flex justifyContent={"center"} gap={5}>
-                {provider.withdrawalKey.includes("user") && <FontAwesomeIcon icon={faUserAstronaut} size="lg" />}
-                {provider.withdrawalKey.includes("smartContract") && <FontAwesomeIcon icon={faCode} size="lg" />}
-            </Flex>
-        )
-    }
-
-    const StatusCircle = ({ provider, column }) => {
-        let option1
-        let option2
-        let option3
-        let option4
-
-        if (column === "security") {
-            option1 = provider.audited.value
-            option2 = provider.openSource.value
-            option3 = provider.bugBounty.value
-            option4 = provider.battleTested.value
-        } else if (column === "ethereumAligned") {
-            option1 = provider.permissionlessUsage.value
-            option2 = provider.nonCensoringRelays.value
-            option3 = provider.permissionlessOperators.value
-            option4 = provider.diverseExecutionClients.value && provider.diverseBeaconClients.value
-        }
-
-        const allTrue = option1 && option2 && option3 && option4
-
-        return (
-            <Flex justifyContent={"center"}>
-                <Box borderRadius={"100%"} overflow={"hidden"} border={"2px solid"} borderColor={allTrue ? "gold" : "transparent"} w="48px">
-                    <Grid
-                        bg={useColorModeValue("pageBackground.light", "pageBackground.dark")}
-                        templateColumns={"repeat(2, 1fr)"}
-                        border={"2px solid"}
-                        borderColor={useColorModeValue("pageBackground.light", "pageBackground.dark")}
-                        borderRadius={"100%"}
-                        overflow={"hidden"}
-                        w="44px"
-                    >
-                        <Box
-                            borderBottomRightRadius={3}
-                            borderBottomLeftRadius={2}
-                            borderTopRightRadius={2}
-                            borderRight={"1px solid"}
-                            borderBottom={"1px solid"}
-                            borderColor={useColorModeValue("pageBackground.light", "pageBackground.dark")}
-                            bg={option1 ? "green" : "red"}
-                            h={5}
-                        ></Box>
-                        <Box
-                            borderBottomLeftRadius={3}
-                            borderTopLeftRadius={2}
-                            borderBottomRightRadius={2}
-                            borderLeft={"1px solid"}
-                            borderBottom={"1px solid"}
-                            borderColor={useColorModeValue("pageBackground.light", "pageBackground.dark")}
-                            bg={option2 ? "green" : "red"}
-                            h={5}
-                        ></Box>
-                        <Box
-                            borderTopRightRadius={3}
-                            borderTopLeftRadius={2}
-                            borderBottomRightRadius={2}
-                            borderRight={"1px solid"}
-                            borderTop={"1px solid"}
-                            borderColor={useColorModeValue("pageBackground.light", "pageBackground.dark")}
-                            bg={option4 ? "green" : "red"}
-                            h={5}
-                        ></Box>
-                        <Box
-                            borderTopLeftRadius={3}
-                            borderBottomLeftRadius={2}
-                            borderTopRightRadius={2}
-                            borderLeft={"1px solid"}
-                            borderTop={"1px solid"}
-                            borderColor={useColorModeValue("pageBackground.light", "pageBackground.dark")}
-                            bg={option3 ? "green" : "red"}
-                            h={5}
-                        ></Box>
-                    </Grid>
-                </Box>
-            </Flex>
-        )
-    }
-
-    const HeaderButton = ({ id, text }) => {
-        const textElements = text.split("<br />").map((item, index) => (
-            <React.Fragment key={index}>
-                {item}
-                {index !== text.split("<br />").length - 1 && <br />}
-            </React.Fragment>
-        ))
-
-        return (
-            <MenuButton>
-                <Flex gap={1} alignItems={"end"}>
-                    <Box>{textElements}</Box>
-                    <Box color={dataFilter && dataFilter[id] ? "blue" : filterDisabledColor}>
-                        <FontAwesomeIcon icon={faFilter} />
-                    </Box>
-                </Flex>
-            </MenuButton>
-        )
-    }
-
-    const HeaderMenuName = ({ isOpen }) => {
-        // Keep the focus on the input when typing
-        useEffect(() => {
-            if (nameInputRef.current) {
-                nameInputRef.current.focus()
-            }
-        }, [isOpen])
-
-        const updateNameFilter = (e) => {
-            if (e.target.value === "") {
-                setDataFilter(
-                    ((newDataFilter) => {
-                        delete newDataFilter.name
-                        return newDataFilter
-                    })({ ...dataFilter })
-                )
-            } else {
-                setDataFilter({ ...dataFilter, name: e.target.value })
-            }
-        }
-
-        return (
-            <MenuList p={0} overflow={"hidden"}>
-                <InputGroup borderRadius="lg">
-                    <Input ref={nameInputRef} onChange={updateNameFilter} border={0} placeholder="Search names..." value={dataFilter?.name} />
-                    {dataFilter?.name && (
-                        <InputRightElement>
-                            <IconButton
-                                icon={<FontAwesomeIcon icon={faTimesCircle} size="sm" />}
-                                variant="ghost"
-                                borderRadius={8}
-                                onClick={() => {
-                                    let newDataFilter = { ...dataFilter }
-                                    delete newDataFilter.name
-                                    setDataFilter(newDataFilter)
-                                }}
-                                aria-label="Clear search"
-                            />
-                        </InputRightElement>
-                    )}
-                </InputGroup>
-            </MenuList>
-        )
-    }
-
-    const headerMenuCheckboxValues = [
-        {
-            id: "type",
-            options: [
-                { value: "dedicated", text: "Dedicated", color: "green", icon: faServer },
-                { value: "pooled", text: "Pooled", color: "blue", icon: faUsers },
-                { value: "lst", text: "LST", color: "gold", icon: faCoins },
-            ],
-        },
-        {
-            id: "security",
-            options: [
-                { value: "openSource", text: "Open Source", color: "green", icon: faServer },
-                { value: "audited", text: "Audited", color: "blue", icon: faUsers },
-                { value: "bugBounty", text: "Bug Bounty", color: "gold", icon: faCoins },
-                { value: "battleTested", text: "Battle Tested", color: "gold", icon: faCoins },
-            ],
-        },
-    ]
-    const HeaderMenuCheckbox = ({ id }) => {
-        const updateFilter = (values) => {
-            if (values.length === 0) {
-                setDataFilter(
-                    ((newDataFilter) => {
-                        delete newDataFilter[id]
-                        return newDataFilter
-                    })({ ...dataFilter })
-                )
-            } else {
-                setDataFilter({ ...dataFilter, [id]: values })
-            }
-        }
-
-        return (
-            <MenuList minWidth={1}>
-                <MenuOptionGroup defaultValue={dataFilter[id]} type="checkbox" onChange={updateFilter}>
-                    {headerMenuCheckboxValues
-                        .find((obj) => obj.id === id)
-                        ?.options.map((option) => (
-                            <MenuItemOption
-                                key={option.value}
-                                value={option.value}
-                                color={option.color}
-                                fontSize={"lg"}
-                                isChecked={dataFilter[id] && Array.isArray(dataFilter[id]) && dataFilter[id].includes(option.value)}
-                            >
-                                <Flex gap={2}>
-                                    <Box width={6}>
-                                        <FontAwesomeIcon icon={option.icon} />
-                                    </Box>
-                                    <Text>{option.text}</Text>
-                                </Flex>
-                            </MenuItemOption>
-                        ))}
-                </MenuOptionGroup>
-                <Box
-                    onClick={() => {
-                        setDataFilter(
-                            ((newDataFilter) => {
-                                delete newDataFilter[id]
-                                return newDataFilter
-                            })({ ...dataFilter })
-                        )
-                    }}
-                >
-                    Clear filters
-                </Box>
-            </MenuList>
-        )
-    }
-
-    const HeaderMenuSecurity = () => {
-        return (
-            <MenuList minWidth={1}>
-                <MenuOptionGroup type="checkbox">
-                    <MenuItemOption value="openSource" color={"green"} fontSize={"lg"}>
-                        <Flex gap={2}>
-                            <Box width={6}>
-                                <FontAwesomeIcon icon={faServer} />
-                            </Box>
-                            <Text>Open Source</Text>
-                        </Flex>
-                    </MenuItemOption>
-                    <MenuItemOption value="audited" color={"blue"} fontSize={"lg"}>
-                        <Flex gap={2}>
-                            <Box width={6}>
-                                <FontAwesomeIcon icon={faUsers} />
-                            </Box>
-                            <Text>Audited</Text>
-                        </Flex>
-                    </MenuItemOption>
-                    <MenuItemOption value="bugBounty" color={"gold"} fontSize={"lg"}>
-                        <Flex gap={2}>
-                            <Box width={6}>
-                                <FontAwesomeIcon icon={faCoins} />
-                            </Box>
-                            <Text>Bug Bounty</Text>
-                        </Flex>
-                    </MenuItemOption>
-                    <MenuItemOption value="battleTested" color={"gold"} fontSize={"lg"}>
-                        <Flex gap={2}>
-                            <Box width={6}>
-                                <FontAwesomeIcon icon={faCoins} />
-                            </Box>
-                            <Text>Battle Tested</Text>
-                        </Flex>
-                    </MenuItemOption>
-                </MenuOptionGroup>
-            </MenuList>
-        )
-    }
-
-    const ClearFiltersButton = () => {
-        return (
-            <>
-                {dataFilter && Object.keys(dataFilter).length > 0 ? (
-                    <Tooltip gutter={4} label="Clear filters" openDelay={300}>
-                        <IconButton
-                            color="blue"
-                            variant="ghost"
-                            aria-label="Clear filters"
-                            size="sm"
-                            icon={<FontAwesomeIcon icon={faFilterCircleXmark} />}
-                            onClick={() => {
-                                setDataFilter({})
-                            }}
-                        ></IconButton>
-                    </Tooltip>
-                ) : (
-                    <></>
-                )}
-            </>
-        )
-    }
 
     const headerValues = [
         { type: "checkbox", id: "type", text: "TYPE" },
@@ -385,7 +46,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
         { type: "checkbox", id: "minStake", text: "MIN STAKE" },
         { type: "checkbox", id: "validatorKey", text: "VALIDATOR <br /> KEY OWNER" },
         { type: "checkbox", id: "withdrawalKey", text: "WITHDRAWAL <br /> KEY OWNER" },
-        { type: "security", id: "security", text: "SECURITY" },
+        { type: "checkbox", id: "security", text: "SECURITY" },
         { type: "checkbox", id: "ethereumAligned", text: "ETHEREUM <br /> ALIGNED" },
     ]
 
@@ -396,16 +57,26 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                     <Thead>
                         <Tr borderBottomWidth={1}>
                             <Th>
-                                <ClearFiltersButton />
+                                <ClearFiltersButton dataFilter={dataFilter} setDataFilter={setDataFilter} />
                             </Th>
                             <Th textAlign={"start"}>
                                 <Menu placement="right" variant={"DataTableHeader"} gutter={2} initialFocusRef={nameInputRef}>
                                     {({ isOpen }) => (
                                         <>
                                             <Box ml={"-10px"}>
-                                                <HeaderButton id="name" text="NAME" />
+                                                <HeaderButton
+                                                    dataFilter={dataFilter}
+                                                    id="name"
+                                                    text="NAME"
+                                                    filterDisabledColor={filterDisabledColor}
+                                                />
                                             </Box>
-                                            <HeaderMenuName isOpen={isOpen} />
+                                            <HeaderMenuNameSearch
+                                                isOpen={isOpen}
+                                                nameInputRef={nameInputRef}
+                                                dataFilter={dataFilter}
+                                                setDataFilter={setDataFilter}
+                                            />
                                         </>
                                     )}
                                 </Menu>
@@ -413,13 +84,18 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                             {headerValues.map((headerValue) => (
                                 <Th key={headerValue.id}>
                                     <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                        <HeaderButton id={headerValue.id} text={headerValue.text} />
-                                        <HeaderMenuCheckbox id={headerValue.id} />
+                                        <HeaderButton
+                                            dataFilter={dataFilter}
+                                            id={headerValue.id}
+                                            text={headerValue.text}
+                                            filterDisabledColor={filterDisabledColor}
+                                        />
+                                        <HeaderMenuCheckbox id={headerValue.id} dataFilter={dataFilter} setDataFilter={setDataFilter} />
                                     </Menu>
                                 </Th>
                             ))}
                             <Th>
-                                <ClearFiltersButton />
+                                <ClearFiltersButton dataFilter={dataFilter} setDataFilter={setDataFilter} />
                             </Th>
                         </Tr>
                     </Thead>
@@ -438,10 +114,10 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                 <Td textAlign={"center"}>{provider.fee}</Td>
                                 <Td textAlign={"center"}>{provider.minStake}</Td>
                                 <Td>
-                                    <ValidatorKey provider={provider} />
+                                    <ValidatorKeyOwner provider={provider} />
                                 </Td>
                                 <Td>
-                                    <WithdrawalKey provider={provider} />
+                                    <WithdrawalKeyOwner provider={provider} />
                                 </Td>
                                 <Td>
                                     <StatusCircle provider={provider} column={"security"} />
