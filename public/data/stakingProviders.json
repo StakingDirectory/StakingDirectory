@@ -44,7 +44,7 @@
         "minStake": "Any amount",
         "validatorKey": ["user"],
         "withdrawalKey": ["smartContract"],
-        "security": { "openSource": true, "audited": true, "bugBounty": false, "battleTested": true },
+        "security": { "openSource": false, "audited": false, "bugBounty": false, "battleTested": false },
         "ethereumAligned": {
             "nonCensoringRelays": true,
             "permissionlessUsage": true,

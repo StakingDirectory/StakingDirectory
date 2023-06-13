@@ -253,6 +253,15 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                 { value: "lst", text: "LST", color: "gold", icon: faCoins },
             ],
         },
+        {
+            id: "security",
+            options: [
+                { value: "openSource", text: "Open Source", color: "green", icon: faServer },
+                { value: "audited", text: "Audited", color: "blue", icon: faUsers },
+                { value: "bugBounty", text: "Bug Bounty", color: "gold", icon: faCoins },
+                { value: "battleTested", text: "Battle Tested", color: "gold", icon: faCoins },
+            ],
+        },
     ]
     const HeaderMenuCheckbox = ({ id }) => {
         const updateFilter = (values) => {
@@ -275,6 +284,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                         .find((obj) => obj.id === id)
                         ?.options.map((option) => (
                             <MenuItemOption
+                                key={option.value}
                                 value={option.value}
                                 color={option.color}
                                 fontSize={"lg"}
@@ -369,6 +379,16 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
         )
     }
 
+    const headerValues = [
+        { type: "checkbox", id: "type", text: "TYPE" },
+        { type: "checkbox", id: "fee", text: "FEE" },
+        { type: "checkbox", id: "minStake", text: "MIN STAKE" },
+        { type: "checkbox", id: "validatorKey", text: "VALIDATOR <br /> KEY OWNER" },
+        { type: "checkbox", id: "withdrawalKey", text: "WITHDRAWAL <br /> KEY OWNER" },
+        { type: "security", id: "security", text: "SECURITY" },
+        { type: "checkbox", id: "ethereumAligned", text: "ETHEREUM <br /> ALIGNED" },
+    ]
+
     return (
         <Box mt={10} mb={50} width={"100%"} maxW={"1216px"} px={{ base: 0, lg: 20 }}>
             <TableContainer>
@@ -390,48 +410,14 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                     )}
                                 </Menu>
                             </Th>
-                            <Th>
-                                <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                    <HeaderButton id="type" text="TYPE" />
-                                    <HeaderMenuCheckbox id="type" />
-                                </Menu>
-                            </Th>
-                            <Th>
-                                <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                    <HeaderButton id="fee" text="FEE" />
-                                    <HeaderMenuCheckbox id="fee" />
-                                </Menu>
-                            </Th>
-                            <Th>
-                                <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                    <HeaderButton id="minStake" text="MIN STAKE" />
-                                    <HeaderMenuCheckbox id="minStake" />
-                                </Menu>
-                            </Th>
-                            <Th>
-                                <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                    <HeaderButton id="validatorKey" text="VALIDATOR <br /> KEY OWNER" />
-                                    <HeaderMenuCheckbox id="validatorKey" />
-                                </Menu>
-                            </Th>
-                            <Th>
-                                <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                    <HeaderButton id="withdrawalKey" text="WITHDRAWAL <br /> KEY OWNER" />
-                                    <HeaderMenuCheckbox id="withdrawalKey" />
-                                </Menu>
-                            </Th>
-                            <Th>
-                                <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                    <HeaderButton id="security" text="SECURITY" />
-                                    <HeaderMenuSecurity />
-                                </Menu>
-                            </Th>
-                            <Th>
-                                <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                    <HeaderButton id="ethereumAligned" text="ETHEREUM <br /> ALIGNED" />
-                                    <HeaderMenuCheckbox id="ethereumAligned" />
-                                </Menu>
-                            </Th>
+                            {headerValues.map((headerValue) => (
+                                <Th key={headerValue.id}>
+                                    <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
+                                        <HeaderButton id={headerValue.id} text={headerValue.text} />
+                                        <HeaderMenuCheckbox id={headerValue.id} />
+                                    </Menu>
+                                </Th>
+                            ))}
                             <Th>
                                 <ClearFiltersButton />
                             </Th>

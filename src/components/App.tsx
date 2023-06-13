@@ -36,12 +36,15 @@ const App = () => {
     const filteredStakingProviders = stakingProviders.filter((provider) => {
         if (dataFilter) {
             for (let key in dataFilter) {
-                if (Array.isArray(dataFilter[key])) {
+                if (key === "name") {
+                    if (!provider[key].toLowerCase().includes(dataFilter[key].toLowerCase())) return false
+                } else if (key === "security") {
+                    for (let feature of ["openSource", "audited", "bugBounty", "battleTested"]) {
+                        if (dataFilter[key].includes(feature) && !provider[key][feature]) return false
+                    }
+                } else if (Array.isArray(dataFilter[key])) {
                     // If filter value is an array, check if the item's value is included in the array.
                     if (!dataFilter[key].includes(provider[key])) return false
-                } else if (key === "name") {
-                    // If the filter key is 'name', check if the item's name contains the filter name.
-                    if (!provider[key].toLowerCase().includes(dataFilter[key].toLowerCase())) return false
                 } else {
                     // If filter value is not an array, directly compare the values.
                     if (dataFilter[key] !== provider[key]) return false
