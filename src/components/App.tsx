@@ -42,6 +42,14 @@ const App = () => {
                     for (let feature of ["openSource", "audited", "bugBounty", "battleTested"]) {
                         if (dataFilter[key].includes(feature) && !provider[feature].value) return false
                     }
+                } else if (key === "validatorKey") {
+                    for (let feature of ["user", "service"]) {
+                        if (dataFilter[key].includes(feature) && !provider[key].includes(feature)) return false
+                    }
+                } else if (key === "withdrawalKey") {
+                    for (let feature of ["user", "smartContract"]) {
+                        if (dataFilter[key].includes(feature) && !provider[key].includes(feature)) return false
+                    }
                 } else if (Array.isArray(dataFilter[key])) {
                     // If filter value is an array, check if the item's value is included in the array.
                     if (!dataFilter[key].includes(provider[key])) return false

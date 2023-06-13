@@ -3,7 +3,7 @@ import React from "react"
 import { Flex, Box, MenuList, MenuOptionGroup, MenuItemOption, Text } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCoins, faUsers, faServer } from "@fortawesome/free-solid-svg-icons"
+import { faCoins, faUsers, faServer, faCode, faUserAstronaut, faBuilding } from "@fortawesome/free-solid-svg-icons"
 
 export default function HeaderMenuCheckbox({ id, dataFilter, setDataFilter }) {
     const headerMenuCheckboxValues = [
@@ -13,6 +13,20 @@ export default function HeaderMenuCheckbox({ id, dataFilter, setDataFilter }) {
                 { value: "dedicated", text: "Dedicated", color: "green", icon: faServer },
                 { value: "pooled", text: "Pooled", color: "blue", icon: faUsers },
                 { value: "lst", text: "LST", color: "gold", icon: faCoins },
+            ],
+        },
+        {
+            id: "validatorKey",
+            options: [
+                { value: "user", text: "User Controlled", color: "", icon: faUserAstronaut },
+                { value: "service", text: "Service Controlled", color: "", icon: faBuilding },
+            ],
+        },
+        {
+            id: "withdrawalKey",
+            options: [
+                { value: "user", text: "User Owned", color: "", icon: faUserAstronaut },
+                { value: "smartContract", text: "Smart Contract Controlled", color: "", icon: faCode },
             ],
         },
         {

@@ -51,7 +51,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
     ]
 
     return (
-        <Box mt={10} mb={50} width={"100%"} maxW={"1216px"} px={{ base: 0, lg: 20 }}>
+        <Box mt={200} mb={"2000px"} width={"100%"} maxW={"1216px"} px={{ base: 0, lg: 20 }}>
             <TableContainer>
                 <Table variant="DataTable">
                     <Thead>
@@ -60,7 +60,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                 <ClearFiltersButton dataFilter={dataFilter} setDataFilter={setDataFilter} />
                             </Th>
                             <Th textAlign={"start"}>
-                                <Menu placement="right" variant={"DataTableHeader"} gutter={2} initialFocusRef={nameInputRef}>
+                                <Menu placement="top" variant={"DataTableHeader"} gutter={2} initialFocusRef={nameInputRef}>
                                     {({ isOpen }) => (
                                         <>
                                             <Box ml={"-10px"}>
@@ -83,7 +83,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                             </Th>
                             {headerValues.map((headerValue) => (
                                 <Th key={headerValue.id}>
-                                    <Menu variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
+                                    <Menu placement="top" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                         <HeaderButton
                                             dataFilter={dataFilter}
                                             id={headerValue.id}

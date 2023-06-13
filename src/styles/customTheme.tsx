@@ -51,8 +51,13 @@ const customTheme = extendTheme({
                     bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
                     borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
                     borderRadius: "10px",
+                    overflow: "hidden",
+                    paddingTop: "0",
+                    paddingBottom: "0",
                 },
                 item: {
+                    paddingTop: "10px",
+                    paddingBottom: "10px",
                     bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
                     _hover: {
                         bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",
