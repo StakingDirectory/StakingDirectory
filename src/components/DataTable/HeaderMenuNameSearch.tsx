@@ -11,7 +11,7 @@ export default function HeaderMenuNameSearch({ isOpen, nameInputRef, dataFilter,
         if (nameInputRef.current) {
             nameInputRef.current.focus()
         }
-    }, [isOpen])
+    }, [isOpen, dataFilter?.name])
 
     const updateNameFilter = (e) => {
         if (e.target.value === "") {
@@ -29,19 +29,28 @@ export default function HeaderMenuNameSearch({ isOpen, nameInputRef, dataFilter,
     return (
         <MenuList p={0} overflow={"hidden"}>
             <InputGroup borderRadius="lg">
-                <Input ref={nameInputRef} onChange={updateNameFilter} border={0} placeholder="Search names..." value={dataFilter?.name} />
+                <Input
+                    ref={nameInputRef}
+                    onChange={updateNameFilter}
+                    border={0}
+                    placeholder="Search names..."
+                    value={dataFilter?.name ? dataFilter?.name : ""}
+                />
                 {dataFilter?.name && (
                     <InputRightElement>
                         <IconButton
                             icon={<FontAwesomeIcon icon={faTimesCircle} size="sm" />}
                             variant="ghost"
+                            aria-label="Clear search"
                             borderRadius={8}
                             onClick={() => {
-                                let newDataFilter = { ...dataFilter }
-                                delete newDataFilter.name
-                                setDataFilter(newDataFilter)
+                                setDataFilter(
+                                    ((newDataFilter) => {
+                                        delete newDataFilter.name
+                                        return newDataFilter
+                                    })({ ...dataFilter })
+                                )
                             }}
-                            aria-label="Clear search"
                         />
                     </InputRightElement>
                 )}
