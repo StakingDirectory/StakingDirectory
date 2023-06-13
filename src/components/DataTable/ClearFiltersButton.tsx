@@ -9,7 +9,7 @@ export default function ClearFiltersButton({ dataFilter, setDataFilter }) {
     return (
         <>
             {dataFilter && Object.keys(dataFilter).length > 0 ? (
-                <Tooltip gutter={4} label="Clear filters" openDelay={300}>
+                <Tooltip gutter={4} label="Clear filters" openDelay={200}>
                     <IconButton
                         color="blue"
                         variant="ghost"
@@ -19,7 +19,7 @@ export default function ClearFiltersButton({ dataFilter, setDataFilter }) {
                         onClick={() => {
                             setDataFilter({})
                         }}
-                    ></IconButton>
+                    />
                 </Tooltip>
             ) : (
                 <></>

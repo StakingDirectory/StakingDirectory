@@ -35,6 +35,8 @@ const customTheme = extendTheme({
             baseStyle: (props: StyleFunctionProps) => ({
                 bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
                 color: props.colorMode === "dark" ? "text.dark" : "text.light",
+                borderColor: "white",
+                borderWidth: "1px",
                 borderRadius: "5px",
                 fontWeight: "bold",
                 fontSize: "sm",

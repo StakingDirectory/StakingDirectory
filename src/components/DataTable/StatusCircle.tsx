@@ -1,26 +1,88 @@
 import React from "react"
+import { Flex, Box, Grid, useColorModeValue, Tooltip, Text, HStack } from "@chakra-ui/react"
 
-import { Flex, Box, Grid, useColorModeValue } from "@chakra-ui/react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faCircleCheck, faCircleXmark } from "@fortawesome/free-solid-svg-icons"
 
+const StatusProperties = {
+    security: [
+        { value: "audited", name: "Audited" },
+        { value: "openSource", name: "Open Source" },
+        { value: "bugBounty", name: "Bug Bounty" },
+        { value: "battleTested", name: "Battle Tested" },
+    ],
+    ethereumAligned: [
+        { value: "permissionlessUsage", name: "Permissionless Usage" },
+        { value: "nonCensoringRelays", name: "Censorship Resistance" },
+        { value: "permissionlessOperators", name: "Permissionless Operators" },
+        { value: (provider) => provider.diverseExecutionClients.value && provider.diverseBeaconClients.value, name: "Diverse Clients" },
+    ],
+}
+
+// TODO: Move colors to customTheme
 export default function StatusCircle({ provider, column }) {
-    let option1
-    let option2
-    let option3
-    let option4
+    const statusProps = StatusProperties[column]
+    const allTrue = statusProps.every((prop) => (typeof prop.value === "function" ? prop.value(provider) : provider[prop.value].value))
+    const borderColor = useColorModeValue("pageBackground.light", "pageBackground.dark")
 
-    if (column === "security") {
-        option1 = provider.audited.value
-        option2 = provider.openSource.value
-        option3 = provider.bugBounty.value
-        option4 = provider.battleTested.value
-    } else if (column === "ethereumAligned") {
-        option1 = provider.permissionlessUsage.value
-        option2 = provider.nonCensoringRelays.value
-        option3 = provider.permissionlessOperators.value
-        option4 = provider.diverseExecutionClients.value && provider.diverseBeaconClients.value
+    const borderStyle = "1px solid"
+    const borderProperties = [
+        {
+            border: { borderBottom: borderStyle, borderRight: borderStyle },
+            borderRadius: { borderBottomRightRadius: 3, borderTopRightRadius: 2, borderBottomLeftRadius: 2 },
+        },
+        {
+            border: { borderBottom: borderStyle, borderLeft: borderStyle },
+            borderRadius: { borderBottomLeftRadius: 3, borderTopLeftRadius: 2, borderBottomRightRadius: 2 },
+        },
+        {
+            border: { borderTop: borderStyle, borderRight: borderStyle },
+            borderRadius: { borderTopRightRadius: 3, borderTopLeftRadius: 2, borderBottomRightRadius: 2 },
+        },
+        {
+            border: { borderTop: borderStyle, borderLeft: borderStyle },
+            borderRadius: { borderTopLeftRadius: 3, borderBottomLeftRadius: 2, borderTopRightRadius: 2 },
+        },
+    ]
+
+    const renderBox = (status: { value: any; name: string }, index: number) => {
+        type PlacementWithLogical = "top-end" | "top-start" | "bottom-end" | "bottom-start"
+
+        const { value: statusValue, name: statusName } = status
+        const value = typeof statusValue === "function" ? statusValue(provider) : provider[statusValue]?.value
+
+        const placements: PlacementWithLogical[] = ["top-end", "top-start", "bottom-end", "bottom-start"]
+        const placement = placements[index]
+
+        const margins = allTrue
+            ? ["0 15px -1px 0", "0 0 -1px 15px", "-1px 15px 0 0", "-1px 0 10px 15px"]
+            : ["0 15px -5px 0", "0 0 -5px 15px", "-5px 15px 0 0", "-5px 0 0 15px"]
+        const margin = margins[index]
+
+        const labelColor = value ? "green" : "red"
+        const icon = value ? faCircleCheck : faCircleXmark
+
+        const label = (
+            <HStack>
+                <Box color={labelColor}>
+                    <FontAwesomeIcon icon={icon} size="lg" />
+                </Box>
+                <Text>{statusName}</Text>
+            </HStack>
+        )
+
+        return (
+            <Tooltip placement={placement} margin={margin} gutter={0} label={label} openDelay={0}>
+                <Box
+                    {...borderProperties[index].borderRadius}
+                    {...borderProperties[index].border}
+                    borderColor={borderColor}
+                    bg={value ? "green" : "red"}
+                    h={5}
+                />
+            </Tooltip>
+        )
     }
-
-    const allTrue = option1 && option2 && option3 && option4
 
     return (
         <Flex justifyContent={"center"}>
@@ -34,46 +96,7 @@ export default function StatusCircle({ provider, column }) {
                     overflow={"hidden"}
                     w="44px"
                 >
-                    <Box
-                        borderBottomRightRadius={3}
-                        borderBottomLeftRadius={2}
-                        borderTopRightRadius={2}
-                        borderRight={"1px solid"}
-                        borderBottom={"1px solid"}
-                        borderColor={useColorModeValue("pageBackground.light", "pageBackground.dark")}
-                        bg={option1 ? "green" : "red"}
-                        h={5}
-                    ></Box>
-                    <Box
-                        borderBottomLeftRadius={3}
-                        borderTopLeftRadius={2}
-                        borderBottomRightRadius={2}
-                        borderLeft={"1px solid"}
-                        borderBottom={"1px solid"}
-                        borderColor={useColorModeValue("pageBackground.light", "pageBackground.dark")}
-                        bg={option2 ? "green" : "red"}
-                        h={5}
-                    ></Box>
-                    <Box
-                        borderTopRightRadius={3}
-                        borderTopLeftRadius={2}
-                        borderBottomRightRadius={2}
-                        borderRight={"1px solid"}
-                        borderTop={"1px solid"}
-                        borderColor={useColorModeValue("pageBackground.light", "pageBackground.dark")}
-                        bg={option4 ? "green" : "red"}
-                        h={5}
-                    ></Box>
-                    <Box
-                        borderTopLeftRadius={3}
-                        borderBottomLeftRadius={2}
-                        borderTopRightRadius={2}
-                        borderLeft={"1px solid"}
-                        borderTop={"1px solid"}
-                        borderColor={useColorModeValue("pageBackground.light", "pageBackground.dark")}
-                        bg={option3 ? "green" : "red"}
-                        h={5}
-                    ></Box>
+                    {statusProps.map(renderBox)}
                 </Grid>
             </Box>
         </Flex>

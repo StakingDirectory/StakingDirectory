@@ -64,7 +64,7 @@ export default function HeaderMenuCheckbox({ id, dataFilter, setDataFilter }) {
 
     return (
         <MenuList minWidth={1}>
-            <MenuOptionGroup defaultValue={dataFilter[id]} type="checkbox" onChange={updateFilter}>
+            <MenuOptionGroup key={JSON.stringify(dataFilter[id])} defaultValue={dataFilter[id]} type="checkbox" onChange={updateFilter}>
                 {headerMenuCheckboxValues
                     .find((obj) => obj.id === id)
                     ?.options.map((option) => (
