@@ -40,18 +40,6 @@ export default function HeaderMenuCheckbox({ id, headerMenuValues, dataFilter, s
                         </MenuItemOption>
                     ))}
             </MenuOptionGroup>
-            <Box
-                onClick={() => {
-                    setDataFilter(
-                        ((newDataFilter) => {
-                            delete newDataFilter[id]
-                            return newDataFilter
-                        })({ ...dataFilter })
-                    )
-                }}
-            >
-                Clear filters
-            </Box>
         </MenuList>
     )
 }

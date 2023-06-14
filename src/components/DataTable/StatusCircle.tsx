@@ -7,15 +7,15 @@ import { faCircleCheck, faCircleXmark } from "@fortawesome/free-solid-svg-icons"
 const StatusProperties = {
     security: [
         { value: "audited", name: "Audited" },
-        { value: "openSource", name: "Open Source" },
-        { value: "bugBounty", name: "Bug Bounty" },
-        { value: "battleTested", name: "Battle Tested" },
+        { value: "openSource", name: "Open source" },
+        { value: "bugBounty", name: "Bug bounty" },
+        { value: "battleTested", name: "Battle tested" },
     ],
     ethereumAligned: [
-        { value: "permissionlessUsage", name: "Permissionless Usage" },
-        { value: "nonCensoringRelays", name: "Censorship Resistance" },
-        { value: "permissionlessOperators", name: "Permissionless Operators" },
-        { value: (provider) => provider.diverseExecutionClients.value && provider.diverseBeaconClients.value, name: "Diverse Clients" },
+        { value: "permissionlessUsage", name: "Permissionless usage" },
+        { value: "nonCensoringRelays", name: "Censorship resistance" },
+        { value: "permissionlessOperators", name: "Permissionless operators" },
+        { value: (provider) => provider.diverseExecutionClients.value && provider.diverseBeaconClients.value, name: "Diverse clients" },
     ],
 }
 

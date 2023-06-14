@@ -42,6 +42,16 @@ const App = () => {
                     for (let feature of ["openSource", "audited", "bugBounty", "battleTested"]) {
                         if (dataFilter[key].includes(feature) && !provider[feature].value) return false
                     }
+                } else if (key === "ethereumAligned") {
+                    for (let feature of [
+                        "nonCensoringRelays",
+                        "permissionlessUsage",
+                        "permissionlessOperators",
+                        "diverseExecutionClients",
+                        "diverseBeaconClients",
+                    ]) {
+                        if (dataFilter[key].includes(feature) && !provider[feature].value) return false
+                    }
                 } else if (key === "validatorKey") {
                     for (let feature of ["user", "service"]) {
                         if (dataFilter[key].includes(feature) && !provider[key].includes(feature)) return false

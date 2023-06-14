@@ -35,7 +35,25 @@ import HeaderMenuCheckbox from "./HeaderMenuCheckbox"
 import HeaderMenuNameSearch from "./HeaderMenuNameSearch"
 import ClearFiltersButton from "./ClearFiltersButton"
 
-import { faCoins, faUsers, faServer, faCode, faUserAstronaut, faBuilding } from "@fortawesome/free-solid-svg-icons"
+import {
+    faCoins,
+    faUsers,
+    faServer,
+    faCode,
+    faUserAstronaut,
+    faBuilding,
+    faMagnifyingGlass,
+    faBookOpen,
+    faShield,
+    faBug,
+    faDoorOpen,
+    faVolumeHigh,
+    faShapes,
+    faBarsProgress,
+    faDiagramProject,
+    faLockOpen,
+    faListUl,
+} from "@fortawesome/free-solid-svg-icons"
 
 export default function DataTable({ windowSize, environment, stakingProviders, dataFilter, setDataFilter }) {
     const isSSR = typeof window === "undefined"
@@ -66,67 +84,64 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
             id: "validatorKey",
             name: "Validator Key Owner",
             options: [
-                { value: "user", text: "User Controlled", color: "", icon: faUserAstronaut },
-                { value: "service", text: "Service Controlled", color: "", icon: faBuilding },
+                { value: "user", text: "User owned", color: "", icon: faUserAstronaut },
+                { value: "service", text: "Service owned", color: "", icon: faBuilding },
             ],
         },
         {
             id: "withdrawalKey",
             name: "Withdrawal Key Owner",
             options: [
-                { value: "user", text: "User Owned", color: "", icon: faUserAstronaut },
-                { value: "smartContract", text: "Smart Contract Controlled", color: "", icon: faCode },
+                { value: "user", text: "User owned", color: "", icon: faUserAstronaut },
+                { value: "smartContract", text: "Smart contract", color: "", icon: faCode },
             ],
         },
         {
             id: "security",
             name: "Security",
             options: [
-                { value: "openSource", text: "Open Source", color: "green", icon: faServer },
-                { value: "audited", text: "Audited", color: "blue", icon: faUsers },
-                { value: "bugBounty", text: "Bug Bounty", color: "gold", icon: faCoins },
-                { value: "battleTested", text: "Battle Tested", color: "gold", icon: faCoins },
+                { value: "openSource", text: "Open source", color: "", icon: faBookOpen },
+                { value: "battleTested", text: "Battle tested", color: "", icon: faShield },
+                { value: "bugBounty", text: "Bug bounty", color: "", icon: faBug },
+                { value: "audited", text: "Audited", color: "", icon: faMagnifyingGlass },
             ],
         },
         {
             id: "ethereumAligned",
             name: "Ethereum Aligned",
             options: [
-                { value: "nonCensoringRelays", text: "Censorship Resistance", color: "green", icon: faServer },
-                { value: "permissionlessUsage", text: "Permissionless Usage", color: "blue", icon: faUsers },
-                { value: "permissionlessOperators", text: "Permissionless Operators", color: "gold", icon: faCoins },
-                { value: "diverseClients", text: "Diverse Clients", color: "gold", icon: faCoins },
+                { value: "nonCensoringRelays", text: "Censorship resistance", color: "", icon: faVolumeHigh },
+                { value: "diverseExecutionClients", text: "Diverse EL clients", color: "", icon: faShapes },
+                { value: "diverseBeaconClients", text: "Diverse BN clients", color: "", icon: faListUl },
+                { value: "permissionlessOperators", text: "Permissionless operators", color: "", icon: faLockOpen },
+                { value: "permissionlessUsage", text: "Permissionless usage", color: "", icon: faUsers },
             ],
         },
     ]
 
     const ActiveFilters = () => {
-        const ActiveFilterOptions = (activeFilterOptions) => {
-            if (Array.isArray(Object.values(activeFilterOptions))) {
-                return (
-                    <Box>
-                        {Object.values(activeFilterOptions).map((filterOption: String, index) => (
-                            <Box key={index}>{filterOption}</Box>
-                        ))}
-                    </Box>
-                )
-            } else {
-                return <Box>{activeFilterOptions}</Box>
-            }
-        }
-
         const activeFilters = Object.keys(dataFilter).map((activeFilter) => {
             return (
-                <Box key={activeFilter} color="blue">
-                    {activeFilter}
-                    <Box color="yellow">
-                        <ActiveFilterOptions activeFilterOptions={dataFilter[activeFilter]} />
-                    </Box>
-                </Box>
+                <Flex px={2} key={activeFilter} color="blue">
+                    <Text>{activeFilter}</Text>
+                    <Flex color="yellow">
+                        {Array.isArray(Object.values(dataFilter[activeFilter])) ? (
+                            <Flex>
+                                {Object.values(dataFilter[activeFilter]).map((filterOption: String, index) => (
+                                    <Box px={1} key={index}>
+                                        {filterOption}
+                                    </Box>
+                                ))}
+                            </Flex>
+                        ) : (
+                            <Box px={2}>{dataFilter[activeFilter]}</Box>
+                        )}
+                    </Flex>
+                </Flex>
             )
         })
 
-        return <Box>Active Filters: {activeFilters}</Box>
+        return <Flex>Active Filters: {activeFilters}</Flex>
     }
 
     return (
@@ -164,12 +179,16 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                             {headerValues.map((headerValue) => (
                                 <Th key={headerValue.id}>
                                     <Menu placement="top" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                        <HeaderButton
-                                            dataFilter={dataFilter}
-                                            id={headerValue.id}
-                                            text={headerValue.text}
-                                            filterDisabledColor={filterDisabledColor}
-                                        />
+                                        {headerMenuValues.some((menuValue) => menuValue.id === headerValue.id) ? (
+                                            <HeaderButton
+                                                dataFilter={dataFilter}
+                                                id={headerValue.id}
+                                                text={headerValue.text}
+                                                filterDisabledColor={filterDisabledColor}
+                                            />
+                                        ) : (
+                                            <Box pb={"10px"}>{headerValue.text}</Box>
+                                        )}
                                         <HeaderMenuCheckbox
                                             id={headerValue.id}
                                             headerMenuValues={headerMenuValues}
