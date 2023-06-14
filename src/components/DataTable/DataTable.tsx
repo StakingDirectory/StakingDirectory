@@ -29,6 +29,7 @@ import DataRowMenuButton from "./DataRowMenuButton"
 import HeaderButton from "./HeaderButton"
 import StatusCircle from "./StatusCircle"
 import StakingType from "./StakingType"
+import ProviderType from "./ProviderType"
 import WithdrawalKeyOwner from "./WithdrawalKeyOwner"
 import ValidatorKeyOwner from "./ValidatorKeyOwner"
 import HeaderMenuCheckbox from "./HeaderMenuCheckbox"
@@ -46,13 +47,13 @@ import {
     faBookOpen,
     faShield,
     faBug,
-    faDoorOpen,
     faVolumeHigh,
     faShapes,
-    faBarsProgress,
-    faDiagramProject,
     faLockOpen,
     faListUl,
+    faCloud,
+    faDesktop,
+    faShoppingBasket,
 } from "@fortawesome/free-solid-svg-icons"
 
 export default function DataTable({ windowSize, environment, stakingProviders, dataFilter, setDataFilter }) {
@@ -62,6 +63,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
 
     const headerValues = [
         { type: "checkbox", id: "stakingType", text: "STAKING <br /> TYPE" },
+        { type: "checkbox", id: "providerType", text: "PROVIDER <br /> TYPE" },
         { type: "checkbox", id: "fee", text: "FEE" },
         { type: "checkbox", id: "minStake", text: "MIN STAKE" },
         { type: "checkbox", id: "validatorKey", text: "VALIDATOR <br /> KEY OWNER" },
@@ -78,6 +80,17 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                 { value: "dedicated", text: "Dedicated", color: "green", icon: faServer },
                 { value: "pooled", text: "Pooled", color: "blue", icon: faUsers },
                 { value: "lst", text: "LST", color: "gold", icon: faCoins },
+            ],
+        },
+        {
+            id: "providerType",
+            name: "Provider Type",
+            options: [
+                { value: "hardware", text: "Hardware", color: "", icon: faDesktop },
+                { value: "software", text: "Software", color: "", icon: faCode },
+                { value: "cloud", text: "Cloud", color: "", icon: faCloud },
+                { value: "lst", text: "LST", color: "", icon: faCoins },
+                { value: "indexToken", text: "LST index", color: "", icon: faShoppingBasket },
             ],
         },
         {
@@ -214,6 +227,9 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                 </Td>
                                 <Td textAlign={"center"}>
                                     <StakingType provider={provider} />
+                                </Td>
+                                <Td textAlign={"center"}>
+                                    <ProviderType provider={provider} />
                                 </Td>
                                 <Td textAlign={"center"}>
                                     {provider.fee.value}

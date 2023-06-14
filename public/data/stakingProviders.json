@@ -6,7 +6,7 @@
         "status": "active",
         "mainnetLaunchDate": "2020-12-18",
         "stakingType": "lst",
-        "providerType": "saas",
+        "providerType": "cloud",
         "fee": {
             "type": "rewardPercentage",
             "value": 10
@@ -17,7 +17,7 @@
         },
         "minStake": {
             "type": "anyAmount",
-            "value": "Any Amount"
+            "value": "Any amount"
         },
         "validatorKey": ["user", "service"],
         "withdrawalKey": ["user"],
@@ -60,7 +60,7 @@
         "logo": { "src": "./images/LidoLogo.png", "alt": "Lido Logo" },
         "name": "Lido",
         "stakingType": "dedicated",
-        "providerType": "saas",
+        "providerType": "software",
         "fee": {
             "type": "rewardPercentage",
             "value": 10
@@ -105,7 +105,7 @@
         "name": "Lido long name",
         "type": "pooled",
         "stakingType": "pooled",
-        "providerType": "saas",
+        "providerType": "indexToken",
         "fee": {
             "type": "rewardPercentage",
             "value": 10
