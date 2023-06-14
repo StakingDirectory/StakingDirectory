@@ -3,52 +3,8 @@ import React from "react"
 import { Flex, Box, MenuList, MenuOptionGroup, MenuItemOption, Text } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCoins, faUsers, faServer, faCode, faUserAstronaut, faBuilding } from "@fortawesome/free-solid-svg-icons"
 
-export default function HeaderMenuCheckbox({ id, dataFilter, setDataFilter }) {
-    const headerMenuCheckboxValues = [
-        {
-            id: "type",
-            options: [
-                { value: "dedicated", text: "Dedicated", color: "green", icon: faServer },
-                { value: "pooled", text: "Pooled", color: "blue", icon: faUsers },
-                { value: "lst", text: "LST", color: "gold", icon: faCoins },
-            ],
-        },
-        {
-            id: "validatorKey",
-            options: [
-                { value: "user", text: "User Controlled", color: "", icon: faUserAstronaut },
-                { value: "service", text: "Service Controlled", color: "", icon: faBuilding },
-            ],
-        },
-        {
-            id: "withdrawalKey",
-            options: [
-                { value: "user", text: "User Owned", color: "", icon: faUserAstronaut },
-                { value: "smartContract", text: "Smart Contract Controlled", color: "", icon: faCode },
-            ],
-        },
-        {
-            id: "security",
-            options: [
-                { value: "openSource", text: "Open Source", color: "green", icon: faServer },
-                { value: "audited", text: "Audited", color: "blue", icon: faUsers },
-                { value: "bugBounty", text: "Bug Bounty", color: "gold", icon: faCoins },
-                { value: "battleTested", text: "Battle Tested", color: "gold", icon: faCoins },
-            ],
-        },
-        {
-            id: "ethereumAligned",
-            options: [
-                { value: "nonCensoringRelays", text: "Censorship Resistance", color: "green", icon: faServer },
-                { value: "permissionlessUsage", text: "Permissionless Usage", color: "blue", icon: faUsers },
-                { value: "permissionlessOperators", text: "Permissionless Operators", color: "gold", icon: faCoins },
-                { value: "diverseClients", text: "Diverse Clients", color: "gold", icon: faCoins },
-            ],
-        },
-    ]
-
+export default function HeaderMenuCheckbox({ id, headerMenuValues, dataFilter, setDataFilter }) {
     const updateFilter = (values) => {
         if (values.length === 0) {
             setDataFilter(
@@ -65,7 +21,7 @@ export default function HeaderMenuCheckbox({ id, dataFilter, setDataFilter }) {
     return (
         <MenuList minWidth={1}>
             <MenuOptionGroup key={JSON.stringify(dataFilter[id])} defaultValue={dataFilter[id]} type="checkbox" onChange={updateFilter}>
-                {headerMenuCheckboxValues
+                {headerMenuValues
                     .find((obj) => obj.id === id)
                     ?.options.map((option) => (
                         <MenuItemOption

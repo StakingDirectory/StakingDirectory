@@ -1,59 +1,147 @@
 [
     {
         "id": "2DEC86",
-        "logo": "./images/LidoLogo.png",
+        "logo": { "src": "./images/LidoLogo.png", "alt": "Lido Logo" },
         "name": "Lido",
-        "type": "lst",
-        "fee": "10%",
-        "minStake": "Any amount",
+        "status": "active",
+        "mainnetLaunchDate": "2020-12-18",
+        "stakingType": "lst",
+        "providerType": "saas",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 10
+        },
+        "links": {
+            "website": "https://lido.fi/",
+            "twitter": "https://twitter.com/LidoFinance"
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": "Any Amount"
+        },
         "validatorKey": ["user", "service"],
         "withdrawalKey": ["user"],
-        "openSource": { "value": true },
-        "audited": { "value": true },
-        "bugBounty": { "value": true },
-        "battleTested": { "value": true },
-        "nonCensoringRelays": { "value": true },
-        "permissionlessUsage": { "value": true },
-        "permissionlessOperators": { "value": true },
-        "diverseExecutionClients": { "value": true },
-        "diverseBeaconClients": { "value": true }
-    },
-    {
-        "id": "EGJLX2",
-        "logo": "./images/LidoLogo.png",
-        "name": "Lido long name",
-        "type": "pooled",
-        "fee": "10%",
-        "minStake": "Any amount",
-        "validatorKey": ["user"],
-        "withdrawalKey": ["smartContract"],
-        "openSource": { "value": true },
-        "audited": { "value": true },
-        "bugBounty": { "value": false },
-        "battleTested": { "value": true },
-        "nonCensoringRelays": { "value": true },
-        "permissionlessUsage": { "value": true },
-        "permissionlessOperators": { "value": true },
-        "diverseExecutionClients": { "value": true },
-        "diverseBeaconClients": { "value": true }
+        "openSource": {
+            "value": true,
+            "links": [
+                {
+                    "text": "GitHub Repo",
+                    "url": "https://github.com/lidofinance"
+                }
+            ]
+        },
+        "audited": {
+            "value": true
+        },
+        "bugBounty": {
+            "value": true
+        },
+        "battleTested": {
+            "value": true
+        },
+        "nonCensoringRelays": {
+            "value": true
+        },
+        "permissionlessUsage": {
+            "value": true
+        },
+        "permissionlessOperators": {
+            "value": true
+        },
+        "diverseExecutionClients": {
+            "value": true
+        },
+        "diverseBeaconClients": {
+            "value": true
+        }
     },
     {
         "id": "AAAAAA",
-        "logo": "./images/LidoLogo.png",
+        "logo": { "src": "./images/LidoLogo.png", "alt": "Lido Logo" },
         "name": "Lido",
-        "type": "dedicated",
-        "fee": "10%",
-        "minStake": "Any amount",
+        "stakingType": "dedicated",
+        "providerType": "saas",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 10
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 0.1
+        },
         "validatorKey": ["user"],
         "withdrawalKey": ["smartContract"],
-        "openSource": { "value": false },
-        "audited": { "value": false },
-        "bugBounty": { "value": false },
-        "battleTested": { "value": false },
-        "nonCensoringRelays": { "value": true },
-        "permissionlessUsage": { "value": true },
-        "permissionlessOperators": { "value": true },
-        "diverseExecutionClients": { "value": true },
-        "diverseBeaconClients": { "value": false }
+        "openSource": {
+            "value": false
+        },
+        "audited": {
+            "value": false
+        },
+        "bugBounty": {
+            "value": false
+        },
+        "battleTested": {
+            "value": false
+        },
+        "nonCensoringRelays": {
+            "value": true
+        },
+        "permissionlessUsage": {
+            "value": true
+        },
+        "permissionlessOperators": {
+            "value": true
+        },
+        "diverseExecutionClients": {
+            "value": true
+        },
+        "diverseBeaconClients": {
+            "value": false
+        }
+    },
+    {
+        "id": "EGJLX2",
+        "logo": { "src": "./images/LidoLogo.png", "alt": "Lido Logo" },
+        "name": "Lido long name",
+        "type": "pooled",
+        "stakingType": "pooled",
+        "providerType": "saas",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 10
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 0.1
+        },
+        "validatorKey": ["user"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": true
+        },
+        "audited": {
+            "value": true
+        },
+        "bugBounty": {
+            "value": false
+        },
+        "battleTested": {
+            "value": true
+        },
+        "nonCensoringRelays": {
+            "value": true
+        },
+        "permissionlessUsage": {
+            "value": true
+        },
+        "permissionlessOperators": {
+            "value": true
+        },
+        "diverseExecutionClients": {
+            "value": true
+        },
+        "diverseBeaconClients": {
+            "value": true
+        }
     }
 ]
