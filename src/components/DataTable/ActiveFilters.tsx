@@ -10,7 +10,7 @@ export default function ActiveFilters({ dataFilter, setDataFilter, headerValues 
 
     const activeFilters = Object.keys(dataFilter).map((activeFilter) => {
         return (
-            <Flex direction={"column"} px={2} pb={1}>
+            <Flex key={activeFilter} direction={"column"} px={2} pb={1}>
                 <Box pl={1} pb={1}>
                     {headerValues.find((obj) => obj.id === activeFilter).name}
                 </Box>
