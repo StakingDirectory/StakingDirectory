@@ -101,6 +101,12 @@ const App = () => {
 
     const headerValues = [
         {
+            type: "text",
+            id: "name",
+            name: "Name",
+            headerText: "NAME",
+        },
+        {
             type: "checkbox",
             id: "stakingType",
             name: "Staking Type",
@@ -190,7 +196,7 @@ const App = () => {
             <Flex direction="column" justifyContent="center" alignItems="center">
                 <Header windowSize={windowSize} environment={environment} />
                 {/* TODO: REMOVE WHEN PROD READY */}
-                <Box width={"100%"} height={6} bg="purple" textAlign={"center"} fontWeight={"extrabold"} color={"white"}>
+                <Box width={"100%"} minH={6} bg="purple" textAlign={"center"} fontWeight={"extrabold"} color={"white"}>
                     🏗️ ACTIVE DEVELOPMENT ENVIRONMENT - NOT PRODUCTION READY 🏗️
                 </Box>
                 <Box height={150} />

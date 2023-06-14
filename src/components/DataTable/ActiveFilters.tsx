@@ -1,12 +1,12 @@
 import React, { useRef, useEffect, useState } from "react"
 
-import { useColorModeValue, Flex, Text, Box, Collapse, Button } from "@chakra-ui/react"
+import { useColorModeValue, Flex, Text, Box, Collapse, Button, Tooltip } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronDown, faChevronRight, faFilterCircleXmark } from "@fortawesome/free-solid-svg-icons"
+import { faChevronDown, faChevronRight, faFilter, faFilterCircleXmark } from "@fortawesome/free-solid-svg-icons"
 
 export default function ActiveFilters({ dataFilter, setDataFilter, headerValues }) {
-    const [showActiveFilters, setShowActiveFilters] = useState(true)
+    const [showActiveFilters, setShowActiveFilters] = useState(false)
 
     const activeFilters = Object.keys(dataFilter).map((activeFilter) => {
         return (
@@ -36,28 +36,40 @@ export default function ActiveFilters({ dataFilter, setDataFilter, headerValues 
     return (
         <Box width={"100%"} maxW={"1216px"} px={2}>
             <Box width={"fit-content"}>
-                <Button
-                    variant={"ActiveFilters"}
-                    borderRadius={12}
-                    mb={1}
-                    onClick={() => {
-                        setShowActiveFilters(!showActiveFilters)
-                        console.log(showActiveFilters)
-                    }}
+                <Tooltip
+                    gutter={2}
+                    label={
+                        Object.keys(dataFilter).length === 0 ? (
+                            <Box>
+                                Please filter the table <FontAwesomeIcon icon={faFilter} /> to show your active filters here
+                            </Box>
+                        ) : null
+                    }
+                    openDelay={200}
                 >
-                    <Box>
-                        <Box width={3} pt={"1px"}>
-                            {showActiveFilters ? (
-                                <FontAwesomeIcon icon={faChevronDown} size={"sm"} />
-                            ) : (
-                                <FontAwesomeIcon icon={faChevronRight} size={"sm"} />
-                            )}
+                    <Button
+                        variant={"ActiveFilters"}
+                        borderRadius={12}
+                        mb={1}
+                        onClick={() => {
+                            setShowActiveFilters(!showActiveFilters)
+                        }}
+                        isDisabled={Object.keys(dataFilter).length === 0}
+                    >
+                        <Box>
+                            <Box width={3} pt={"1px"}>
+                                {showActiveFilters ? (
+                                    <FontAwesomeIcon icon={faChevronDown} size={"sm"} />
+                                ) : (
+                                    <FontAwesomeIcon icon={faChevronRight} size={"sm"} />
+                                )}
+                            </Box>
                         </Box>
-                    </Box>
-                    <Text ml={2} fontWeight={"bold"} fontSize="lg">
-                        Active Filters
-                    </Text>
-                </Button>
+                        <Text ml={2} fontWeight={"bold"} fontSize="lg">
+                            Active Filters
+                        </Text>
+                    </Button>
+                </Tooltip>
                 <Collapse in={Boolean(showActiveFilters)}>
                     <Flex
                         wrap={"wrap"}

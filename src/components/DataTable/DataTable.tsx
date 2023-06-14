@@ -51,7 +51,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                 <ClearFiltersButton dataFilter={dataFilter} setDataFilter={setDataFilter} />
                             </Th>
                             <Th textAlign={"start"}>
-                                <Menu placement="top" variant={"DataTableHeader"} gutter={2} initialFocusRef={nameInputRef}>
+                                <Menu placement="bottom" variant={"DataTableHeader"} gutter={2} initialFocusRef={nameInputRef}>
                                     {({ isOpen }) => (
                                         <>
                                             <Box ml={"-10px"}>
@@ -74,7 +74,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                             </Th>
                             {headerValues.map((headerValue) => (
                                 <Th key={headerValue.id}>
-                                    <Menu placement="top" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
+                                    <Menu placement="bottom" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                         {headerValue.type == "checkbox" ? (
                                             <HeaderButton
                                                 dataFilter={dataFilter}
