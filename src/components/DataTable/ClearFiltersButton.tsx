@@ -1,5 +1,3 @@
-// import React, { useRef, useEffect, useState } from "react"
-
 import { IconButton, Tooltip } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"

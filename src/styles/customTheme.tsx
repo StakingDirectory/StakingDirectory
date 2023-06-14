@@ -3,6 +3,15 @@ import type { StyleFunctionProps } from "@chakra-ui/styled-system"
 
 const customTheme = extendTheme({
     components: {
+        Button: {
+            variants: {
+                ActiveFilters: (props: StyleFunctionProps) => ({
+                    _hover: {
+                        bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",
+                    },
+                }),
+            },
+        },
         Table: {
             variants: {
                 DataTable: (props: StyleFunctionProps) => ({

@@ -4,7 +4,7 @@ import { Flex, Box, MenuList, MenuOptionGroup, MenuItemOption, Text } from "@cha
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-export default function HeaderMenuCheckbox({ id, headerMenuValues, dataFilter, setDataFilter }) {
+export default function HeaderMenuCheckbox({ id, headerValues, dataFilter, setDataFilter }) {
     const updateFilter = (values) => {
         if (values.length === 0) {
             setDataFilter(
@@ -21,7 +21,7 @@ export default function HeaderMenuCheckbox({ id, headerMenuValues, dataFilter, s
     return (
         <MenuList minWidth={1}>
             <MenuOptionGroup key={JSON.stringify(dataFilter[id])} defaultValue={dataFilter[id]} type="checkbox" onChange={updateFilter}>
-                {headerMenuValues
+                {headerValues
                     .find((obj) => obj.id === id)
                     ?.options.map((option) => (
                         <MenuItemOption
