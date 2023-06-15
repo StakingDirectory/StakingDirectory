@@ -14,7 +14,7 @@ const customTheme = extendTheme({
             variants: {
                 ActiveFilters: (props: StyleFunctionProps) => ({
                     _hover: {
-                        bg: props.colorMode === "dark" ? "contentBackgroundHover.dark" : "contentBackgroundHover.light",
+                        bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
                     },
                 }),
             },
@@ -55,7 +55,7 @@ const customTheme = extendTheme({
                 maxWidth: "500px",
                 textAlign: "center",
                 borderWidth: "1px",
-                borderRadius: "5px",
+                borderRadius: "10px",
                 fontWeight: "bold",
                 fontSize: "sm",
                 padding: "0.6rem",
