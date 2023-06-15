@@ -3,7 +3,7 @@ import React from "react"
 import { Flex, Tooltip } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faUserAstronaut, faBuilding } from "@fortawesome/free-solid-svg-icons"
+import { faUserAstronaut, faBuilding, faServer } from "@fortawesome/free-solid-svg-icons"
 
 export default function ValidatorKeyOwner({ provider }) {
     return (
@@ -13,10 +13,14 @@ export default function ValidatorKeyOwner({ provider }) {
                     <FontAwesomeIcon icon={faUserAstronaut} size="lg" />
                 </Tooltip>
             )}
-
             {provider.validatorKey.includes("service") && (
                 <Tooltip label={"Validator keys are controlled by the service"} openDelay={0}>
                     <FontAwesomeIcon icon={faBuilding} size="lg" />
+                </Tooltip>
+            )}
+            {provider.validatorKey.includes("nodeOperator") && (
+                <Tooltip label={"Validator keys are controlled by the node operator"} openDelay={0}>
+                    <FontAwesomeIcon icon={faServer} size="lg" />
                 </Tooltip>
             )}
         </Flex>

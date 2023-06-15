@@ -152,6 +152,7 @@ const App = () => {
             options: [
                 { value: "user", text: "User owned", color: "", icon: faUserAstronaut },
                 { value: "service", text: "Service owned", color: "", icon: faBuilding },
+                { value: "nodeOperator", text: "Operator owned", color: "", icon: faServer },
             ],
         },
         {
