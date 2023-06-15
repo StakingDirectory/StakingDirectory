@@ -338,11 +338,12 @@
             "src": "./images/LidoLogo.png",
             "alt": "Lido Logo"
         },
-        "name": "Lido - stETH",
+        "name": "Lido",
         "status": "active",
         "mainnetLaunchDate": "",
         "stakingType": "lst",
         "providerType": "lst",
+        "lstName": "stETH",
         "fee": {
             "type": "rewardPercentage",
             "value": 10

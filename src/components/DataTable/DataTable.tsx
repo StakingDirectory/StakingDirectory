@@ -10,6 +10,7 @@ import ProviderType from "./ProviderType"
 import WithdrawalKeyOwner from "./WithdrawalKeyOwner"
 import ValidatorKeyOwner from "./ValidatorKeyOwner"
 import HeaderMenuCheckbox from "./HeaderMenuCheckbox"
+import HeaderMenuType from "./HeaderMenuType"
 import HeaderMenuNameSearch from "./HeaderMenuNameSearch"
 import ClearFiltersButton from "./ClearFiltersButton"
 
@@ -72,6 +73,25 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                             </Menu>
                                         </Th>
                                     )
+                                } else if (headerValue.type == "checkboxType") {
+                                    return (
+                                        <Th minW={120} key={headerValue.id}>
+                                            <Menu placement="bottom" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
+                                                <HeaderButton
+                                                    dataFilter={dataFilter}
+                                                    id={headerValue.id}
+                                                    text={headerValue.headerText}
+                                                    filterDisabledColor={filterDisabledColor}
+                                                />
+                                                <HeaderMenuType
+                                                    id={headerValue.id}
+                                                    headerValues={headerValues}
+                                                    dataFilter={dataFilter}
+                                                    setDataFilter={setDataFilter}
+                                                />
+                                            </Menu>
+                                        </Th>
+                                    )
                                 } else if (headerValue.type == "other") {
                                     return (
                                         <Th minW={110} key={headerValue.id}>
@@ -99,8 +119,6 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                 </Td>
                                 <Td textAlign={"center"}>
                                     <StakingType provider={provider} />
-                                </Td>
-                                <Td textAlign={"center"}>
                                     <ProviderType provider={provider} />
                                 </Td>
                                 <Td textAlign={"center"}>

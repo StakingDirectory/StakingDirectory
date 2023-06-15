@@ -86,6 +86,10 @@ const customTheme = extendTheme({
                         bg: props.colorMode === "dark" ? "contentBackgroundHover.dark" : "contentBackgroundHover.light",
                     },
                 },
+                groupTitle: {
+                    textAlign: "left",
+                    marginLeft: "0.8rem",
+                },
             }),
             variants: {
                 DataTableOption: (props: StyleFunctionProps) => ({

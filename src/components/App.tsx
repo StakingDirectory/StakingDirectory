@@ -59,6 +59,13 @@ const App = () => {
             for (let key in dataFilter) {
                 if (key === "name") {
                     if (!provider[key].toLowerCase().includes(dataFilter[key].toLowerCase())) return false
+                } else if (key === "type") {
+                    for (let stakingType of ["dedicated", "pooled", "lst", "lstIndex"]) {
+                        if (dataFilter[key].includes(stakingType) && !provider["stakingType"].includes(stakingType)) return false
+                    }
+                    for (let providerType of ["hardware", "software", "cloud"]) {
+                        if (dataFilter[key].includes(providerType) && !provider["providerType"].includes(providerType)) return false
+                    }
                 } else if (key === "security") {
                     for (let feature of ["openSource", "audited", "bugBounty", "battleTested"]) {
                         if (dataFilter[key].includes(feature) && !provider[feature].value) return false
@@ -107,27 +114,18 @@ const App = () => {
             headerText: "NAME",
         },
         {
-            type: "checkbox",
-            id: "stakingType",
-            name: "Staking Type",
-            headerText: "STAKING <br /> TYPE",
+            type: "checkboxType",
+            id: "type",
+            name: "Type",
+            headerText: "TYPE",
             options: [
                 { value: "dedicated", text: "Dedicated", color: "green", icon: faServer },
                 { value: "pooled", text: "Pooled", color: "blue", icon: faUsers },
                 { value: "lst", text: "LST", color: "gold", icon: faCoins },
-            ],
-        },
-        {
-            type: "checkbox",
-            id: "providerType",
-            name: "Provider Type",
-            headerText: "PROVIDER <br /> TYPE",
-            options: [
+                { value: "indexToken", text: "LST index", color: "orange", icon: faShoppingBasket },
                 { value: "hardware", text: "Hardware", color: "", icon: faDesktop },
                 { value: "software", text: "Software", color: "", icon: faCode },
                 { value: "cloud", text: "Cloud", color: "", icon: faCloud },
-                { value: "lst", text: "LST", color: "", icon: faCoins },
-                { value: "indexToken", text: "LST index", color: "", icon: faShoppingBasket },
             ],
         },
         {

@@ -7,37 +7,27 @@ import { faCoins, faUsers, faServer, faCloud, faCode, faShoppingBasket, faComput
 
 export default function ProviderType({ provider }) {
     return (
-        <Flex direction={"column"} justifyContent={"center"} alignContent={"center"} gap={1} fontWeight={"bold"} mt={1}>
+        <Flex direction={"row"} justifyContent={"center"} alignContent={"center"} fontWeight={"bold"} mt={1}>
             {provider.providerType == "hardware" && (
-                <>
+                <Flex alignItems={"center"} gap={1}>
                     <FontAwesomeIcon icon={faDesktop} />
                     Hardware
-                </>
+                </Flex>
             )}
             {provider.providerType == "software" && (
-                <>
+                <Flex alignItems={"center"} gap={1}>
                     <FontAwesomeIcon icon={faCode} />
                     Software
-                </>
+                </Flex>
             )}
             {provider.providerType == "cloud" && (
-                <>
+                <Flex alignItems={"center"} gap={1}>
                     <FontAwesomeIcon icon={faCloud} />
                     Cloud
-                </>
+                </Flex>
             )}
-            {provider.providerType == "indexToken" && (
-                <>
-                    <FontAwesomeIcon icon={faShoppingBasket} />
-                    LST index
-                </>
-            )}
-            {provider.providerType == "lst" && (
-                <>
-                    <FontAwesomeIcon icon={faCoins} />
-                    LST
-                </>
-            )}
+            {provider.providerType == "indexToken" && <Flex>{provider?.lstName}</Flex>}
+            {provider.providerType == "lst" && <Flex>{provider?.lstName}</Flex>}
         </Flex>
     )
 }
