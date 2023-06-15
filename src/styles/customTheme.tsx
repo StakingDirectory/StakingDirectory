@@ -2,12 +2,19 @@ import { extendTheme } from "@chakra-ui/react"
 import type { StyleFunctionProps } from "@chakra-ui/styled-system"
 
 const customTheme = extendTheme({
+    styles: {
+        global: (props: StyleFunctionProps) => ({
+            ".bgContent": {
+                bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
+            },
+        }),
+    },
     components: {
         Button: {
             variants: {
                 ActiveFilters: (props: StyleFunctionProps) => ({
                     _hover: {
-                        bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",
+                        bg: props.colorMode === "dark" ? "contentBackgroundHover.dark" : "contentBackgroundHover.light",
                     },
                 }),
             },
@@ -115,6 +122,10 @@ const customTheme = extendTheme({
         contentBackground: {
             light: "#EDF2F7",
             dark: "#272A2F",
+        },
+        contentBackgroundHover: {
+            light: "#b2b6ba",
+            dark: "#18191d",
         },
         border: {
             light: "#D3D3D3",
