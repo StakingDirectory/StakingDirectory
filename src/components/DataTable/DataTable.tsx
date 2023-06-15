@@ -31,7 +31,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                 if (headerValue.type == "text") {
                                     return (
                                         <Th minW={160} key={headerValue.id} textAlign={"start"}>
-                                            <Menu placement="bottom" variant={"DataTableHeader"} gutter={2} initialFocusRef={nameInputRef}>
+                                            <Menu placement="right" variant={"DataTableHeader"} gutter={2} initialFocusRef={nameInputRef}>
                                                 {({ isOpen }) => (
                                                     <>
                                                         <Box ml={"-10px"}>
@@ -92,8 +92,10 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                 <Td>
                                     <Image objectFit="contain" boxSize={8} src={provider.logo.src} alt={provider.logo.alt} borderRadius={"100%"} />
                                 </Td>
-                                <Td fontSize={"lg"} fontWeight={"extrabold"}>
-                                    {provider.name}
+                                <Td maxW={160}>
+                                    <Text fontSize="lg" fontWeight="extrabold" isTruncated>
+                                        {provider.name}
+                                    </Text>
                                 </Td>
                                 <Td textAlign={"center"}>
                                     <StakingType provider={provider} />
