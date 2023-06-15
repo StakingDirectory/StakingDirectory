@@ -72,7 +72,7 @@ export default function StatusCircle({ provider, column }) {
         )
 
         return (
-            <Tooltip placement={placement} margin={margin} gutter={0} label={label} openDelay={0}>
+            <Tooltip key={index} placement={placement} margin={margin} gutter={0} label={label} openDelay={0}>
                 <Box
                     {...borderProperties[index].borderRadius}
                     {...borderProperties[index].border}
@@ -96,7 +96,8 @@ export default function StatusCircle({ provider, column }) {
                     overflow={"hidden"}
                     w="44px"
                 >
-                    {statusProps.map(renderBox)}
+                    {/* {statusProps.map(renderBox)} */}
+                    {statusProps.map((status, index) => renderBox(status, index))}
                 </Grid>
             </Box>
         </Flex>
