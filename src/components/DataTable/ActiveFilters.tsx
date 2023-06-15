@@ -7,8 +7,45 @@ import { faFilter, faFilterCircleXmark } from "@fortawesome/free-solid-svg-icons
 import { faTimesCircle } from "@fortawesome/free-regular-svg-icons"
 
 export default function ActiveFilters({ dataFilter, setDataFilter, headerValues }) {
+    const DeleteFilterOptionButton = ({ children, index = 0, activeFilter, filterOption = "" }) => {
+        const deleteFilterOption = () => {
+            let newFilter = dataFilter
+            if (activeFilter === "name") {
+                delete newFilter["name"]
+                setDataFilter({ ...newFilter })
+                return
+            } else {
+                newFilter[activeFilter] = newFilter[activeFilter].filter((option) => option !== filterOption)
+                if (newFilter[activeFilter].length === 0) delete newFilter[activeFilter]
+                setDataFilter({ ...newFilter })
+            }
+        }
+
+        return (
+            <Button
+                key={index}
+                variant={"ActiveFilters"}
+                border={"1px solid"}
+                borderRadius={30}
+                px={1}
+                mx={1}
+                py={0}
+                my={"6px"}
+                h={8}
+                onClick={() => {
+                    deleteFilterOption()
+                }}
+            >
+                {children}
+                <Box pr={"2px"}>
+                    <FontAwesomeIcon icon={faTimesCircle} />
+                </Box>
+            </Button>
+        )
+    }
+
     return (
-        <Box width={"100%"} maxW={"1216px"} px={2}>
+        <Box width={"100%"} maxW={"1216px"} px={2} pb={5}>
             <Flex gap={2} width={"fit-content"} minH={12} alignItems={"center"} wrap={"wrap"}>
                 <Flex color="blue" alignItems={"center"} ml={2} fontWeight={"bold"} fontSize="lg">
                     Active filters
@@ -21,25 +58,14 @@ export default function ActiveFilters({ dataFilter, setDataFilter, headerValues 
                                     {headerValues.find((obj) => obj.id === activeFilter).name}
                                 </Flex>
                                 <Flex wrap={"wrap"}>
-                                    {Array.isArray(Object.values(dataFilter[activeFilter])) ? (
+                                    {Array.isArray(dataFilter[activeFilter]) ? (
                                         <Flex wrap={"wrap"}>
-                                            {Object.values(dataFilter[activeFilter]).map((filterOption: String, index) => (
-                                                <Button
+                                            {Object.values(dataFilter[activeFilter]).map((filterOption: string, index) => (
+                                                <DeleteFilterOptionButton
                                                     key={index}
-                                                    variant={"ActiveFilters"}
-                                                    border={"1px solid"}
-                                                    borderRadius={30}
-                                                    px={1}
-                                                    mx={1}
-                                                    py={0}
-                                                    my={"6px"}
-                                                    h={8}
-                                                    onClick={() => {
-                                                        let newFilter = dataFilter
-                                                        newFilter[activeFilter] = newFilter[activeFilter].filter((option) => option !== filterOption)
-                                                        if (newFilter[activeFilter].length === 0) delete newFilter[activeFilter]
-                                                        setDataFilter({ ...newFilter })
-                                                    }}
+                                                    index={index}
+                                                    activeFilter={activeFilter}
+                                                    filterOption={filterOption}
                                                 >
                                                     <Flex alignItems={"center"} gap={2} pr={2} pl={1}>
                                                         <FontAwesomeIcon
@@ -47,30 +73,35 @@ export default function ActiveFilters({ dataFilter, setDataFilter, headerValues 
                                                             icon={
                                                                 headerValues
                                                                     .find((obj) => obj.id === activeFilter)
-                                                                    .options.find((obj) => obj.value === filterOption).icon
+                                                                    .options?.find((obj) => obj.value === filterOption).icon
                                                             }
                                                         />
                                                         {
                                                             headerValues
                                                                 .find((obj) => obj.id === activeFilter)
-                                                                .options.find((obj) => obj.value === filterOption).text
+                                                                .options?.find((obj) => obj.value === filterOption).text
                                                         }
                                                     </Flex>
-                                                    <Box pr={"2px"}>
-                                                        <FontAwesomeIcon icon={faTimesCircle} />
-                                                    </Box>
-                                                </Button>
+                                                </DeleteFilterOptionButton>
                                             ))}
                                         </Flex>
                                     ) : (
-                                        <Box px={2}>{dataFilter[activeFilter]}</Box>
+                                        <DeleteFilterOptionButton activeFilter={activeFilter}>
+                                            <Box px={2}>{dataFilter[activeFilter]}</Box>
+                                        </DeleteFilterOptionButton>
                                     )}
                                 </Flex>
                             </Flex>
                         )
                     })
                 ) : (
-                    <Tooltip placement={"top"} gutter={5} label={"Filter the table headings to show your active filters here"}>
+                    <Tooltip
+                        placement={"top"}
+                        gutter={5}
+                        openDelay={300}
+                        closeOnClick={false}
+                        label={"Filter the table headings to show your active filters here"}
+                    >
                         <Flex className={"bgContent"} borderRadius={30} px={3} gap={2} minH={10} alignItems={"center"}>
                             <Text>No filters selected</Text>
                             <FontAwesomeIcon icon={faFilter} />

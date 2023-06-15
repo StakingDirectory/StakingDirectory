@@ -1,29 +1,6 @@
 import React, { useRef, useEffect, useState } from "react"
 
-import {
-    Flex,
-    Box,
-    Image,
-    useColorModeValue,
-    Table,
-    Thead,
-    Tbody,
-    Tr,
-    Th,
-    Td,
-    TableContainer,
-    Menu,
-    MenuList,
-    MenuOptionGroup,
-    MenuItemOption,
-    MenuDivider,
-    IconButton,
-    Text,
-    Tooltip,
-    Input,
-    InputGroup,
-    InputRightElement,
-} from "@chakra-ui/react"
+import { Flex, Box, Image, useColorModeValue, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Menu } from "@chakra-ui/react"
 
 import DataRowMenuButton from "./DataRowMenuButton"
 import HeaderButton from "./HeaderButton"
@@ -47,13 +24,13 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                 <Table variant="DataTable">
                     <Thead>
                         <Tr borderBottomWidth={1}>
-                            <Th>
+                            <Th w={12} minW={12}>
                                 <ClearFiltersButton dataFilter={dataFilter} setDataFilter={setDataFilter} />
                             </Th>
                             {headerValues.map((headerValue) => {
                                 if (headerValue.type == "text") {
                                     return (
-                                        <Th key={headerValue.id} textAlign={"start"}>
+                                        <Th w={"15%"} minW={150} key={headerValue.id} textAlign={"start"}>
                                             <Menu placement="bottom" variant={"DataTableHeader"} gutter={2} initialFocusRef={nameInputRef}>
                                                 {({ isOpen }) => (
                                                     <>
@@ -78,7 +55,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                     )
                                 } else if (headerValue.type == "checkbox") {
                                     return (
-                                        <Th key={headerValue.id}>
+                                        <Th minW={110} w={"5%"} key={headerValue.id}>
                                             <Menu placement="bottom" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                                 <HeaderButton
                                                     dataFilter={dataFilter}
@@ -97,14 +74,14 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                     )
                                 } else if (headerValue.type == "other") {
                                     return (
-                                        <Th key={headerValue.id}>
+                                        <Th minW={110} w={"5%"} key={headerValue.id}>
                                             <Box pb={"10px"}>{headerValue.headerText}</Box>
                                         </Th>
                                     )
                                 }
                             })}
 
-                            <Th>
+                            <Th w={12} minW={12}>
                                 <ClearFiltersButton dataFilter={dataFilter} setDataFilter={setDataFilter} />
                             </Th>
                         </Tr>
@@ -112,12 +89,10 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                     <Tbody>
                         {stakingProviders.map((provider, providerIndex) => (
                             <Tr key={provider.id} borderBottomWidth={1} h={14}>
-                                <Td w={12} minW={12}>
+                                <Td>
                                     <Image objectFit="contain" boxSize={8} src={provider.logo.src} alt={provider.logo.alt} borderRadius={"100%"} />
                                 </Td>
-                                <Td fontWeight={"extrabold"} w={"15%"}>
-                                    {provider.name}
-                                </Td>
+                                <Td fontWeight={"extrabold"}>{provider.name}</Td>
                                 <Td textAlign={"center"}>
                                     <StakingType provider={provider} />
                                 </Td>

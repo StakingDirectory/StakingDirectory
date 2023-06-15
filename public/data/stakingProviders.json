@@ -6,7 +6,7 @@
         "status": "active",
         "mainnetLaunchDate": "2020-12-18",
         "stakingType": "lst",
-        "providerType": "cloud",
+        "providerType": "hardware",
         "fee": {
             "type": "rewardPercentage",
             "value": 10
