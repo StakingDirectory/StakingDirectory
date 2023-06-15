@@ -143,6 +143,7 @@ const customTheme = extendTheme({
         red: "#EC420C",
         green: "#16913f",
         blue: "#0da6d8",
+        purple: "#b124b1",
     },
 })
 

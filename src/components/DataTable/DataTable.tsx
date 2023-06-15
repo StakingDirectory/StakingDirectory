@@ -92,7 +92,9 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                 <Td>
                                     <Image objectFit="contain" boxSize={8} src={provider.logo.src} alt={provider.logo.alt} borderRadius={"100%"} />
                                 </Td>
-                                <Td fontWeight={"extrabold"}>{provider.name}</Td>
+                                <Td fontSize={"lg"} fontWeight={"extrabold"}>
+                                    {provider.name}
+                                </Td>
                                 <Td textAlign={"center"}>
                                     <StakingType provider={provider} />
                                 </Td>

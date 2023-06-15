@@ -17,7 +17,7 @@ export default function HeaderButton({ dataFilter, id, text, filterDisabledColor
         <MenuButton>
             <Flex gap={1} alignItems={"end"}>
                 <Box>{textElements}</Box>
-                <Box color={dataFilter && dataFilter[id] ? "blue" : filterDisabledColor}>
+                <Box color={dataFilter && dataFilter[id] ? "purple" : filterDisabledColor}>
                     <FontAwesomeIcon icon={faFilter} />
                 </Box>
             </Flex>

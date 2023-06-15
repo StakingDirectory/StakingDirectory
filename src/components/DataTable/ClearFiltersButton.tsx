@@ -9,7 +9,7 @@ export default function ClearFiltersButton({ dataFilter, setDataFilter }) {
             {dataFilter && Object.keys(dataFilter).length > 0 ? (
                 <Tooltip gutter={4} label="Clear filters" openDelay={200}>
                     <IconButton
-                        color="blue"
+                        color="purple"
                         variant="ghost"
                         aria-label="Clear filters"
                         size="sm"
