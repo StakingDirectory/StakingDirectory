@@ -1,15 +1,133 @@
 [
     {
-        "id": "2DEC86",
-        "logo": { "src": "./images/LidoLogo.png", "alt": "Lido Logo" },
-        "name": "Lido",
+        "id": 3,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Avado",
         "status": "active",
-        "mainnetLaunchDate": "2020-12-18",
-        "stakingType": "lst",
+        "mainnetLaunchDate": "",
+        "stakingType": "dedicated",
         "providerType": "hardware",
         "fee": {
             "type": "rewardPercentage",
+            "value": 0
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://ava.do/",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "validatorKey": ["user"],
+        "withdrawalKey": ["user"],
+        "openSource": {
+            "value": true,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://github.com/AvadoDServer/"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://github.com/AvadoDServer/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://github.com/AvadoDServer/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "logo": {
+            "src": "./images/LidoLogo.png",
+            "alt": "Lido Logo"
+        },
+        "name": "Lido - stETH",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "lst",
+        "providerType": "lst",
+        "fee": {
+            "type": "rewardPercentage",
             "value": 10
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
         },
         "links": {
             "website": "https://lido.fi/",
@@ -19,129 +137,88 @@
             "type": "anyAmount",
             "value": "Any amount"
         },
-        "validatorKey": ["user", "service"],
-        "withdrawalKey": ["user"],
+        "validatorKey": ["nodeOperator"],
+        "withdrawalKey": ["smartContract"],
         "openSource": {
             "value": true,
             "links": [
                 {
-                    "text": "GitHub Repo",
+                    "text": "GitHub",
                     "url": "https://github.com/lidofinance"
                 }
             ]
         },
         "audited": {
-            "value": true
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
         },
         "bugBounty": {
-            "value": true
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
         },
         "battleTested": {
-            "value": true
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
         },
         "nonCensoringRelays": {
-            "value": true
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
         },
         "permissionlessUsage": {
-            "value": true
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
         },
         "permissionlessOperators": {
-            "value": true
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
         },
         "diverseExecutionClients": {
-            "value": true
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://execution-diversity.info/"
+                }
+            ]
         },
         "diverseBeaconClients": {
-            "value": true
-        }
-    },
-    {
-        "id": "AAAAAA",
-        "logo": { "src": "./images/LidoLogo.png", "alt": "Lido Logo" },
-        "name": "Lido",
-        "stakingType": "dedicated",
-        "providerType": "software",
-        "fee": {
-            "type": "rewardPercentage",
-            "value": 10
-        },
-        "minStake": {
-            "type": "eth",
-            "value": 0.1
-        },
-        "validatorKey": ["user"],
-        "withdrawalKey": ["smartContract"],
-        "openSource": {
-            "value": false
-        },
-        "audited": {
-            "value": false
-        },
-        "bugBounty": {
-            "value": false
-        },
-        "battleTested": {
-            "value": false
-        },
-        "nonCensoringRelays": {
-            "value": true
-        },
-        "permissionlessUsage": {
-            "value": true
-        },
-        "permissionlessOperators": {
-            "value": true
-        },
-        "diverseExecutionClients": {
-            "value": true
-        },
-        "diverseBeaconClients": {
-            "value": false
-        }
-    },
-    {
-        "id": "EGJLX2",
-        "logo": { "src": "./images/LidoLogo.png", "alt": "Lido Logo" },
-        "name": "Lido long name",
-        "type": "pooled",
-        "stakingType": "pooled",
-        "providerType": "indexToken",
-        "fee": {
-            "type": "rewardPercentage",
-            "value": 10
-        },
-        "minStake": {
-            "type": "eth",
-            "value": 0.1
-        },
-        "validatorKey": ["user"],
-        "withdrawalKey": ["smartContract"],
-        "openSource": {
-            "value": true
-        },
-        "audited": {
-            "value": true
-        },
-        "bugBounty": {
-            "value": false
-        },
-        "battleTested": {
-            "value": true
-        },
-        "nonCensoringRelays": {
-            "value": true
-        },
-        "permissionlessUsage": {
-            "value": true
-        },
-        "permissionlessOperators": {
-            "value": true
-        },
-        "diverseExecutionClients": {
-            "value": true
-        },
-        "diverseBeaconClients": {
-            "value": true
+            "value": true,
+            "links": [
+                {
+                    "text": "Rated Network",
+                    "url": "https://www.rated.network/o/Lido?network=mainnet"
+                }
+            ]
         }
     }
 ]
