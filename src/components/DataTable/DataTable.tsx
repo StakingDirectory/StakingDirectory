@@ -19,18 +19,18 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
     const filterDisabledColor = useColorModeValue("rgba(0, 0, 0, 0.2)", "rgba(255, 255, 255, 0.2)")
 
     return (
-        <Box mt={0} mb={"2000px"} width={"100%"} maxW={"1216px"}>
-            <TableContainer>
+        <Box mt={0} mb={"500px"} maxW={"100%"}>
+            <TableContainer maxW={"1400px"}>
                 <Table variant="DataTable">
                     <Thead>
                         <Tr borderBottomWidth={1}>
-                            <Th w={12} minW={12}>
+                            <Th w={"32px"}>
                                 <ClearFiltersButton dataFilter={dataFilter} setDataFilter={setDataFilter} />
                             </Th>
                             {headerValues.map((headerValue) => {
                                 if (headerValue.type == "text") {
                                     return (
-                                        <Th w={"15%"} minW={150} key={headerValue.id} textAlign={"start"}>
+                                        <Th minW={160} key={headerValue.id} textAlign={"start"}>
                                             <Menu placement="bottom" variant={"DataTableHeader"} gutter={2} initialFocusRef={nameInputRef}>
                                                 {({ isOpen }) => (
                                                     <>
@@ -55,7 +55,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                     )
                                 } else if (headerValue.type == "checkbox") {
                                     return (
-                                        <Th minW={110} w={"5%"} key={headerValue.id}>
+                                        <Th minW={120} key={headerValue.id}>
                                             <Menu placement="bottom" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                                 <HeaderButton
                                                     dataFilter={dataFilter}
@@ -74,14 +74,14 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                     )
                                 } else if (headerValue.type == "other") {
                                     return (
-                                        <Th minW={110} w={"5%"} key={headerValue.id}>
+                                        <Th minW={110} key={headerValue.id}>
                                             <Box pb={"10px"}>{headerValue.headerText}</Box>
                                         </Th>
                                     )
                                 }
                             })}
 
-                            <Th w={12} minW={12}>
+                            <Th w={"32px"}>
                                 <ClearFiltersButton dataFilter={dataFilter} setDataFilter={setDataFilter} />
                             </Th>
                         </Tr>

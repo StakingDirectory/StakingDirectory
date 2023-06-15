@@ -7,14 +7,7 @@ import { faCoins, faUsers, faServer, faCloud, faCode, faShoppingBasket, faComput
 
 export default function ProviderType({ provider }) {
     return (
-        <Flex
-            direction={"column"}
-            justifyContent={"center"}
-            alignContent={"center"}
-            gap={1}
-            // color={provider.providerType == "lst" ? "gold" : provider.stakingType == "pooled" ? "blue" : "green"}
-            fontWeight={"bold"}
-        >
+        <Flex direction={"column"} justifyContent={"center"} alignContent={"center"} gap={1} fontWeight={"bold"} mt={1}>
             {provider.providerType == "hardware" && (
                 <>
                     <FontAwesomeIcon icon={faDesktop} />

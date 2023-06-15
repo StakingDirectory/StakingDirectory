@@ -14,6 +14,7 @@ export default function StakingType({ provider }) {
             gap={1}
             color={provider.stakingType == "lst" ? "gold" : provider.stakingType == "pooled" ? "blue" : "green"}
             fontWeight={"bold"}
+            mt={1}
         >
             {provider.stakingType == "lst" && (
                 <>

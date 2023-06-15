@@ -6,6 +6,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFilter, faFilterCircleXmark } from "@fortawesome/free-solid-svg-icons"
 import { faTimesCircle } from "@fortawesome/free-regular-svg-icons"
 
+import ClearFiltersButton from "./ClearFiltersButton"
+
 export default function ActiveFilters({ dataFilter, setDataFilter, headerValues }) {
     const DeleteFilterOptionButton = ({ children, index = 0, activeFilter, filterOption = "" }) => {
         const deleteFilterOption = () => {
@@ -108,6 +110,7 @@ export default function ActiveFilters({ dataFilter, setDataFilter, headerValues 
                         </Flex>
                     </Tooltip>
                 )}
+                <ClearFiltersButton dataFilter={dataFilter} setDataFilter={setDataFilter} />
             </Flex>
         </Box>
     )

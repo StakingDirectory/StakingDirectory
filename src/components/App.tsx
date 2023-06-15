@@ -199,7 +199,7 @@ const App = () => {
                 <Box width={"100%"} minH={6} bg="purple" textAlign={"center"} fontWeight={"extrabold"} color={"white"}>
                     🏗️ ACTIVE DEVELOPMENT ENVIRONMENT - NOT PRODUCTION READY 🏗️
                 </Box>
-                <Box height={150} />
+                <Box height={50} />
                 <ActiveFilters dataFilter={dataFilter} setDataFilter={setDataFilter} headerValues={headerValues} />
                 <DataTable
                     windowSize={windowSize}
