@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react"
 
-import { Flex, Box, Image, useColorModeValue, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Menu } from "@chakra-ui/react"
+import { Flex, Box, Image, useColorModeValue, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Menu, Text } from "@chakra-ui/react"
 
 import DataRowMenuButton from "./DataRowMenuButton"
 import HeaderButton from "./HeaderButton"
@@ -126,6 +126,13 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                         ))}
                     </Tbody>
                 </Table>
+                {stakingProviders && stakingProviders.length === 0 && (
+                    <Flex direction={"column"} justifyContent={"center"} alignItems={"center"} py={2}>
+                        <Text fontSize={"3xl"}>😭</Text>
+                        <Text fontWeight={"bold"}>No results found</Text>
+                        <Text fontWeight={"bold"}>Please try a different filter</Text>
+                    </Flex>
+                )}
             </TableContainer>
         </Box>
     )
