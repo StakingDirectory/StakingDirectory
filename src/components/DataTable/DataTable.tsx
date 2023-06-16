@@ -32,7 +32,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                             {headerValues.map((headerValue) => {
                                 if (headerValue.type == "text") {
                                     return (
-                                        <Th minW={250} key={headerValue.id} textAlign={"start"}>
+                                        <Th minW={200} key={headerValue.id} textAlign={"start"}>
                                             <Menu placement="right" variant={"DataTableHeader"} gutter={2} initialFocusRef={nameInputRef}>
                                                 {({ isOpen }) => (
                                                     <>

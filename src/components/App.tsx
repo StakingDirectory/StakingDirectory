@@ -66,7 +66,7 @@ const App = () => {
                     }
                 } else if (key === "type") {
                     let showStakingType = []
-                    for (let stakingType of ["solo", "pooled", "lst", "lstIndex"]) {
+                    for (let stakingType of ["solo", "pooled", "lst", "indexToken"]) {
                         if (dataFilter[key].includes(stakingType) && provider["stakingType"].includes(stakingType)) {
                             showStakingType.push(true)
                         } else if (dataFilter[key].includes(stakingType)) {

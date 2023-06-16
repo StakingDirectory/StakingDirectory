@@ -26,8 +26,8 @@ export default function ProviderType({ provider }) {
                     SAAS
                 </Flex>
             )}
-            {provider.providerType == "indexToken" && <Flex>{provider?.lstName}</Flex>}
-            {provider.providerType == "lst" && <Flex>{provider?.lstName}</Flex>}
+            {provider.providerType == "indexToken" && <Flex color="blue">{provider?.lstName}</Flex>}
+            {provider.providerType == "lst" && <Flex color="blue">{provider?.lstName}</Flex>}
         </Flex>
     )
 }

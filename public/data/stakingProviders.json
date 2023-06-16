@@ -2894,7 +2894,7 @@
         "name": "IndexCoop",
         "status": "active",
         "mainnetLaunchDate": "",
-        "stakingType": "lst",
+        "stakingType": "indexToken",
         "providerType": "indexToken",
         "fee": {
             "type": "other",
