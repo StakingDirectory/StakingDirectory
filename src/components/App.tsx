@@ -119,18 +119,34 @@ const App = () => {
                     }
                     showProvider.push(showEthereumAligned)
                 } else if (key === "validatorKey") {
+                    let showValidatorKey = []
                     for (let validatorKey of ["userValidator", "service", "nodeOperator"]) {
                         if (dataFilter[key].includes(validatorKey) && provider[key].includes(validatorKey)) {
-                            showProvider.push(true)
+                            showValidatorKey.push(true)
                         } else if (dataFilter[key].includes(validatorKey) && !provider[key].includes(validatorKey)) {
+                            showValidatorKey.push(false)
+                        }
+                    }
+                    if (showValidatorKey.length > 0) {
+                        if (showValidatorKey.some((value) => value === true)) {
+                            showProvider.push(true)
+                        } else {
                             showProvider.push(false)
                         }
                     }
                 } else if (key === "withdrawalKey") {
+                    let showWithdrawalKey = []
                     for (let withdrawalKey of ["userWithdrawal", "smartContract"]) {
                         if (dataFilter[key].includes(withdrawalKey) && provider[key].includes(withdrawalKey)) {
-                            showProvider.push(true)
+                            showWithdrawalKey.push(true)
                         } else if (dataFilter[key].includes(withdrawalKey) && !provider[key].includes(withdrawalKey)) {
+                            showWithdrawalKey.push(false)
+                        }
+                    }
+                    if (showWithdrawalKey.length > 0) {
+                        if (showWithdrawalKey.some((value) => value === true)) {
+                            showProvider.push(true)
+                        } else {
                             showProvider.push(false)
                         }
                     }
