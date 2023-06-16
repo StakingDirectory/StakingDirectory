@@ -1,6 +1,6 @@
 import React, { useRef, useEffect, useState } from "react"
 
-import { Flex, Text, Box, Button, Tooltip } from "@chakra-ui/react"
+import { Flex, Text, Box, Button, Tooltip, filter } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFilter, faFilterCircleXmark } from "@fortawesome/free-solid-svg-icons"
@@ -69,7 +69,23 @@ export default function ActiveFilters({ dataFilter, setDataFilter, headerValues 
                                                     activeFilter={activeFilter}
                                                     filterOption={filterOption}
                                                 >
-                                                    <Flex alignItems={"center"} gap={2} pr={2} pl={1}>
+                                                    <Flex
+                                                        alignItems={"center"}
+                                                        gap={2}
+                                                        pr={2}
+                                                        pl={1}
+                                                        color={
+                                                            filterOption == "dedicated"
+                                                                ? "green"
+                                                                : filterOption == "pooled"
+                                                                ? "blue"
+                                                                : filterOption == "lst"
+                                                                ? "gold"
+                                                                : filterOption == "indexToken"
+                                                                ? "orange"
+                                                                : ""
+                                                        }
+                                                    >
                                                         <FontAwesomeIcon
                                                             size="sm"
                                                             icon={

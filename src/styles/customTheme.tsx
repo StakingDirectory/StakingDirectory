@@ -148,6 +148,7 @@ const customTheme = extendTheme({
         green: "#16913f",
         blue: "#0da6d8",
         purple: "#b124b1",
+        orange: "#d66b13",
     },
 })
 
