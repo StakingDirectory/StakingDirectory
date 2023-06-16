@@ -88,13 +88,12 @@ const App = () => {
                         }
                     }
                     return showEthereumAligned
-                } else if (key === "validatorKey") {
-                    for (let feature of ["user", "service", "nodeOperator"]) {
-                        if (dataFilter[key].includes(feature) && provider[key].includes(feature)) return true
+                } else if (key === "keyOwner") {
+                    for (let validatorKey of ["userValidator", "service", "nodeOperator"]) {
+                        if (dataFilter[key].includes(validatorKey) && provider["validatorKey"].includes(validatorKey)) return true
                     }
-                } else if (key === "withdrawalKey") {
-                    for (let feature of ["user", "smartContract"]) {
-                        if (dataFilter[key].includes(feature) && provider[key].includes(feature)) return true
+                    for (let withdrawalKey of ["userWithdrawal", "smartContract"]) {
+                        if (dataFilter[key].includes(withdrawalKey) && provider["withdrawalKey"].includes(withdrawalKey)) return true
                     }
                 } else if (Array.isArray(dataFilter[key])) {
                     // If filter value is an array, check if the item's value is included in the array.
@@ -128,7 +127,7 @@ const App = () => {
             name: "Type",
             headerText: "TYPE",
             options: [
-                { value: "dedicated", text: "Dedicated", color: "green", icon: faServer },
+                { value: "dedicated", text: "Solo", color: "green", icon: faServer },
                 { value: "pooled", text: "Pooled", color: "blue", icon: faUsers },
                 { value: "lst", text: "LST", color: "gold", icon: faCoins },
                 { value: "indexToken", text: "LST index", color: "orange", icon: faShoppingBasket },
@@ -153,22 +152,14 @@ const App = () => {
         },
         {
             type: "checkbox",
-            id: "validatorKey",
-            name: "Validator Key Owner",
-            headerText: "VALIDATOR <br /> KEY OWNER",
+            id: "keyOwner",
+            name: "Key Owner",
+            headerText: "KEY OWNER",
             options: [
-                { value: "user", text: "User owned", color: "", icon: faUserAstronaut },
+                { value: "userValidator", text: "User owned", color: "", icon: faUserAstronaut },
                 { value: "service", text: "Service owned", color: "", icon: faBuilding },
                 { value: "nodeOperator", text: "Operator owned", color: "", icon: faServer },
-            ],
-        },
-        {
-            type: "checkbox",
-            id: "withdrawalKey",
-            name: "Withdrawal Key Owner",
-            headerText: "WITHDRAWAL <br /> KEY OWNER",
-            options: [
-                { value: "user", text: "User owned", color: "", icon: faUserAstronaut },
+                { value: "userWithdrawal", text: "User owned", color: "", icon: faUserAstronaut },
                 { value: "smartContract", text: "Smart contract", color: "", icon: faCode },
             ],
         },

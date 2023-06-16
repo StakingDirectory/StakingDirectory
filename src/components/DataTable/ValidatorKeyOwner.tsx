@@ -8,19 +8,19 @@ import { faUserAstronaut, faBuilding, faServer } from "@fortawesome/free-solid-s
 export default function ValidatorKeyOwner({ provider }) {
     return (
         <Flex justifyContent={"center"} gap={5}>
-            {provider.validatorKey.includes("user") && (
+            {provider.validatorKey.includes("userValidator") && (
                 <Tooltip label={"Validator keys are controlled by the user"} openDelay={0}>
-                    <FontAwesomeIcon icon={faUserAstronaut} size="lg" />
+                    <FontAwesomeIcon icon={faUserAstronaut} />
                 </Tooltip>
             )}
             {provider.validatorKey.includes("service") && (
                 <Tooltip label={"Validator keys are controlled by the service"} openDelay={0}>
-                    <FontAwesomeIcon icon={faBuilding} size="lg" />
+                    <FontAwesomeIcon icon={faBuilding} />
                 </Tooltip>
             )}
             {provider.validatorKey.includes("nodeOperator") && (
                 <Tooltip label={"Validator keys are controlled by the node operator"} openDelay={0}>
-                    <FontAwesomeIcon icon={faServer} size="lg" />
+                    <FontAwesomeIcon icon={faServer} />
                 </Tooltip>
             )}
         </Flex>

@@ -131,8 +131,6 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                 </Td>
                                 <Td>
                                     <ValidatorKeyOwner provider={provider} />
-                                </Td>
-                                <Td>
                                     <WithdrawalKeyOwner provider={provider} />
                                 </Td>
                                 <Td>

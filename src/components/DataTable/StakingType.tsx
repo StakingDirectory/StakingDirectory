@@ -29,7 +29,7 @@ export default function StakingType({ provider }) {
             {provider.stakingType == "dedicated" && (
                 <Flex alignItems={"center"} gap={1}>
                     <FontAwesomeIcon icon={faServer} />
-                    Dedicated
+                    Solo
                 </Flex>
             )}
         </Flex>

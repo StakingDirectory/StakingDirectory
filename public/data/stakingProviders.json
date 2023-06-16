@@ -26,8 +26,8 @@
             "type": "eth",
             "value": 32
         },
-        "validatorKey": ["user"],
-        "withdrawalKey": ["user"],
+        "validatorKey": ["userValidator"],
+        "withdrawalKey": ["userWithdrawal"],
         "openSource": {
             "value": true,
             "links": [
@@ -137,8 +137,8 @@
             "type": "eth",
             "value": 32
         },
-        "validatorKey": ["user"],
-        "withdrawalKey": ["user"],
+        "validatorKey": ["userValidator", "service"],
+        "withdrawalKey": ["userWithdrawal"],
         "openSource": {
             "value": true,
             "links": [
@@ -248,8 +248,8 @@
             "type": "eth",
             "value": 32
         },
-        "validatorKey": ["user"],
-        "withdrawalKey": ["user"],
+        "validatorKey": ["userValidator"],
+        "withdrawalKey": ["userWithdrawal"],
         "openSource": {
             "value": true,
             "links": [
