@@ -333,6 +333,4015 @@
         }
     },
     {
+        "id": 6,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Ethereum Clients",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "solo",
+        "providerType": "software",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 0
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://github.com/ethereum/go-ethereum",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "validatorKey": ["userValidator"],
+        "withdrawalKey": ["userWithdrawal"],
+        "openSource": {
+            "value": true,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://ethstaker.gitbook.io/ethstaker-knowledge-base/validator-clients/validator-clients-explained"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 8,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "NiceNode",
+        "status": "dev",
+        "mainnetLaunchDate": "",
+        "stakingType": "solo",
+        "providerType": "software",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 0
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://www.nicenode.xyz/",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "validatorKey": ["userValidator"],
+        "withdrawalKey": ["userWithdrawal"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": ""
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 9,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "EthDocker",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "solo",
+        "providerType": "software",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 0
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://eth-docker.net/",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "validatorKey": ["userValidator"],
+        "withdrawalKey": ["userWithdrawal"],
+        "openSource": {
+            "value": true,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://github.com/eth-educators/eth-docker"
+                }
+            ]
+        },
+        "audited": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://gist.github.com/yorickdowne/ebd82c3c43520811ee9b289efc0efe78"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 10,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Stereum",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "solo",
+        "providerType": "software",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 0
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://stereum.net/ethereum-node-setup/",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "validatorKey": ["userValidator"],
+        "withdrawalKey": ["userWithdrawal"],
+        "openSource": {
+            "value": true,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://github.com/stereum-dev/ethereum-node"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 11,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Launchnodes",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "solo",
+        "providerType": "software",
+        "fee": {
+            "type": "other",
+            "value": "AWS Image"
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://www.launchnodes.com/",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "validatorKey": ["userValidator"],
+        "withdrawalKey": ["userWithdrawal"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 12,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Allnodes",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "solo",
+        "providerType": "saas",
+        "fee": {
+            "type": "other",
+            "value": "$5/month"
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://www.allnodes.com/eth2/staking",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["userWithdrawal"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 13,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Attestant",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "solo",
+        "providerType": "saas",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 12.5
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://www.attestant.io/",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 1000
+        },
+        "validatorKey": ["service", "userValidator"],
+        "withdrawalKey": ["userWithdrawal"],
+        "openSource": {
+            "value": true,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://github.com/attestantio"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 14,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "BloqStake",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "solo",
+        "providerType": "saas",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 8
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://stake.bloq.com/",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["userWithdrawal"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 15,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "BloxStaking",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "solo",
+        "providerType": "saas",
+        "fee": {
+            "type": "other",
+            "value": "🤔"
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://www.bloxstaking.com/",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "validatorKey": ["userValidator"],
+        "withdrawalKey": ["userWithdrawal"],
+        "openSource": {
+            "value": true,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 16,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Ethpool",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "solo",
+        "providerType": "saas",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 2
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://ethpool.org",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "validatorKey": ["service", "userValidator"],
+        "withdrawalKey": ["userWithdrawal"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 17,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Kiln",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "solo",
+        "providerType": "saas",
+        "fee": {
+            "type": "other",
+            "value": "Custom"
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://www.kiln.fi/protocols/ethereum",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["userWithdrawal"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://security.kiln.fi/"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 18,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "RockX",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "solo",
+        "providerType": "saas",
+        "fee": {
+            "type": "other",
+            "value": "🤔"
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://stake.rockx.com/",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["userWithdrawal"],
+        "openSource": {
+            "value": true,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 19,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "SenseiNode",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "solo",
+        "providerType": "saas",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 10
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://dashboard.senseinode.com/en/senseistake",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["userWithdrawal"],
+        "openSource": {
+            "value": true,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 20,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Staked.us",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "solo",
+        "providerType": "saas",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 10
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://staking.staked.us/ethereum-staking-options",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["userWithdrawal"],
+        "openSource": {
+            "value": true,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 21,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "StakeWise V2",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "solo",
+        "providerType": "saas",
+        "fee": {
+            "type": "other",
+            "value": "10DAI/month"
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://docs.stakewise.io/stakewise-solo",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["userWithdrawal"],
+        "openSource": {
+            "value": true,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 22,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Figment",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "solo",
+        "providerType": "saas",
+        "fee": {
+            "type": "other",
+            "value": "Custom"
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://www.figment.io/staking-with-figment",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": true,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 23,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Rocketpool Node",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "pooled",
+        "providerType": "software",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 0
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://docs.rocketpool.net/guides/node/responsibilities.html",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 9.6
+        },
+        "validatorKey": ["userValidator"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": true,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 24,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Diva Node",
+        "status": "dev",
+        "mainnetLaunchDate": "",
+        "stakingType": "pooled",
+        "providerType": "software",
+        "fee": {
+            "type": "other",
+            "value": "🤔"
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://stake.divalabs.org/operator",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 1
+        },
+        "validatorKey": ["nodeOperator"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 25,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "StakeWise V3",
+        "status": "dev",
+        "mainnetLaunchDate": "",
+        "stakingType": "pooled",
+        "providerType": "software",
+        "fee": {
+            "type": "other",
+            "value": "Custom"
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://stakewise.medium.com/stakewise-v3-announcement-9e4fe73abdf2",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": "Any amount"
+        },
+        "validatorKey": ["userValidator"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 26,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Ethermine Staking",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "pooled",
+        "providerType": "saas",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 8
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://staking.ethermine.org",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 0.01
+        },
+        "validatorKey": ["userValidator", "service"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 27,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Everstake",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "pooled",
+        "providerType": "saas",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 10
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://everstake.one/ethereum",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 0.01
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 28,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Stake.fish",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "pooled",
+        "providerType": "saas",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 10
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://stake.fish/",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 0.1
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 29,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Ether.fi Operator",
+        "status": "dev",
+        "mainnetLaunchDate": "",
+        "stakingType": "solo",
+        "providerType": "saas",
+        "fee": {
+            "type": "other",
+            "value": "🤔"
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://ether.fi/",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "validatorKey": ["userValidator", "nodeOperator"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        }
+    },
+    {
+        "id": 30,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "IndexCoop",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "lst",
+        "providerType": "indexToken",
+        "fee": {
+            "type": "other",
+            "value": "LST+0.25%"
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://indexcoop.com/dseth-diversified-staked-eth-index",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": "Any amount"
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "lstName": "dsETH"
+    },
+    {
+        "id": 31,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Coinbase",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "lst",
+        "providerType": "lst",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 25
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://www.coinbase.com/learn/wallet/how-to-stake-ether",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": "Any amount"
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "lstName": "cbETH"
+    },
+    {
+        "id": 32,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "StakeWise V2",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "lst",
+        "providerType": "lst",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 10
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://app.stakewise.io/",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": "Any amount"
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": true,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "lstName": "sETH2"
+    },
+    {
+        "id": 33,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Ankr",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "lst",
+        "providerType": "lst",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 10
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://www.ankr.com/staking/stake/ethereum/",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": "Any amount"
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": true,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "lstName": "ankrETH"
+    },
+    {
+        "id": 34,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Frax",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "lst",
+        "providerType": "lst",
+        "fee": {
+            "type": "other",
+            "value": "🤔"
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://app.frax.finance/frxeth/mint",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": "Any amount"
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": true,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "lstName": "frxETH"
+    },
+    {
+        "id": 35,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "RocketPool",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "lst",
+        "providerType": "lst",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 14
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://stake.rocketpool.net/",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": "Any amount"
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": true,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "lstName": "rETH"
+    },
+    {
+        "id": 36,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "SharedStake",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "lst",
+        "providerType": "lst",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 5
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://stake.rocketpool.net/",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": "Any amount"
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "lstName": "vETH2"
+    },
+    {
+        "id": 37,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Guarda",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "lst",
+        "providerType": "lst",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 10
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://guarda.com/staking/ethereum-staking/",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": "Any amount"
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "lstName": "GETH"
+    },
+    {
+        "id": 39,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "RockX",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "lst",
+        "providerType": "lst",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 10
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://bedrock.rockx.com/unieth/stake",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": "Any amount"
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "lstName": "uniETH"
+    },
+    {
+        "id": 40,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Ether.fi",
+        "status": "dev",
+        "mainnetLaunchDate": "",
+        "stakingType": "lst",
+        "providerType": "lst",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 10
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://ether.fi/",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": "Any amount"
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "lstName": "eETH"
+    },
+    {
+        "id": 41,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "StakeWise V3",
+        "status": "dev",
+        "mainnetLaunchDate": "",
+        "stakingType": "lst",
+        "providerType": "lst",
+        "fee": {
+            "type": "other",
+            "value": "🤔"
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://stakewise.medium.com/what-is-oseth-a-deep-dive-into-the-overcollateralized-staked-ether-token-of-stakewise-v3-part-1-37d14e28282a",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": "Any amount"
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "lstName": "osETH"
+    },
+    {
+        "id": 42,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Diva",
+        "status": "dev",
+        "mainnetLaunchDate": "",
+        "stakingType": "lst",
+        "providerType": "lst",
+        "fee": {
+            "type": "other",
+            "value": "🤔"
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://stake.divalabs.org/",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": "Any amount"
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "lstName": "dvETH"
+    },
+    {
+        "id": 43,
+        "logo": {
+            "src": "./EthereumLogo.svg",
+            "alt": "Logo"
+        },
+        "name": "Swell",
+        "status": "dev",
+        "mainnetLaunchDate": "",
+        "stakingType": "lst",
+        "providerType": "lst",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 5
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://www.swellnetwork.io/",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": "Any amount"
+        },
+        "validatorKey": ["service"],
+        "withdrawalKey": ["smartContract"],
+        "openSource": {
+            "value": false,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https:/"
+                }
+            ]
+        },
+        "lstName": "swETH"
+    },
+    {
         "id": 38,
         "logo": {
             "src": "./images/LidoLogo.png",
@@ -353,7 +4362,7 @@
             "value": "🏗️"
         },
         "links": {
-            "website": "https://lido.fi/",
+            "website": "https://stake.lido.fi/",
             "twitter": "https://twitter.com/LidoFinance"
         },
         "minStake": {
