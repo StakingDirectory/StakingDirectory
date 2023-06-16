@@ -57,7 +57,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                 } else if (headerValue.type == "checkbox") {
                                     return (
                                         <Th minW={120} key={headerValue.id}>
-                                            <Menu placement="bottom" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
+                                            <Menu placement="right" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                                 <HeaderButton
                                                     dataFilter={dataFilter}
                                                     id={headerValue.id}

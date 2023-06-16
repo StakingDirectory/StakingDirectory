@@ -55,22 +55,27 @@ const App = () => {
     const [dataFilter, setDataFilter] = useState({})
 
     const filteredStakingProviders = stakingProviders.filter((provider) => {
-        if (dataFilter) {
+        if (dataFilter && Object.keys(dataFilter).length > 0) {
             for (let key in dataFilter) {
                 if (key === "name") {
-                    if (!provider[key].toLowerCase().includes(dataFilter[key].toLowerCase())) return false
+                    if (provider[key].toLowerCase().includes(dataFilter[key].toLowerCase())) return true
                 } else if (key === "type") {
                     for (let stakingType of ["dedicated", "pooled", "lst", "lstIndex"]) {
-                        if (dataFilter[key].includes(stakingType) && !provider["stakingType"].includes(stakingType)) return false
+                        if (dataFilter[key].includes(stakingType) && provider["stakingType"].includes(stakingType)) return true
                     }
                     for (let providerType of ["hardware", "software", "cloud"]) {
-                        if (dataFilter[key].includes(providerType) && !provider["providerType"].includes(providerType)) return false
+                        if (dataFilter[key].includes(providerType) && provider["providerType"].includes(providerType)) return true
                     }
                 } else if (key === "security") {
+                    let showSecurity = true
                     for (let feature of ["openSource", "audited", "bugBounty", "battleTested"]) {
-                        if (dataFilter[key].includes(feature) && !provider[feature].value) return false
+                        if (dataFilter[key].includes(feature) && !provider[feature].value) {
+                            showSecurity = false
+                        }
                     }
+                    return showSecurity
                 } else if (key === "ethereumAligned") {
+                    let showEthereumAligned = true
                     for (let feature of [
                         "nonCensoringRelays",
                         "permissionlessUsage",
@@ -78,25 +83,29 @@ const App = () => {
                         "diverseExecutionClients",
                         "diverseBeaconClients",
                     ]) {
-                        if (dataFilter[key].includes(feature) && !provider[feature].value) return false
+                        if (dataFilter[key].includes(feature) && !provider[feature].value) {
+                            showEthereumAligned = false
+                        }
                     }
+                    return showEthereumAligned
                 } else if (key === "validatorKey") {
-                    for (let feature of ["user", "service"]) {
-                        if (dataFilter[key].includes(feature) && !provider[key].includes(feature)) return false
+                    for (let feature of ["user", "service", "nodeOperator"]) {
+                        if (dataFilter[key].includes(feature) && provider[key].includes(feature)) return true
                     }
                 } else if (key === "withdrawalKey") {
                     for (let feature of ["user", "smartContract"]) {
-                        if (dataFilter[key].includes(feature) && !provider[key].includes(feature)) return false
+                        if (dataFilter[key].includes(feature) && provider[key].includes(feature)) return true
                     }
                 } else if (Array.isArray(dataFilter[key])) {
                     // If filter value is an array, check if the item's value is included in the array.
-                    if (!dataFilter[key].includes(provider[key])) return false
+                    if (dataFilter[key].includes(provider[key])) return true
                 } else {
                     // If filter value is not an array, directly compare the values.
-                    if (dataFilter[key] !== provider[key]) return false
+                    if (dataFilter[key] == provider[key]) return true
                 }
             }
-            // If item passed all filter checks, include it.
+            return false
+        } else {
             return true
         }
     })
