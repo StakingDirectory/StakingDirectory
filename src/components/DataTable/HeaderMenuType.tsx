@@ -29,13 +29,7 @@ export default function HeaderMenuType({ id, headerValues, dataFilter, setDataFi
                                 option.value === "pooled" ||
                                 option.value === "lst" ||
                                 option.value === "indexToken") && (
-                                <MenuItemOption
-                                    key={option.value}
-                                    value={option.value}
-                                    color={option.color}
-                                    fontSize={"lg"}
-                                    isChecked={dataFilter[id] && Array.isArray(dataFilter[id]) && dataFilter[id].includes(option.value)}
-                                >
+                                <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"}>
                                     <Flex gap={2}>
                                         <Box width={6}>
                                             <FontAwesomeIcon icon={option.icon} />
@@ -52,13 +46,7 @@ export default function HeaderMenuType({ id, headerValues, dataFilter, setDataFi
                     ?.options?.map(
                         (option) =>
                             (option.value === "hardware" || option.value === "software" || option.value === "cloud") && (
-                                <MenuItemOption
-                                    key={option.value}
-                                    value={option.value}
-                                    color={option.color}
-                                    fontSize={"lg"}
-                                    isChecked={dataFilter[id] && Array.isArray(dataFilter[id]) && dataFilter[id].includes(option.value)}
-                                >
+                                <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"}>
                                     <Flex gap={2}>
                                         <Box width={6}>
                                             <FontAwesomeIcon icon={option.icon} />

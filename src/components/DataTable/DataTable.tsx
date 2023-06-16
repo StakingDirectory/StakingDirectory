@@ -4,6 +4,7 @@ import { Flex, Box, Image, useColorModeValue, Table, Thead, Tbody, Tr, Th, Td, T
 
 import DataRowMenuButton from "./DataRowMenuButton"
 import HeaderButton from "./HeaderButton"
+import HeaderButtonKeyOwner from "./HeaderButtonKeyOwner"
 import StatusCircle from "./StatusCircle"
 import StakingType from "./StakingType"
 import ProviderType from "./ProviderType"
@@ -11,6 +12,7 @@ import WithdrawalKeyOwner from "./WithdrawalKeyOwner"
 import ValidatorKeyOwner from "./ValidatorKeyOwner"
 import HeaderMenuCheckbox from "./HeaderMenuCheckbox"
 import HeaderMenuType from "./HeaderMenuType"
+import HeaderMenuKeyOwner from "./HeaderMenuKeyOwner"
 import HeaderMenuNameSearch from "./HeaderMenuNameSearch"
 import ClearFiltersButton from "./ClearFiltersButton"
 
@@ -57,7 +59,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                 } else if (headerValue.type == "checkbox") {
                                     return (
                                         <Th minW={120} key={headerValue.id}>
-                                            <Menu placement="right" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
+                                            <Menu placement="right-start" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                                 <HeaderButton
                                                     dataFilter={dataFilter}
                                                     id={headerValue.id}
@@ -76,7 +78,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                 } else if (headerValue.type == "checkboxType") {
                                     return (
                                         <Th minW={120} key={headerValue.id}>
-                                            <Menu placement="bottom" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
+                                            <Menu placement="right-start" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                                 <HeaderButton
                                                     dataFilter={dataFilter}
                                                     id={headerValue.id}
@@ -85,6 +87,23 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                                 />
                                                 <HeaderMenuType
                                                     id={headerValue.id}
+                                                    headerValues={headerValues}
+                                                    dataFilter={dataFilter}
+                                                    setDataFilter={setDataFilter}
+                                                />
+                                            </Menu>
+                                        </Th>
+                                    )
+                                } else if (headerValue.type == "checkboxKeyOwner") {
+                                    return (
+                                        <Th minW={120} key={headerValue.id}>
+                                            <Menu placement="right-start" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
+                                                <HeaderButtonKeyOwner
+                                                    dataFilter={dataFilter}
+                                                    text={headerValue.headerText}
+                                                    filterDisabledColor={filterDisabledColor}
+                                                />
+                                                <HeaderMenuKeyOwner
                                                     headerValues={headerValues}
                                                     dataFilter={dataFilter}
                                                     setDataFilter={setDataFilter}

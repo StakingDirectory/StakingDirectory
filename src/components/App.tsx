@@ -88,10 +88,11 @@ const App = () => {
                         }
                     }
                     return showEthereumAligned
-                } else if (key === "keyOwner") {
+                } else if (key === "validatorKey") {
                     for (let validatorKey of ["userValidator", "service", "nodeOperator"]) {
                         if (dataFilter[key].includes(validatorKey) && provider["validatorKey"].includes(validatorKey)) return true
                     }
+                } else if (key === "withdrawalKey") {
                     for (let withdrawalKey of ["userWithdrawal", "smartContract"]) {
                         if (dataFilter[key].includes(withdrawalKey) && provider["withdrawalKey"].includes(withdrawalKey)) return true
                     }
@@ -151,16 +152,24 @@ const App = () => {
             options: [],
         },
         {
-            type: "checkbox",
-            id: "keyOwner",
-            name: "Key Owner",
+            type: "checkboxKeyOwner",
+            id: "validatorKey",
+            name: "Validator Key Owner",
             headerText: "KEY OWNER",
             options: [
-                { value: "userValidator", text: "User owned", color: "", icon: faUserAstronaut },
-                { value: "service", text: "Service owned", color: "", icon: faBuilding },
-                { value: "nodeOperator", text: "Operator owned", color: "", icon: faServer },
-                { value: "userWithdrawal", text: "User owned", color: "", icon: faUserAstronaut },
-                { value: "smartContract", text: "Smart contract", color: "", icon: faCode },
+                { value: "userValidator", text: "User", color: "green", icon: faUserAstronaut },
+                { value: "service", text: "Service", color: "gold", icon: faBuilding },
+                { value: "nodeOperator", text: "Operator", color: "blue", icon: faServer },
+            ],
+        },
+        {
+            type: "none",
+            id: "withdrawalKey",
+            name: "Withdrawal Key Owner",
+            headerText: "",
+            options: [
+                { value: "userWithdrawal", text: "User", color: "green", icon: faUserAstronaut },
+                { value: "smartContract", text: "Smart contract", color: "blue", icon: faCode },
             ],
         },
         {

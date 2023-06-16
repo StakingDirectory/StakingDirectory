@@ -83,6 +83,16 @@ export default function ActiveFilters({ dataFilter, setDataFilter, headerValues 
                                                                 ? "gold"
                                                                 : filterOption == "indexToken"
                                                                 ? "orange"
+                                                                : filterOption == "userValidator"
+                                                                ? "green"
+                                                                : filterOption == "service"
+                                                                ? "gold"
+                                                                : filterOption == "nodeOperator"
+                                                                ? "blue"
+                                                                : filterOption == "userWithdrawal"
+                                                                ? "green"
+                                                                : filterOption == "smartContract"
+                                                                ? "blue"
                                                                 : ""
                                                         }
                                                     >
