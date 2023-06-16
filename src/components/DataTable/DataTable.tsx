@@ -8,8 +8,7 @@ import HeaderButtonKeyOwner from "./HeaderButtonKeyOwner"
 import StatusCircle from "./StatusCircle"
 import StakingType from "./StakingType"
 import ProviderType from "./ProviderType"
-import WithdrawalKeyOwner from "./WithdrawalKeyOwner"
-import ValidatorKeyOwner from "./ValidatorKeyOwner"
+import KeyOwner from "./KeyOwner"
 import HeaderMenuCheckbox from "./HeaderMenuCheckbox"
 import HeaderMenuType from "./HeaderMenuType"
 import HeaderMenuKeyOwner from "./HeaderMenuKeyOwner"
@@ -149,8 +148,10 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                     {provider.minStake.type == "eth" ? " ETH" : ""}
                                 </Td>
                                 <Td>
-                                    <ValidatorKeyOwner provider={provider} />
-                                    <WithdrawalKeyOwner provider={provider} />
+                                    <Flex direction="column" gap={"5px"}>
+                                        <KeyOwner provider={provider} id={"validatorKey"} />
+                                        <KeyOwner provider={provider} id={"withdrawalKey"} />
+                                    </Flex>
                                 </Td>
                                 <Td>
                                     <StatusCircle provider={provider} column={"security"} />
