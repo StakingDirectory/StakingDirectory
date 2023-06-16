@@ -25,10 +25,7 @@ export default function HeaderMenuType({ id, headerValues, dataFilter, setDataFi
                     .find((obj) => obj.id === id)
                     ?.options?.map(
                         (option) =>
-                            (option.value === "dedicated" ||
-                                option.value === "pooled" ||
-                                option.value === "lst" ||
-                                option.value === "indexToken") && (
+                            (option.value === "solo" || option.value === "pooled" || option.value === "lst" || option.value === "indexToken") && (
                                 <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"}>
                                     <Flex gap={2} alignItems={"center"}>
                                         <Box width={6}>
@@ -45,7 +42,7 @@ export default function HeaderMenuType({ id, headerValues, dataFilter, setDataFi
                     .find((obj) => obj.id === id)
                     ?.options?.map(
                         (option) =>
-                            (option.value === "hardware" || option.value === "software" || option.value === "cloud") && (
+                            (option.value === "hardware" || option.value === "software" || option.value === "saas") && (
                                 <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"}>
                                     <Flex gap={2} alignItems={"center"}>
                                         <Box width={6}>

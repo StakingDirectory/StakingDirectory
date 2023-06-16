@@ -8,7 +8,7 @@
         "name": "Avado",
         "status": "active",
         "mainnetLaunchDate": "",
-        "stakingType": "dedicated",
+        "stakingType": "solo",
         "providerType": "hardware",
         "fee": {
             "type": "rewardPercentage",
@@ -119,7 +119,7 @@
         "name": "DAppNode",
         "status": "active",
         "mainnetLaunchDate": "",
-        "stakingType": "dedicated",
+        "stakingType": "solo",
         "providerType": "hardware",
         "fee": {
             "type": "rewardPercentage",
@@ -230,7 +230,7 @@
         "name": "Ethereum on Arm",
         "status": "active",
         "mainnetLaunchDate": "",
-        "stakingType": "dedicated",
+        "stakingType": "solo",
         "providerType": "software",
         "fee": {
             "type": "rewardPercentage",

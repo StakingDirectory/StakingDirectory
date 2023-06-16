@@ -26,7 +26,7 @@ export default function StakingType({ provider }) {
                     Pooled
                 </Flex>
             )}
-            {provider.stakingType == "dedicated" && (
+            {provider.stakingType == "solo" && (
                 <Flex alignItems={"center"} gap={1}>
                     <FontAwesomeIcon icon={faServer} />
                     Solo

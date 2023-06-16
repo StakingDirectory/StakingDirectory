@@ -20,10 +20,10 @@ export default function ProviderType({ provider }) {
                     Software
                 </Flex>
             )}
-            {provider.providerType == "cloud" && (
+            {provider.providerType == "saas" && (
                 <Flex alignItems={"center"} gap={1}>
                     <FontAwesomeIcon icon={faCloud} />
-                    Cloud
+                    SAAS
                 </Flex>
             )}
             {provider.providerType == "indexToken" && <Flex>{provider?.lstName}</Flex>}

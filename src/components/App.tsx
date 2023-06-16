@@ -60,10 +60,10 @@ const App = () => {
                 if (key === "name") {
                     if (provider[key].toLowerCase().includes(dataFilter[key].toLowerCase())) return true
                 } else if (key === "type") {
-                    for (let stakingType of ["dedicated", "pooled", "lst", "lstIndex"]) {
+                    for (let stakingType of ["solo", "pooled", "lst", "lstIndex"]) {
                         if (dataFilter[key].includes(stakingType) && provider["stakingType"].includes(stakingType)) return true
                     }
-                    for (let providerType of ["hardware", "software", "cloud"]) {
+                    for (let providerType of ["hardware", "software", "saas"]) {
                         if (dataFilter[key].includes(providerType) && provider["providerType"].includes(providerType)) return true
                     }
                 } else if (key === "security") {
@@ -128,13 +128,13 @@ const App = () => {
             name: "Type",
             headerText: "TYPE",
             options: [
-                { value: "dedicated", text: "Solo", color: "green", icon: faServer },
+                { value: "solo", text: "Solo", color: "green", icon: faServer },
                 { value: "pooled", text: "Pooled", color: "blue", icon: faUsers },
                 { value: "lst", text: "LST", color: "gold", icon: faCoins },
                 { value: "indexToken", text: "LST index", color: "orange", icon: faShoppingBasket },
                 { value: "hardware", text: "Hardware", color: "", icon: faDesktop },
                 { value: "software", text: "Software", color: "", icon: faCode },
-                { value: "cloud", text: "Cloud", color: "", icon: faCloud },
+                { value: "saas", text: "SAAS", color: "", icon: faCloud },
             ],
         },
         {

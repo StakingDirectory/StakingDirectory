@@ -75,7 +75,7 @@ export default function ActiveFilters({ dataFilter, setDataFilter, headerValues 
                                                         pr={2}
                                                         pl={1}
                                                         color={
-                                                            filterOption == "dedicated"
+                                                            filterOption == "solo"
                                                                 ? "green"
                                                                 : filterOption == "pooled"
                                                                 ? "blue"
