@@ -13,7 +13,7 @@ export default function ValidatorKeyOwner({ provider, id }) {
                     {id === "validatorKey" ? "Validator keys" : "Withdrawal keys"}
                 </Text>
                 <Text>are controlled by the</Text>
-                <Flex gap={2} color={color} alignItems="baseline">
+                <Flex gap={2} color={color} alignItems="center">
                     <FontAwesomeIcon icon={icon} size="lg" />
                     <Text fontSize={"md"} fontWeight={"extrabold"} color={color}>
                         {value}

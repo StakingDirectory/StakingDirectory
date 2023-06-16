@@ -37,7 +37,7 @@ export default function HeaderMenuKeyOwner({ headerValues, dataFilter, setDataFi
                     .find((obj) => obj.id === "validatorKey")
                     ?.options?.map((option) => (
                         <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"}>
-                            <Flex gap={2}>
+                            <Flex gap={2} alignItems={"center"}>
                                 <Box width={6}>
                                     <FontAwesomeIcon icon={option.icon} />
                                 </Box>
@@ -51,7 +51,7 @@ export default function HeaderMenuKeyOwner({ headerValues, dataFilter, setDataFi
                     .find((obj) => obj.id === "withdrawalKey")
                     ?.options?.map((option) => (
                         <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"}>
-                            <Flex gap={2}>
+                            <Flex gap={2} alignItems={"center"}>
                                 <Box width={6}>
                                     <FontAwesomeIcon icon={option.icon} />
                                 </Box>

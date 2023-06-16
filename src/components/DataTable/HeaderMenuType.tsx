@@ -30,7 +30,7 @@ export default function HeaderMenuType({ id, headerValues, dataFilter, setDataFi
                                 option.value === "lst" ||
                                 option.value === "indexToken") && (
                                 <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"}>
-                                    <Flex gap={2}>
+                                    <Flex gap={2} alignItems={"center"}>
                                         <Box width={6}>
                                             <FontAwesomeIcon icon={option.icon} />
                                         </Box>
@@ -47,7 +47,7 @@ export default function HeaderMenuType({ id, headerValues, dataFilter, setDataFi
                         (option) =>
                             (option.value === "hardware" || option.value === "software" || option.value === "cloud") && (
                                 <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"}>
-                                    <Flex gap={2}>
+                                    <Flex gap={2} alignItems={"center"}>
                                         <Box width={6}>
                                             <FontAwesomeIcon icon={option.icon} />
                                         </Box>
