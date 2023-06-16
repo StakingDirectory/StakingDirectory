@@ -56,15 +56,45 @@ const App = () => {
 
     const filteredStakingProviders = stakingProviders.filter((provider) => {
         if (dataFilter && Object.keys(dataFilter).length > 0) {
+            let showProvider = []
             for (let key in dataFilter) {
                 if (key === "name") {
-                    if (provider[key].toLowerCase().includes(dataFilter[key].toLowerCase())) return true
-                } else if (key === "type") {
-                    for (let stakingType of ["solo", "pooled", "lst", "lstIndex"]) {
-                        if (dataFilter[key].includes(stakingType) && provider["stakingType"].includes(stakingType)) return true
+                    if (provider[key].toLowerCase().includes(dataFilter[key].toLowerCase())) {
+                        showProvider.push(true)
+                    } else {
+                        showProvider.push(false)
                     }
+                } else if (key === "type") {
+                    let showStakingType = []
+                    for (let stakingType of ["solo", "pooled", "lst", "lstIndex"]) {
+                        if (dataFilter[key].includes(stakingType) && provider["stakingType"].includes(stakingType)) {
+                            showStakingType.push(true)
+                        } else if (dataFilter[key].includes(stakingType)) {
+                            showStakingType.push(false)
+                        }
+                    }
+                    if (showStakingType.length > 0) {
+                        if (showStakingType.some((value) => value === true)) {
+                            showProvider.push(true)
+                        } else {
+                            showProvider.push(false)
+                        }
+                    }
+
+                    let showProviderType = []
                     for (let providerType of ["hardware", "software", "saas"]) {
-                        if (dataFilter[key].includes(providerType) && provider["providerType"].includes(providerType)) return true
+                        if (dataFilter[key].includes(providerType) && provider["providerType"].includes(providerType)) {
+                            showProviderType.push(true)
+                        } else if (dataFilter[key].includes(providerType)) {
+                            showProviderType.push(false)
+                        }
+                    }
+                    if (showProviderType.length > 0) {
+                        if (showProviderType.some((value) => value === true)) {
+                            showProvider.push(true)
+                        } else {
+                            showProvider.push(false)
+                        }
                     }
                 } else if (key === "security") {
                     let showSecurity = true
@@ -73,7 +103,7 @@ const App = () => {
                             showSecurity = false
                         }
                     }
-                    return showSecurity
+                    showProvider.push(showSecurity)
                 } else if (key === "ethereumAligned") {
                     let showEthereumAligned = true
                     for (let feature of [
@@ -87,24 +117,26 @@ const App = () => {
                             showEthereumAligned = false
                         }
                     }
-                    return showEthereumAligned
+                    showProvider.push(showEthereumAligned)
                 } else if (key === "validatorKey") {
                     for (let validatorKey of ["userValidator", "service", "nodeOperator"]) {
-                        if (dataFilter[key].includes(validatorKey) && provider["validatorKey"].includes(validatorKey)) return true
+                        if (dataFilter[key].includes(validatorKey) && provider[key].includes(validatorKey)) {
+                            showProvider.push(true)
+                        } else if (dataFilter[key].includes(validatorKey) && !provider[key].includes(validatorKey)) {
+                            showProvider.push(false)
+                        }
                     }
                 } else if (key === "withdrawalKey") {
                     for (let withdrawalKey of ["userWithdrawal", "smartContract"]) {
-                        if (dataFilter[key].includes(withdrawalKey) && provider["withdrawalKey"].includes(withdrawalKey)) return true
+                        if (dataFilter[key].includes(withdrawalKey) && provider[key].includes(withdrawalKey)) {
+                            showProvider.push(true)
+                        } else if (dataFilter[key].includes(withdrawalKey) && !provider[key].includes(withdrawalKey)) {
+                            showProvider.push(false)
+                        }
                     }
-                } else if (Array.isArray(dataFilter[key])) {
-                    // If filter value is an array, check if the item's value is included in the array.
-                    if (dataFilter[key].includes(provider[key])) return true
-                } else {
-                    // If filter value is not an array, directly compare the values.
-                    if (dataFilter[key] == provider[key]) return true
                 }
             }
-            return false
+            if (showProvider.length != 0 && showProvider.every((value) => value === true)) return true
         } else {
             return true
         }

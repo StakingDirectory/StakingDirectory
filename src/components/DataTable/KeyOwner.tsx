@@ -24,7 +24,7 @@ export default function ValidatorKeyOwner({ provider, id }) {
     }
 
     return (
-        <Flex justifyContent={"center"} gap={5}>
+        <Flex justifyContent={"center"} gap={3}>
             {provider[id].includes("userValidator") && (
                 <Tooltip label={tooltipLabel("User", "green", faUserAstronaut)} openDelay={0}>
                     <Box color="green">
