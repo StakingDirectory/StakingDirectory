@@ -2,7 +2,7 @@
     {
         "id": 3,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/AvadoLogo.png",
             "alt": "Logo"
         },
         "name": "Avado",
@@ -113,7 +113,7 @@
     {
         "id": 4,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/DappnodeLogo.png",
             "alt": "Logo"
         },
         "name": "DAppNode",
@@ -224,7 +224,7 @@
     {
         "id": 5,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/EthereumOnArmLogo.png",
             "alt": "Logo"
         },
         "name": "Ethereum on Arm",
@@ -335,7 +335,7 @@
     {
         "id": 6,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./EthLogo.svg",
             "alt": "Logo"
         },
         "name": "Ethereum Clients",
@@ -446,7 +446,7 @@
     {
         "id": 8,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/NiceNodeLogo.png",
             "alt": "Logo"
         },
         "name": "NiceNode",
@@ -557,7 +557,7 @@
     {
         "id": 9,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/EthDockerLogo.png",
             "alt": "Logo"
         },
         "name": "EthDocker",
@@ -668,7 +668,7 @@
     {
         "id": 10,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/StereumLogo.png",
             "alt": "Logo"
         },
         "name": "Stereum",
@@ -779,7 +779,7 @@
     {
         "id": 11,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/LaunchnodesLogo.png",
             "alt": "Logo"
         },
         "name": "Launchnodes",
@@ -890,7 +890,7 @@
     {
         "id": 12,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/AllNodesLogo.png",
             "alt": "Logo"
         },
         "name": "Allnodes",
@@ -1001,7 +1001,7 @@
     {
         "id": 13,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/AttestantLogo.png",
             "alt": "Logo"
         },
         "name": "Attestant",
@@ -1112,7 +1112,7 @@
     {
         "id": 14,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/BloqStakeLogo.png",
             "alt": "Logo"
         },
         "name": "BloqStake",
@@ -1223,7 +1223,7 @@
     {
         "id": 15,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/BloxStakingLogo.png",
             "alt": "Logo"
         },
         "name": "BloxStaking",
@@ -1334,7 +1334,7 @@
     {
         "id": 16,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/EthpoolLogo.png",
             "alt": "Logo"
         },
         "name": "Ethpool",
@@ -1445,7 +1445,7 @@
     {
         "id": 17,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/KilnLogo.png",
             "alt": "Logo"
         },
         "name": "Kiln",
@@ -1556,7 +1556,7 @@
     {
         "id": 18,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/RockXLogo.png",
             "alt": "Logo"
         },
         "name": "RockX",
@@ -1667,7 +1667,7 @@
     {
         "id": 19,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/SenseiNodeLogo.png",
             "alt": "Logo"
         },
         "name": "SenseiNode",
@@ -1778,7 +1778,7 @@
     {
         "id": 20,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/StakedUsLogo.png",
             "alt": "Logo"
         },
         "name": "Staked.us",
@@ -1889,7 +1889,7 @@
     {
         "id": 21,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/StakeWiseLogo.png",
             "alt": "Logo"
         },
         "name": "StakeWise V2",
