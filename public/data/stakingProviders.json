@@ -2000,7 +2000,7 @@
     {
         "id": 22,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/FigmentLogo.png",
             "alt": "Logo"
         },
         "name": "Figment",
@@ -2111,7 +2111,7 @@
     {
         "id": 23,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/RocketPoolLogo.png",
             "alt": "Logo"
         },
         "name": "Rocketpool Node",
@@ -2222,7 +2222,7 @@
     {
         "id": 24,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/DivaLogo.png",
             "alt": "Logo"
         },
         "name": "Diva Node",
@@ -2333,7 +2333,7 @@
     {
         "id": 25,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/StakeWiseLogo.png",
             "alt": "Logo"
         },
         "name": "StakeWise V3",
@@ -2444,7 +2444,7 @@
     {
         "id": 26,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/EthermineLogo.png",
             "alt": "Logo"
         },
         "name": "Ethermine Staking",
@@ -2555,7 +2555,7 @@
     {
         "id": 27,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/EverstakeLogo.png",
             "alt": "Logo"
         },
         "name": "Everstake",
@@ -2666,7 +2666,7 @@
     {
         "id": 28,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/StakeFishLogo.png",
             "alt": "Logo"
         },
         "name": "Stake.fish",
@@ -2777,7 +2777,7 @@
     {
         "id": 29,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/EtherFiLogo.png",
             "alt": "Logo"
         },
         "name": "Ether.fi Operator",
@@ -2888,7 +2888,7 @@
     {
         "id": 30,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/IndexCoopLogo.png",
             "alt": "Logo"
         },
         "name": "IndexCoop",
@@ -3000,7 +3000,7 @@
     {
         "id": 31,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/CoinbaseLogo.png",
             "alt": "Logo"
         },
         "name": "Coinbase",
@@ -3112,7 +3112,7 @@
     {
         "id": 32,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/StakeWiseLogo.png",
             "alt": "Logo"
         },
         "name": "StakeWise V2",
@@ -3224,7 +3224,7 @@
     {
         "id": 33,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/AnkrLogo.png",
             "alt": "Logo"
         },
         "name": "Ankr",
@@ -3336,7 +3336,7 @@
     {
         "id": 34,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/FraxLogo.png",
             "alt": "Logo"
         },
         "name": "Frax",
@@ -3448,7 +3448,7 @@
     {
         "id": 35,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/RocketPoolLogo.png",
             "alt": "Logo"
         },
         "name": "RocketPool",
@@ -3560,7 +3560,7 @@
     {
         "id": 36,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/SharedStakeLogo.png",
             "alt": "Logo"
         },
         "name": "SharedStake",
@@ -3672,7 +3672,7 @@
     {
         "id": 37,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/GuardaLogo.png",
             "alt": "Logo"
         },
         "name": "Guarda",
@@ -3784,7 +3784,7 @@
     {
         "id": 39,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/RockXLogo.png",
             "alt": "Logo"
         },
         "name": "RockX",
@@ -3896,7 +3896,7 @@
     {
         "id": 40,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/EtherFiLogo.png",
             "alt": "Logo"
         },
         "name": "Ether.fi",
@@ -4008,7 +4008,7 @@
     {
         "id": 41,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/StakeWiseLogo.png",
             "alt": "Logo"
         },
         "name": "StakeWise V3",
@@ -4120,7 +4120,7 @@
     {
         "id": 42,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/DivaLogo.png",
             "alt": "Logo"
         },
         "name": "Diva",
@@ -4232,7 +4232,7 @@
     {
         "id": 43,
         "logo": {
-            "src": "./EthereumLogo.svg",
+            "src": "./images/SwellLogo.png",
             "alt": "Logo"
         },
         "name": "Swell",
