@@ -14,7 +14,7 @@ export default function RewardFee({ provider }) {
             </Tooltip>
             {/* TODO: Make this tooltip dynamic to explain each fee */}
             <Tooltip label={"Cost to use this provider"} placement={"top"} closeOnClick={false}>
-                <Box borderRadius={10} border={"2px solid red"} w={"fit-content"} px={2} cursor={"help"}>
+                <Box borderRadius={10} border={"2px solid"} borderColor={"red"} w={"fit-content"} px={2} cursor={"help"}>
                     {provider.fee.value}
                     {provider.fee.type == "rewardPercentage" ? "%" : ""}
                 </Box>
