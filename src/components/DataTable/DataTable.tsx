@@ -138,6 +138,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                         <Th key={headerValue.id}>
                                             <Menu placement="right-start" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                                 <HeaderButton
+                                                    id={headerValue.id}
                                                     dataFilter={dataFilter}
                                                     text={headerValue.headerText}
                                                     filterDisabledColor={filterDisabledColor}
