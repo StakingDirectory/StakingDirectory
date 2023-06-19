@@ -32,10 +32,8 @@ const App = () => {
         }
     }, [])
 
-    // Data Filtering State
     const [dataFilter, setDataFilter] = useState({})
     const filteredProviders = filterProviders(dataFilter)
-
     const orderedFilteredProviders = orderProviders(filteredProviders)
 
     // TODO: Testing only - Remove this console.log
@@ -60,6 +58,7 @@ const App = () => {
                     dataFilter={dataFilter}
                     setDataFilter={setDataFilter}
                 />
+                <Box height={"1000px"} />
             </Flex>
         </Box>
     )

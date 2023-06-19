@@ -17,8 +17,8 @@ const orderFilteredProviders = (filteredProviders) => {
         if (providerOrderA > providerOrderB) return 1
 
         // If providerType is also the same, then sort by name
-        const nameA = a.name.toLowerCase() // ignore upper and lowercase
-        const nameB = b.name.toLowerCase() // ignore upper and lowercase
+        const nameA = a.name.toLowerCase()
+        const nameB = b.name.toLowerCase()
         if (nameA < nameB) return -1
         if (nameA > nameB) return 1
 

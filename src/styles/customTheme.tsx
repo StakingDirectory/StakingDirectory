@@ -35,6 +35,7 @@ const customTheme = extendTheme({
             variants: {
                 DataTable: (props: StyleFunctionProps) => ({
                     th: {
+                        bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
                         borderColor: props.colorMode === "dark" ? "tableBorder.dark" : "tableBorder.light",
                         paddingTop: "0.5rem",
                         paddingLeft: "0.5rem",
