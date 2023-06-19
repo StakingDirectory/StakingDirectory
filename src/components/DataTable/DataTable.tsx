@@ -11,6 +11,7 @@ import StakingType from "./StakingType"
 import ProviderType from "./ProviderType"
 import KeyOwner from "./KeyOwner"
 import RewardFee from "./RewardFee"
+import StakeFromHome from "./StakeFromHome"
 import HeaderMenuCheckbox from "./HeaderMenuCheckbox"
 import HeaderMenuType from "./HeaderMenuType"
 import HeaderMenuKeyOwner from "./HeaderMenuKeyOwner"
@@ -44,7 +45,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
         if (dataFilter && isSticky) {
             tableRef.current.scrollIntoView({ behavior: "auto" })
         }
-    }, [dataFilter, isSticky])
+    }, [dataFilter])
 
     return (
         <Box mt={0} mb={"500px"} maxW={"100%"} ref={tableRef}>
@@ -170,6 +171,9 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                         {provider.name}
                                     </Link>
                                 </Text>
+                            </Td>
+                            <Td textAlign={"center"}>
+                                <StakeFromHome provider={provider} />
                             </Td>
                             <Td textAlign={"center"}>
                                 <StakingType provider={provider} />

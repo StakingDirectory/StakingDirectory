@@ -28,6 +28,14 @@ const dataProps = [
     },
     {
         isTableHeader: true,
+        type: "other",
+        id: "stakeFromHome",
+        name: "Stake from Home",
+        headerText: "STAKE FROM <br /> HOME",
+        options: [],
+    },
+    {
+        isTableHeader: true,
         type: "checkboxType",
         id: "type",
         name: "Type",
