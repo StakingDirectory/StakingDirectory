@@ -111,7 +111,7 @@ export default function ActiveFilters({ dataFilter, setDataFilter }) {
                         closeOnClick={false}
                         label={"Filter the table headings to show your active filters here"}
                     >
-                        <Flex className={"bgContent"} borderRadius={30} px={3} gap={2} minH={10} alignItems={"center"}>
+                        <Flex className={"bgContent"} borderRadius={30} px={3} gap={2} minH={10} alignItems={"center"} cursor={"help"}>
                             <Text>No filters selected</Text>
                             <FontAwesomeIcon icon={faFilter} />
                         </Flex>

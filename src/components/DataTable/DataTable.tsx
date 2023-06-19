@@ -10,6 +10,7 @@ import StatusCircle from "./StatusCircle"
 import StakingType from "./StakingType"
 import ProviderType from "./ProviderType"
 import KeyOwner from "./KeyOwner"
+import RewardFee from "./RewardFee"
 import HeaderMenuCheckbox from "./HeaderMenuCheckbox"
 import HeaderMenuType from "./HeaderMenuType"
 import HeaderMenuKeyOwner from "./HeaderMenuKeyOwner"
@@ -175,13 +176,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                 <ProviderType provider={provider} />
                             </Td>
                             <Td textAlign={"center"}>
-                                <Flex direction="column" gap={"5px"}>
-                                    <Box>5.4%</Box>
-                                    <Box>
-                                        {provider.fee.value}
-                                        {provider.fee.type == "rewardPercentage" ? "%" : ""}
-                                    </Box>
-                                </Flex>
+                                <RewardFee provider={provider} />
                             </Td>
                             <Td textAlign={"center"}>
                                 {provider.minStake.value}

@@ -70,13 +70,14 @@ export default function StatusCircle({ provider, column }) {
         )
 
         return (
-            <Tooltip key={index} placement={placement} margin={margin} gutter={0} label={label} openDelay={0}>
+            <Tooltip key={index} placement={placement} margin={margin} gutter={0} label={label} openDelay={0} closeOnClick={false}>
                 <Box
                     className={"borderStatusCircle"}
                     {...borderProperties[index].borderRadius}
                     {...borderProperties[index].border}
                     bg={value ? "green" : "red"}
                     h={5}
+                    cursor={"help"}
                 />
             </Tooltip>
         )
