@@ -2,6 +2,8 @@ import React from "react"
 
 import { Flex } from "@chakra-ui/react"
 
+import dataProps from "public/data/dataProps"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCoins, faUsers, faServer, faShoppingBasket } from "@fortawesome/free-solid-svg-icons"
 
@@ -11,43 +13,13 @@ export default function StakingType({ provider }) {
             direction={"row"}
             justifyContent={"center"}
             alignContent={"center"}
-            color={
-                provider.stakingType == "lst"
-                    ? "gold"
-                    : provider.stakingType == "pooled"
-                    ? "blue"
-                    : provider.stakingType == "indexToken"
-                    ? "orange"
-                    : provider.stakingType == "solo"
-                    ? "green"
-                    : ""
-            }
+            color={dataProps.flatMap((d) => d.options).find((opt) => opt?.value === provider.stakingType)?.color}
             fontWeight={"bold"}
         >
-            {provider.stakingType == "lst" && (
-                <Flex alignItems={"center"} gap={1}>
-                    <FontAwesomeIcon icon={faCoins} />
-                    LST
-                </Flex>
-            )}
-            {provider.stakingType == "pooled" && (
-                <Flex alignItems={"center"} gap={1}>
-                    <FontAwesomeIcon icon={faUsers} />
-                    Pooled
-                </Flex>
-            )}
-            {provider.stakingType == "solo" && (
-                <Flex alignItems={"center"} gap={1}>
-                    <FontAwesomeIcon icon={faServer} />
-                    Solo
-                </Flex>
-            )}
-            {provider.stakingType == "indexToken" && (
-                <Flex alignItems={"center"} gap={1}>
-                    <FontAwesomeIcon icon={faShoppingBasket} />
-                    Index
-                </Flex>
-            )}
+            <Flex alignItems={"center"} gap={1}>
+                <FontAwesomeIcon icon={dataProps.flatMap((d) => d.options).find((opt) => opt?.value === provider.stakingType)?.icon} />
+                {dataProps.flatMap((d) => d.options).find((opt) => opt?.value === provider.stakingType)?.text}
+            </Flex>
         </Flex>
     )
 }

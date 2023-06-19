@@ -4,7 +4,7 @@ import { Flex, Box, MenuList, MenuOptionGroup, MenuItemOption, Text } from "@cha
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 
-export default function HeaderMenuKeyOwner({ headerValues, dataFilter, setDataFilter }) {
+export default function HeaderMenuKeyOwner({ dataProps, dataFilter, setDataFilter }) {
     const updateFilterValidator = (values) => {
         if (values.length === 0) {
             setDataFilter(
@@ -33,7 +33,7 @@ export default function HeaderMenuKeyOwner({ headerValues, dataFilter, setDataFi
     return (
         <MenuList minWidth={1} key={JSON.stringify(dataFilter["keyOwner"])}>
             <MenuOptionGroup value={dataFilter["validatorKey"] || []} type="checkbox" onChange={updateFilterValidator} title="Validator Key Owner">
-                {headerValues
+                {dataProps
                     .find((obj) => obj.id === "validatorKey")
                     ?.options?.map((option) => (
                         <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"}>
@@ -47,7 +47,7 @@ export default function HeaderMenuKeyOwner({ headerValues, dataFilter, setDataFi
                     ))}
             </MenuOptionGroup>
             <MenuOptionGroup value={dataFilter["withdrawalKey"] || []} type="checkbox" onChange={updateFilterWithdrawal} title="Withdrawal Key Owner">
-                {headerValues
+                {dataProps
                     .find((obj) => obj.id === "withdrawalKey")
                     ?.options?.map((option) => (
                         <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"}>

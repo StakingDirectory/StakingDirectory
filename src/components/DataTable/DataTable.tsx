@@ -15,7 +15,9 @@ import HeaderMenuKeyOwner from "./HeaderMenuKeyOwner"
 import HeaderMenuNameSearch from "./HeaderMenuNameSearch"
 import ClearFiltersButton from "./ClearFiltersButton"
 
-export default function DataTable({ windowSize, environment, stakingProviders, dataFilter, setDataFilter, headerValues }) {
+import dataProps from "public/data/dataProps"
+
+export default function DataTable({ windowSize, environment, stakingProviders, dataFilter, setDataFilter }) {
     const isSSR = typeof window === "undefined"
     const nameInputRef = useRef<HTMLInputElement>(null)
     const filterDisabledColor = useColorModeValue("rgba(0, 0, 0, 0.2)", "rgba(255, 255, 255, 0.2)")
@@ -29,96 +31,93 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                             <Th w={"32px"}>
                                 <ClearFiltersButton dataFilter={dataFilter} setDataFilter={setDataFilter} />
                             </Th>
-                            {headerValues.map((headerValue) => {
-                                if (headerValue.type == "text") {
-                                    return (
-                                        <Th minW={200} key={headerValue.id} textAlign={"start"}>
-                                            <Menu placement="right" variant={"DataTableHeader"} gutter={2} initialFocusRef={nameInputRef}>
-                                                {({ isOpen }) => (
-                                                    <>
-                                                        <Box ml={"-10px"}>
-                                                            <HeaderButton
+                            {dataProps.map((headerValue) => {
+                                if (headerValue.isTableHeader) {
+                                    if (headerValue.type == "text") {
+                                        return (
+                                            <Th minW={200} key={headerValue.id} textAlign={"start"}>
+                                                <Menu placement="right" variant={"DataTableHeader"} gutter={2} initialFocusRef={nameInputRef}>
+                                                    {({ isOpen }) => (
+                                                        <>
+                                                            <Box ml={"-10px"}>
+                                                                <HeaderButton
+                                                                    dataFilter={dataFilter}
+                                                                    id="name"
+                                                                    text="NAME"
+                                                                    filterDisabledColor={filterDisabledColor}
+                                                                />
+                                                            </Box>
+                                                            <HeaderMenuNameSearch
+                                                                isOpen={isOpen}
+                                                                nameInputRef={nameInputRef}
                                                                 dataFilter={dataFilter}
-                                                                id="name"
-                                                                text="NAME"
-                                                                filterDisabledColor={filterDisabledColor}
+                                                                setDataFilter={setDataFilter}
                                                             />
-                                                        </Box>
-                                                        <HeaderMenuNameSearch
-                                                            isOpen={isOpen}
-                                                            nameInputRef={nameInputRef}
-                                                            dataFilter={dataFilter}
-                                                            setDataFilter={setDataFilter}
-                                                        />
-                                                    </>
-                                                )}
-                                            </Menu>
-                                        </Th>
-                                    )
-                                } else if (headerValue.type == "checkbox") {
-                                    return (
-                                        <Th minW={120} key={headerValue.id}>
-                                            <Menu placement="right-start" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                                <HeaderButton
-                                                    dataFilter={dataFilter}
-                                                    id={headerValue.id}
-                                                    text={headerValue.headerText}
-                                                    filterDisabledColor={filterDisabledColor}
-                                                />
-                                                <HeaderMenuCheckbox
-                                                    id={headerValue.id}
-                                                    headerValues={headerValues}
-                                                    dataFilter={dataFilter}
-                                                    setDataFilter={setDataFilter}
-                                                />
-                                            </Menu>
-                                        </Th>
-                                    )
-                                } else if (headerValue.type == "checkboxType") {
-                                    return (
-                                        <Th minW={120} key={headerValue.id}>
-                                            <Menu placement="right-start" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                                <HeaderButton
-                                                    dataFilter={dataFilter}
-                                                    id={headerValue.id}
-                                                    text={headerValue.headerText}
-                                                    filterDisabledColor={filterDisabledColor}
-                                                />
-                                                <HeaderMenuType
-                                                    id={headerValue.id}
-                                                    headerValues={headerValues}
-                                                    dataFilter={dataFilter}
-                                                    setDataFilter={setDataFilter}
-                                                />
-                                            </Menu>
-                                        </Th>
-                                    )
-                                } else if (headerValue.type == "checkboxKeyOwner") {
-                                    return (
-                                        <Th minW={120} key={headerValue.id}>
-                                            <Menu placement="right-start" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                                <HeaderButtonKeyOwner
-                                                    dataFilter={dataFilter}
-                                                    text={headerValue.headerText}
-                                                    filterDisabledColor={filterDisabledColor}
-                                                />
-                                                <HeaderMenuKeyOwner
-                                                    headerValues={headerValues}
-                                                    dataFilter={dataFilter}
-                                                    setDataFilter={setDataFilter}
-                                                />
-                                            </Menu>
-                                        </Th>
-                                    )
-                                } else if (headerValue.type == "other") {
-                                    return (
-                                        <Th minW={110} key={headerValue.id}>
-                                            <Box pb={"10px"}>{headerValue.headerText}</Box>
-                                        </Th>
-                                    )
+                                                        </>
+                                                    )}
+                                                </Menu>
+                                            </Th>
+                                        )
+                                    } else if (headerValue.type == "checkbox") {
+                                        return (
+                                            <Th minW={120} key={headerValue.id}>
+                                                <Menu placement="right-start" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
+                                                    <HeaderButton
+                                                        dataFilter={dataFilter}
+                                                        id={headerValue.id}
+                                                        text={headerValue.headerText}
+                                                        filterDisabledColor={filterDisabledColor}
+                                                    />
+                                                    <HeaderMenuCheckbox
+                                                        id={headerValue.id}
+                                                        dataProps={dataProps}
+                                                        dataFilter={dataFilter}
+                                                        setDataFilter={setDataFilter}
+                                                    />
+                                                </Menu>
+                                            </Th>
+                                        )
+                                    } else if (headerValue.type == "checkboxType") {
+                                        return (
+                                            <Th minW={120} key={headerValue.id}>
+                                                <Menu placement="right-start" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
+                                                    <HeaderButton
+                                                        dataFilter={dataFilter}
+                                                        id={headerValue.id}
+                                                        text={headerValue.headerText}
+                                                        filterDisabledColor={filterDisabledColor}
+                                                    />
+                                                    <HeaderMenuType
+                                                        id={headerValue.id}
+                                                        dataProps={dataProps}
+                                                        dataFilter={dataFilter}
+                                                        setDataFilter={setDataFilter}
+                                                    />
+                                                </Menu>
+                                            </Th>
+                                        )
+                                    } else if (headerValue.type == "checkboxKeyOwner") {
+                                        return (
+                                            <Th minW={120} key={headerValue.id}>
+                                                <Menu placement="right-start" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
+                                                    <HeaderButtonKeyOwner
+                                                        dataFilter={dataFilter}
+                                                        text={headerValue.headerText}
+                                                        filterDisabledColor={filterDisabledColor}
+                                                    />
+                                                    <HeaderMenuKeyOwner dataProps={dataProps} dataFilter={dataFilter} setDataFilter={setDataFilter} />
+                                                </Menu>
+                                            </Th>
+                                        )
+                                    } else if (headerValue.type == "other") {
+                                        return (
+                                            <Th minW={110} key={headerValue.id}>
+                                                <Box pb={"10px"}>{headerValue.headerText}</Box>
+                                            </Th>
+                                        )
+                                    }
                                 }
                             })}
-
                             <Th w={"32px"}>
                                 <ClearFiltersButton dataFilter={dataFilter} setDataFilter={setDataFilter} />
                             </Th>

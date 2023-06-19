@@ -4,28 +4,9 @@ import DataTable from "./DataTable/DataTable"
 import ActiveFilters from "./DataTable/ActiveFilters"
 
 import stakingProviders from "../../public/data/stakingProviders.json"
+import dataProps from "public/data/dataProps"
 
 import { useColorModeValue, Box, Flex } from "@chakra-ui/react"
-
-import {
-    faCoins,
-    faUsers,
-    faServer,
-    faCode,
-    faUserAstronaut,
-    faBuilding,
-    faMagnifyingGlass,
-    faBookOpen,
-    faShield,
-    faBug,
-    faVolumeHigh,
-    faShapes,
-    faLockOpen,
-    faListUl,
-    faCloud,
-    faDesktop,
-    faShoppingBasket,
-} from "@fortawesome/free-solid-svg-icons"
 
 const App = () => {
     const environment = process.env.NODE_ENV
@@ -163,90 +144,6 @@ const App = () => {
         console.log(dataFilter)
     }, [dataFilter])
 
-    const headerValues = [
-        {
-            type: "text",
-            id: "name",
-            name: "Name",
-            headerText: "NAME",
-        },
-        {
-            type: "checkboxType",
-            id: "type",
-            name: "Type",
-            headerText: "TYPE",
-            options: [
-                { value: "solo", text: "Solo", color: "green", icon: faServer },
-                { value: "pooled", text: "Pooled", color: "blue", icon: faUsers },
-                { value: "lst", text: "LST", color: "gold", icon: faCoins },
-                { value: "indexToken", text: "LST index", color: "orange", icon: faShoppingBasket },
-                { value: "hardware", text: "Hardware", color: "", icon: faDesktop },
-                { value: "software", text: "Software", color: "", icon: faCode },
-                { value: "saas", text: "SAAS", color: "", icon: faCloud },
-            ],
-        },
-        {
-            type: "other",
-            id: "fee",
-            name: "Fee",
-            headerText: "FEE",
-            options: [],
-        },
-        {
-            type: "other",
-            id: "minStake",
-            name: "Min Stake",
-            headerText: "MIN STAKE",
-            options: [],
-        },
-        {
-            type: "checkboxKeyOwner",
-            id: "validatorKey",
-            name: "Validator Key Owner",
-            headerText: "KEY OWNER",
-            options: [
-                { value: "userValidator", text: "User", color: "green", icon: faUserAstronaut },
-                { value: "service", text: "Service", color: "gold", icon: faBuilding },
-                { value: "nodeOperator", text: "Operator", color: "blue", icon: faServer },
-            ],
-        },
-        {
-            type: "none",
-            id: "withdrawalKey",
-            name: "Withdrawal Key Owner",
-            headerText: "",
-            options: [
-                { value: "userWithdrawal", text: "User", color: "green", icon: faUserAstronaut },
-                { value: "smartContract", text: "Smart contract", color: "blue", icon: faCode },
-            ],
-        },
-        {
-            type: "checkbox",
-            id: "security",
-            name: "Security",
-            headerText: "SECURITY",
-            options: [
-                { value: "openSource", text: "Open source", color: "", icon: faBookOpen },
-                { value: "battleTested", text: "Battle tested", color: "", icon: faShield },
-                { value: "bugBounty", text: "Bug bounty", color: "", icon: faBug },
-                { value: "audited", text: "Audited", color: "", icon: faMagnifyingGlass },
-            ],
-        },
-        {
-            type: "checkbox",
-            id: "ethereumAligned",
-            name: "Ethereum Aligned",
-            headerText: "ETHEREUM <br /> ALIGNED",
-            options: [
-                { value: "nonCensoringRelays", text: "Censorship resistance", color: "", icon: faVolumeHigh },
-                { value: "diverseExecutionClients", text: "Diverse EL clients", color: "", icon: faShapes },
-                { value: "diverseBeaconClients", text: "Diverse BN clients", color: "", icon: faListUl },
-                { value: "permissionlessOperators", text: "Permissionless operators", color: "", icon: faLockOpen },
-                { value: "permissionlessUsage", text: "Permissionless usage", color: "", icon: faUsers },
-            ],
-        },
-    ]
-
     return (
         <Box minH="100vh" minW="100vw" bg={useColorModeValue("pageBackground.light", "pageBackground.dark")}>
             <Flex direction="column" justifyContent="center" alignItems="center">
@@ -256,14 +153,13 @@ const App = () => {
                     🏗️ ACTIVE DEVELOPMENT ENVIRONMENT - NOT PRODUCTION READY 🏗️
                 </Box>
                 <Box height={50} />
-                <ActiveFilters dataFilter={dataFilter} setDataFilter={setDataFilter} headerValues={headerValues} />
+                <ActiveFilters dataFilter={dataFilter} setDataFilter={setDataFilter} />
                 <DataTable
                     windowSize={windowSize}
                     environment={environment}
                     stakingProviders={filteredStakingProviders}
                     dataFilter={dataFilter}
                     setDataFilter={setDataFilter}
-                    headerValues={headerValues}
                 />
             </Flex>
         </Box>

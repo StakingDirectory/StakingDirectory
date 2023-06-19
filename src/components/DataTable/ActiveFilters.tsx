@@ -1,14 +1,12 @@
 import React, { useRef, useEffect, useState } from "react"
-
 import { Flex, Text, Box, Button, Tooltip, filter } from "@chakra-ui/react"
-
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faFilter, faFilterCircleXmark } from "@fortawesome/free-solid-svg-icons"
+import { faFilter } from "@fortawesome/free-solid-svg-icons"
 import { faTimesCircle } from "@fortawesome/free-regular-svg-icons"
-
+import dataProps from "public/data/dataProps"
 import ClearFiltersButton from "./ClearFiltersButton"
 
-export default function ActiveFilters({ dataFilter, setDataFilter, headerValues }) {
+export default function ActiveFilters({ dataFilter, setDataFilter }) {
     const DeleteFilterOptionButton = ({ children, index = 0, activeFilter, filterOption = "" }) => {
         const deleteFilterOption = () => {
             let newFilter = dataFilter
@@ -57,7 +55,7 @@ export default function ActiveFilters({ dataFilter, setDataFilter, headerValues 
                         return (
                             <Flex key={activeFilter} className={"bgContent"} borderRadius={30} pl={2} pr={1} minH={10} gap={2}>
                                 <Flex px={1} alignItems={"center"} fontWeight={"bold"}>
-                                    {headerValues.find((obj) => obj.id === activeFilter).name}
+                                    {dataProps.find((obj) => obj.id === activeFilter).name}
                                 </Flex>
                                 <Flex wrap={"wrap"}>
                                     {Array.isArray(dataFilter[activeFilter]) ? (
@@ -75,37 +73,20 @@ export default function ActiveFilters({ dataFilter, setDataFilter, headerValues 
                                                         pr={2}
                                                         pl={1}
                                                         color={
-                                                            filterOption == "solo"
-                                                                ? "green"
-                                                                : filterOption == "pooled"
-                                                                ? "blue"
-                                                                : filterOption == "lst"
-                                                                ? "gold"
-                                                                : filterOption == "indexToken"
-                                                                ? "orange"
-                                                                : filterOption == "userValidator"
-                                                                ? "green"
-                                                                : filterOption == "service"
-                                                                ? "gold"
-                                                                : filterOption == "nodeOperator"
-                                                                ? "blue"
-                                                                : filterOption == "userWithdrawal"
-                                                                ? "green"
-                                                                : filterOption == "smartContract"
-                                                                ? "blue"
-                                                                : ""
+                                                            dataProps.flatMap((d) => d.options).find((opt) => opt?.value === filterOption)?.color ||
+                                                            ""
                                                         }
                                                     >
                                                         <FontAwesomeIcon
                                                             size="sm"
                                                             icon={
-                                                                headerValues
+                                                                dataProps
                                                                     .find((obj) => obj.id === activeFilter)
                                                                     .options?.find((obj) => obj.value === filterOption).icon
                                                             }
                                                         />
                                                         {
-                                                            headerValues
+                                                            dataProps
                                                                 .find((obj) => obj.id === activeFilter)
                                                                 .options?.find((obj) => obj.value === filterOption).text
                                                         }
