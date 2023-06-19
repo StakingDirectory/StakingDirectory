@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react"
 
-import { Flex, Box, Image, useColorModeValue, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Menu, Text } from "@chakra-ui/react"
+import { Flex, Box, Image, useColorModeValue, Table, Thead, Tbody, Tr, Th, Td, TableContainer, Menu, Text, Link } from "@chakra-ui/react"
+import NextLink from "next/link"
 
 import DataRowMenuButton from "./DataRowMenuButton"
 import HeaderButton from "./HeaderButton"
@@ -131,7 +132,9 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                 </Td>
                                 <Td maxW={160}>
                                     <Text fontSize="lg" fontWeight="extrabold" isTruncated>
-                                        {provider.name}
+                                        <Link as={NextLink} href={provider.links.website} target="_blank">
+                                            {provider.name}
+                                        </Link>
                                     </Text>
                                 </Td>
                                 <Td textAlign={"center"}>

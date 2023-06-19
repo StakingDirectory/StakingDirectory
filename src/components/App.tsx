@@ -3,7 +3,8 @@ import Header from "./Header/Header"
 import DataTable from "./DataTable/DataTable"
 import ActiveFilters from "./DataTable/ActiveFilters"
 
-import filterStakingProviders from "../utils/filteredStakingProviders"
+import filterProviders from "../utils/filterProviders"
+import orderProviders from "../utils/orderProviders"
 
 import { useColorModeValue, Box, Flex } from "@chakra-ui/react"
 
@@ -33,7 +34,9 @@ const App = () => {
 
     // Data Filtering State
     const [dataFilter, setDataFilter] = useState({})
-    const filteredStakingProviders = filterStakingProviders(dataFilter)
+    const filteredProviders = filterProviders(dataFilter)
+
+    const orderedFilteredProviders = orderProviders(filteredProviders)
 
     // TODO: Testing only - Remove this console.log
     useEffect(() => {
@@ -53,7 +56,7 @@ const App = () => {
                 <DataTable
                     windowSize={windowSize}
                     environment={environment}
-                    stakingProviders={filteredStakingProviders}
+                    stakingProviders={orderedFilteredProviders}
                     dataFilter={dataFilter}
                     setDataFilter={setDataFilter}
                 />

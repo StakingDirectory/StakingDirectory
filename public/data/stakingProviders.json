@@ -222,6 +222,117 @@
         }
     },
     {
+        "id": 44,
+        "logo": {
+            "src": "./images/DappnodeLogo.png",
+            "alt": "Logo"
+        },
+        "name": "DAppNode",
+        "status": "active",
+        "mainnetLaunchDate": "",
+        "stakingType": "solo",
+        "providerType": "software",
+        "fee": {
+            "type": "rewardPercentage",
+            "value": 0
+        },
+        "rewards": {
+            "type": "percentage",
+            "value": "🏗️"
+        },
+        "links": {
+            "website": "https://dappnode.io/",
+            "twitter": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "validatorKey": ["userValidator"],
+        "withdrawalKey": ["userWithdrawal"],
+        "openSource": {
+            "value": true,
+            "links": [
+                {
+                    "text": "GitHub",
+                    "url": "https://github.com/dappnode/DAppNode"
+                }
+            ]
+        },
+        "audited": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "bugBounty": {
+            "value": false,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "battleTested": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "permissionlessOperators": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://"
+                }
+            ]
+        },
+        "diverseExecutionClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://dappnode.github.io/explorer/#/"
+                }
+            ]
+        },
+        "diverseBeaconClients": {
+            "value": true,
+            "links": [
+                {
+                    "text": "Link",
+                    "url": "https://dappnode.github.io/explorer/#/"
+                }
+            ]
+        }
+    },
+    {
         "id": 5,
         "logo": {
             "src": "./images/EthereumOnArmLogo.png",
