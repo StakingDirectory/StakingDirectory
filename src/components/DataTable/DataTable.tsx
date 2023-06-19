@@ -14,6 +14,7 @@ import HeaderMenuCheckbox from "./HeaderMenuCheckbox"
 import HeaderMenuType from "./HeaderMenuType"
 import HeaderMenuKeyOwner from "./HeaderMenuKeyOwner"
 import HeaderMenuNameSearch from "./HeaderMenuNameSearch"
+import HeaderMenuPlaceholder from "./HeaderMenuPlaceholder"
 import ClearFiltersButton from "./ClearFiltersButton"
 
 import dataProps from "public/data/dataProps"
@@ -133,7 +134,19 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                 } else if (headerValue.type == "other") {
                                     return (
                                         <Th minW={110} key={headerValue.id}>
-                                            <Box pb={"10px"}>{headerValue.headerText}</Box>
+                                            <Menu placement="right-start" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
+                                                <HeaderButtonKeyOwner
+                                                    dataFilter={dataFilter}
+                                                    text={headerValue.headerText}
+                                                    filterDisabledColor={filterDisabledColor}
+                                                />
+                                                <HeaderMenuPlaceholder
+                                                    id={headerValue.id}
+                                                    dataProps={dataProps}
+                                                    dataFilter={dataFilter}
+                                                    setDataFilter={setDataFilter}
+                                                />
+                                            </Menu>
                                         </Th>
                                     )
                                 }
@@ -162,8 +175,13 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                 <ProviderType provider={provider} />
                             </Td>
                             <Td textAlign={"center"}>
-                                {provider.fee.value}
-                                {provider.fee.type == "rewardPercentage" ? "%" : ""}
+                                <Flex direction="column" gap={"5px"}>
+                                    <Box>5.4%</Box>
+                                    <Box>
+                                        {provider.fee.value}
+                                        {provider.fee.type == "rewardPercentage" ? "%" : ""}
+                                    </Box>
+                                </Flex>
                             </Td>
                             <Td textAlign={"center"}>
                                 {provider.minStake.value}

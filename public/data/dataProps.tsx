@@ -47,7 +47,7 @@ const dataProps = [
         type: "other",
         id: "fee",
         name: "Fee",
-        headerText: "FEE",
+        headerText: "REWARD <br /> / FEE",
         options: [],
     },
     {
