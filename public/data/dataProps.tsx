@@ -71,7 +71,7 @@ const dataProps = [
         type: "checkboxKeyOwner",
         id: "validatorKey",
         name: "Validator Key Owner",
-        headerText: "KEY OWNER",
+        headerText: "KEY <br /> OWNER",
         options: [
             { value: "userValidator", text: "User", color: "green", icon: faUserAstronaut },
             { value: "service", text: "Service", color: "gold", icon: faBuilding },

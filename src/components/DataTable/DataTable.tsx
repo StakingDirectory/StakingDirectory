@@ -84,7 +84,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                     )
                                 } else if (headerValue.type == "checkbox") {
                                     return (
-                                        <Th minW={120} key={headerValue.id}>
+                                        <Th key={headerValue.id}>
                                             <Menu placement="right-start" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                                 <HeaderButton
                                                     dataFilter={dataFilter}
@@ -103,7 +103,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                     )
                                 } else if (headerValue.type == "checkboxType") {
                                     return (
-                                        <Th minW={120} key={headerValue.id}>
+                                        <Th key={headerValue.id}>
                                             <Menu placement="right-start" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                                 <HeaderButton
                                                     dataFilter={dataFilter}
@@ -122,7 +122,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                     )
                                 } else if (headerValue.type == "checkboxKeyOwner") {
                                     return (
-                                        <Th minW={120} key={headerValue.id}>
+                                        <Th key={headerValue.id}>
                                             <Menu placement="right-start" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                                 <HeaderButtonKeyOwner
                                                     dataFilter={dataFilter}
@@ -135,9 +135,9 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                                     )
                                 } else if (headerValue.type == "other") {
                                     return (
-                                        <Th minW={110} key={headerValue.id}>
+                                        <Th key={headerValue.id}>
                                             <Menu placement="right-start" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                                <HeaderButtonKeyOwner
+                                                <HeaderButton
                                                     dataFilter={dataFilter}
                                                     text={headerValue.headerText}
                                                     filterDisabledColor={filterDisabledColor}
