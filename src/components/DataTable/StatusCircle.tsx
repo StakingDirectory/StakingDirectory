@@ -1,5 +1,5 @@
 import React from "react"
-import { Flex, Box, Grid, useColorModeValue, Tooltip, Text, HStack } from "@chakra-ui/react"
+import { Flex, Box, Grid, Tooltip, Text, HStack } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircleCheck, faCircleXmark } from "@fortawesome/free-solid-svg-icons"
@@ -19,11 +19,9 @@ const StatusProperties = {
     ],
 }
 
-// TODO: Move colors to customTheme
 export default function StatusCircle({ provider, column }) {
     const statusProps = StatusProperties[column]
     const allTrue = statusProps.every((prop) => (typeof prop.value === "function" ? prop.value(provider) : provider[prop.value].value))
-    const borderColor = useColorModeValue("pageBackground.light", "pageBackground.dark")
 
     const borderStyle = "1px solid"
     const borderProperties = [
@@ -74,9 +72,9 @@ export default function StatusCircle({ provider, column }) {
         return (
             <Tooltip key={index} placement={placement} margin={margin} gutter={0} label={label} openDelay={0}>
                 <Box
+                    className={"borderStatusCircle"}
                     {...borderProperties[index].borderRadius}
                     {...borderProperties[index].border}
-                    borderColor={borderColor}
                     bg={value ? "green" : "red"}
                     h={5}
                 />
@@ -88,15 +86,13 @@ export default function StatusCircle({ provider, column }) {
         <Flex justifyContent={"center"}>
             <Box borderRadius={"100%"} overflow={"hidden"} border={"2px solid"} borderColor={allTrue ? "gold" : "transparent"} w="48px">
                 <Grid
-                    bg={useColorModeValue("pageBackground.light", "pageBackground.dark")}
                     templateColumns={"repeat(2, 1fr)"}
                     border={"2px solid"}
-                    borderColor={useColorModeValue("pageBackground.light", "pageBackground.dark")}
+                    className={"bgPage borderStatusCircle"}
                     borderRadius={"100%"}
                     overflow={"hidden"}
                     w="44px"
                 >
-                    {/* {statusProps.map(renderBox)} */}
                     {statusProps.map((status, index) => renderBox(status, index))}
                 </Grid>
             </Box>

@@ -4,8 +4,20 @@ import type { StyleFunctionProps } from "@chakra-ui/styled-system"
 const customTheme = extendTheme({
     styles: {
         global: (props: StyleFunctionProps) => ({
+            ".bgPage": {
+                bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
+            },
             ".bgContent": {
                 bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
+            },
+            ".borderColor": {
+                borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
+            },
+            ".borderColorDivider": {
+                borderColor: props.colorMode === "dark" ? "divider.dark" : "divider.light",
+            },
+            "div .borderStatusCircle": {
+                borderColor: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
             },
         }),
     },

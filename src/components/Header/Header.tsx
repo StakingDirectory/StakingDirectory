@@ -1,4 +1,4 @@
-import { Box, Flex, HStack, useColorModeValue, Image } from "@chakra-ui/react"
+import { Box, Flex, HStack, Image } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons"
@@ -17,9 +17,9 @@ export default function Header({ windowSize, environment }) {
     }
 
     return (
-        <Box width="100%" borderBottomWidth={1} borderColor={useColorModeValue("border.light", "border.dark")}>
+        <Box width="100%" borderBottomWidth={1} className={"borderColor"}>
             <Box width="100%" px={{ base: "10px", sm: "3rem" }} maxW="1780px">
-                <Box bg={useColorModeValue("pageBackground.light", "pageBackground.dark")}>
+                <Box className={"bgPage"}>
                     <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
                         <HStack spacing={3} alignItems={"center"}>
                             <Image
@@ -45,7 +45,7 @@ export default function Header({ windowSize, environment }) {
                                     <FontAwesomeIcon icon={faGithub} size={"xl"} />
                                 </Box>
                             </Link>
-                            <Box borderLeftWidth={1} borderColor={useColorModeValue("divider.light", "divider.dark")} height={8} />
+                            <Box borderLeftWidth={1} className={"borderColorDivider"} height={8} />
                             <ColorModeToggle />
                         </HStack>
                     </Flex>

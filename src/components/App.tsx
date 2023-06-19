@@ -41,7 +41,7 @@ const App = () => {
     }, [dataFilter])
 
     return (
-        <Box minH="100vh" minW="100vw" bg={useColorModeValue("pageBackground.light", "pageBackground.dark")}>
+        <Box minH="100vh" minW="100vw" className={"bgPage"}>
             <Flex direction="column" justifyContent="center" alignItems="center">
                 <Header windowSize={windowSize} environment={environment} />
                 {/* TODO: REMOVE WHEN PROD READY */}
