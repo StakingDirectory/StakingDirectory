@@ -37,6 +37,13 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
         }
     }, [])
 
+    // Scroll to top of table when a filter is changed
+    useEffect(() => {
+        if (dataFilter && isSticky) {
+            tableRef.current.scrollIntoView({ behavior: "auto" })
+        }
+    }, [dataFilter, isSticky])
+
     return (
         <Box mt={0} mb={"500px"} maxW={"100%"} ref={tableRef}>
             <Table variant="DataTable">
