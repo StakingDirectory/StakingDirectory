@@ -4,15 +4,15 @@ import { Flex, Tooltip, Box, Text } from "@chakra-ui/react"
 import dataProps from "public/data/dataProps"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { IconDefinition } from "@fortawesome/fontawesome-svg-core"
 
 export default function KeyOwner({ provider, id }) {
-    const tooltipLabel = (value, color, icon) => {
+    const tooltipLabel = (value: string, color: string, icon: IconDefinition) => {
         return (
             <Flex alignItems={"center"} direction="column" gap={3}>
                 <Text fontSize={"md"} fontWeight={"extrabold"}>
                     {dataProps.find((obj) => obj.id === id).name}
                 </Text>
-                <Text>are controlled by the</Text>
                 <Flex gap={2} color={color} alignItems="center">
                     <FontAwesomeIcon icon={icon} size="lg" />
                     <Text fontSize={"md"} fontWeight={"extrabold"} color={color}>

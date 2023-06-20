@@ -45,7 +45,7 @@ const filterStakingProviders = (dataFilter) => {
                     }
                 } else if (key === "security") {
                     let showSecurity = true
-                    for (let feature of ["openSource", "audited", "bugBounty", "battleTested"]) {
+                    for (let feature of ["openSource", "audited", "bugBounty", "dvtCompatible"]) {
                         if (dataFilter[key].includes(feature) && !provider[feature].value) {
                             showSecurity = false
                         }

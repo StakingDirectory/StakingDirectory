@@ -9,7 +9,7 @@ const StatusProperties = {
         { value: "audited", name: "Audited" },
         { value: "openSource", name: "Open source" },
         { value: "bugBounty", name: "Bug bounty" },
-        { value: "battleTested", name: "Free space (segment being decided)" },
+        { value: "dvtCompatible", name: "DVT compatible" },
     ],
     ethereumAligned: [
         { value: "permissionlessUsage", name: "Permissionless usage" },
@@ -21,7 +21,7 @@ const StatusProperties = {
 
 export default function StatusCircle({ provider, column }) {
     const statusProps = StatusProperties[column]
-    const allTrue = statusProps.every((prop) => (typeof prop.value === "function" ? prop.value(provider) : provider[prop.value].value))
+    const allTrue = statusProps.every((prop) => (typeof prop.value === "function" ? prop.value(provider) : provider[prop.value]?.value))
 
     const borderStyle = "1px solid"
     const borderProperties = [

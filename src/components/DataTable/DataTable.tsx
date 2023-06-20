@@ -164,7 +164,9 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                     {stakingProviders.map((provider, providerIndex) => (
                         <Tr key={provider.id} borderBottomWidth={1} h={14}>
                             <Td>
-                                <Image objectFit="contain" boxSize={8} src={provider.logo.src} alt={provider.logo.alt} borderRadius={"100%"} />
+                                <Link as={NextLink} href={provider.links.website} target="_blank">
+                                    <Image objectFit="contain" boxSize={8} src={provider.logo.src} alt={provider.logo.alt} borderRadius={"100%"} />
+                                </Link>
                             </Td>
                             <Td maxW={160}>
                                 <Text fontSize="lg" fontWeight="extrabold" isTruncated>

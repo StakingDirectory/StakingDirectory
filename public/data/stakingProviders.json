@@ -56,7 +56,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -167,7 +167,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -279,7 +279,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -391,7 +391,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -503,7 +503,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -615,7 +615,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": false,
             "links": [
                 {
@@ -727,7 +727,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -839,7 +839,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -951,7 +951,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -1063,7 +1063,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -1175,7 +1175,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -1287,7 +1287,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -1399,7 +1399,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -1511,7 +1511,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -1623,7 +1623,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -1735,7 +1735,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -1847,7 +1847,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -1959,7 +1959,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -2021,7 +2021,7 @@
             "src": "./images/StakeWiseLogo.png",
             "alt": "Logo"
         },
-        "name": "StakeWise V2",
+        "name": "StakeWise V2 Node",
         "status": "active",
         "mainnetLaunchDate": "",
         "stakingType": "solo",
@@ -2071,7 +2071,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -2183,7 +2183,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -2245,7 +2245,7 @@
             "src": "./images/RocketPoolLogo.png",
             "alt": "Logo"
         },
-        "name": "Rocketpool Node",
+        "name": "Rocket Pool Node",
         "status": "active",
         "mainnetLaunchDate": "",
         "stakingType": "pooled",
@@ -2295,7 +2295,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -2407,7 +2407,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": false,
             "links": [
                 {
@@ -2469,7 +2469,7 @@
             "src": "./images/StakeWiseLogo.png",
             "alt": "Logo"
         },
-        "name": "StakeWise V3",
+        "name": "StakeWise V3 Node",
         "status": "dev",
         "mainnetLaunchDate": "",
         "stakingType": "pooled",
@@ -2519,7 +2519,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": false,
             "links": [
                 {
@@ -2631,7 +2631,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -2743,7 +2743,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -2855,7 +2855,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -2967,7 +2967,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": false,
             "links": [
                 {
@@ -3079,7 +3079,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -3192,7 +3192,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -3305,7 +3305,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -3418,7 +3418,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -3531,7 +3531,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -3594,7 +3594,7 @@
             "src": "./images/RocketPoolLogo.png",
             "alt": "Logo"
         },
-        "name": "RocketPool",
+        "name": "Rocket Pool",
         "status": "active",
         "mainnetLaunchDate": "",
         "stakingType": "lst",
@@ -3615,7 +3615,7 @@
             "type": "anyAmount",
             "value": "Any amount"
         },
-        "validatorKey": ["service"],
+        "validatorKey": ["nodeOperator"],
         "withdrawalKey": ["smartContract"],
         "openSource": {
             "value": true,
@@ -3644,7 +3644,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -3757,7 +3757,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -3870,7 +3870,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -3983,7 +3983,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {
@@ -4067,7 +4067,7 @@
             "type": "anyAmount",
             "value": "Any amount"
         },
-        "validatorKey": ["service"],
+        "validatorKey": ["service", "nodeOperator"],
         "withdrawalKey": ["smartContract"],
         "openSource": {
             "value": false,
@@ -4096,7 +4096,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": false,
             "links": [
                 {
@@ -4209,7 +4209,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": false,
             "links": [
                 {
@@ -4322,7 +4322,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": false,
             "links": [
                 {
@@ -4435,7 +4435,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": false,
             "links": [
                 {
@@ -4549,7 +4549,7 @@
                 }
             ]
         },
-        "battleTested": {
+        "dvtCompatible": {
             "value": true,
             "links": [
                 {

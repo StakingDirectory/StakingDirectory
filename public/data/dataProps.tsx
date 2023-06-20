@@ -16,6 +16,7 @@ import {
     faCloud,
     faDesktop,
     faShoppingBasket,
+    faKey,
 } from "@fortawesome/free-solid-svg-icons"
 
 const dataProps = [
@@ -96,7 +97,7 @@ const dataProps = [
         headerText: "SECURITY",
         options: [
             { value: "openSource", text: "Open source", color: "", icon: faBookOpen },
-            { value: "battleTested", text: "Battle tested", color: "", icon: faShield },
+            { value: "dvtCompatible", text: "DVT compatible", color: "", icon: faKey },
             { value: "bugBounty", text: "Bug bounty", color: "", icon: faBug },
             { value: "audited", text: "Audited", color: "", icon: faMagnifyingGlass },
         ],
