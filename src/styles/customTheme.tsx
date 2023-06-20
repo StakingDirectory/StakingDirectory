@@ -78,6 +78,26 @@ const customTheme = extendTheme({
                 },
             }),
         },
+        Popover: {
+            baseStyle: (props: StyleFunctionProps) => ({
+                content: {
+                    bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
+                    color: props.colorMode === "dark" ? "text.dark" : "text.light",
+                    borderColor: "white",
+                    maxWidth: "500px",
+                    textAlign: "center",
+                    borderWidth: "1px",
+                    borderRadius: "10px",
+                    fontWeight: "bold",
+                    fontSize: "sm",
+                    padding: "0.6rem",
+                    boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.2)",
+                    _arrow: {
+                        bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
+                    },
+                },
+            }),
+        },
         Menu: {
             baseStyle: (props: StyleFunctionProps) => ({
                 list: {

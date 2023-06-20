@@ -161,7 +161,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                     </Tr>
                 </Thead>
                 <Tbody>
-                    {stakingProviders.map((provider, providerIndex) => (
+                    {stakingProviders.map((provider) => (
                         <Tr key={provider.id} borderBottomWidth={1} h={14}>
                             <Td>
                                 <Link as={NextLink} href={provider.links.website} target="_blank">
