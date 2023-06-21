@@ -45,9 +45,9 @@ export default function ActiveFilters({ dataFilter, setDataFilter }) {
     }
 
     return (
-        <Box width={"100%"} maxW={"1400px"} px={2} pb={5}>
+        <Box width={"100%"} maxW={"1200px"} px={0} pb={5}>
             <Flex gap={2} width={"fit-content"} minH={12} alignItems={"center"} wrap={"wrap"}>
-                <Flex color="purple" alignItems={"center"} ml={2} fontWeight={"bold"} fontSize="xl">
+                <Flex color="purple" alignItems={"center"} ml={4} fontWeight={"bold"} fontSize="xl">
                     Active filters
                 </Flex>
                 {Object.keys(dataFilter).length > 0 ? (

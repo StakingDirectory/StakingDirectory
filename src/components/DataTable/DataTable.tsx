@@ -21,36 +21,15 @@ import ClearFiltersButton from "./ClearFiltersButton"
 
 import dataProps from "public/data/dataProps"
 
-export default function DataTable({ windowSize, environment, stakingProviders, dataFilter, setDataFilter }) {
+export default function DataTable({ windowSize, environment, stakingProviders, status, dataFilter, setDataFilter }) {
     const isSSR = typeof window === "undefined"
     const nameInputRef = useRef<HTMLInputElement>(null)
     const filterDisabledColor = useColorModeValue("rgba(0, 0, 0, 0.2)", "rgba(255, 255, 255, 0.2)")
 
-    const [isSticky, setSticky] = useState(false)
-    const tableRef = useRef(null)
-    const handleScroll = () => {
-        if (!tableRef.current) return
-        const rect = tableRef.current.getBoundingClientRect()
-        setSticky(rect.top < 0 && rect.bottom > 0)
-    }
-    useEffect(() => {
-        if (!isSSR) {
-            window.addEventListener("scroll", handleScroll)
-            return () => window.removeEventListener("scroll", handleScroll)
-        }
-    }, [])
-
-    // Scroll to top of table when a filter is changed
-    useEffect(() => {
-        if (dataFilter && isSticky) {
-            tableRef.current.scrollIntoView({ behavior: "auto" })
-        }
-    }, [dataFilter])
-
     return (
-        <Box mt={0} mb={"500px"} maxW={"100%"} ref={tableRef} overflow={"scroll"}>
+        <Box mt={0} mb={"500px"} maxW={"100vw"} overflow={"scroll"}>
             <Table variant="DataTable">
-                <Thead position={isSticky ? "sticky" : "static"} top="0" zIndex="1">
+                <Thead>
                     <Tr borderBottomWidth={1}>
                         <Th w={"32px"}>
                             <ClearFiltersButton dataFilter={dataFilter} setDataFilter={setDataFilter} />
@@ -161,51 +140,60 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
                     </Tr>
                 </Thead>
                 <Tbody>
-                    {stakingProviders.map((provider) => (
-                        <Tr key={provider.id} borderBottomWidth={1} h={14}>
-                            <Td>
-                                <Link as={NextLink} href={provider.links.website} target="_blank">
-                                    <Image objectFit="contain" boxSize={8} src={provider.logo.src} alt={provider.logo.alt} borderRadius={"100%"} />
-                                </Link>
-                            </Td>
-                            <Td maxW={160}>
-                                <Text fontSize="lg" fontWeight="extrabold" isTruncated>
-                                    <Link as={NextLink} href={provider.links.website} target="_blank">
-                                        {provider.name}
-                                    </Link>
-                                </Text>
-                            </Td>
-                            <Td textAlign={"center"}>
-                                <StakeFromHome provider={provider} />
-                            </Td>
-                            <Td textAlign={"center"}>
-                                <StakingType provider={provider} />
-                                <ProviderType provider={provider} />
-                            </Td>
-                            <Td textAlign={"center"}>
-                                <RewardFee provider={provider} />
-                            </Td>
-                            <Td textAlign={"center"}>
-                                {provider.minStake.value}
-                                {provider.minStake.type == "eth" ? " ETH" : ""}
-                            </Td>
-                            <Td>
-                                <Flex direction="column" gap={"5px"}>
-                                    <KeyOwner provider={provider} id={"validatorKey"} />
-                                    <KeyOwner provider={provider} id={"withdrawalKey"} />
-                                </Flex>
-                            </Td>
-                            <Td>
-                                <StatusCircle provider={provider} column={"security"} />
-                            </Td>
-                            <Td>
-                                <StatusCircle provider={provider} column={"ethereumAligned"} />
-                            </Td>
-                            <Td w={5}>
-                                <DataRowMenuButton />
-                            </Td>
-                        </Tr>
-                    ))}
+                    {stakingProviders.map(
+                        (provider) =>
+                            provider.status == status && (
+                                <Tr key={provider.id} borderBottomWidth={1} h={14}>
+                                    <Td>
+                                        <Link as={NextLink} href={provider.links.website} target="_blank">
+                                            <Image
+                                                objectFit="contain"
+                                                boxSize={8}
+                                                src={provider.logo.src}
+                                                alt={provider.logo.alt}
+                                                borderRadius={"100%"}
+                                            />
+                                        </Link>
+                                    </Td>
+                                    <Td maxW={160}>
+                                        <Text fontSize="lg" fontWeight="extrabold" isTruncated>
+                                            <Link as={NextLink} href={provider.links.website} target="_blank">
+                                                {provider.name}
+                                            </Link>
+                                        </Text>
+                                    </Td>
+                                    <Td textAlign={"center"}>
+                                        <StakeFromHome provider={provider} />
+                                    </Td>
+                                    <Td textAlign={"center"}>
+                                        <StakingType provider={provider} />
+                                        <ProviderType provider={provider} />
+                                    </Td>
+                                    <Td textAlign={"center"}>
+                                        <RewardFee provider={provider} />
+                                    </Td>
+                                    <Td textAlign={"center"}>
+                                        {provider.minStake.value}
+                                        {provider.minStake.type == "eth" ? " ETH" : ""}
+                                    </Td>
+                                    <Td>
+                                        <Flex direction="column" gap={"5px"}>
+                                            <KeyOwner provider={provider} id={"validatorKey"} />
+                                            <KeyOwner provider={provider} id={"withdrawalKey"} />
+                                        </Flex>
+                                    </Td>
+                                    <Td>
+                                        <StatusCircle provider={provider} column={"security"} />
+                                    </Td>
+                                    <Td>
+                                        <StatusCircle provider={provider} column={"ethereumAligned"} />
+                                    </Td>
+                                    <Td w={5}>
+                                        <DataRowMenuButton />
+                                    </Td>
+                                </Tr>
+                            )
+                    )}
                 </Tbody>
             </Table>
             {stakingProviders && stakingProviders.length === 0 && (
