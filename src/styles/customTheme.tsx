@@ -19,6 +19,11 @@ const customTheme = extendTheme({
             "div .borderStatusCircle": {
                 borderColor: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
             },
+            ".expandedTableRow": {
+                _hover: {
+                    bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
+                },
+            },
         }),
     },
     components: {
