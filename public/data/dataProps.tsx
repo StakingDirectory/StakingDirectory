@@ -33,7 +33,7 @@ const dataProps = [
         id: "stakeFromHome",
         name: "Stake from Home",
         headerText: "STAKE FROM <br /> HOME",
-        options: [{ value: true, text: "Yes!", color: "", icon: faServer }],
+        options: [{ value: "yes", text: "Yes!", color: "", icon: faServer }],
     },
     {
         isTableHeader: true,

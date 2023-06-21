@@ -12,7 +12,7 @@ const filterStakingProviders = (dataFilter) => {
                         showProvider.push(false)
                     }
                 } else if (key === "stakeFromHome") {
-                    if (provider[key] === dataFilter[key][0]) {
+                    if (provider[key] && dataFilter[key][0]) {
                         showProvider.push(true)
                     } else {
                         showProvider.push(false)
