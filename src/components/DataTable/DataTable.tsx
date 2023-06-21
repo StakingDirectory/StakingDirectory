@@ -48,7 +48,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, d
     }, [dataFilter])
 
     return (
-        <Box mt={0} mb={"500px"} maxW={"100%"} ref={tableRef}>
+        <Box mt={0} mb={"500px"} maxW={"100%"} ref={tableRef} overflow={"scroll"}>
             <Table variant="DataTable">
                 <Thead position={isSticky ? "sticky" : "static"} top="0" zIndex="1">
                     <Tr borderBottomWidth={1}>
