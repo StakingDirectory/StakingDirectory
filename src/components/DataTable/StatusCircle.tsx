@@ -9,7 +9,7 @@ const StatusProperties = {
         { value: "audited", name: "Audited" },
         { value: "openSource", name: "Open source" },
         { value: "bugBounty", name: "Bug bounty" },
-        { value: "dvtCompatible", name: "DVT compatible" },
+        { value: "battleTested", name: "Battle tested" },
     ],
     ethereumAligned: [
         { value: "permissionlessUsage", name: "Permissionless usage" },
