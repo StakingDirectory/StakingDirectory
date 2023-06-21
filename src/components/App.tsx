@@ -51,7 +51,6 @@ const App = () => {
                     <Box>Data and content may not be accurate. This will be fixed for production.</Box>
                 </Box>
                 <Box height={50} />
-                <ActiveFilters dataFilter={dataFilter} setDataFilter={setDataFilter} />
                 <DataTableTabs
                     windowSize={windowSize}
                     environment={environment}

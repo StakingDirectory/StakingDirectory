@@ -172,21 +172,21 @@ export default function DataTable({ windowSize, environment, stakingProviders, s
                                     <Td textAlign={"center"}>
                                         <RewardFee provider={provider} />
                                     </Td>
-                                    <Td textAlign={"center"}>
+                                    <Td textAlign={"center"} fontWeight={"bold"}>
                                         {provider.minStake.value}
                                         {provider.minStake.type == "eth" ? " ETH" : ""}
                                     </Td>
                                     <Td>
-                                        <Flex direction="column" gap={"5px"}>
+                                        <Flex direction="column" gap={"5px"} fontWeight={"bold"}>
                                             <KeyOwner provider={provider} id={"validatorKey"} />
                                             <KeyOwner provider={provider} id={"withdrawalKey"} />
                                         </Flex>
                                     </Td>
                                     <Td>
-                                        <StatusCircle provider={provider} column={"security"} />
+                                        <StatusCircle provider={provider} column={"technicalIndicators"} />
                                     </Td>
                                     <Td>
-                                        <StatusCircle provider={provider} column={"ethereumAligned"} />
+                                        <StatusCircle provider={provider} column={"socialIndicators"} />
                                     </Td>
                                     <Td w={5}>
                                         <DataRowMenuButton />

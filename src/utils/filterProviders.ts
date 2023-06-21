@@ -11,6 +11,12 @@ const filterStakingProviders = (dataFilter) => {
                     } else {
                         showProvider.push(false)
                     }
+                } else if (key === "stakeFromHome") {
+                    if (provider[key] === dataFilter[key][0]) {
+                        showProvider.push(true)
+                    } else {
+                        showProvider.push(false)
+                    }
                 } else if (key === "type") {
                     let showStakingType = []
                     for (let stakingType of ["solo", "pooled", "lst", "indexToken"]) {
@@ -43,16 +49,16 @@ const filterStakingProviders = (dataFilter) => {
                             showProvider.push(false)
                         }
                     }
-                } else if (key === "security") {
-                    let showSecurity = true
+                } else if (key === "technicalIndicators") {
+                    let showTechnicalIndicators = true
                     for (let feature of ["openSource", "audited", "bugBounty", "battleTested"]) {
                         if (dataFilter[key].includes(feature) && !provider[feature].value) {
-                            showSecurity = false
+                            showTechnicalIndicators = false
                         }
                     }
-                    showProvider.push(showSecurity)
-                } else if (key === "ethereumAligned") {
-                    let showEthereumAligned = true
+                    showProvider.push(showTechnicalIndicators)
+                } else if (key === "socialIndicators") {
+                    let showSocialIndicators = true
                     for (let feature of [
                         "nonCensoringRelays",
                         "permissionlessUsage",
@@ -61,10 +67,10 @@ const filterStakingProviders = (dataFilter) => {
                         "diverseBeaconClients",
                     ]) {
                         if (dataFilter[key].includes(feature) && !provider[feature].value) {
-                            showEthereumAligned = false
+                            showSocialIndicators = false
                         }
                     }
-                    showProvider.push(showEthereumAligned)
+                    showProvider.push(showSocialIndicators)
                 } else if (key === "validatorKey") {
                     let showValidatorKey = []
                     for (let validatorKey of ["userValidator", "service", "nodeOperator"]) {

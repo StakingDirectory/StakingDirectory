@@ -29,11 +29,11 @@ const dataProps = [
     },
     {
         isTableHeader: true,
-        type: "other",
+        type: "checkbox",
         id: "stakeFromHome",
         name: "Stake from Home",
         headerText: "STAKE FROM <br /> HOME",
-        options: [],
+        options: [{ value: true, text: "Yes!", color: "", icon: faServer }],
     },
     {
         isTableHeader: true,
@@ -92,9 +92,9 @@ const dataProps = [
     {
         isTableHeader: true,
         type: "checkbox",
-        id: "security",
-        name: "Security",
-        headerText: "SECURITY",
+        id: "technicalIndicators",
+        name: "Technical Indicators",
+        headerText: "TECHNICAL <br /> INDICATORS",
         options: [
             { value: "openSource", text: "Open source", color: "", icon: faBookOpen },
             { value: "battleTested", text: "Battle tested", color: "", icon: faShield },
@@ -105,9 +105,9 @@ const dataProps = [
     {
         isTableHeader: true,
         type: "checkbox",
-        id: "ethereumAligned",
-        name: "Ethereum Aligned",
-        headerText: "ETHEREUM <br /> ALIGNED",
+        id: "socialIndicators",
+        name: "Social Indicators",
+        headerText: "SOCIAL <br /> INDICATORS",
         options: [
             { value: "nonCensoringRelays", text: "Censorship resistance", color: "", icon: faVolumeHigh },
             { value: "diverseExecutionClients", text: "Diverse EL clients", color: "", icon: faShapes },

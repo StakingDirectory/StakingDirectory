@@ -5,13 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircleCheck, faCircleXmark } from "@fortawesome/free-solid-svg-icons"
 
 const StatusProperties = {
-    security: [
+    technicalIndicators: [
         { value: "audited", name: "Audited" },
         { value: "openSource", name: "Open source" },
         { value: "bugBounty", name: "Bug bounty" },
         { value: "battleTested", name: "Battle tested" },
     ],
-    ethereumAligned: [
+    socialIndicators: [
         { value: "permissionlessUsage", name: "Permissionless usage" },
         { value: "nonCensoringRelays", name: "Censorship resistance" },
         { value: "permissionlessOperators", name: "Permissionless operators" },
