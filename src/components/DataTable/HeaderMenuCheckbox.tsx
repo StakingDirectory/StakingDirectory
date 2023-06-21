@@ -32,9 +32,9 @@ export default function HeaderMenuCheckbox({ id, dataProps, dataFilter, setDataF
                             isChecked={dataFilter[id] && Array.isArray(dataFilter[id]) && dataFilter[id].includes(option.value)}
                         >
                             <Flex gap={2}>
-                                <Box width={6}>
+                                {/* <Box width={6}>
                                     <FontAwesomeIcon icon={option.icon} />
-                                </Box>
+                                </Box> */}
                                 <Text>{option.text}</Text>
                             </Flex>
                         </MenuItemOption>

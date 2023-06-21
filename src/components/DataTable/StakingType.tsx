@@ -17,7 +17,7 @@ export default function StakingType({ provider }) {
             fontWeight={"bold"}
         >
             <Flex alignItems={"center"} gap={1}>
-                <FontAwesomeIcon icon={dataProps.flatMap((d) => d.options).find((opt) => opt?.value === provider.stakingType)?.icon} />
+                {/* <FontAwesomeIcon icon={dataProps.flatMap((d) => d.options).find((opt) => opt?.value === provider.stakingType)?.icon} /> */}
                 {dataProps.flatMap((d) => d.options).find((opt) => opt?.value === provider.stakingType)?.text}
             </Flex>
         </Flex>

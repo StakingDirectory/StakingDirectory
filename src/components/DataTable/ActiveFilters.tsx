@@ -77,14 +77,14 @@ export default function ActiveFilters({ dataFilter, setDataFilter }) {
                                                             ""
                                                         }
                                                     >
-                                                        <FontAwesomeIcon
+                                                        {/* <FontAwesomeIcon
                                                             size="sm"
                                                             icon={
                                                                 dataProps
                                                                     .find((obj) => obj.id === activeFilter)
                                                                     .options?.find((obj) => obj.value === filterOption).icon
                                                             }
-                                                        />
+                                                        /> */}
                                                         {
                                                             dataProps
                                                                 .find((obj) => obj.id === activeFilter)

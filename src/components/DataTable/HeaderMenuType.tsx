@@ -28,9 +28,9 @@ export default function HeaderMenuType({ id, dataProps, dataFilter, setDataFilte
                             (option.value === "solo" || option.value === "pooled" || option.value === "lst" || option.value === "indexToken") && (
                                 <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"}>
                                     <Flex gap={2} alignItems={"center"}>
-                                        <Box width={6}>
+                                        {/* <Box width={6}>
                                             <FontAwesomeIcon icon={option.icon} />
-                                        </Box>
+                                        </Box> */}
                                         <Text>{option.text}</Text>
                                     </Flex>
                                 </MenuItemOption>
@@ -45,9 +45,9 @@ export default function HeaderMenuType({ id, dataProps, dataFilter, setDataFilte
                             (option.value === "hardware" || option.value === "software" || option.value === "saas") && (
                                 <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"}>
                                     <Flex gap={2} alignItems={"center"}>
-                                        <Box width={6}>
+                                        {/* <Box width={6}>
                                             <FontAwesomeIcon icon={option.icon} />
-                                        </Box>
+                                        </Box> */}
                                         <Text>{option.text}</Text>
                                     </Flex>
                                 </MenuItemOption>
