@@ -1,14 +1,11 @@
 import React from "react"
-import { Flex, Tooltip, Box, Text, Image, Popover, PopoverTrigger, PopoverContent } from "@chakra-ui/react"
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faHouseLaptop } from "@fortawesome/free-solid-svg-icons"
+import { Flex, Box, Text, Image, Popover, PopoverTrigger, PopoverContent } from "@chakra-ui/react"
 
 export default function StakeFromHome({ provider }) {
     return (
         <>
             {provider.stakeFromHome && (
-                <Flex direction="column" gap={"2px"} alignItems={"center"} cursor={"help"}>
+                <Flex direction="column" gap={"2px"} alignItems={"center"}>
                     <Popover placement="top" trigger="hover" openDelay={200} closeDelay={0} gutter={5}>
                         <PopoverTrigger>
                             <Image

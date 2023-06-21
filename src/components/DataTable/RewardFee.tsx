@@ -8,13 +8,13 @@ export default function RewardFee({ provider }) {
     return (
         <Flex direction="column" gap={"2px"} alignItems={"center"}>
             <Tooltip label={"🏗️ Reward calculation coming soon! 🏗️"} placement={"top"} closeOnClick={false}>
-                <Box borderRadius={10} bg={"green"} w={"fit-content"} px={2} py={"1px"} fontWeight={"bold"} cursor={"help"}>
+                <Box borderRadius={10} bg={"green"} w={"fit-content"} px={2} py={"1px"} fontWeight={"bold"}>
                     <FontAwesomeIcon icon={faGift} size={"sm"} />
                 </Box>
             </Tooltip>
             {/* TODO: Make this tooltip dynamic to explain each fee */}
             <Tooltip label={"Cost to use this provider"} placement={"top"} closeOnClick={false}>
-                <Box borderRadius={10} border={"2px solid"} borderColor={"red"} w={"fit-content"} px={2} cursor={"help"}>
+                <Box borderRadius={10} border={"2px solid"} borderColor={"red"} w={"fit-content"} px={2}>
                     {provider.fee.value}
                     {provider.fee.type == "rewardPercentage" ? "%" : ""}
                 </Box>

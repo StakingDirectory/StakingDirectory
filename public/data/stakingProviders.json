@@ -117,7 +117,7 @@
             "src": "./images/DappnodeLogo.png",
             "alt": "Logo"
         },
-        "name": "DAppNode",
+        "name": "DAppNode Hardware",
         "status": "active",
         "mainnetLaunchDate": "",
         "stakingType": "solo",
@@ -229,7 +229,7 @@
             "src": "./images/DappnodeLogo.png",
             "alt": "Logo"
         },
-        "name": "DAppNode",
+        "name": "DAppNode Software",
         "status": "active",
         "mainnetLaunchDate": "",
         "stakingType": "solo",

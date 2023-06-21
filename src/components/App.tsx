@@ -47,7 +47,8 @@ const App = () => {
                 <Header windowSize={windowSize} environment={environment} />
                 {/* TODO: REMOVE WHEN PROD READY */}
                 <Box width={"100vw"} minH={6} bg="purple" textAlign={"center"} fontWeight={"extrabold"} color={"white"}>
-                    🏗️ ACTIVE DEVELOPMENT ENVIRONMENT - NOT PRODUCTION READY 🏗️
+                    <Box>🏗️ ACTIVE DEVELOPMENT ENVIRONMENT - NOT PRODUCTION READY 🏗️</Box>
+                    <Box>Data and content may not be accurate. This will be fixed for production.</Box>
                 </Box>
                 <Box height={50} />
                 <ActiveFilters dataFilter={dataFilter} setDataFilter={setDataFilter} />

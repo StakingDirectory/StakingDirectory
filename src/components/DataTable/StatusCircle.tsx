@@ -77,7 +77,6 @@ export default function StatusCircle({ provider, column }) {
                     {...borderProperties[index].border}
                     bg={value ? "green" : "red"}
                     h={5}
-                    cursor={"help"}
                 />
             </Tooltip>
         )
