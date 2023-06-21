@@ -3,22 +3,22 @@ import { useColorModeValue, Box, Flex, Tabs, TabList, TabPanel, TabPanels, Tab, 
 import DataTable from "./DataTable"
 
 export default function DataTableTabs({ windowSize, environment, orderedFilteredProviders, dataFilter, setDataFilter }) {
-    const tabNumberBox = (value) => {
+    const tabNumberBox = (value, color: string) => {
         return (
-            <Box border={"2px solid"} borderRadius={"50px"} px={2} ml={2} fontSize={"sm"}>
+            <Box border={"2px solid"} borderRadius={"50px"} px={2} ml={2} fontSize={"sm"} fontWeight={"extrabold"} color={color}>
                 {value}
             </Box>
         )
     }
 
     return (
-        <Tabs maxW="100vw">
-            <TabList mx={4}>
-                <Tab fontWeight={"bold"}>
-                    <Flex>Active {tabNumberBox(orderedFilteredProviders.filter((item) => item.status === "active").length)}</Flex>
+        <Tabs w="1200px">
+            <TabList mx={4} w={"fit-content"}>
+                <Tab fontWeight={"bold"} borderTopRadius={10}>
+                    <Flex>Active {tabNumberBox(orderedFilteredProviders.filter((item) => item.status === "active").length, "green")}</Flex>
                 </Tab>
-                <Tab fontWeight={"bold"}>
-                    <Flex>In development {tabNumberBox(orderedFilteredProviders.filter((item) => item.status === "dev").length)}</Flex>
+                <Tab fontWeight={"bold"} borderTopRadius={10}>
+                    <Flex>In development {tabNumberBox(orderedFilteredProviders.filter((item) => item.status === "dev").length, "purple")}</Flex>
                 </Tab>
             </TabList>
             <TabPanels>
