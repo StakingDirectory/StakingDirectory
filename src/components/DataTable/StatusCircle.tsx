@@ -1,5 +1,5 @@
 import React from "react"
-import { Flex, Box, Grid, Tooltip, Text, HStack } from "@chakra-ui/react"
+import { Flex, Box, Grid, Tooltip, Text, HStack, Popover, PopoverTrigger, PopoverContent } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircleCheck, faCircleXmark } from "@fortawesome/free-solid-svg-icons"
@@ -57,28 +57,29 @@ export default function StatusCircle({ provider, column }) {
             : ["0 15px -5px 0", "0 0 -5px 15px", "-5px 15px 0 0", "-5px 0 0 15px"]
         const margin = margins[index]
 
-        const labelColor = value ? "green" : "red"
+        const iconColor = value ? "green" : "red"
         const icon = value ? faCircleCheck : faCircleXmark
 
-        const label = (
-            <HStack>
-                <Box color={labelColor}>
-                    <FontAwesomeIcon icon={icon} size="lg" />
-                </Box>
-                <Text>{statusName}</Text>
-            </HStack>
-        )
-
         return (
-            <Tooltip key={index} placement={placement} margin={margin} gutter={0} label={label} openDelay={0} closeOnClick={false}>
-                <Box
-                    className={"borderStatusCircle"}
-                    {...borderProperties[index].borderRadius}
-                    {...borderProperties[index].border}
-                    bg={value ? "green" : "red"}
-                    h={5}
-                />
-            </Tooltip>
+            <Popover placement={placement} trigger="hover" openDelay={100} closeDelay={100} gutter={0}>
+                <PopoverTrigger>
+                    <Box
+                        className={"borderStatusCircle"}
+                        {...borderProperties[index].borderRadius}
+                        {...borderProperties[index].border}
+                        bg={value ? "green" : "red"}
+                        h={5}
+                    />
+                </PopoverTrigger>
+                <PopoverContent margin={margin} width={"fit-content"}>
+                    <HStack>
+                        <Box color={iconColor}>
+                            <FontAwesomeIcon icon={icon} size="lg" />
+                        </Box>
+                        <Text>{statusName}</Text>
+                    </HStack>
+                </PopoverContent>
+            </Popover>
         )
     }
 
