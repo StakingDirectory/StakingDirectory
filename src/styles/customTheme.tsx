@@ -24,6 +24,11 @@ const customTheme = extendTheme({
                     bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
                 },
             },
+            ".checklistList": {
+                _hover: {
+                    bg: props.colorMode === "dark" ? "contentBackgroundHover.dark" : "contentBackground.light",
+                },
+            },
             ".expandContentBox": {
                 bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
                 borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
@@ -174,7 +179,7 @@ const customTheme = extendTheme({
         },
         contentBackgroundHover: {
             light: "#b2b6ba",
-            dark: "#18191d",
+            dark: "#1f2025",
         },
         border: {
             light: "#D3D3D3",

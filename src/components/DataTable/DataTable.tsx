@@ -180,13 +180,16 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                         borderBottomWidth={1}
                                         h={14}
                                         borderColor={expandedRows.includes(index) ? "transparent" : ""}
-                                    >
-                                        <Td
-                                            cursor={"pointer"}
-                                            onClick={() => {
+                                        onClick={() => {
+                                            // Add a slight delay so if a tooltip is
+                                            // showing it's removed before expanding row
+                                            setTimeout(() => {
                                                 expandRow(index)
-                                            }}
-                                        >
+                                            }, 10)
+                                        }}
+                                        cursor={"pointer"}
+                                    >
+                                        <Td>
                                             <Box
                                                 as={FontAwesomeIcon}
                                                 icon={faChevronRight}
@@ -194,27 +197,17 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                                 transform={`rotate(${expandedRows.includes(index) ? 90 : 0}deg)`}
                                             />
                                         </Td>
-                                        <Td cursor={"pointer"}>
+                                        <Td>
                                             <Image
                                                 objectFit="contain"
                                                 boxSize={8}
                                                 src={provider.logo.src}
                                                 alt={provider.logo.alt}
                                                 borderRadius={"100%"}
-                                                onClick={() => {
-                                                    expandRow(index)
-                                                }}
                                             />
                                         </Td>
-                                        <Td maxW={160} cursor={"pointer"}>
-                                            <Text
-                                                fontSize="lg"
-                                                fontWeight="extrabold"
-                                                isTruncated
-                                                onClick={() => {
-                                                    expandRow(index)
-                                                }}
-                                            >
+                                        <Td maxW={160}>
+                                            <Text fontSize="lg" fontWeight="extrabold" isTruncated>
                                                 {provider.name}
                                             </Text>
                                         </Td>

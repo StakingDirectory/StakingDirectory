@@ -7,6 +7,7 @@ import { faTwitter } from "@fortawesome/free-brands-svg-icons"
 import NextLink from "next/link"
 
 import KeyOwner from "./TableCells/KeyOwner"
+import ChecklistList from "./ChecklistList"
 
 export default function ExpandedRow({ provider }) {
     return (
@@ -45,14 +46,7 @@ export default function ExpandedRow({ provider }) {
                 {/* <KeyOwner provider={provider} id={"validatorKey"} />
                 <KeyOwner provider={provider} id={"withdrawalKey"} /> */}
             </Flex>
-            <Flex grow={1} className={"expandContentBox"}>
-                <Text>🏗️ Checklist coming soon! 🏗️</Text>
-                {/* <Flex direction={"column"} gap={3}>
-                    {["openSource", "audited", "bugBounty", "5", "6", "7", "8"].map(() => {
-                        return <Box>Indicator</Box>
-                    })}
-                </Flex> */}
-            </Flex>
+            <ChecklistList provider={provider} />
         </Flex>
     )
 }

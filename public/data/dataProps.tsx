@@ -21,6 +21,19 @@ import {
 
 const dataProps = [
     {
+        id: "checklistProperties",
+        checklistProperties: [
+            { value: "openSource", name: "Open source" },
+            { value: "audited", name: "Audited" },
+            { value: "bugBounty", name: "Bug bounty" },
+            { value: "permissionlessUsage", name: "Permissionless usage" },
+            { value: "permissionlessOperators", name: "Permissionless operators" },
+            { value: "nonCensoringRelays", name: "Censorship resistant relays" },
+            { value: "diverseExecutionClients", name: "Diverse execution clients" },
+            { value: "diverseBeaconClients", name: "Diverse beacon clients" },
+        ],
+    },
+    {
         isTableHeader: true,
         type: "text",
         id: "name",

@@ -4,16 +4,8 @@ import { Flex, Box, Grid, Tooltip, Text, HStack, Popover, PopoverTrigger, Popove
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircleCheck, faCircleXmark } from "@fortawesome/free-solid-svg-icons"
 
-const checklistProperties = [
-    { value: "audited", name: "Audited" },
-    { value: "openSource", name: "Open source" },
-    { value: "bugBounty", name: "Bug bounty" },
-    { value: "permissionlessUsage", name: "Permissionless usage" },
-    { value: "nonCensoringRelays", name: "Censorship resistance" },
-    { value: "permissionlessOperators", name: "Permissionless operators" },
-    { value: "diverseExecutionClients", name: "Diverse execution clients" },
-    { value: "diverseBeaconClients", name: "Diverse beacon clients" },
-]
+import dataProps from "public/data/dataProps"
+const checklistProperties = dataProps.find((prop) => prop.id === "checklistProperties").checklistProperties
 
 export default function ChecklistBar({ provider }) {
     const allTrue = checklistProperties.every((prop) => provider[prop.value]?.value)
