@@ -1,7 +1,6 @@
 import React, { useRef, useEffect, useState } from "react"
 
 import { Flex, Box, Image, useColorModeValue, Table, Thead, Tbody, Tr, Th, Td, Menu, Text, Link, Collapse } from "@chakra-ui/react"
-import NextLink from "next/link"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
@@ -24,6 +23,7 @@ import Reward from "./TableCells/Reward"
 import Fee from "./TableCells/Fee"
 
 import ClearFiltersButton from "./ClearFiltersButton"
+import ExpandedRow from "./ExpandedRow"
 
 import dataProps from "public/data/dataProps"
 
@@ -253,14 +253,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                                 borderBottom={expandedRows.includes(index) ? "1px solid" : "0"}
                                             >
                                                 <Collapse in={expandedRows.includes(index)}>
-                                                    <Flex direction={"column"} gap={5} minH={100} py={5}>
-                                                        <Link as={NextLink} href={provider.links.website} target="_blank">
-                                                            <Text fontSize={"lg"} fontWeight={"bold"} textDecoration={"underline"}>
-                                                                {provider.name} website ↗
-                                                            </Text>
-                                                        </Link>
-                                                        <Text>🏗️ Provider description and more info coming soon! 🏗️</Text>
-                                                    </Flex>
+                                                    <ExpandedRow provider={provider} />
                                                 </Collapse>
                                             </Td>
                                         </Tr>

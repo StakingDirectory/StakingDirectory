@@ -21,7 +21,8 @@
         },
         "links": {
             "website": "https://ava.do/",
-            "twitter": ""
+            "twitter": "https://twitter.com/AvadoCloud",
+            "repo": "https://github.com/AvadoDServer/"
         },
         "minStake": {
             "type": "eth",

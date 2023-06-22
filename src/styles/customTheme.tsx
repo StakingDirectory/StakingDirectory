@@ -24,6 +24,13 @@ const customTheme = extendTheme({
                     bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
                 },
             },
+            ".expandContentBox": {
+                bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
+                borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
+                borderWidth: "4px",
+                padding: "1rem",
+                borderRadius: "20px",
+            },
         }),
     },
     components: {
