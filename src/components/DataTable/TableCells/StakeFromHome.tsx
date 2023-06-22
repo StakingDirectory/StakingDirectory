@@ -16,11 +16,18 @@ export default function StakeFromHome({ provider }) {
                         opacity={provider.stakeFromHome ? "" : "0.2"}
                     />
                 </PopoverTrigger>
-                <PopoverContent>
-                    <Flex direction={"column"} gap={5}>
-                        <Text>Stake from Home. Defend Ethereum.</Text>
-                        <Text>🏗️ More details coming soon! 🏗️</Text>
-                    </Flex>
+                <PopoverContent width={"fit-content"} px={5}>
+                    {provider.stakeFromHome ? (
+                        <Flex direction={"column"} gap={3}>
+                            <Text>✅ Stake from Home Compatible</Text>
+                            <Text>🏗️ More details coming soon! 🏗️</Text>
+                        </Flex>
+                    ) : (
+                        <Flex direction={"column"} gap={3}>
+                            <Text>❌ Stake from Home Incompatible</Text>
+                            <Text>🏗️ More details coming soon! 🏗️</Text>
+                        </Flex>
+                    )}
                 </PopoverContent>
             </Popover>
         </Flex>
