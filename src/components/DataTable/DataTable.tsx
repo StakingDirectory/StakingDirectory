@@ -236,12 +236,6 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                             {provider.minStake.type == "eth" ? " ETH" : ""}
                                         </Td>
                                         <Td>
-                                            <Flex direction="column" gap={"5px"} fontWeight={"bold"}>
-                                                <KeyOwner provider={provider} id={"validatorKey"} />
-                                                <KeyOwner provider={provider} id={"withdrawalKey"} />
-                                            </Flex>
-                                        </Td>
-                                        <Td>
                                             <StatusCircle provider={provider} column={"technicalIndicators"} />
                                         </Td>
                                         <Td>

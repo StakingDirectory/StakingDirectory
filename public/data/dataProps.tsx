@@ -76,7 +76,7 @@ const dataProps = [
         options: [],
     },
     {
-        isTableHeader: true,
+        isTableHeader: false,
         type: "checkboxKeyOwner",
         id: "validatorKey",
         name: "Validator Key Owner",
