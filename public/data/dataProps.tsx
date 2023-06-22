@@ -54,9 +54,17 @@ const dataProps = [
     {
         isTableHeader: true,
         type: "other",
+        id: "reward",
+        name: "Reward",
+        headerText: "REWARD",
+        options: [],
+    },
+    {
+        isTableHeader: true,
+        type: "other",
         id: "fee",
         name: "Fee",
-        headerText: "REWARD <br /> / FEE",
+        headerText: "FEE",
         options: [],
     },
     {

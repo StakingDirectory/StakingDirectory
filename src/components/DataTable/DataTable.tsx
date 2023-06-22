@@ -7,19 +7,22 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
 
 import DataRowMenuButton from "./DataRowMenuButton"
-import HeaderButton from "./HeaderButton"
-import HeaderButtonKeyOwner from "./HeaderButtonKeyOwner"
-import StatusCircle from "./StatusCircle"
-import StakingType from "./StakingType"
-import ProviderType from "./ProviderType"
-import KeyOwner from "./KeyOwner"
-import RewardFee from "./RewardFee"
-import StakeFromHome from "./StakeFromHome"
-import HeaderMenuCheckbox from "./HeaderMenuCheckbox"
-import HeaderMenuType from "./HeaderMenuType"
-import HeaderMenuKeyOwner from "./HeaderMenuKeyOwner"
-import HeaderMenuNameSearch from "./HeaderMenuNameSearch"
-import HeaderMenuPlaceholder from "./HeaderMenuPlaceholder"
+import HeaderButton from "./TableHeaders/HeaderButton"
+import HeaderButtonKeyOwner from "./TableHeaders/HeaderButtonKeyOwner"
+import HeaderMenuCheckbox from "./TableHeaders/HeaderMenuCheckbox"
+import HeaderMenuType from "./TableHeaders/HeaderMenuType"
+import HeaderMenuKeyOwner from "./TableHeaders/HeaderMenuKeyOwner"
+import HeaderMenuNameSearch from "./TableHeaders/HeaderMenuNameSearch"
+import HeaderMenuPlaceholder from "./TableHeaders/HeaderMenuPlaceholder"
+
+import StakeFromHome from "./TableCells/StakeFromHome"
+import StatusCircle from "./TableCells/StatusCircle"
+import StakingType from "./TableCells/StakingType"
+import ProviderType from "./TableCells/ProviderType"
+import KeyOwner from "./TableCells/KeyOwner"
+import Reward from "./TableCells/Reward"
+import Fee from "./TableCells/Fee"
+
 import ClearFiltersButton from "./ClearFiltersButton"
 
 import dataProps from "public/data/dataProps"
@@ -223,7 +226,10 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                             <ProviderType provider={provider} />
                                         </Td>
                                         <Td textAlign={"center"}>
-                                            <RewardFee provider={provider} />
+                                            <Reward provider={provider} />
+                                        </Td>
+                                        <Td textAlign={"center"}>
+                                            <Fee provider={provider} />
                                         </Td>
                                         <Td textAlign={"center"} fontWeight={"bold"}>
                                             {provider.minStake.value}
