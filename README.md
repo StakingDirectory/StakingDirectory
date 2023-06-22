@@ -1,4 +1,4 @@
-# StakingBeat.com
+# Staking Directory
 
 > 🏗️ The site is currently under active development 🏗️
 

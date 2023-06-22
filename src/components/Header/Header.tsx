@@ -28,19 +28,19 @@ export default function Header({}) {
                                 minW={10}
                                 objectFit={"cover"}
                                 src={"./EthereumLogo.svg"}
-                                alt={"StakingBeat Logo"}
+                                alt={"Staking Directory Logo"}
                             />
                             <Box pr={2} minW={30} fontWeight="bold" fontSize="xl" sx={{ cursor: "default" }}>
-                                StakingBeat
+                                Staking Directory
                             </Box>
                         </HStack>
                         <HStack spacing={5}>
-                            <Link href={"https://twitter.com/StakingBeat"} target="_blank">
-                                <Box w="24px" cursor={"pointer"} aria-label={"StakingBeat Twitter Profile"}>
+                            <Link href={"https://twitter.com/StakeDirectory"} target="_blank">
+                                <Box w="24px" cursor={"pointer"} aria-label={"Staking Directory Twitter Profile"}>
                                     <FontAwesomeIcon icon={faTwitter} size={"xl"} />
                                 </Box>
                             </Link>
-                            <Link href={"https://github.com/StakingBeat/StakingBeat"} target="_blank">
+                            <Link href={"https://github.com/StakingDirectory/StakingDirectory"} target="_blank">
                                 <Box w="24px" cursor={"pointer"} aria-label={"View GitHub Source"}>
                                     <FontAwesomeIcon icon={faGithub} size={"xl"} />
                                 </Box>
