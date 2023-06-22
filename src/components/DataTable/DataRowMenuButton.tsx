@@ -18,22 +18,31 @@ import {
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEllipsisV, faEdit } from "@fortawesome/free-solid-svg-icons"
 
+const environment = process.env.NODE_ENV
+
 const EditorModal = ({ isOpen, onClose }) => {
     return (
-        <Modal isOpen={isOpen} onClose={onClose}>
+        <Modal isOpen={isOpen} onClose={onClose} isCentered>
             <ModalOverlay />
-            <ModalContent>
-                <ModalHeader>Modal Title</ModalHeader>
-                <ModalCloseButton />
-                <ModalBody>Content Text</ModalBody>
+            {environment === "development" ? (
+                <ModalContent>
+                    <ModalHeader>Modal Title</ModalHeader>
+                    <ModalCloseButton />
+                    <ModalBody>Content Text</ModalBody>
 
-                <ModalFooter>
-                    <Button colorScheme="blue" mr={3} onClick={onClose}>
-                        Close
-                    </Button>
-                    <Button variant="ghost">Secondary Action</Button>
-                </ModalFooter>
-            </ModalContent>
+                    <ModalFooter>
+                        <Button colorScheme="blue" mr={3} onClick={onClose}>
+                            Close
+                        </Button>
+                        <Button variant="ghost">Secondary Action</Button>
+                    </ModalFooter>
+                </ModalContent>
+            ) : (
+                <ModalContent>
+                    <ModalHeader>🏗️ Editor coming soon! 🏗️</ModalHeader>
+                    <ModalCloseButton />
+                </ModalContent>
+            )}
         </Modal>
     )
 }

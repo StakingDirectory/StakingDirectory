@@ -19,6 +19,7 @@ export default function KeyOwner({ provider, id }) {
                         {value}
                     </Text>
                 </Flex>
+                <Text>🏗️ Explanation coming soon! 🏗️</Text>
             </Flex>
         )
     }

@@ -72,12 +72,15 @@ export default function StatusCircle({ provider, column }) {
                     />
                 </PopoverTrigger>
                 <PopoverContent margin={margin} width={"fit-content"}>
-                    <HStack>
-                        <Box color={iconColor}>
-                            <FontAwesomeIcon icon={icon} size="lg" />
-                        </Box>
-                        <Text>{statusName}</Text>
-                    </HStack>
+                    <Flex direction={"column"} gap={5}>
+                        <HStack>
+                            <Box color={iconColor}>
+                                <FontAwesomeIcon icon={icon} size="lg" />
+                            </Box>
+                            <Text>{statusName}</Text>
+                        </HStack>
+                        <Text>🏗️ More details coming soon! 🏗️</Text>
+                    </Flex>
                 </PopoverContent>
             </Popover>
         )

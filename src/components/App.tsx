@@ -9,29 +9,6 @@ import orderProviders from "../utils/orderProviders"
 import { Box, Flex } from "@chakra-ui/react"
 
 const App = () => {
-    const environment = process.env.NODE_ENV
-
-    // Check if the current render is on the server (Server Side Render) or client
-    const isSSR = typeof window === "undefined"
-
-    // Rerender when window size changes and save
-    // window size to state to allow conditional rendering
-    const [windowSize, setWindowSize] = useState({
-        width: isSSR ? 0 : window.innerWidth,
-        height: isSSR ? 0 : window.innerHeight,
-    })
-    useEffect(() => {
-        const handleResizeWindow = () => setWindowSize({ width: window.innerWidth, height: window.innerHeight })
-        // subscribe to window resize event "onComponentDidMount"
-        window.addEventListener("resize", handleResizeWindow)
-        window.addEventListener("load", handleResizeWindow)
-        return () => {
-            // unsubscribe "onComponentDestroy"
-            window.removeEventListener("resize", handleResizeWindow)
-            window.removeEventListener("load", handleResizeWindow)
-        }
-    }, [])
-
     const [dataFilter, setDataFilter] = useState({})
     const filteredProviders = filterProviders(dataFilter)
     const orderedFilteredProviders = orderProviders(filteredProviders)
@@ -44,7 +21,7 @@ const App = () => {
     return (
         <Box minH="100vh" minW="100vw" className={"bgPage"}>
             <Flex direction="column" justifyContent="center" alignItems="center">
-                <Header windowSize={windowSize} environment={environment} />
+                <Header />
                 {/* TODO: REMOVE WHEN PROD READY */}
                 <Box width={"100vw"} minH={6} bg="purple" textAlign={"center"} fontWeight={"extrabold"} color={"white"}>
                     <Box>🏗️ ACTIVE DEVELOPMENT ENVIRONMENT - NOT PRODUCTION READY 🏗️</Box>
@@ -52,14 +29,8 @@ const App = () => {
                     <Box>All styles subject to change. This is not the final version.</Box>
                 </Box>
                 <Box height={50} />
-                <DataTableTabs
-                    windowSize={windowSize}
-                    environment={environment}
-                    orderedFilteredProviders={orderedFilteredProviders}
-                    dataFilter={dataFilter}
-                    setDataFilter={setDataFilter}
-                />
-                <Box height={"1000px"} />
+                <DataTableTabs orderedFilteredProviders={orderedFilteredProviders} dataFilter={dataFilter} setDataFilter={setDataFilter} />
+                <Box height={"50vh"} />
             </Flex>
         </Box>
     )

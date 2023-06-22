@@ -24,21 +24,25 @@ import ClearFiltersButton from "./ClearFiltersButton"
 
 import dataProps from "public/data/dataProps"
 
-export default function DataTable({ windowSize, environment, stakingProviders, status, dataFilter, setDataFilter }) {
+export default function DataTable({ stakingProviders, status, dataFilter, setDataFilter }) {
     const isSSR = typeof window === "undefined"
     const nameInputRef = useRef<HTMLInputElement>(null)
     const filterDisabledColor = useColorModeValue("rgba(0, 0, 0, 0.2)", "rgba(255, 255, 255, 0.2)")
 
     const [hasMounted, setHasMounted] = React.useState(false)
-
-    React.useEffect(() => {
+    useEffect(() => {
         setHasMounted(true)
     }, [])
 
     const [expandedRows, setExpandedRows] = useState([])
 
+    // If filter is changed, close all expanded rows
+    useEffect(() => {
+        setExpandedRows([])
+    }, [dataFilter])
+
     return (
-        <Box mt={0} mb={"500px"} maxW={"100vw"} overflow={"scroll"}>
+        <Box mt={0} mb={20} maxW={"100vw"} overflow={"scroll"}>
             <Table variant="DataTable">
                 <Thead>
                     <Tr borderBottomWidth={1}>
@@ -75,7 +79,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, s
                                     )
                                 } else if (headerValue.type == "checkbox") {
                                     return (
-                                        <Th key={headerValue.id}>
+                                        <Th key={headerValue.id} minW={headerValue.id == "stakeFromHome" ? 140 : ""}>
                                             <Menu placement="right-start" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
                                                 <HeaderButton
                                                     dataFilter={dataFilter}
@@ -240,7 +244,7 @@ export default function DataTable({ windowSize, environment, stakingProviders, s
                                             >
                                                 <Collapse in={expandedRows.includes(index)}>
                                                     <Box minH={100} py={5}>
-                                                        🏗️ Provider description coming soon! 🏗️
+                                                        🏗️ Provider description and more info coming soon! 🏗️
                                                     </Box>
                                                 </Collapse>
                                             </Td>

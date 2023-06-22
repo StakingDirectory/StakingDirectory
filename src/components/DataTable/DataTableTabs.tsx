@@ -3,7 +3,7 @@ import { useColorModeValue, Box, Flex, Tabs, TabList, TabPanel, TabPanels, Tab, 
 import DataTable from "./DataTable"
 import ActiveFilters from "./ActiveFilters"
 
-export default function DataTableTabs({ windowSize, environment, orderedFilteredProviders, dataFilter, setDataFilter }) {
+export default function DataTableTabs({ orderedFilteredProviders, dataFilter, setDataFilter }) {
     const tabNumberBox = (value, color: string) => {
         return (
             <Box border={"2px solid"} borderRadius={"50px"} px={2} ml={2} fontSize={"sm"} fontWeight={"extrabold"} color={color}>
@@ -13,7 +13,7 @@ export default function DataTableTabs({ windowSize, environment, orderedFiltered
     }
 
     return (
-        <Box w="1250px">
+        <Box maxW="1250px" w="100%">
             <ActiveFilters dataFilter={dataFilter} setDataFilter={setDataFilter} />
             <Tabs>
                 <TabList mx={4} w={"fit-content"}>
@@ -27,8 +27,6 @@ export default function DataTableTabs({ windowSize, environment, orderedFiltered
                 <TabPanels>
                     <TabPanel pt={0}>
                         <DataTable
-                            windowSize={windowSize}
-                            environment={environment}
                             stakingProviders={orderedFilteredProviders}
                             status={"active"}
                             dataFilter={dataFilter}
@@ -36,14 +34,7 @@ export default function DataTableTabs({ windowSize, environment, orderedFiltered
                         />
                     </TabPanel>
                     <TabPanel pt={0}>
-                        <DataTable
-                            windowSize={windowSize}
-                            environment={environment}
-                            stakingProviders={orderedFilteredProviders}
-                            status={"dev"}
-                            dataFilter={dataFilter}
-                            setDataFilter={setDataFilter}
-                        />
+                        <DataTable stakingProviders={orderedFilteredProviders} status={"dev"} dataFilter={dataFilter} setDataFilter={setDataFilter} />
                     </TabPanel>
                 </TabPanels>
             </Tabs>

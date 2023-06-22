@@ -6,7 +6,7 @@ import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons"
 import ColorModeToggle from "./ColorModeToggle"
 import Link from "next/link"
 
-export default function Header({ windowSize, environment }) {
+export default function Header({}) {
     const isSSR = typeof window === "undefined"
 
     function navigateHome() {
