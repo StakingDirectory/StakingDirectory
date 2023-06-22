@@ -15,10 +15,10 @@ import HeaderMenuNameSearch from "./TableHeaders/HeaderMenuNameSearch"
 import HeaderMenuPlaceholder from "./TableHeaders/HeaderMenuPlaceholder"
 
 import StakeFromHome from "./TableCells/StakeFromHome"
-import StatusCircle from "./TableCells/StatusCircle"
+// import StatusCircle from "./TableCells/StatusCircle"
+import ChecklistBar from "./TableCells/ChecklistBar"
 import StakingType from "./TableCells/StakingType"
 import ProviderType from "./TableCells/ProviderType"
-import KeyOwner from "./TableCells/KeyOwner"
 import Reward from "./TableCells/Reward"
 import Fee from "./TableCells/Fee"
 
@@ -236,10 +236,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                             {provider.minStake.type == "eth" ? " ETH" : ""}
                                         </Td>
                                         <Td>
-                                            <StatusCircle provider={provider} column={"technicalIndicators"} />
-                                        </Td>
-                                        <Td>
-                                            <StatusCircle provider={provider} column={"socialIndicators"} />
+                                            <ChecklistBar provider={provider} />
                                         </Td>
                                         <Td w={5}>
                                             <DataRowMenuButton />

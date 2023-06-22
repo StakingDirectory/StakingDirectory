@@ -16,8 +16,8 @@ const customTheme = extendTheme({
             ".borderColorDivider": {
                 borderColor: props.colorMode === "dark" ? "divider.dark" : "divider.light",
             },
-            "div .borderStatusCircle": {
-                borderColor: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
+            ".borderChecklistBar": {
+                borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
             },
             ".expandedTableRow": {
                 _hover: {

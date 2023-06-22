@@ -29,7 +29,6 @@ const EditorModal = ({ isOpen, onClose }) => {
                     <ModalHeader>Modal Title</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>Content Text</ModalBody>
-
                     <ModalFooter>
                         <Button colorScheme="blue" mr={3} onClick={onClose}>
                             Close
@@ -53,7 +52,7 @@ export default function DataRowMenuButton() {
     return (
         <>
             <Menu variant={"DataTableOption"} gutter={3}>
-                <MenuButton aria-label="Options" borderRadius={6} w={8} h={8} cursor={"pointer"}>
+                <MenuButton aria-label="Options" borderRadius={10} w={8} h={8} cursor={"pointer"}>
                     <Flex justifyContent={"center"} alignItems={"center"} height={"100%"}>
                         <FontAwesomeIcon icon={faEllipsisV} />
                     </Flex>

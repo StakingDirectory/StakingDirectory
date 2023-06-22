@@ -57,15 +57,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": true,
             "links": [
@@ -161,15 +152,6 @@
         },
         "bugBounty": {
             "value": false,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
-        "battleTested": {
-            "value": true,
             "links": [
                 {
                     "text": "Link",
@@ -280,15 +262,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": true,
             "links": [
@@ -385,15 +358,6 @@
         },
         "bugBounty": {
             "value": false,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
-        "battleTested": {
-            "value": true,
             "links": [
                 {
                     "text": "Link",
@@ -504,15 +468,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": true,
             "links": [
@@ -608,15 +563,6 @@
             ]
         },
         "bugBounty": {
-            "value": false,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
-        "battleTested": {
             "value": false,
             "links": [
                 {
@@ -728,15 +674,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": true,
             "links": [
@@ -833,15 +770,6 @@
         },
         "bugBounty": {
             "value": false,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
-        "battleTested": {
-            "value": true,
             "links": [
                 {
                     "text": "Link",
@@ -952,15 +880,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": true,
             "links": [
@@ -1057,15 +976,6 @@
         },
         "bugBounty": {
             "value": false,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
-        "battleTested": {
-            "value": true,
             "links": [
                 {
                     "text": "Link",
@@ -1176,15 +1086,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": true,
             "links": [
@@ -1281,15 +1182,6 @@
         },
         "bugBounty": {
             "value": false,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
-        "battleTested": {
-            "value": true,
             "links": [
                 {
                     "text": "Link",
@@ -1400,15 +1292,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": false,
             "links": [
@@ -1505,15 +1388,6 @@
         },
         "bugBounty": {
             "value": false,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
-        "battleTested": {
-            "value": true,
             "links": [
                 {
                     "text": "Link",
@@ -1624,15 +1498,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": true,
             "links": [
@@ -1729,15 +1594,6 @@
         },
         "bugBounty": {
             "value": false,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
-        "battleTested": {
-            "value": true,
             "links": [
                 {
                     "text": "Link",
@@ -1848,15 +1704,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": false,
             "links": [
@@ -1960,15 +1807,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": false,
             "links": [
@@ -2064,15 +1902,6 @@
             ]
         },
         "bugBounty": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
-        "battleTested": {
             "value": true,
             "links": [
                 {
@@ -2184,15 +2013,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": false,
             "links": [
@@ -2288,15 +2108,6 @@
             ]
         },
         "bugBounty": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
-        "battleTested": {
             "value": true,
             "links": [
                 {
@@ -2408,15 +2219,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": false,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": false,
             "links": [
@@ -2512,15 +2314,6 @@
             ]
         },
         "bugBounty": {
-            "value": false,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
-        "battleTested": {
             "value": false,
             "links": [
                 {
@@ -2632,15 +2425,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": false,
             "links": [
@@ -2737,15 +2521,6 @@
         },
         "bugBounty": {
             "value": false,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
-        "battleTested": {
-            "value": true,
             "links": [
                 {
                     "text": "Link",
@@ -2856,15 +2631,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": true,
             "links": [
@@ -2960,15 +2726,6 @@
             ]
         },
         "bugBounty": {
-            "value": false,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
-        "battleTested": {
             "value": false,
             "links": [
                 {
@@ -3080,15 +2837,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": true,
             "links": [
@@ -3186,15 +2934,6 @@
         },
         "bugBounty": {
             "value": false,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
-        "battleTested": {
-            "value": true,
             "links": [
                 {
                     "text": "Link",
@@ -3306,15 +3045,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": true,
             "links": [
@@ -3411,15 +3141,6 @@
             ]
         },
         "bugBounty": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
-        "battleTested": {
             "value": true,
             "links": [
                 {
@@ -3532,15 +3253,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": true,
             "links": [
@@ -3637,15 +3349,6 @@
             ]
         },
         "bugBounty": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
-        "battleTested": {
             "value": true,
             "links": [
                 {
@@ -3758,15 +3461,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": false,
             "links": [
@@ -3864,15 +3558,6 @@
         },
         "bugBounty": {
             "value": false,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
-        "battleTested": {
-            "value": true,
             "links": [
                 {
                     "text": "Link",
@@ -3984,15 +3669,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": true,
             "links": [
@@ -4089,15 +3765,6 @@
             ]
         },
         "bugBounty": {
-            "value": false,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
-        "battleTested": {
             "value": false,
             "links": [
                 {
@@ -4210,15 +3877,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": false,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": false,
             "links": [
@@ -4315,15 +3973,6 @@
             ]
         },
         "bugBounty": {
-            "value": false,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
-        "battleTested": {
             "value": false,
             "links": [
                 {
@@ -4436,15 +4085,6 @@
                 }
             ]
         },
-        "battleTested": {
-            "value": false,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
         "nonCensoringRelays": {
             "value": false,
             "links": [
@@ -4542,15 +4182,6 @@
             ]
         },
         "bugBounty": {
-            "value": true,
-            "links": [
-                {
-                    "text": "Link",
-                    "url": "https://"
-                }
-            ]
-        },
-        "battleTested": {
             "value": true,
             "links": [
                 {

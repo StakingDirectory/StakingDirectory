@@ -5,7 +5,7 @@ export default function RewardFee({ provider }) {
     return (
         <Flex direction="column" gap={"2px"} alignItems={"center"}>
             <Tooltip label={"Cost to use this provider"} placement={"top"} closeOnClick={false} gutter={5}>
-                <Box borderRadius={10} border={"2px solid"} borderColor={"red"} w={"fit-content"} px={2}>
+                <Box borderRadius={10} border={"2px solid"} borderColor={"red"} w={"fit-content"} px={2} className={"bgPage"}>
                     {provider.fee.value}
                     {provider.fee.type == "rewardPercentage" ? "%" : ""}
                 </Box>

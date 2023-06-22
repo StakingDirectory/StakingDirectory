@@ -33,7 +33,6 @@ const filterStakingProviders = (dataFilter) => {
                             showProvider.push(false)
                         }
                     }
-
                     let showProviderType = []
                     for (let providerType of ["hardware", "software", "saas"]) {
                         if (dataFilter[key].includes(providerType) && provider["providerType"].includes(providerType)) {
@@ -49,17 +48,12 @@ const filterStakingProviders = (dataFilter) => {
                             showProvider.push(false)
                         }
                     }
-                } else if (key === "technicalIndicators") {
+                } else if (key === "checklist") {
                     let showTechnicalIndicators = true
-                    for (let feature of ["openSource", "audited", "bugBounty", "battleTested"]) {
-                        if (dataFilter[key].includes(feature) && !provider[feature].value) {
-                            showTechnicalIndicators = false
-                        }
-                    }
-                    showProvider.push(showTechnicalIndicators)
-                } else if (key === "socialIndicators") {
-                    let showSocialIndicators = true
                     for (let feature of [
+                        "openSource",
+                        "audited",
+                        "bugBounty",
                         "nonCensoringRelays",
                         "permissionlessUsage",
                         "permissionlessOperators",
@@ -67,10 +61,10 @@ const filterStakingProviders = (dataFilter) => {
                         "diverseBeaconClients",
                     ]) {
                         if (dataFilter[key].includes(feature) && !provider[feature].value) {
-                            showSocialIndicators = false
+                            showTechnicalIndicators = false
                         }
                     }
-                    showProvider.push(showSocialIndicators)
+                    showProvider.push(showTechnicalIndicators)
                 }
             }
             if (showProvider.length != 0 && showProvider.every((value) => value === true)) return true

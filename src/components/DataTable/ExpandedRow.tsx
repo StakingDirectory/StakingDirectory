@@ -48,7 +48,7 @@ export default function ExpandedRow({ provider }) {
             <Flex grow={1} className={"expandContentBox"}>
                 <Text>🏗️ Checklist coming soon! 🏗️</Text>
                 {/* <Flex direction={"column"} gap={3}>
-                    {["openSource", "audited", "bugBounty", "battleTested", "5", "6", "7", "8", "9"].map(() => {
+                    {["openSource", "audited", "bugBounty", "5", "6", "7", "8"].map(() => {
                         return <Box>Indicator</Box>
                     })}
                 </Flex> */}

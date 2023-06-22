@@ -100,23 +100,13 @@ const dataProps = [
     {
         isTableHeader: true,
         type: "checkbox",
-        id: "technicalIndicators",
-        name: "Technical Indicators",
-        headerText: "TECHNICAL <br /> INDICATORS",
+        id: "checklist",
+        name: "Checklist",
+        headerText: "CHECKLIST",
         options: [
             { value: "openSource", text: "Open source", color: "", icon: faBookOpen },
-            { value: "battleTested", text: "Battle tested", color: "", icon: faShield },
             { value: "bugBounty", text: "Bug bounty", color: "", icon: faBug },
             { value: "audited", text: "Audited", color: "", icon: faMagnifyingGlass },
-        ],
-    },
-    {
-        isTableHeader: true,
-        type: "checkbox",
-        id: "socialIndicators",
-        name: "Social Indicators",
-        headerText: "SOCIAL <br /> INDICATORS",
-        options: [
             { value: "nonCensoringRelays", text: "Censorship resistance", color: "", icon: faVolumeHigh },
             { value: "diverseExecutionClients", text: "Diverse EL clients", color: "", icon: faShapes },
             { value: "diverseBeaconClients", text: "Diverse BN clients", color: "", icon: faListUl },
