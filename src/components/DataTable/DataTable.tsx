@@ -4,7 +4,7 @@ import { Flex, Box, Image, useColorModeValue, Table, Thead, Tbody, Tr, Th, Td, M
 import NextLink from "next/link"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronDown, faChevronRight } from "@fortawesome/free-solid-svg-icons"
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
 
 import DataRowMenuButton from "./DataRowMenuButton"
 import HeaderButton from "./HeaderButton"
@@ -40,6 +40,18 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
     useEffect(() => {
         setExpandedRows([])
     }, [dataFilter])
+
+    const expandRow = (index) => {
+        const indexPosition = expandedRows.indexOf(index)
+        const newExpandedRows = [...expandedRows]
+
+        if (indexPosition !== -1) {
+            newExpandedRows.splice(indexPosition, 1)
+        } else {
+            newExpandedRows.push(index)
+        }
+        setExpandedRows(newExpandedRows)
+    }
 
     return (
         <Box mt={0} mb={20} maxW={"100vw"} overflow={"scroll"}>
@@ -169,15 +181,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                         <Td
                                             cursor={"pointer"}
                                             onClick={() => {
-                                                const indexPosition = expandedRows.indexOf(index)
-                                                const newExpandedRows = [...expandedRows]
-
-                                                if (indexPosition !== -1) {
-                                                    newExpandedRows.splice(indexPosition, 1)
-                                                } else {
-                                                    newExpandedRows.push(index)
-                                                }
-                                                setExpandedRows(newExpandedRows)
+                                                expandRow(index)
                                             }}
                                         >
                                             <Box
@@ -187,22 +191,28 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                                 transform={`rotate(${expandedRows.includes(index) ? 90 : 0}deg)`}
                                             />
                                         </Td>
-                                        <Td>
-                                            <Link as={NextLink} href={provider.links.website} target="_blank">
-                                                <Image
-                                                    objectFit="contain"
-                                                    boxSize={8}
-                                                    src={provider.logo.src}
-                                                    alt={provider.logo.alt}
-                                                    borderRadius={"100%"}
-                                                />
-                                            </Link>
+                                        <Td cursor={"pointer"}>
+                                            <Image
+                                                objectFit="contain"
+                                                boxSize={8}
+                                                src={provider.logo.src}
+                                                alt={provider.logo.alt}
+                                                borderRadius={"100%"}
+                                                onClick={() => {
+                                                    expandRow(index)
+                                                }}
+                                            />
                                         </Td>
-                                        <Td maxW={160}>
-                                            <Text fontSize="lg" fontWeight="extrabold" isTruncated>
-                                                <Link as={NextLink} href={provider.links.website} target="_blank">
-                                                    {provider.name}
-                                                </Link>
+                                        <Td maxW={160} cursor={"pointer"}>
+                                            <Text
+                                                fontSize="lg"
+                                                fontWeight="extrabold"
+                                                isTruncated
+                                                onClick={() => {
+                                                    expandRow(index)
+                                                }}
+                                            >
+                                                {provider.name}
                                             </Text>
                                         </Td>
                                         <Td textAlign={"center"}>
@@ -243,9 +253,14 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                                 borderBottom={expandedRows.includes(index) ? "1px solid" : "0"}
                                             >
                                                 <Collapse in={expandedRows.includes(index)}>
-                                                    <Box minH={100} py={5}>
-                                                        🏗️ Provider description and more info coming soon! 🏗️
-                                                    </Box>
+                                                    <Flex direction={"column"} gap={5} minH={100} py={5}>
+                                                        <Link as={NextLink} href={provider.links.website} target="_blank">
+                                                            <Text fontSize={"lg"} fontWeight={"bold"} textDecoration={"underline"}>
+                                                                {provider.name} website ↗
+                                                            </Text>
+                                                        </Link>
+                                                        <Text>🏗️ Provider description and more info coming soon! 🏗️</Text>
+                                                    </Flex>
                                                 </Collapse>
                                             </Td>
                                         </Tr>

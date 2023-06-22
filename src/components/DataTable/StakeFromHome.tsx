@@ -16,7 +16,12 @@ export default function StakeFromHome({ provider }) {
                                 borderRadius={"100%"}
                             />
                         </PopoverTrigger>
-                        <PopoverContent>Stake from Home. Defend Ethereum.</PopoverContent>
+                        <PopoverContent>
+                            <Flex direction={"column"} gap={5}>
+                                <Text>Stake from Home. Defend Ethereum.</Text>
+                                <Text>🏗️ More details coming soon! 🏗️</Text>
+                            </Flex>
+                        </PopoverContent>
                     </Popover>
                 </Flex>
             )}
