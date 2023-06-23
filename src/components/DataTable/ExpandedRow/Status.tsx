@@ -29,8 +29,14 @@ export default function Status({ provider }) {
                     hasArrow={true}
                 >
                     <Flex gap={2} justifyContent={"center"} alignItems={"center"}>
-                        <FontAwesomeIcon icon={faRocket} />
-                        <Text fontWeight={"bold"}>{getFormattedDate(provider.mainnetLaunchDate)}</Text>
+                        {provider.mainnetLaunchDate ? (
+                            <>
+                                <FontAwesomeIcon icon={faRocket} />
+                                <Text fontWeight={"bold"}>{getFormattedDate(provider.mainnetLaunchDate)}</Text>
+                            </>
+                        ) : (
+                            <Text>🤔 Date missing</Text>
+                        )}
                     </Flex>
                 </Tooltip>
             )}

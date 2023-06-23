@@ -2,21 +2,23 @@ import { Box, Flex, Text, Button, Link } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faLink, faCode } from "@fortawesome/free-solid-svg-icons"
-import { faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { faDiscord, faTelegram, faTwitter } from "@fortawesome/free-brands-svg-icons"
 
 import NextLink from "next/link"
 
 export default function Links({ provider }) {
     return (
-        <Flex direction={"column"} gap={3} className={"expandContentBox"} grow={1}>
+        <Flex direction={"column"} gap={"9px"} className={"expandContentBox"} grow={0}>
             {[
                 { type: "Website", icon: faLink },
                 { type: "Twitter", icon: faTwitter },
+                { type: "Discord", icon: faDiscord },
+                { type: "Telegram", icon: faTelegram },
                 { type: "Repo", icon: faCode },
             ].map((linkData) => {
                 const href = provider.links[linkData.type.toLowerCase()]
                 const button = (
-                    <Button isDisabled={!href} px={0} w={"100%"} justifyContent={"start"} borderRadius={15}>
+                    <Button isDisabled={!href} px={0} w={"100%"} justifyContent={"start"} borderRadius={10}>
                         <Flex>
                             <Box w={10}>
                                 <FontAwesomeIcon icon={linkData.icon} />
