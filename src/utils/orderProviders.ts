@@ -1,28 +1,26 @@
-const orderFilteredProviders = (filteredProviders) => {
-    const stakingTypeOrder = ["solo", "pooled", "lst", "indexToken"]
-    const providerTypeOrder = ["hardware", "software", "saas", "lst"]
+const countChecklistTrues = (provider, checklistProperties) => {
+    return checklistProperties.reduce((count, checklistItem) => {
+        return count + (provider[checklistItem.value]?.value ? 1 : 0)
+    }, 0)
+}
 
+const orderFilteredProviders = (filteredProviders, checklistProperties) => {
     // Copy the filteredProviders array before sorting
     const sortedProviders = [...filteredProviders].sort((a, b) => {
-        // Sort by stakingType first
-        const stakingOrderA = stakingTypeOrder.indexOf(a.stakingType)
-        const stakingOrderB = stakingTypeOrder.indexOf(b.stakingType)
-        if (stakingOrderA < stakingOrderB) return -1
-        if (stakingOrderA > stakingOrderB) return 1
+        const checklistTruesA = countChecklistTrues(a, checklistProperties)
+        const checklistTruesB = countChecklistTrues(b, checklistProperties)
 
-        // If stakingType is the same, sort by providerType
-        const providerOrderA = providerTypeOrder.indexOf(a.providerType)
-        const providerOrderB = providerTypeOrder.indexOf(b.providerType)
-        if (providerOrderA < providerOrderB) return -1
-        if (providerOrderA > providerOrderB) return 1
+        // Sort by number of checklist options that are true
+        if (checklistTruesA > checklistTruesB) return -1
+        if (checklistTruesA < checklistTruesB) return 1
 
-        // If providerType is also the same, then sort by name
+        // If counts are equal, sort by name
         const nameA = a.name.toLowerCase()
         const nameB = b.name.toLowerCase()
         if (nameA < nameB) return -1
         if (nameA > nameB) return 1
 
-        return 0 // names must be equal
+        return 0
     })
 
     return sortedProviders

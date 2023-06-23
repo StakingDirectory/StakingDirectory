@@ -6,12 +6,17 @@ import Footer from "./Footer"
 import filterProviders from "../utils/filterProviders"
 import orderProviders from "../utils/orderProviders"
 
+import dataProps from "public/data/dataProps"
+
 import { Box, Flex } from "@chakra-ui/react"
 
 const App = () => {
     const [dataFilter, setDataFilter] = useState({})
     const filteredProviders = filterProviders(dataFilter)
-    const orderedFilteredProviders = orderProviders(filteredProviders)
+    const orderedFilteredProviders = orderProviders(
+        filteredProviders,
+        dataProps.find((prop) => prop.id === "checklistProperties").checklistProperties
+    )
 
     const environment = process.env.NODE_ENV
 
