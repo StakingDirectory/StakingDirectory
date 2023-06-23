@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from "@chakra-ui/react"
+import { Flex, Text } from "@chakra-ui/react"
 
 import KeyOwner from "./ExpandedRow/KeyOwner"
 import ChecklistList from "./ExpandedRow/ChecklistList"

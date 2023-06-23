@@ -1,4 +1,3 @@
-import React from "react"
 import { Flex, Image, Tooltip, Box } from "@chakra-ui/react"
 
 export default function StakeFromHome({ provider }) {

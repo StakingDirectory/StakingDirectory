@@ -1,5 +1,3 @@
-import React from "react"
-
 import { MenuList, MenuOptionGroup } from "@chakra-ui/react"
 
 export default function HeaderMenuPlaceholder({ id, dataProps, dataFilter, setDataFilter }) {

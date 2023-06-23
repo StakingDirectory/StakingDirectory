@@ -1,4 +1,4 @@
-import { useColorModeValue, Box, Flex, Tabs, TabList, TabPanel, TabPanels, Tab, Thead, Tr, Table, Th } from "@chakra-ui/react"
+import { Box, Flex, Tabs, TabList, TabPanel, TabPanels, Tab } from "@chakra-ui/react"
 
 import DataTable from "./DataTable"
 import ActiveFilters from "./ActiveFilters"

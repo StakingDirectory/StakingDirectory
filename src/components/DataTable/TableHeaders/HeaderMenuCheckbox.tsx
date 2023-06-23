@@ -1,5 +1,3 @@
-import React from "react"
-
 import { Flex, MenuList, MenuOptionGroup, MenuItemOption, Text } from "@chakra-ui/react"
 
 export default function HeaderMenuCheckbox({ id, dataProps, dataFilter, setDataFilter }) {

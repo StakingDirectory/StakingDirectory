@@ -1,5 +1,4 @@
-import React, { useRef, useEffect, useState } from "react"
-import { Flex, Text, Box, Button, Tooltip, filter } from "@chakra-ui/react"
+import { Flex, Text, Box, Button, Tooltip } from "@chakra-ui/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFilter } from "@fortawesome/free-solid-svg-icons"
 import { faTimesCircle } from "@fortawesome/free-regular-svg-icons"
