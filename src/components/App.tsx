@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"
 import Header from "./Header/Header"
 import DataTableTabs from "./DataTable/DataTableTabs"
-import ActiveFilters from "./DataTable/ActiveFilters"
+import Footer from "./Footer"
 
 import filterProviders from "../utils/filterProviders"
 import orderProviders from "../utils/orderProviders"
@@ -16,7 +16,7 @@ const App = () => {
     const environment = process.env.NODE_ENV
 
     return (
-        <Box minH="100vh" minW="100vw" className={"bgPage"}>
+        <Box minH="100vh" minW="100vw" className={"bgPage"} display="flex" flexDirection="column">
             <Flex direction="column" justifyContent="center" alignItems="center">
                 <Header />
                 {/* TODO: REMOVE WHEN PROD READY */}
@@ -33,8 +33,9 @@ const App = () => {
                 )}
                 <Box height={50} />
                 <DataTableTabs orderedFilteredProviders={orderedFilteredProviders} dataFilter={dataFilter} setDataFilter={setDataFilter} />
-                <Box height={"50vh"} />
             </Flex>
+            <Box flex="1" />
+            <Footer />
         </Box>
     )
 }
