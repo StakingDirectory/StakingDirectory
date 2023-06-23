@@ -58,7 +58,7 @@ const dataProps = [
             { value: "solo", text: "Solo", color: "green", icon: faServer },
             { value: "pooled", text: "Pooled", color: "blue", icon: faUsers },
             { value: "lst", text: "LST", color: "gold", icon: faCoins },
-            { value: "indexToken", text: "Index", color: "orange", icon: faShoppingBasket },
+            { value: "indexToken", text: "LST Index", color: "orange", icon: faShoppingBasket },
             { value: "hardware", text: "Hardware", color: "", icon: faDesktop },
             { value: "software", text: "Software", color: "", icon: faCode },
             { value: "saas", text: "SAAS", color: "", icon: faCloud },
