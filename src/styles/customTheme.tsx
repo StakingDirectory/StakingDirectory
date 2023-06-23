@@ -52,6 +52,9 @@ const customTheme = extendTheme({
                     bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",
                 },
             },
+            ".checklistListOpen": {
+                bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",
+            },
             ".expandContentBox": {
                 bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
                 borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
@@ -85,7 +88,6 @@ const customTheme = extendTheme({
                         paddingLeft: "0.5rem",
                         paddingRight: "0.5rem",
                         paddingBottom: "0",
-                        fontWeight: "800",
                         verticalAlign: "bottom",
                         textAlign: "center",
                     },
@@ -205,7 +207,7 @@ const customTheme = extendTheme({
         },
         // contentBackgroundHover: {
         //     light: "#b2b6ba",
-        //     dark: "#2a114c",
+        //     dark: "#3f1777",
         // },
         border: {
             light: "#D3D3D3",

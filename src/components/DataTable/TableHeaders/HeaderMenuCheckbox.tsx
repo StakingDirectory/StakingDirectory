@@ -1,8 +1,6 @@
 import React from "react"
 
-import { Flex, Box, MenuList, MenuOptionGroup, MenuItemOption, Text } from "@chakra-ui/react"
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Flex, MenuList, MenuOptionGroup, MenuItemOption, Text } from "@chakra-ui/react"
 
 export default function HeaderMenuCheckbox({ id, dataProps, dataFilter, setDataFilter }) {
     const updateFilter = (values) => {
@@ -32,9 +30,6 @@ export default function HeaderMenuCheckbox({ id, dataProps, dataFilter, setDataF
                             isChecked={dataFilter[id] && Array.isArray(dataFilter[id]) && dataFilter[id].includes(option.value)}
                         >
                             <Flex gap={2}>
-                                {/* <Box width={6}>
-                                    <FontAwesomeIcon icon={option.icon} />
-                                </Box> */}
                                 <Text>{option.text}</Text>
                             </Flex>
                         </MenuItemOption>

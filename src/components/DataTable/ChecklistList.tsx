@@ -31,8 +31,10 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
         const iconColor = value ? "green" : "red"
         const icon = value ? faCircleCheck : faCircleXmark
 
+        const isOpen = expandedChecklistRows.some((row) => row.index === index && row.providerId === provider.id)
+
         return (
-            <Flex key={index} direction={"column"} minH={10} className={"checklistList"}>
+            <Flex key={index} direction={"column"} minH={10} className={isOpen ? "checklistListOpen checklistList" : "checklistList"}>
                 <HStack
                     py={3}
                     px={2}
@@ -46,9 +48,7 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
                         icon={faChevronRight}
                         transition="all 0.2s"
                         size={"sm"}
-                        transform={`rotate(${
-                            expandedChecklistRows.some((row) => row.index === index && row.providerId === provider.id) ? 90 : 0
-                        }deg)`}
+                        transform={`rotate(${isOpen ? 90 : 0}deg)`}
                         mr={3}
                         ml={2}
                     />
@@ -57,7 +57,7 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
                     </Box>
                     <Text>{statusName}</Text>
                 </HStack>
-                <Collapse in={expandedChecklistRows.some((row) => row.index === index && row.providerId === provider.id)}>
+                <Collapse in={isOpen}>
                     <Box pl={12} pt={1} pb={3} pr={3}>
                         <Text>🏗️ More details coming soon! 🏗️</Text>
                     </Box>

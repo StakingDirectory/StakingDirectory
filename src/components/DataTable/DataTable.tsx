@@ -7,15 +7,12 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
 
 import DataRowMenuButton from "./DataRowMenuButton"
 import HeaderButton from "./TableHeaders/HeaderButton"
-import HeaderButtonKeyOwner from "./TableHeaders/HeaderButtonKeyOwner"
 import HeaderMenuCheckbox from "./TableHeaders/HeaderMenuCheckbox"
 import HeaderMenuType from "./TableHeaders/HeaderMenuType"
-import HeaderMenuKeyOwner from "./TableHeaders/HeaderMenuKeyOwner"
 import HeaderMenuNameSearch from "./TableHeaders/HeaderMenuNameSearch"
 import HeaderMenuPlaceholder from "./TableHeaders/HeaderMenuPlaceholder"
 
 import StakeFromHome from "./TableCells/StakeFromHome"
-// import StatusCircle from "./TableCells/StatusCircle"
 import ChecklistBar from "./TableCells/ChecklistBar"
 import StakingType from "./TableCells/StakingType"
 import ProviderType from "./TableCells/ProviderType"
@@ -128,19 +125,6 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                                     dataFilter={dataFilter}
                                                     setDataFilter={setDataFilter}
                                                 />
-                                            </Menu>
-                                        </Th>
-                                    )
-                                } else if (headerValue.type == "checkboxKeyOwner") {
-                                    return (
-                                        <Th key={headerValue.id}>
-                                            <Menu placement="right-start" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                                <HeaderButtonKeyOwner
-                                                    dataFilter={dataFilter}
-                                                    text={headerValue.headerText}
-                                                    filterDisabledColor={filterDisabledColor}
-                                                />
-                                                <HeaderMenuKeyOwner dataProps={dataProps} dataFilter={dataFilter} setDataFilter={setDataFilter} />
                                             </Menu>
                                         </Th>
                                     )

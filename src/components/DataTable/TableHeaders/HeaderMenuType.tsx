@@ -1,8 +1,6 @@
 import React from "react"
 
-import { Flex, Box, MenuList, MenuOptionGroup, MenuItemOption, Text } from "@chakra-ui/react"
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { Flex, MenuList, MenuOptionGroup, MenuItemOption, Text } from "@chakra-ui/react"
 
 export default function HeaderMenuType({ id, dataProps, dataFilter, setDataFilter }) {
     const updateFilter = (values) => {
@@ -20,7 +18,7 @@ export default function HeaderMenuType({ id, dataProps, dataFilter, setDataFilte
 
     return (
         <MenuList minWidth={1} key={JSON.stringify(dataFilter[id])}>
-            <MenuOptionGroup defaultValue={dataFilter[id]} type="checkbox" onChange={updateFilter} title="Staking Type">
+            <MenuOptionGroup defaultValue={dataFilter[id]} type="checkbox" onChange={updateFilter} title="Staking Type" fontWeight={"extrabold"}>
                 {dataProps
                     .find((obj) => obj.id === id)
                     ?.options?.map(
@@ -28,16 +26,13 @@ export default function HeaderMenuType({ id, dataProps, dataFilter, setDataFilte
                             (option.value === "solo" || option.value === "pooled" || option.value === "lst" || option.value === "indexToken") && (
                                 <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"}>
                                     <Flex gap={2} alignItems={"center"}>
-                                        {/* <Box width={6}>
-                                            <FontAwesomeIcon icon={option.icon} />
-                                        </Box> */}
                                         <Text>{option.text}</Text>
                                     </Flex>
                                 </MenuItemOption>
                             )
                     )}
             </MenuOptionGroup>
-            <MenuOptionGroup defaultValue={dataFilter[id]} type="checkbox" onChange={updateFilter} title="Provider Type">
+            <MenuOptionGroup defaultValue={dataFilter[id]} type="checkbox" onChange={updateFilter} title="Provider Type" fontWeight={"extrabold"}>
                 {dataProps
                     .find((obj) => obj.id === id)
                     ?.options?.map(
@@ -45,9 +40,6 @@ export default function HeaderMenuType({ id, dataProps, dataFilter, setDataFilte
                             (option.value === "hardware" || option.value === "software" || option.value === "saas") && (
                                 <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"}>
                                     <Flex gap={2} alignItems={"center"}>
-                                        {/* <Box width={6}>
-                                            <FontAwesomeIcon icon={option.icon} />
-                                        </Box> */}
                                         <Text>{option.text}</Text>
                                     </Flex>
                                 </MenuItemOption>

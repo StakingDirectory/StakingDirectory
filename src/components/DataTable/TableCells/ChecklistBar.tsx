@@ -17,6 +17,21 @@ export default function ChecklistBar({ provider, tableRowIndex, expandedRows, se
         const iconColor = value ? "green" : "red"
         const icon = value ? faCircleCheck : faCircleXmark
 
+        const isFirst = index === 0
+        const isLast = index === checklistProperties.length - 1
+
+        let borderLeftWidth = 0
+        let borderRightWidth = 0
+
+        if (isFirst) {
+            borderRightWidth = 2
+        } else if (isLast) {
+            borderLeftWidth = 2
+        } else {
+            borderLeftWidth = 2
+            borderRightWidth = 2
+        }
+
         return (
             <Tooltip
                 key={index}
@@ -37,6 +52,10 @@ export default function ChecklistBar({ provider, tableRowIndex, expandedRows, se
             >
                 <Box
                     borderRadius={0}
+                    borderY={0}
+                    borderLeftWidth={borderLeftWidth}
+                    borderRightWidth={borderRightWidth}
+                    className="borderChecklistBar"
                     w={10}
                     bg={value ? "green" : "red"}
                     onClick={(e) => {
@@ -62,7 +81,6 @@ export default function ChecklistBar({ provider, tableRowIndex, expandedRows, se
                 w={200}
                 h={10}
                 overflow={"hidden"}
-                gap={1}
             >
                 {checklistProperties.map((status, index) => renderBox(status, index))}
             </Flex>
