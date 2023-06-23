@@ -1,9 +1,9 @@
 import React, { useRef, useEffect, useState } from "react"
 
-import { Flex, Box, Image, useColorModeValue, Table, Thead, Tbody, Tr, Th, Td, Menu, Text, Link, Collapse } from "@chakra-ui/react"
+import { Flex, Box, Image, useColorModeValue, Table, Thead, Tbody, Tr, Th, Td, Menu, Text, Link, Collapse, Tooltip } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
+import { faArrowDownShortWide, faChevronRight } from "@fortawesome/free-solid-svg-icons"
 
 import DataRowMenuButton from "./DataRowMenuButton"
 import HeaderButton from "./TableHeaders/HeaderButton"
@@ -59,9 +59,60 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
             <Table variant="DataTable">
                 <Thead>
                     <Tr borderBottomWidth={1}>
-                        <Th w={"32px"}></Th>
-                        <Th w={"32px"}>
+                        <Th w={"32px"} px={0}>
                             <ClearFiltersButton dataFilter={dataFilter} setDataFilter={setDataFilter} />
+                        </Th>
+                        <Th minW={"32px"} px={0}>
+                            <Tooltip
+                                placement={"right"}
+                                gutter={0}
+                                label={
+                                    <Box className={"tooltipLabel"}>
+                                        <Flex direction={"column"} alignItems={"start"} gap={2}>
+                                            <Text fontWeight={"extrabold"} fontSize={"lg"}>
+                                                How is the table ordered?
+                                            </Text>
+                                            <Flex>
+                                                <Text w={5} fontWeight={"extrabold"} textAlign={"start"}>
+                                                    1.
+                                                </Text>
+
+                                                <Text>First, by the number of checklist items that are&nbsp;</Text>
+                                                <Box color={"green"}>green</Box>
+                                            </Flex>
+                                            <Flex>
+                                                <Text w={5} fontWeight={"extrabold"} textAlign={"start"}>
+                                                    2.
+                                                </Text>
+                                                Then, by the staking type &nbsp;(
+                                                <Box color={"green"}>Solo</Box>, &nbsp;
+                                                <Box color={"blue"}>Pooled</Box>, &nbsp;<Box color={"gold"}>LST</Box>&nbsp;or&nbsp;
+                                                <Box color={"orange"}>LST Index</Box>)
+                                            </Flex>
+                                            <Flex>
+                                                <Text w={5} fontWeight={"extrabold"} textAlign={"start"}>
+                                                    3.
+                                                </Text>
+
+                                                <Text>Then, by the provider type (Hardware, Software or SAAS)</Text>
+                                            </Flex>
+                                            <Flex>
+                                                <Text w={5} fontWeight={"extrabold"} textAlign={"start"}>
+                                                    4.
+                                                </Text>
+
+                                                <Text>Finally, if all the previous steps are identical, order by name</Text>
+                                            </Flex>
+                                        </Flex>
+                                    </Box>
+                                }
+                                className="tooltipArrow"
+                                hasArrow={true}
+                            >
+                                <Box pb={2}>
+                                    <FontAwesomeIcon icon={faArrowDownShortWide} size="2xl" />
+                                </Box>
+                            </Tooltip>
                         </Th>
                         {dataProps.map((headerValue) => {
                             if (headerValue.isTableHeader) {

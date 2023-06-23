@@ -12,7 +12,7 @@ const customTheme = extendTheme({
                 [cssVar("popper-arrow-bg").variable]: props.colorMode === "dark" ? "#54199b" : "#EDF2F7",
             },
             ".tooltipLabel": {
-                padding: "10px",
+                padding: "15px",
                 bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
                 borderRadius: "7px",
             },
