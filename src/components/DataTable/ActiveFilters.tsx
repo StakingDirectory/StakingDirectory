@@ -102,6 +102,8 @@ export default function ActiveFilters({ dataFilter, setDataFilter }) {
                         openDelay={300}
                         closeOnClick={false}
                         label={"Filter the table headings to show your active filters here"}
+                        className="tooltipArrow"
+                        hasArrow={true}
                     >
                         <Flex className={"bgContent"} borderRadius={30} px={3} gap={2} minH={10} alignItems={"center"}>
                             <Text>No filters selected</Text>

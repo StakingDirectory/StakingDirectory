@@ -37,6 +37,8 @@ export default function KeyOwner({ provider, id }) {
                         )}
                         openDelay={0}
                         closeOnClick={false}
+                        className="tooltipArrow"
+                        hasArrow={true}
                     >
                         <Box color={dataProps.flatMap((d) => d.options).find((opt) => opt?.value === owner)?.color}>
                             {/* <FontAwesomeIcon icon={dataProps.flatMap((d) => d.options).find((opt) => opt?.value === owner)?.icon} size="lg" /> */}

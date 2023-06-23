@@ -1,9 +1,14 @@
 import { extendTheme } from "@chakra-ui/react"
 import type { StyleFunctionProps } from "@chakra-ui/styled-system"
+import { cssVar } from "@chakra-ui/theme-tools"
 
 const customTheme = extendTheme({
     styles: {
         global: (props: StyleFunctionProps) => ({
+            ".tooltipArrow": {
+                "--popper-arrow-shadow-color": "#FFFFFF",
+                [cssVar("popper-arrow-bg").variable]: props.colorMode === "dark" ? "#272A2F" : "#EDF2F7",
+            },
             ".bgPage": {
                 bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
             },
@@ -90,9 +95,7 @@ const customTheme = extendTheme({
                 fontSize: "sm",
                 padding: "0.6rem",
                 boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.2)",
-                _arrow: {
-                    bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
-                },
+                [cssVar("popper-arrow-bg").variable]: "",
             }),
         },
         Popover: {
@@ -109,9 +112,6 @@ const customTheme = extendTheme({
                     fontSize: "sm",
                     padding: "0.6rem",
                     boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.2)",
-                    _arrow: {
-                        bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
-                    },
                 },
             }),
         },

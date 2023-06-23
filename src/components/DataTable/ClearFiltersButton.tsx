@@ -7,7 +7,7 @@ export default function ClearFiltersButton({ dataFilter, setDataFilter }) {
     return (
         <Box w={"32px"}>
             {dataFilter && Object.keys(dataFilter).length > 0 ? (
-                <Tooltip gutter={4} label="Remove all filters" openDelay={200}>
+                <Tooltip gutter={5} label="Remove all filters" openDelay={200} className="tooltipArrow" hasArrow={true} placement="top">
                     <IconButton
                         color="purple"
                         variant="ghost"

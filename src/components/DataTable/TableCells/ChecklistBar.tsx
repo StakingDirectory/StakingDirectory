@@ -1,5 +1,5 @@
 import React from "react"
-import { Flex, Box, Grid, Tooltip, Text, HStack, Popover, PopoverTrigger, PopoverContent } from "@chakra-ui/react"
+import { Flex, Box, Tooltip, Text, HStack } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircleCheck, faCircleXmark } from "@fortawesome/free-solid-svg-icons"
@@ -18,22 +18,23 @@ export default function ChecklistBar({ provider }) {
         const icon = value ? faCircleCheck : faCircleXmark
 
         return (
-            <Popover placement={"top"} trigger="hover" openDelay={100} closeDelay={100} gutter={3}>
-                <PopoverTrigger>
-                    <Box borderRadius={0} w={10} bg={value ? "green" : "red"} />
-                </PopoverTrigger>
-                <PopoverContent width={"fit-content"}>
-                    <Flex direction={"column"} gap={5}>
+            <Tooltip
+                label={
+                    <Flex direction={"column"} alignItems={"center"} gap={2}>
                         <HStack>
                             <Box color={iconColor}>
                                 <FontAwesomeIcon icon={icon} size="lg" />
                             </Box>
                             <Text>{statusName}</Text>
                         </HStack>
-                        <Text>🏗️ More details coming soon! 🏗️</Text>
                     </Flex>
-                </PopoverContent>
-            </Popover>
+                }
+                placement={"top"}
+                className="tooltipArrow"
+                hasArrow={true}
+            >
+                <Box borderRadius={0} w={10} bg={value ? "green" : "red"} />
+            </Tooltip>
         )
     }
 

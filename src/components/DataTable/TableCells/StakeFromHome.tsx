@@ -6,7 +6,7 @@ export default function StakeFromHome({ provider }) {
 
     return (
         <Flex direction="column" gap={"2px"} alignItems={"center"}>
-            <Tooltip label={label} placement="top">
+            <Tooltip label={label} placement="top" className="tooltipArrow" hasArrow={true}>
                 <Image
                     src={"./images/StakeFromHome.png"}
                     alt={provider.logo.alt}

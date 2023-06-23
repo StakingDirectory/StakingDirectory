@@ -1,5 +1,5 @@
 import React, { useRef, useEffect, useState } from "react"
-import { Flex, Box, Grid, Tooltip, Text, HStack, Popover, PopoverTrigger, PopoverContent, Collapse } from "@chakra-ui/react"
+import { Flex, Box, Grid, Tooltip, Text, HStack, Collapse } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faCircleCheck, faCircleXmark, faChevronRight } from "@fortawesome/free-solid-svg-icons"
