@@ -1,6 +1,6 @@
-import { Box, Flex, Link, Text, Button, Tooltip } from "@chakra-ui/react"
+import { Box, Flex, Text } from "@chakra-ui/react"
 
-import KeyOwner from "./TableCells/KeyOwner"
+import KeyOwner from "./ExpandedRow/KeyOwner"
 import ChecklistList from "./ExpandedRow/ChecklistList"
 import Status from "./ExpandedRow/Status"
 import Links from "./ExpandedRow/Links"
@@ -23,12 +23,10 @@ export default function ExpandedRow({ provider, expandedChecklistRows, setExpand
                     <Text>🏗️ Provider Type coming soon! 🏗️</Text>
                 </Flex>
             </Flex>
-            <Flex direction={"column"} gap={5} w={200}>
-                <Flex direction={"column"} className={"expandContentBox"} gap={3} minH={200}>
-                    <Text>Key Owner</Text>
-                    <Text>🏗️ Coming soon! 🏗️</Text>
-                    {/* <KeyOwner provider={provider} id={"validatorKey"} />
-                <KeyOwner provider={provider} id={"withdrawalKey"} /> */}
+            <Flex direction={"column"} gap={5} w={220}>
+                <Flex direction={"column"} className={"expandContentBox"} p={0} overflow={"hidden"}>
+                    <KeyOwner provider={provider} id={"validatorKey"} />
+                    <KeyOwner provider={provider} id={"withdrawalKey"} />
                 </Flex>
                 <Flex direction={"column"} className={"expandContentBox"} grow={1} gap={3}>
                     <Text>Locations</Text>

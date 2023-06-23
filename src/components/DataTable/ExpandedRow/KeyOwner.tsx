@@ -3,33 +3,28 @@ import { Flex, Box, Grid, Tooltip, Text, HStack, Collapse } from "@chakra-ui/rea
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
-import { faCircleCheck, faCircleXmark } from "@fortawesome/free-regular-svg-icons"
 
 import dataProps from "public/data/dataProps"
-const checklistProperties = dataProps.find((prop) => prop.id === "checklistProperties").checklistProperties
 
-export default function ChecklistList({ provider, expandedChecklistRows, setExpandedChecklistRows }) {
+export default function KeyOwner({ provider, id }) {
+    const [expandedRows, setExpandedRows] = useState([])
+
     const expandRow = (index) => {
-        const currentIndex = expandedChecklistRows.findIndex((row) => row.index === index && row.providerId === provider.id)
+        const currentIndex = expandedRows.findIndex((row) => row.index === index && row.providerId === provider.id)
 
-        const newExpandedRows = [...expandedChecklistRows]
+        const newExpandedRows = [...expandedRows]
         if (currentIndex !== -1) {
             newExpandedRows.splice(currentIndex, 1)
         } else {
             newExpandedRows.push({ providerId: provider.id, index })
         }
-
-        setExpandedChecklistRows(newExpandedRows)
+        setExpandedRows(newExpandedRows)
     }
 
-    const renderBox = (status: { value: any; name: string }, index: number) => {
-        const { value: statusValue, name: statusName } = status
-        const value = typeof statusValue === "function" ? statusValue(provider) : provider[statusValue]?.value
+    const renderBox = (ownerId, index) => {
+        const value = provider[ownerId]?.value
 
-        const iconColor = value ? "green" : "red"
-        const icon = value ? faCircleCheck : faCircleXmark
-
-        const isOpen = expandedChecklistRows.some((row) => row.index === index && row.providerId === provider.id)
+        const isOpen = expandedRows.some((row) => row.index === index && row.providerId === provider.id)
 
         return (
             <Flex key={index} direction={"column"} minH={10} className={isOpen ? "checklistListOpen checklistList" : "checklistList"}>
@@ -50,13 +45,12 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
                         mr={3}
                         ml={2}
                     />
-                    <Box color={iconColor}>
-                        <FontAwesomeIcon icon={icon} size="lg" />
-                    </Box>
-                    <Text>{statusName}</Text>
+                    <Text fontWeight={"bold"} color={dataProps.flatMap((d) => d.options).find((opt) => opt?.value === ownerId)?.color}>
+                        {dataProps.flatMap((d) => d.options).find((opt) => opt?.value === ownerId)?.text}
+                    </Text>
                 </HStack>
                 <Collapse in={isOpen}>
-                    <Box pl={12} pt={1} pb={3} pr={3}>
+                    <Box px={4} pt={1} pb={3}>
                         <Text>🏗️ More details coming soon! 🏗️</Text>
                     </Box>
                 </Collapse>
@@ -65,8 +59,13 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
     }
 
     return (
-        <Flex grow={1} h={"fit-content"} className={"expandContentBox"} p={0} gap={1} direction={"column"} overflow={"hidden"}>
-            {checklistProperties.map((status, index) => renderBox(status, index))}
-        </Flex>
+        <Box pt={4}>
+            <Text fontWeight={"bold"} pl={4} pb={2}>
+                {id === "validatorKey" ? "Validator Key Owner" : "Withdrawal Key Owner"}
+            </Text>
+            <Flex grow={1} className={""} p={0} gap={1} direction={"column"} overflow={"hidden"}>
+                {provider[id].map((ownerId, index) => renderBox(ownerId, index))}
+            </Flex>
+        </Box>
     )
 }
