@@ -432,7 +432,7 @@
             "value": "🏗️"
         },
         "links": {
-            "website": "https://github.com/ethereum/go-ethereum",
+            "website": "https://docs.ethstaker.cc/ethstaker-knowledge-base/validator-clients/validator-clients-explained",
             "twitter": ""
         },
         "minStake": {
@@ -445,8 +445,8 @@
             "value": true,
             "links": [
                 {
-                    "text": "GitHub",
-                    "url": "https://ethstaker.gitbook.io/ethstaker-knowledge-base/validator-clients/validator-clients-explained"
+                    "text": "Resources",
+                    "url": "https://docs.ethstaker.cc/ethstaker-knowledge-base/validator-clients/validator-clients-explained"
                 }
             ]
         },
