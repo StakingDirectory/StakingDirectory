@@ -34,7 +34,7 @@ export default function ChecklistBar({ provider, tableRowIndex, expandedRows, se
         return (
             <Tooltip
                 key={index}
-                gutter={10}
+                gutter={8}
                 label={
                     <Flex direction={"column"} alignItems={"center"} gap={2} className="tooltipLabel">
                         <HStack>
