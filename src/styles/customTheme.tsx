@@ -47,6 +47,12 @@ const customTheme = extendTheme({
                     bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
                 },
             },
+            ".devTableRow": {
+                bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
+                _hover: {
+                    bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
+                },
+            },
             ".checklistList": {
                 _hover: {
                     bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",

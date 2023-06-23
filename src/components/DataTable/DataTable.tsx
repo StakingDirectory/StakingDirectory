@@ -173,6 +173,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                             }, 10)
                                         }}
                                         cursor={"pointer"}
+                                        className={provider.status == "dev" ? "devTableRow" : ""}
                                     >
                                         <Td>
                                             <Box
