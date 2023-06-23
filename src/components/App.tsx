@@ -13,11 +13,6 @@ const App = () => {
     const filteredProviders = filterProviders(dataFilter)
     const orderedFilteredProviders = orderProviders(filteredProviders)
 
-    // TODO: Testing only - Remove this console.log
-    useEffect(() => {
-        console.log(dataFilter)
-    }, [dataFilter])
-
     return (
         <Box minH="100vh" minW="100vw" className={"bgPage"}>
             <Flex direction="column" justifyContent="center" alignItems="center">

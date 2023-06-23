@@ -34,7 +34,7 @@ export default function ExpandedRow({ provider }) {
                             {button}
                         </Link>
                     ) : (
-                        button
+                        <Box key={linkData.type}>{button}</Box>
                     )
                 })}
             </Flex>
