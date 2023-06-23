@@ -19,24 +19,26 @@ export default function ExpandedRow({ provider }) {
                     { type: "Repo", icon: faCode },
                 ].map((linkData) => {
                     const href = provider.links[linkData.type.toLowerCase()]
+                    const button = (
+                        <Button isDisabled={!href} px={0} w={"100%"} justifyContent={"start"} borderRadius={15}>
+                            <Flex>
+                                <Box w={10}>
+                                    <FontAwesomeIcon icon={linkData.icon} />
+                                </Box>
+                                <Text pr={5}>{linkData.type}</Text>
+                            </Flex>
+                        </Button>
+                    )
                     return href ? (
-                        <Link as={NextLink} href={href} target="_blank">
-                            <Button px={0} w={"100%"} justifyContent={"start"} borderRadius={15}>
-                                <Flex>
-                                    <Box w={10}>
-                                        <FontAwesomeIcon icon={linkData.icon} />
-                                    </Box>
-                                    <Text pr={5}>{linkData.type}</Text>
-                                </Flex>
-                            </Button>
+                        <Link key={linkData.type} as={NextLink} href={href} target="_blank">
+                            {button}
                         </Link>
                     ) : (
-                        <Button isDisabled leftIcon={<FontAwesomeIcon icon={linkData.icon} />}>
-                            {linkData.type}
-                        </Button>
+                        button
                     )
                 })}
             </Flex>
+
             <Flex w={300} className={"expandContentBox"}>
                 <Text>🏗️ Description coming soon! 🏗️</Text>
             </Flex>

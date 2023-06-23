@@ -2,7 +2,8 @@ import React, { useRef, useEffect, useState } from "react"
 import { Flex, Box, Grid, Tooltip, Text, HStack, Collapse } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCircleCheck, faCircleXmark, faChevronRight } from "@fortawesome/free-solid-svg-icons"
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
+import { faCircleCheck, faCircleXmark } from "@fortawesome/free-regular-svg-icons"
 
 import dataProps from "public/data/dataProps"
 const checklistProperties = dataProps.find((prop) => prop.id === "checklistProperties").checklistProperties
@@ -31,26 +32,23 @@ export default function ChecklistList({ provider }) {
         const icon = value ? faCircleCheck : faCircleXmark
 
         return (
-            <Flex
-                py={3}
-                px={2}
-                minH={10}
-                onClick={() => {
-                    expandRow(index)
-                }}
-                cursor={"pointer"}
-                className={"checklistList"}
-                direction={"column"}
-                borderRadius={10}
-            >
-                <HStack>
+            <Flex key={index} direction={"column"} minH={10} className={"checklistList"} borderRadius={10}>
+                <HStack
+                    py={3}
+                    px={2}
+                    onClick={() => {
+                        expandRow(index)
+                    }}
+                    cursor={"pointer"}
+                >
                     <Box
                         as={FontAwesomeIcon}
                         icon={faChevronRight}
                         transition="all 0.2s"
                         size={"sm"}
                         transform={`rotate(${expandedRows.includes(index) ? 90 : 0}deg)`}
-                        pr={2}
+                        mr={3}
+                        ml={2}
                     />
                     <Box color={iconColor}>
                         <FontAwesomeIcon icon={icon} size="lg" />
@@ -58,7 +56,7 @@ export default function ChecklistList({ provider }) {
                     <Text>{statusName}</Text>
                 </HStack>
                 <Collapse in={expandedRows.includes(index)}>
-                    <Box pl={6} pt={3} pr={3}>
+                    <Box pl={12} pt={1} pb={3} pr={3}>
                         <Text>🏗️ More details coming soon! 🏗️</Text>
                     </Box>
                 </Collapse>

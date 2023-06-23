@@ -174,7 +174,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                     {stakingProviders.map(
                         (provider, index) =>
                             provider.status == status && (
-                                <>
+                                <React.Fragment key={provider.id}>
                                     <Tr
                                         key={provider.id}
                                         borderBottomWidth={1}
@@ -248,7 +248,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                             </Td>
                                         </Tr>
                                     )}
-                                </>
+                                </React.Fragment>
                             )
                     )}
                 </Tbody>
