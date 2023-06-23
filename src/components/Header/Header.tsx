@@ -17,7 +17,7 @@ export default function Header({}) {
     }
 
     return (
-        <Box width="100%" borderBottomWidth={1} className={"borderColor"}>
+        <Box width="100%" borderBottomWidth={1} className={"borderColorDivider"}>
             <Box width="100%" px={{ base: "10px", sm: "3rem" }} maxW="1780px">
                 <Box className={"bgPage"}>
                     <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
@@ -45,8 +45,9 @@ export default function Header({}) {
                                     <FontAwesomeIcon icon={faGithub} size={"xl"} />
                                 </Box>
                             </Link>
-                            <Box borderLeftWidth={1} className={"borderColorDivider"} height={8} />
-                            <ColorModeToggle />
+                            {/* TODO: Enable light mode when I actually style it */}
+                            {/* <Box borderLeftWidth={1} className={"borderColorDivider"} height={8} /> */}
+                            {/* <ColorModeToggle /> */}
                         </HStack>
                     </Flex>
                 </Box>

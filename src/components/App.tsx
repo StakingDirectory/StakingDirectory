@@ -13,16 +13,24 @@ const App = () => {
     const filteredProviders = filterProviders(dataFilter)
     const orderedFilteredProviders = orderProviders(filteredProviders)
 
+    const environment = process.env.NODE_ENV
+
     return (
         <Box minH="100vh" minW="100vw" className={"bgPage"}>
             <Flex direction="column" justifyContent="center" alignItems="center">
                 <Header />
                 {/* TODO: REMOVE WHEN PROD READY */}
-                <Box width={"100vw"} minH={6} bg="purple" textAlign={"center"} fontWeight={"extrabold"} color={"white"}>
-                    <Box>🏗️ ACTIVE DEVELOPMENT ENVIRONMENT - NOT PRODUCTION READY 🏗️</Box>
-                    <Box>Content may not be accurate. This will be fixed for production.</Box>
-                    <Box>All styles subject to change. This is not the final version.</Box>
-                </Box>
+                {environment != "development" && (
+                    <>
+                        <Box width={"100vw"} minH={6} bg="purple" textAlign={"center"} fontWeight={"extrabold"} color={"white"}>
+                            <Box>🏗️ ACTIVE DEVELOPMENT ENVIRONMENT - NOT PRODUCTION READY 🏗️</Box>
+                            <Box>This is not the final name.</Box>
+                            <Box>Content may not be accurate. This will be fixed for production.</Box>
+                            <Box>All styles subject to change. This is not the final version.</Box>
+                        </Box>
+                        <Box height={50} />
+                    </>
+                )}
                 <Box height={50} />
                 <DataTableTabs orderedFilteredProviders={orderedFilteredProviders} dataFilter={dataFilter} setDataFilter={setDataFilter} />
                 <Box height={"50vh"} />
