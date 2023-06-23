@@ -1,12 +1,14 @@
 import React from "react"
-import { Flex, Image, Tooltip } from "@chakra-ui/react"
+import { Flex, Image, Tooltip, Box } from "@chakra-ui/react"
 
 export default function StakeFromHome({ provider }) {
-    const label = provider.stakeFromHome ? "✅ Supports staking from home" : "❌ Does not support staking from home"
+    const label = (
+        <Box className={"tooltipLabel"}>{provider.stakeFromHome ? "✅ Supports staking from home" : "❌ Does not support staking from home"}</Box>
+    )
 
     return (
         <Flex direction="column" gap={"2px"} alignItems={"center"}>
-            <Tooltip label={label} placement="top" className="tooltipArrow" hasArrow={true}>
+            <Tooltip label={label} placement="top" className="tooltipArrow" gutter={10} hasArrow={true}>
                 <Image
                     src={"./images/StakeFromHome.png"}
                     alt={provider.logo.alt}

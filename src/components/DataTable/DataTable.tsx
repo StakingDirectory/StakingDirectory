@@ -177,7 +177,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                 <React.Fragment key={provider.id}>
                                     <Tr
                                         key={provider.id}
-                                        borderBottomWidth={1}
+                                        borderBottom={expandedRows.includes(index) ? "0" : "1px solid"}
                                         h={14}
                                         borderColor={expandedRows.includes(index) ? "transparent" : ""}
                                         onClick={() => {

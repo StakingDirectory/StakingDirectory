@@ -53,7 +53,7 @@ export default function ActiveFilters({ dataFilter, setDataFilter }) {
                 {Object.keys(dataFilter).length > 0 ? (
                     Object.keys(dataFilter).map((activeFilter) => {
                         return (
-                            <Flex key={activeFilter} className={"bgContent"} borderRadius={30} pl={2} pr={1} minH={10} gap={2}>
+                            <Flex key={activeFilter} className={"bgPageHover"} borderRadius={30} pl={2} pr={1} minH={10} gap={2}>
                                 <Flex px={1} alignItems={"center"} fontWeight={"bold"}>
                                     {dataProps.find((obj) => obj.id === activeFilter).name}
                                 </Flex>
@@ -98,13 +98,13 @@ export default function ActiveFilters({ dataFilter, setDataFilter }) {
                 ) : (
                     <Tooltip
                         placement={"top"}
-                        gutter={5}
+                        gutter={8}
                         openDelay={300}
-                        label={"Filter the table headings to show your active filters here"}
+                        label={<Box className={"tooltipLabel"}>Filter the table headings to show your active filters here</Box>}
                         className="tooltipArrow"
                         hasArrow={true}
                     >
-                        <Flex className={"bgContent"} borderRadius={30} px={3} gap={2} minH={10} alignItems={"center"}>
+                        <Flex className={"bgPageHover"} borderRadius={30} px={3} gap={2} minH={10} alignItems={"center"}>
                             <Text>No filters selected</Text>
                             <FontAwesomeIcon icon={faFilter} />
                         </Flex>

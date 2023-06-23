@@ -8,11 +8,24 @@ const customTheme = extendTheme({
             // This is a hack to get the tooltip arrow to work with a custom theme
             // It doesn't seem to accept variables, so I've hardcoded the values here
             ".tooltipArrow": {
-                "--popper-arrow-shadow-color": "#FFFFFF",
-                [cssVar("popper-arrow-bg").variable]: props.colorMode === "dark" ? "#272A2F" : "#EDF2F7",
+                "--popper-arrow-shadow-color": "#54199b",
+                [cssVar("popper-arrow-bg").variable]: props.colorMode === "dark" ? "#54199b" : "#EDF2F7",
+            },
+            ".tooltipLabel": {
+                padding: "10px",
+                bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
+                borderRadius: "7px",
+            },
+            // Only way I could find to increase the arrow size
+            "div .chakra-tooltip__arrow": {
+                width: "130% !important",
+                height: "130% !important",
             },
             ".bgPage": {
                 bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
+            },
+            ".bgPageHover": {
+                bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",
             },
             ".bgContent": {
                 bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
@@ -23,8 +36,11 @@ const customTheme = extendTheme({
             ".borderColorDivider": {
                 borderColor: props.colorMode === "dark" ? "divider.dark" : "divider.light",
             },
+            ".bgChecklistBar": {
+                bg: props.colorMode === "dark" ? "checklistBar.dark" : "checklistBar.light",
+            },
             ".borderChecklistBar": {
-                borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
+                borderColor: props.colorMode === "dark" ? "checklistBar.dark" : "checklistBar.light",
             },
             ".expandedTableRow": {
                 _hover: {
@@ -33,7 +49,7 @@ const customTheme = extendTheme({
             },
             ".checklistList": {
                 _hover: {
-                    bg: props.colorMode === "dark" ? "contentBackgroundHover.dark" : "contentBackground.light",
+                    bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",
                 },
             },
             ".expandContentBox": {
@@ -58,9 +74,13 @@ const customTheme = extendTheme({
         Table: {
             variants: {
                 DataTable: (props: StyleFunctionProps) => ({
+                    thead: {
+                        tr: {
+                            borderColor: props.colorMode === "dark" ? "tableBorder.dark" : "tableBorder.light",
+                        },
+                    },
                     th: {
                         bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
-                        borderColor: props.colorMode === "dark" ? "tableBorder.dark" : "tableBorder.light",
                         paddingTop: "1rem",
                         paddingLeft: "0.5rem",
                         paddingRight: "0.5rem",
@@ -71,6 +91,7 @@ const customTheme = extendTheme({
                     },
                     tbody: {
                         tr: {
+                            borderColor: props.colorMode === "dark" ? "tableBorder.dark" : "tableBorder.light",
                             _hover: {
                                 bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",
                             },
@@ -88,14 +109,14 @@ const customTheme = extendTheme({
             baseStyle: (props: StyleFunctionProps) => ({
                 bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
                 color: props.colorMode === "dark" ? "text.dark" : "text.light",
-                borderColor: "white",
+                borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
                 maxWidth: "500px",
                 textAlign: "center",
-                borderWidth: "1px",
+                borderWidth: "3px",
                 borderRadius: "10px",
                 fontWeight: "bold",
                 fontSize: "sm",
-                padding: "0.6rem",
+                padding: "0",
                 boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.2)",
                 // This is a hack to get the tooltip arrow to work with a custom theme
                 // and this hides the default arrow theme
@@ -138,7 +159,7 @@ const customTheme = extendTheme({
                         bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",
                     },
                     focus: {
-                        bg: props.colorMode === "dark" ? "contentBackgroundHover.dark" : "contentBackgroundHover.light",
+                        bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",
                     },
                 },
                 groupTitle: {
@@ -151,8 +172,8 @@ const customTheme = extendTheme({
                     button: {
                         transition: "none",
                         _hover: {
-                            border: "2px solid",
-                            borderColor: props.colorMode === "dark" ? "tableBorder.dark" : "tableBorder.light",
+                            border: "3px solid",
+                            borderColor: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
                         },
                     },
                 }),
@@ -172,35 +193,39 @@ const customTheme = extendTheme({
     colors: {
         pageBackground: {
             light: "#FFFFFF",
-            dark: "#1B1B1B",
+            dark: "#0f0536",
         },
         pageBackgroundHover: {
             light: "#EDF2F7",
-            dark: "#2f2f2f",
+            dark: "#2a114c",
         },
         contentBackground: {
             light: "#EDF2F7",
-            dark: "#272A2F",
+            dark: "#0e052c",
         },
-        contentBackgroundHover: {
-            light: "#b2b6ba",
-            dark: "#1f2025",
-        },
+        // contentBackgroundHover: {
+        //     light: "#b2b6ba",
+        //     dark: "#2a114c",
+        // },
         border: {
             light: "#D3D3D3",
-            dark: "#4b4a4a",
+            dark: "#54199b",
+        },
+        checklistBar: {
+            light: "#dfdfdf",
+            dark: "#0c081b",
         },
         tableBorder: {
-            light: "#dfdfdf",
-            dark: "#424242",
+            light: "#EDF2F7",
+            dark: "rgb(255, 255, 255, 0.2)",
         },
         divider: {
             light: "#dfdfdf",
-            dark: "#565656",
+            dark: "rgb(255, 255, 255, 0.2)",
         },
         gold: "#e7c60d",
         red: "#EC420C",
-        green: "#16913f",
+        green: "#289e33",
         blue: "#0da6d8",
         purple: "#b124b1",
         orange: "#d66b13",

@@ -32,7 +32,7 @@ export default function ChecklistList({ provider }) {
         const icon = value ? faCircleCheck : faCircleXmark
 
         return (
-            <Flex key={index} direction={"column"} minH={10} className={"checklistList"} borderRadius={10}>
+            <Flex key={index} direction={"column"} minH={10} className={"checklistList"}>
                 <HStack
                     py={3}
                     px={2}

@@ -20,8 +20,9 @@ export default function ChecklistBar({ provider }) {
         return (
             <Tooltip
                 key={index}
+                gutter={10}
                 label={
-                    <Flex direction={"column"} alignItems={"center"} gap={2}>
+                    <Flex direction={"column"} alignItems={"center"} gap={2} className="tooltipLabel">
                         <HStack>
                             <Box color={iconColor}>
                                 <FontAwesomeIcon icon={icon} size="lg" />
@@ -45,7 +46,7 @@ export default function ChecklistBar({ provider }) {
                 borderRadius={10}
                 borderWidth={3}
                 borderStyle="solid"
-                className={allTrue ? "bgPage" : "bgPage borderChecklistBar"}
+                className={allTrue ? "bgChecklistBar" : "bgChecklistBar borderChecklistBar"}
                 borderColor={allTrue ? "gold" : ""}
                 w={200}
                 h={10}
