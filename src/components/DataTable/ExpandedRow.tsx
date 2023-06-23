@@ -9,7 +9,7 @@ import NextLink from "next/link"
 import KeyOwner from "./TableCells/KeyOwner"
 import ChecklistList from "./ChecklistList"
 
-export default function ExpandedRow({ provider }) {
+export default function ExpandedRow({ provider, expandedChecklistRows, setExpandedChecklistRows }) {
     return (
         <Flex gap={5} pt={3} pb={5}>
             <Flex direction={"column"} gap={3} className={"expandContentBox"}>
@@ -48,7 +48,7 @@ export default function ExpandedRow({ provider }) {
                 {/* <KeyOwner provider={provider} id={"validatorKey"} />
                 <KeyOwner provider={provider} id={"withdrawalKey"} /> */}
             </Flex>
-            <ChecklistList provider={provider} />
+            <ChecklistList provider={provider} expandedChecklistRows={expandedChecklistRows} setExpandedChecklistRows={setExpandedChecklistRows} />
         </Flex>
     )
 }

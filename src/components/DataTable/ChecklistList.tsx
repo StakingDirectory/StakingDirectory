@@ -8,20 +8,20 @@ import { faCircleCheck, faCircleXmark } from "@fortawesome/free-regular-svg-icon
 import dataProps from "public/data/dataProps"
 const checklistProperties = dataProps.find((prop) => prop.id === "checklistProperties").checklistProperties
 
-export default function ChecklistList({ provider }) {
+export default function ChecklistList({ provider, expandedChecklistRows, setExpandedChecklistRows }) {
     const allTrue = checklistProperties.every((prop) => provider[prop.value]?.value)
 
-    const [expandedRows, setExpandedRows] = useState([])
     const expandRow = (index) => {
-        const indexPosition = expandedRows.indexOf(index)
-        const newExpandedRows = [...expandedRows]
+        const currentIndex = expandedChecklistRows.findIndex((row) => row.index === index && row.providerId === provider.id)
 
-        if (indexPosition !== -1) {
-            newExpandedRows.splice(indexPosition, 1)
+        const newExpandedRows = [...expandedChecklistRows]
+        if (currentIndex !== -1) {
+            newExpandedRows.splice(currentIndex, 1)
         } else {
-            newExpandedRows.push(index)
+            newExpandedRows.push({ providerId: provider.id, index })
         }
-        setExpandedRows(newExpandedRows)
+
+        setExpandedChecklistRows(newExpandedRows)
     }
 
     const renderBox = (status: { value: any; name: string }, index: number) => {
@@ -46,7 +46,9 @@ export default function ChecklistList({ provider }) {
                         icon={faChevronRight}
                         transition="all 0.2s"
                         size={"sm"}
-                        transform={`rotate(${expandedRows.includes(index) ? 90 : 0}deg)`}
+                        transform={`rotate(${
+                            expandedChecklistRows.some((row) => row.index === index && row.providerId === provider.id) ? 90 : 0
+                        }deg)`}
                         mr={3}
                         ml={2}
                     />
@@ -55,7 +57,7 @@ export default function ChecklistList({ provider }) {
                     </Box>
                     <Text>{statusName}</Text>
                 </HStack>
-                <Collapse in={expandedRows.includes(index)}>
+                <Collapse in={expandedChecklistRows.some((row) => row.index === index && row.providerId === provider.id)}>
                     <Box pl={12} pt={1} pb={3} pr={3}>
                         <Text>🏗️ More details coming soon! 🏗️</Text>
                     </Box>

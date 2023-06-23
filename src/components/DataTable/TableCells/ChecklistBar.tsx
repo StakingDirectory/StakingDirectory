@@ -7,7 +7,7 @@ import { faCircleCheck, faCircleXmark } from "@fortawesome/free-regular-svg-icon
 import dataProps from "public/data/dataProps"
 const checklistProperties = dataProps.find((prop) => prop.id === "checklistProperties").checklistProperties
 
-export default function ChecklistBar({ provider }) {
+export default function ChecklistBar({ provider, tableRowIndex, expandedRows, setExpandedChecklistRows }) {
     const allTrue = checklistProperties.every((prop) => provider[prop.value]?.value)
 
     const renderBox = (status: { value: any; name: string }, index: number) => {
@@ -35,7 +35,18 @@ export default function ChecklistBar({ provider }) {
                 className="tooltipArrow"
                 hasArrow={true}
             >
-                <Box borderRadius={0} w={10} bg={value ? "green" : "red"} />
+                <Box
+                    borderRadius={0}
+                    w={10}
+                    bg={value ? "green" : "red"}
+                    onClick={(e) => {
+                        // Prevent propagation of the event if tableRowIndex is in expandedRows
+                        if (expandedRows.includes(tableRowIndex)) {
+                            e.stopPropagation()
+                        }
+                        setExpandedChecklistRows([{ providerId: provider.id, index }])
+                    }}
+                />
             </Tooltip>
         )
     }

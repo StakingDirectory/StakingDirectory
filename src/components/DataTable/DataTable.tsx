@@ -38,6 +38,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
     }, [])
 
     const [expandedRows, setExpandedRows] = useState([])
+    const [expandedChecklistRows, setExpandedChecklistRows] = useState([])
 
     // If filter is changed, close all expanded rows
     useEffect(() => {
@@ -229,7 +230,12 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                             {provider.minStake.type == "eth" ? " ETH" : ""}
                                         </Td>
                                         <Td>
-                                            <ChecklistBar provider={provider} />
+                                            <ChecklistBar
+                                                provider={provider}
+                                                tableRowIndex={index}
+                                                expandedRows={expandedRows}
+                                                setExpandedChecklistRows={setExpandedChecklistRows}
+                                            />
                                         </Td>
                                         <Td w={5}>
                                             <DataRowMenuButton />
@@ -243,7 +249,11 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                                 borderBottom={expandedRows.includes(index) ? "1px solid" : "0"}
                                             >
                                                 <Collapse in={expandedRows.includes(index)}>
-                                                    <ExpandedRow provider={provider} />
+                                                    <ExpandedRow
+                                                        provider={provider}
+                                                        expandedChecklistRows={expandedChecklistRows}
+                                                        setExpandedChecklistRows={setExpandedChecklistRows}
+                                                    />
                                                 </Collapse>
                                             </Td>
                                         </Tr>
