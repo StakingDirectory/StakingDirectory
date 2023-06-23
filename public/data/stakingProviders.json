@@ -109,7 +109,7 @@
             "src": "./images/DappnodeLogo.png",
             "alt": "Logo"
         },
-        "name": "DAppNode Hardware",
+        "name": "DAppNode (Hardware)",
         "status": "active",
         "mainnetLaunchDate": "",
         "stakingType": "solo",
@@ -212,7 +212,7 @@
             "src": "./images/DappnodeLogo.png",
             "alt": "Logo"
         },
-        "name": "DAppNode Software",
+        "name": "DAppNode (Software)",
         "status": "active",
         "mainnetLaunchDate": "",
         "stakingType": "solo",
@@ -2066,7 +2066,7 @@
             "src": "./images/RocketPoolLogo.png",
             "alt": "Logo"
         },
-        "name": "Rocket Pool Node",
+        "name": "Rocket Pool (Node)",
         "status": "active",
         "mainnetLaunchDate": "",
         "stakingType": "pooled",
@@ -3307,7 +3307,7 @@
             "src": "./images/RocketPoolLogo.png",
             "alt": "Logo"
         },
-        "name": "Rocket Pool",
+        "name": "Rocket Pool (LST)",
         "status": "active",
         "mainnetLaunchDate": "",
         "stakingType": "lst",
@@ -3425,7 +3425,7 @@
             "value": "🏗️"
         },
         "links": {
-            "website": "https://stake.rocketpool.net/",
+            "website": "https://www.sharedstake.org/stake",
             "twitter": ""
         },
         "minStake": {

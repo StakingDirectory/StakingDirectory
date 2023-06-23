@@ -3,7 +3,9 @@ import { Flex, Image, Tooltip, Box } from "@chakra-ui/react"
 
 export default function StakeFromHome({ provider }) {
     const label = (
-        <Box className={"tooltipLabel"}>{provider.stakeFromHome ? "✅ Supports staking from home" : "❌ Does not support staking from home"}</Box>
+        <Box className={"tooltipLabel"}>
+            {provider.stakeFromHome ? "🏡 Allows you to operator your validator from your home" : "A node operator runs your validator for you"}
+        </Box>
     )
 
     return (
