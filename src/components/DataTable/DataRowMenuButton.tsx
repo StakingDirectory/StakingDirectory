@@ -52,13 +52,19 @@ export default function DataRowMenuButton() {
     return (
         <>
             <Menu variant={"DataTableOption"} gutter={3}>
-                <MenuButton aria-label="Options" borderRadius={10} w={8} h={8} cursor={"pointer"}>
+                <MenuButton aria-label="Options" borderRadius={10} w={8} h={8} cursor={"pointer"} onClick={(e) => e.stopPropagation()}>
                     <Flex justifyContent={"center"} alignItems={"center"} height={"100%"}>
                         <FontAwesomeIcon icon={faEllipsisV} />
                     </Flex>
                 </MenuButton>
                 <MenuList minW={1}>
-                    <MenuItem onClick={onOpen} icon={<FontAwesomeIcon icon={faEdit} />}>
+                    <MenuItem
+                        onClick={(e) => {
+                            e.stopPropagation()
+                            onOpen()
+                        }}
+                        icon={<FontAwesomeIcon icon={faEdit} />}
+                    >
                         Suggest update
                     </MenuItem>
                 </MenuList>

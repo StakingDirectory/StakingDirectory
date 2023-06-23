@@ -5,6 +5,8 @@ import { cssVar } from "@chakra-ui/theme-tools"
 const customTheme = extendTheme({
     styles: {
         global: (props: StyleFunctionProps) => ({
+            // This is a hack to get the tooltip arrow to work with a custom theme
+            // It doesn't seem to accept variables, so I've hardcoded the values here
             ".tooltipArrow": {
                 "--popper-arrow-shadow-color": "#FFFFFF",
                 [cssVar("popper-arrow-bg").variable]: props.colorMode === "dark" ? "#272A2F" : "#EDF2F7",
@@ -37,7 +39,7 @@ const customTheme = extendTheme({
             ".expandContentBox": {
                 bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
                 borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
-                borderWidth: "4px",
+                borderWidth: "3px",
                 padding: "1rem",
                 borderRadius: "20px",
             },
@@ -95,6 +97,8 @@ const customTheme = extendTheme({
                 fontSize: "sm",
                 padding: "0.6rem",
                 boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.2)",
+                // This is a hack to get the tooltip arrow to work with a custom theme
+                // and this hides the default arrow theme
                 [cssVar("popper-arrow-bg").variable]: "",
             }),
         },
@@ -124,6 +128,7 @@ const customTheme = extendTheme({
                     overflow: "hidden",
                     paddingTop: "0",
                     paddingBottom: "0",
+                    borderWidth: "3px",
                 },
                 item: {
                     paddingTop: "10px",
@@ -183,7 +188,7 @@ const customTheme = extendTheme({
         },
         border: {
             light: "#D3D3D3",
-            dark: "#333333",
+            dark: "#4b4a4a",
         },
         tableBorder: {
             light: "#dfdfdf",

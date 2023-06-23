@@ -100,7 +100,6 @@ export default function ActiveFilters({ dataFilter, setDataFilter }) {
                         placement={"top"}
                         gutter={5}
                         openDelay={300}
-                        closeOnClick={false}
                         label={"Filter the table headings to show your active filters here"}
                         className="tooltipArrow"
                         hasArrow={true}

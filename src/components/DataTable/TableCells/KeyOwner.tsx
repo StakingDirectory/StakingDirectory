@@ -36,7 +36,6 @@ export default function KeyOwner({ provider, id }) {
                             dataProps.flatMap((d) => d.options).find((opt) => opt?.value === owner)?.icon
                         )}
                         openDelay={0}
-                        closeOnClick={false}
                         className="tooltipArrow"
                         hasArrow={true}
                     >
