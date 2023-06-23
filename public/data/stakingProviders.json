@@ -8,7 +8,7 @@
         "name": "Avado",
         "status": "active",
         "stakeFromHome": true,
-        "mainnetLaunchDate": "",
+        "mainnetLaunchDate": "1900-01-01",
         "stakingType": "solo",
         "providerType": "hardware",
         "fee": {

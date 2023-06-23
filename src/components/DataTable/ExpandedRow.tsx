@@ -1,52 +1,39 @@
-import { Box, Flex, Link, Text, Button } from "@chakra-ui/react"
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faLink, faCode } from "@fortawesome/free-solid-svg-icons"
-import { faTwitter } from "@fortawesome/free-brands-svg-icons"
-
-import NextLink from "next/link"
+import { Box, Flex, Link, Text, Button, Tooltip } from "@chakra-ui/react"
 
 import KeyOwner from "./TableCells/KeyOwner"
-import ChecklistList from "./ChecklistList"
+import ChecklistList from "./ExpandedRow/ChecklistList"
+import Status from "./ExpandedRow/Status"
+import Links from "./ExpandedRow/Links"
 
 export default function ExpandedRow({ provider, expandedChecklistRows, setExpandedChecklistRows }) {
     return (
         <Flex gap={5} pt={3} pb={5}>
-            <Flex direction={"column"} gap={3} className={"expandContentBox"}>
-                {[
-                    { type: "Website", icon: faLink },
-                    { type: "Twitter", icon: faTwitter },
-                    { type: "Repo", icon: faCode },
-                ].map((linkData) => {
-                    const href = provider.links[linkData.type.toLowerCase()]
-                    const button = (
-                        <Button isDisabled={!href} px={0} w={"100%"} justifyContent={"start"} borderRadius={15}>
-                            <Flex>
-                                <Box w={10}>
-                                    <FontAwesomeIcon icon={linkData.icon} />
-                                </Box>
-                                <Text pr={5}>{linkData.type}</Text>
-                            </Flex>
-                        </Button>
-                    )
-                    return href ? (
-                        <Link key={linkData.type} as={NextLink} href={href} target="_blank">
-                            {button}
-                        </Link>
-                    ) : (
-                        <Box key={linkData.type}>{button}</Box>
-                    )
-                })}
+            <Flex direction={"column"} gap={5} w={160}>
+                <Status provider={provider} />
+                <Links provider={provider} />
             </Flex>
-
-            <Flex w={300} className={"expandContentBox"}>
-                <Text>🏗️ Description coming soon! 🏗️</Text>
+            <Flex direction={"column"} gap={5} w={400}>
+                <Flex className={"expandContentBox"} minH={150}>
+                    <Text>🏗️ Description coming soon! 🏗️</Text>
+                </Flex>
+                <Flex className={"expandContentBox"} grow={1}>
+                    <Text>🏗️ Staking Type coming soon! 🏗️</Text>
+                </Flex>
+                <Flex className={"expandContentBox"} grow={1}>
+                    <Text>🏗️ Provider Type coming soon! 🏗️</Text>
+                </Flex>
             </Flex>
-            <Flex direction={"column"} w={200} className={"expandContentBox"} gap={3}>
-                <Text>Key Owner</Text>
-                <Text>🏗️ Coming soon! 🏗️</Text>
-                {/* <KeyOwner provider={provider} id={"validatorKey"} />
+            <Flex direction={"column"} gap={5} w={200}>
+                <Flex direction={"column"} className={"expandContentBox"} gap={3} minH={200}>
+                    <Text>Key Owner</Text>
+                    <Text>🏗️ Coming soon! 🏗️</Text>
+                    {/* <KeyOwner provider={provider} id={"validatorKey"} />
                 <KeyOwner provider={provider} id={"withdrawalKey"} /> */}
+                </Flex>
+                <Flex direction={"column"} className={"expandContentBox"} grow={1} gap={3}>
+                    <Text>Locations</Text>
+                    <Text>🏗️ Coming soon! 🏗️</Text>
+                </Flex>
             </Flex>
             <ChecklistList provider={provider} expandedChecklistRows={expandedChecklistRows} setExpandedChecklistRows={setExpandedChecklistRows} />
         </Flex>
