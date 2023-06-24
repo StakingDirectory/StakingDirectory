@@ -7,7 +7,6 @@ import {
     faBuilding,
     faMagnifyingGlass,
     faBookOpen,
-    faShield,
     faBug,
     faVolumeHigh,
     faShapes,
@@ -16,7 +15,6 @@ import {
     faCloud,
     faDesktop,
     faShoppingBasket,
-    faKey,
 } from "@fortawesome/free-solid-svg-icons"
 
 const dataProps = [
