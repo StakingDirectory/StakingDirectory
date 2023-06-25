@@ -68,9 +68,35 @@ const customTheme = extendTheme({
                 padding: "1rem",
                 borderRadius: "20px",
             },
+            ".editorOptionContainer": {
+                paddingTop: "0.6rem",
+                paddingBottom: "1rem",
+                paddingX: "1rem",
+                bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
+                borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
+                borderRadius: "15px",
+                borderWidth: "3px",
+                marginTop: "1rem",
+            },
         }),
     },
     components: {
+        Input: {
+            variants: {
+                EditorInput: (props: StyleFunctionProps) => ({
+                    field: {
+                        bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackground.light",
+                        borderRadius: "10px",
+                        width: "50%",
+                        _focus: {
+                            borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
+                            borderWidth: "2px",
+                            marginLeft: "-2px",
+                        },
+                    },
+                }),
+            },
+        },
         Button: {
             variants: {
                 ActiveFilters: (props: StyleFunctionProps) => ({

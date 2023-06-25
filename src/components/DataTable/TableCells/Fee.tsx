@@ -12,7 +12,7 @@ export default function RewardFee({ provider }) {
             >
                 <Box borderRadius={10} border={"2px solid"} borderColor={"red"} w={"fit-content"} px={2} py={"2px"} className={"bgPage"}>
                     {provider.fee.value}
-                    {provider.fee.type == "rewardPercentage" ? "%" : ""}
+                    {provider.fee.type == "percentage" ? "%" : ""}
                 </Box>
             </Tooltip>
         </Flex>

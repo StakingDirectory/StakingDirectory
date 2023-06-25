@@ -6,6 +6,10 @@
     visibility: hidden;
 }
 
+div[data-lastpass-icon-root] {
+    display: none;
+}
+
 body {
     font-family: sans-serif;
     margin: 20px;

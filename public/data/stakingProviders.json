@@ -12,7 +12,7 @@
         "stakingType": "solo",
         "providerType": "hardware",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 0
         },
         "rewards": {
@@ -115,7 +115,7 @@
         "stakingType": "solo",
         "providerType": "hardware",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 0
         },
         "rewards": {
@@ -218,7 +218,7 @@
         "stakingType": "solo",
         "providerType": "software",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 0
         },
         "rewards": {
@@ -321,7 +321,7 @@
         "stakingType": "solo",
         "providerType": "software",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 0
         },
         "rewards": {
@@ -424,7 +424,7 @@
         "stakingType": "solo",
         "providerType": "software",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 0
         },
         "rewards": {
@@ -527,7 +527,7 @@
         "stakingType": "solo",
         "providerType": "software",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 0
         },
         "rewards": {
@@ -630,7 +630,7 @@
         "stakingType": "solo",
         "providerType": "software",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 0
         },
         "rewards": {
@@ -733,7 +733,7 @@
         "stakingType": "solo",
         "providerType": "software",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 0
         },
         "rewards": {
@@ -1042,7 +1042,7 @@
         "stakingType": "solo",
         "providerType": "saas",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 12.5
         },
         "rewards": {
@@ -1145,7 +1145,7 @@
         "stakingType": "solo",
         "providerType": "saas",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 8
         },
         "rewards": {
@@ -1351,7 +1351,7 @@
         "stakingType": "solo",
         "providerType": "saas",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 2
         },
         "rewards": {
@@ -1660,7 +1660,7 @@
         "stakingType": "solo",
         "providerType": "saas",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 10
         },
         "rewards": {
@@ -1763,7 +1763,7 @@
         "stakingType": "solo",
         "providerType": "saas",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 10
         },
         "rewards": {
@@ -2072,7 +2072,7 @@
         "stakingType": "pooled",
         "providerType": "software",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 0
         },
         "rewards": {
@@ -2381,7 +2381,7 @@
         "stakingType": "pooled",
         "providerType": "saas",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 8
         },
         "rewards": {
@@ -2484,7 +2484,7 @@
         "stakingType": "pooled",
         "providerType": "saas",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 10
         },
         "rewards": {
@@ -2587,7 +2587,7 @@
         "stakingType": "pooled",
         "providerType": "saas",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 10
         },
         "rewards": {
@@ -2897,7 +2897,7 @@
         "stakingType": "lst",
         "providerType": "lst",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 25
         },
         "rewards": {
@@ -3001,7 +3001,7 @@
         "stakingType": "lst",
         "providerType": "lst",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 10
         },
         "rewards": {
@@ -3105,7 +3105,7 @@
         "stakingType": "lst",
         "providerType": "lst",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 10
         },
         "rewards": {
@@ -3313,7 +3313,7 @@
         "stakingType": "lst",
         "providerType": "lst",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 14
         },
         "rewards": {
@@ -3417,7 +3417,7 @@
         "stakingType": "lst",
         "providerType": "lst",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 5
         },
         "rewards": {
@@ -3521,7 +3521,7 @@
         "stakingType": "lst",
         "providerType": "lst",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 10
         },
         "rewards": {
@@ -3625,7 +3625,7 @@
         "stakingType": "lst",
         "providerType": "lst",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 10
         },
         "rewards": {
@@ -3729,7 +3729,7 @@
         "stakingType": "lst",
         "providerType": "lst",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 10
         },
         "rewards": {
@@ -4041,7 +4041,7 @@
         "stakingType": "lst",
         "providerType": "lst",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 5
         },
         "rewards": {
@@ -4146,7 +4146,7 @@
         "providerType": "lst",
         "lstName": "stETH",
         "fee": {
-            "type": "rewardPercentage",
+            "type": "percentage",
             "value": 10
         },
         "rewards": {
