@@ -97,6 +97,7 @@ const customTheme = extendTheme({
                     field: {
                         bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackground.light",
                         borderRadius: "10px",
+                        borderLeftRadius: "0",
                         width: "50%",
                         _focus: {
                             borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
