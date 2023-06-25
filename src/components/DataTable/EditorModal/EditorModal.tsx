@@ -29,6 +29,7 @@ import {
 } from "@chakra-ui/react"
 
 import OptionSelector from "./OptionSelector"
+import EditorOptionHeader from "./EditorOptionHeader"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown, faRotateLeft } from "@fortawesome/free-solid-svg-icons"
@@ -62,40 +63,6 @@ export default function EditorModal({ isOpen, onClose, provider }) {
         }
     }
 
-    const EditorOptionHeader = ({ id, name }) => {
-        return (
-            <Flex gap={5} alignItems={"center"} justifyContent={"space-between"} h={8}>
-                <Text fontSize={"lg"} fontWeight={"bold"}>
-                    {name}
-                </Text>
-                {updatedValues[id] && (
-                    <Flex gap={2} alignItems={"center"}>
-                        <Box className={"editedLozenge"}>Edited</Box>
-                        <Tooltip
-                            placement={"top"}
-                            gutter={8}
-                            label={<Box className={"tooltipLabel"}>Reset option</Box>}
-                            className="tooltipArrow"
-                            hasArrow={true}
-                        >
-                            <IconButton
-                                aria-label="Reset option"
-                                icon={<FontAwesomeIcon icon={faRotateLeft} />}
-                                borderRadius={20}
-                                h={7}
-                                onClick={() => {
-                                    const updatedValuesCopy = { ...updatedValues }
-                                    delete updatedValuesCopy[id]
-                                    setUpdatedValues(updatedValuesCopy)
-                                }}
-                            />
-                        </Tooltip>
-                    </Flex>
-                )}
-            </Flex>
-        )
-    }
-
     return (
         <Modal isOpen={isOpen} onClose={onClose} isCentered>
             <ModalOverlay />
@@ -116,10 +83,15 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                         </Flex>
                     </ModalHeader>
                     <ModalCloseButton mt={1} />
-                    <ModalBody>
+                    <ModalBody pt={0}>
                         {currentSelection == "name" || currentSelection == "allOptions" ? (
                             <EditorOptionContainer>
-                                <EditorOptionHeader id={"name"} name={"Update Name"} />
+                                <EditorOptionHeader
+                                    id={"name"}
+                                    name={"Update Name"}
+                                    updatedValues={updatedValues}
+                                    setUpdatedValues={setUpdatedValues}
+                                />
                                 <InputGroup>
                                     <InputLeftAddon>Name</InputLeftAddon>
                                     <Input
@@ -138,7 +110,12 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                         ) : null}
                         {currentSelection == "status" || currentSelection == "allOptions" ? (
                             <EditorOptionContainer>
-                                <EditorOptionHeader id={"status"} name={"Update Status"} />
+                                <EditorOptionHeader
+                                    id={"status"}
+                                    name={"Update Status"}
+                                    updatedValues={updatedValues}
+                                    setUpdatedValues={setUpdatedValues}
+                                />
                                 <InputGroup>
                                     <InputLeftAddon fontWeight={"bold"}>Status</InputLeftAddon>
                                     <Menu variant={"EditorSelector"} placement="bottom-start" gutter={2}>
