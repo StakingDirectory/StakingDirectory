@@ -18,14 +18,12 @@ const App = () => {
         dataProps.find((prop) => prop.id === "checklistProperties").checklistProperties
     )
 
-    const environment = process.env.NODE_ENV
-
     return (
         <Box minH="100vh" minW="100vw" className={"bgPage"} display="flex" flexDirection="column">
             <Flex direction="column" justifyContent="center" alignItems="center">
                 <Header />
                 {/* TODO: REMOVE WHEN PROD READY */}
-                {environment != "development" && (
+                {process.env.NODE_ENV != "development" && (
                     <>
                         <Box width={"100vw"} minH={6} bg="pink" textAlign={"center"} fontWeight={"extrabold"} color={"white"}>
                             <Box>🏗️ ACTIVE DEVELOPMENT ENVIRONMENT - NOT PRODUCTION READY 🏗️</Box>

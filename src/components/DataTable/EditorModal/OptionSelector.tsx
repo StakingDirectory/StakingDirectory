@@ -9,7 +9,7 @@ const providerProperties = dataProps.find((prop) => prop.id === "providerPropert
 export default function EditorModal({ provider, currentSelection, setCurrentSelection, updatedValues }) {
     return (
         <Menu variant={"EditorSelector"} placement="bottom-start" gutter={2}>
-            <MenuButton as={Button} variant={"EditorSelector"} mr={8}>
+            <MenuButton as={Button} variant={"EditorSelector"}>
                 <Flex gap={2} justifyContent={"space-between"}>
                     <Text>
                         {currentSelection == "allOptions"

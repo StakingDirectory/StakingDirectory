@@ -20,8 +20,6 @@ import EditorModal from "./EditorModal/EditorModal"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEllipsisV, faEdit } from "@fortawesome/free-solid-svg-icons"
 
-const environment = process.env.NODE_ENV
-
 export default function DataRowMenuButton({ provider }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
@@ -41,7 +39,7 @@ export default function DataRowMenuButton({ provider }) {
                         }}
                         icon={<FontAwesomeIcon icon={faEdit} />}
                     >
-                        Suggest update
+                        {process.env.NODE_ENV != "development" ? "Suggest update" : "Edit data"}
                     </MenuItem>
                 </MenuList>
             </Menu>

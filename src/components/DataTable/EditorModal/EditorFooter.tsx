@@ -1,12 +1,15 @@
 import React, { useRef, useEffect, useState } from "react"
+import axios from "axios"
 
-import { Flex, Text, Box, Code, Button, Collapse, Tooltip, IconButton } from "@chakra-ui/react"
+import { Flex, Text, Box, Code, Button, Collapse, Tooltip, IconButton, Spinner } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronRight, faRotateLeft } from "@fortawesome/free-solid-svg-icons"
+import { faFloppyDisk, faPaperPlane } from "@fortawesome/free-regular-svg-icons"
 
-export default function EditorFooter({ onClose, updatedValues, setUpdatedValues }) {
+export default function EditorFooter({ onClose, provider, updatedValues, setUpdatedValues }) {
     const [isOpen, setIsOpen] = useState(false)
+    const [loading, setLoading] = useState(false)
 
     useEffect(() => {
         if (JSON.stringify(updatedValues) == "{}") {
@@ -40,7 +43,7 @@ export default function EditorFooter({ onClose, updatedValues, setUpdatedValues 
                                 mr={1}
                                 ml={1}
                             />
-                            <Text pr={2}>Edited data</Text>
+                            <Text pr={2}>What&apos;s changed?</Text>
                         </Flex>
                         <Tooltip
                             placement={"top"}
@@ -66,8 +69,40 @@ export default function EditorFooter({ onClose, updatedValues, setUpdatedValues 
                     <Flex grow={1}></Flex>
                 )}
                 <Flex mb={1}>
-                    <Button variant={"EditorSubmit"} isDisabled={JSON.stringify(updatedValues) != "{}" ? false : true}>
-                        Suggest update
+                    <Button
+                        variant={"EditorSubmit"}
+                        isDisabled={JSON.stringify(updatedValues) === "{}" || loading}
+                        onClick={() => {
+                            setLoading(true)
+                            axios
+                                .post("/api/updateProvider", { id: provider.id, updatedValues })
+                                .then((res) => {
+                                    console.log(res.data)
+                                    setTimeout(() => {
+                                        onClose()
+                                        setLoading(false)
+                                        setUpdatedValues({})
+                                    }, 1000) // Delay to show the spinner
+                                })
+                                .catch((err) => {
+                                    console.error(err)
+                                    setLoading(false)
+                                })
+                        }}
+                    >
+                        <Flex justifyItems={"center"} gap={3}>
+                            {loading ? (
+                                <>
+                                    <Text pt={"2px"}>{process.env.NODE_ENV === "development" ? "Saving..." : "Sending..."}</Text>
+                                    <Spinner />
+                                </>
+                            ) : (
+                                <>
+                                    <Text>{process.env.NODE_ENV === "development" ? "Save data" : "Suggest update"}</Text>
+                                    <FontAwesomeIcon icon={process.env.NODE_ENV === "development" ? faFloppyDisk : faPaperPlane} size={"lg"} />
+                                </>
+                            )}
+                        </Flex>
                     </Button>
                 </Flex>
             </Flex>

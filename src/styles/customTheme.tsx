@@ -151,6 +151,11 @@ const customTheme = extendTheme({
                         _active: {
                             bg: darkenColor(props.colorMode, mainColor, 0.1),
                         },
+                        "&[disabled]:hover": {
+                            _hover: {
+                                bg: mainColor,
+                            },
+                        },
                     }
                 },
             },
@@ -256,7 +261,7 @@ const customTheme = extendTheme({
                         transition: "none",
                         _hover: {
                             border: "3px solid",
-                            borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
+                            borderColor: darkenColor(props.colorMode, props.theme.colors.border.dark, 0.05),
                         },
                     },
                 }),

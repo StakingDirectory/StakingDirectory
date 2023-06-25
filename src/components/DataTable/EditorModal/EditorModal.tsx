@@ -38,8 +38,6 @@ import { faChevronDown, faRotateLeft } from "@fortawesome/free-solid-svg-icons"
 import dataProps from "public/data/dataProps"
 const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
 
-const environment = process.env.NODE_ENV
-
 export default function EditorModal({ isOpen, onClose, provider }) {
     const [currentSelection, setCurrentSelection] = useState("allOptions")
     const [updatedValues, setUpdatedValues] = useState({})
@@ -47,10 +45,10 @@ export default function EditorModal({ isOpen, onClose, provider }) {
     return (
         <Modal isOpen={isOpen} onClose={onClose} isCentered>
             <ModalOverlay />
-            {environment === "development" ? (
-                <ModalContent minH="50vh" maxH={"90vh"} minW="50vw" overflow={"hidden"}>
+            {process.env.NODE_ENV === "development" ? (
+                <ModalContent h={"80vh"} minW="50vw" overflow={"hidden"}>
                     <ModalHeader fontWeight={"extrabold"} fontSize={"initial"}>
-                        <Flex gap={5} alignItems={"center"} wrap={"wrap"}>
+                        <Flex gap={5} alignItems={"center"} wrap={"wrap"} justifyContent={"space-between"}>
                             <Flex gap={3} alignItems={"center"} fontSize={"xl"}>
                                 <Image objectFit="contain" boxSize={8} src={provider.logo.src} alt={provider.logo.alt} borderRadius={"100%"} />
                                 <Text isTruncated>{provider.name}</Text>
@@ -63,7 +61,7 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                             />
                         </Flex>
                     </ModalHeader>
-                    <ModalCloseButton mt={1} />
+                    {/* <ModalCloseButton mt={1} /> */}
                     <ModalBody overflowY={"scroll"} pt={0}>
                         {(currentSelection == "name" || currentSelection == "allOptions") && (
                             <EditorOption
@@ -91,7 +89,7 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                         )}
                     </ModalBody>
                     <ModalFooter>
-                        <EditorFooter onClose={onClose} updatedValues={updatedValues} setUpdatedValues={setUpdatedValues} />
+                        <EditorFooter onClose={onClose} provider={provider} updatedValues={updatedValues} setUpdatedValues={setUpdatedValues} />
                     </ModalFooter>
                 </ModalContent>
             ) : (
