@@ -81,7 +81,6 @@ const customTheme = extendTheme({
                 EditorSelector: (props: StyleFunctionProps) => ({
                     background: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackground.light",
                     borderRadius: "10px",
-                    marginTop: "10px",
                     _hover: {
                         bg: props.colorMode === "dark" ? "rgba(255, 255, 255, 0.15)" : "pageBackground.light",
                     },

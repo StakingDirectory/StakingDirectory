@@ -29,7 +29,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
     const nameInputRef = useRef<HTMLInputElement>(null)
     const filterDisabledColor = useColorModeValue("rgba(0, 0, 0, 0.2)", "rgba(255, 255, 255, 0.2)")
 
-    const [hasMounted, setHasMounted] = React.useState(false)
+    const [hasMounted, setHasMounted] = useState(false)
     useEffect(() => {
         setHasMounted(true)
     }, [])
