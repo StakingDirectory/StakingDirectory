@@ -78,6 +78,17 @@ const customTheme = extendTheme({
                         bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
                     },
                 }),
+                EditorSelector: (props: StyleFunctionProps) => ({
+                    background: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackground.light",
+                    borderRadius: "10px",
+                    marginTop: "10px",
+                    _hover: {
+                        bg: props.colorMode === "dark" ? "rgba(255, 255, 255, 0.15)" : "pageBackground.light",
+                    },
+                    _active: {
+                        bg: props.colorMode === "dark" ? "rgba(255, 255, 255, 0.25)" : "pageBackground.light",
+                    },
+                }),
             },
         },
         Table: {
@@ -125,7 +136,7 @@ const customTheme = extendTheme({
                 fontWeight: "bold",
                 fontSize: "sm",
                 padding: "0",
-                boxShadow: "0 0 30px 0 rgba(0, 0, 0, 1)",
+                boxShadow: "0 0 20px 0 rgba(0, 0, 0, 1)",
                 // This is a hack to get the tooltip arrow to work with a custom theme
                 // and this hides the default arrow theme
                 [cssVar("popper-arrow-bg").variable]: "",
@@ -193,20 +204,6 @@ const customTheme = extendTheme({
                         _hover: {
                             bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",
                         },
-                    },
-                }),
-                EditorSelector: (props: StyleFunctionProps) => ({
-                    button: {
-                        bg: props.colorMode === "dark" ? "blue" : "contentBackground.light",
-                        paddingY: "5px",
-                        paddingX: "10px",
-                        borderRadius: "5px",
-                        marginTop: "8px",
-                        // transition: "none",
-                        // _hover: {
-                        //     border: "3px solid",
-                        //     borderColor: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
-                        // },
                     },
                 }),
             },
