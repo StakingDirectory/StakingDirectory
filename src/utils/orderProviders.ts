@@ -1,6 +1,6 @@
 const countChecklistTrues = (provider, checklistProperties) => {
     return checklistProperties.reduce((count, checklistItem) => {
-        return count + (provider[checklistItem.value]?.value ? 1 : 0)
+        return count + (provider[checklistItem]?.value ? 1 : 0)
     }, 0)
 }
 
