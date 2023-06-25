@@ -27,7 +27,7 @@ const App = () => {
                 {/* TODO: REMOVE WHEN PROD READY */}
                 {environment != "development" && (
                     <>
-                        <Box width={"100vw"} minH={6} bg="purple" textAlign={"center"} fontWeight={"extrabold"} color={"white"}>
+                        <Box width={"100vw"} minH={6} bg="pink" textAlign={"center"} fontWeight={"extrabold"} color={"white"}>
                             <Box>🏗️ ACTIVE DEVELOPMENT ENVIRONMENT - NOT PRODUCTION READY 🏗️</Box>
                             <Box>This is not the final name.</Box>
                             <Box>Content may not be accurate. This will be fixed for production.</Box>

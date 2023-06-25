@@ -22,7 +22,7 @@ export default function DataTableTabs({ orderedFilteredProviders, dataFilter, se
                         </Tab>
                         <Tab fontWeight={"bold"} borderTopRadius={10} minW={200}>
                             <Flex>
-                                In development {tabNumberBox(orderedFilteredProviders.filter((item) => item.status === "dev").length, "purple")}
+                                In development {tabNumberBox(orderedFilteredProviders.filter((item) => item.status === "dev").length, "pink")}
                             </Flex>
                         </Tab>
                     </TabList>

@@ -16,7 +16,7 @@ export default function ClearFiltersButton({ dataFilter, setDataFilter }) {
                     placement="top"
                 >
                     <IconButton
-                        color="purple"
+                        color="pink"
                         variant="ghost"
                         aria-label="Clear filters"
                         size="sm"

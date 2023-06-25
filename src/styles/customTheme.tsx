@@ -1,6 +1,14 @@
 import { extendTheme } from "@chakra-ui/react"
 import type { StyleFunctionProps } from "@chakra-ui/styled-system"
 import { cssVar } from "@chakra-ui/theme-tools"
+import { lighten, darken } from "polished"
+
+function lightenColor(colorMode, mainColor, value) {
+    return colorMode === "dark" ? lighten(value, mainColor) : darken(value, mainColor)
+}
+function darkenColor(colorMode, mainColor, value) {
+    return colorMode === "dark" ? darken(value, mainColor) : lighten(value, mainColor)
+}
 
 const customTheme = extendTheme({
     styles: {
@@ -131,6 +139,20 @@ const customTheme = extendTheme({
                         bg: props.colorMode === "dark" ? "rgba(255, 255, 255, 0.25)" : "pageBackground.light",
                     },
                 }),
+                EditorSubmit: (props: StyleFunctionProps) => {
+                    const mainColor = props.theme.colors.purple
+                    return {
+                        background: props.colorMode === "dark" ? mainColor : "pageBackground.light",
+                        fontWeight: "bold",
+                        borderRadius: "10px",
+                        _hover: {
+                            bg: lightenColor(props.colorMode, mainColor, 0.1),
+                        },
+                        _active: {
+                            bg: darkenColor(props.colorMode, mainColor, 0.1),
+                        },
+                    }
+                },
             },
         },
         Table: {
@@ -234,7 +256,7 @@ const customTheme = extendTheme({
                         transition: "none",
                         _hover: {
                             border: "3px solid",
-                            borderColor: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
+                            borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
                         },
                     },
                 }),
@@ -254,7 +276,8 @@ const customTheme = extendTheme({
             baseStyle: (props: StyleFunctionProps) => ({
                 dialog: {
                     bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
-                    borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
+                    borderColor: darkenColor(props.colorMode, props.theme.colors.border.dark, 0.15),
+
                     borderRadius: "15px",
                     borderWidth: "3px",
                 },
@@ -263,11 +286,11 @@ const customTheme = extendTheme({
                 },
                 header: {
                     borderBottomWidth: "3px",
-                    borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
+                    borderColor: darkenColor(props.colorMode, props.theme.colors.border.dark, 0.15),
                 },
                 footer: {
                     borderTopWidth: "3px",
-                    borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
+                    borderColor: darkenColor(props.colorMode, props.theme.colors.border.dark, 0.15),
                 },
             }),
         },
@@ -285,10 +308,6 @@ const customTheme = extendTheme({
             light: "#EDF2F7",
             dark: "#0e052c",
         },
-        // contentBackgroundHover: {
-        //     light: "#b2b6ba",
-        //     dark: "#3f1777",
-        // },
         border: {
             light: "#D3D3D3",
             dark: "#54199b",
@@ -309,7 +328,8 @@ const customTheme = extendTheme({
         red: "#EC420C",
         green: "#289e33",
         blue: "#0da6d8",
-        purple: "#b124b1",
+        pink: "#b124b1",
+        purple: "#54199b",
         orange: "#d66b13",
     },
 })

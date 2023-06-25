@@ -91,7 +91,7 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                         )}
                     </ModalBody>
                     <ModalFooter>
-                        <EditorFooter onClose={onClose} updatedValues={updatedValues} />
+                        <EditorFooter onClose={onClose} updatedValues={updatedValues} setUpdatedValues={setUpdatedValues} />
                     </ModalFooter>
                 </ModalContent>
             ) : (
