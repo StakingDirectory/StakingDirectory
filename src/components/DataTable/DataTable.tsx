@@ -67,7 +67,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                 placement={"right"}
                                 gutter={0}
                                 label={
-                                    <Box className={"tooltipLabel"}>
+                                    <Box className={"tooltipLabel"} p={6}>
                                         <Flex direction={"column"} alignItems={"start"} gap={2}>
                                             <Text fontWeight={"extrabold"} fontSize={"lg"}>
                                                 How is the table ordered?

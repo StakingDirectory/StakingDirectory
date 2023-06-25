@@ -118,14 +118,14 @@ const customTheme = extendTheme({
                 bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
                 color: props.colorMode === "dark" ? "text.dark" : "text.light",
                 borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
-                maxWidth: "500px",
+                maxWidth: "100%",
                 textAlign: "center",
                 borderWidth: "3px",
                 borderRadius: "10px",
                 fontWeight: "bold",
                 fontSize: "sm",
                 padding: "0",
-                boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.2)",
+                boxShadow: "0 0 30px 0 rgba(0, 0, 0, 1)",
                 // This is a hack to get the tooltip arrow to work with a custom theme
                 // and this hides the default arrow theme
                 [cssVar("popper-arrow-bg").variable]: "",
