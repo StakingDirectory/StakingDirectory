@@ -12,7 +12,9 @@ const customTheme = extendTheme({
                 [cssVar("popper-arrow-bg").variable]: props.colorMode === "dark" ? "#54199b" : "#EDF2F7",
             },
             ".tooltipLabel": {
-                padding: "15px",
+                paddingX: "15px",
+                paddingY: "10px",
+
                 bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
                 borderRadius: "7px",
             },
@@ -77,6 +79,14 @@ const customTheme = extendTheme({
                 borderRadius: "15px",
                 borderWidth: "3px",
                 marginTop: "1rem",
+            },
+            ".editedLozenge": {
+                bg: "orange",
+                paddingX: "0.5rem",
+                paddingY: "0.2rem",
+                borderRadius: "10px",
+                color: "white",
+                fontWeight: "bold",
             },
         }),
     },

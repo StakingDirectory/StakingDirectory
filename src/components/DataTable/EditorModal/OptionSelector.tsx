@@ -6,7 +6,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 import dataProps from "public/data/dataProps"
 const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
 
-export default function EditorModal({ provider, currentSelection, setCurrentSelection }) {
+export default function EditorModal({ provider, currentSelection, setCurrentSelection, updatedValues }) {
     return (
         <Menu variant={"EditorSelector"} placement="bottom-start" gutter={2}>
             <MenuButton as={Button} variant={"EditorSelector"} mr={8}>
@@ -50,7 +50,14 @@ export default function EditorModal({ provider, currentSelection, setCurrentSele
                                     setCurrentSelection(prop.value)
                                 }}
                             >
-                                {prop.name == "Yes!" ? "Stake from home" : prop.name}
+                                <Flex justifyContent={"space-between"} alignItems={"center"} gap={3}>
+                                    {prop.name == "Yes!" ? "Stake from home" : prop.name}
+                                    {updatedValues[prop.value] && (
+                                        <Box className={"editedLozenge"} fontSize={"sm"} paddingY={0}>
+                                            Edited
+                                        </Box>
+                                    )}
+                                </Flex>
                             </MenuItemOption>
                         ))}
                 </MenuOptionGroup>

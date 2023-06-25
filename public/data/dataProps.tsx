@@ -51,6 +51,7 @@ const dataProps = [
             { value: "nodeOperator", name: "Operator" },
             { value: "userWithdrawal", name: "User" },
             { value: "smartContract", name: "Smart contract" },
+            { value: "status", name: "Status" },
             { value: "dev", name: "In development" },
             { value: "active", name: "Active" },
         ],

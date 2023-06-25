@@ -24,12 +24,14 @@ import {
     InputGroup,
     InputLeftAddon,
     Code,
+    IconButton,
+    Tooltip,
 } from "@chakra-ui/react"
 
 import OptionSelector from "./OptionSelector"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
+import { faChevronDown, faRotateLeft } from "@fortawesome/free-solid-svg-icons"
 
 import dataProps from "public/data/dataProps"
 const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
@@ -49,7 +51,6 @@ export default function EditorModal({ isOpen, onClose, provider }) {
     const [updatedValues, setUpdatedValues] = useState({})
 
     const nameInputRef = useRef<HTMLInputElement | null>(null)
-    const statusInputRef = useRef<HTMLInputElement | null>(null)
 
     const updateValues = (option, value) => {
         if (JSON.stringify(value) === JSON.stringify(provider[option]) || value === "") {
@@ -59,6 +60,40 @@ export default function EditorModal({ isOpen, onClose, provider }) {
         } else {
             setUpdatedValues({ ...updatedValues, [option]: value })
         }
+    }
+
+    const EditorOptionHeader = ({ id, name }) => {
+        return (
+            <Flex gap={5} alignItems={"center"} justifyContent={"space-between"} h={8}>
+                <Text fontSize={"lg"} fontWeight={"bold"}>
+                    {name}
+                </Text>
+                {updatedValues[id] && (
+                    <Flex gap={2} alignItems={"center"}>
+                        <Box className={"editedLozenge"}>Edited</Box>
+                        <Tooltip
+                            placement={"top"}
+                            gutter={8}
+                            label={<Box className={"tooltipLabel"}>Reset option</Box>}
+                            className="tooltipArrow"
+                            hasArrow={true}
+                        >
+                            <IconButton
+                                aria-label="Reset option"
+                                icon={<FontAwesomeIcon icon={faRotateLeft} />}
+                                borderRadius={20}
+                                h={7}
+                                onClick={() => {
+                                    const updatedValuesCopy = { ...updatedValues }
+                                    delete updatedValuesCopy[id]
+                                    setUpdatedValues(updatedValuesCopy)
+                                }}
+                            />
+                        </Tooltip>
+                    </Flex>
+                )}
+            </Flex>
+        )
     }
 
     return (
@@ -72,21 +107,24 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                                 <Image objectFit="contain" boxSize={8} src={provider.logo.src} alt={provider.logo.alt} borderRadius={"100%"} />
                                 <Text isTruncated>{provider.name}</Text>
                             </Flex>
-                            <OptionSelector provider={provider} currentSelection={currentSelection} setCurrentSelection={setCurrentSelection} />
+                            <OptionSelector
+                                provider={provider}
+                                currentSelection={currentSelection}
+                                setCurrentSelection={setCurrentSelection}
+                                updatedValues={updatedValues}
+                            />
                         </Flex>
                     </ModalHeader>
                     <ModalCloseButton mt={1} />
                     <ModalBody>
                         {currentSelection == "name" || currentSelection == "allOptions" ? (
                             <EditorOptionContainer>
-                                <Text fontSize={"lg"} fontWeight={"bold"}>
-                                    Update Name
-                                </Text>
+                                <EditorOptionHeader id={"name"} name={"Update Name"} />
                                 <InputGroup>
                                     <InputLeftAddon>Name</InputLeftAddon>
                                     <Input
                                         variant={"EditorInput"}
-                                        defaultValue={updatedValues["name"] ? updatedValues["name"] : provider.name}
+                                        value={updatedValues["name"] ? updatedValues["name"] : provider.name}
                                         placeholder="Provider name..."
                                         ref={nameInputRef}
                                         onChange={() => {
@@ -100,9 +138,7 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                         ) : null}
                         {currentSelection == "status" || currentSelection == "allOptions" ? (
                             <EditorOptionContainer>
-                                <Text fontSize={"lg"} fontWeight={"bold"}>
-                                    Update Status
-                                </Text>
+                                <EditorOptionHeader id={"status"} name={"Update Status"} />
                                 <InputGroup>
                                     <InputLeftAddon fontWeight={"bold"}>Status</InputLeftAddon>
                                     <Menu variant={"EditorSelector"} placement="bottom-start" gutter={2}>
@@ -122,13 +158,10 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                                             </Flex>
                                         </MenuButton>
                                         <MenuList minW={1}>
-                                            <MenuOptionGroup
-                                                defaultValue={updatedValues["status"] ? updatedValues["status"] : provider.status}
-                                                type="radio"
-                                            >
+                                            <MenuOptionGroup value={updatedValues["status"] ? updatedValues["status"] : provider.status} type="radio">
                                                 {[
-                                                    { value: "dev", name: "In development" },
                                                     { value: "active", name: "Active" },
+                                                    { value: "dev", name: "In development" },
                                                 ].map((option) => (
                                                     <MenuItemOption
                                                         key={option.value}
