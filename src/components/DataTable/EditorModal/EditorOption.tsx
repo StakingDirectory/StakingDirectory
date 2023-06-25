@@ -50,7 +50,7 @@ export default function EditorOption({ id, name, inputType, options = [], update
             <InputGroup>
                 {inputType === "input" && (
                     <>
-                        <InputLeftAddon fontWeight={"bold"} borderLeftRadius={"10px"}>
+                        <InputLeftAddon cursor={"default"} fontWeight={"bold"} borderLeftRadius={"10px"}>
                             {name}
                         </InputLeftAddon>
                         <Input
@@ -69,7 +69,7 @@ export default function EditorOption({ id, name, inputType, options = [], update
 
                 {inputType === "select" && (
                     <>
-                        <InputLeftAddon fontWeight={"bold"} borderLeftRadius={"10px"}>
+                        <InputLeftAddon cursor={"default"} fontWeight={"bold"} borderLeftRadius={"10px"}>
                             {name}
                         </InputLeftAddon>
                         <Menu variant={"EditorSelector"} placement="bottom-start" gutter={2}>

@@ -30,6 +30,7 @@ import {
 
 import OptionSelector from "./OptionSelector"
 import EditorOption from "./EditorOption"
+import EditorFooter from "./EditorFooter"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronDown, faRotateLeft } from "@fortawesome/free-solid-svg-icons"
@@ -47,7 +48,7 @@ export default function EditorModal({ isOpen, onClose, provider }) {
         <Modal isOpen={isOpen} onClose={onClose} isCentered>
             <ModalOverlay />
             {environment === "development" ? (
-                <ModalContent minH="50vh" maxH={"90vh"} minW="50vw">
+                <ModalContent minH="50vh" maxH={"90vh"} minW="50vw" overflow={"hidden"}>
                     <ModalHeader fontWeight={"extrabold"} fontSize={"initial"}>
                         <Flex gap={5} alignItems={"center"} wrap={"wrap"}>
                             <Flex gap={3} alignItems={"center"} fontSize={"xl"}>
@@ -63,7 +64,7 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                         </Flex>
                     </ModalHeader>
                     <ModalCloseButton mt={1} />
-                    <ModalBody pt={0}>
+                    <ModalBody overflowY={"scroll"} pt={0}>
                         {(currentSelection == "name" || currentSelection == "allOptions") && (
                             <EditorOption
                                 id="name"
@@ -74,7 +75,6 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                                 provider={provider}
                             />
                         )}
-
                         {(currentSelection == "status" || currentSelection == "allOptions") && (
                             <EditorOption
                                 id="status"
@@ -89,15 +89,9 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                                 provider={provider}
                             />
                         )}
-
-                        {updatedValues && <Code>{JSON.stringify(updatedValues, null, 2)}</Code>}
                     </ModalBody>
-
                     <ModalFooter>
-                        <Button colorScheme="blue" mr={3} onClick={onClose}>
-                            Close
-                        </Button>
-                        <Button variant="ghost">Secondary Action</Button>
+                        <EditorFooter onClose={onClose} updatedValues={updatedValues} />
                     </ModalFooter>
                 </ModalContent>
             ) : (

@@ -91,6 +91,12 @@ const customTheme = extendTheme({
         }),
     },
     components: {
+        Code: {
+            baseStyle: (props: StyleFunctionProps) => ({
+                bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "contentBackground.light",
+            }),
+        },
+
         Input: {
             variants: {
                 EditorInput: (props: StyleFunctionProps) => ({
@@ -254,6 +260,14 @@ const customTheme = extendTheme({
                 },
                 overlay: {
                     backdropFilter: "blur(3px)",
+                },
+                header: {
+                    borderBottomWidth: "3px",
+                    borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
+                },
+                footer: {
+                    borderTopWidth: "3px",
+                    borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
                 },
             }),
         },
