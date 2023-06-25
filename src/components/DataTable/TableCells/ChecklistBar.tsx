@@ -5,14 +5,14 @@ import { faCircleCheck, faCircleXmark } from "@fortawesome/free-regular-svg-icon
 
 import dataProps from "public/data/dataProps"
 const checklistProperties = dataProps.find((prop) => prop.id === "checklistProperties").checklistProperties
+const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
 
 export default function ChecklistBar({ provider, tableRowIndex, expandedRows, setExpandedChecklistRows }) {
-    const allTrue = checklistProperties.every((prop) => provider[prop.value]?.value)
+    const allTrue = checklistProperties.every((prop) => provider[prop]?.value)
 
-    const renderBox = (status: { value: any; name: string }, index: number) => {
-        const { value: statusValue, name: statusName } = status
-        const value = typeof statusValue === "function" ? statusValue(provider) : provider[statusValue]?.value
-
+    const renderBox = (id: string, index: number) => {
+        const name = providerProperties.find((prop) => prop.value === id).name
+        const value = provider[id]?.value
         const iconColor = value ? "green" : "red"
         const icon = value ? faCircleCheck : faCircleXmark
 
@@ -41,7 +41,7 @@ export default function ChecklistBar({ provider, tableRowIndex, expandedRows, se
                             <Box color={iconColor}>
                                 <FontAwesomeIcon icon={icon} size="lg" />
                             </Box>
-                            <Text>{statusName}</Text>
+                            <Text>{name}</Text>
                         </HStack>
                     </Flex>
                 }
@@ -81,7 +81,7 @@ export default function ChecklistBar({ provider, tableRowIndex, expandedRows, se
                 h={10}
                 overflow={"hidden"}
             >
-                {checklistProperties.map((status, index) => renderBox(status, index))}
+                {checklistProperties.map((id, index) => renderBox(id, index))}
             </Flex>
         </Flex>
     )

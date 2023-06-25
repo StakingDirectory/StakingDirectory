@@ -195,7 +195,34 @@ const customTheme = extendTheme({
                         },
                     },
                 }),
+                EditorSelector: (props: StyleFunctionProps) => ({
+                    button: {
+                        bg: props.colorMode === "dark" ? "blue" : "contentBackground.light",
+                        paddingY: "5px",
+                        paddingX: "10px",
+                        borderRadius: "5px",
+                        marginTop: "8px",
+                        // transition: "none",
+                        // _hover: {
+                        //     border: "3px solid",
+                        //     borderColor: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
+                        // },
+                    },
+                }),
             },
+        },
+        Modal: {
+            baseStyle: (props: StyleFunctionProps) => ({
+                dialog: {
+                    bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
+                    borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
+                    borderRadius: "15px",
+                    borderWidth: "3px",
+                },
+                overlay: {
+                    backdropFilter: "blur(3px)",
+                },
+            }),
         },
     },
     colors: {

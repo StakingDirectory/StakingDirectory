@@ -1,6 +1,9 @@
 import { Flex, MenuList, MenuOptionGroup, MenuItemOption, Text } from "@chakra-ui/react"
 
-export default function HeaderMenuType({ id, dataProps, dataFilter, setDataFilter }) {
+import dataProps from "public/data/dataProps"
+const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
+
+export default function HeaderMenuType({ id, dataFilter, setDataFilter }) {
     const updateFilter = (values) => {
         if (values.length === 0) {
             setDataFilter(
@@ -24,7 +27,7 @@ export default function HeaderMenuType({ id, dataProps, dataFilter, setDataFilte
                             (option.value === "solo" || option.value === "pooled" || option.value === "lst" || option.value === "indexToken") && (
                                 <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"}>
                                     <Flex gap={2} alignItems={"center"}>
-                                        <Text>{option.text}</Text>
+                                        <Text>{providerProperties.find((prop) => prop.value === option.value)?.name}</Text>
                                     </Flex>
                                 </MenuItemOption>
                             )
@@ -38,7 +41,7 @@ export default function HeaderMenuType({ id, dataProps, dataFilter, setDataFilte
                             (option.value === "hardware" || option.value === "software" || option.value === "saas") && (
                                 <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"}>
                                     <Flex gap={2} alignItems={"center"}>
-                                        <Text>{option.text}</Text>
+                                        <Text>{providerProperties.find((prop) => prop.value === option.value)?.name}</Text>
                                     </Flex>
                                 </MenuItemOption>
                             )

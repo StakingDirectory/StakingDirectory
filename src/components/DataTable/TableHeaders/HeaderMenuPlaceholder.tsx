@@ -1,6 +1,8 @@
 import { MenuList, MenuOptionGroup } from "@chakra-ui/react"
 
-export default function HeaderMenuPlaceholder({ id, dataProps, dataFilter, setDataFilter }) {
+import dataProps from "public/data/dataProps"
+
+export default function HeaderMenuPlaceholder({ id, dataFilter, setDataFilter }) {
     const updateFilter = (values) => {
         if (values.length === 0) {
             setDataFilter(

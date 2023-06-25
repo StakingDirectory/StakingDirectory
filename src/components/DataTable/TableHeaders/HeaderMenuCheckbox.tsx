@@ -1,6 +1,9 @@
 import { Flex, MenuList, MenuOptionGroup, MenuItemOption, Text } from "@chakra-ui/react"
 
-export default function HeaderMenuCheckbox({ id, dataProps, dataFilter, setDataFilter }) {
+import dataProps from "public/data/dataProps"
+const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
+
+export default function HeaderMenuCheckbox({ id, dataFilter, setDataFilter }) {
     const updateFilter = (values) => {
         if (values.length === 0) {
             setDataFilter(
@@ -28,7 +31,7 @@ export default function HeaderMenuCheckbox({ id, dataProps, dataFilter, setDataF
                             isChecked={dataFilter[id] && Array.isArray(dataFilter[id]) && dataFilter[id].includes(option.value)}
                         >
                             <Flex gap={2}>
-                                <Text>{option.text}</Text>
+                                <Text>{providerProperties.find((prop) => prop.value === option.value)?.name}</Text>
                             </Flex>
                         </MenuItemOption>
                     ))}

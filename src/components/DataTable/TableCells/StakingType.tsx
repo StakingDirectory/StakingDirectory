@@ -1,6 +1,7 @@
 import { Flex } from "@chakra-ui/react"
 
 import dataProps from "public/data/dataProps"
+const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
 
 export default function StakingType({ provider }) {
     return (
@@ -12,7 +13,7 @@ export default function StakingType({ provider }) {
             fontWeight={"bold"}
         >
             <Flex alignItems={"center"} gap={1}>
-                {dataProps.flatMap((d) => d.options).find((opt) => opt?.value === provider.stakingType)?.text}
+                {providerProperties.find((prop) => prop.value === provider.stakingType)?.name}
             </Flex>
         </Flex>
     )

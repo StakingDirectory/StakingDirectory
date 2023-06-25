@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
 
 import dataProps from "public/data/dataProps"
+const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
 
 export default function KeyOwner({ provider, id }) {
     const [expandedRows, setExpandedRows] = useState([])
@@ -46,7 +47,7 @@ export default function KeyOwner({ provider, id }) {
                         ml={2}
                     />
                     <Text fontWeight={"bold"} color={dataProps.flatMap((d) => d.options).find((opt) => opt?.value === ownerId)?.color}>
-                        {dataProps.flatMap((d) => d.options).find((opt) => opt?.value === ownerId)?.text}
+                        {providerProperties.find((prop) => prop.value === ownerId)?.name}
                     </Text>
                 </HStack>
                 <Collapse in={isOpen}>

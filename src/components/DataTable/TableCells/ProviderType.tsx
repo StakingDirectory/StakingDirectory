@@ -1,12 +1,14 @@
 import { Flex } from "@chakra-ui/react"
+
 import dataProps from "public/data/dataProps"
+const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
 
 export default function ProviderType({ provider }) {
     return (
         <Flex direction={"row"} justifyContent={"center"} alignContent={"center"} fontWeight={"bold"} mt={1}>
             {(provider.providerType == "hardware" || provider.providerType == "software" || provider.providerType == "saas") && (
                 <Flex alignItems={"center"} gap={1}>
-                    {dataProps.flatMap((d) => d.options).find((opt) => opt?.value === provider.providerType)?.text}
+                    {providerProperties.find((prop) => prop.value === provider.providerType)?.name}
                 </Flex>
             )}
 

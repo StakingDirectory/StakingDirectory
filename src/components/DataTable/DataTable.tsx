@@ -151,12 +151,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                                     text={headerValue.headerText}
                                                     filterDisabledColor={filterDisabledColor}
                                                 />
-                                                <HeaderMenuCheckbox
-                                                    id={headerValue.id}
-                                                    dataProps={dataProps}
-                                                    dataFilter={dataFilter}
-                                                    setDataFilter={setDataFilter}
-                                                />
+                                                <HeaderMenuCheckbox id={headerValue.id} dataFilter={dataFilter} setDataFilter={setDataFilter} />
                                             </Menu>
                                         </Th>
                                     )
@@ -170,12 +165,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                                     text={headerValue.headerText}
                                                     filterDisabledColor={filterDisabledColor}
                                                 />
-                                                <HeaderMenuType
-                                                    id={headerValue.id}
-                                                    dataProps={dataProps}
-                                                    dataFilter={dataFilter}
-                                                    setDataFilter={setDataFilter}
-                                                />
+                                                <HeaderMenuType id={headerValue.id} dataFilter={dataFilter} setDataFilter={setDataFilter} />
                                             </Menu>
                                         </Th>
                                     )
@@ -189,12 +179,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                                     text={headerValue.headerText}
                                                     filterDisabledColor={filterDisabledColor}
                                                 />
-                                                <HeaderMenuPlaceholder
-                                                    id={headerValue.id}
-                                                    dataProps={dataProps}
-                                                    dataFilter={dataFilter}
-                                                    setDataFilter={setDataFilter}
-                                                />
+                                                <HeaderMenuPlaceholder id={headerValue.id} dataFilter={dataFilter} setDataFilter={setDataFilter} />
                                             </Menu>
                                         </Th>
                                     )
@@ -274,7 +259,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                             />
                                         </Td>
                                         <Td w={5}>
-                                            <DataRowMenuButton />
+                                            <DataRowMenuButton provider={provider} />
                                         </Td>
                                     </Tr>
                                     {hasMounted && (

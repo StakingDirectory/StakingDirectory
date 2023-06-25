@@ -2,8 +2,10 @@ import { Flex, Text, Box, Button, Tooltip } from "@chakra-ui/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFilter } from "@fortawesome/free-solid-svg-icons"
 import { faTimesCircle } from "@fortawesome/free-regular-svg-icons"
-import dataProps from "public/data/dataProps"
 import ClearFiltersButton from "./ClearFiltersButton"
+
+import dataProps from "public/data/dataProps"
+const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
 
 export default function ActiveFilters({ dataFilter, setDataFilter }) {
     const DeleteFilterOptionButton = ({ children, index = 0, activeFilter, filterOption = "" }) => {
@@ -76,11 +78,7 @@ export default function ActiveFilters({ dataFilter, setDataFilter }) {
                                                             ""
                                                         }
                                                     >
-                                                        {
-                                                            dataProps
-                                                                .find((obj) => obj.id === activeFilter)
-                                                                .options?.find((obj) => obj.value === filterOption).text
-                                                        }
+                                                        {providerProperties.find((prop) => prop.value === filterOption)?.name}
                                                     </Flex>
                                                 </DeleteFilterOptionButton>
                                             ))}

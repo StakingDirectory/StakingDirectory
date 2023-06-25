@@ -15,43 +15,19 @@ import {
     Button,
 } from "@chakra-ui/react"
 
+import EditorModal from "./EditorModal/EditorModal"
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEllipsisV, faEdit } from "@fortawesome/free-solid-svg-icons"
 
 const environment = process.env.NODE_ENV
 
-const EditorModal = ({ isOpen, onClose }) => {
-    return (
-        <Modal isOpen={isOpen} onClose={onClose} isCentered>
-            <ModalOverlay />
-            {environment === "development" ? (
-                <ModalContent>
-                    <ModalHeader>Modal Title</ModalHeader>
-                    <ModalCloseButton />
-                    <ModalBody>Content Text</ModalBody>
-                    <ModalFooter>
-                        <Button colorScheme="blue" mr={3} onClick={onClose}>
-                            Close
-                        </Button>
-                        <Button variant="ghost">Secondary Action</Button>
-                    </ModalFooter>
-                </ModalContent>
-            ) : (
-                <ModalContent>
-                    <ModalHeader>🏗️ Editor coming soon! 🏗️</ModalHeader>
-                    <ModalCloseButton />
-                </ModalContent>
-            )}
-        </Modal>
-    )
-}
-
-export default function DataRowMenuButton() {
+export default function DataRowMenuButton({ provider }) {
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     return (
         <>
-            <Menu variant={"DataTableOption"} gutter={3}>
+            <Menu variant={"DataTableOption"} placement="right" gutter={3}>
                 <MenuButton aria-label="Options" borderRadius={10} w={8} h={8} cursor={"pointer"} onClick={(e) => e.stopPropagation()}>
                     <Flex justifyContent={"center"} alignItems={"center"} height={"100%"}>
                         <FontAwesomeIcon icon={faEllipsisV} />
@@ -69,7 +45,7 @@ export default function DataRowMenuButton() {
                     </MenuItem>
                 </MenuList>
             </Menu>
-            <EditorModal isOpen={isOpen} onClose={onClose} />
+            <EditorModal isOpen={isOpen} onClose={onClose} provider={provider} />
         </>
     )
 }
