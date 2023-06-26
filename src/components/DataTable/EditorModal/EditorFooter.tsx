@@ -74,20 +74,24 @@ export default function EditorFooter({ onClose, provider, updatedValues, setUpda
                         isDisabled={Object.keys(updatedValues).length == 0 || loading}
                         onClick={() => {
                             setLoading(true)
-                            axios
-                                .post("/api/updateProvider", { id: provider.id, updatedValues })
-                                .then((res) => {
-                                    console.log(res.data)
-                                    setTimeout(() => {
-                                        onClose()
+                            if (process.env.NODE_ENV === "development") {
+                                axios
+                                    .post("/api/updateProvider", { id: provider.id, updatedValues })
+                                    .then((res) => {
+                                        console.log(res.data)
+                                        setTimeout(() => {
+                                            onClose()
+                                            setLoading(false)
+                                            setUpdatedValues({})
+                                        }, 1000) // Delay to show the spinner
+                                    })
+                                    .catch((err) => {
+                                        console.error(err)
                                         setLoading(false)
-                                        setUpdatedValues({})
-                                    }, 1000) // Delay to show the spinner
-                                })
-                                .catch((err) => {
-                                    console.error(err)
-                                    setLoading(false)
-                                })
+                                    })
+                            } else {
+                                // TODO: Send JSON to GitHub action
+                            }
                         }}
                     >
                         <Flex justifyItems={"center"} gap={3}>
