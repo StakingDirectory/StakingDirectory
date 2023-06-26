@@ -64,8 +64,8 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                             id: "data-changed",
                             position: "top",
                             render: () => (
-                                <Box color="white" mt={3} p={3} bg="orange" borderRadius={10} fontWeight={"bold"}>
-                                    Save or discard your changes before closing the editor
+                                <Box className={"ToastBaseStyle ToastWarning"}>
+                                    {process.env.NODE_ENV === "development" ? "Save changes" : "Suggest update"} or cancel before closing the editor
                                 </Box>
                             ),
                             duration: 3000,
@@ -77,7 +77,6 @@ export default function EditorModal({ isOpen, onClose, provider }) {
             }}
         >
             <ModalOverlay />
-            {/* {process.env.NODE_ENV === "development" ? ( */}
             <ModalContent h={"80vh"} minW="50vw" overflow={"hidden"}>
                 <ModalHeader fontWeight={"extrabold"} fontSize={"initial"}>
                     <Flex gap={5} alignItems={"center"} wrap={"wrap"} justifyContent={"space-between"}>
@@ -123,12 +122,6 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                     <EditorFooter onClose={closeEditor} provider={provider} updatedValues={updatedValues} setUpdatedValues={setUpdatedValues} />
                 </ModalFooter>
             </ModalContent>
-            {/* ) : (
-                <ModalContent>
-                    <ModalHeader>🏗️ Editor coming soon! 🏗️</ModalHeader>
-                    <ModalCloseButton />
-                </ModalContent>
-            )} */}
         </Modal>
     )
 }

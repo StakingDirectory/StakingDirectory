@@ -1,3 +1,5 @@
+import { useState } from "react"
+
 import {
     useDisclosure,
     Flex,
@@ -23,6 +25,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faEllipsisV, faEdit, faHammer } from "@fortawesome/free-solid-svg-icons"
 
 export default function DataRowMenuButton({ provider }) {
+    // This hover state is used to stop a bug where the
+    // tooltip reopens after closing the menu
+    const [isHovered, setIsHovered] = useState(false)
     const { isOpen, onOpen, onClose } = useDisclosure()
 
     return (
@@ -48,6 +53,7 @@ export default function DataRowMenuButton({ provider }) {
 
                 {/* TODO: Remove Tooltip Component (and everything inside it) after the initial launch and feedback phase */}
                 <Tooltip
+                    isOpen={isHovered && !isOpen}
                     placement={"top"}
                     gutter={10}
                     label={
@@ -65,6 +71,8 @@ export default function DataRowMenuButton({ provider }) {
                         w={8}
                         h={8}
                         cursor={"pointer"}
+                        onMouseEnter={() => setIsHovered(true)}
+                        onMouseLeave={() => setIsHovered(false)}
                         onClick={(e) => {
                             e.stopPropagation()
                             onOpen()

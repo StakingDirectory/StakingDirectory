@@ -1,15 +1,24 @@
 import React, { useRef, useEffect, useState } from "react"
 import axios from "axios"
 
-import { Flex, Text, Box, Code, Button, Collapse, Tooltip, IconButton, Spinner } from "@chakra-ui/react"
+import { useToast, Flex, Text, Box, Code, Button, Collapse, Tooltip, IconButton, Spinner } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronRight, faRotateLeft } from "@fortawesome/free-solid-svg-icons"
 import { faFloppyDisk, faPaperPlane } from "@fortawesome/free-regular-svg-icons"
 
 export default function EditorFooter({ onClose, provider, updatedValues, setUpdatedValues }) {
+    const toast = useToast()
+
     const [isOpen, setIsOpen] = useState(false)
     const [loading, setLoading] = useState(false)
+
+    const closeEditor = () => {
+        toast.closeAll()
+        setUpdatedValues({})
+        setLoading(false)
+        onClose()
+    }
 
     useEffect(() => {
         if (Object.keys(updatedValues).length == 0) {
@@ -26,6 +35,7 @@ export default function EditorFooter({ onClose, provider, updatedValues, setUpda
                             className={"editedLozenge"}
                             paddingY={"10px"}
                             borderBottomRadius={isOpen ? 0 : 10}
+                            mb={isOpen ? 0 : 1}
                             alignItems={"center"}
                             gap={2}
                             cursor={"pointer"}
@@ -45,64 +55,50 @@ export default function EditorFooter({ onClose, provider, updatedValues, setUpda
                             />
                             <Text pr={2}>What&apos;s changed?</Text>
                         </Flex>
-                        <Tooltip
-                            placement={"top"}
-                            gutter={8}
-                            label={<Box className={"tooltipLabel"}>Reset all changes</Box>}
-                            className="tooltipArrow"
-                            hasArrow={true}
-                        >
-                            <IconButton
-                                aria-label="Reset option"
-                                icon={<FontAwesomeIcon icon={faRotateLeft} />}
-                                transition="all 0.2s"
-                                borderTopRadius={20}
-                                borderBottomRadius={isOpen ? 0 : 20}
-                                h={10}
-                                onClick={() => {
-                                    setUpdatedValues({})
-                                }}
-                            />
-                        </Tooltip>
                     </Flex>
                 ) : (
                     <Flex grow={1}></Flex>
                 )}
-                <Flex mb={1}>
+                <Flex mb={1} gap={3}>
+                    <Button variant={"EditorCancel"} onClick={closeEditor}>
+                        <Flex justifyItems={"center"} gap={3}>
+                            <Text>Cancel</Text>
+                        </Flex>
+                    </Button>
                     <Button
                         variant={"EditorSubmit"}
                         isDisabled={Object.keys(updatedValues).length == 0 || loading}
                         onClick={() => {
                             setLoading(true)
-                            if (process.env.NODE_ENV === "development") {
-                                axios
-                                    .post("/api/updateProvider", { id: provider.id, updatedValues })
-                                    .then((res) => {
-                                        console.log(res.data)
-                                        setTimeout(() => {
-                                            onClose()
-                                            setLoading(false)
-                                            setUpdatedValues({})
-                                        }, 1000) // Delay to show the spinner
-                                    })
-                                    .catch((err) => {
-                                        console.error(err)
-                                        setLoading(false)
-                                    })
-                            } else {
-                                axios
-                                    .post("/api/triggerWorkflow", { providerId: provider.id, updatedValues })
-                                    .then((res) => {
-                                        console.log(res.data)
-                                        setLoading(false)
-                                        setUpdatedValues({})
-                                        onClose()
-                                    })
-                                    .catch((err) => {
-                                        console.error(err)
-                                        setLoading(false)
-                                    })
-                            }
+                            const api = process.env.NODE_ENV === "development" ? "/api/updateProvider" : "/api/triggerWorkflow"
+                            axios
+                                .post(api, { providerId: provider.id, updatedValues })
+                                .then((res) => {
+                                    console.log(res.data)
+                                    setTimeout(() => {
+                                        closeEditor()
+                                    }, 1000) // Delay to show the spinner
+                                })
+                                .catch((err) => {
+                                    if (!toast.isActive("submit-error")) {
+                                        toast({
+                                            id: "submit-error",
+                                            position: "top",
+                                            render: () => (
+                                                <Flex direction={"column"} alignItems={"center"} gap={2} className={"ToastBaseStyle ToastError"}>
+                                                    <Text fontWeight={"extrabold"}>
+                                                        Error {process.env.NODE_ENV === "development" ? "saving change" : "submitting update"}
+                                                    </Text>
+                                                    <Text>{err?.code}</Text>
+                                                    <Text>{err?.message}</Text>
+                                                </Flex>
+                                            ),
+                                            duration: 3000,
+                                        })
+                                    }
+                                    console.error(err)
+                                    setLoading(false)
+                                })
                         }}
                     >
                         <Flex justifyItems={"center"} gap={3}>
@@ -113,7 +109,7 @@ export default function EditorFooter({ onClose, provider, updatedValues, setUpda
                                 </>
                             ) : (
                                 <>
-                                    <Text>{process.env.NODE_ENV === "development" ? "Save data" : "Suggest update"}</Text>
+                                    <Text>{process.env.NODE_ENV === "development" ? "Save changes" : "Suggest update"}</Text>
                                     <FontAwesomeIcon icon={process.env.NODE_ENV === "development" ? faFloppyDisk : faPaperPlane} size={"lg"} />
                                 </>
                             )}

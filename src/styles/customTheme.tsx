@@ -96,14 +96,23 @@ const customTheme = extendTheme({
                 color: "white",
                 fontWeight: "bold",
             },
+            ".ToastBaseStyle": {
+                marginTop: "12px",
+                padding: "12px",
+                borderRadius: "10px",
+                fontWeight: "bold",
+            },
+            ".ToastWarning": {
+                bg: "orange",
+                color: props.colorMode === "dark" ? "text.light" : "text.dark",
+            },
+            ".ToastError": {
+                bg: "red",
+                color: props.colorMode === "dark" ? "text.light" : "text.dark",
+            },
         }),
     },
     components: {
-        Toast: {
-            baseStyle: {
-                bg: "yellow",
-            },
-        },
         Code: {
             baseStyle: (props: StyleFunctionProps) => ({
                 bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "contentBackground.light",
@@ -160,6 +169,21 @@ const customTheme = extendTheme({
                             _hover: {
                                 bg: mainColor,
                             },
+                        },
+                    }
+                },
+                EditorCancel: (props: StyleFunctionProps) => {
+                    const mainColor = props.theme.colors.red
+                    return {
+                        borderColor: props.colorMode === "dark" ? mainColor : "pageBackground.light",
+                        borderWidth: "3px",
+                        fontWeight: "bold",
+                        borderRadius: "10px",
+                        _hover: {
+                            bg: darkenColor(props.colorMode, mainColor, 0.2),
+                        },
+                        _active: {
+                            bg: darkenColor(props.colorMode, mainColor, 0.1),
                         },
                     }
                 },
