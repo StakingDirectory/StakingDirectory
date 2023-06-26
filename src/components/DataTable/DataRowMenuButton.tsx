@@ -28,13 +28,25 @@ export default function DataRowMenuButton({ provider }) {
     return (
         <>
             <Menu variant={"DataTableOption"} placement="right" gutter={3}>
+                {/* TODO: Uncomment this section after removing the Tooltip component below after the initial launch and feedback phase */}
                 {/* <MenuButton aria-label="Options" borderRadius={10} w={8} h={8} cursor={"pointer"} onClick={(e) => e.stopPropagation()}>
                     <Flex justifyContent={"center"} alignItems={"center"} height={"100%"}>
                         <FontAwesomeIcon icon={faEllipsisV} />
                     </Flex>
-                </MenuButton> */}
+                </MenuButton>
+                <MenuList minW={1}>
+                    <MenuItem
+                        onClick={(e) => {
+                            e.stopPropagation()
+                            onOpen()
+                        }}
+                        icon={<FontAwesomeIcon icon={faEdit} />}
+                    >
+                        {process.env.NODE_ENV != "development" ? "Suggest update" : "Edit data"}
+                    </MenuItem>
+                </MenuList> */}
 
-                {/* TODO: This whole tooltip Component should be removed after the initial launch and feedback phase */}
+                {/* TODO: Remove Tooltip Component (and everything inside it) after the initial launch and feedback phase */}
                 <Tooltip
                     placement={"top"}
                     gutter={10}
@@ -47,24 +59,22 @@ export default function DataRowMenuButton({ provider }) {
                     className="tooltipArrow"
                     hasArrow={true}
                 >
-                    <MenuButton aria-label="Options" borderRadius={10} w={8} h={8} cursor={"pointer"} onClick={(e) => e.stopPropagation()}>
+                    <MenuButton
+                        aria-label="Options"
+                        borderRadius={10}
+                        w={8}
+                        h={8}
+                        cursor={"pointer"}
+                        onClick={(e) => {
+                            e.stopPropagation()
+                            onOpen()
+                        }}
+                    >
                         <Flex justifyContent={"center"} alignItems={"center"} height={"100%"}>
                             <FontAwesomeIcon icon={faHammer} />
                         </Flex>
                     </MenuButton>
                 </Tooltip>
-
-                <MenuList minW={1}>
-                    <MenuItem
-                        onClick={(e) => {
-                            e.stopPropagation()
-                            onOpen()
-                        }}
-                        icon={<FontAwesomeIcon icon={faEdit} />}
-                    >
-                        {process.env.NODE_ENV != "development" ? "Suggest update" : "Edit data"}
-                    </MenuItem>
-                </MenuList>
             </Menu>
             <EditorModal isOpen={isOpen} onClose={onClose} provider={provider} />
         </>
