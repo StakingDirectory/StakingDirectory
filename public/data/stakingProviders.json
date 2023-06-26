@@ -2148,8 +2148,8 @@
       "src": "./images/RocketPoolLogo.png",
       "alt": "Logo"
     },
-    "name": "Rocket Pool (Node)",
-    "status": "active",
+    "name": "Rocket Pool (Node) 234",
+    "status": "dev",
     "mainnetLaunchDate": "",
     "stakingType": "pooled",
     "providerType": "software",
