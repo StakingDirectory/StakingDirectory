@@ -13,7 +13,10 @@ export default async function handler(req, res) {
             `https://api.github.com/repos/StakingDirectory/StakingDirectory/actions/workflows/updateProvider.yml/dispatches`,
             {
                 ref: "main", // The branch to run the workflow on
-                inputs: { providerId, updatedValues }, // The input parameters for the workflow
+                inputs: {
+                    providerId: providerId.toString(),
+                    updatedValues: JSON.stringify(updatedValues), // Convert updatedValues to a string
+                },
             },
             {
                 headers: {
