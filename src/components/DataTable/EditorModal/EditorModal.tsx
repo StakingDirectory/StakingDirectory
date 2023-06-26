@@ -45,6 +45,13 @@ export default function EditorModal({ isOpen, onClose, provider }) {
     const [currentSelection, setCurrentSelection] = useState("allOptions")
     const [updatedValues, setUpdatedValues] = useState({})
 
+    const closeEditor = () => {
+        setCurrentSelection("allOptions")
+        setUpdatedValues({})
+        toast.closeAll()
+        onClose()
+    }
+
     return (
         <Modal
             isOpen={isOpen}
@@ -65,8 +72,7 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                         })
                     }
                 } else {
-                    toast.closeAll()
-                    onClose()
+                    closeEditor()
                 }
             }}
         >
@@ -87,7 +93,6 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                             />
                         </Flex>
                     </ModalHeader>
-                    {/* <ModalCloseButton mt={1} /> */}
                     <ModalBody overflowY={"scroll"} pt={0}>
                         {(currentSelection == "name" || currentSelection == "allOptions") && (
                             <EditorOption
@@ -115,7 +120,7 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                         )}
                     </ModalBody>
                     <ModalFooter>
-                        <EditorFooter onClose={onClose} provider={provider} updatedValues={updatedValues} setUpdatedValues={setUpdatedValues} />
+                        <EditorFooter onClose={closeEditor} provider={provider} updatedValues={updatedValues} setUpdatedValues={setUpdatedValues} />
                     </ModalFooter>
                 </ModalContent>
             ) : (
