@@ -27,9 +27,9 @@ const App = () => {
                     <>
                         <Box width={"100vw"} minH={6} bg="pink" textAlign={"center"} fontWeight={"extrabold"} color={"white"}>
                             <Box>🏗️ ACTIVE DEVELOPMENT ENVIRONMENT - NOT PRODUCTION READY 🏗️</Box>
-                            <Box>This is not the final name.</Box>
+                            <Box>The name is subject to change.</Box>
+                            <Box>All styles are subject to change. This is not the final version.</Box>
                             <Box>Content may not be accurate. This will be fixed for production.</Box>
-                            <Box>All styles subject to change. This is not the final version.</Box>
                         </Box>
                         <Box height={50} />
                     </>
