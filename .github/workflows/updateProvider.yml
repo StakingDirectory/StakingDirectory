@@ -30,12 +30,25 @@ jobs:
             - name: Install dependencies
               run: yarn install --frozen-lockfile
 
-            - name: Create Pull Request
-              uses: peter-evans/create-pull-request@v3
+            - name: Update data
+              run: node scripts/updateProvider.js ${{ github.event.inputs.providerId }} '${{ toJSON(github.event.inputs.updatedValues) }}'
+
+            - name: Create branch
+              run: |
+                  git checkout -b update-${{ github.run_number }}
+
+            - name: Commit and push changes
+              uses: stefanzweifel/git-auto-commit-action@v4
               with:
-                  title: Update data
+                  commit_message: Update data
                   branch: update-${{ github.run_number }}
-                  base: main
-                  commit-message: Update data
-                  script: |
-                      node scripts/updateProvider.js ${{ github.event.inputs.providerId }} '${{ toJSON(github.event.inputs.updatedValues) }}'
+
+            - name: Create Pull Request
+              uses: repo-sync/pull-request@v2
+              with:
+                  source_branch: update-${{ github.run_number }}
+                  destination_branch: main
+                  github_token: ${{ secrets.GITHUB_TOKEN }}
+                  pr_title: "Update data"
+                  pr_body: "Automated changes"
+                  pr_label: "automated-pr"
