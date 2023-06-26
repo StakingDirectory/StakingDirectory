@@ -28,7 +28,7 @@ jobs:
               run: npm ci
 
             - name: Update data
-              run: node scripts/updateProvider.js ${{ github.event.inputs.id }} ${{ github.event.inputs.updatedValues }}
+              run: node scripts/updateProvider.js ${{ github.event.inputs.providerId }} ${{ github.event.inputs.updatedValues }}
 
             - name: Commit and push changes
               uses: stefanzweifel/git-auto-commit-action@v4
