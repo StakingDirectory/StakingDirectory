@@ -648,8 +648,8 @@
       "src": "./images/EthDockerLogo.png",
       "alt": "Logo"
     },
-    "name": "EthDocker",
-    "status": "active",
+    "name": "EthDocker TEST",
+    "status": "dev",
     "mainnetLaunchDate": "",
     "stakingType": "solo",
     "providerType": "software",
