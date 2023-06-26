@@ -12,7 +12,7 @@ export default function EditorFooter({ onClose, provider, updatedValues, setUpda
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
-        if (JSON.stringify(updatedValues) == "{}") {
+        if (Object.keys(updatedValues).length == 0) {
             setIsOpen(false)
         }
     }, [updatedValues])
@@ -20,7 +20,7 @@ export default function EditorFooter({ onClose, provider, updatedValues, setUpda
     return (
         <Flex direction={"column"} grow={1}>
             <Flex justifyContent={"space-between"} alignItems={"end"} grow={1}>
-                {JSON.stringify(updatedValues) != "{}" ? (
+                {Object.keys(updatedValues).length > 0 ? (
                     <Flex gap={3} alignItems={"end"}>
                         <Flex
                             className={"editedLozenge"}
@@ -71,7 +71,7 @@ export default function EditorFooter({ onClose, provider, updatedValues, setUpda
                 <Flex mb={1}>
                     <Button
                         variant={"EditorSubmit"}
-                        isDisabled={JSON.stringify(updatedValues) === "{}" || loading}
+                        isDisabled={Object.keys(updatedValues).length == 0 || loading}
                         onClick={() => {
                             setLoading(true)
                             axios

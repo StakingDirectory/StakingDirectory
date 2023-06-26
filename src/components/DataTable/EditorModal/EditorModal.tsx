@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react"
 
 import {
+    useToast,
     Flex,
     Menu,
     MenuButton,
@@ -39,11 +40,36 @@ import dataProps from "public/data/dataProps"
 const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
 
 export default function EditorModal({ isOpen, onClose, provider }) {
+    const toast = useToast()
+
     const [currentSelection, setCurrentSelection] = useState("allOptions")
     const [updatedValues, setUpdatedValues] = useState({})
 
     return (
-        <Modal isOpen={isOpen} onClose={onClose} isCentered>
+        <Modal
+            isOpen={isOpen}
+            isCentered
+            closeOnOverlayClick={true}
+            onClose={() => {
+                if (Object.keys(updatedValues).length > 0) {
+                    if (!toast.isActive("data-changed")) {
+                        toast({
+                            id: "data-changed",
+                            position: "top",
+                            render: () => (
+                                <Box color="white" mt={3} p={3} bg="orange" borderRadius={10} fontWeight={"bold"}>
+                                    Save or discard your changes before closing the editor
+                                </Box>
+                            ),
+                            duration: 3000,
+                        })
+                    }
+                } else {
+                    toast.closeAll()
+                    onClose()
+                }
+            }}
+        >
             <ModalOverlay />
             {process.env.NODE_ENV === "development" ? (
                 <ModalContent h={"80vh"} minW="50vw" overflow={"hidden"}>

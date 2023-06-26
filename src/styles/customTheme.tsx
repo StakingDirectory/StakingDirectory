@@ -99,6 +99,11 @@ const customTheme = extendTheme({
         }),
     },
     components: {
+        Toast: {
+            baseStyle: {
+                bg: "yellow",
+            },
+        },
         Code: {
             baseStyle: (props: StyleFunctionProps) => ({
                 bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "contentBackground.light",
