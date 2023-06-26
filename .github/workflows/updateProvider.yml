@@ -31,7 +31,7 @@ jobs:
               run: yarn install --frozen-lockfile
 
             - name: Update data
-              run: node scripts/updateProvider.js ${{ github.event.inputs.providerId }} '${{ toJSON(github.event.inputs.updatedValues) }}'
+              run: node scripts/updateProvider.js ${{ github.event.inputs.providerId }} '${{ github.event.inputs.updatedValues }}'
 
             - name: Create branch
               run: |
