@@ -39,9 +39,11 @@ jobs:
               with:
                   commit_message: Update data
                   branch: update-data-test
+                  github_token: ${{ secrets.PAT_SECRET }}
 
             - name: Create Pull Request
               uses: peter-evans/create-pull-request@v3
               with:
                   title: Update data
                   branch: update-data-test
+                  github_token: ${{ secrets.PAT_SECRET }}
