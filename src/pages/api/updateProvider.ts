@@ -4,13 +4,13 @@ import path from "path"
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === "POST") {
-        const { id, updatedValues } = req.body
+        const { providerId, updatedValues } = req.body
 
         const filePath = path.join(process.cwd(), "public/data/stakingProviders.json")
         const fileContents = fs.readFileSync(filePath, "utf8")
         const providers = JSON.parse(fileContents)
 
-        const providerIndex = providers.findIndex((provider) => provider.id === id)
+        const providerIndex = providers.findIndex((provider) => provider.id === providerId)
         if (providerIndex === -1) {
             res.status(404).json({ message: "Provider not found" })
             return

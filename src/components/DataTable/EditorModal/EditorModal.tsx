@@ -77,58 +77,58 @@ export default function EditorModal({ isOpen, onClose, provider }) {
             }}
         >
             <ModalOverlay />
-            {process.env.NODE_ENV === "development" ? (
-                <ModalContent h={"80vh"} minW="50vw" overflow={"hidden"}>
-                    <ModalHeader fontWeight={"extrabold"} fontSize={"initial"}>
-                        <Flex gap={5} alignItems={"center"} wrap={"wrap"} justifyContent={"space-between"}>
-                            <Flex gap={3} alignItems={"center"} fontSize={"xl"}>
-                                <Image objectFit="contain" boxSize={8} src={provider.logo.src} alt={provider.logo.alt} borderRadius={"100%"} />
-                                <Text isTruncated>{provider.name}</Text>
-                            </Flex>
-                            <OptionSelector
-                                provider={provider}
-                                currentSelection={currentSelection}
-                                setCurrentSelection={setCurrentSelection}
-                                updatedValues={updatedValues}
-                            />
+            {/* {process.env.NODE_ENV === "development" ? ( */}
+            <ModalContent h={"80vh"} minW="50vw" overflow={"hidden"}>
+                <ModalHeader fontWeight={"extrabold"} fontSize={"initial"}>
+                    <Flex gap={5} alignItems={"center"} wrap={"wrap"} justifyContent={"space-between"}>
+                        <Flex gap={3} alignItems={"center"} fontSize={"xl"}>
+                            <Image objectFit="contain" boxSize={8} src={provider.logo.src} alt={provider.logo.alt} borderRadius={"100%"} />
+                            <Text isTruncated>{provider.name}</Text>
                         </Flex>
-                    </ModalHeader>
-                    <ModalBody overflowY={"scroll"} pt={0}>
-                        {(currentSelection == "name" || currentSelection == "allOptions") && (
-                            <EditorOption
-                                id="name"
-                                name="Name"
-                                inputType="input"
-                                updatedValues={updatedValues}
-                                setUpdatedValues={setUpdatedValues}
-                                provider={provider}
-                            />
-                        )}
-                        {(currentSelection == "status" || currentSelection == "allOptions") && (
-                            <EditorOption
-                                id="status"
-                                name="Status"
-                                inputType="select"
-                                options={[
-                                    { value: "active", name: "Active" },
-                                    { value: "dev", name: "In development" },
-                                ]}
-                                updatedValues={updatedValues}
-                                setUpdatedValues={setUpdatedValues}
-                                provider={provider}
-                            />
-                        )}
-                    </ModalBody>
-                    <ModalFooter>
-                        <EditorFooter onClose={closeEditor} provider={provider} updatedValues={updatedValues} setUpdatedValues={setUpdatedValues} />
-                    </ModalFooter>
-                </ModalContent>
-            ) : (
+                        <OptionSelector
+                            provider={provider}
+                            currentSelection={currentSelection}
+                            setCurrentSelection={setCurrentSelection}
+                            updatedValues={updatedValues}
+                        />
+                    </Flex>
+                </ModalHeader>
+                <ModalBody overflowY={"scroll"} pt={0}>
+                    {(currentSelection == "name" || currentSelection == "allOptions") && (
+                        <EditorOption
+                            id="name"
+                            name="Name"
+                            inputType="input"
+                            updatedValues={updatedValues}
+                            setUpdatedValues={setUpdatedValues}
+                            provider={provider}
+                        />
+                    )}
+                    {(currentSelection == "status" || currentSelection == "allOptions") && (
+                        <EditorOption
+                            id="status"
+                            name="Status"
+                            inputType="select"
+                            options={[
+                                { value: "active", name: "Active" },
+                                { value: "dev", name: "In development" },
+                            ]}
+                            updatedValues={updatedValues}
+                            setUpdatedValues={setUpdatedValues}
+                            provider={provider}
+                        />
+                    )}
+                </ModalBody>
+                <ModalFooter>
+                    <EditorFooter onClose={closeEditor} provider={provider} updatedValues={updatedValues} setUpdatedValues={setUpdatedValues} />
+                </ModalFooter>
+            </ModalContent>
+            {/* ) : (
                 <ModalContent>
                     <ModalHeader>🏗️ Editor coming soon! 🏗️</ModalHeader>
                     <ModalCloseButton />
                 </ModalContent>
-            )}
+            )} */}
         </Modal>
     )
 }
