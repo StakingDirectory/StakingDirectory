@@ -42,3 +42,14 @@ jobs:
               with:
                   commit_message: Update data
                   branch: update-${{ github.run_number }}
+
+            - name: Wait for changes to register
+              run: sleep 10s
+
+            - name: Create Pull Request
+                        uses: peter-evans/create-pull-request@v3
+                        with:
+                            title: Update data
+                            branch: update-${{ github.run_number }}
+                            base: main
+
