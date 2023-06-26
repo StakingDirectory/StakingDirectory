@@ -48,7 +48,6 @@ jobs:
               with:
                   source_branch: update-${{ github.run_number }}
                   destination_branch: main
-                  github_token: ${{ secrets.GITHUB_TOKEN }}
                   pr_title: "Update data"
                   pr_body: "Automated changes"
                   pr_label: "automated-pr"
