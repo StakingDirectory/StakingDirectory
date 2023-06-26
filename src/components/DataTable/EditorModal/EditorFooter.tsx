@@ -90,7 +90,18 @@ export default function EditorFooter({ onClose, provider, updatedValues, setUpda
                                         setLoading(false)
                                     })
                             } else {
-                                // TODO: Send JSON to GitHub action
+                                axios
+                                    .post("/api/triggerWorkflow", { id: provider.id, updatedValues })
+                                    .then((res) => {
+                                        console.log(res.data)
+                                        setLoading(false)
+                                        setUpdatedValues({})
+                                        onClose()
+                                    })
+                                    .catch((err) => {
+                                        console.error(err)
+                                        setLoading(false)
+                                    })
                             }
                         }}
                     >
