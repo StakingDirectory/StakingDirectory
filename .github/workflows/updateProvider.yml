@@ -14,7 +14,9 @@ on:
 jobs:
     updateData:
         runs-on: ubuntu-latest
-        permissions: write-all
+        permissions:
+            contents: write
+            pull-requests: write
 
         steps:
             - name: Check out repository
@@ -46,6 +48,6 @@ jobs:
               with:
                   source_branch: update-${{ github.run_number }}
                   destination_branch: main
-                  pr_title: "Update data"
+                  pr_title: "Update ${{ github.run_number }}"
                   pr_body: "Automated changes"
                   pr_label: "automated-pr"
