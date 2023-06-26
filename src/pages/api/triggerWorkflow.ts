@@ -6,14 +6,14 @@ export default async function handler(req, res) {
         return
     }
 
-    const { id, updatedValues } = req.body
+    const { providerId, updatedValues } = req.body
 
     try {
         const response = await axios.post(
             `https://api.github.com/repos/StakingDirectory/StakingDirectory/actions/workflows/updateProvider.yml/dispatches`,
             {
                 ref: "main", // The branch to run the workflow on
-                inputs: { id, updatedValues }, // The input parameters for the workflow
+                inputs: { providerId, updatedValues }, // The input parameters for the workflow
             },
             {
                 headers: {

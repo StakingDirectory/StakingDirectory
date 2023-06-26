@@ -91,7 +91,7 @@ export default function EditorFooter({ onClose, provider, updatedValues, setUpda
                                     })
                             } else {
                                 axios
-                                    .post("/api/triggerWorkflow", { id: provider.id, updatedValues })
+                                    .post("/api/triggerWorkflow", { providerId: provider.id, updatedValues })
                                     .then((res) => {
                                         console.log(res.data)
                                         setLoading(false)
