@@ -12,16 +12,16 @@ export default async function handler(req, res) {
         const response = await axios.post(
             `https://api.github.com/repos/StakingDirectory/StakingDirectory/actions/workflows/updateProvider.yml/dispatches`,
             {
-                ref: "main", // The branch to run the workflow on
+                ref: "main",
                 inputs: {
                     providerId: providerId.toString(),
-                    updatedValues: JSON.stringify(updatedValues), // Convert updatedValues to a string
+                    updatedValues: JSON.stringify(updatedValues),
                 },
             },
             {
                 headers: {
                     Accept: "application/vnd.github.v3+json",
-                    Authorization: `token ${process.env.GITHUB_PAT}`, // Your GitHub PAT
+                    Authorization: `token ${process.env.GITHUB_PAT}`,
                 },
             }
         )

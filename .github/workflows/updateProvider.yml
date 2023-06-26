@@ -51,3 +51,4 @@ jobs:
                   pr_title: "Update ${{ github.run_number }}"
                   pr_body: "Automated changes"
                   pr_label: "automated-pr"
+                  pr_reviewer: "EridianAlpha"
