@@ -110,6 +110,17 @@ const customTheme = extendTheme({
                 bg: "red",
                 color: props.colorMode === "dark" ? "text.light" : "text.dark",
             },
+            ".CommunityReviewPhase": {
+                bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
+                borderColor: "blue",
+                borderWidth: "3px",
+                borderRadius: "10px",
+            },
+            ".CommunityReviewPhaseHeader": {
+                _hover: {
+                    bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",
+                },
+            },
         }),
     },
     components: {
@@ -126,7 +137,6 @@ const customTheme = extendTheme({
                         bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackground.light",
                         borderRadius: "10px",
                         borderLeftRadius: "0",
-                        width: "50%",
                         _focus: {
                             borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
                             borderWidth: "2px",
@@ -288,10 +298,11 @@ const customTheme = extendTheme({
                 DataTableOption: (props: StyleFunctionProps) => ({
                     button: {
                         transition: "none",
-                        _hover: {
-                            border: "3px solid",
-                            borderColor: darkenColor(props.colorMode, props.theme.colors.border.dark, 0.05),
-                        },
+                        // TODO: After launch add hover back
+                        // _hover: {
+                        border: "3px solid",
+                        borderColor: darkenColor(props.colorMode, props.theme.colors.border.dark, 0.05),
+                        // },
                     },
                 }),
                 DataTableHeader: (props: StyleFunctionProps) => ({

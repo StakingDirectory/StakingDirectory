@@ -28,14 +28,13 @@ export default function EditorFooter({ onClose, provider, updatedValues, setUpda
 
     return (
         <Flex direction={"column"} grow={1}>
-            <Flex justifyContent={"space-between"} alignItems={"end"} grow={1}>
+            <Flex justifyContent={"space-between"} alignItems={"end"} grow={1} wrap={"wrap-reverse"} gap={2}>
                 {Object.keys(updatedValues).length > 0 ? (
                     <Flex gap={3} alignItems={"end"}>
                         <Flex
                             className={"editedLozenge"}
                             paddingTop={2}
                             paddingBottom={isOpen ? 3 : 2}
-                            // paddingY={2}
                             h={isOpen ? "52px" : 10}
                             borderBottomRadius={isOpen ? 0 : 10}
                             mb={isOpen ? 0 : 1}

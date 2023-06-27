@@ -1,5 +1,6 @@
 import { useState } from "react"
 import Header from "./Header/Header"
+import CommunityReviewPhase from "./CommunityReviewPhase"
 import DataTableTabs from "./DataTable/DataTableTabs"
 import Footer from "./Footer"
 
@@ -35,6 +36,7 @@ const App = () => {
                     </>
                 )}
                 <Box height={50} />
+                <CommunityReviewPhase />
                 <DataTableTabs orderedFilteredProviders={orderedFilteredProviders} dataFilter={dataFilter} setDataFilter={setDataFilter} />
             </Flex>
             <Box flex="1" />

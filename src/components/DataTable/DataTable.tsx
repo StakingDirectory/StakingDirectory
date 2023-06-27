@@ -118,7 +118,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                             if (headerValue.isTableHeader) {
                                 if (headerValue.type == "text") {
                                     return (
-                                        <Th minW={210} key={headerValue.id} textAlign={"start"}>
+                                        <Th minW={220} key={headerValue.id} textAlign={"start"}>
                                             <Menu placement="right" variant={"DataTableHeader"} gutter={2} initialFocusRef={nameInputRef}>
                                                 {({ isOpen }) => (
                                                     <>
@@ -187,7 +187,26 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                             }
                         })}
                         <Th w={"32px"}>
-                            <ClearFiltersButton dataFilter={dataFilter} setDataFilter={setDataFilter} />
+                            {/* TODO: After launch switch this back to the ClearFiltersButton component */}
+                            {/* <ClearFiltersButton dataFilter={dataFilter} setDataFilter={setDataFilter} /> */}
+                            <Tooltip
+                                placement={"top"}
+                                gutter={10}
+                                label={
+                                    <Flex className={"tooltipLabel"} direction={"column"} gap={2}>
+                                        <Box fontWeight={"extrabold"} fontSize={"md"}>
+                                            Does something need fixing?
+                                        </Box>
+                                        <Box>🏆 Let us know and get a POAP 🏆</Box>
+                                    </Flex>
+                                }
+                                className="tooltipArrow"
+                                hasArrow={true}
+                            >
+                                <Text fontWeight={"extrabold"} fontSize={"sm"} pb={2} cursor={"default"} color={"blue"}>
+                                    COMMUNITY REVIEW PHASE
+                                </Text>
+                            </Tooltip>
                         </Th>
                     </Tr>
                 </Thead>
@@ -222,7 +241,8 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                         <Td>
                                             <Image
                                                 objectFit="contain"
-                                                boxSize={8}
+                                                minW={8}
+                                                maxW={8}
                                                 src={provider.logo.src}
                                                 alt={provider.logo.alt}
                                                 borderRadius={"100%"}

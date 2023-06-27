@@ -54,6 +54,7 @@ export default function EditorOption({ id, name, inputType, options = [], update
                             {name}
                         </InputLeftAddon>
                         <Input
+                            maxW="100%"
                             variant={"EditorInput"}
                             value={updatedValues[id] ? updatedValues[id] : provider[id]}
                             placeholder={`${name}...`}
