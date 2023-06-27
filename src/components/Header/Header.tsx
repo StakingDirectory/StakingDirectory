@@ -27,7 +27,7 @@ export default function Header({}) {
                                 sx={{ cursor: "pointer" }}
                                 minW={10}
                                 objectFit={"cover"}
-                                src={"./EthereumLogo.svg"}
+                                src={"./StakingDirectoryLogo.svg"}
                                 alt={"Staking Directory Logo"}
                             />
                             <Box pr={2} minW={30} fontWeight="bold" fontSize="xl" sx={{ cursor: "default" }}>

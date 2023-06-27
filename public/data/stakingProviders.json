@@ -434,7 +434,7 @@
       "src": "./EthLogo.svg",
       "alt": "Logo"
     },
-    "name": "Ethereum Clients",
+    "name": "Staking Clients",
     "status": "active",
     "mainnetLaunchDate": "",
     "stakingType": "solo",
@@ -471,7 +471,7 @@
       ]
     },
     "audited": {
-      "value": false,
+      "value": true,
       "links": [
         {
           "text": "Link",
@@ -480,11 +480,11 @@
       ]
     },
     "bugBounty": {
-      "value": false,
+      "value": true,
       "links": [
         {
           "text": "Link",
-          "url": "https://"
+          "url": "https://ethereum.org/en/bug-bounty/"
         }
       ]
     },
