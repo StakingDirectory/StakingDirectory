@@ -33,7 +33,10 @@ export default function EditorFooter({ onClose, provider, updatedValues, setUpda
                     <Flex gap={3} alignItems={"end"}>
                         <Flex
                             className={"editedLozenge"}
-                            paddingY={"10px"}
+                            paddingTop={2}
+                            paddingBottom={isOpen ? 3 : 2}
+                            // paddingY={2}
+                            h={isOpen ? "52px" : 10}
                             borderBottomRadius={isOpen ? 0 : 10}
                             mb={isOpen ? 0 : 1}
                             alignItems={"center"}
@@ -59,7 +62,7 @@ export default function EditorFooter({ onClose, provider, updatedValues, setUpda
                 ) : (
                     <Flex grow={1}></Flex>
                 )}
-                <Flex mb={1} gap={3}>
+                <Flex mb={isOpen ? 3 : 1} gap={3}>
                     <Button variant={"EditorCancel"} onClick={closeEditor}>
                         <Flex justifyItems={"center"} gap={3}>
                             <Text>Cancel</Text>
