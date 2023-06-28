@@ -34,10 +34,10 @@ const App = () => {
                     </>
                 )}
                 <Box height={30} />
-                <Text fontWeight={"extrabold"} fontSize={"3xl"}>
+                <Text fontWeight={"extrabold"} fontSize={"3xl"} textAlign={"center"}>
                     The Ethereum Staking Directory
                 </Text>
-                <Text fontWeight={"bold"} fontSize={"1xl"} pt={2}>
+                <Text fontWeight={"bold"} fontSize={"1xl"} pt={2} textAlign={"center"}>
                     A community maintained directory of Ethereum staking providers
                 </Text>
                 <Box height={50} />
