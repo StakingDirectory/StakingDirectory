@@ -10,7 +10,9 @@ const InfoBlock = ({ icon, color, children }) => (
         <Flex alignItems={"center"} justifyContent={"center"} grow={1} minW={"60px"} color={color} mt={{ base: "20px", sm: "0" }}>
             <FontAwesomeIcon icon={icon} size={"2x"} />
         </Flex>
-        <Text textAlign={{ base: "center", sm: "inherit" }}>{children}</Text>
+        <Text textAlign={{ base: "center", sm: "inherit" }} fontWeight={"medium"}>
+            {children}
+        </Text>
     </Flex>
 )
 

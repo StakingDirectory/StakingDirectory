@@ -30,7 +30,7 @@ export default function Header({}) {
                                 src={"./StakingDirectoryLogo.svg"}
                                 alt={"Staking Directory Logo"}
                             />
-                            <Box pr={2} minW={30} fontWeight="bold" fontSize="xl" sx={{ cursor: "default" }}>
+                            <Box pr={2} minW={30} fontWeight="extrabold" fontSize="xl" sx={{ cursor: "default" }}>
                                 Staking Directory
                             </Box>
                         </HStack>

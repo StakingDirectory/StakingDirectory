@@ -9,7 +9,7 @@ import orderProviders from "../utils/orderProviders"
 
 import dataProps from "public/data/dataProps"
 
-import { Box, Flex } from "@chakra-ui/react"
+import { Box, Flex, Text } from "@chakra-ui/react"
 
 const App = () => {
     const [dataFilter, setDataFilter] = useState({})
@@ -32,9 +32,15 @@ const App = () => {
                             <Box>All styles are subject to change. This is not the final version.</Box>
                             <Box>Content may not be accurate. This will be fixed for production.</Box>
                         </Box>
-                        <Box height={50} />
                     </>
                 )}
+                <Box height={30} />
+                <Text fontWeight={"extrabold"} fontSize={"3xl"}>
+                    The Ethereum Staking Directory
+                </Text>
+                <Text fontWeight={"bold"} fontSize={"1xl"} pt={2}>
+                    A community maintained directory of Ethereum staking providers
+                </Text>
                 <Box height={50} />
                 <CommunityReviewPhase />
                 <DataTableTabs orderedFilteredProviders={orderedFilteredProviders} dataFilter={dataFilter} setDataFilter={setDataFilter} />
