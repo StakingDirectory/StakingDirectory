@@ -2,8 +2,6 @@
 
 > 🏗️ ACTIVE DEVELOPMENT ENVIRONMENT - NOT PRODUCTION READY 🏗️
 
-_The name is subject to change._
-
 _All styles are subject to change. This is not the final version._
 
 _Content may not be accurate. This will be fixed for production._

@@ -21,16 +21,9 @@ export default function Header({}) {
             <Box width="100%" px={{ base: "10px", sm: "3rem" }} maxW="1780px">
                 <Box className={"bgPage"}>
                     <Flex h={16} alignItems={"center"} justifyContent={"space-between"}>
-                        <HStack spacing={3} alignItems={"center"}>
-                            <Image
-                                onClick={navigateHome}
-                                sx={{ cursor: "pointer" }}
-                                minW={10}
-                                objectFit={"cover"}
-                                src={"./StakingDirectoryLogo.svg"}
-                                alt={"Staking Directory Logo"}
-                            />
-                            <Box pr={2} minW={30} fontWeight="extrabold" fontSize="xl" sx={{ cursor: "default" }}>
+                        <HStack spacing={3} alignItems={"center"} cursor={"pointer"} onClick={navigateHome}>
+                            <Image minW={10} objectFit={"cover"} src={"./StakingDirectoryLogo.svg"} alt={"Staking Directory Logo"} />
+                            <Box pr={2} minW={30} fontWeight="extrabold" fontSize="xl">
                                 Staking Directory
                             </Box>
                         </HStack>
