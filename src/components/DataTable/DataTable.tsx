@@ -118,7 +118,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                             if (headerValue.isTableHeader) {
                                 if (headerValue.type == "text") {
                                     return (
-                                        <Th minW={200} key={headerValue.id} textAlign={"start"}>
+                                        <Th minW={210} key={headerValue.id} textAlign={"start"}>
                                             <Menu placement="right" variant={"DataTableHeader"} gutter={2} initialFocusRef={nameInputRef}>
                                                 {({ isOpen }) => (
                                                     <>

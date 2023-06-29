@@ -20,7 +20,7 @@ export default function CommunityReviewPhase() {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <Flex w={"100%"} maxW={"1600px"} px={{ base: "10px", sm: "2vw", xl: "5vw", "2xl": "3vw" }} mb={10}>
+        <Flex w={"100%"} maxW={"1420px"} px={{ base: "10px", sm: "2vw", xl: "5vw", "2xl": "3vw" }} mb={10}>
             <Flex className={"CommunityReviewPhase"} direction={"column"} w={"100%"} overflow={"hidden"}>
                 <Flex
                     className={"CommunityReviewPhaseHeader"}

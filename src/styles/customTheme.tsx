@@ -210,8 +210,8 @@ const customTheme = extendTheme({
                     th: {
                         bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
                         paddingTop: "1rem",
-                        paddingLeft: "0.5rem",
-                        paddingRight: "0.5rem",
+                        paddingLeft: "0rem",
+                        paddingRight: "0rem",
                         paddingBottom: "0",
                         verticalAlign: "bottom",
                         textAlign: "center",
