@@ -1,7 +1,7 @@
 import { Flex, Box, Tooltip, Text, HStack } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCircleCheck, faCircleXmark } from "@fortawesome/free-regular-svg-icons"
+import { faCircleCheck, faCircleXmark } from "@fortawesome/free-solid-svg-icons"
 
 import dataProps from "public/data/dataProps"
 const checklistProperties = dataProps.find((prop) => prop.id === "checklistProperties").checklistProperties

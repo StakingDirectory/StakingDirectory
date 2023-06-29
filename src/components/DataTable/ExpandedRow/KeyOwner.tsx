@@ -46,9 +46,7 @@ export default function KeyOwner({ provider, id }) {
                         mr={3}
                         ml={2}
                     />
-                    <Text fontWeight={"bold"} color={dataProps.flatMap((d) => d.options).find((opt) => opt?.value === ownerId)?.color}>
-                        {providerProperties.find((prop) => prop.value === ownerId)?.name}
-                    </Text>
+                    <Text fontWeight={"semibold"}>{providerProperties.find((prop) => prop.value === ownerId)?.name}</Text>
                 </HStack>
                 <Collapse in={isOpen}>
                     <Box px={4} pt={1} pb={3}>

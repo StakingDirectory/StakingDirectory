@@ -33,7 +33,7 @@ export default function HeaderMenuType({ id, dataFilter, setDataFilter }) {
                             )
                     )}
             </MenuOptionGroup>
-            <MenuOptionGroup defaultValue={dataFilter[id]} type="checkbox" onChange={updateFilter} title="Provider Type" fontWeight={"extrabold"}>
+            {/* <MenuOptionGroup defaultValue={dataFilter[id]} type="checkbox" onChange={updateFilter} title="Provider Type" fontWeight={"extrabold"}>
                 {dataProps
                     .find((obj) => obj.id === id)
                     ?.options?.map(
@@ -46,7 +46,7 @@ export default function HeaderMenuType({ id, dataFilter, setDataFilter }) {
                                 </MenuItemOption>
                             )
                     )}
-            </MenuOptionGroup>
+            </MenuOptionGroup> */}
         </MenuList>
     )
 }

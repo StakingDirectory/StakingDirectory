@@ -10,7 +10,17 @@ export default function RewardFee({ provider }) {
                 className="tooltipArrow"
                 hasArrow={true}
             >
-                <Box borderRadius={10} border={"2px solid"} borderColor={"red"} w={"fit-content"} px={2} py={"2px"} className={"bgPage"}>
+                <Box
+                    borderRadius={10}
+                    border={"2px solid"}
+                    borderColor={provider.fee.value == 0 ? "gold" : "red"}
+                    bg={provider.fee.value == 0 ? "green" : ""}
+                    w={"fit-content"}
+                    px={2}
+                    py={"2px"}
+                    className={"bgPage"}
+                    fontWeight={"semibold"}
+                >
                     {provider.fee.value}
                     {provider.fee.type == "percentage" ? "%" : ""}
                 </Box>

@@ -13,7 +13,7 @@ export default function RewardFee({ provider }) {
                 className="tooltipArrow"
                 hasArrow={true}
             >
-                <Box borderRadius={10} bg={"green"} w={"fit-content"} px={"8px"} py={"5px"} fontWeight={"bold"}>
+                <Box borderRadius={10} w={"fit-content"} px={"8px"} py={"5px"} fontWeight={"bold"}>
                     <FontAwesomeIcon icon={faGift} size={"lg"} />
                 </Box>
             </Tooltip>
