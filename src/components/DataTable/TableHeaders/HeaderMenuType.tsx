@@ -25,7 +25,7 @@ export default function HeaderMenuType({ id, dataFilter, setDataFilter }) {
                     ?.options?.map(
                         (option) =>
                             (option.value === "solo" || option.value === "pooled" || option.value === "lst" || option.value === "indexToken") && (
-                                <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"}>
+                                <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"} fontWeight={"semibold"}>
                                     <Flex gap={2} alignItems={"center"}>
                                         <Text>{providerProperties.find((prop) => prop.value === option.value)?.name}</Text>
                                     </Flex>

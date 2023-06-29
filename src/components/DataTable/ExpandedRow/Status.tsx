@@ -15,7 +15,7 @@ export default function Status({ provider }) {
         <Flex direction={"column"} gap={3} h={90} className={"expandContentBox"} cursor={"default"}>
             <Flex gap={2} justifyContent={"center"} alignItems={"center"} wrap={"wrap"}>
                 <Text fontWeight={"bold"}>Status</Text>
-                <Box fontWeight={"bold"} px={"6px"} py={"2px"} borderRadius={5} bg={provider.status == "active" ? "green" : "pink"}>
+                <Box fontWeight={"bold"} px={"6px"} py={"2px"} borderRadius={5} bg={provider.status == "active" ? "green" : "blue"}>
                     {provider.status == "active" ? "Active" : "Development"}
                 </Box>
             </Flex>
