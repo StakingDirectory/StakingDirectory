@@ -15,12 +15,12 @@ export default function DataTableTabs({ orderedFilteredProviders, dataFilter, se
     return (
         <Box w="100%">
             <Tabs>
-                <Flex alignItems={"end"} gap={30} wrap={"wrap-reverse"}>
-                    <TabList mx={4} minW={"fit-content"} maxH={12} mb={1}>
-                        <Tab fontWeight={"bold"} borderTopRadius={10} minW={150}>
+                <Flex justifyContent={"space-between"} alignItems={"end"} gap={30} wrap={"wrap-reverse"}>
+                    <TabList ml={4} maxH={12} mb={1}>
+                        <Tab fontWeight={"extrabold"} borderTopRadius={10} minW={150}>
                             <Flex>Active {tabNumberBox(orderedFilteredProviders.filter((item) => item.status === "active").length, "green")}</Flex>
                         </Tab>
-                        <Tab fontWeight={"bold"} borderTopRadius={10} minW={200}>
+                        <Tab fontWeight={"extrabold"} borderTopRadius={10} minW={200}>
                             <Flex>
                                 In development {tabNumberBox(orderedFilteredProviders.filter((item) => item.status === "dev").length, "blue")}
                             </Flex>
@@ -37,7 +37,7 @@ export default function DataTableTabs({ orderedFilteredProviders, dataFilter, se
                             setDataFilter={setDataFilter}
                         />
                     </TabPanel>
-                    <TabPanel pt={0}>
+                    <TabPanel p={0}>
                         <DataTable stakingProviders={orderedFilteredProviders} status={"dev"} dataFilter={dataFilter} setDataFilter={setDataFilter} />
                     </TabPanel>
                 </TabPanels>

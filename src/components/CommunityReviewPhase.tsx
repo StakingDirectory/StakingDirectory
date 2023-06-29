@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 import { useBreakpointValue, Flex, Text, Box, Link, Collapse, MenuButton, Menu } from "@chakra-ui/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronRight, faDownLong, faPencil, faRightLong, faTrophy, faUsers } from "@fortawesome/free-solid-svg-icons"
+import { faChevronRight, faDownLong, faPencil, faRightLong, faTrophy, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 import NextLink from "next/link"
 
 const InfoBlock = ({ icon, color, children }) => (
@@ -20,7 +20,7 @@ export default function CommunityReviewPhase() {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <Flex w={"100%"} mb={10}>
+        <Flex w={"100%"}>
             <Flex className={"CommunityReviewPhase"} direction={"column"} w={"100%"} overflow={"hidden"}>
                 <Flex
                     className={"CommunityReviewPhaseHeader"}
@@ -48,7 +48,7 @@ export default function CommunityReviewPhase() {
                         </Text>
                         {!isOpen && (
                             <Flex gap={15}>
-                                <Box as={FontAwesomeIcon} icon={faUsers} size={"xl"} color={"blue"} />
+                                <Box as={FontAwesomeIcon} icon={faMagnifyingGlass} size={"xl"} color={"blue"} />
                                 <Box as={FontAwesomeIcon} icon={faRightLong} size={"xl"} />
                                 <Box as={FontAwesomeIcon} icon={faPencil} size={"xl"} color={"orange"} />
                                 <Box as={FontAwesomeIcon} icon={faRightLong} size={"xl"} />
@@ -60,7 +60,7 @@ export default function CommunityReviewPhase() {
                 <Collapse in={isOpen}>
                     <Box px={"1rem"}>
                         <Box mt={3}></Box>
-                        <InfoBlock icon={faUsers} color={"blue"}>
+                        <InfoBlock icon={faMagnifyingGlass} color={"blue"}>
                             The Community Review Phase is a crucial step before our main launch. It&apos;s an opportunity for the Ethereum staking
                             community to help us ensure the accuracy and relevance of our data. We understand the importance of trust in this space,
                             and that trust is built on accurate, up-to-date information.

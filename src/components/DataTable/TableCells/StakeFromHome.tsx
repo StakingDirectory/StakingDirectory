@@ -18,7 +18,7 @@ export default function StakeFromHome({ provider }) {
                     <Text fontSize={"lg"} fontWeight={"bold"}>
                         No 😔
                     </Text>
-                    <Text>You can't stake from home with this staking option</Text>
+                    <Text>You can&apos;t stake from home with this staking option</Text>
                 </Flex>
             )}
         </Box>

@@ -9,7 +9,7 @@ export default function ClearFiltersButton({ dataFilter, setDataFilter }) {
             {dataFilter && Object.keys(dataFilter).length > 0 ? (
                 <Tooltip
                     gutter={8}
-                    label={<Box className={"tooltipLabel"}>Remove all filters</Box>}
+                    label={<Box className={"tooltipLabel"}>Clear all filters</Box>}
                     openDelay={200}
                     className="tooltipArrow"
                     hasArrow={true}

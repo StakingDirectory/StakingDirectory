@@ -249,7 +249,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                             />
                                         </Td>
                                         <Td>
-                                            <Text fontSize="lg" fontWeight="extrabold" isTruncated>
+                                            <Text fontSize="lg" fontWeight="extrabold" maxW={"220px"} title={provider.name} isTruncated>
                                                 {provider.name}
                                             </Text>
                                         </Td>

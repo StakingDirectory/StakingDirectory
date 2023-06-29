@@ -19,7 +19,7 @@ export default function RewardFee({ provider }) {
                     px={2}
                     py={"2px"}
                     className={"bgPage"}
-                    fontWeight={"semibold"}
+                    fontWeight={provider.fee.value == 0 ? "bold" : "semibold"}
                 >
                     {provider.fee.value}
                     {provider.fee.type == "percentage" ? "%" : ""}

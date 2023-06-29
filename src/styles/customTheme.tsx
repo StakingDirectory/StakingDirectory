@@ -149,13 +149,18 @@ const customTheme = extendTheme({
         Button: {
             variants: {
                 MainFilterButton: (props: StyleFunctionProps) => ({
-                    borderWidth: "3px",
-                    borderRadius: "10px",
-                    maxWidth: "300px",
-                    height: "fit-content",
+                    borderWidth: "5px",
+                    borderRadius: "20px",
+                    borderColor: "border.dark",
                     paddingX: "1rem",
                     paddingY: "0.8rem",
                     whiteSpace: "normal",
+                    _hover: {
+                        bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",
+                    },
+                    _active: {
+                        bg: props.colorMode === "dark" ? "rgba(255, 255, 255, 0.15)" : "pageBackground.light",
+                    },
                 }),
                 ActiveFilters: (props: StyleFunctionProps) => ({
                     _hover: {
