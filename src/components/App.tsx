@@ -1,6 +1,7 @@
 import { useState } from "react"
 import Header from "./Header/Header"
 import CommunityReviewPhase from "./CommunityReviewPhase"
+import MainFilterButtons from "./MainFilterButtons"
 import DataTableTabs from "./DataTable/DataTableTabs"
 import Footer from "./Footer"
 
@@ -33,7 +34,7 @@ const App = () => {
                         </Box>
                     </>
                 )}
-                <Flex direction={"column"} alignItems={"center"} w="100%" maxW={"1420px"}>
+                <Flex direction={"column"} alignItems={"center"} w="100%" maxW={"1400px"} px={{ base: "10px", sm: "2vw", xl: "5vw", "2xl": "3vw" }}>
                     <Box height={30} />
                     <Text fontWeight={"extrabold"} fontSize={"3xl"} textAlign={"center"}>
                         The Ethereum Staking Directory
@@ -51,6 +52,7 @@ const App = () => {
                     </Text>
                     <Box height={50} />
                     <CommunityReviewPhase />
+                    <MainFilterButtons dataFilter={dataFilter} setDataFilter={setDataFilter} />
                     <DataTableTabs orderedFilteredProviders={orderedFilteredProviders} dataFilter={dataFilter} setDataFilter={setDataFilter} />
                 </Flex>
             </Flex>

@@ -13,7 +13,7 @@ export default function DataTableTabs({ orderedFilteredProviders, dataFilter, se
     }
 
     return (
-        <Box w="100%" px={{ base: "0px", sm: "2vw", xl: "5vw", "2xl": "3vw" }}>
+        <Box w="100%">
             <Tabs>
                 <Flex alignItems={"end"} gap={30} wrap={"wrap-reverse"}>
                     <TabList mx={4} minW={"fit-content"} maxH={12} mb={1}>
@@ -29,7 +29,7 @@ export default function DataTableTabs({ orderedFilteredProviders, dataFilter, se
                     <ActiveFilters dataFilter={dataFilter} setDataFilter={setDataFilter} />
                 </Flex>
                 <TabPanels>
-                    <TabPanel pt={0}>
+                    <TabPanel p={0}>
                         <DataTable
                             stakingProviders={orderedFilteredProviders}
                             status={"active"}
