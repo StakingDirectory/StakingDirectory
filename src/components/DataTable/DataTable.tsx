@@ -118,11 +118,11 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                             if (headerValue.isTableHeader) {
                                 if (headerValue.type == "text") {
                                     return (
-                                        <Th minW={200} key={headerValue.id} textAlign={"start"}>
+                                        <Th key={headerValue.id} textAlign={"start"}>
                                             <Menu placement="right" variant={"DataTableHeader"} gutter={2} initialFocusRef={nameInputRef}>
                                                 {({ isOpen }) => (
                                                     <>
-                                                        <Box ml={"-10px"}>
+                                                        <Box>
                                                             <HeaderButton
                                                                 dataFilter={dataFilter}
                                                                 id="name"
@@ -248,7 +248,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                                 borderRadius={"100%"}
                                             />
                                         </Td>
-                                        <Td maxW={160}>
+                                        <Td>
                                             <Text fontSize="lg" fontWeight="extrabold" isTruncated>
                                                 {provider.name}
                                             </Text>

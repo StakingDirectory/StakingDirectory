@@ -34,7 +34,13 @@ const App = () => {
                         </Box>
                     </>
                 )}
-                <Flex direction={"column"} alignItems={"center"} w="100%" maxW={"1400px"} px={{ base: "10px", sm: "2vw", xl: "5vw", "2xl": "3vw" }}>
+                <Flex
+                    direction={"column"}
+                    alignItems={"center"}
+                    maxW={"100vw"}
+                    w={"1350px"}
+                    px={{ base: "10px", sm: "2vw", xl: "5vw", "2xl": "3vw" }}
+                >
                     <Box height={30} />
                     <Text fontWeight={"extrabold"} fontSize={"3xl"} textAlign={"center"}>
                         The Ethereum Staking Directory
@@ -57,7 +63,6 @@ const App = () => {
                 </Flex>
             </Flex>
             <Box flex="1" />
-
             <Footer />
         </Box>
     )

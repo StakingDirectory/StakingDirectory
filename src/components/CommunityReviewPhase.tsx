@@ -47,13 +47,13 @@ export default function CommunityReviewPhase() {
                             Community Review Phase
                         </Text>
                         {!isOpen && (
-                            <>
+                            <Flex gap={15}>
                                 <Box as={FontAwesomeIcon} icon={faUsers} size={"xl"} color={"blue"} />
                                 <Box as={FontAwesomeIcon} icon={faRightLong} size={"xl"} />
                                 <Box as={FontAwesomeIcon} icon={faPencil} size={"xl"} color={"orange"} />
                                 <Box as={FontAwesomeIcon} icon={faRightLong} size={"xl"} />
                                 <Box as={FontAwesomeIcon} icon={faTrophy} size={"xl"} color={"gold"} />
-                            </>
+                            </Flex>
                         )}
                     </Flex>
                 </Flex>

@@ -148,6 +148,15 @@ const customTheme = extendTheme({
         },
         Button: {
             variants: {
+                MainFilterButton: (props: StyleFunctionProps) => ({
+                    borderWidth: "3px",
+                    borderRadius: "10px",
+                    maxWidth: "300px",
+                    height: "fit-content",
+                    paddingX: "1rem",
+                    paddingY: "0.8rem",
+                    whiteSpace: "normal",
+                }),
                 ActiveFilters: (props: StyleFunctionProps) => ({
                     _hover: {
                         bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
