@@ -35,7 +35,8 @@ export default function EditorOption({ id, name, inputType, options = [], update
     const nameInputRef = useRef<HTMLInputElement | null>(null)
 
     const updateValues = (option, value) => {
-        if (JSON.stringify(value) === JSON.stringify(provider[option]) || value === "") {
+        console.log("value", value)
+        if (JSON.stringify(value) === JSON.stringify(provider[option])) {
             const updatedValuesCopy = { ...updatedValues }
             delete updatedValuesCopy[option]
             setUpdatedValues(updatedValuesCopy)
@@ -56,7 +57,7 @@ export default function EditorOption({ id, name, inputType, options = [], update
                         <Input
                             maxW="100%"
                             variant={"EditorInput"}
-                            value={updatedValues[id] ? updatedValues[id] : provider[id]}
+                            value={updatedValues[id] != null ? updatedValues[id] : provider[id]}
                             placeholder={`${name}...`}
                             ref={nameInputRef}
                             onChange={() => {
