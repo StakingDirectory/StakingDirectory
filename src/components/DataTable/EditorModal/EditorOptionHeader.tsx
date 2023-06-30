@@ -9,7 +9,7 @@ export default function EditorOptionHeader({ id, name, updatedValues, setUpdated
             <Text fontSize={"lg"} fontWeight={"bold"}>
                 {name}
             </Text>
-            {updatedValues[id] && (
+            {updatedValues[id] != null && (
                 <Flex gap={2} alignItems={"center"}>
                     <Box className={"editedLozenge"} cursor={"default"}>
                         Edited
