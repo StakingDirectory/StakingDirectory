@@ -13,22 +13,24 @@ export default function ExpandedRow({ provider, expandedChecklistRows, setExpand
                 <Links provider={provider} />
             </Flex>
             <Flex direction={"column"} gap={5} w={400}>
-                <Flex className={"expandContentBox"} minH={150}>
+                <Flex className={"expandContentBox"} minH={provider.providerType === "hardware" ? 150 : 250}>
                     <Text>🏗️ Description coming soon! 🏗️</Text>
                 </Flex>
-                <Flex className={"expandContentBox"} grow={1}>
+                <Flex className={"expandContentBox"} minH={115}>
                     <Text>🏗️ Staking Type coming soon! 🏗️</Text>
                 </Flex>
-                <Flex className={"expandContentBox"} grow={1}>
-                    <Text>🏗️ Provider Type coming soon! 🏗️</Text>
-                </Flex>
+                {provider.providerType === "hardware" && (
+                    <Flex className={"expandContentBox"}>
+                        <Text>🏗️ Provider Type coming soon! 🏗️</Text>
+                    </Flex>
+                )}
             </Flex>
             <Flex direction={"column"} gap={5} w={220}>
                 <Flex direction={"column"} className={"expandContentBox"} p={0} overflow={"hidden"}>
                     <KeyOwner provider={provider} id={"validatorKey"} />
                     <KeyOwner provider={provider} id={"withdrawalKey"} />
                 </Flex>
-                <Flex direction={"column"} className={"expandContentBox"} grow={1} gap={3}>
+                <Flex direction={"column"} className={"expandContentBox"} gap={3} minH={185}>
                     <Text>Locations</Text>
                     <Text>🏗️ Coming soon! 🏗️</Text>
                 </Flex>
