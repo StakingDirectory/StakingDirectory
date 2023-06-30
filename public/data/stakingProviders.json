@@ -3873,7 +3873,7 @@
       "src": "./images/StakeWiseLogo.png",
       "alt": "Logo"
     },
-    "name": "StakeWise V3",
+    "name": "StakeWise V3 (LST)",
     "status": "dev",
     "mainnetLaunchDate": "",
     "stakingType": "lst",
@@ -3981,7 +3981,7 @@
       "src": "./images/DivaLogo.png",
       "alt": "Logo"
     },
-    "name": "Diva",
+    "name": "Diva (LST)",
     "status": "dev",
     "mainnetLaunchDate": "",
     "stakingType": "lst",
