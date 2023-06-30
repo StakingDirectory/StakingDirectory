@@ -59,11 +59,11 @@ const App = () => {
                         A community maintained directory of Ethereum staking providers
                     </Text>
                     <Box height={50} />
-                    {/* <Box px={"inherit"}> */}
+                    {/* <Box minH={"90vh"} */}
                     <CommunityReviewPhase />
-                    <Box height={50} />
+                    <Box height={"80px"} />
                     <MainFilterButtons dataFilter={dataFilter} setDataFilter={setDataFilter} />
-                    <Box height={50} />
+                    <Box height={"80px"} />
                     <DataTableTabs orderedFilteredProviders={orderedFilteredProviders} dataFilter={dataFilter} setDataFilter={setDataFilter} />
                     <Box height={50} />
                     {/* </Box> */}

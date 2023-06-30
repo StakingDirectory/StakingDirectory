@@ -41,6 +41,7 @@ const dataProps = [
             { value: "diverseBeaconClients", name: "Diverse beacon clients" },
             { value: "solo", name: "Solo" },
             { value: "pooled", name: "Pooled" },
+            { value: "managed", name: "Managed" },
             { value: "lst", name: "LST" },
             { value: "indexToken", name: "LST index" },
             { value: "hardware", name: "Hardware" },
@@ -93,11 +94,9 @@ const dataProps = [
         options: [
             { value: "solo", color: "green", icon: faServer },
             { value: "pooled", color: "blue", icon: faUsers },
+            { value: "managed", color: "red", icon: faUsers },
             { value: "lst", color: "gold", icon: faCoins },
             { value: "indexToken", color: "orange", icon: faShoppingBasket },
-            // { value: "hardware", color: "", icon: faDesktop },
-            // { value: "software", color: "", icon: faCode },
-            // { value: "saas", color: "", icon: faCloud },
         ],
     },
     {

@@ -5,7 +5,7 @@ const countChecklistTrues = (provider, checklistProperties) => {
 }
 
 const orderFilteredProviders = (filteredProviders, checklistProperties) => {
-    const stakingTypeOrder = ["solo", "pooled", "lst", "indexToken"]
+    const stakingTypeOrder = ["solo", "pooled", "managed", "lst", "indexToken"]
     const providerTypeOrder = ["hardware", "software", "saas", "lst"]
 
     // Copy the filteredProviders array before sorting
@@ -22,12 +22,6 @@ const orderFilteredProviders = (filteredProviders, checklistProperties) => {
         const stakingOrderB = stakingTypeOrder.indexOf(b.stakingType)
         if (stakingOrderA < stakingOrderB) return -1
         if (stakingOrderA > stakingOrderB) return 1
-
-        // Then sort by providerType
-        const providerOrderA = providerTypeOrder.indexOf(a.providerType)
-        const providerOrderB = providerTypeOrder.indexOf(b.providerType)
-        if (providerOrderA < providerOrderB) return -1
-        if (providerOrderA > providerOrderB) return 1
 
         // If counts are equal, sort by name
         const nameA = a.name.toLowerCase()

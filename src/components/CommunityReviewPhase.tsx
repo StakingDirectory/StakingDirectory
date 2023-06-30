@@ -59,7 +59,7 @@ export default function CommunityReviewPhase() {
                 </Flex>
                 <Collapse in={isOpen}>
                     <Box px={"1rem"}>
-                        <Box mt={3}></Box>
+                        <Box mt={{ base: 0, sm: 3 }}></Box>
                         <InfoBlock icon={faMagnifyingGlass} color={"blue"}>
                             The Community Review Phase is a crucial step before our main launch. It&apos;s an opportunity for the Ethereum staking
                             community to help us ensure the accuracy and relevance of our data. We understand the importance of trust in this space,

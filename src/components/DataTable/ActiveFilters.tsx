@@ -2,7 +2,6 @@ import { Flex, Text, Box, Button, Tooltip, IconButton } from "@chakra-ui/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faFilter, faFilterCircleXmark } from "@fortawesome/free-solid-svg-icons"
 import { faTimesCircle } from "@fortawesome/free-regular-svg-icons"
-import ClearFiltersButton from "./ClearFiltersButton"
 
 import dataProps from "public/data/dataProps"
 const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
@@ -108,12 +107,12 @@ export default function ActiveFilters({ dataFilter, setDataFilter }) {
 
             {dataFilter && Object.keys(dataFilter).length > 0 ? (
                 <Button
-                    color="pink"
                     variant="ghost"
                     aria-label="Clear filters"
                     size="md"
-                    border={"2px solid"}
+                    border={"3px solid"}
                     borderRadius={"12px"}
+                    borderColor="purple"
                     px={2}
                     py={1}
                     h={"fit-content"}
@@ -121,8 +120,8 @@ export default function ActiveFilters({ dataFilter, setDataFilter }) {
                         setDataFilter({})
                     }}
                 >
-                    <Box as={FontAwesomeIcon} icon={faFilterCircleXmark} pr={1} />
-                    Clear all filters
+                    <Box as={FontAwesomeIcon} color={"pink"} icon={faFilterCircleXmark} pr={1} />
+                    <Text>Clear all filters</Text>
                 </Button>
             ) : (
                 <></>

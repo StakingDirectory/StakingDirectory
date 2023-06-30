@@ -22,31 +22,14 @@ export default function HeaderMenuType({ id, dataFilter, setDataFilter }) {
             <MenuOptionGroup defaultValue={dataFilter[id]} type="checkbox" onChange={updateFilter} title="Staking Type" fontWeight={"extrabold"}>
                 {dataProps
                     .find((obj) => obj.id === id)
-                    ?.options?.map(
-                        (option) =>
-                            (option.value === "solo" || option.value === "pooled" || option.value === "lst" || option.value === "indexToken") && (
-                                <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"} fontWeight={"semibold"}>
-                                    <Flex gap={2} alignItems={"center"}>
-                                        <Text>{providerProperties.find((prop) => prop.value === option.value)?.name}</Text>
-                                    </Flex>
-                                </MenuItemOption>
-                            )
-                    )}
+                    ?.options?.map((option) => (
+                        <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"} fontWeight={"semibold"}>
+                            <Flex gap={2} alignItems={"center"}>
+                                <Text>{providerProperties.find((prop) => prop.value === option.value)?.name}</Text>
+                            </Flex>
+                        </MenuItemOption>
+                    ))}
             </MenuOptionGroup>
-            {/* <MenuOptionGroup defaultValue={dataFilter[id]} type="checkbox" onChange={updateFilter} title="Provider Type" fontWeight={"extrabold"}>
-                {dataProps
-                    .find((obj) => obj.id === id)
-                    ?.options?.map(
-                        (option) =>
-                            (option.value === "hardware" || option.value === "software" || option.value === "saas") && (
-                                <MenuItemOption key={option.value} value={option.value} color={option.color} fontSize={"lg"}>
-                                    <Flex gap={2} alignItems={"center"}>
-                                        <Text>{providerProperties.find((prop) => prop.value === option.value)?.name}</Text>
-                                    </Flex>
-                                </MenuItemOption>
-                            )
-                    )}
-            </MenuOptionGroup> */}
         </MenuList>
     )
 }

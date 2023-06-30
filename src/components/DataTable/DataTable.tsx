@@ -86,19 +86,13 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                                 </Text>
                                                 Then, by the staking type &nbsp;(
                                                 <Box color={"green"}>Solo</Box>, &nbsp;
-                                                <Box color={"blue"}>Pooled</Box>, &nbsp;<Box color={"gold"}>LST</Box>&nbsp;or&nbsp;
+                                                <Box color={"blue"}>Pooled</Box>, &nbsp;
+                                                <Box color={"red"}>Managed</Box>, &nbsp;<Box color={"gold"}>LST</Box>&nbsp;or&nbsp;
                                                 <Box color={"orange"}>LST Index</Box>)
                                             </Flex>
                                             <Flex>
                                                 <Text w={5} fontWeight={"extrabold"} textAlign={"start"}>
                                                     3.
-                                                </Text>
-
-                                                <Text>Then, by the provider type (Hardware, Software or SAAS)</Text>
-                                            </Flex>
-                                            <Flex>
-                                                <Text w={5} fontWeight={"extrabold"} textAlign={"start"}>
-                                                    4.
                                                 </Text>
 
                                                 <Text>Finally, if all the previous steps are identical, order by name</Text>

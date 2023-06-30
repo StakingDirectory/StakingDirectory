@@ -1,31 +1,38 @@
 import React from "react"
 import { Flex, Text, Box, Button } from "@chakra-ui/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faUser, faUsers, faCoins, faDesktop } from "@fortawesome/free-solid-svg-icons"
+import { faUser, faUsers, faCoins, faServer, faHardDrive } from "@fortawesome/free-solid-svg-icons"
 
+// TODO: Pull the colors from the dataProps
 const buttonData = [
     {
         icon: faUser,
         color: "green",
-        text: "I have 32 ETH and I want to solo stake",
+        text: "I want to solo stake",
         type: "solo",
     },
     {
         icon: faUsers,
         color: "blue",
-        text: "I have 32 ETH or less and want to stake in a pool",
+        text: "I want to stake with a pool",
         type: "pooled",
+    },
+    {
+        icon: faServer,
+        color: "red",
+        text: "I want to stake with a managed service",
+        type: "managed",
     },
     {
         icon: faCoins,
         color: "gold",
-        text: "I want to earn rewards for holding a Liquid Staking Token (LST)",
+        text: "I want a Liquid Staking Token (LST)",
         type: "lst",
     },
     {
-        icon: faDesktop,
+        icon: faHardDrive,
         color: "",
-        text: "I want to stake from home and need to buy hardware",
+        text: "I want to buy ready-to-use hardware",
         type: "hardware",
     },
 ]
@@ -49,8 +56,9 @@ const MainFilterButton = ({ dataFilter, setDataFilter }) => {
             }}
             variant="MainFilterButton"
             flex={1}
-            minW={{ base: "50%", sm: "150px" }}
-            h={{ base: "fit-content", sm: "100%" }}
+            minW={{ base: "50%", md: "80px" }}
+            h={{ base: "fit-content", md: "100%" }}
+            w={{ base: "", md: "500px" }}
         >
             <Flex direction={{ base: "row", sm: "column" }} alignItems="center" gap={2}>
                 <Box as={FontAwesomeIcon} icon={data.icon} size="xl" color={data.color} />

@@ -19,7 +19,7 @@ const filterStakingProviders = (dataFilter) => {
                     }
                 } else if (key === "type") {
                     let showStakingType = []
-                    for (let stakingType of ["solo", "pooled", "lst", "indexToken"]) {
+                    for (let stakingType of ["solo", "pooled", "managed", "lst", "indexToken"]) {
                         if (dataFilter[key].includes(stakingType) && provider["stakingType"].includes(stakingType)) {
                             showStakingType.push(true)
                         } else if (dataFilter[key].includes(stakingType)) {

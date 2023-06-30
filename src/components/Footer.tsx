@@ -10,6 +10,10 @@ export default function Footer() {
                 Built with ❤️ by{" "}
                 <Link as={NextLink} href={"https://twitter.com/EridianAlpha"} color={"blue"} textDecoration={"underline"} target="_blank">
                     Eridian
+                </Link>{" "}
+                and{" "}
+                <Link as={NextLink} href={"https://twitter.com/Spacesider"} color={"blue"} textDecoration={"underline"} target="_blank">
+                    Spacesider
                 </Link>
             </Text>
             <Flex wrap={"wrap"} justifyContent={"center"} alignItems={"baseline"} fontWeight={"bold"} gap={1}>
