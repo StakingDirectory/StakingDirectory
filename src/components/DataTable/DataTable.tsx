@@ -1,6 +1,24 @@
 import React, { useRef, useEffect, useState } from "react"
 
-import { Flex, Box, Image, useColorModeValue, Table, Thead, Tbody, Tr, Th, Td, Menu, Text, Link, Collapse, Tooltip } from "@chakra-ui/react"
+import {
+    Flex,
+    Box,
+    Image,
+    useColorModeValue,
+    Table,
+    Thead,
+    Tbody,
+    Tr,
+    Th,
+    Td,
+    Menu,
+    Text,
+    Collapse,
+    Tooltip,
+    Popover,
+    PopoverTrigger,
+    PopoverContent,
+} from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowDownShortWide, faChevronRight } from "@fortawesome/free-solid-svg-icons"
@@ -63,50 +81,73 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                             <ClearFiltersButton dataFilter={dataFilter} setDataFilter={setDataFilter} />
                         </Th>
                         <Th minW={"32px"} px={0}>
-                            <Tooltip
-                                placement={"right"}
-                                gutter={0}
-                                label={
-                                    <Box className={"tooltipLabel"} p={6}>
-                                        <Flex direction={"column"} alignItems={"start"} gap={2}>
-                                            <Text fontWeight={"extrabold"} fontSize={"lg"}>
-                                                How is the table ordered?
+                            <Popover placement="top" trigger="hover" gutter={5}>
+                                <PopoverTrigger>
+                                    <Flex
+                                        justifyContent={"center"}
+                                        py={1}
+                                        mb={1}
+                                        borderWidth={"3px"}
+                                        borderRadius={"10px"}
+                                        className={"borderColor"}
+                                        cursor={"help"}
+                                    >
+                                        <FontAwesomeIcon icon={faArrowDownShortWide} size="2xl" />
+                                    </Flex>
+                                </PopoverTrigger>
+                                <PopoverContent px={6} py={4} w={"fit-content"} maxW={"100vw"}>
+                                    <Flex direction={"column"} alignItems={"start"} gap={3}>
+                                        <Text fontWeight={"extrabold"} fontSize={"lg"} pb={2}>
+                                            How is the table ordered?
+                                        </Text>
+                                        <Flex alignItems={"start"}>
+                                            <Text minW={6} fontWeight={"extrabold"} textAlign={"start"}>
+                                                1.
                                             </Text>
-                                            <Flex>
-                                                <Text w={5} fontWeight={"extrabold"} textAlign={"start"}>
-                                                    1.
-                                                </Text>
-
-                                                <Text>First, by the number of checklist items that are&nbsp;</Text>
-                                                <Box color={"green"}>green</Box>
-                                            </Flex>
-                                            <Flex>
-                                                <Text w={5} fontWeight={"extrabold"} textAlign={"start"}>
-                                                    2.
-                                                </Text>
-                                                Then, by the staking type &nbsp;(
-                                                <Box color={"green"}>Solo</Box>, &nbsp;
-                                                <Box color={"blue"}>Pooled</Box>, &nbsp;
-                                                <Box color={"red"}>Managed</Box>, &nbsp;<Box color={"gold"}>LST</Box>&nbsp;or&nbsp;
-                                                <Box color={"orange"}>LST Index</Box>)
-                                            </Flex>
-                                            <Flex>
-                                                <Text w={5} fontWeight={"extrabold"} textAlign={"start"}>
-                                                    3.
-                                                </Text>
-
-                                                <Text>Finally, if all the previous steps are identical, order by name</Text>
-                                            </Flex>
+                                            <Text textAlign={"left"}>
+                                                First, by the number of checklist items that are&nbsp;
+                                                <Box as="span" color={"green"}>
+                                                    green
+                                                </Box>
+                                            </Text>
                                         </Flex>
-                                    </Box>
-                                }
-                                className="tooltipArrow"
-                                hasArrow={true}
-                            >
-                                <Box pb={2}>
-                                    <FontAwesomeIcon icon={faArrowDownShortWide} size="2xl" />
-                                </Box>
-                            </Tooltip>
+                                        <Flex alignItems={"start"}>
+                                            <Text minW={6} fontWeight={"extrabold"} textAlign={"start"}>
+                                                2.
+                                            </Text>
+                                            <Text textAlign={"left"}>
+                                                Then, by the staking type &nbsp;(
+                                                <Box as="span" color={"green"}>
+                                                    Solo
+                                                </Box>
+                                                , &nbsp;
+                                                <Box as="span" color={"blue"}>
+                                                    Pooled
+                                                </Box>
+                                                , &nbsp;
+                                                <Box as="span" color={"red"}>
+                                                    Managed
+                                                </Box>
+                                                , &nbsp;
+                                                <Box as="span" color={"gold"}>
+                                                    LST
+                                                </Box>
+                                                &nbsp;then&nbsp;
+                                                <Box as="span" color={"orange"}>
+                                                    LST Index
+                                                </Box>
+                                                )
+                                            </Text>
+                                        </Flex>
+                                        <Flex alignItems={"start"}>
+                                            <Text minW={6} fontWeight={"extrabold"} textAlign={"start"}>
+                                                3.
+                                            </Text>
+                                            <Text textAlign={"left"}>Finally, if all the previous steps are identical, they are ordered by name</Text>
+                                        </Flex>
+                                    </Flex>
+                                </PopoverContent>
+                            </Popover>
                         </Th>
                         {dataProps.map((headerValue) => {
                             if (headerValue.isTableHeader) {

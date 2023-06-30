@@ -136,7 +136,6 @@ const customTheme = extendTheme({
                 bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "contentBackground.light",
             }),
         },
-
         Input: {
             variants: {
                 EditorInput: (props: StyleFunctionProps) => ({
@@ -276,15 +275,16 @@ const customTheme = extendTheme({
                 content: {
                     bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
                     color: props.colorMode === "dark" ? "text.dark" : "text.light",
-                    borderColor: "white",
-                    maxWidth: "500px",
-                    textAlign: "center",
-                    borderWidth: "1px",
+                    borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
+                    maxWidth: "100%",
+                    borderWidth: "3px",
                     borderRadius: "10px",
                     fontWeight: "bold",
                     fontSize: "sm",
-                    padding: "0.6rem",
-                    boxShadow: "0 0 10px 0 rgba(0, 0, 0, 0.2)",
+                    padding: "10px",
+                    boxShadow: "0 0 20px 0 rgba(0, 0, 0, 1)",
+                    textTransform: "none",
+                    // whitespace: "normal",
                 },
             }),
         },
