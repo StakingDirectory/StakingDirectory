@@ -1,15 +1,13 @@
 import { Flex, Box, Tooltip, Text, HStack } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCircleCheck, faCircleXmark } from "@fortawesome/free-solid-svg-icons"
+import { faCheck, faCircleCheck, faCircleXmark, faXmark } from "@fortawesome/free-solid-svg-icons"
 
 import dataProps from "public/data/dataProps"
 const checklistProperties = dataProps.find((prop) => prop.id === "checklistProperties").checklistProperties
 const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
 
 export default function ChecklistBar({ provider, tableRowIndex, expandedRows, setExpandedChecklistRows }) {
-    const allTrue = checklistProperties.every((prop) => provider[prop]?.value)
-
     const renderBox = (id: string, index: number) => {
         const name = providerProperties.find((prop) => prop.value === id).name
         const value = provider[id]?.value
@@ -49,12 +47,14 @@ export default function ChecklistBar({ provider, tableRowIndex, expandedRows, se
                 className="tooltipArrow"
                 hasArrow={true}
             >
-                <Box
+                <Flex
+                    justifyContent={"center"}
+                    alignItems={"center"}
                     borderRadius={0}
                     borderY={0}
                     borderLeftWidth={borderLeftWidth}
                     borderRightWidth={borderRightWidth}
-                    className="borderChecklistBar"
+                    className={"checklistBar"}
                     w={10}
                     bg={value ? "green" : "red"}
                     onClick={(e) => {
@@ -64,23 +64,16 @@ export default function ChecklistBar({ provider, tableRowIndex, expandedRows, se
                         }
                         setExpandedChecklistRows([{ providerId: provider.id, index }])
                     }}
-                />
+                >
+                    <Box as={FontAwesomeIcon} icon={value ? faCheck : faXmark} size={"xs"} pt={{ base: "1", sm: "0" }} mr={1} ml={1} />
+                </Flex>
             </Tooltip>
         )
     }
 
     return (
         <Flex justifyContent={"center"}>
-            <Flex
-                borderRadius={10}
-                borderWidth={3}
-                borderStyle="solid"
-                className={allTrue ? "bgChecklistBar" : "bgChecklistBar borderChecklistBar"}
-                borderColor={allTrue ? "gold" : ""}
-                w={200}
-                h={10}
-                overflow={"hidden"}
-            >
+            <Flex borderRadius={10} borderWidth={3} borderStyle="solid" className={"checklistBar"} w={200} h={10} overflow={"hidden"}>
                 {checklistProperties.map((id, index) => renderBox(id, index))}
             </Flex>
         </Flex>

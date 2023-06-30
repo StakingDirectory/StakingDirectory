@@ -46,10 +46,8 @@ const customTheme = extendTheme({
             ".borderColorDivider": {
                 borderColor: props.colorMode === "dark" ? "divider.dark" : "divider.light",
             },
-            ".bgChecklistBar": {
+            ".checklistBar": {
                 bg: props.colorMode === "dark" ? "checklistBar.dark" : "checklistBar.light",
-            },
-            ".borderChecklistBar": {
                 borderColor: props.colorMode === "dark" ? "checklistBar.dark" : "checklistBar.light",
             },
             ".expandedTableRow": {
