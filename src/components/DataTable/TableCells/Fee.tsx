@@ -12,8 +12,8 @@ export default function RewardFee({ provider }) {
             >
                 <Box
                     borderRadius={10}
-                    border={"2px solid"}
-                    borderColor={provider.fee.value == 0 ? "gold" : "red"}
+                    border={provider.fee.value == 0 ? "" : "2px solid"}
+                    borderColor="red"
                     bg={provider.fee.value == 0 ? "green" : ""}
                     w={"fit-content"}
                     px={2}
