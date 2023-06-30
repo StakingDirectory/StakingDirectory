@@ -60,9 +60,9 @@ const App = () => {
                     </Text>
                     <Box height={50} />
                     <CommunityReviewPhase />
-                    <Box height={"80px"} />
+                    <Box height={50} />
                     <MainFilterButtons dataFilter={dataFilter} setDataFilter={setDataFilter} />
-                    <Box height={"80px"} />
+                    <Box height={50} />
                     <DataTableTabs orderedFilteredProviders={orderedFilteredProviders} dataFilter={dataFilter} setDataFilter={setDataFilter} />
                 </Flex>
             </Flex>

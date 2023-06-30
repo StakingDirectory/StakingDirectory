@@ -62,7 +62,9 @@ const MainFilterButton = ({ dataFilter, setDataFilter }) => {
         >
             <Flex direction={{ base: "row", md: "column" }} alignItems="center" gap={3}>
                 <Box as={FontAwesomeIcon} icon={data.icon} size="xl" color={data.color} />
-                <Flex wrap="wrap">{data.text}</Flex>
+                <Flex wrap="wrap" fontWeight={"bold"}>
+                    {data.text}
+                </Flex>
             </Flex>
         </Button>
     )

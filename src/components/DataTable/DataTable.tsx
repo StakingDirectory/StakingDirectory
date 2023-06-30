@@ -197,7 +197,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                 className="tooltipArrow"
                                 hasArrow={true}
                             >
-                                <Text fontWeight={"extrabold"} fontSize={"sm"} pb={2} cursor={"default"} color={"blue"}>
+                                <Text fontWeight={"extrabold"} fontSize={"sm"} pb={2} cursor={"default"} color={"blue"} minW={"120px"}>
                                     COMMUNITY REVIEW PHASE
                                 </Text>
                             </Tooltip>
@@ -298,9 +298,9 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                     )}
                 </Tbody>
             </Table>
-            {stakingProviders && stakingProviders.length === 0 && (
+            {stakingProviders && stakingProviders.filter((provider) => provider.status === status).length === 0 && (
                 <Flex direction={"column"} justifyContent={"center"} alignItems={"center"} py={2}>
-                    <Text fontSize={"3xl"}>😭</Text>
+                    <Text fontSize={"3xl"}>🔍</Text>
                     <Text fontWeight={"bold"}>No results found</Text>
                     <Text fontWeight={"bold"}>Please try a different filter</Text>
                 </Flex>
