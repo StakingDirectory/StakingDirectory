@@ -124,6 +124,15 @@ const customTheme = extendTheme({
         }),
     },
     components: {
+        Tabs: {
+            baseStyle: (props: StyleFunctionProps) => ({
+                tab: {
+                    _selected: {
+                        bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackground.light",
+                    },
+                },
+            }),
+        },
         Code: {
             baseStyle: (props: StyleFunctionProps) => ({
                 bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "contentBackground.light",
