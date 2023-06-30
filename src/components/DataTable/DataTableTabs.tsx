@@ -13,7 +13,7 @@ export default function DataTableTabs({ orderedFilteredProviders, dataFilter, se
     }
 
     return (
-        <Box w="100%">
+        <Box w="100%" minH={"65vh"}>
             <Tabs>
                 <Flex justifyContent={"space-between"} alignItems={"end"} gap={30} wrap={"wrap-reverse"}>
                     <TabList maxH={12} mb={1}>

@@ -64,7 +64,6 @@ const App = () => {
                     <MainFilterButtons dataFilter={dataFilter} setDataFilter={setDataFilter} />
                     <Box height={"80px"} />
                     <DataTableTabs orderedFilteredProviders={orderedFilteredProviders} dataFilter={dataFilter} setDataFilter={setDataFilter} />
-                    <Box height={50} />
                 </Flex>
             </Flex>
             <Box flex="1" />
