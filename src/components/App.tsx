@@ -22,6 +22,19 @@ const App = () => {
 
     console.log("App.tsx - dataFilter", dataFilter)
 
+    const BodyContainer = ({ children, minH = "" }) => (
+        <Flex
+            direction={"column"}
+            alignItems={"center"}
+            maxW={"100vw"}
+            w={"1350px"}
+            minH={minH}
+            px={{ base: "10px", sm: "2vw", xl: "3vw", "2xl": "3vw" }}
+        >
+            {children}
+        </Flex>
+    )
+
     return (
         <Box minH="100vh" minW="100vw" className={"bgPage"} display="flex" flexDirection="column">
             <Flex direction="column" justifyContent="center" alignItems="center">
@@ -36,13 +49,7 @@ const App = () => {
                         </Box>
                     </>
                 )}
-                <Flex
-                    direction={"column"}
-                    alignItems={"center"}
-                    maxW={"100vw"}
-                    w={"1350px"}
-                    px={{ base: "10px", sm: "2vw", xl: "3vw", "2xl": "3vw" }}
-                >
+                <BodyContainer>
                     <Box height={30} />
                     <Text fontWeight={"extrabold"} fontSize={"3xl"} textAlign={"center"}>
                         The Ethereum Staking Directory
@@ -59,15 +66,14 @@ const App = () => {
                         A community maintained directory of Ethereum staking providers
                     </Text>
                     <Box height={50} />
-                    {/* <Box minH={"90vh"} */}
                     <CommunityReviewPhase />
                     <Box height={"80px"} />
+                </BodyContainer>
+                <BodyContainer minH={"90vh"}>
                     <MainFilterButtons dataFilter={dataFilter} setDataFilter={setDataFilter} />
                     <Box height={"80px"} />
                     <DataTableTabs orderedFilteredProviders={orderedFilteredProviders} dataFilter={dataFilter} setDataFilter={setDataFilter} />
-                    <Box height={50} />
-                    {/* </Box> */}
-                </Flex>
+                </BodyContainer>
             </Flex>
             <Box flex="1" />
             <Footer />
