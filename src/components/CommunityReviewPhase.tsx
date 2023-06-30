@@ -62,8 +62,8 @@ export default function CommunityReviewPhase() {
                         <Box mt={{ base: 0, sm: 3 }}></Box>
                         <InfoBlock icon={faMagnifyingGlass} color={"blue"}>
                             The Community Review Phase is a crucial step before our main launch. It&apos;s an opportunity for the Ethereum staking
-                            community to help us ensure the accuracy and relevance of our data. We understand the importance of trust in this space,
-                            and that trust is built on accurate, up-to-date information.
+                            community to help us ensure the accuracy of our data. We understand the importance of trust in this space, and that trust
+                            is built on accurate, up-to-date information.
                         </InfoBlock>
                         {useBreakpointValue({ base: false, sm: true }) && (
                             <Flex alignItems={"center"} justifyContent={"center"} w={"60px"} pt={3}>
@@ -102,7 +102,7 @@ export default function CommunityReviewPhase() {
                         <InfoBlock icon={faTrophy} color={"gold"}>
                             We also want to acknowledge the contributions of our community members. If you would like to be recognized for your
                             contribution to this resource, you can add your Ethereum address or ENS when you suggest an update. Please note that this
-                            address will be publicly visible on the GitHub PR and will be used exclusively for sending POAPs as a symbol of our
+                            address will be publicly visible on the GitHub PR and will be used solely for sending POAPs as a symbol of our
                             appreciation. Your contributions are what make this resource valuable, and we thank you in advance for your participation
                             in the Community Review Phase.
                         </InfoBlock>
