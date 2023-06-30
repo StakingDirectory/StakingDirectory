@@ -107,6 +107,31 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                             />
                         </Flex>
                     )}
+                    {(currentSelection == "stakingType" || currentSelection == "allOptions") && (
+                        <Flex className={"editorOptionContainer"} direction={"column"} gap={3}>
+                            <EditorOptionHeader
+                                id={"stakingType"}
+                                name={`Update Staking Type`}
+                                updatedValues={updatedValues}
+                                setUpdatedValues={setUpdatedValues}
+                            />
+                            <EditorOption
+                                id="stakingType"
+                                name="Staking Type"
+                                inputType="select"
+                                options={dataProps
+                                    .flatMap((dataProp) => dataProp)
+                                    .find((prop) => prop?.id === "stakingType")
+                                    ?.options.map((option) => ({
+                                        value: option.value,
+                                        name: providerProperties.find((prop) => prop.value === option.value)?.name,
+                                    }))}
+                                updatedValues={updatedValues}
+                                setUpdatedValues={setUpdatedValues}
+                                provider={provider}
+                            />
+                        </Flex>
+                    )}
                     {(currentSelection == "status" || currentSelection == "allOptions") && (
                         <Flex className={"editorOptionContainer"} direction={"column"} gap={3}>
                             <EditorOptionHeader
