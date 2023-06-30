@@ -45,7 +45,7 @@ export default function ActiveFilters({ dataFilter, setDataFilter }) {
     }
 
     return (
-        <Flex gap={2} minH={12} alignItems={"center"} wrap={"wrap"} px={0} pl={{ base: 2, sm: 5 }}>
+        <Flex gap={2} minH={12} alignItems={"center"} wrap={"wrap"} px={0}>
             <Flex color="pink" alignItems={"center"} ml={2} fontWeight={"bold"} fontSize="xl">
                 Active filters
             </Flex>

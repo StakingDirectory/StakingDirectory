@@ -16,7 +16,7 @@ export default function DataTableTabs({ orderedFilteredProviders, dataFilter, se
         <Box w="100%">
             <Tabs>
                 <Flex justifyContent={"space-between"} alignItems={"end"} gap={30} wrap={"wrap-reverse"}>
-                    <TabList ml={4} maxH={12} mb={1}>
+                    <TabList maxH={12} mb={1}>
                         <Tab fontWeight={"extrabold"} borderTopRadius={10} minW={150}>
                             <Flex>Active {tabNumberBox(orderedFilteredProviders.filter((item) => item.status === "active").length, "green")}</Flex>
                         </Tab>
