@@ -12,9 +12,8 @@ import {
     faShapes,
     faLockOpen,
     faListUl,
-    faCloud,
-    faDesktop,
     faShoppingBasket,
+    faHardDrive,
 } from "@fortawesome/free-solid-svg-icons"
 
 const dataProps = [
@@ -88,7 +87,7 @@ const dataProps = [
     {
         isTableHeader: true,
         type: "checkboxType",
-        id: "type",
+        id: "stakingType",
         name: "Staking Type",
         headerText: "STAKING <br /> TYPE",
         options: [
@@ -98,6 +97,14 @@ const dataProps = [
             { value: "lst", color: "gold", icon: faCoins },
             { value: "indexToken", color: "orange", icon: faShoppingBasket },
         ],
+    },
+    {
+        isTableHeader: false,
+        type: "checkboxType",
+        id: "providerType",
+        name: "Provider Type",
+        headerText: "PROVIDER <br /> TYPE",
+        options: [{ value: "hardware", color: "", icon: faHardDrive }],
     },
     {
         isTableHeader: true,

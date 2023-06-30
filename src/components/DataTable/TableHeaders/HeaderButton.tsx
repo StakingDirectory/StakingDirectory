@@ -19,7 +19,7 @@ export default function HeaderButton({ dataFilter, id, text, filterDisabledColor
                 <Box fontSize={"sm"} fontWeight={"extrabold"}>
                     {textElements}
                 </Box>
-                <Box color={dataFilter && dataFilter[id] ? "pink" : filterDisabledColor}>
+                <Box color={dataFilter && dataFilter[id] /* && dataFilter.type != "hardware" */ ? "pink" : filterDisabledColor}>
                     <FontAwesomeIcon icon={faFilter} size={"lg"} />
                 </Box>
             </Flex>

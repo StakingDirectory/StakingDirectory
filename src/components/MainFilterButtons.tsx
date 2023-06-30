@@ -9,25 +9,29 @@ const buttonData = [
         icon: faHouse,
         color: "green",
         text: "I want to stake from home",
-        type: "solo, pooled",
+        value: "solo, pooled",
+        type: "stakingType",
     },
     {
         icon: faServer,
         color: "red",
         text: "I want to stake with a managed service",
-        type: "managed",
+        value: "managed",
+        type: "stakingType",
     },
     {
         icon: faCoins,
         color: "gold",
         text: "I want a Liquid Staking Token (LST)",
-        type: "lst",
+        value: "lst",
+        type: "stakingType",
     },
     {
         icon: faHardDrive,
         color: "",
         text: "I want to buy ready-to-use hardware",
-        type: "hardware",
+        value: "hardware",
+        type: "providerType",
     },
 ]
 
@@ -46,7 +50,7 @@ const MainFilterButton = ({ dataFilter, setDataFilter }) => {
             key={index}
             onClick={() => {
                 scrollToQuickFilters()
-                setDataFilter({ ...dataFilter, type: data.type.split(", ").map((item) => item.trim()) })
+                setDataFilter({ [data.type]: data.value.split(", ").map((item) => item.trim()) })
             }}
             variant="MainFilterButton"
             flex={1}

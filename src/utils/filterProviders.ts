@@ -17,7 +17,7 @@ const filterStakingProviders = (dataFilter) => {
                     } else {
                         showProvider.push(false)
                     }
-                } else if (key === "type") {
+                } else if (key === "stakingType") {
                     let showStakingType = []
                     for (let stakingType of ["solo", "pooled", "managed", "lst", "indexToken"]) {
                         if (dataFilter[key].includes(stakingType) && provider["stakingType"].includes(stakingType)) {
@@ -33,6 +33,7 @@ const filterStakingProviders = (dataFilter) => {
                             showProvider.push(false)
                         }
                     }
+                } else if (key === "providerType") {
                     let showProviderType = []
                     for (let providerType of ["hardware", "software", "saas"]) {
                         if (dataFilter[key].includes(providerType) && provider["providerType"].includes(providerType)) {
