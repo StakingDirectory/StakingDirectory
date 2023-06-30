@@ -1,21 +1,15 @@
 import React from "react"
 import { Flex, Text, Box, Button } from "@chakra-ui/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faUser, faUsers, faCoins, faServer, faHardDrive } from "@fortawesome/free-solid-svg-icons"
+import { faUser, faUsers, faCoins, faServer, faHardDrive, faHouse } from "@fortawesome/free-solid-svg-icons"
 
 // TODO: Pull the colors from the dataProps
 const buttonData = [
     {
-        icon: faUser,
+        icon: faHouse,
         color: "green",
-        text: "I want to solo stake",
-        type: "solo",
-    },
-    {
-        icon: faUsers,
-        color: "blue",
-        text: "I want to stake with a pool",
-        type: "pooled",
+        text: "I want to stake from home",
+        type: "solo, pooled",
     },
     {
         icon: faServer,
@@ -52,7 +46,7 @@ const MainFilterButton = ({ dataFilter, setDataFilter }) => {
             key={index}
             onClick={() => {
                 scrollToQuickFilters()
-                setDataFilter({ ...dataFilter, type: [data.type] })
+                setDataFilter({ ...dataFilter, type: data.type.split(", ").map((item) => item.trim()) })
             }}
             variant="MainFilterButton"
             flex={1}
