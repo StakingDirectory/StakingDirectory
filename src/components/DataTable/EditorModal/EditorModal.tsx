@@ -31,6 +31,7 @@ import {
 
 import OptionSelector from "./OptionSelector"
 import EditorOption from "./EditorOption"
+import EditorOptionHeader from "./EditorOptionHeader"
 import EditorFooter from "./EditorFooter"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -94,28 +95,65 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                 </ModalHeader>
                 <ModalBody overflowY={"scroll"} pt={0}>
                     {(currentSelection == "name" || currentSelection == "allOptions") && (
-                        <EditorOption
-                            id="name"
-                            name="Name"
-                            inputType="input"
-                            updatedValues={updatedValues}
-                            setUpdatedValues={setUpdatedValues}
-                            provider={provider}
-                        />
+                        <Flex className={"editorOptionContainer"} direction={"column"} gap={3}>
+                            <EditorOptionHeader id={"name"} name={`Update Name`} updatedValues={updatedValues} setUpdatedValues={setUpdatedValues} />
+                            <EditorOption
+                                id="name"
+                                name="Name"
+                                inputType="input"
+                                updatedValues={updatedValues}
+                                setUpdatedValues={setUpdatedValues}
+                                provider={provider}
+                            />
+                        </Flex>
                     )}
                     {(currentSelection == "status" || currentSelection == "allOptions") && (
-                        <EditorOption
-                            id="status"
-                            name="Status"
-                            inputType="select"
-                            options={[
-                                { value: "active", name: "Active" },
-                                { value: "dev", name: "In development" },
-                            ]}
-                            updatedValues={updatedValues}
-                            setUpdatedValues={setUpdatedValues}
-                            provider={provider}
-                        />
+                        <Flex className={"editorOptionContainer"} direction={"column"} gap={3}>
+                            <EditorOptionHeader
+                                id={"status"}
+                                name={`Update Status`}
+                                updatedValues={updatedValues}
+                                setUpdatedValues={setUpdatedValues}
+                            />
+                            <EditorOption
+                                id="status"
+                                name="Status"
+                                inputType="select"
+                                options={[
+                                    { value: "active", name: "Active" },
+                                    { value: "dev", name: "In development" },
+                                ]}
+                                updatedValues={updatedValues}
+                                setUpdatedValues={setUpdatedValues}
+                                provider={provider}
+                            />
+                        </Flex>
+                    )}
+                    {(currentSelection == "mainnetLaunch" || currentSelection == "allOptions") && (
+                        <Flex className={"editorOptionContainer"} direction={"column"} gap={3}>
+                            <EditorOptionHeader
+                                id={"mainnetLaunch"}
+                                name={`Update Mainnet Launch Date`}
+                                updatedValues={updatedValues}
+                                setUpdatedValues={setUpdatedValues}
+                            />
+                            <EditorOption
+                                id="mainnetLaunch.date"
+                                name="Mainnet Launch Date"
+                                inputType="input"
+                                updatedValues={updatedValues}
+                                setUpdatedValues={setUpdatedValues}
+                                provider={provider}
+                            />
+                            <EditorOption
+                                id="mainnetLaunch.evidenceLink"
+                                name="Evidence Link"
+                                inputType="input"
+                                updatedValues={updatedValues}
+                                setUpdatedValues={setUpdatedValues}
+                                provider={provider}
+                            />
+                        </Flex>
                     )}
                 </ModalBody>
                 <ModalFooter>
