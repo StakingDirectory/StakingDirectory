@@ -21,7 +21,7 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 import dataProps from "public/data/dataProps"
 const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
 
-export default function EditorOption({ id, name, inputType, options = [], updatedValues, setUpdatedValues, provider }) {
+export default function EditorOption({ zIndex, id, name, inputType, options = [], updatedValues, setUpdatedValues, provider }) {
     const nameInputRef = useRef<HTMLInputElement | null>(null)
 
     const getNestedValue = (obj, path) => path.split(".").reduce((acc, part) => acc && acc[part], obj)
@@ -57,7 +57,7 @@ export default function EditorOption({ id, name, inputType, options = [], update
     }
 
     return (
-        <InputGroup>
+        <InputGroup zIndex={zIndex}>
             {inputType === "input" && (
                 <>
                     <InputLeftAddon cursor={"default"} fontWeight={"bold"} borderLeftRadius={"10px"}>
