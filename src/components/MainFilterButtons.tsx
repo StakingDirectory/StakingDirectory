@@ -53,8 +53,10 @@ const MainFilterButton = ({ dataFilter, setDataFilter }) => {
             minW={{ base: "50%", md: "80px" }}
             h={{ base: "fit-content", md: "100%" }}
             w={{ base: "", md: "500px" }}
+            alignItems={"top"}
+            justifyContent={{ base: "space-between", sm: "center" }}
         >
-            <Flex direction={{ base: "row", sm: "column" }} alignItems="center" gap={2}>
+            <Flex direction={{ base: "row", md: "column" }} alignItems="center" gap={3}>
                 <Box as={FontAwesomeIcon} icon={data.icon} size="xl" color={data.color} />
                 <Flex wrap="wrap">{data.text}</Flex>
             </Flex>
