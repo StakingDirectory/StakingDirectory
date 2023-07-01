@@ -52,7 +52,7 @@ zIndex={calcZIndex("status") - 2}
 
 That's why the calcZIndex multiplies the index of the option by 100 so it is very unlikely to clash with other z-indexes
 */
-const allOptions = ["name", "stakingType", "status", "statusTest", "mainnetLaunch.date", "mainnetLaunch.evidenceLink"]
+const allOptions = ["optionSelector", "name", "stakingType", "status", "statusTest", "mainnetLaunch.date", "mainnetLaunch.evidenceLink"]
 const calcZIndex = (option) => {
     return (allOptions.length - allOptions.indexOf(option)) * 100
 }
@@ -103,6 +103,7 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                             <Text isTruncated>{provider.name}</Text>
                         </Flex>
                         <OptionSelector
+                            zIndex={calcZIndex("optionSelector")}
                             provider={provider}
                             currentSelection={currentSelection}
                             setCurrentSelection={setCurrentSelection}
@@ -110,7 +111,7 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                         />
                     </Flex>
                 </ModalHeader>
-                <ModalBody overflowY={"scroll"} pt={0}>
+                <ModalBody overflowY={"scroll"} pt={0} h={"fit-content"}>
                     {(currentSelection == "name" || currentSelection == "allOptions") && (
                         <Flex className={"editorOptionContainer"} direction={"column"} gap={3}>
                             <EditorOptionHeader id={"name"} name={`Update Name`} updatedValues={updatedValues} setUpdatedValues={setUpdatedValues} />
