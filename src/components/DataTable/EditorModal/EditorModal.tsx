@@ -43,7 +43,7 @@ const providerProperties = dataProps.find((prop) => prop.id === "providerPropert
 const allOptions = [
     {
         id: "name",
-        headerName: "Update Name",
+        headerName: "Name",
         fields: [
             {
                 id: "name",
@@ -54,7 +54,7 @@ const allOptions = [
     },
     {
         id: "stakingType",
-        headerName: "Update Staking Type",
+        headerName: "Staking Type",
         fields: [
             {
                 id: "stakingType",
@@ -72,7 +72,7 @@ const allOptions = [
     },
     {
         id: "status",
-        headerName: "Update Status",
+        headerName: "Status",
         fields: [
             {
                 id: "status",
@@ -87,7 +87,7 @@ const allOptions = [
     },
     {
         id: "mainnetLaunch",
-        headerName: "Update Mainnet Launch Date",
+        headerName: "Mainnet Launch Date",
         fields: [
             {
                 id: "mainnetLaunch.date",
@@ -102,39 +102,6 @@ const allOptions = [
         ],
     },
 ]
-
-/* Hacky solution to z-index issue
-For some reason that I couldn't work out, the selectors didn't have the correct z-indexes when they were rendered in the modal.
-So, I had to manually calculate the z-indexes for each option, and pass them down to the EditorOption component.
-If there are multiple EditorOption components in a single editorOptionContainer then you need to count down from the top
-
-e.g. for each EditorOption component, the z-index should be the z-index of the previous EditorOption minus 1
-zIndex={calcZIndex("status")}
-zIndex={calcZIndex("status") - 1}
-zIndex={calcZIndex("status") - 2}
-
-That's why the calcZIndex multiplies the index of the option by 100 so it is very unlikely to clash with other z-indexes
-*/
-const calcZIndex = (fieldId) => {
-    // Find the option that contains the field
-    const option = allOptions.find((option) => option.fields.some((field) => field.id === fieldId))
-
-    // If the option is not found, return a default value
-    if (!option) return 0
-
-    // Calculate the base z-index based on the option's position
-    const optionIndex = allOptions.indexOf(option)
-    const baseZIndex = (allOptions.length - optionIndex) * 100
-
-    // If the option only has one field, return the base z-index
-    if (option.fields.length === 1) return baseZIndex
-
-    // If the option has multiple fields, find the field's position
-    const fieldIndex = option.fields.findIndex((field) => field.id === fieldId)
-
-    // Subtract the field's position from the base z-index
-    return baseZIndex - fieldIndex
-}
 
 export default function EditorModal({ isOpen, onClose, provider }) {
     const toast = useToast()
@@ -182,7 +149,7 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                             <Text isTruncated>{provider.name}</Text>
                         </Flex>
                         <OptionSelector
-                            zIndex={999999}
+                            zIndex={999}
                             provider={provider}
                             currentSelection={currentSelection}
                             setCurrentSelection={setCurrentSelection}
@@ -190,34 +157,37 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                         />
                     </Flex>
                 </ModalHeader>
-                <ModalBody overflowY={"scroll"} pt={0} h={"fit-content"}>
-                    {allOptions.map((option, index) => {
-                        return (
-                            (currentSelection == option.id || currentSelection == "allOptions") && (
-                                <Flex className={"editorOptionContainer"} direction={"column"} gap={3} key={index}>
-                                    <EditorOptionHeader
-                                        id={option.id}
-                                        name={option.headerName}
-                                        updatedValues={updatedValues}
-                                        setUpdatedValues={setUpdatedValues}
-                                    />
-                                    {option.fields.map((field, fieldIndex) => (
-                                        <EditorOption
-                                            zIndex={calcZIndex(field.id)}
-                                            id={field.id}
-                                            name={field.name}
-                                            inputType={field.inputType}
-                                            options={field.options}
-                                            updatedValues={updatedValues}
-                                            setUpdatedValues={setUpdatedValues}
-                                            provider={provider}
-                                            key={fieldIndex}
-                                        />
-                                    ))}
-                                </Flex>
-                            )
-                        )
-                    })}
+                <ModalBody overflowY={"scroll"} pt={0}>
+                    <Box pb={"1000px"}>
+                        {allOptions
+                            .sort((a, b) => a.id.localeCompare(b.id))
+                            .map((option, index) => {
+                                return (
+                                    (currentSelection == option.id || currentSelection == "allOptions") && (
+                                        <Flex className={"editorOptionContainer"} direction={"column"} gap={3} key={index}>
+                                            <EditorOptionHeader
+                                                id={option.id}
+                                                name={option.headerName}
+                                                updatedValues={updatedValues}
+                                                setUpdatedValues={setUpdatedValues}
+                                            />
+                                            {option.fields.map((field, fieldIndex) => (
+                                                <EditorOption
+                                                    id={field.id}
+                                                    name={field.name}
+                                                    inputType={field.inputType}
+                                                    options={field.options}
+                                                    updatedValues={updatedValues}
+                                                    setUpdatedValues={setUpdatedValues}
+                                                    provider={provider}
+                                                    key={fieldIndex}
+                                                />
+                                            ))}
+                                        </Flex>
+                                    )
+                                )
+                            })}
+                    </Box>
                 </ModalBody>
                 <ModalFooter>
                     <EditorFooter onClose={closeEditor} provider={provider} updatedValues={updatedValues} setUpdatedValues={setUpdatedValues} />

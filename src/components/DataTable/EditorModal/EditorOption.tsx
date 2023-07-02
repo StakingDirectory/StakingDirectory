@@ -21,8 +21,9 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 import dataProps from "public/data/dataProps"
 const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
 
-export default function EditorOption({ zIndex, id, name, inputType, options = [], updatedValues, setUpdatedValues, provider }) {
+export default function EditorOption({ id, name, inputType, options = [], updatedValues, setUpdatedValues, provider }) {
     const nameInputRef = useRef<HTMLInputElement | null>(null)
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const getNestedValue = (obj, path) => path.split(".").reduce((acc, part) => acc && acc[part], obj)
 
@@ -57,7 +58,11 @@ export default function EditorOption({ zIndex, id, name, inputType, options = []
     }
 
     return (
-        <InputGroup zIndex={zIndex}>
+        /* 
+        For some reason that I couldn't work out, the selectors didn't have the correct z-indexes when they were rendered in the modal.
+        So, as a workaround, when each one is opened, set the zIndex to 999, and when it's closed, set it back to 0.
+        */
+        <InputGroup zIndex={isMenuOpen ? 999 : 0}>
             {inputType === "input" && (
                 <>
                     <InputLeftAddon cursor={"default"} fontWeight={"bold"} borderLeftRadius={"10px"}>
@@ -82,8 +87,8 @@ export default function EditorOption({ zIndex, id, name, inputType, options = []
                     <InputLeftAddon cursor={"default"} fontWeight={"bold"} borderLeftRadius={"10px"}>
                         {name}
                     </InputLeftAddon>
-                    <Menu variant={"EditorSelector"} placement="bottom-start" gutter={2}>
-                        <MenuButton as={Button} variant={"EditorSelector"} mr={8} borderLeftRadius={0}>
+                    <Menu variant={"EditorSelector"} placement="bottom-start" gutter={2} isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
+                        <MenuButton as={Button} variant={"EditorSelector"} mr={8} borderLeftRadius={0} onClick={() => setIsMenuOpen(true)}>
                             <Flex gap={2} justifyContent={"space-between"}>
                                 <Text>
                                     {providerProperties.find((prop) => prop.value === (updatedValues[id] ? updatedValues[id] : provider[id]))?.name}
