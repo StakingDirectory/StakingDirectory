@@ -9,8 +9,8 @@ const buttonData = [
         icon: faHouse,
         color: "green",
         text: "I want to stake from home",
-        value: "solo, pooled",
-        type: "stakingType",
+        value: "stakeFromHome",
+        type: "stakeFromHome",
     },
     {
         icon: faServer,

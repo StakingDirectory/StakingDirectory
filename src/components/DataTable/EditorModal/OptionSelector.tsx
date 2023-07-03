@@ -6,6 +6,14 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 import dataProps from "public/data/dataProps"
 const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
 
+function remapPropName(name) {
+    if (name === "Yes!") {
+        return "Stake from home"
+    } else {
+        return name
+    }
+}
+
 export default function OptionSelector({ zIndex, provider, currentSelection, setCurrentSelection, updatedValues }) {
     return (
         <Menu variant={"EditorSelector"} placement="bottom-start" gutter={2}>
@@ -39,6 +47,8 @@ export default function OptionSelector({ zIndex, provider, currentSelection, set
                     {providerProperties
                         // Filter out properties without a name
                         .filter((prop) => prop.name && provider[prop.value])
+                        // Remap names before sorting
+                        .map((prop) => ({ ...prop, name: remapPropName(prop.name) }))
                         // Sort the remaining properties alphabetically
                         .sort((a, b) => a.name.localeCompare(b.name))
                         // Map over properties to render MenuItems

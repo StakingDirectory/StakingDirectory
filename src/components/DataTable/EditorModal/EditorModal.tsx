@@ -158,36 +158,34 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                     </Flex>
                 </ModalHeader>
                 <ModalBody overflowY={"scroll"} pt={0}>
-                    <Box pb={"1000px"}>
-                        {allOptions
-                            .sort((a, b) => a.id.localeCompare(b.id))
-                            .map((option, index) => {
-                                return (
-                                    (currentSelection == option.id || currentSelection == "allOptions") && (
-                                        <Flex className={"editorOptionContainer"} direction={"column"} gap={3} key={index}>
-                                            <EditorOptionHeader
-                                                id={option.id}
-                                                name={option.headerName}
+                    {allOptions
+                        .sort((a, b) => a.id.localeCompare(b.id))
+                        .map((option, index) => {
+                            return (
+                                (currentSelection == option.id || currentSelection == "allOptions") && (
+                                    <Flex className={"editorOptionContainer"} direction={"column"} gap={3} key={index}>
+                                        <EditorOptionHeader
+                                            id={option.id}
+                                            name={option.headerName}
+                                            updatedValues={updatedValues}
+                                            setUpdatedValues={setUpdatedValues}
+                                        />
+                                        {option.fields.map((field, fieldIndex) => (
+                                            <EditorOption
+                                                id={field.id}
+                                                name={field.name}
+                                                inputType={field.inputType}
+                                                options={field.options}
                                                 updatedValues={updatedValues}
                                                 setUpdatedValues={setUpdatedValues}
+                                                provider={provider}
+                                                key={fieldIndex}
                                             />
-                                            {option.fields.map((field, fieldIndex) => (
-                                                <EditorOption
-                                                    id={field.id}
-                                                    name={field.name}
-                                                    inputType={field.inputType}
-                                                    options={field.options}
-                                                    updatedValues={updatedValues}
-                                                    setUpdatedValues={setUpdatedValues}
-                                                    provider={provider}
-                                                    key={fieldIndex}
-                                                />
-                                            ))}
-                                        </Flex>
-                                    )
+                                        ))}
+                                    </Flex>
                                 )
-                            })}
-                    </Box>
+                            )
+                        })}
                 </ModalBody>
                 <ModalFooter>
                     <EditorFooter onClose={closeEditor} provider={provider} updatedValues={updatedValues} setUpdatedValues={setUpdatedValues} />
