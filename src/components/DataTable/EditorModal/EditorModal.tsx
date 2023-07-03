@@ -91,7 +91,7 @@ const allOptions = [
                 inputType: "select",
                 options: [
                     { value: "hardware", name: "Yes" },
-                    { value: "No", name: "No" },
+                    { value: "no", name: "No" },
                 ],
             },
         ],

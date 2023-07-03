@@ -55,6 +55,7 @@ const dataProps = [
             { value: "dev", name: "In development" },
             { value: "active", name: "Active" },
             { value: "mainnetLaunch", name: "Mainnet Launch" },
+            { value: "no", name: "No" },
         ],
     },
     {
@@ -105,7 +106,10 @@ const dataProps = [
         id: "providerType",
         name: "Provider Type",
         headerText: "PROVIDER <br /> TYPE",
-        options: [{ value: "hardware", color: "", icon: faHardDrive }],
+        options: [
+            { value: "Hardware", color: "", icon: faHardDrive },
+            { value: "No", color: "", icon: faHardDrive },
+        ],
     },
     {
         isTableHeader: true,

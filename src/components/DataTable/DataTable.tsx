@@ -33,7 +33,6 @@ import HeaderMenuPlaceholder from "./TableHeaders/HeaderMenuPlaceholder"
 import StakeFromHome from "./TableCells/StakeFromHome"
 import ChecklistBar from "./TableCells/ChecklistBar"
 import StakingType from "./TableCells/StakingType"
-import ProviderType from "./TableCells/ProviderType"
 import Reward from "./TableCells/Reward"
 import Fee from "./TableCells/Fee"
 
@@ -293,7 +292,6 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                         </Td>
                                         <Td textAlign={"center"}>
                                             <StakingType provider={provider} />
-                                            <ProviderType provider={provider} />
                                         </Td>
                                         <Td textAlign={"center"}>
                                             <Reward provider={provider} />

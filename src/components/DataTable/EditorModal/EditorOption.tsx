@@ -91,7 +91,9 @@ export default function EditorOption({ id, name, inputType, options = [], update
                         <MenuButton as={Button} variant={"EditorSelector"} mr={8} borderLeftRadius={0} onClick={() => setIsMenuOpen(true)}>
                             <Flex gap={2} justifyContent={"space-between"}>
                                 <Text>
-                                    {updatedValues[id] ? updatedValues[id] : providerProperties.find((prop) => prop.value === provider[id])?.name}
+                                    {updatedValues[id]
+                                        ? providerProperties.find((prop) => prop.value === updatedValues[id])?.name
+                                        : providerProperties.find((prop) => prop.value === provider[id])?.name}
                                 </Text>
                                 <Box>
                                     <FontAwesomeIcon icon={faChevronDown} />
