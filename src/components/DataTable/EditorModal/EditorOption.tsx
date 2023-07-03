@@ -91,7 +91,7 @@ export default function EditorOption({ id, name, inputType, options = [], update
                         <MenuButton as={Button} variant={"EditorSelector"} mr={8} borderLeftRadius={0} onClick={() => setIsMenuOpen(true)}>
                             <Flex gap={2} justifyContent={"space-between"}>
                                 <Text>
-                                    {providerProperties.find((prop) => prop.value === (updatedValues[id] ? updatedValues[id] : provider[id]))?.name}
+                                    {updatedValues[id] ? updatedValues[id] : providerProperties.find((prop) => prop.value === provider[id])?.name}
                                 </Text>
                                 <Box>
                                     <FontAwesomeIcon icon={faChevronDown} />
@@ -105,6 +105,36 @@ export default function EditorOption({ id, name, inputType, options = [], update
                                         {option.name}
                                     </MenuItemOption>
                                 ))}
+                            </MenuOptionGroup>
+                        </MenuList>
+                    </Menu>
+                </>
+            )}
+            {inputType === "selectBool" && (
+                <>
+                    <InputLeftAddon cursor={"default"} fontWeight={"bold"} borderLeftRadius={"10px"}>
+                        {name}
+                    </InputLeftAddon>
+                    <Menu variant={"EditorSelector"} placement="bottom-start" gutter={2} isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
+                        <MenuButton as={Button} variant={"EditorSelector"} mr={8} borderLeftRadius={0} onClick={() => setIsMenuOpen(true)}>
+                            <Flex gap={2} justifyContent={"space-between"}>
+                                <Text>{updatedValues[id] == null ? (provider[id] ? "Yes" : "No") : updatedValues[id] ? "Yes" : "No"}</Text>
+                                <Box>
+                                    <FontAwesomeIcon icon={faChevronDown} />
+                                </Box>
+                            </Flex>
+                        </MenuButton>
+                        <MenuList minW={1}>
+                            <MenuOptionGroup
+                                value={updatedValues[id] == null ? (provider[id] ? "Yes" : "No") : updatedValues[id] ? "Yes" : "No"}
+                                type="radio"
+                            >
+                                <MenuItemOption value={"Yes"} onClick={() => updateValues(id, true)}>
+                                    Yes
+                                </MenuItemOption>
+                                <MenuItemOption value={"No"} onClick={() => updateValues(id, false)}>
+                                    No
+                                </MenuItemOption>
                             </MenuOptionGroup>
                         </MenuList>
                     </Menu>

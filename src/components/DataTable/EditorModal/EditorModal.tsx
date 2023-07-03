@@ -53,6 +53,21 @@ const allOptions = [
         ],
     },
     {
+        id: "stakeFromHome",
+        headerName: "Stake from Home",
+        fields: [
+            {
+                id: "stakeFromHome",
+                name: "Stake from home?",
+                inputType: "selectBool",
+                options: [
+                    { value: true, name: "Yes" },
+                    { value: false, name: "No" },
+                ],
+            },
+        ],
+    },
+    {
         id: "stakingType",
         headerName: "Staking Type",
         fields: [
@@ -70,6 +85,21 @@ const allOptions = [
             },
         ],
     },
+    // {
+    //     id: "providerType",
+    //     headerName: "Provider Type",
+    //     fields: [
+    //         {
+    //             id: "providerType",
+    //             name: "Hardware provider?",
+    //             inputType: "selectBool",
+    //             options: [
+    //                 { value: "hardware", name: "Yes" },
+    //                 { value: "", name: "No" },
+    //             ],
+    //         },
+    //     ],
+    // },
     {
         id: "status",
         headerName: "Status",
