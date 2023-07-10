@@ -152,6 +152,21 @@ const customTheme = extendTheme({
                 }),
             },
         },
+        Textarea: {
+            variants: {
+                EditorTextarea: (props: StyleFunctionProps) => ({
+                    bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackground.light",
+                    borderRadius: "10px",
+                    _focus: {
+                        borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
+                        borderWidth: "2px",
+                        marginLeft: "-2px",
+                        marginTop: "-2px",
+                        marginBottom: "2px",
+                    },
+                }),
+            },
+        },
         Button: {
             variants: {
                 MainFilterButton: (props: StyleFunctionProps) => ({
@@ -166,6 +181,12 @@ const customTheme = extendTheme({
                     },
                     _active: {
                         bg: props.colorMode === "dark" ? "rgba(255, 255, 255, 0.15)" : "pageBackground.light",
+                    },
+                }),
+                ShowMoreButton: (props: StyleFunctionProps) => ({
+                    bg: darkenColor(props.colorMode, props.theme.colors.pageBackgroundHover.dark, 0.03),
+                    _hover: {
+                        bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",
                     },
                 }),
                 ActiveFilters: (props: StyleFunctionProps) => ({

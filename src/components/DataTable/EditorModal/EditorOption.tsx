@@ -13,6 +13,7 @@ import {
     Input,
     InputGroup,
     InputLeftAddon,
+    Textarea,
 } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
@@ -21,8 +22,32 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons"
 import dataProps from "public/data/dataProps"
 const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
 
+const ResizableTextArea = React.forwardRef<HTMLTextAreaElement, any>(({ value, onChange, ...props }, ref) => {
+    const handleChange = (event) => {
+        if (ref && typeof ref !== "function" && ref.current) {
+            ref.current.style.height = "unset"
+            ref.current.style.height = `${ref.current.scrollHeight}px`
+        }
+        if (onChange) {
+            onChange(event)
+        }
+    }
+
+    useEffect(() => {
+        if (ref && typeof ref !== "function" && ref.current) {
+            ref.current.style.height = "unset"
+            ref.current.style.height = `${ref.current.scrollHeight}px`
+        }
+    }, [value])
+
+    return <Textarea ref={ref} value={value} onChange={handleChange} {...props} resize="none" />
+})
+
+ResizableTextArea.displayName = "ResizableTextArea"
+
 export default function EditorOption({ id, name, inputType, options = [], updatedValues, setUpdatedValues, provider }) {
-    const nameInputRef = useRef<HTMLInputElement | null>(null)
+    const inputRef = useRef<HTMLInputElement | null>(null)
+    const textareaRef = useRef<HTMLTextAreaElement | null>(null)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const getNestedValue = (obj, path) => path.split(".").reduce((acc, part) => acc && acc[part], obj)
@@ -30,7 +55,13 @@ export default function EditorOption({ id, name, inputType, options = [], update
     const updateValues = (option, value) => {
         const parts = option.split(".")
 
-        const existingValue = parts.length > 1 ? provider[parts[0]][parts[1]] : provider[parts[0]]
+        // Get existing values, if any
+        let existingValue = getNestedValue(updatedValues, option)
+        if (existingValue == null) {
+            existingValue = getNestedValue(provider, option)
+        }
+
+        // Compare with new value
         if (JSON.stringify(value) === JSON.stringify(existingValue)) {
             const updatedValuesCopy = { ...updatedValues }
             if (parts.length > 1) {
@@ -43,6 +74,7 @@ export default function EditorOption({ id, name, inputType, options = [], update
             }
             setUpdatedValues(updatedValuesCopy)
         } else {
+            // Set the new value in the updatedValues
             if (parts.length > 1) {
                 setUpdatedValues((prev) => ({
                     ...prev,
@@ -73,14 +105,28 @@ export default function EditorOption({ id, name, inputType, options = [], update
                         variant={"EditorInput"}
                         value={getNestedValue(updatedValues, id) != null ? getNestedValue(updatedValues, id) : getNestedValue(provider, id)}
                         placeholder={`${name}...`}
-                        ref={nameInputRef}
+                        ref={inputRef}
                         onChange={() => {
-                            if (nameInputRef.current) {
-                                updateValues(id, nameInputRef.current.value)
+                            if (inputRef.current) {
+                                updateValues(id, inputRef.current.value)
                             }
                         }}
                     />
                 </>
+            )}
+            {inputType === "textarea" && (
+                <ResizableTextArea
+                    maxW="100%"
+                    variant={"EditorTextarea"}
+                    value={getNestedValue(updatedValues, id) != null ? getNestedValue(updatedValues, id) : getNestedValue(provider, id)}
+                    placeholder={`${name}...`}
+                    ref={textareaRef}
+                    onChange={() => {
+                        if (textareaRef.current) {
+                            updateValues(id, textareaRef.current.value)
+                        }
+                    }}
+                />
             )}
             {inputType === "select" && (
                 <>

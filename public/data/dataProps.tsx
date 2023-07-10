@@ -54,6 +54,7 @@ const dataProps = [
             { value: "status", name: "Status" },
             { value: "dev", name: "In development" },
             { value: "active", name: "Active" },
+            { value: "description", name: "Description" },
             { value: "mainnetLaunch", name: "Mainnet Launch" },
             { value: "no", name: "No" },
         ],

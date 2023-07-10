@@ -325,6 +325,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                                 <Collapse in={expandedRows.includes(index)}>
                                                     <ExpandedRow
                                                         provider={provider}
+                                                        expandedRows={expandedRows}
                                                         expandedChecklistRows={expandedChecklistRows}
                                                         setExpandedChecklistRows={setExpandedChecklistRows}
                                                     />

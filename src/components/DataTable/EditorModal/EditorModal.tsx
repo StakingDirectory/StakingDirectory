@@ -53,6 +53,17 @@ const allOptions = [
         ],
     },
     {
+        id: "description",
+        headerName: "Description (Supports markdown)",
+        fields: [
+            {
+                id: "description",
+                name: "Description ",
+                inputType: "textarea",
+            },
+        ],
+    },
+    {
         id: "stakeFromHome",
         headerName: "Stake from Home",
         fields: [
