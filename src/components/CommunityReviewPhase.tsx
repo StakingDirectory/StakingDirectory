@@ -2,7 +2,7 @@ import React, { useState } from "react"
 
 import { useBreakpointValue, Flex, Text, Box, Link, Collapse, MenuButton, Menu } from "@chakra-ui/react"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronRight, faDownLong, faPencil, faRightLong, faTrophy, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
+import { faChevronRight, faDownLong, faPencil, faRightLong, faPaperPlane, faMagnifyingGlass } from "@fortawesome/free-solid-svg-icons"
 import NextLink from "next/link"
 
 const InfoBlock = ({ icon, color, children }) => (
@@ -52,7 +52,7 @@ export default function CommunityReviewPhase() {
                                 <Box as={FontAwesomeIcon} icon={faRightLong} size={"xl"} />
                                 <Box as={FontAwesomeIcon} icon={faPencil} size={"xl"} color={"orange"} />
                                 <Box as={FontAwesomeIcon} icon={faRightLong} size={"xl"} />
-                                <Box as={FontAwesomeIcon} icon={faTrophy} size={"xl"} color={"gold"} />
+                                <Box as={FontAwesomeIcon} icon={faPaperPlane} size={"xl"} color={"gold"} />
                             </Flex>
                         )}
                     </Flex>
@@ -66,7 +66,7 @@ export default function CommunityReviewPhase() {
                             is built on accurate, up-to-date information.
                         </InfoBlock>
                         {useBreakpointValue({ base: false, sm: true }) && (
-                            <Flex alignItems={"center"} justifyContent={"center"} w={"60px"} pt={3}>
+                            <Flex alignItems={"center"} justifyContent={"center"} w={"60px"} py={3}>
                                 <Box as={FontAwesomeIcon} icon={faDownLong} size={"xl"} />
                             </Flex>
                         )}
@@ -82,7 +82,7 @@ export default function CommunityReviewPhase() {
                                 </MenuButton>
                             </Menu>{" "}
                             button located at the end of each row. This will allow you to submit your suggestions, which will automatically create a
-                            GitHub Pull Request (PR) that can be reviewed by our team. You can view all the open PRs{" "}
+                            GitHub Pull Request (PR) that will be reviewed by our team. You can view all the open PRs{" "}
                             <Link
                                 as={NextLink}
                                 href={"https://github.com/StakingDirectory/StakingDirectory/pulls"}
@@ -95,16 +95,13 @@ export default function CommunityReviewPhase() {
                             .
                         </InfoBlock>
                         {useBreakpointValue({ base: false, sm: true }) && (
-                            <Flex alignItems={"center"} justifyContent={"center"} w={"60px"} pt={3}>
+                            <Flex alignItems={"center"} justifyContent={"center"} w={"60px"} py={3}>
                                 <Box as={FontAwesomeIcon} icon={faDownLong} size={"xl"} />
                             </Flex>
                         )}
-                        <InfoBlock icon={faTrophy} color={"gold"}>
-                            We also want to acknowledge the contributions of our community members. If you would like to be recognized for your
-                            contribution to this resource, you can add your Ethereum address or ENS when you suggest an update. Please note that this
-                            address will be publicly visible on the GitHub PR and will be used solely for sending POAPs as a symbol of our
-                            appreciation. Your contributions are what make this resource valuable, and we thank you in advance for your participation
-                            in the Community Review Phase.
+                        <InfoBlock icon={faPaperPlane} color={"gold"}>
+                            When the community review phase has been completed and all the PRs have been merged, we will be ready to launch! You will
+                            always be able to update the information in future, so don&apos;t worry if you miss the community review phase.
                         </InfoBlock>
                         <Box pb={8}></Box>
                     </Box>

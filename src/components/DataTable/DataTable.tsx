@@ -231,7 +231,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                         <Box fontWeight={"extrabold"} fontSize={"md"}>
                                             Does something need fixing?
                                         </Box>
-                                        <Box>🏆 Let us know and get a POAP 🏆</Box>
+                                        <Box>Let us know!</Box>
                                     </Flex>
                                 }
                                 className="tooltipArrow"
