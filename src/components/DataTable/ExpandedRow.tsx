@@ -17,17 +17,12 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
     useEffect(() => {
         // Timeout used because of collapse animation
         const timeoutId = setTimeout(() => {
-            console.log("HERE2")
             if (markdownRef.current && markdownRef.current.scrollHeight > markdownRef.current.clientHeight) {
                 setIsDescriptionOverflowing(true)
             }
         }, 100)
         // Clear timeout if the component unmounts before the timeout finishes
         return () => clearTimeout(timeoutId)
-    }, [expandedRows])
-
-    useEffect(() => {
-        console.log("expandedRows", expandedRows)
     }, [expandedRows])
 
     return (
@@ -46,7 +41,14 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
                     position={"relative"}
                     pb={isDescriptionOverflowing ? 50 : 0}
                 >
-                    <Flex direction={"column"} gap={3} maxH={isDescriptionExpanded ? "100%" : 180} overflow={"hidden"} ref={markdownRef}>
+                    <Flex
+                        direction={"column"}
+                        gap={3}
+                        maxH={isDescriptionExpanded ? "1000px" : "180px"}
+                        overflow={"hidden"}
+                        ref={markdownRef}
+                        transition={"all 1s"}
+                    >
                         <ReactMarkdown
                             components={{
                                 a: ({ node, ...props }) => <Link color="blue" {...props} />,
