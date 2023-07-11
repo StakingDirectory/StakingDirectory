@@ -28,9 +28,7 @@ const App = () => {
                 {process.env.NODE_ENV != "development" && (
                     <>
                         <Box width={"100vw"} minH={6} bg="pink" textAlign={"center"} fontWeight={"extrabold"} color={"white"}>
-                            <Box>🏗️ ACTIVE DEVELOPMENT ENVIRONMENT - NOT PRODUCTION READY 🏗️</Box>
-                            <Box>All styles are subject to change. This is not the final version.</Box>
-                            <Box>Content may not be accurate. This will be fixed for production.</Box>
+                            <Box>🏗️ ACTIVE DEVELOPMENT ENVIRONMENT - CONTENT UPDATE IN PROGRESS 🏗️</Box>
                         </Box>
                     </>
                 )}
