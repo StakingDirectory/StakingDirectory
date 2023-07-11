@@ -42,10 +42,17 @@ const ResizableTextArea = React.forwardRef<HTMLTextAreaElement, any>(({ value, o
 
     return <Textarea ref={ref} value={value} onChange={handleChange} {...props} resize="none" />
 })
-
 ResizableTextArea.displayName = "ResizableTextArea"
 
-export default function EditorOption({ id, name, inputType, options = [], updatedValues, setUpdatedValues, provider }) {
+const valueGetter = (id, obj) => {
+    if (id.includes(".")) {
+        const [mainProp, subProp] = id.split(".")
+        return obj[mainProp] && obj[mainProp][subProp]
+    }
+    return obj[id]
+}
+
+export default function EditorOption({ id, name, placeholder = null, inputType, options = [], updatedValues, setUpdatedValues, provider }) {
     const inputRef = useRef<HTMLInputElement | null>(null)
     const textareaRef = useRef<HTMLTextAreaElement | null>(null)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -55,13 +62,8 @@ export default function EditorOption({ id, name, inputType, options = [], update
     const updateValues = (option, value) => {
         const parts = option.split(".")
 
-        // Get existing values, if any
-        let existingValue = getNestedValue(updatedValues, option)
-        if (existingValue == null) {
-            existingValue = getNestedValue(provider, option)
-        }
+        const existingValue = parts.length > 1 ? provider[parts[0]][parts[1]] : provider[parts[0]]
 
-        // Compare with new value
         if (JSON.stringify(value) === JSON.stringify(existingValue)) {
             const updatedValuesCopy = { ...updatedValues }
             if (parts.length > 1) {
@@ -74,7 +76,6 @@ export default function EditorOption({ id, name, inputType, options = [], update
             }
             setUpdatedValues(updatedValuesCopy)
         } else {
-            // Set the new value in the updatedValues
             if (parts.length > 1) {
                 setUpdatedValues((prev) => ({
                     ...prev,
@@ -104,7 +105,7 @@ export default function EditorOption({ id, name, inputType, options = [], update
                         maxW="100%"
                         variant={"EditorInput"}
                         value={getNestedValue(updatedValues, id) != null ? getNestedValue(updatedValues, id) : getNestedValue(provider, id)}
-                        placeholder={`${name}...`}
+                        placeholder={placeholder ? placeholder : `${name}...`}
                         ref={inputRef}
                         onChange={() => {
                             if (inputRef.current) {
@@ -166,7 +167,15 @@ export default function EditorOption({ id, name, inputType, options = [], update
                     <Menu variant={"EditorSelector"} placement="bottom-start" gutter={2} isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
                         <MenuButton as={Button} variant={"EditorSelector"} mr={8} borderLeftRadius={0} onClick={() => setIsMenuOpen(true)}>
                             <Flex gap={2} justifyContent={"space-between"}>
-                                <Text>{updatedValues[id] == null ? (provider[id] ? "Yes" : "No") : updatedValues[id] ? "Yes" : "No"}</Text>
+                                <Text>
+                                    {valueGetter(id, updatedValues) == null
+                                        ? valueGetter(id, provider)
+                                            ? "Yes"
+                                            : "No"
+                                        : valueGetter(id, updatedValues)
+                                        ? "Yes"
+                                        : "No"}
+                                </Text>
                                 <Box>
                                     <FontAwesomeIcon icon={faChevronDown} />
                                 </Box>
@@ -174,7 +183,15 @@ export default function EditorOption({ id, name, inputType, options = [], update
                         </MenuButton>
                         <MenuList minW={1}>
                             <MenuOptionGroup
-                                value={updatedValues[id] == null ? (provider[id] ? "Yes" : "No") : updatedValues[id] ? "Yes" : "No"}
+                                value={
+                                    valueGetter(id, updatedValues) == null
+                                        ? valueGetter(id, provider)
+                                            ? "Yes"
+                                            : "No"
+                                        : valueGetter(id, updatedValues)
+                                        ? "Yes"
+                                        : "No"
+                                }
                                 type="radio"
                             >
                                 <MenuItemOption value={"Yes"} onClick={() => updateValues(id, true)}>

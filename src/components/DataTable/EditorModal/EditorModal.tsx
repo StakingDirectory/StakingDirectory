@@ -53,12 +53,44 @@ const allOptions = [
         ],
     },
     {
+        id: "status",
+        headerName: "Status",
+        fields: [
+            {
+                id: "status",
+                name: "Status",
+                inputType: "select",
+                options: [
+                    { value: "active", name: "Active" },
+                    { value: "dev", name: "In development" },
+                ],
+            },
+        ],
+    },
+    {
+        id: "mainnetLaunch",
+        headerName: "Mainnet Launch Date",
+        fields: [
+            {
+                id: "mainnetLaunch.date",
+                name: "Mainnet Launch Date",
+                inputType: "input",
+                placeholder: "YYYY-MM-DD",
+            },
+            {
+                id: "mainnetLaunch.evidenceLink",
+                name: "Evidence Link",
+                inputType: "input",
+            },
+        ],
+    },
+    {
         id: "description",
         headerName: "Description (Supports markdown)",
         fields: [
             {
                 id: "description",
-                name: "Description ",
+                name: "Description",
                 inputType: "textarea",
             },
         ],
@@ -108,33 +140,138 @@ const allOptions = [
         ],
     },
     {
-        id: "status",
-        headerName: "Status",
+        id: "openSource",
+        headerName: "Open Source",
         fields: [
             {
-                id: "status",
-                name: "Status",
-                inputType: "select",
-                options: [
-                    { value: "active", name: "Active" },
-                    { value: "dev", name: "In development" },
-                ],
+                id: "openSource.value",
+                name: "Open Source?",
+                inputType: "selectBool",
+            },
+            {
+                id: "openSource.evidenceLink",
+                name: "Evidence Link",
+                inputType: "input",
+                placeholder: "https://...",
             },
         ],
     },
     {
-        id: "mainnetLaunch",
-        headerName: "Mainnet Launch Date",
+        id: "audited",
+        headerName: "Audited",
         fields: [
             {
-                id: "mainnetLaunch.date",
-                name: "Mainnet Launch Date",
-                inputType: "input",
+                id: "audited.value",
+                name: "Audited?",
+                inputType: "selectBool",
             },
             {
-                id: "mainnetLaunch.evidenceLink",
+                id: "audited.evidenceLink",
                 name: "Evidence Link",
                 inputType: "input",
+                placeholder: "https://...",
+            },
+        ],
+    },
+    {
+        id: "bugBounty",
+        headerName: "Bug Bounty",
+        fields: [
+            {
+                id: "bugBounty.value",
+                name: "Bug Bounty?",
+                inputType: "selectBool",
+            },
+            {
+                id: "bugBounty.evidenceLink",
+                name: "Evidence Link",
+                inputType: "input",
+                placeholder: "https://...",
+            },
+        ],
+    },
+    {
+        id: "permissionlessUsage",
+        headerName: "Permissionless Usage",
+        fields: [
+            {
+                id: "permissionlessUsage.value",
+                name: "Permissionless Usage?",
+                inputType: "selectBool",
+            },
+            {
+                id: "permissionlessUsage.evidenceLink",
+                name: "Evidence Link",
+                inputType: "input",
+                placeholder: "https://...",
+            },
+        ],
+    },
+    {
+        id: "permissionlessOperators",
+        headerName: "Permissionless Operators",
+        fields: [
+            {
+                id: "permissionlessOperators.value",
+                name: "Permissionless Operators?",
+                inputType: "selectBool",
+            },
+            {
+                id: "permissionlessOperators.evidenceLink",
+                name: "Evidence Link",
+                inputType: "input",
+                placeholder: "https://...",
+            },
+        ],
+    },
+    {
+        id: "nonCensoringRelays",
+        headerName: "Censorship Resistant Relays",
+        fields: [
+            {
+                id: "nonCensoringRelays.value",
+                name: "Censorship Resistant Relays?",
+                inputType: "selectBool",
+            },
+            {
+                id: "nonCensoringRelays.evidenceLink",
+                name: "Evidence Link",
+                inputType: "input",
+                placeholder: "https://...",
+            },
+        ],
+    },
+    {
+        id: "diverseExecutionClients",
+        headerName: "Diverse Execution Clients",
+        fields: [
+            {
+                id: "diverseExecutionClients.value",
+                name: "Diverse Execution Clients?",
+                inputType: "selectBool",
+            },
+            {
+                id: "diverseExecutionClients.evidenceLink",
+                name: "Evidence Link",
+                inputType: "input",
+                placeholder: "https://...",
+            },
+        ],
+    },
+    {
+        id: "diverseBeaconClients",
+        headerName: "Diverse Beacon Clients",
+        fields: [
+            {
+                id: "diverseBeaconClients.value",
+                name: "Diverse Beacon Clients?",
+                inputType: "selectBool",
+            },
+            {
+                id: "diverseBeaconClients.evidenceLink",
+                name: "Evidence Link",
+                inputType: "input",
+                placeholder: "https://...",
             },
         ],
     },
@@ -196,7 +333,7 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                 </ModalHeader>
                 <ModalBody overflowY={"scroll"} pt={0}>
                     {allOptions
-                        .sort((a, b) => a.id.localeCompare(b.id))
+                        // .sort((a, b) => a.id.localeCompare(b.id))
                         .map((option, index) => {
                             return (
                                 (currentSelection == option.id || currentSelection == "allOptions") && (
@@ -211,6 +348,7 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                                             <EditorOption
                                                 id={field.id}
                                                 name={field.name}
+                                                placeholder={field.placeholder}
                                                 inputType={field.inputType}
                                                 options={field.options}
                                                 updatedValues={updatedValues}

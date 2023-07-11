@@ -120,7 +120,16 @@ export default function EditorFooter({ onClose, provider, updatedValues, setUpda
                 </Flex>
             </Flex>
             <Collapse in={isOpen}>
-                <Code cursor={"default"} whiteSpace={"pre-wrap"} w={"100%"} maxH={"30vh"} p={3} borderRadius={10} borderTopLeftRadius={0}>
+                <Code
+                    overflow={"scroll"}
+                    cursor={"default"}
+                    whiteSpace={"pre-wrap"}
+                    w={"100%"}
+                    maxH={"30vh"}
+                    p={3}
+                    borderRadius={10}
+                    borderTopLeftRadius={0}
+                >
                     {JSON.stringify(updatedValues, null, 2)}
                 </Code>
             </Collapse>
