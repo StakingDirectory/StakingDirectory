@@ -209,7 +209,8 @@
             "value": true,
             "evidenceLink": "https://dappnode.github.io/explorer/#/"
         },
-        "stakeFromHome": true
+        "stakeFromHome": true,
+        "description": "With Dappnode, anyone can run decentralized networks like Ethereum and Bitcoin and earn rewards. Dappnode takes care of the technical stuff so anyone can play a role in creating an open, equitable internet and access the rewards that are offered in return."
     },
     {
         "id": 5,
