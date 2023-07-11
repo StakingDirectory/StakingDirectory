@@ -140,6 +140,42 @@ const allOptions = [
         ],
     },
     {
+        id: "links",
+        headerName: "Links",
+        fields: [
+            {
+                id: "links.website",
+                name: "Website",
+                inputType: "input",
+                placeholder: "https://...",
+            },
+            {
+                id: "links.twitter",
+                name: "Twitter",
+                inputType: "input",
+                placeholder: "https://...",
+            },
+            {
+                id: "links.discord",
+                name: "Discord",
+                inputType: "input",
+                placeholder: "https://...",
+            },
+            {
+                id: "links.telegram",
+                name: "Telegram",
+                inputType: "input",
+                placeholder: "https://...",
+            },
+            {
+                id: "links.repo",
+                name: "Repo",
+                inputType: "input",
+                placeholder: "https://...",
+            },
+        ],
+    },
+    {
         id: "openSource",
         headerName: "Open Source",
         fields: [

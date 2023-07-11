@@ -1,6 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from "next"
 import fs from "fs"
 import path from "path"
+import _ from "lodash"
 
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === "POST") {
@@ -16,7 +17,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
             return
         }
 
-        providers[providerIndex] = { ...providers[providerIndex], ...updatedValues }
+        _.merge(providers[providerIndex], updatedValues)
 
         fs.writeFileSync(filePath, JSON.stringify(providers, null, 2), "utf8")
 

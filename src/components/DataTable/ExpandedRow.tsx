@@ -26,7 +26,7 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
     }, [expandedRows])
 
     return (
-        <Flex gap={5} pt={3} pb={5} justifyContent={"center"}>
+        <Flex gap={5} pt={1} pb={5} justifyContent={"center"}>
             <Flex direction={"column"} gap={5} w={160}>
                 <Status provider={provider} />
                 <Links provider={provider} />

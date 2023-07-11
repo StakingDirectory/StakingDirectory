@@ -1,3 +1,4 @@
+const _ = require("lodash")
 const fs = require("fs")
 const path = require("path")
 
@@ -12,6 +13,7 @@ if (providerIndex === -1) {
     process.exit(1)
 }
 
-providers[providerIndex] = { ...providers[providerIndex], ...JSON.parse(updatedValues) }
+// Merge the provider and updatedValues objects recursively
+providers[providerIndex] = _.merge({}, providers[providerIndex], JSON.parse(updatedValues))
 
 fs.writeFileSync(filePath, JSON.stringify(providers, null, 2), "utf8")
