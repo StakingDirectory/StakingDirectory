@@ -62,14 +62,62 @@ const dataProps = [
     {
         id: "checklistProperties",
         checklistProperties: [
-            "openSource",
-            "audited",
-            "bugBounty",
-            "permissionlessUsage",
-            "permissionlessOperators",
-            "nonCensoringRelays",
-            "diverseExecutionClients",
-            "diverseBeaconClients",
+            {
+                value: "openSource",
+                description: {
+                    true: "Essential code is 100% open source and available to the public to fork and use.",
+                    false: "Essential code is closed source.",
+                },
+            },
+            {
+                value: "audited",
+                description: {
+                    true: "Essential code has undergone formal auditing with results published and available publicly.",
+                    false: "No audits have been conducted.",
+                },
+            },
+            {
+                value: "bugBounty",
+                description: {
+                    true: "A public bug bounty has been performed on any essential code to reward users for safely reporting and/or fixing vulnerabilities.",
+                    false: "No public bug bounty is available.",
+                },
+            },
+            {
+                value: "permissionlessUsage",
+                description: {
+                    true: "Users do not require any special permission to use the software or service.",
+                    false: "Users can only use this service if permission is granted by the software or service provider.",
+                },
+            },
+            {
+                value: "permissionlessOperators",
+                description: {
+                    true: "Users do not require any special permission to operate a validator using the software or service.",
+                    false: "Users can only operate a validator if permission is granted by the software or service provider.",
+                },
+            },
+            {
+                value: "nonCensoringRelays",
+                description: {
+                    true: "The software or service uses at least one non-censoring MEV relay.",
+                    false: "The software or service only uses censoring MEV relays.",
+                },
+            },
+            {
+                value: "diverseExecutionClients",
+                description: {
+                    true: "Multiple execution clients are supported.",
+                    false: "Only majority execution clients are supported.",
+                },
+            },
+            {
+                value: "diverseBeaconClients",
+                description: {
+                    true: "Multiple beacon clients are supported.",
+                    false: "Only majority beacon clients are supported.",
+                },
+            },
         ],
     },
     {

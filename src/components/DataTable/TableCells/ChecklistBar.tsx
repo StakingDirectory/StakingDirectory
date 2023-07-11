@@ -8,9 +8,9 @@ const checklistProperties = dataProps.find((prop) => prop.id === "checklistPrope
 const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
 
 export default function ChecklistBar({ provider, tableRowIndex, expandedRows, setExpandedChecklistRows }) {
-    const renderBox = (id: string, index: number) => {
-        const name = providerProperties.find((prop) => prop.value === id).name
-        const value = provider[id]?.value
+    const renderBox = (id, index: number) => {
+        const name = providerProperties.find((prop) => prop.value === id.value).name
+        const value = provider[id.value]?.value
         const iconColor = value ? "green" : "red"
         const icon = value ? faCircleCheck : faCircleXmark
 

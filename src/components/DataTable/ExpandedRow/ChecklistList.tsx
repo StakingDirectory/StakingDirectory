@@ -1,8 +1,10 @@
-import { Flex, Box, Text, HStack, Collapse } from "@chakra-ui/react"
+import { Flex, Box, Text, HStack, Collapse, Button, Link } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
+import { faArrowUpRightFromSquare, faChevronRight, faLink } from "@fortawesome/free-solid-svg-icons"
 import { faCircleCheck, faCircleXmark } from "@fortawesome/free-solid-svg-icons"
+
+import NextLink from "next/link"
 
 import dataProps from "public/data/dataProps"
 const checklistProperties = dataProps.find((prop) => prop.id === "checklistProperties").checklistProperties
@@ -22,9 +24,11 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
         setExpandedChecklistRows(newExpandedRows)
     }
 
-    const renderBox = (id: string, index: number) => {
-        const name = providerProperties.find((prop) => prop.value === id).name
-        const value = provider[id]?.value
+    const renderBox = (id, index: number) => {
+        const name = providerProperties.find((prop) => prop.value === id.value).name
+        const value = provider[id.value]?.value
+        const description = id.description[value ? "true" : "false"]
+        const href = provider[id.value]?.evidenceLink
         const iconColor = value ? "green" : "red"
         const icon = value ? faCircleCheck : faCircleXmark
 
@@ -55,16 +59,36 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
                     <Text>{name}</Text>
                 </HStack>
                 <Collapse in={isOpen}>
-                    <Box pl={12} pt={1} pb={3} pr={3}>
-                        <Text>🏗️ More details coming soon! 🏗️</Text>
-                    </Box>
+                    <Flex direction={"column"} gap={3} pl={12} pt={1} pb={3} pr={3}>
+                        <Text>{description}</Text>
+                        {href ? (
+                            <Link as={NextLink} href={href} target="_blank">
+                                <Button w={"fit-content"} justifyContent={"start"} borderRadius={10}>
+                                    <Flex gap={3}>
+                                        <Text>Evidence link</Text>
+                                        <Box>
+                                            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                                        </Box>
+                                    </Flex>
+                                </Button>
+                            </Link>
+                        ) : (
+                            value && (
+                                <Button isDisabled w={"fit-content"} justifyContent={"start"} borderRadius={10}>
+                                    <Flex gap={3}>
+                                        <Text>🤔 Evidence link missing</Text>
+                                    </Flex>
+                                </Button>
+                            )
+                        )}
+                    </Flex>
                 </Collapse>
             </Flex>
         )
     }
 
     return (
-        <Flex grow={1} h={"fit-content"} className={"expandContentBox"} p={0} gap={1} direction={"column"} overflow={"hidden"}>
+        <Flex grow={1} h={"fit-content"} minW={370} maxW={370} className={"expandContentBox"} p={0} gap={1} direction={"column"} overflow={"hidden"}>
             {checklistProperties.map((id, index) => renderBox(id, index))}
         </Flex>
     )
