@@ -1,7 +1,10 @@
 import ReactMarkdown from "react-markdown"
+import { useState, useEffect, useRef, use } from "react"
+
 import { Flex, Text, Box, Link, Button } from "@chakra-ui/react"
 
-import { useState, useEffect, useRef, use } from "react"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { faMapPin } from "@fortawesome/free-solid-svg-icons"
 
 import KeyOwner from "./ExpandedRow/KeyOwner"
 import ChecklistList from "./ExpandedRow/ChecklistList"
@@ -28,7 +31,7 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
     }, [expandedRows])
 
     return (
-        <Flex gap={5} pt={1} pb={5} justifyContent={"center"}>
+        <Flex gap={5} pt={3} pb={5} justifyContent={"center"}>
             <Flex direction={"column"} gap={5} w={160}>
                 <Status provider={provider} />
                 <Links provider={provider} />
@@ -87,9 +90,13 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
                     <KeyOwner provider={provider} id={"validatorKey"} />
                     <KeyOwner provider={provider} id={"withdrawalKey"} />
                 </Flex>
-                <Flex direction={"column"} className={"expandContentBox"} gap={3} minH={185}>
-                    <Text>Locations</Text>
-                    <Text>🏗️ Coming soon! 🏗️</Text>
+                <Flex direction={"column"} className={"expandContentBox"} gap={3}>
+                    <Flex gap={1}>
+                        <Text fontWeight={"bold"}>Locations </Text>
+                        <Text fontSize={"sm"}> (Coming soon!)</Text>
+                    </Flex>
+
+                    <Box as={FontAwesomeIcon} icon={faMapPin} size={"3x"} />
                 </Flex>
             </Flex>
             <ChecklistList provider={provider} expandedChecklistRows={expandedChecklistRows} setExpandedChecklistRows={setExpandedChecklistRows} />
