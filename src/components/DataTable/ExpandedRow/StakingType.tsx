@@ -18,13 +18,15 @@ export default function StakingType({ provider }) {
     const [expandedRow, setExpandedRow] = useState(false)
 
     return (
-        <Flex className={"expandContentBox"} direction={"column"}>
+        <Flex className={"expandContentBox"} p={0} direction={"column"} overflow={"hidden"}>
             <Flex
                 justifyContent={"space-between"}
+                p={4}
                 cursor={"pointer"}
                 onClick={() => {
                     setExpandedRow(!expandedRow)
                 }}
+                className={"checklistList"}
             >
                 <Flex alignItems={"center"}>
                     <Box
@@ -53,7 +55,9 @@ export default function StakingType({ provider }) {
                 )}
             </Flex>
             <Collapse in={expandedRow}>
-                <Box pt={3}>{(dataProps.flatMap((d) => d.options).find((opt) => opt?.value === provider.stakingType) as Option)?.description}</Box>
+                <Box px={4} pb={4} pt={1}>
+                    {(dataProps.flatMap((d) => d.options).find((opt) => opt?.value === provider.stakingType) as Option)?.description}
+                </Box>
             </Collapse>
         </Flex>
     )

@@ -20,8 +20,6 @@ const App = () => {
         dataProps.find((prop) => prop.id === "checklistProperties").checklistProperties
     )
 
-    console.log("App.tsx - dataFilter", dataFilter)
-
     return (
         <Box minH="100vh" minW="100vw" className={"bgPage"} display="flex" flexDirection="column">
             <Flex direction="column" justifyContent="center" alignItems="center">

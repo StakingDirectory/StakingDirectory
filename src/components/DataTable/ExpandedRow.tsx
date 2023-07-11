@@ -17,9 +17,6 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
 
     // Check if description is overflowing
     useEffect(() => {
-        console.log("markdownRef.current.scrollHeight", markdownRef.current.scrollHeight)
-        console.log("markdownRef.current.clientHeight", markdownRef.current.clientHeight)
-
         // Timeout used because of collapse animation
         const timeoutId = setTimeout(() => {
             if (markdownRef.current && markdownRef.current.scrollHeight > markdownRef.current.clientHeight) {
@@ -49,7 +46,7 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
                     <Flex
                         direction={"column"}
                         gap={3}
-                        maxH={isDescriptionExpanded ? "1000px" : "230px"}
+                        maxH={isDescriptionExpanded ? "1000px" : provider.providerType === "hardware" ? "150px" : "235px"}
                         overflow={isDescriptionExpanded ? "scroll" : "hidden"}
                         ref={markdownRef}
                         transition={isDescriptionExpanded ? "all 1s" : "all 0.2s"}

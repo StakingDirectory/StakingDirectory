@@ -1,4 +1,5 @@
-import React, { useEffect } from "react"
+import React, { useEffect, useState } from "react"
+import _ from "lodash"
 
 import { MenuList, IconButton, Input, InputGroup, InputRightElement } from "@chakra-ui/react"
 
@@ -11,10 +12,13 @@ export default function HeaderMenuNameSearch({ isOpen, nameInputRef, dataFilter,
         if (nameInputRef.current) {
             nameInputRef.current.focus()
         }
-    }, [isOpen, dataFilter?.name])
+    }, [isOpen, dataFilter?.name, nameInputRef])
 
-    const updateNameFilter = (e) => {
-        if (e.target.value === "") {
+    const [searchText, setSearchText] = useState(dataFilter?.name ? dataFilter?.name : "")
+
+    // Make updateNameFilter debounced
+    const debouncedUpdateNameFilter = _.debounce((value) => {
+        if (value === "") {
             setDataFilter(
                 ((newDataFilter) => {
                     delete newDataFilter.name
@@ -22,21 +26,20 @@ export default function HeaderMenuNameSearch({ isOpen, nameInputRef, dataFilter,
                 })({ ...dataFilter })
             )
         } else {
-            setDataFilter({ ...dataFilter, name: e.target.value })
+            setDataFilter({ ...dataFilter, name: value })
         }
+    }, 500)
+
+    const handleInputChange = (e) => {
+        setSearchText(e.target.value)
+        debouncedUpdateNameFilter(e.target.value)
     }
 
     return (
         <MenuList p={0} overflow={"hidden"}>
             <InputGroup borderRadius="lg">
-                <Input
-                    ref={nameInputRef}
-                    onChange={updateNameFilter}
-                    border={0}
-                    placeholder="Search names..."
-                    value={dataFilter?.name ? dataFilter?.name : ""}
-                />
-                {dataFilter?.name && (
+                <Input ref={nameInputRef} onChange={handleInputChange} border={0} placeholder="Search names..." value={searchText} />
+                {searchText && (
                     <InputRightElement>
                         <IconButton
                             icon={<FontAwesomeIcon icon={faTimesCircle} size="sm" />}
@@ -50,6 +53,7 @@ export default function HeaderMenuNameSearch({ isOpen, nameInputRef, dataFilter,
                                         return newDataFilter
                                     })({ ...dataFilter })
                                 )
+                                setSearchText("")
                             }}
                         />
                     </InputRightElement>

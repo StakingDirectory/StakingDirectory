@@ -18,13 +18,15 @@ export default function ProviderType({ provider }) {
     const [expandedRow, setExpandedRow] = useState(false)
 
     return (
-        <Flex className={"expandContentBox"} direction={"column"}>
+        <Flex className={"expandContentBox"} p={0} direction={"column"} overflow={"hidden"}>
             <Flex
                 justifyContent={"space-between"}
+                p={4}
                 cursor={"pointer"}
                 onClick={() => {
                     setExpandedRow(!expandedRow)
                 }}
+                className={"checklistList"}
             >
                 <Flex alignItems={"center"}>
                     <Box
@@ -43,7 +45,9 @@ export default function ProviderType({ provider }) {
                 </Flex>
             </Flex>
             <Collapse in={expandedRow}>
-                <Box pt={3}>This provider sells the complete hardware to get you staking from home right away!</Box>
+                <Box px={4} pb={4} pt={1}>
+                    This provider sells the complete hardware to get you staking from home right away!
+                </Box>
             </Collapse>
         </Flex>
     )

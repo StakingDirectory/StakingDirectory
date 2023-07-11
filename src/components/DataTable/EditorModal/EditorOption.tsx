@@ -38,7 +38,7 @@ const ResizableTextArea = React.forwardRef<HTMLTextAreaElement, any>(({ value, o
             ref.current.style.height = "unset"
             ref.current.style.height = `${ref.current.scrollHeight + 10}px`
         }
-    }, [value])
+    }, [value, ref])
 
     return <Textarea ref={ref} value={value} onChange={handleChange} {...props} resize="none" />
 })
