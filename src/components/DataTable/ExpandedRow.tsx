@@ -45,9 +45,9 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
                         direction={"column"}
                         gap={3}
                         maxH={isDescriptionExpanded ? "1000px" : "180px"}
-                        overflow={"hidden"}
+                        overflow={isDescriptionExpanded ? "scroll" : "hidden"}
                         ref={markdownRef}
-                        transition={"all 1s"}
+                        transition={isDescriptionExpanded ? "all 1s" : "all 0.2s"}
                     >
                         <ReactMarkdown
                             components={{
