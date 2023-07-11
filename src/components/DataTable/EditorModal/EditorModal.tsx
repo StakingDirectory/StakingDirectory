@@ -53,6 +53,17 @@ const allOptions = [
         ],
     },
     {
+        id: "logo",
+        headerName: "Logo",
+        fields: [
+            {
+                id: "logo.evidenceLink",
+                name: "Logo Link",
+                inputType: "input",
+            },
+        ],
+    },
+    {
         id: "status",
         headerName: "Status",
         fields: [
