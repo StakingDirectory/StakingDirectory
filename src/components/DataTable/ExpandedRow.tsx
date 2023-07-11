@@ -49,13 +49,17 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
                         ref={markdownRef}
                         transition={isDescriptionExpanded ? "all 1s" : "all 0.2s"}
                     >
-                        <ReactMarkdown
-                            components={{
-                                a: ({ node, ...props }) => <Link color="blue" {...props} />,
-                            }}
-                        >
-                            {provider.description}
-                        </ReactMarkdown>
+                        {provider.description ? (
+                            <ReactMarkdown
+                                components={{
+                                    a: ({ node, ...props }) => <Link color="blue" {...props} />,
+                                }}
+                            >
+                                {provider.description}
+                            </ReactMarkdown>
+                        ) : (
+                            <Text>🤔 Description missing</Text>
+                        )}
                     </Flex>
                     {isDescriptionOverflowing && (
                         <Button

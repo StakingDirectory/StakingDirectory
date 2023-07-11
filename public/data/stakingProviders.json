@@ -348,7 +348,8 @@
       "value": true,
       "evidenceLink": ""
     },
-    "stakeFromHome": true
+    "stakeFromHome": true,
+    "description": "eth-docker aims to make running an Ethereum staking full node simpler than setting everything up manually, while allowing the user choice when it comes to the exact client mix they wish to run.\n\nIt's the \"easy button\" for home stakers, with full control for advanced users."
   },
   {
     "id": 10,
@@ -1271,8 +1272,8 @@
     "name": "Rocket Pool (Node)",
     "status": "active",
     "mainnetLaunch": {
-      "evidenceLink": "TEST",
-      "date": "2023-01-02"
+      "evidenceLink": "",
+      "date": ""
     },
     "stakingType": "pooled",
     "providerType": "No",

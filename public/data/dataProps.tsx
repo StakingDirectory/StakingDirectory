@@ -28,8 +28,8 @@ const dataProps = [
             { value: "fee", name: "Fee" },
             { value: "links", name: "Links" },
             { value: "minStake", name: "Min stake" },
-            { value: "validatorKey", name: "Validator Key Owner" },
-            { value: "withdrawalKey", name: "Withdrawal Key Owner" },
+            { value: "validatorKey", name: "Validator Key" },
+            { value: "withdrawalKey", name: "Withdrawal Key" },
             { value: "openSource", name: "Open source" },
             { value: "audited", name: "Audited" },
             { value: "bugBounty", name: "Bug bounty" },
@@ -46,10 +46,10 @@ const dataProps = [
             { value: "hardware", name: "Hardware" },
             { value: "software", name: "Software" },
             { value: "saas", name: "SAAS" },
-            { value: "userValidator", name: "User" },
+            { value: "userValidator", name: "User controlled" },
             { value: "service", name: "Service" },
-            { value: "nodeOperator", name: "Operator" },
-            { value: "userWithdrawal", name: "User" },
+            { value: "nodeOperator", name: "Node operator" },
+            { value: "userWithdrawal", name: "User controlled" },
             { value: "smartContract", name: "Smart contract" },
             { value: "status", name: "Status" },
             { value: "dev", name: "In development" },
@@ -121,6 +121,31 @@ const dataProps = [
         ],
     },
     {
+        id: "keyOwnerProperties",
+        keyOwnerProperties: [
+            {
+                value: "userValidator",
+                description: "The user who created the validator has a copy of the validator key.",
+            },
+            {
+                value: "service",
+                description: "The service provider has a copy of the validator key.",
+            },
+            {
+                value: "nodeOperator",
+                description: "The node operator has a copy of the validator key.",
+            },
+            {
+                value: "userWithdrawal",
+                description: "The withdrawal key is directly controlled by the user.",
+            },
+            {
+                value: "smartContract",
+                description: "The withdrawal key is controlled by a smart contract.",
+            },
+        ],
+    },
+    {
         isTableHeader: true,
         type: "text",
         id: "name",
@@ -188,7 +213,7 @@ const dataProps = [
         isTableHeader: false,
         type: "checkboxKeyOwner",
         id: "validatorKey",
-        name: "Validator Key Owner",
+        name: "Validator Key",
         headerText: "KEY <br /> OWNER",
         options: [
             { value: "userValidator", color: "green", icon: faUserAstronaut },
@@ -199,7 +224,7 @@ const dataProps = [
     {
         isTableHeader: false,
         id: "withdrawalKey",
-        name: "Withdrawal Key Owner",
+        name: "Withdrawal Key",
         headerText: "",
         options: [
             { value: "userWithdrawal", color: "green", icon: faUserAstronaut },

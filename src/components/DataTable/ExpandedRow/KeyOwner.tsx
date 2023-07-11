@@ -6,6 +6,7 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons"
 
 import dataProps from "public/data/dataProps"
 const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
+const keyOwnerProperties = dataProps.find((prop) => prop.id === "keyOwnerProperties").keyOwnerProperties
 
 export default function KeyOwner({ provider, id }) {
     const [expandedRows, setExpandedRows] = useState([])
@@ -24,6 +25,7 @@ export default function KeyOwner({ provider, id }) {
 
     const renderBox = (ownerId, index) => {
         const value = provider[ownerId]?.value
+        const description = provider[ownerId]?.description
 
         const isOpen = expandedRows.some((row) => row.index === index && row.providerId === provider.id)
 
@@ -50,7 +52,7 @@ export default function KeyOwner({ provider, id }) {
                 </HStack>
                 <Collapse in={isOpen}>
                     <Box px={4} pt={1} pb={3}>
-                        <Text>🏗️ More details coming soon! 🏗️</Text>
+                        <Text>{keyOwnerProperties.find((prop) => prop.value === ownerId)?.description}</Text>
                     </Box>
                 </Collapse>
             </Flex>
@@ -60,7 +62,7 @@ export default function KeyOwner({ provider, id }) {
     return (
         <Box pt={4}>
             <Text fontWeight={"bold"} pl={4} pb={2}>
-                {id === "validatorKey" ? "Validator Key Owner" : "Withdrawal Key Owner"}
+                {id === "validatorKey" ? "Validator Key" : "Withdrawal Key"}
             </Text>
             <Flex grow={1} className={""} p={0} gap={1} direction={"column"} overflow={"hidden"}>
                 {provider[id].map((ownerId, index) => renderBox(ownerId, index))}
