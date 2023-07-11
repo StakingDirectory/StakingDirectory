@@ -57,6 +57,10 @@ const dataProps = [
             { value: "description", name: "Description" },
             { value: "mainnetLaunch", name: "Mainnet Launch" },
             { value: "no", name: "No" },
+            { value: "other", name: "Other" },
+            { value: "percentage", name: "Percentage" },
+            { value: "eth", name: "ETH" },
+            { value: "anyAmount", name: "Any Amount" },
         ],
     },
     {

@@ -300,8 +300,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                             <Fee provider={provider} />
                                         </Td>
                                         <Td textAlign={"center"} fontWeight={"bold"}>
-                                            {provider.minStake.value}
-                                            {provider.minStake.type == "eth" ? " ETH" : ""}
+                                            {provider.minStake.type == "anyAmount" ? "Any amount" : `${provider.minStake.value} ETH`}
                                         </Td>
                                         <Td>
                                             <ChecklistBar

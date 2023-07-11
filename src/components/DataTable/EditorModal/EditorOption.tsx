@@ -138,9 +138,9 @@ export default function EditorOption({ id, name, placeholder = null, inputType, 
                         <MenuButton as={Button} variant={"EditorSelector"} mr={8} borderLeftRadius={0} onClick={() => setIsMenuOpen(true)}>
                             <Flex gap={2} justifyContent={"space-between"}>
                                 <Text>
-                                    {updatedValues[id]
-                                        ? providerProperties.find((prop) => prop.value === updatedValues[id])?.name
-                                        : providerProperties.find((prop) => prop.value === provider[id])?.name}
+                                    {getNestedValue(updatedValues, id)
+                                        ? providerProperties.find((prop) => prop.value === getNestedValue(updatedValues, id))?.name
+                                        : providerProperties.find((prop) => prop.value === getNestedValue(provider, id))?.name}
                                 </Text>
                                 <Box>
                                     <FontAwesomeIcon icon={faChevronDown} />
@@ -148,7 +148,10 @@ export default function EditorOption({ id, name, placeholder = null, inputType, 
                             </Flex>
                         </MenuButton>
                         <MenuList minW={1}>
-                            <MenuOptionGroup value={updatedValues[id] ? updatedValues[id] : provider[id]} type="radio">
+                            <MenuOptionGroup
+                                value={getNestedValue(updatedValues, id) ? getNestedValue(updatedValues, id) : getNestedValue(provider, id)}
+                                type="radio"
+                            >
                                 {options.map((option) => (
                                     <MenuItemOption key={option.value} value={option.value} onClick={() => updateValues(id, option.value)}>
                                         {option.name}

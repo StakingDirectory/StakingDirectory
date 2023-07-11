@@ -69,7 +69,7 @@
       "value": true,
       "evidenceLink": "https://github.com/AvadoDServer/"
     },
-    "description": "Testing\n\nTesting\n\nTesting\n\nabc\n\n123\n\nxyz"
+    "description": ""
   },
   {
     "id": 4,
@@ -1280,7 +1280,7 @@
     "providerType": "No",
     "fee": {
       "type": "percentage",
-      "value": 0
+      "value": "0"
     },
     "rewards": {
       "type": "percentage",
@@ -2707,7 +2707,7 @@
     },
     "minStake": {
       "type": "anyAmount",
-      "value": "Any amount"
+      "value": ""
     },
     "validatorKey": [
       "nodeOperator"

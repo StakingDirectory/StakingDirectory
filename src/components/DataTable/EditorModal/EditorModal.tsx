@@ -140,6 +140,46 @@ const allOptions = [
         ],
     },
     {
+        id: "fee",
+        headerName: "Fee",
+        fields: [
+            {
+                id: "fee.type",
+                name: "Fee Type",
+                inputType: "select",
+                options: [
+                    { value: "percentage", name: "Percentage" },
+                    { value: "other", name: "Other" },
+                ],
+            },
+            {
+                id: "fee.value",
+                name: "Fee Value",
+                inputType: "input",
+            },
+        ],
+    },
+    {
+        id: "minStake",
+        headerName: "Min Stake",
+        fields: [
+            {
+                id: "minStake.type",
+                name: "Min Stake",
+                inputType: "select",
+                options: [
+                    { value: "eth", name: "ETH" },
+                    { value: "anyAmount", name: "Any Amount" },
+                ],
+            },
+            {
+                id: "minStake.value",
+                name: "Min Stake Value",
+                inputType: "input",
+            },
+        ],
+    },
+    {
         id: "links",
         headerName: "Links",
         fields: [
