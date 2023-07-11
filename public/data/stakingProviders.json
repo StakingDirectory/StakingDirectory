@@ -68,7 +68,8 @@
     "diverseBeaconClients": {
       "value": true,
       "evidenceLink": "https://github.com/AvadoDServer/"
-    }
+    },
+    "description": "Testing\n\nTesting\n\nTesting\n\nabc\n\n123\n\nxyz"
   },
   {
     "id": 4,
@@ -2746,6 +2747,7 @@
       "value": true,
       "evidenceLink": "https://www.rated.network/o/Lido?network=mainnet"
     },
-    "stakeFromHome": false
+    "stakeFromHome": false,
+    "description": "Lido is the name of a family of open-source peer-to-system software tools deployed and functioning on Ethereum.\n\nUsers mint transferable utility tokens, which receive rewards linked to the related validation activities of writing data to the blockchain, while the tokens can be used in other on-chain activities."
   }
 ]

@@ -7,6 +7,8 @@ import KeyOwner from "./ExpandedRow/KeyOwner"
 import ChecklistList from "./ExpandedRow/ChecklistList"
 import Status from "./ExpandedRow/Status"
 import Links from "./ExpandedRow/Links"
+import StakingType from "./ExpandedRow/StakingType"
+import ProviderType from "./ExpandedRow/ProviderType"
 
 export default function ExpandedRow({ provider, expandedRows, expandedChecklistRows, setExpandedChecklistRows }) {
     const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false)
@@ -15,6 +17,9 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
 
     // Check if description is overflowing
     useEffect(() => {
+        console.log("markdownRef.current.scrollHeight", markdownRef.current.scrollHeight)
+        console.log("markdownRef.current.clientHeight", markdownRef.current.clientHeight)
+
         // Timeout used because of collapse animation
         const timeoutId = setTimeout(() => {
             if (markdownRef.current && markdownRef.current.scrollHeight > markdownRef.current.clientHeight) {
@@ -36,19 +41,21 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
                     direction={"column"}
                     gap={3}
                     className={"expandContentBox"}
-                    minH={provider.providerType === "hardware" ? 150 : 250}
+                    minH={provider.providerType === "hardware" ? 225 : 300}
                     overflow={"hidden"}
                     position={"relative"}
-                    pb={isDescriptionOverflowing ? 50 : 0}
+                    pb={isDescriptionOverflowing ? 50 : 2}
                 >
                     <Flex
                         direction={"column"}
                         gap={3}
-                        maxH={isDescriptionExpanded ? "1000px" : "180px"}
+                        maxH={isDescriptionExpanded ? "1000px" : "230px"}
                         overflow={isDescriptionExpanded ? "scroll" : "hidden"}
                         ref={markdownRef}
                         transition={isDescriptionExpanded ? "all 1s" : "all 0.2s"}
+                        fontWeight={"medium"}
                     >
+                        <Text fontWeight={"bold"}>About {provider.name}</Text>
                         {provider.description ? (
                             <ReactMarkdown
                                 components={{
@@ -75,15 +82,8 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
                         </Button>
                     )}
                 </Flex>
-
-                <Flex className={"expandContentBox"} minH={115}>
-                    <Text>🏗️ Staking Type coming soon! 🏗️</Text>
-                </Flex>
-                {provider.providerType === "hardware" && (
-                    <Flex className={"expandContentBox"}>
-                        <Text>🏗️ Provider Type coming soon! 🏗️</Text>
-                    </Flex>
-                )}
+                <StakingType provider={provider} />
+                {provider.providerType === "hardware" && <ProviderType provider={provider} />}
             </Flex>
             <Flex direction={"column"} gap={5} w={220}>
                 <Flex direction={"column"} className={"expandContentBox"} p={0} overflow={"hidden"}>

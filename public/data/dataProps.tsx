@@ -167,11 +167,34 @@ const dataProps = [
         name: "Staking Type",
         headerText: "STAKING <br /> TYPE",
         options: [
-            { value: "solo", color: "green", icon: faServer },
-            { value: "pooled", color: "blue", icon: faUsers },
-            { value: "managed", color: "red", icon: faUsers },
-            { value: "lst", color: "gold", icon: faCoins },
-            { value: "indexToken", color: "orange", icon: faShoppingBasket },
+            { value: "solo", color: "green", description: "Solo 1", icon: faServer },
+            {
+                value: "pooled",
+                color: "blue",
+                description:
+                    "Pooled staking is when multiple stakeholders combine their resources to create a validator. By pooling resources, individuals who do not have the 32 ETH required for solo staking can still participate in the staking process.",
+                icon: faUsers,
+            },
+            {
+                value: "managed",
+                color: "red",
+                description: "Managed staking is where a third party manages the staking process on behalf of stakeholders.",
+                icon: faUsers,
+            },
+            {
+                value: "lst",
+                color: "gold",
+                description:
+                    "Liquid Staking Tokens (LST) represent staked ETH and its rewards in a tokenized form. This provides liquidity to stakeholders as they can use these tokens to trade, as collateral, or in DeFi applications while still earning staking rewards.",
+                icon: faCoins,
+            },
+            {
+                value: "indexToken",
+                color: "orange",
+                description:
+                    "Index Tokens represent a diversified portfolio of staking tokens, allowing users to stake across multiple staking protocols with a single token.",
+                icon: faShoppingBasket,
+            },
         ],
     },
     {
