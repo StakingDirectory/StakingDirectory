@@ -10,7 +10,8 @@ import orderProviders from "../utils/orderProviders"
 
 import dataProps from "public/data/dataProps"
 
-import { Box, Flex, Text, Image } from "@chakra-ui/react"
+import { Box, Flex, Text, Image, Button } from "@chakra-ui/react"
+import AddProviderButton from "./AddProviderButton"
 
 const App = () => {
     const [dataFilter, setDataFilter] = useState({})
@@ -60,6 +61,7 @@ const App = () => {
                     <MainFilterButtons dataFilter={dataFilter} setDataFilter={setDataFilter} />
                     <Box height={50} />
                     <DataTableTabs orderedFilteredProviders={orderedFilteredProviders} dataFilter={dataFilter} setDataFilter={setDataFilter} />
+                    {process.env.NODE_ENV == "development" && <AddProviderButton />}
                 </Flex>
             </Flex>
             <Box flex="1" />

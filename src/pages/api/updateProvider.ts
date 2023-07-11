@@ -11,15 +11,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         const fileContents = fs.readFileSync(filePath, "utf8")
         const providers = JSON.parse(fileContents)
 
-        const providerIndex = providers.findIndex((provider) => provider.id === providerId)
+        let providerIndex = providers.findIndex((provider) => provider.id === providerId)
         if (providerIndex === -1) {
-            res.status(404).json({ message: "Provider not found" })
-            return
+            providers.push({
+                id: providerId,
+                ...updatedValues,
+            })
+            providerIndex = providers.length - 1
+        } else {
+            _.merge(providers[providerIndex], updatedValues)
         }
 
-        _.merge(providers[providerIndex], updatedValues)
-
-        fs.writeFileSync(filePath, JSON.stringify(providers, null, 2), "utf8")
+        fs.writeFileSync(filePath, JSON.stringify(providers, null, 4), "utf8")
 
         res.status(200).json({ message: "Provider updated successfully" })
     } else {

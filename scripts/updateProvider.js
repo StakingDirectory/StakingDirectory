@@ -16,4 +16,4 @@ if (providerIndex === -1) {
 // Merge the provider and updatedValues objects recursively
 providers[providerIndex] = _.merge({}, providers[providerIndex], JSON.parse(updatedValues))
 
-fs.writeFileSync(filePath, JSON.stringify(providers, null, 2), "utf8")
+fs.writeFileSync(filePath, JSON.stringify(providers, null, 4), "utf8")

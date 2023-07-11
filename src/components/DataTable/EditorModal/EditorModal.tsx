@@ -401,7 +401,7 @@ const allOptions = [
     },
 ]
 
-export default function EditorModal({ isOpen, onClose, provider }) {
+export default function EditorModal({ isOpen, onClose, provider, newProvider = false }) {
     const toast = useToast()
 
     const [currentSelection, setCurrentSelection] = useState("allOptions")
@@ -443,8 +443,9 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                 <ModalHeader fontWeight={"extrabold"} fontSize={"initial"}>
                     <Flex gap={5} alignItems={"center"} wrap={"wrap"} justifyContent={"space-between"}>
                         <Flex gap={3} alignItems={"center"} fontSize={"xl"}>
-                            <Image objectFit="contain" boxSize={8} src={provider.logo.src} alt={provider.logo.alt} borderRadius={"100%"} />
+                            <Image objectFit="contain" boxSize={8} src={provider.logo?.src} alt={provider.logo?.alt} borderRadius={"100%"} />
                             <Text isTruncated>{provider.name}</Text>
+                            {newProvider && <Text>Create new provider</Text>}
                         </Flex>
                         <OptionSelector
                             zIndex={999}
@@ -487,7 +488,13 @@ export default function EditorModal({ isOpen, onClose, provider }) {
                         })}
                 </ModalBody>
                 <ModalFooter>
-                    <EditorFooter onClose={closeEditor} provider={provider} updatedValues={updatedValues} setUpdatedValues={setUpdatedValues} />
+                    <EditorFooter
+                        onClose={closeEditor}
+                        provider={provider}
+                        updatedValues={updatedValues}
+                        setUpdatedValues={setUpdatedValues}
+                        newProvider={newProvider}
+                    />
                 </ModalFooter>
             </ModalContent>
         </Modal>

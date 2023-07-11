@@ -62,7 +62,8 @@ export default function EditorOption({ id, name, placeholder = null, inputType, 
     const updateValues = (option, value) => {
         const parts = option.split(".")
 
-        const existingValue = parts.length > 1 ? provider[parts[0]][parts[1]] : provider[parts[0]]
+        // const existingValue = parts.length > 1 ? provider[parts[0]][parts[1]] : provider[parts[0]]
+        const existingValue = parts.length > 1 ? provider[parts[0]]?.[parts[1]] : provider[parts[0]]
 
         if (JSON.stringify(value) === JSON.stringify(existingValue)) {
             const updatedValuesCopy = { ...updatedValues }

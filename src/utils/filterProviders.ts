@@ -2,7 +2,9 @@ import stakingProviders from "public/data/stakingProviders.json"
 
 const filterStakingProviders = (dataFilter) => {
     return stakingProviders.filter((provider) => {
-        if (dataFilter && Object.keys(dataFilter).length > 0) {
+        if (provider.id == "TEMPLATE") {
+            return false
+        } else if (dataFilter && Object.keys(dataFilter).length > 0) {
             let showProvider = []
             for (let key in dataFilter) {
                 if (key === "name") {
@@ -20,7 +22,7 @@ const filterStakingProviders = (dataFilter) => {
                 } else if (key === "stakingType") {
                     let showStakingType = []
                     for (let stakingType of ["solo", "pooled", "managed", "lst", "indexToken"]) {
-                        if (dataFilter[key].includes(stakingType) && provider["stakingType"].includes(stakingType)) {
+                        if (dataFilter[key].includes(stakingType) && provider["stakingType"]?.includes(stakingType)) {
                             showStakingType.push(true)
                         } else if (dataFilter[key].includes(stakingType)) {
                             showStakingType.push(false)
@@ -36,7 +38,7 @@ const filterStakingProviders = (dataFilter) => {
                 } else if (key === "providerType") {
                     let showProviderType = []
                     for (let providerType of ["hardware", "software", "saas"]) {
-                        if (dataFilter[key].includes(providerType) && provider["providerType"].includes(providerType)) {
+                        if (dataFilter[key].includes(providerType) && provider["providerType"]?.includes(providerType)) {
                             showProviderType.push(true)
                         } else if (dataFilter[key].includes(providerType)) {
                             showProviderType.push(false)
@@ -61,7 +63,7 @@ const filterStakingProviders = (dataFilter) => {
                         "diverseExecutionClients",
                         "diverseBeaconClients",
                     ]) {
-                        if (dataFilter[key].includes(feature) && !provider[feature].value) {
+                        if (dataFilter[key].includes(feature) && !provider[feature]?.value) {
                             showTechnicalIndicators = false
                         }
                     }

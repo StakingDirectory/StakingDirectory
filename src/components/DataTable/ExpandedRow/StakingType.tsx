@@ -43,7 +43,7 @@ export default function StakingType({ provider }) {
                             fontWeight={"bold"}
                             color={dataProps.flatMap((d) => d.options).find((opt) => opt?.value === provider.stakingType)?.color}
                         >
-                            {providerProperties.find((prop) => prop.value === provider.stakingType).name}
+                            {providerProperties.find((prop) => prop.value === provider.stakingType)?.name}
                         </Text>
                     </Flex>
                 </Flex>

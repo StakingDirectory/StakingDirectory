@@ -16,7 +16,7 @@ export default function Links({ provider }) {
                 { type: "Telegram", icon: faTelegram },
                 { type: "Repo", icon: faCode },
             ].map((linkData) => {
-                const href = provider.links[linkData.type.toLowerCase()]
+                const href = provider.links?.[linkData.type.toLowerCase()]
                 const button = (
                     <Button isDisabled={!href} px={0} w={"100%"} justifyContent={"start"} borderRadius={10}>
                         <Flex>

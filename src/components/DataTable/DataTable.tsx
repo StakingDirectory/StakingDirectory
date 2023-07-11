@@ -277,8 +277,8 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                                 objectFit="contain"
                                                 minW={8}
                                                 maxW={8}
-                                                src={provider.logo.src}
-                                                alt={provider.logo.alt}
+                                                src={provider.logo?.src}
+                                                alt={provider.logo?.alt}
                                                 borderRadius={"100%"}
                                             />
                                         </Td>
@@ -300,7 +300,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                             <Fee provider={provider} />
                                         </Td>
                                         <Td textAlign={"center"} fontWeight={"bold"}>
-                                            {provider.minStake.type == "anyAmount" ? "Any amount" : `${provider.minStake.value} ETH`}
+                                            {provider.minStake?.type == "anyAmount" ? "Any amount" : `${provider.minStake?.value} ETH`}
                                         </Td>
                                         <Td>
                                             <ChecklistBar

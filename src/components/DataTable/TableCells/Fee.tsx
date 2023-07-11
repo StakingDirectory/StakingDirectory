@@ -12,17 +12,17 @@ export default function RewardFee({ provider }) {
             >
                 <Box
                     borderRadius={10}
-                    border={provider.fee.value == 0 ? "" : "2px solid"}
+                    border={provider.fee?.value == 0 ? "" : "2px solid"}
                     borderColor="red"
-                    bg={provider.fee.value == 0 ? "green" : ""}
+                    bg={provider.fee?.value == 0 ? "green" : ""}
                     w={"fit-content"}
                     px={2}
                     py={"2px"}
                     className={"bgPage"}
-                    fontWeight={provider.fee.value == 0 ? "bold" : "semibold"}
+                    fontWeight={provider.fee?.value == 0 ? "bold" : "semibold"}
                 >
-                    {provider.fee.value}
-                    {provider.fee.type == "percentage" ? "%" : ""}
+                    {provider.fee?.value}
+                    {provider.fee?.type == "percentage" ? "%" : ""}
                 </Box>
             </Tooltip>
         </Flex>
