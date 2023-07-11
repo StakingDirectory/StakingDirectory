@@ -65,7 +65,9 @@ export default function KeyOwner({ provider, id }) {
                 {id === "validatorKey" ? "Validator Key" : "Withdrawal Key"}
             </Text>
             <Flex grow={1} className={""} p={0} gap={1} direction={"column"} overflow={"hidden"}>
-                {provider[id].map((ownerId, index) => renderBox(ownerId, index))}
+                {Object.entries(provider[id])
+                    .filter(([key, value]) => value === true)
+                    .map(([ownerId], index) => renderBox(ownerId, index))}
             </Flex>
         </Box>
     )

@@ -32,12 +32,12 @@
       "type": "eth",
       "value": 32
     },
-    "validatorKey": [
-      "userValidator"
-    ],
-    "withdrawalKey": [
-      "userWithdrawal"
-    ],
+    "validatorKey": {
+      "userValidator": true
+    },
+    "withdrawalKey": {
+      "userWithdrawal": true
+    },
     "openSource": {
       "value": true,
       "evidenceLink": "https://github.com/AvadoDServer/"
@@ -102,12 +102,12 @@
       "type": "eth",
       "value": 32
     },
-    "validatorKey": [
-      "userValidator"
-    ],
-    "withdrawalKey": [
-      "userWithdrawal"
-    ],
+    "validatorKey": {
+      "userValidator": true
+    },
+    "withdrawalKey": {
+      "userWithdrawal": true
+    },
     "openSource": {
       "value": true,
       "evidenceLink": "https://github.com/dappnode/DAppNode"
@@ -172,12 +172,12 @@
       "type": "eth",
       "value": 32
     },
-    "validatorKey": [
-      "userValidator"
-    ],
-    "withdrawalKey": [
-      "userWithdrawal"
-    ],
+    "validatorKey": {
+      "userValidator": true
+    },
+    "withdrawalKey": {
+      "userWithdrawal": true
+    },
     "openSource": {
       "value": true,
       "evidenceLink": "https://github.com/diglos/ethereumonarm"
@@ -242,12 +242,13 @@
       "type": "eth",
       "value": 32
     },
-    "validatorKey": [
-      "userValidator"
-    ],
-    "withdrawalKey": [
-      "userWithdrawal"
-    ],
+    "validatorKey": {
+      "userValidator": true,
+      "service": false
+    },
+    "withdrawalKey": {
+      "userWithdrawal": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -312,12 +313,12 @@
       "type": "eth",
       "value": 32
     },
-    "validatorKey": [
-      "userValidator"
-    ],
-    "withdrawalKey": [
-      "userWithdrawal"
-    ],
+    "validatorKey": {
+      "userValidator": true
+    },
+    "withdrawalKey": {
+      "userWithdrawal": true
+    },
     "openSource": {
       "value": true,
       "evidenceLink": "https://github.com/eth-educators/eth-docker"
@@ -383,12 +384,12 @@
       "type": "eth",
       "value": 32
     },
-    "validatorKey": [
-      "userValidator"
-    ],
-    "withdrawalKey": [
-      "userWithdrawal"
-    ],
+    "validatorKey": {
+      "userValidator": true
+    },
+    "withdrawalKey": {
+      "userWithdrawal": true
+    },
     "openSource": {
       "value": true,
       "evidenceLink": "https://github.com/stereum-dev/ethereum-node"
@@ -453,12 +454,12 @@
       "type": "eth",
       "value": 32
     },
-    "validatorKey": [
-      "userValidator"
-    ],
-    "withdrawalKey": [
-      "userWithdrawal"
-    ],
+    "validatorKey": {
+      "userValidator": true
+    },
+    "withdrawalKey": {
+      "userWithdrawal": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -523,12 +524,12 @@
       "type": "eth",
       "value": 32
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "userWithdrawal"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "userWithdrawal": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -593,13 +594,13 @@
       "type": "eth",
       "value": 1000
     },
-    "validatorKey": [
-      "service",
-      "userValidator"
-    ],
-    "withdrawalKey": [
-      "userWithdrawal"
-    ],
+    "validatorKey": {
+      "service": true,
+      "userValidator": true
+    },
+    "withdrawalKey": {
+      "userWithdrawal": true
+    },
     "openSource": {
       "value": true,
       "evidenceLink": "https://github.com/attestantio"
@@ -664,12 +665,12 @@
       "type": "eth",
       "value": 32
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "userWithdrawal"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "userWithdrawal": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -734,12 +735,12 @@
       "type": "eth",
       "value": 32
     },
-    "validatorKey": [
-      "userValidator"
-    ],
-    "withdrawalKey": [
-      "userWithdrawal"
-    ],
+    "validatorKey": {
+      "userValidator": true
+    },
+    "withdrawalKey": {
+      "userWithdrawal": true
+    },
     "openSource": {
       "value": true,
       "evidenceLink": ""
@@ -804,13 +805,13 @@
       "type": "eth",
       "value": 32
     },
-    "validatorKey": [
-      "service",
-      "userValidator"
-    ],
-    "withdrawalKey": [
-      "userWithdrawal"
-    ],
+    "validatorKey": {
+      "service": true,
+      "userValidator": true
+    },
+    "withdrawalKey": {
+      "userWithdrawal": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -875,12 +876,12 @@
       "type": "eth",
       "value": 32
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "userWithdrawal"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "userWithdrawal": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -945,12 +946,12 @@
       "type": "eth",
       "value": 32
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "userWithdrawal"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "userWithdrawal": true
+    },
     "openSource": {
       "value": true,
       "evidenceLink": ""
@@ -1015,12 +1016,12 @@
       "type": "eth",
       "value": 32
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "userWithdrawal"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "userWithdrawal": true
+    },
     "openSource": {
       "value": true,
       "evidenceLink": ""
@@ -1085,12 +1086,12 @@
       "type": "eth",
       "value": 32
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "userWithdrawal"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "userWithdrawal": true
+    },
     "openSource": {
       "value": true,
       "evidenceLink": ""
@@ -1155,12 +1156,12 @@
       "type": "eth",
       "value": 32
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "userWithdrawal"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "userWithdrawal": true
+    },
     "openSource": {
       "value": true,
       "evidenceLink": ""
@@ -1225,12 +1226,12 @@
       "type": "eth",
       "value": 32
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": true,
       "evidenceLink": ""
@@ -1299,12 +1300,12 @@
       "type": "eth",
       "value": 9.6
     },
-    "validatorKey": [
-      "userValidator"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "userValidator": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": true
     },
@@ -1363,12 +1364,12 @@
       "type": "eth",
       "value": 1
     },
-    "validatorKey": [
-      "nodeOperator"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "nodeOperator": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -1433,12 +1434,12 @@
       "type": "anyAmount",
       "value": "Any amount"
     },
-    "validatorKey": [
-      "userValidator"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "userValidator": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -1503,13 +1504,13 @@
       "type": "eth",
       "value": 0.01
     },
-    "validatorKey": [
-      "userValidator",
-      "service"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "userValidator": true,
+      "service": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -1574,12 +1575,12 @@
       "type": "eth",
       "value": 0.01
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -1644,12 +1645,12 @@
       "type": "eth",
       "value": 0.1
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -1714,13 +1715,13 @@
       "type": "eth",
       "value": 32
     },
-    "validatorKey": [
-      "userValidator",
-      "nodeOperator"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "userValidator": true,
+      "nodeOperator": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -1785,12 +1786,12 @@
       "type": "anyAmount",
       "value": "Any amount"
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -1856,12 +1857,12 @@
       "type": "anyAmount",
       "value": "Any amount"
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -1927,12 +1928,12 @@
       "type": "anyAmount",
       "value": "Any amount"
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": true,
       "evidenceLink": ""
@@ -1998,12 +1999,12 @@
       "type": "anyAmount",
       "value": "Any amount"
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": true,
       "evidenceLink": ""
@@ -2069,12 +2070,12 @@
       "type": "anyAmount",
       "value": "Any amount"
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": true,
       "evidenceLink": ""
@@ -2140,12 +2141,12 @@
       "type": "anyAmount",
       "value": "Any amount"
     },
-    "validatorKey": [
-      "nodeOperator"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "nodeOperator": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": true,
       "evidenceLink": ""
@@ -2212,12 +2213,12 @@
       "type": "anyAmount",
       "value": "Any amount"
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -2283,12 +2284,12 @@
       "type": "anyAmount",
       "value": "Any amount"
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -2354,12 +2355,12 @@
       "type": "anyAmount",
       "value": "Any amount"
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -2425,13 +2426,13 @@
       "type": "anyAmount",
       "value": "Any amount"
     },
-    "validatorKey": [
-      "service",
-      "nodeOperator"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "service": true,
+      "nodeOperator": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -2497,12 +2498,12 @@
       "type": "anyAmount",
       "value": "Any amount"
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -2568,12 +2569,12 @@
       "type": "anyAmount",
       "value": "Any amount"
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -2639,12 +2640,12 @@
       "type": "anyAmount",
       "value": "Any amount"
     },
-    "validatorKey": [
-      "service"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "service": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": false,
       "evidenceLink": ""
@@ -2712,12 +2713,12 @@
       "type": "anyAmount",
       "value": ""
     },
-    "validatorKey": [
-      "nodeOperator"
-    ],
-    "withdrawalKey": [
-      "smartContract"
-    ],
+    "validatorKey": {
+      "nodeOperator": true
+    },
+    "withdrawalKey": {
+      "smartContract": true
+    },
     "openSource": {
       "value": true,
       "evidenceLink": "https://github.com/lidofinance"

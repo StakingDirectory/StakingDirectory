@@ -191,6 +191,43 @@ const allOptions = [
         ],
     },
     {
+        id: "validatorKey",
+        headerName: "Validator Key",
+        fields: [
+            {
+                id: "validatorKey.userValidator",
+                name: "User controlled?",
+                inputType: "selectBool",
+            },
+            {
+                id: "validatorKey.service",
+                name: "Service controlled?",
+                inputType: "selectBool",
+            },
+            {
+                id: "validatorKey.nodeOperator",
+                name: "Node operator controlled?",
+                inputType: "selectBool",
+            },
+        ],
+    },
+    {
+        id: "withdrawalKey",
+        headerName: "Withdrawal Key",
+        fields: [
+            {
+                id: "withdrawalKey.userWithdrawal",
+                name: "User controlled?",
+                inputType: "selectBool",
+            },
+            {
+                id: "withdrawalKey.smartContract",
+                name: "Smart contract controlled?",
+                inputType: "selectBool",
+            },
+        ],
+    },
+    {
         id: "links",
         headerName: "Links",
         fields: [
