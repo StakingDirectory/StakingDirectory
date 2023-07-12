@@ -61,7 +61,7 @@ const App = () => {
                     <MainFilterButtons dataFilter={dataFilter} setDataFilter={setDataFilter} />
                     <Box height={50} />
                     <DataTableTabs orderedFilteredProviders={orderedFilteredProviders} dataFilter={dataFilter} setDataFilter={setDataFilter} />
-                    {process.env.NODE_ENV == "development" && <AddProviderButton />}
+                    <AddProviderButton />
                 </Flex>
             </Flex>
             <Box flex="1" />

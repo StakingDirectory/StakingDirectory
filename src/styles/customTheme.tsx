@@ -241,6 +241,22 @@ const customTheme = extendTheme({
                         },
                     }
                 },
+                AddNewProvider: (props: StyleFunctionProps) => {
+                    const mainColor = props.theme.colors.green
+                    return {
+                        borderColor: props.colorMode === "dark" ? mainColor : "pageBackground.light",
+                        borderWidth: "3px",
+                        fontWeight: "bold",
+                        borderRadius: "10px",
+                        bg: darkenColor(props.colorMode, mainColor, 0.2),
+                        _hover: {
+                            bg: darkenColor(props.colorMode, mainColor, 0.15),
+                        },
+                        _active: {
+                            bg: darkenColor(props.colorMode, mainColor, 0.1),
+                        },
+                    }
+                },
             },
         },
         Table: {

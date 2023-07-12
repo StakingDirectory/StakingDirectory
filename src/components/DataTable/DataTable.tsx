@@ -1,5 +1,7 @@
 import React, { useRef, useEffect, useState } from "react"
 
+import AddProviderButton from "../AddProviderButton"
+
 import {
     Flex,
     Box,
@@ -277,8 +279,8 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                                 objectFit="contain"
                                                 minW={8}
                                                 maxW={8}
-                                                src={provider.logo?.src}
-                                                alt={provider.logo?.alt}
+                                                src={provider.logo?.src ? provider.logo?.src : "./StakingDirectoryLogo.svg"}
+                                                alt={provider.logo?.alt ? provider.logo?.alt : "Staking Directory Logo"}
                                                 borderRadius={"100%"}
                                             />
                                         </Td>
@@ -340,8 +342,30 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
             {stakingProviders && stakingProviders.filter((provider) => provider.status === status).length === 0 && (
                 <Flex direction={"column"} justifyContent={"center"} alignItems={"center"} py={2}>
                     <Text fontSize={"3xl"}>🔍</Text>
-                    <Text fontWeight={"bold"}>No results found</Text>
-                    <Text fontWeight={"bold"}>Please try a different filter</Text>
+                    <Text fontWeight={"bold"}>
+                        {stakingProviders.filter((provider) => provider.status === "active").length}{" "}
+                        <Box as={"span"} color={"green"}>
+                            active
+                        </Box>{" "}
+                        providers
+                    </Text>
+                    <Text fontWeight={"bold"}>
+                        {stakingProviders.filter((provider) => provider.status === "dev").length}{" "}
+                        <Box as={"span"} color={"blue"}>
+                            in development
+                        </Box>{" "}
+                        providers
+                    </Text>
+
+                    {stakingProviders.length == 0 && (
+                        <Flex direction={"column"} alignItems={"center"} pt={5}>
+                            <Text fontWeight={"bold"}>Please try a different filter</Text>
+                            <Text fontWeight={"bold"}>or</Text>
+                            <Box pt={2}>
+                                <AddProviderButton />
+                            </Box>
+                        </Flex>
+                    )}
                 </Flex>
             )}
         </Box>

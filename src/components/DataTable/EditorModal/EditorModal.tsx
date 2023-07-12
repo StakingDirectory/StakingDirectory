@@ -463,7 +463,13 @@ export default function EditorModal({ isOpen, onClose, provider, newProvider = f
                 <ModalHeader fontWeight={"extrabold"} fontSize={"initial"}>
                     <Flex gap={5} alignItems={"center"} wrap={"wrap"} justifyContent={"space-between"}>
                         <Flex gap={3} alignItems={"center"} fontSize={"xl"}>
-                            <Image objectFit="contain" boxSize={8} src={provider.logo?.src} alt={provider.logo?.alt} borderRadius={"100%"} />
+                            <Image
+                                objectFit="contain"
+                                boxSize={8}
+                                src={provider.logo?.src ? provider.logo?.src : "./StakingDirectoryLogo.svg"}
+                                alt={provider.logo?.alt ? provider.logo?.alt : "Staking Directory Logo"}
+                                borderRadius={"100%"}
+                            />
                             <Text isTruncated>{provider.name}</Text>
                             {newProvider && <Text>Create new provider</Text>}
                         </Flex>

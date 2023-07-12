@@ -7,6 +7,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons"
 
 export default function HeaderMenuNameSearch({ isOpen, nameInputRef, dataFilter, setDataFilter }) {
+    const [searchText, setSearchText] = useState(dataFilter?.name ? dataFilter?.name : "")
+    const [debouncedSearchText, setDebouncedSearchText] = useState(searchText)
+
     // Keep the focus on the input when typing
     useEffect(() => {
         if (nameInputRef.current) {
@@ -14,11 +17,22 @@ export default function HeaderMenuNameSearch({ isOpen, nameInputRef, dataFilter,
         }
     }, [isOpen, dataFilter?.name, nameInputRef])
 
-    const [searchText, setSearchText] = useState(dataFilter?.name ? dataFilter?.name : "")
+    useEffect(() => {
+        setSearchText(dataFilter?.name || "")
+    }, [dataFilter?.name])
 
-    // Make updateNameFilter debounced
-    const debouncedUpdateNameFilter = _.debounce((value) => {
-        if (value === "") {
+    useEffect(() => {
+        const handler = setTimeout(() => {
+            setDebouncedSearchText(searchText)
+        }, 300)
+
+        return () => {
+            clearTimeout(handler)
+        }
+    }, [searchText])
+
+    useEffect(() => {
+        if (debouncedSearchText === "") {
             setDataFilter(
                 ((newDataFilter) => {
                     delete newDataFilter.name
@@ -26,13 +40,12 @@ export default function HeaderMenuNameSearch({ isOpen, nameInputRef, dataFilter,
                 })({ ...dataFilter })
             )
         } else {
-            setDataFilter({ ...dataFilter, name: value })
+            setDataFilter({ ...dataFilter, name: debouncedSearchText })
         }
-    }, 500)
+    }, [debouncedSearchText])
 
     const handleInputChange = (e) => {
         setSearchText(e.target.value)
-        debouncedUpdateNameFilter(e.target.value)
     }
 
     return (
