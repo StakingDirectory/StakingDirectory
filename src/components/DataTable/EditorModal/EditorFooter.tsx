@@ -72,12 +72,6 @@ export default function EditorFooter({ onClose, provider, updatedValues, setUpda
                         isDisabled={Object.keys(updatedValues).length == 0 || loading}
                         onClick={() => {
                             setLoading(true)
-
-                            // If it's a new provider, a unique ID needs to be generated
-                            if (newProvider) {
-                                provider.id = 999
-                            }
-
                             const api = process.env.NODE_ENV === "development" ? "/api/updateProvider" : "/api/triggerWorkflow"
                             axios
                                 .post(api, { providerId: provider.id, updatedValues })

@@ -1,39 +1,24 @@
 [
     {
         "id": "TEMPLATE",
-        "logo": {
-            "src": "./images/TemplateLogo.png",
-            "alt": "Logo",
-            "evidenceLink": ""
-        },
-        "name": "",
         "status": "dev",
         "stakeFromHome": true,
-        "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
-        },
         "stakingType": "solo",
         "providerType": "no",
         "fee": {
             "type": "percentage",
             "value": 0
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
-        "links": {
-            "website": "",
-            "twitter": "",
-            "repo": ""
-        },
         "minStake": {
             "type": "eth",
             "value": 32
         },
-        "validatorKey": {},
-        "withdrawalKey": {},
+        "validatorKey": {
+            "userValidator": true
+        },
+        "withdrawalKey": {
+            "userWithdrawal": true
+        },
         "openSource": {
             "value": false,
             "evidenceLink": ""
@@ -65,8 +50,7 @@
         "diverseBeaconClients": {
             "value": false,
             "evidenceLink": ""
-        },
-        "description": ""
+        }
     },
     {
         "id": 3,
@@ -87,10 +71,6 @@
         "fee": {
             "type": "percentage",
             "value": 0
-        },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
         },
         "links": {
             "website": "https://ava.do/",
@@ -159,10 +139,6 @@
             "type": "percentage",
             "value": 0
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://dappnode.io/",
             "twitter": ""
@@ -230,10 +206,6 @@
             "type": "percentage",
             "value": 0
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://ethereum-on-arm-documentation.readthedocs.io/",
             "twitter": ""
@@ -299,10 +271,6 @@
         "fee": {
             "type": "percentage",
             "value": 0
-        },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
         },
         "links": {
             "website": "https://www.nicenode.xyz/",
@@ -371,10 +339,6 @@
             "type": "percentage",
             "value": 0
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://eth-docker.net/",
             "twitter": ""
@@ -442,10 +406,6 @@
             "type": "percentage",
             "value": 0
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://stereum.net/ethereum-node-setup/",
             "twitter": ""
@@ -511,10 +471,6 @@
         "fee": {
             "type": "other",
             "value": "AWS Image"
-        },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
         },
         "links": {
             "website": "https://www.launchnodes.com/",
@@ -582,10 +538,6 @@
             "type": "other",
             "value": "$5/month"
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://www.allnodes.com/eth2/staking",
             "twitter": ""
@@ -651,10 +603,6 @@
         "fee": {
             "type": "percentage",
             "value": 12.5
-        },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
         },
         "links": {
             "website": "https://www.attestant.io/",
@@ -723,10 +671,6 @@
             "type": "percentage",
             "value": 8
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://stake.bloq.com/",
             "twitter": ""
@@ -793,10 +737,6 @@
             "type": "other",
             "value": "🤔"
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://www.bloxstaking.com/",
             "twitter": ""
@@ -862,10 +802,6 @@
         "fee": {
             "type": "percentage",
             "value": 2
-        },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
         },
         "links": {
             "website": "https://ethpool.org",
@@ -934,10 +870,6 @@
             "type": "other",
             "value": "Custom"
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://www.kiln.fi/protocols/ethereum",
             "twitter": ""
@@ -1003,10 +935,6 @@
         "fee": {
             "type": "other",
             "value": "🤔"
-        },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
         },
         "links": {
             "website": "https://stake.rockx.com/",
@@ -1074,10 +1002,6 @@
             "type": "percentage",
             "value": 10
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://dashboard.senseinode.com/en/senseistake",
             "twitter": ""
@@ -1143,10 +1067,6 @@
         "fee": {
             "type": "percentage",
             "value": 10
-        },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
         },
         "links": {
             "website": "https://staking.staked.us/ethereum-staking-options",
@@ -1214,10 +1134,6 @@
             "type": "other",
             "value": "10DAI/month"
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://docs.stakewise.io/stakewise-solo",
             "twitter": ""
@@ -1283,10 +1199,6 @@
         "fee": {
             "type": "other",
             "value": "Custom"
-        },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
         },
         "links": {
             "website": "https://www.figment.io/staking-with-figment",
@@ -1355,10 +1267,6 @@
             "type": "percentage",
             "value": "0"
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://docs.rocketpool.net/guides/node/responsibilities.html",
             "twitter": "",
@@ -1421,10 +1329,6 @@
         "fee": {
             "type": "other",
             "value": "🤔"
-        },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
         },
         "links": {
             "website": "https://stake.divalabs.org/operator",
@@ -1492,10 +1396,6 @@
             "type": "other",
             "value": "Custom"
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://stakewise.medium.com/stakewise-v3-announcement-9e4fe73abdf2",
             "twitter": ""
@@ -1561,10 +1461,6 @@
         "fee": {
             "type": "percentage",
             "value": 8
-        },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
         },
         "links": {
             "website": "https://staking.ethermine.org",
@@ -1633,10 +1529,6 @@
             "type": "percentage",
             "value": 10
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://everstake.one/ethereum",
             "twitter": ""
@@ -1703,10 +1595,6 @@
             "type": "percentage",
             "value": 10
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://stake.fish/",
             "twitter": ""
@@ -1772,10 +1660,6 @@
         "fee": {
             "type": "other",
             "value": "🤔"
-        },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
         },
         "links": {
             "website": "https://ether.fi/",
@@ -1844,10 +1728,6 @@
             "type": "other",
             "value": "LST+0.25%"
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://indexcoop.com/dseth-diversified-staked-eth-index",
             "twitter": ""
@@ -1914,10 +1794,6 @@
         "fee": {
             "type": "percentage",
             "value": 25
-        },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
         },
         "links": {
             "website": "https://www.coinbase.com/learn/wallet/how-to-stake-ether",
@@ -1986,10 +1862,6 @@
             "type": "percentage",
             "value": 10
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://app.stakewise.io/",
             "twitter": ""
@@ -2056,10 +1928,6 @@
         "fee": {
             "type": "percentage",
             "value": 10
-        },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
         },
         "links": {
             "website": "https://www.ankr.com/staking/stake/ethereum/",
@@ -2128,10 +1996,6 @@
             "type": "other",
             "value": "🤔"
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://app.frax.finance/frxeth/mint",
             "twitter": ""
@@ -2198,10 +2062,6 @@
         "fee": {
             "type": "percentage",
             "value": 14
-        },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
         },
         "links": {
             "website": "https://stake.rocketpool.net/",
@@ -2271,10 +2131,6 @@
             "type": "percentage",
             "value": 5
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://www.sharedstake.org/stake",
             "twitter": ""
@@ -2341,10 +2197,6 @@
         "fee": {
             "type": "percentage",
             "value": 10
-        },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
         },
         "links": {
             "website": "https://guarda.com/staking/ethereum-staking/",
@@ -2413,10 +2265,6 @@
             "type": "percentage",
             "value": 10
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://bedrock.rockx.com/unieth/stake",
             "twitter": ""
@@ -2483,10 +2331,6 @@
         "fee": {
             "type": "percentage",
             "value": 10
-        },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
         },
         "links": {
             "website": "https://ether.fi/",
@@ -2556,10 +2400,6 @@
             "type": "other",
             "value": "🤔"
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://stakewise.medium.com/what-is-oseth-a-deep-dive-into-the-overcollateralized-staked-ether-token-of-stakewise-v3-part-1-37d14e28282a",
             "twitter": ""
@@ -2626,10 +2466,6 @@
         "fee": {
             "type": "other",
             "value": "🤔"
-        },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
         },
         "links": {
             "website": "https://stake.divalabs.org/",
@@ -2698,10 +2534,6 @@
             "type": "percentage",
             "value": 5
         },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
-        },
         "links": {
             "website": "https://www.swellnetwork.io/",
             "twitter": ""
@@ -2769,10 +2601,6 @@
         "fee": {
             "type": "percentage",
             "value": 10
-        },
-        "rewards": {
-            "type": "percentage",
-            "value": "🏗️"
         },
         "links": {
             "website": "https://stake.lido.fi/",

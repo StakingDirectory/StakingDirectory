@@ -29,10 +29,10 @@ export default function Status({ provider }) {
                     hasArrow={true}
                 >
                     <Flex gap={2} justifyContent={"center"} alignItems={"center"}>
-                        {provider.mainnetLaunch.date ? (
+                        {provider?.mainnetLaunch?.date ? (
                             <>
                                 <FontAwesomeIcon icon={faRocket} />
-                                <Text fontWeight={"bold"}>{getFormattedDate(provider.mainnetLaunch.date)}</Text>
+                                <Text fontWeight={"bold"}>{getFormattedDate(provider?.mainnetLaunch?.date)}</Text>
                             </>
                         ) : (
                             <Text>🤔 Date missing</Text>

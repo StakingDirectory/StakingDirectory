@@ -24,8 +24,8 @@ const orderFilteredProviders = (filteredProviders, checklistProperties) => {
         if (stakingOrderA > stakingOrderB) return 1
 
         // If counts are equal, sort by name
-        const nameA = a.name.toLowerCase()
-        const nameB = b.name.toLowerCase()
+        const nameA = a.name?.toLowerCase()
+        const nameB = b.name?.toLowerCase()
         if (nameA < nameB) return -1
         if (nameA > nameB) return 1
 

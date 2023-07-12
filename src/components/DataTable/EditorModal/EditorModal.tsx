@@ -401,6 +401,18 @@ const allOptions = [
     },
 ]
 
+function generateRandomId(): string {
+    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    let result = ""
+
+    for (let i = 0; i < 6; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length)
+        result += characters.charAt(randomIndex)
+    }
+
+    return result
+}
+
 export default function EditorModal({ isOpen, onClose, provider, newProvider = false }) {
     const toast = useToast()
 
@@ -413,6 +425,14 @@ export default function EditorModal({ isOpen, onClose, provider, newProvider = f
         toast.closeAll()
         onClose()
     }
+
+    // If it's a new provider, a unique ID needs to be generated
+    useEffect(() => {
+        if (newProvider) {
+            setUpdatedValues(provider[0])
+            setUpdatedValues((prevState) => ({ ...prevState, id: generateRandomId() }))
+        }
+    }, [isOpen])
 
     return (
         <Modal
@@ -457,35 +477,33 @@ export default function EditorModal({ isOpen, onClose, provider, newProvider = f
                     </Flex>
                 </ModalHeader>
                 <ModalBody overflowY={"scroll"} pt={0}>
-                    {allOptions
-                        // .sort((a, b) => a.id.localeCompare(b.id))
-                        .map((option, index) => {
-                            return (
-                                (currentSelection == option.id || currentSelection == "allOptions") && (
-                                    <Flex className={"editorOptionContainer"} direction={"column"} gap={3} key={index}>
-                                        <EditorOptionHeader
-                                            id={option.id}
-                                            name={option.headerName}
+                    {allOptions.map((option, index) => {
+                        return (
+                            (currentSelection == option.id || currentSelection == "allOptions") && (
+                                <Flex className={"editorOptionContainer"} direction={"column"} gap={3} key={index}>
+                                    <EditorOptionHeader
+                                        id={option.id}
+                                        name={option.headerName}
+                                        updatedValues={updatedValues}
+                                        setUpdatedValues={setUpdatedValues}
+                                    />
+                                    {option.fields.map((field, fieldIndex) => (
+                                        <EditorOption
+                                            id={field.id}
+                                            name={field.name}
+                                            placeholder={field.placeholder}
+                                            inputType={field.inputType}
+                                            options={field.options}
                                             updatedValues={updatedValues}
                                             setUpdatedValues={setUpdatedValues}
+                                            provider={provider}
+                                            key={fieldIndex}
                                         />
-                                        {option.fields.map((field, fieldIndex) => (
-                                            <EditorOption
-                                                id={field.id}
-                                                name={field.name}
-                                                placeholder={field.placeholder}
-                                                inputType={field.inputType}
-                                                options={field.options}
-                                                updatedValues={updatedValues}
-                                                setUpdatedValues={setUpdatedValues}
-                                                provider={provider}
-                                                key={fieldIndex}
-                                            />
-                                        ))}
-                                    </Flex>
-                                )
+                                    ))}
+                                </Flex>
                             )
-                        })}
+                        )
+                    })}
                 </ModalBody>
                 <ModalFooter>
                     <EditorFooter
