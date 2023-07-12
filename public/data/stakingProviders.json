@@ -2065,7 +2065,8 @@
         },
         "links": {
             "website": "https://stake.rocketpool.net/",
-            "twitter": ""
+            "twitter": "",
+            "repo": "https://github.com/rocket-pool"
         },
         "minStake": {
             "type": "anyAmount",
