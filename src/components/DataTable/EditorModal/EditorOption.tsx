@@ -99,7 +99,7 @@ export default function EditorOption({ id, name, placeholder = null, inputType, 
         <InputGroup zIndex={isMenuOpen ? 999 : 0}>
             {inputType === "input" && (
                 <>
-                    <InputLeftAddon cursor={"default"} fontWeight={"bold"} borderLeftRadius={"10px"}>
+                    <InputLeftAddon className="EditorInputLeftAddon" cursor={"default"} fontWeight={"bold"} borderLeftRadius={"10px"}>
                         {name}
                     </InputLeftAddon>
                     <Input
@@ -132,11 +132,19 @@ export default function EditorOption({ id, name, placeholder = null, inputType, 
             )}
             {inputType === "select" && (
                 <>
-                    <InputLeftAddon cursor={"default"} fontWeight={"bold"} borderLeftRadius={"10px"}>
+                    <InputLeftAddon className="EditorInputLeftAddon" cursor={"default"} fontWeight={"bold"} borderLeftRadius={"10px"}>
                         {name}
                     </InputLeftAddon>
                     <Menu variant={"EditorSelector"} placement="bottom-start" gutter={2} isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
-                        <MenuButton as={Button} variant={"EditorSelector"} mr={8} borderLeftRadius={0} onClick={() => setIsMenuOpen(true)}>
+                        <MenuButton
+                            as={Button}
+                            variant={"EditorSelector"}
+                            mr={8}
+                            borderLeftRadius={0}
+                            onClick={() => setIsMenuOpen(true)}
+                            _hover={{ bg: "" }}
+                            _active={{ bg: "" }}
+                        >
                             <Flex gap={2} justifyContent={"space-between"}>
                                 <Text>
                                     {getNestedValue(updatedValues, id)
@@ -165,11 +173,28 @@ export default function EditorOption({ id, name, placeholder = null, inputType, 
             )}
             {inputType === "selectBool" && (
                 <>
-                    <InputLeftAddon cursor={"default"} fontWeight={"bold"} borderLeftRadius={"10px"}>
+                    <InputLeftAddon className="EditorInputLeftAddon" cursor={"default"} fontWeight={"bold"} borderLeftRadius={"10px"}>
                         {name}
                     </InputLeftAddon>
                     <Menu variant={"EditorSelector"} placement="bottom-start" gutter={2} isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
-                        <MenuButton as={Button} variant={"EditorSelector"} mr={8} borderLeftRadius={0} onClick={() => setIsMenuOpen(true)}>
+                        <MenuButton
+                            as={Button}
+                            variant={"EditorSelector"}
+                            mr={8}
+                            borderLeftRadius={0}
+                            onClick={() => setIsMenuOpen(true)}
+                            bg={
+                                valueGetter(id, updatedValues) == null
+                                    ? valueGetter(id, provider)
+                                        ? "green"
+                                        : "red"
+                                    : valueGetter(id, updatedValues)
+                                    ? "green"
+                                    : "red"
+                            }
+                            _hover={{ bg: "" }}
+                            _active={{ bg: "" }}
+                        >
                             <Flex gap={2} justifyContent={"space-between"}>
                                 <Text>
                                     {valueGetter(id, updatedValues) == null

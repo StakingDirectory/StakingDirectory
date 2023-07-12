@@ -119,6 +119,9 @@ const customTheme = extendTheme({
                     bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",
                 },
             },
+            ".EditorInputLeftAddon": {
+                bg: props.colorMode === "dark" ? "border.dark !important" : "pageBackgroundHover.light !important",
+            },
         }),
     },
     components: {
