@@ -41,7 +41,7 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
                     direction={"column"}
                     gap={3}
                     className={"expandContentBox"}
-                    minH={provider.providerType === "hardware" ? 225 : 300}
+                    minH={provider.providerType === "hardware" ? 228 : 305}
                     overflow={"hidden"}
                     position={"relative"}
                     pb={isDescriptionOverflowing ? 50 : 2}
