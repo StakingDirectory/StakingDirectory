@@ -22,7 +22,7 @@ const App = () => {
     )
 
     return (
-        <Box minH="100vh" minW="100vw" className={"bgPage"} display="flex" flexDirection="column">
+        <Box minH="100vh" className={"bgPage"} display="flex" flexDirection="column">
             <Flex direction="column" justifyContent="center" alignItems="center">
                 <Header />
                 {/* TODO: REMOVE WHEN PROD READY */}
