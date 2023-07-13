@@ -43,7 +43,7 @@ const App = () => {
                         my={4}
                     />
                     <Text fontWeight={"bold"} fontSize={"1xl"} pt={2} px={5} textAlign={"center"}>
-                        A community maintained directory of Ethereum staking providers
+                        A community-maintained directory of Ethereum staking providers
                     </Text>
                     <Box height={50} />
                     <CommunityUpdatePhase />
