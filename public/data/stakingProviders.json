@@ -2653,5 +2653,58 @@
         },
         "stakeFromHome": false,
         "description": "Lido is the name of a family of open-source peer-to-system software tools deployed and functioning on Ethereum.\n\nUsers mint transferable utility tokens, which receive rewards linked to the related validation activities of writing data to the blockchain, while the tokens can be used in other on-chain activities."
+    },
+    {
+        "id": "363468",
+        "status": "dev",
+        "stakeFromHome": true,
+        "stakingType": "solo",
+        "providerType": "no",
+        "fee": {
+            "type": "percentage",
+            "value": 0
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "validatorKey": {
+            "userValidator": true
+        },
+        "withdrawalKey": {
+            "userWithdrawal": true
+        },
+        "openSource": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "audited": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "bugBounty": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "evidenceLink": ""
+        }
     }
 ]
