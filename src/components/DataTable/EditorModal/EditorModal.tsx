@@ -402,7 +402,7 @@ const allOptions = [
 ]
 
 function generateRandomId(): string {
-    const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+    const characters = "0123456789"
     let result = ""
 
     for (let i = 0; i < 6; i++) {
