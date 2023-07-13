@@ -2710,7 +2710,9 @@
         },
         "name": "eth-wizard",
         "logo": {
-            "evidenceLink": "https://cdn.discordapp.com/attachments/1097481545419345997/1129056934943785091/logo-eth-wizard.png"
+            "evidenceLink": "https://cdn.discordapp.com/attachments/1097481545419345997/1129056934943785091/logo-eth-wizard.png",
+            "src": "./images/EthWizardLogo.png",
+            "alt": "Eth Wizard Logo"
         },
         "mainnetLaunch": {
             "evidenceLink": "https://github.com/stake-house/eth-wizard/releases/tag/v0.6.8",
