@@ -74,7 +74,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
     }
 
     return (
-        <Box mt={0} mb={20} maxW={"100vw"}>
+        <Box mt={0} mb={20} maxW={"100vw"} overflowX={"auto"}>
             <Table variant="DataTable">
                 <Thead>
                     <Tr borderBottomWidth={1}>
