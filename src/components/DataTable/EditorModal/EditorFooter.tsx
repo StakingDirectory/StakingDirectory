@@ -117,7 +117,11 @@ export default function EditorFooter({ onClose, provider, updatedValues, setUpda
                                                                         GitHub ↗️
                                                                     </Text>
                                                                 </Link>
-                                                                <Text as={"span"}> and will be reviewed by our team as soon as possible!</Text>
+                                                                <Text as={"span"}>
+                                                                    {" "}
+                                                                    for provider {newProvider ? updatedValues.id : provider.id} and will be reviewed
+                                                                    by our team as soon as possible!
+                                                                </Text>
                                                                 <Text pt={3}>Thank you for supporting the Ethereum staking ecosystem 🙏</Text>
                                                             </Text>
                                                         )}

@@ -112,19 +112,25 @@ const customTheme = extendTheme({
                 bg: "green",
                 color: props.colorMode === "dark" ? "text.light" : "text.dark",
             },
-            ".CommunityReviewPhase": {
+            ".CommunityUpdatePhase": {
                 bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
                 borderColor: "blue",
                 borderWidth: "3px",
                 borderRadius: "10px",
             },
-            ".CommunityReviewPhaseHeader": {
+            ".CommunityUpdatePhaseHeader": {
                 _hover: {
                     bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",
                 },
             },
             ".EditorInputLeftAddon": {
                 bg: props.colorMode === "dark" ? "border.dark !important" : "pageBackgroundHover.light !important",
+            },
+            ".NoResultsBox": {
+                bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackgroundHover.light",
+                borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
+                borderWidth: "3px",
+                borderRadius: "20px",
             },
         }),
     },

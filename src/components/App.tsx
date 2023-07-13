@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Header from "./Header/Header"
-import CommunityReviewPhase from "./CommunityReviewPhase"
+import CommunityUpdatePhase from "./CommunityUpdatePhase"
 import MainFilterButtons from "./MainFilterButtons"
 import DataTableTabs from "./DataTable/DataTableTabs"
 import Footer from "./Footer"
@@ -26,13 +26,9 @@ const App = () => {
             <Flex direction="column" justifyContent="center" alignItems="center">
                 <Header />
                 {/* TODO: REMOVE WHEN PROD READY */}
-                {process.env.NODE_ENV != "development" && (
-                    <>
-                        <Box width={"100vw"} minH={6} bg="pink" textAlign={"center"} fontWeight={"extrabold"} color={"white"}>
-                            <Box>🏗️ ACTIVE DEVELOPMENT ENVIRONMENT - CONTENT UPDATE IN PROGRESS 🏗️</Box>
-                        </Box>
-                    </>
-                )}
+                <Box width={"100vw"} minH={6} bg="blue" textAlign={"center"} fontWeight={"extrabold"} color={"white"} py={1}>
+                    <Box>⭐️ COMMUNITY UPDATE PHASE IN PROGRESS ⭐️</Box>
+                </Box>
                 <Flex
                     direction={"column"}
                     alignItems={"center"}
@@ -56,12 +52,14 @@ const App = () => {
                         A community maintained directory of Ethereum staking providers
                     </Text>
                     <Box height={50} />
-                    <CommunityReviewPhase />
+                    <CommunityUpdatePhase />
                     <Box height={50} />
                     <MainFilterButtons dataFilter={dataFilter} setDataFilter={setDataFilter} />
                     <Box height={50} />
                     <DataTableTabs orderedFilteredProviders={orderedFilteredProviders} dataFilter={dataFilter} setDataFilter={setDataFilter} />
-                    <AddProviderButton />
+                    <Box mb={20}>
+                        <AddProviderButton />
+                    </Box>
                 </Flex>
             </Flex>
             <Box flex="1" />

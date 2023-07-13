@@ -240,7 +240,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                 hasArrow={true}
                             >
                                 <Text fontWeight={"extrabold"} fontSize={"sm"} pb={2} cursor={"default"} color={"blue"} minW={"120px"}>
-                                    COMMUNITY REVIEW PHASE
+                                    COMMUNITY UPDATE PHASE
                                 </Text>
                             </Tooltip>
                         </Th>
@@ -340,32 +340,43 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                 </Tbody>
             </Table>
             {stakingProviders && stakingProviders.filter((provider) => provider.status === status).length === 0 && (
-                <Flex direction={"column"} justifyContent={"center"} alignItems={"center"} py={2}>
-                    <Text fontSize={"3xl"}>🔍</Text>
-                    <Text fontWeight={"bold"}>
-                        {stakingProviders.filter((provider) => provider.status === "active").length}{" "}
-                        <Box as={"span"} color={"green"}>
-                            active
-                        </Box>{" "}
-                        providers
-                    </Text>
-                    <Text fontWeight={"bold"}>
-                        {stakingProviders.filter((provider) => provider.status === "dev").length}{" "}
-                        <Box as={"span"} color={"blue"}>
-                            in development
-                        </Box>{" "}
-                        providers
-                    </Text>
+                <Flex justifyContent={"center"} mt={3}>
+                    <Flex
+                        direction={"column"}
+                        w={"fit-content"}
+                        justifyContent={"center"}
+                        alignItems={"center"}
+                        px={3}
+                        pb={3}
+                        pt={1}
+                        className={"NoResultsBox"}
+                    >
+                        <Text fontSize={"3xl"}>🔍</Text>
+                        <Text fontWeight={"bold"}>
+                            {stakingProviders.filter((provider) => provider.status === "active").length}{" "}
+                            <Box as={"span"} color={"green"}>
+                                active
+                            </Box>{" "}
+                            providers
+                        </Text>
+                        <Text fontWeight={"bold"}>
+                            {stakingProviders.filter((provider) => provider.status === "dev").length}{" "}
+                            <Box as={"span"} color={"blue"}>
+                                in development
+                            </Box>{" "}
+                            providers
+                        </Text>
 
-                    {stakingProviders.length == 0 && (
-                        <Flex direction={"column"} alignItems={"center"} pt={5}>
-                            <Text fontWeight={"bold"}>Please try a different filter</Text>
-                            <Text fontWeight={"bold"}>or</Text>
-                            <Box pt={2}>
-                                <AddProviderButton />
-                            </Box>
-                        </Flex>
-                    )}
+                        {stakingProviders.length == 0 && (
+                            <Flex direction={"column"} alignItems={"center"} pt={5}>
+                                <Text fontWeight={"bold"}>Please try a different filter</Text>
+                                <Text fontWeight={"bold"}>or</Text>
+                                <Box pt={2}>
+                                    <AddProviderButton />
+                                </Box>
+                            </Flex>
+                        )}
+                    </Flex>
                 </Flex>
             )}
         </Box>

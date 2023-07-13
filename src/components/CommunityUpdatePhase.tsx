@@ -16,14 +16,14 @@ const InfoBlock = ({ icon, color, children }) => (
     </Flex>
 )
 
-export default function CommunityReviewPhase() {
+export default function CommunityUpdatePhase() {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
         <Flex w={"100%"}>
-            <Flex className={"CommunityReviewPhase"} direction={"column"} w={"100%"} overflow={"hidden"}>
+            <Flex className={"CommunityUpdatePhase"} direction={"column"} w={"100%"} overflow={"hidden"}>
                 <Flex
-                    className={"CommunityReviewPhaseHeader"}
+                    className={"CommunityUpdatePhaseHeader"}
                     p={"1rem"}
                     alignItems={{ base: "start", sm: "center" }}
                     gap={3}
@@ -44,7 +44,7 @@ export default function CommunityReviewPhase() {
                     />
                     <Flex alignItems={"center"} gap={15} wrap={"wrap"}>
                         <Text fontSize={{ base: "xl", sm: "2lx" }} fontWeight={"extrabold"} mr={5}>
-                            Community Review Phase
+                            Community Update Phase
                         </Text>
                         {!isOpen && (
                             <Flex gap={15}>
@@ -61,7 +61,7 @@ export default function CommunityReviewPhase() {
                     <Box px={"1rem"}>
                         <Box mt={{ base: 0, sm: 3 }}></Box>
                         <InfoBlock icon={faMagnifyingGlass} color={"blue"}>
-                            The Community Review Phase is a crucial step before our main launch. It&apos;s an opportunity for the Ethereum staking
+                            The Community Update Phase is a crucial step before our main launch. It&apos;s an opportunity for the Ethereum staking
                             community to help us ensure the accuracy of our data. We understand the importance of trust in this space, and that trust
                             is built on accurate, up-to-date information.
                         </InfoBlock>
@@ -100,8 +100,8 @@ export default function CommunityReviewPhase() {
                             </Flex>
                         )}
                         <InfoBlock icon={faPaperPlane} color={"gold"}>
-                            When the community review phase has been completed and all the PRs have been merged, we will be ready to launch! You will
-                            always be able to update the information in future, so don&apos;t worry if you miss the community review phase.
+                            When the community update phase has been completed and all the PRs have been merged, we will be ready to launch! You will
+                            always be able to update the information in future, so don&apos;t worry if you miss the community update phase.
                         </InfoBlock>
                         <Box pb={8}></Box>
                     </Box>

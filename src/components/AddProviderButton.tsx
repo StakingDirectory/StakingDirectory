@@ -23,7 +23,6 @@ export default function AddProviderButton() {
             <Button
                 aria-label="Add new staking provider"
                 variant="AddNewProvider"
-                mb={20}
                 onClick={(e) => {
                     onOpen()
                 }}
