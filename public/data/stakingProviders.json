@@ -2607,7 +2607,8 @@
             "website": "https://stake.lido.fi/",
             "twitter": "https://twitter.com/LidoFinance",
             "discord": "https://discord.com/invite/lido",
-            "repo": "https://github.com/lidofinance"
+            "repo": "https://github.com/lidofinance",
+            "telegram": "https://t.me/lidofinance"
         },
         "minStake": {
             "type": "anyAmount",
