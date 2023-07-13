@@ -88,7 +88,17 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
     }
 
     return (
-        <Flex grow={1} h={"fit-content"} className={"expandContentBox"} p={0} gap={1} direction={"column"} overflow={"hidden"}>
+        <Flex
+            grow={1}
+            h={"fit-content"}
+            className={"expandContentBox"}
+            minW={{ base: 350, xl: 400 }}
+            maxW={{ base: 350, xl: 400 }}
+            p={0}
+            gap={1}
+            direction={"column"}
+            overflow={"hidden"}
+        >
             {checklistProperties.map((id, index) => renderBox(id, index))}
         </Flex>
     )
