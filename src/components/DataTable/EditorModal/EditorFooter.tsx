@@ -74,7 +74,10 @@ export default function EditorFooter({ onClose, provider, updatedValues, setUpda
                             setLoading(true)
                             const api = process.env.NODE_ENV === "development" ? "/api/updateProvider" : "/api/triggerWorkflow"
                             axios
-                                .post(api, { providerId: provider.id, updatedValues })
+                                .post(api, {
+                                    providerId: newProvider ? updatedValues.id : provider.id,
+                                    updatedValues,
+                                })
                                 .then((res) => {
                                     console.log(res.data)
                                     setTimeout(() => {
