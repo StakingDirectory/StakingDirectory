@@ -108,6 +108,10 @@ const customTheme = extendTheme({
                 bg: "red",
                 color: props.colorMode === "dark" ? "text.light" : "text.dark",
             },
+            ".ToastSuccess": {
+                bg: "green",
+                color: props.colorMode === "dark" ? "text.light" : "text.dark",
+            },
             ".CommunityReviewPhase": {
                 bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
                 borderColor: "blue",

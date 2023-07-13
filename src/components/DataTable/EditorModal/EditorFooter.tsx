@@ -1,11 +1,13 @@
 import React, { useRef, useEffect, useState } from "react"
 import axios from "axios"
 
-import { useToast, Flex, Text, Box, Code, Button, Collapse, Tooltip, IconButton, Spinner } from "@chakra-ui/react"
+import { useToast, Flex, Text, Box, Code, Button, Collapse, Tooltip, IconButton, Spinner, Link, CloseButton } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faChevronRight, faRotateLeft } from "@fortawesome/free-solid-svg-icons"
 import { faFloppyDisk, faPaperPlane } from "@fortawesome/free-regular-svg-icons"
+
+import NextLink from "next/link"
 
 export default function EditorFooter({ onClose, provider, updatedValues, setUpdatedValues, newProvider }) {
     const toast = useToast()
@@ -81,7 +83,49 @@ export default function EditorFooter({ onClose, provider, updatedValues, setUpda
                                 .then((res) => {
                                     console.log(res.data)
                                     setTimeout(() => {
-                                        closeEditor()
+                                        setUpdatedValues({})
+                                        setLoading(false)
+                                        onClose()
+                                        toast({
+                                            id: "submit-success",
+                                            isClosable: true,
+                                            position: "top",
+                                            render: () => (
+                                                <Box position="relative">
+                                                    <Flex
+                                                        direction={"column"}
+                                                        alignItems={"center"}
+                                                        gap={2}
+                                                        className={"ToastBaseStyle ToastSuccess"}
+                                                    >
+                                                        {process.env.NODE_ENV != "development" && (
+                                                            <CloseButton onClick={onClose} position="absolute" right="8px" top="8px" />
+                                                        )}
+                                                        <Text fontWeight={"extrabold"}>
+                                                            🥳 Successfully{" "}
+                                                            {process.env.NODE_ENV === "development" ? "saved change" : "submitted update"} 🥳
+                                                        </Text>
+                                                        {process.env.NODE_ENV != "development" && (
+                                                            <Text fontWeight={"bold"} textAlign={"center"}>
+                                                                A PR for your suggestion will automatically be created in the next 5 minutes on{" "}
+                                                                <Link
+                                                                    as={NextLink}
+                                                                    href={"https://github.com/StakingDirectory/StakingDirectory/pulls"}
+                                                                    target="_blank"
+                                                                >
+                                                                    <Text as={"span"} decoration={"underline"}>
+                                                                        GitHub ↗️
+                                                                    </Text>
+                                                                </Link>
+                                                                <Text as={"span"}> and will be reviewed by our team as soon as possible!</Text>
+                                                                <Text pt={3}>Thank you for supporting the Ethereum staking ecosystem 🙏</Text>
+                                                            </Text>
+                                                        )}
+                                                    </Flex>
+                                                </Box>
+                                            ),
+                                            duration: process.env.NODE_ENV === "development" ? 1000 : 10000,
+                                        })
                                     }, 1000) // Delay to show the spinner
                                 })
                                 .catch((err) => {
