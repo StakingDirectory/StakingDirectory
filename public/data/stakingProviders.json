@@ -2653,5 +2653,73 @@
         },
         "stakeFromHome": false,
         "description": "Lido is the name of a family of open-source peer-to-system software tools deployed and functioning on Ethereum.\n\nUsers mint transferable utility tokens, which receive rewards linked to the related validation activities of writing data to the blockchain, while the tokens can be used in other on-chain activities."
+    },
+    {
+        "id": "666346",
+        "status": "dev",
+        "stakeFromHome": true,
+        "stakingType": "solo",
+        "providerType": "no",
+        "fee": {
+            "type": "percentage",
+            "value": 0
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "validatorKey": {
+            "userValidator": true,
+            "service": false,
+            "nodeOperator": false
+        },
+        "withdrawalKey": {
+            "userWithdrawal": true
+        },
+        "openSource": {
+            "value": true,
+            "evidenceLink": "https://github.com/stake-house/eth-wizard"
+        },
+        "audited": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "bugBounty": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "evidenceLink": "https://github.com/stake-house/eth-wizard"
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "evidenceLink": "https://github.com/stake-house/eth-wizard"
+        },
+        "permissionlessOperators": {
+            "value": true,
+            "evidenceLink": "https://github.com/stake-house/eth-wizard"
+        },
+        "diverseExecutionClients": {
+            "value": true,
+            "evidenceLink": "https://github.com/stake-house/eth-wizard"
+        },
+        "diverseBeaconClients": {
+            "value": true,
+            "evidenceLink": "https://github.com/stake-house/eth-wizard"
+        },
+        "name": "eth-wizard",
+        "logo": {
+            "evidenceLink": "https://cdn.discordapp.com/attachments/1097481545419345997/1129056934943785091/logo-eth-wizard.png"
+        },
+        "mainnetLaunch": {
+            "evidenceLink": "https://github.com/stake-house/eth-wizard/releases/tag/v0.6.8",
+            "date": "2021-05-31"
+        },
+        "description": "An Ethereum validator installation wizard meant to guide anyone through the different steps to become a fully functional validator on the Ethereum network. It will install and configure all the software needed to become a validator. It will test your installation. It will help you avoid the common pitfalls. It will help you maintain and keep your setup updated.",
+        "links": {
+            "website": "https://github.com/stake-house/eth-wizard",
+            "repo": "https://github.com/stake-house/eth-wizard"
+        }
     }
 ]
