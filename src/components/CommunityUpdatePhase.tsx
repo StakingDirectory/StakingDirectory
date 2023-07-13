@@ -20,7 +20,7 @@ export default function CommunityUpdatePhase() {
     const [isOpen, setIsOpen] = useState(false)
 
     return (
-        <Flex w={"100%"}>
+        <Flex w={"100%"} mx={2}>
             <Flex className={"CommunityUpdatePhase"} direction={"column"} w={"100%"} overflow={"hidden"}>
                 <Flex
                     className={"CommunityUpdatePhaseHeader"}

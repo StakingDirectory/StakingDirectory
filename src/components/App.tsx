@@ -27,7 +27,7 @@ const App = () => {
                 <Header />
                 {/* TODO: REMOVE WHEN PROD READY */}
                 <Box width={"100vw"} minH={6} bg="blue" textAlign={"center"} fontWeight={"extrabold"} color={"white"} py={1}>
-                    <Box>⭐️ COMMUNITY UPDATE PHASE IN PROGRESS ⭐️</Box>
+                    <Box>COMMUNITY UPDATE PHASE IN PROGRESS</Box>
                 </Box>
                 <Flex direction={"column"} alignItems={"center"} maxW={"100vw"} w={"1350px"} px={{ base: "0px", sm: "2vw", xl: "3vw", "2xl": "3vw" }}>
                     <Box height={30} />
@@ -46,9 +46,7 @@ const App = () => {
                         A community maintained directory of Ethereum staking providers
                     </Text>
                     <Box height={50} />
-                    <Box mx={2}>
-                        <CommunityUpdatePhase />
-                    </Box>
+                    <CommunityUpdatePhase />
                     <Box height={50} />
                     <Box mx={2}>
                         <MainFilterButtons dataFilter={dataFilter} setDataFilter={setDataFilter} />
