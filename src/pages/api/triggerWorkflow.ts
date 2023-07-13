@@ -28,7 +28,7 @@ export default async function handler(req, res) {
 
         res.status(200).json({ message: "Workflow triggered successfully" })
     } catch (error) {
-        console.error(error)
+        console.error("Error response from GitHub:", error.response.data)
         res.status(500).json({ message: "Failed to trigger workflow" })
     }
 }
