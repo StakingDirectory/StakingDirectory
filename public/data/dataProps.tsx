@@ -171,7 +171,13 @@ const dataProps = [
         name: "Staking Type",
         headerText: "STAKING <br /> TYPE",
         options: [
-            { value: "solo", color: "green", description: "Solo 1", icon: faServer },
+            {
+                value: "solo",
+                color: "green",
+                description:
+                    'Solo staking is the "gold standard" - the act of staking your Ethereum on nodes that you are running yourself (ideally from home), while retaining full custody of your ETH. Validators in this category are fully funded by yourself.',
+                icon: faServer,
+            },
             {
                 value: "pooled",
                 color: "blue",
