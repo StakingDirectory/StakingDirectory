@@ -51,7 +51,7 @@ jobs:
               with:
                   source_branch: update-${{ github.run_number }}
                   destination_branch: main
-                  pr_title: "Update ${{ github.event.inputs.providerName }} - Update number ${{ github.run_number }}"
+                  pr_title: "Update ${{ github.event.inputs.providerName }} - Update ${{ github.run_number }}"
                   pr_body: "${{ github.event.inputs.updatedValues }}"
                   pr_label: "automated-pr"
                   pr_reviewer: "EridianAlpha"

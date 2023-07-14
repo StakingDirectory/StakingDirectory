@@ -7,7 +7,7 @@ const [providerId, updatedValues] = process.argv.slice(2)
 const filePath = path.join(__dirname, "../public/data/stakingProviders.json")
 const providers = JSON.parse(fs.readFileSync(filePath, "utf8"))
 
-let providerIndex = providers.findIndex((provider) => provider.id === Number(providerId))
+let providerIndex = providers.findIndex((provider) => Number(provider.id) == Number(providerId))
 
 // If provider is not found, create a new provider with the provided id and add it to the providers array
 if (providerIndex === -1) {
