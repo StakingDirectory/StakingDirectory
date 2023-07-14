@@ -2657,7 +2657,7 @@
         "description": "Lido is the name of a family of open-source peer-to-system software tools deployed and functioning on Ethereum.\n\nUsers mint transferable utility tokens, which receive rewards linked to the related validation activities of writing data to the blockchain, while the tokens can be used in other on-chain activities."
     },
     {
-        "id": "666346",
+        "id": 666346,
         "status": "dev",
         "stakeFromHome": true,
         "stakingType": "solo",
