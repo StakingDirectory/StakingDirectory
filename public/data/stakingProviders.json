@@ -101,7 +101,7 @@
         },
         "nonCensoringRelays": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/AvadoDServer/"
         },
         "permissionlessUsage": {
             "value": true,
