@@ -83,7 +83,7 @@ const dataProps = [
             {
                 value: "bugBounty",
                 description: {
-                    true: "A public bug bounty has been performed on any essential code to reward users for safely reporting and/or fixing vulnerabilities.",
+                    true: "A public bug bounty is active on any essential code to reward users for safely reporting and/or fixing vulnerabilities.",
                     false: "No public bug bounty is available.",
                 },
             },
