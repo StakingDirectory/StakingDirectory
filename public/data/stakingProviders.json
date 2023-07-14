@@ -1272,7 +1272,7 @@
             "twitter": "https://twitter.com/Rocket_Pool",
             "discord": "",
             "telegram": "",
-            "repo": ""
+            "repo": "https://github.com/rocket-pool"
         },
         "minStake": {
             "type": "eth",
@@ -1285,7 +1285,8 @@
             "smartContract": true
         },
         "openSource": {
-            "value": true
+            "value": true,
+            "evidenceLink": "https://github.com/rocket-pool"
         },
         "audited": {
             "value": true
@@ -2065,7 +2066,7 @@
         },
         "links": {
             "website": "https://stake.rocketpool.net/",
-            "twitter": "",
+            "twitter": "https://twitter.com/Rocket_Pool",
             "repo": "https://github.com/rocket-pool"
         },
         "minStake": {
@@ -2080,7 +2081,7 @@
         },
         "openSource": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/rocket-pool"
         },
         "audited": {
             "value": true,
