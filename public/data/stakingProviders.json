@@ -2725,5 +2725,72 @@
             "website": "https://github.com/stake-house/eth-wizard",
             "repo": "https://github.com/stake-house/eth-wizard"
         }
+    },
+    {
+        "id": 747162,
+        "status": "active",
+        "stakeFromHome": false,
+        "stakingType": "indexToken",
+        "providerType": "no",
+        "fee": {
+            "type": "other",
+            "value": "LST+0.25%"
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": ""
+        },
+        "validatorKey": {
+            "userValidator": false,
+            "nodeOperator": true
+        },
+        "withdrawalKey": {
+            "userWithdrawal": false,
+            "smartContract": true
+        },
+        "openSource": {
+            "value": true,
+            "evidenceLink": ""
+        },
+        "audited": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "bugBounty": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "name": "ETH+",
+        "mainnetLaunch": {
+            "date": "2023-04-20",
+            "evidenceLink": "https://etherscan.io/address/0xE72B141DF173b999AE7c1aDcbF60Cc9833Ce56a8"
+        },
+        "description": "A reward-generating Ethereum Liquid Staking Token basket with over-collateralized protection.\n\nETH+ Mandate\n1: Maintain an Ethereum-aligned Liquid Staking Token basket.\n2: Positively impact the Ethereum staking distribution.\n3: Provide value to ETH+ holders through diversification.",
+        "links": {
+            "website": "https://register.app/#/overview?token=0xE72B141DF173b999AE7c1aDcbF60Cc9833Ce56a8",
+            "twitter": "https://twitter.com/ETHPlus_",
+            "discord": "https://discord.gg/YmbQwmmKEv",
+            "repo": ""
+        }
     }
 ]
