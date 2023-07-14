@@ -2658,7 +2658,7 @@
     },
     {
         "id": 666346,
-        "status": "dev",
+        "status": "active",
         "stakeFromHome": true,
         "stakingType": "solo",
         "providerType": "no",
