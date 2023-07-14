@@ -1258,8 +1258,8 @@
         "name": "Rocket Pool (Node)",
         "status": "active",
         "mainnetLaunch": {
-            "evidenceLink": "",
-            "date": ""
+            "evidenceLink": "https://www.reddit.com/r/rocketpool/comments/qmz639/rocket_pool_announcement/",
+            "date": "2021-11-09"
         },
         "stakingType": "pooled",
         "providerType": "no",
@@ -2055,8 +2055,8 @@
         "name": "Rocket Pool (LST)",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2021-11-09",
+            "evidenceLink": "https://www.reddit.com/r/rocketpool/comments/qmz639/rocket_pool_announcement/"
         },
         "stakingType": "lst",
         "providerType": "no",
