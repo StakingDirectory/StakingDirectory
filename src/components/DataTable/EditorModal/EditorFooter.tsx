@@ -79,6 +79,7 @@ export default function EditorFooter({ onClose, provider, updatedValues, setUpda
                                 .post(api, {
                                     providerId: newProvider ? updatedValues.id : provider.id,
                                     updatedValues,
+                                    providerName: newProvider ? updatedValues.name : provider.name,
                                 })
                                 .then((res) => {
                                     console.log(res.data)
@@ -119,8 +120,9 @@ export default function EditorFooter({ onClose, provider, updatedValues, setUpda
                                                                 </Link>
                                                                 <Text as={"span"}>
                                                                     {" "}
-                                                                    for provider {newProvider ? updatedValues.id : provider.id} and will be reviewed
-                                                                    by our team as soon as possible!
+                                                                    for {newProvider ? updatedValues.name : provider.name} and will be reviewed by our
+                                                                    team as soon as possible! (Provider ID:{" "}
+                                                                    {newProvider ? updatedValues.id : provider.id})
                                                                 </Text>
                                                                 <Text pt={3}>Thank you for supporting the Ethereum staking ecosystem 🙏</Text>
                                                             </Text>

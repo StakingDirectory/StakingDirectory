@@ -17,7 +17,7 @@ export default async function handler(req, res) {
         return
     }
 
-    const { providerId, updatedValues } = req.body
+    const { providerId, updatedValues, providerName } = req.body
 
     try {
         // Convert your data to a string format that can be sent as a message
@@ -32,6 +32,7 @@ export default async function handler(req, res) {
                 inputs: {
                     providerId: providerId.toString(),
                     updatedValues: JSON.stringify(updatedValues),
+                    providerName: JSON.stringify(providerName),
                 },
             },
             {
