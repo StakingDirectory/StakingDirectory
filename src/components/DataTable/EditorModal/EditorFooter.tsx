@@ -130,7 +130,7 @@ export default function EditorFooter({ onClose, provider, updatedValues, setUpda
                                                     </Flex>
                                                 </Box>
                                             ),
-                                            duration: process.env.NODE_ENV === "development" ? 1000 : 10000,
+                                            duration: process.env.NODE_ENV === "development" ? 2000 : 10000,
                                         })
                                     }, 1000) // Delay to show the spinner
                                 })
