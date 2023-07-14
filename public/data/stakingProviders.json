@@ -2,8 +2,8 @@
     {
         "id": "TEMPLATE",
         "status": "dev",
-        "stakeFromHome": true,
-        "stakingType": "solo",
+        "stakeFromHome": false,
+        "stakingType": "",
         "providerType": "no",
         "fee": {
             "type": "percentage",
@@ -12,12 +12,6 @@
         "minStake": {
             "type": "eth",
             "value": 32
-        },
-        "validatorKey": {
-            "userValidator": true
-        },
-        "withdrawalKey": {
-            "userWithdrawal": true
         },
         "openSource": {
             "value": false,
