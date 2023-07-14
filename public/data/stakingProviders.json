@@ -2725,5 +2725,9 @@
             "website": "https://github.com/stake-house/eth-wizard",
             "repo": "https://github.com/stake-house/eth-wizard"
         }
+    },
+    {
+        "id": 666346,
+        "status": "active"
     }
 ]
