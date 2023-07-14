@@ -1268,7 +1268,7 @@
             "value": "0"
         },
         "links": {
-            "website": "https://docs.rocketpool.net/guides/node/responsibilities.html",
+            "website": "https://rocketpool.net/node-operators",
             "twitter": "https://twitter.com/Rocket_Pool",
             "discord": "",
             "telegram": "",
@@ -1276,7 +1276,7 @@
         },
         "minStake": {
             "type": "eth",
-            "value": 9.6
+            "value": "10.4"
         },
         "validatorKey": {
             "userValidator": true
@@ -2112,7 +2112,7 @@
         },
         "lstName": "rETH",
         "stakeFromHome": false,
-        "description": ""
+        "description": "Rocket Pool is the base layer protocol for decentralised and trustless Ethereum staking.\n\nDesigned to support stakers of all shapes and sizes, Rocket Pool was built with the intent to allow anyone to trustlessly stake ETH to a network of decentralised node operators with full autonomy underpinned by RPL token collateral.\n\nThe core premise behind a protocol is to ensure the network is not beholden to any one party. This is a principle directly linked to Ethereum itself, and a mindset used at every stage of the process as we continue to upgrade the protocol.\n\nRocket Pool strives to embody the core ethos of Ethereum and DeFi, specifically the non-custodial, trustless nature that allows self-sovereignty to truly thrive."
     },
     {
         "id": 36,
