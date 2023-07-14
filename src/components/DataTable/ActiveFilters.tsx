@@ -45,9 +45,18 @@ export default function ActiveFilters({ dataFilter, setDataFilter }) {
     }
 
     return (
-        <Flex gap={2} minH={12} alignItems={"center"} wrap={"wrap"} px={0}>
+        <Flex
+            gap={2}
+            minH={12}
+            alignItems={"center"}
+            wrap={"wrap"}
+            px={2}
+            py={2}
+            borderRadius={20}
+            border={Object.keys(dataFilter).length > 0 ? "3px solid gold" : "3px solid transparent"}
+        >
             <Flex color="pink" alignItems={"center"} ml={2} fontWeight={"bold"} fontSize="xl">
-                Active filters
+                Active filters {}
             </Flex>
             {Object.keys(dataFilter).length > 0 ? (
                 Object.keys(dataFilter).map((activeFilter) => {

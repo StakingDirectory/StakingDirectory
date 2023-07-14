@@ -2728,6 +2728,10 @@
     },
     {
         "id": 747162,
+        "logo": {
+            "src": "./images/EthPlusLogo.png",
+            "alt": "Lido Logo"
+        },
         "status": "active",
         "stakeFromHome": false,
         "stakingType": "indexToken",
@@ -2785,7 +2789,7 @@
             "date": "2023-04-20",
             "evidenceLink": "https://etherscan.io/address/0xE72B141DF173b999AE7c1aDcbF60Cc9833Ce56a8"
         },
-        "description": "A reward-generating Ethereum Liquid Staking Token basket with over-collateralized protection.\n\nETH+ Mandate\n1: Maintain an Ethereum-aligned Liquid Staking Token basket.\n2: Positively impact the Ethereum staking distribution.\n3: Provide value to ETH+ holders through diversification.",
+        "description": "A reward-generating Ethereum Liquid Staking Token basket with over-collateralized protection.\n\nETH+ Mandate\n\n1: Maintain an Ethereum-aligned Liquid Staking Token basket.\n\n2: Positively impact the Ethereum staking distribution.\n\n3: Provide value to ETH+ holders through diversification.",
         "links": {
             "website": "https://register.app/#/overview?token=0xE72B141DF173b999AE7c1aDcbF60Cc9833Ce56a8",
             "twitter": "https://twitter.com/ETHPlus_",

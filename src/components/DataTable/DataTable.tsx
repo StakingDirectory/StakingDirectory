@@ -99,7 +99,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                 <PopoverContent px={6} py={4} w={"fit-content"} maxW={"100vw"}>
                                     <Flex direction={"column"} alignItems={"start"} gap={3}>
                                         <Text fontWeight={"extrabold"} fontSize={"lg"} pb={2}>
-                                            How is the table ordered?
+                                            How is the list ordered?
                                         </Text>
                                         <Flex alignItems={"start"}>
                                             <Text minW={6} fontWeight={"extrabold"} textAlign={"start"}>
