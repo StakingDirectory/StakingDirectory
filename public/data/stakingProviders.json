@@ -2803,7 +2803,7 @@
         },
         "minStake": {
             "type": "eth",
-            "value": ".001"
+            "value": "0.001"
         },
         "openSource": {
             "value": true,
@@ -2831,31 +2831,33 @@
         },
         "diverseExecutionClients": {
             "value": true,
-            "evidenceLink": "Natively compatible with all current and future clients"
+            "evidenceLink": ""
         },
         "diverseBeaconClients": {
             "value": true,
-            "evidenceLink": "Natively compatible with all current and future clients"
+            "evidenceLink": ""
         },
-        "name": "Stakehouse LSD Networks",
+        "name": "Stakehouse Networks",
         "logo": {
-            "evidenceLink": "https://drive.google.com/file/d/1VuIfCe6HifA99UtZrsnDfQOtYX1Yf3XH/view?usp=drive_link"
+            "evidenceLink": "https://drive.google.com/file/d/1VuIfCe6HifA99UtZrsnDfQOtYX1Yf3XH/view?usp=drive_link",
+            "src": "./images/StakehouseLogo.svg",
+            "alt": "Stakehouse Logo"
         },
         "mainnetLaunch": {
             "date": "2023-03-03",
-            "evidenceLink": "https://lsd.joinstakehouse.com/"
+            "evidenceLink": "https://lsd.joinstakehouse.com"
         },
-        "description": "Stakehouse LSD Networks allows for anybody to create or join an LSD Network. Derivatives are fungible with unique yield.  ",
+        "description": "Stakehouse LSD Networks allows anybody to create or join an LSD Network.\n\nDerivatives are fungible with unique yield.  ",
         "validatorKey": {
             "userValidator": true,
             "service": false
         },
         "withdrawalKey": {
-            "userWithdrawal": true,
+            "userWithdrawal": false,
             "smartContract": true
         },
         "links": {
-            "website": "https://lsd.joinstakehouse.com/",
+            "website": "https://joinstakehouse.com",
             "twitter": "https://twitter.com/blockswap_team",
             "discord": "https://discord.gg/s8N9ekQuuj",
             "repo": "https://github.com/stakehouse-dev?tab=repositories"
