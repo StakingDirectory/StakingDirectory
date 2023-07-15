@@ -2528,7 +2528,7 @@
         "providerType": "no",
         "fee": {
             "type": "percentage",
-            "value": 5
+            "value": "10"
         },
         "links": {
             "website": "https://www.swellnetwork.io/",
