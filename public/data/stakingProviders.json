@@ -2064,8 +2064,8 @@
             "repo": "https://github.com/rocket-pool"
         },
         "minStake": {
-            "type": "anyAmount",
-            "value": "Any amount"
+            "type": "eth",
+            "value": "0.01"
         },
         "validatorKey": {
             "nodeOperator": true
