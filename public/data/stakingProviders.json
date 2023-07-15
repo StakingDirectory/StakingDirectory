@@ -2790,5 +2790,75 @@
             "discord": "https://discord.gg/YmbQwmmKEv",
             "repo": ""
         }
+    },
+    {
+        "id": 299713,
+        "status": "active",
+        "stakeFromHome": true,
+        "stakingType": "lst",
+        "providerType": "no",
+        "fee": {
+            "type": "percentage",
+            "value": 0
+        },
+        "minStake": {
+            "type": "eth",
+            "value": ".001"
+        },
+        "openSource": {
+            "value": true,
+            "evidenceLink": "https://github.com/stakehouse-dev?tab=repositories"
+        },
+        "audited": {
+            "value": true,
+            "evidenceLink": "https://www.blockswap.network/security"
+        },
+        "bugBounty": {
+            "value": true,
+            "evidenceLink": "https://code4rena.com/contests/2022-11-lsd-network-stakehouse-contest"
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "evidenceLink": ""
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "evidenceLink": "https://lsd.joinstakehouse.com/"
+        },
+        "permissionlessOperators": {
+            "value": true,
+            "evidenceLink": "https://lsd.joinstakehouse.com/"
+        },
+        "diverseExecutionClients": {
+            "value": true,
+            "evidenceLink": "Natively compatible with all current and future clients"
+        },
+        "diverseBeaconClients": {
+            "value": true,
+            "evidenceLink": "Natively compatible with all current and future clients"
+        },
+        "name": "Stakehouse LSD Networks",
+        "logo": {
+            "evidenceLink": "https://drive.google.com/file/d/1VuIfCe6HifA99UtZrsnDfQOtYX1Yf3XH/view?usp=drive_link"
+        },
+        "mainnetLaunch": {
+            "date": "2023-03-03",
+            "evidenceLink": "https://lsd.joinstakehouse.com/"
+        },
+        "description": "Stakehouse LSD Networks allows for anybody to create or join an LSD Network. Derivatives are fungible with unique yield.  ",
+        "validatorKey": {
+            "userValidator": true,
+            "service": false
+        },
+        "withdrawalKey": {
+            "userWithdrawal": true,
+            "smartContract": true
+        },
+        "links": {
+            "website": "https://lsd.joinstakehouse.com/",
+            "twitter": "https://twitter.com/blockswap_team",
+            "discord": "https://discord.gg/s8N9ekQuuj",
+            "repo": "https://github.com/stakehouse-dev?tab=repositories"
+        }
     }
 ]
