@@ -111,8 +111,8 @@ const dataProps = [
             {
                 value: "diverseExecutionClients",
                 description: {
-                    true: "Multiple execution clients are supported.",
-                    false: "Only majority execution clients are supported.",
+                    true: "No single execution client is used by 2/3 or more validators and multiple clients are available to use.",
+                    false: "A single execution client is used by more than 2/3 validators and/or multiple clients are not supported.",
                 },
             },
             {
