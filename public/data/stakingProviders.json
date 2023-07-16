@@ -2861,5 +2861,43 @@
             "discord": "https://discord.com/invite/PaCMRFdvWT"
         },
         "description": "Sedge is a one-click node setup tool for PoS network/chain validators and nodes written entirely in the Go programming language.\n\nSedge takes care of the entire on-premise full node setup based on the chosen client, using generated docker-compose scripts based on the desired configuration."
+    },
+    {
+        "id": 229885,
+        "status": "active",
+        "stakeFromHome": true,
+        "stakingType": "solo",
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "diverseExecutionClients": {
+            "value": true,
+            "evidenceLink": ""
+        },
+        "diverseBeaconClients": {
+            "value": true,
+            "evidenceLink": ""
+        },
+        "name": "Somer Esat Ethereum Staking Guides (Ubuntu)",
+        "validatorKey": {
+            "userValidator": true
+        },
+        "withdrawalKey": {
+            "userWithdrawal": true
+        },
+        "links": {
+            "twitter": "https://www.twitter.com/SomerEsat",
+            "repo": "https://github.com/SomerEsat/ethereum-staking-guides",
+            "website": "https://someresat.medium.com"
+        },
+        "logo": {
+            "evidenceLink": "https://someresat.medium.com"
+        },
+        "mainnetLaunch": {
+            "evidenceLink": "https://github.com/SomerEsat/ethereum-staking-guides/blob/master/ChangeLogArchive.md",
+            "date": "2020-11-26"
+        },
+        "description": "Hello,\n\nI have created a series of Ethereum mainnet and testnet staking how-to guides for solo-staking on Ubuntu:\n\n- Configuring Withdrawal Credentials\n- Ethereum Consensus Clients: Lighthouse, Nimbus, Prysm, Teku, and Lodestar\n- Ethereum Execution Clients: Besu, Erigon, Geth, and Nethermind\n\nThese guides are intended for new/intermediate users and are hopefully a reasonable and pleasant onboarding vehicle for newcomers to the Ethereum solo-staking community."
     }
 ]
