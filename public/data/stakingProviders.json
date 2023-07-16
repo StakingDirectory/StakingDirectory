@@ -2519,10 +2519,10 @@
             "alt": "Logo"
         },
         "name": "Swell",
-        "status": "dev",
+        "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2023-04-25",
+            "evidenceLink": "https://www.swellnetwork.io/post/mainnet"
         },
         "stakingType": "lst",
         "providerType": "no",
@@ -2532,7 +2532,8 @@
         },
         "links": {
             "website": "https://www.swellnetwork.io/",
-            "twitter": ""
+            "twitter": "https://twitter.com/swellnetworkio",
+            "discord": "discord.gg/swellnetworkdao"
         },
         "minStake": {
             "type": "anyAmount",
@@ -2549,12 +2550,12 @@
             "evidenceLink": ""
         },
         "audited": {
-            "value": false,
-            "evidenceLink": ""
+            "value": true,
+            "evidenceLink": "https://github.com/SwellNetwork/v3-core-public/blob/master/Audit%20Reports/Sigma_Prime_Swell_Network_Security_Assessment_Report_v2_0.pdf"
         },
         "bugBounty": {
-            "value": false,
-            "evidenceLink": ""
+            "value": true,
+            "evidenceLink": "https://immunefi.com/bounty/swell/"
         },
         "nonCensoringRelays": {
             "value": false,
@@ -2577,7 +2578,8 @@
             "evidenceLink": ""
         },
         "lstName": "swETH",
-        "stakeFromHome": false
+        "stakeFromHome": false,
+        "description": "A non-custodial ETH liquid staking protocol that helps you optimize yield in DeFi."
     },
     {
         "id": 38,
