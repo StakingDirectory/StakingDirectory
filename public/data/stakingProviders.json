@@ -2861,5 +2861,78 @@
             "discord": "https://discord.com/invite/PaCMRFdvWT"
         },
         "description": "Sedge is a one-click node setup tool for PoS network/chain validators and nodes written entirely in the Go programming language.\n\nSedge takes care of the entire on-premise full node setup based on the chosen client, using generated docker-compose scripts based on the desired configuration."
+    },
+    {
+        "id": 873344,
+        "status": "active",
+        "stakeFromHome": true,
+        "stakingType": "pooled",
+        "providerType": "no",
+        "fee": {
+            "type": "percentage",
+            "value": "0"
+        },
+        "minStake": {
+            "type": "eth",
+            "value": "4.4"
+        },
+        "openSource": {
+            "value": true,
+            "evidenceLink": "https://github.com/stader-labs"
+        },
+        "audited": {
+            "value": true,
+            "evidenceLink": "https://www.staderlabs.com/audits/ethereum/smartcontracts/ETHx_SmartContract_audit_report_by_SigmaPrime_v2.pdf"
+        },
+        "bugBounty": {
+            "value": true,
+            "evidenceLink": "https://immunefi.com/bounty/staderforeth/"
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "evidenceLink": "https://staderlabs.gitbook.io/ethereum/node-operator/permissionless-node-operator/node-registration-and-adding-validators/step-4-configure-stader-services/step-4.10-mev-boost"
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "evidenceLink": "https://www.staderlabs.com/eth/node-operators/"
+        },
+        "permissionlessOperators": {
+            "value": true,
+            "evidenceLink": "https://www.staderlabs.com/eth/node-operators/"
+        },
+        "diverseExecutionClients": {
+            "value": true,
+            "evidenceLink": "https://staderlabs.gitbook.io/ethereum/node-operator/permissionless-node-operator/node-registration-and-adding-validators/step-4-configure-stader-services/step-4.3-eth1-execution-client-selection"
+        },
+        "diverseBeaconClients": {
+            "value": true,
+            "evidenceLink": "https://staderlabs.gitbook.io/ethereum/node-operator/permissionless-node-operator/node-registration-and-adding-validators/step-4-configure-stader-services/step-4.4-eth2-consensus-client-selection"
+        },
+        "name": "Stader (Node)",
+        "logo": {
+            "evidenceLink": "https://www.staderlabs.com/assets/images/stader-icon.svg",
+            "src": "./images/StaderLogo.png",
+            "alt": "Stader Logo"
+        },
+        "mainnetLaunch": {
+            "date": "2023-07-10",
+            "evidenceLink": "https://www.staderlabs.com/blogs/staders-ethx-now-live-on-mainnet/"
+        },
+        "validatorKey": {
+            "nodeOperator": true,
+            "userValidator": false
+        },
+        "withdrawalKey": {
+            "userWithdrawal": false,
+            "smartContract": true
+        },
+        "links": {
+            "website": "https://www.staderlabs.com/eth/node-operators/",
+            "twitter": "https://twitter.com/staderlabs_eth",
+            "discord": "https://discord.com/invite/xJURAhSmav",
+            "telegram": "https://t.me/Staderlabs_Ethereum_Official",
+            "repo": "https://github.com/stader-labs"
+        },
+        "description": "Stader empowers node operators to decentralize ETH staking.\n\nStader has lowered the entry barrier for permissionless validators to an industry-low bond: 4 ETH + 0.4 ETH worth of SD as collateral."
     }
 ]
