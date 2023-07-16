@@ -2578,7 +2578,8 @@
             "evidenceLink": ""
         },
         "lstName": "swETH",
-        "stakeFromHome": false
+        "stakeFromHome": false,
+        "description": "A non-custodial ETH liquid staking protocol that helps you optimize yield in DeFi."
     },
     {
         "id": 38,
