@@ -3008,5 +3008,67 @@
             "alt": "Stader Logo"
         },
         "description": "Stader ETHx is built upon 3 main principles: decentralization, scalability and security. \n\nIts multipool architecture ensures scalability with a set of permissioned NOs, while it also powers decentralization allowing anyone to run a permissionless validator with an industry low capital barrier of 4.4 ETH.\n\nAudited by Sigma Prime, Halborn and Code4rena, and also 1M$ Immunefi Bug Bounty.\n"
+    },
+    {
+        "id": 451251,
+        "status": "active",
+        "stakeFromHome": false,
+        "stakingType": "managed",
+        "providerType": "no",
+        "fee": {
+            "type": "percentage",
+            "value": 0
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": ""
+        },
+        "openSource": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "audited": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "bugBounty": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "evidenceLink": ""
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "diverseBeaconClients": {
+            "value": true,
+            "evidenceLink": ""
+        },
+        "name": "Chorus One",
+        "logo": {
+            "evidenceLink": "https://twitter.com/ChorusOne/photo"
+        },
+        "validatorKey": {
+            "userValidator": false,
+            "nodeOperator": true
+        },
+        "withdrawalKey": {
+            "userWithdrawal": true
+        },
+        "links": {
+            "website": "chorus.one",
+            "twitter": "https://twitter.com/chorusone"
+        }
     }
 ]
