@@ -3008,5 +3008,67 @@
             "alt": "Stader Logo"
         },
         "description": "Stader ETHx is built upon 3 main principles: decentralization, scalability and security. \n\nIts multipool architecture ensures scalability with a set of permissioned NOs, while it also powers decentralization allowing anyone to run a permissionless validator with an industry low capital barrier of 4.4 ETH.\n\nAudited by Sigma Prime, Halborn and Code4rena, and also 1M$ Immunefi Bug Bounty.\n"
+    },
+    {
+        "id": 158841,
+        "status": "active",
+        "stakeFromHome": true,
+        "stakingType": "lst",
+        "providerType": "no",
+        "fee": {
+            "type": "percentage",
+            "value": "10"
+        },
+        "minStake": {
+            "type": "eth",
+            "value": "0"
+        },
+        "openSource": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "audited": {
+            "value": true,
+            "evidenceLink": "https://github.com/SwellNetwork/v3-core-public/blob/master/Audit%20Reports/Sigma_Prime_Swell_Network_Security_Assessment_Report_v2_0.pdf"
+        },
+        "bugBounty": {
+            "value": true,
+            "evidenceLink": "https://immunefi.com/bounty/swell/"
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "diverseExecutionClients": {
+            "value": true,
+            "evidenceLink": "https://www.rated.network/o/Swell?network=mainnet&timeWindow=1d&viewBy=operator&page=1"
+        },
+        "diverseBeaconClients": {
+            "value": true,
+            "evidenceLink": "https://www.rated.network/o/Swell?network=mainnet&timeWindow=1d&viewBy=operator&page=1"
+        },
+        "name": "Swell",
+        "logo": {
+            "evidenceLink": "https://drive.google.com/file/d/1eaa0bGBGbTnRFv3aoBEAbyzClBfSWVKG/view?usp=drive_link"
+        },
+        "mainnetLaunch": {
+            "date": "2023-04-25",
+            "evidenceLink": "https://www.swellnetwork.io/post/mainnet"
+        },
+        "description": "A non-custodial ETH liquid staking protocol that helps you optimize yield in DeFi",
+        "links": {
+            "website": "https://www.swellnetwork.io",
+            "twitter": "https://www.twitter.com/swellnetworkio",
+            "discord": "https://discord.gg/swellnetworkdao",
+            "repo": "https://github.com/SwellNetwork"
+        }
     }
 ]
