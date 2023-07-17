@@ -2533,7 +2533,8 @@
         "links": {
             "website": "https://www.swellnetwork.io/",
             "twitter": "https://twitter.com/swellnetworkio",
-            "discord": "discord.gg/swellnetworkdao"
+            "discord": "https://discord.gg/swellnetworkdao",
+            "repo": "https://github.com/SwellNetwork"
         },
         "minStake": {
             "type": "anyAmount",
@@ -2570,12 +2571,12 @@
             "evidenceLink": ""
         },
         "diverseExecutionClients": {
-            "value": false,
-            "evidenceLink": ""
+            "value": true,
+            "evidenceLink": "https://www.rated.network/o/Swell?network=mainnet&timeWindow=1d&viewBy=operator&page=1"
         },
         "diverseBeaconClients": {
-            "value": false,
-            "evidenceLink": ""
+            "value": true,
+            "evidenceLink": "https://www.rated.network/o/Swell?network=mainnet&timeWindow=1d&viewBy=operator&page=1"
         },
         "lstName": "swETH",
         "stakeFromHome": false,
