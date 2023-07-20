@@ -202,7 +202,9 @@
         },
         "links": {
             "website": "https://ethereum-on-arm-documentation.readthedocs.io/",
-            "twitter": ""
+            "twitter": "https://twitter.com/EthereumOnARM",
+            "discord": "https://t.co/HyeqBMjtnS",
+            "repo": "https://github.com/diglos/ethereumonarm"
         },
         "minStake": {
             "type": "eth",
@@ -228,7 +230,7 @@
         },
         "nonCensoringRelays": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://ethereum-on-arm-documentation.readthedocs.io/en/latest/user-guide/mev-boost.html"
         },
         "permissionlessUsage": {
             "value": true,
@@ -246,7 +248,8 @@
             "value": true,
             "evidenceLink": "https://github.com/diglos/ethereumonarm"
         },
-        "stakeFromHome": true
+        "stakeFromHome": true,
+        "description": "Ethereum on ARM provides PnP images for ARM64 boards such as Rock 5B and Orange Pi 5 plus that turns the devices into Full Ethereum / Staking nodes making it easier for regular users to run Ethereum at home."
     },
     {
         "id": 8,
