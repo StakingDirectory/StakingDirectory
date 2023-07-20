@@ -188,7 +188,7 @@
             "src": "./images/EthereumOnArmLogo.png",
             "alt": "Logo"
         },
-        "name": "Ethereum on Arm",
+        "name": "Ethereum on ARM",
         "status": "active",
         "mainnetLaunch": {
             "date": "",
