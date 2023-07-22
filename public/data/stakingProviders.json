@@ -135,7 +135,9 @@
         },
         "links": {
             "website": "https://dappnode.io/",
-            "twitter": ""
+            "twitter": "https://twitter.com/DAppNode",
+            "discord": "https://discord.gg/dappnode",
+            "repo": "https://github.com/dappnode"
         },
         "minStake": {
             "type": "eth",
@@ -405,7 +407,8 @@
         },
         "links": {
             "website": "https://stereum.net/ethereum-node-setup/",
-            "twitter": ""
+            "twitter": "https://twitter.com/stereumdev",
+            "discord": "https://discord.com/invite/df8r5PVX9P"
         },
         "minStake": {
             "type": "eth",
@@ -471,7 +474,7 @@
         },
         "links": {
             "website": "https://www.launchnodes.com/",
-            "twitter": ""
+            "twitter": "https://twitter.com/launchnodes"
         },
         "minStake": {
             "type": "eth",
@@ -603,7 +606,9 @@
         },
         "links": {
             "website": "https://www.attestant.io/",
-            "twitter": ""
+            "twitter": "https://twitter.com/attestantio",
+            "discord": "https://discord.gg/egRsdKp",
+            "repo": "https://github.com/attestantio"
         },
         "minStake": {
             "type": "eth",
@@ -736,7 +741,9 @@
         },
         "links": {
             "website": "https://www.bloxstaking.com/",
-            "twitter": ""
+            "twitter": "",
+            "discord": "https://discord.gg/Aw2dH6cX6j",
+            "repo": "https://github.com/bloxapp/blox-live"
         },
         "minStake": {
             "type": "eth",
@@ -913,7 +920,8 @@
             "value": false,
             "evidenceLink": ""
         },
-        "stakeFromHome": false
+        "stakeFromHome": false,
+        "description": "Kiln is the leading enterprise-grade staking platform, enabling institutional customers to stake programmatically their digital assets, and to whitelabel staking functionality into their offering. Our platform is API-first and enables fully automated validators, rewards, data and commission management."
     },
     {
         "id": 18,
@@ -935,7 +943,7 @@
         },
         "links": {
             "website": "https://stake.rockx.com/",
-            "twitter": ""
+            "twitter": "https://twitter.com/rockx_official"
         },
         "minStake": {
             "type": "eth",
@@ -1595,7 +1603,7 @@
         },
         "links": {
             "website": "https://stake.fish/",
-            "twitter": ""
+            "twitter": "https://twitter.com/stakefish"
         },
         "minStake": {
             "type": "eth",
@@ -1862,7 +1870,8 @@
         },
         "links": {
             "website": "https://app.stakewise.io/",
-            "twitter": ""
+            "twitter": "https://twitter.com/stakewise_io",
+            "repo": "https://github.com/stakewise"
         },
         "minStake": {
             "type": "anyAmount",
@@ -1929,7 +1938,9 @@
         },
         "links": {
             "website": "https://www.ankr.com/staking/stake/ethereum/",
-            "twitter": ""
+            "twitter": "https://twitter.com/ankrstaking",
+            "telegram": "https://t.me/ankrstaking",
+            "discord": "https://discord.gg/ankrofficial"
         },
         "minStake": {
             "type": "anyAmount",
@@ -1996,7 +2007,10 @@
         },
         "links": {
             "website": "https://app.frax.finance/frxeth/mint",
-            "twitter": ""
+            "twitter": "https://twitter.com/fraxfinance",
+            "repo": "https://github.com/FraxFinance",
+            "discord": "https://discord.gg/MTZu6Hf57d",
+            "telegram": "https://t.me/fraxfinance"
         },
         "minStake": {
             "type": "anyAmount",
