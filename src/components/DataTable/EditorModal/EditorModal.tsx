@@ -39,6 +39,8 @@ import { faChevronDown, faRotateLeft } from "@fortawesome/free-solid-svg-icons"
 
 import dataProps from "public/data/dataProps"
 const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
+const keyOwnerProperties = dataProps.find((prop) => prop.id === "keyOwnerProperties").keyOwnerProperties
+const checklistProperties = dataProps.find((prop) => prop.id === "checklistProperties").checklistProperties
 
 const allOptions = [
     {
@@ -198,16 +200,19 @@ const allOptions = [
                 id: "validatorKey.userValidator",
                 name: "User controlled?",
                 inputType: "selectBool",
+                description: keyOwnerProperties.find((prop) => prop.value === "userValidator").description,
             },
             {
                 id: "validatorKey.service",
                 name: "Service controlled?",
                 inputType: "selectBool",
+                description: keyOwnerProperties.find((prop) => prop.value === "service").description,
             },
             {
                 id: "validatorKey.nodeOperator",
                 name: "Node operator controlled?",
                 inputType: "selectBool",
+                description: keyOwnerProperties.find((prop) => prop.value === "nodeOperator").description,
             },
         ],
     },
@@ -219,11 +224,13 @@ const allOptions = [
                 id: "withdrawalKey.userWithdrawal",
                 name: "User controlled?",
                 inputType: "selectBool",
+                description: keyOwnerProperties.find((prop) => prop.value === "userWithdrawal").description,
             },
             {
                 id: "withdrawalKey.smartContract",
                 name: "Smart contract controlled?",
                 inputType: "selectBool",
+                description: keyOwnerProperties.find((prop) => prop.value === "smartContract").description,
             },
         ],
     },
@@ -271,6 +278,7 @@ const allOptions = [
                 id: "openSource.value",
                 name: "Open Source?",
                 inputType: "selectBool",
+                description: checklistProperties.find((prop) => prop.value === "openSource").description,
             },
             {
                 id: "openSource.evidenceLink",
@@ -288,6 +296,7 @@ const allOptions = [
                 id: "audited.value",
                 name: "Audited?",
                 inputType: "selectBool",
+                description: checklistProperties.find((prop) => prop.value === "audited").description,
             },
             {
                 id: "audited.evidenceLink",
@@ -305,6 +314,7 @@ const allOptions = [
                 id: "bugBounty.value",
                 name: "Bug Bounty?",
                 inputType: "selectBool",
+                description: checklistProperties.find((prop) => prop.value === "bugBounty").description,
             },
             {
                 id: "bugBounty.evidenceLink",
@@ -322,6 +332,7 @@ const allOptions = [
                 id: "permissionlessUsage.value",
                 name: "Permissionless Usage?",
                 inputType: "selectBool",
+                description: checklistProperties.find((prop) => prop.value === "permissionlessUsage").description,
             },
             {
                 id: "permissionlessUsage.evidenceLink",
@@ -339,6 +350,7 @@ const allOptions = [
                 id: "permissionlessOperators.value",
                 name: "Permissionless Operators?",
                 inputType: "selectBool",
+                description: checklistProperties.find((prop) => prop.value === "permissionlessOperators").description,
             },
             {
                 id: "permissionlessOperators.evidenceLink",
@@ -356,6 +368,7 @@ const allOptions = [
                 id: "nonCensoringRelays.value",
                 name: "Censorship Resistant Relays?",
                 inputType: "selectBool",
+                description: checklistProperties.find((prop) => prop.value === "nonCensoringRelays").description,
             },
             {
                 id: "nonCensoringRelays.evidenceLink",
@@ -373,6 +386,7 @@ const allOptions = [
                 id: "diverseExecutionClients.value",
                 name: "Diverse Execution Clients?",
                 inputType: "selectBool",
+                description: checklistProperties.find((prop) => prop.value === "diverseExecutionClients").description,
             },
             {
                 id: "diverseExecutionClients.evidenceLink",
@@ -390,6 +404,7 @@ const allOptions = [
                 id: "diverseBeaconClients.value",
                 name: "Diverse Beacon Clients?",
                 inputType: "selectBool",
+                description: checklistProperties.find((prop) => prop.value === "diverseBeaconClients").description,
             },
             {
                 id: "diverseBeaconClients.evidenceLink",
@@ -485,7 +500,7 @@ export default function EditorModal({ isOpen, onClose, provider, newProvider = f
                     {allOptions.map((option, index) => {
                         return (
                             (currentSelection == option.id || currentSelection == "allOptions") && (
-                                <Flex className={"editorOptionContainer"} direction={"column"} gap={3} key={index}>
+                                <Flex className={"editorOptionContainer"} direction={"column"} gap={4} key={index}>
                                     <EditorOptionHeader
                                         id={option.id}
                                         name={option.headerName}
@@ -497,6 +512,7 @@ export default function EditorModal({ isOpen, onClose, provider, newProvider = f
                                             id={field.id}
                                             name={field.name}
                                             placeholder={field.placeholder}
+                                            description={field.description}
                                             inputType={field.inputType}
                                             options={field.options}
                                             updatedValues={updatedValues}

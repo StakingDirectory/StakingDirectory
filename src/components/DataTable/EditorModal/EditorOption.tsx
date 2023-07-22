@@ -52,7 +52,17 @@ const valueGetter = (id, obj) => {
     return obj[id]
 }
 
-export default function EditorOption({ id, name, placeholder = null, inputType, options = [], updatedValues, setUpdatedValues, provider }) {
+export default function EditorOption({
+    id,
+    name,
+    placeholder = null,
+    description = null,
+    inputType,
+    options = [],
+    updatedValues,
+    setUpdatedValues,
+    provider,
+}) {
     const inputRef = useRef<HTMLInputElement | null>(null)
     const textareaRef = useRef<HTMLTextAreaElement | null>(null)
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -172,67 +182,76 @@ export default function EditorOption({ id, name, placeholder = null, inputType, 
                 </>
             )}
             {inputType === "selectBool" && (
-                <>
-                    <InputLeftAddon className="EditorInputLeftAddon" cursor={"default"} fontWeight={"bold"} borderLeftRadius={"10px"}>
-                        {name}
-                    </InputLeftAddon>
-                    <Menu variant={"EditorSelector"} placement="bottom-start" gutter={2} isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
-                        <MenuButton
-                            as={Button}
-                            variant={"EditorSelector"}
-                            mr={8}
-                            borderLeftRadius={0}
-                            onClick={() => setIsMenuOpen(true)}
-                            bg={
-                                valueGetter(id, updatedValues) == null
-                                    ? valueGetter(id, provider)
-                                        ? "green"
-                                        : "red"
-                                    : valueGetter(id, updatedValues)
-                                    ? "green"
-                                    : "red"
-                            }
-                            _hover={{ bg: "" }}
-                            _active={{ bg: "" }}
-                        >
-                            <Flex gap={2} justifyContent={"space-between"}>
-                                <Text>
-                                    {valueGetter(id, updatedValues) == null
-                                        ? valueGetter(id, provider)
-                                            ? "Yes"
-                                            : "No"
-                                        : valueGetter(id, updatedValues)
-                                        ? "Yes"
-                                        : "No"}
-                                </Text>
-                                <Box>
-                                    <FontAwesomeIcon icon={faChevronDown} />
-                                </Box>
-                            </Flex>
-                        </MenuButton>
-                        <MenuList minW={1}>
-                            <MenuOptionGroup
-                                value={
+                <Flex direction={"column"} wrap={"wrap"} gap={2}>
+                    <Flex wrap={"wrap"}>
+                        <InputLeftAddon className="EditorInputLeftAddon" cursor={"default"} fontWeight={"bold"} borderLeftRadius={"10px"}>
+                            {name}
+                        </InputLeftAddon>
+                        <Menu variant={"EditorSelector"} placement="bottom-start" gutter={2} isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)}>
+                            <MenuButton
+                                as={Button}
+                                variant={"EditorSelector"}
+                                mr={8}
+                                borderLeftRadius={0}
+                                onClick={() => setIsMenuOpen(true)}
+                                bg={
                                     valueGetter(id, updatedValues) == null
                                         ? valueGetter(id, provider)
+                                            ? "green"
+                                            : "red"
+                                        : valueGetter(id, updatedValues)
+                                        ? "green"
+                                        : "red"
+                                }
+                                _hover={{ bg: "" }}
+                                _active={{ bg: "" }}
+                            >
+                                <Flex gap={2} justifyContent={"space-between"}>
+                                    <Text>
+                                        {valueGetter(id, updatedValues) == null
+                                            ? valueGetter(id, provider)
+                                                ? "Yes"
+                                                : "No"
+                                            : valueGetter(id, updatedValues)
+                                            ? "Yes"
+                                            : "No"}
+                                    </Text>
+                                    <Box>
+                                        <FontAwesomeIcon icon={faChevronDown} />
+                                    </Box>
+                                </Flex>
+                            </MenuButton>
+                            <MenuList minW={1}>
+                                <MenuOptionGroup
+                                    value={
+                                        valueGetter(id, updatedValues) == null
+                                            ? valueGetter(id, provider)
+                                                ? "Yes"
+                                                : "No"
+                                            : valueGetter(id, updatedValues)
                                             ? "Yes"
                                             : "No"
-                                        : valueGetter(id, updatedValues)
-                                        ? "Yes"
-                                        : "No"
-                                }
-                                type="radio"
-                            >
-                                <MenuItemOption value={"Yes"} onClick={() => updateValues(id, true)}>
-                                    Yes
-                                </MenuItemOption>
-                                <MenuItemOption value={"No"} onClick={() => updateValues(id, false)}>
-                                    No
-                                </MenuItemOption>
-                            </MenuOptionGroup>
-                        </MenuList>
-                    </Menu>
-                </>
+                                    }
+                                    type="radio"
+                                >
+                                    <MenuItemOption value={"Yes"} onClick={() => updateValues(id, true)}>
+                                        Yes
+                                    </MenuItemOption>
+                                    <MenuItemOption value={"No"} onClick={() => updateValues(id, false)}>
+                                        No
+                                    </MenuItemOption>
+                                </MenuOptionGroup>
+                            </MenuList>
+                        </Menu>
+                    </Flex>
+                    {description && (
+                        <Box pb={3}>
+                            {typeof description === "object" && description !== null
+                                ? description[valueGetter(id, updatedValues) == null ? valueGetter(id, provider) : valueGetter(id, updatedValues)]
+                                : description}
+                        </Box>
+                    )}
+                </Flex>
             )}
         </InputGroup>
     )
