@@ -138,6 +138,17 @@ const allOptions = [
         ],
     },
     {
+        id: "lstName",
+        headerName: "LST Name (if applicable)",
+        fields: [
+            {
+                id: "lstName",
+                name: "LST Name",
+                inputType: "input",
+            },
+        ],
+    },
+    {
         id: "providerType",
         headerName: "Provider Type",
         fields: [
