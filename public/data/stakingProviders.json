@@ -1647,7 +1647,7 @@
             "src": "./images/EtherFiLogo.png",
             "alt": "Logo"
         },
-        "name": "Ether.fi Operator",
+        "name": "Ether.fi (Node)",
         "status": "dev",
         "mainnetLaunch": {
             "date": "",
@@ -2319,7 +2319,7 @@
             "src": "./images/EtherFiLogo.png",
             "alt": "Logo"
         },
-        "name": "Ether.fi",
+        "name": "Ether.fi (LST)",
         "status": "dev",
         "mainnetLaunch": {
             "date": "",
