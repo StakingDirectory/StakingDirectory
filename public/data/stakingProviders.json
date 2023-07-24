@@ -3162,5 +3162,67 @@
             "discord": "https://discord.gg/HUqnbKAES5",
             "repo": "https://github.com/stakehouse-dev"
         }
+    },
+    {
+        "id": 694778,
+        "status": "active",
+        "stakeFromHome": false,
+        "stakingType": "managed",
+        "providerType": "hardware",
+        "fee": {
+            "type": "other",
+            "value": "Custom"
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "openSource": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "audited": {
+            "value": true,
+            "evidenceLink": "https://docs.blockdaemon.com/reference/security-audit-certificate"
+        },
+        "bugBounty": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "diverseExecutionClients": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "name": "Blockdaemon",
+        "logo": {
+            "evidenceLink": "https://assets-global.website-files.com/633c5e06513fa35f3391a5f9/645d3c9323b2e666845605cb_BD%20Head%20-%20Purple.png"
+        },
+        "description": "Why Choose Blockdaemon Stake?\nStake is safe, reliable and backed by 100% slashing insurance guarantee. Blockdaemon is the choice for major financial institutions and has helped leading crypto and TradFi companies deploy $1+ billion worth of staking infrastructure to date.",
+        "validatorKey": {
+            "service": true
+        },
+        "withdrawalKey": {
+            "userWithdrawal": true
+        },
+        "links": {
+            "website": "https://www.blockdaemon.com/",
+            "twitter": "https://twitter.com/BlockdaemonHQ"
+        }
     }
 ]
