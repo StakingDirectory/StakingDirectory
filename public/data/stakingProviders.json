@@ -3075,7 +3075,9 @@
         },
         "name": "Chorus One",
         "logo": {
-            "evidenceLink": "https://twitter.com/ChorusOne/photo"
+            "evidenceLink": "https://twitter.com/ChorusOne/photo",
+            "src": "./images/ChorusOneLogo.jpg",
+            "alt": "Chorus One Logo"
         },
         "validatorKey": {
             "userValidator": false,
