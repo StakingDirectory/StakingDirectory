@@ -3168,7 +3168,7 @@
         "status": "active",
         "stakeFromHome": false,
         "stakingType": "managed",
-        "providerType": "hardware",
+        "providerType": "no",
         "fee": {
             "type": "other",
             "value": "Custom"
@@ -3211,7 +3211,9 @@
         },
         "name": "Blockdaemon",
         "logo": {
-            "evidenceLink": "https://assets-global.website-files.com/633c5e06513fa35f3391a5f9/645d3c9323b2e666845605cb_BD%20Head%20-%20Purple.png"
+            "evidenceLink": "https://assets-global.website-files.com/633c5e06513fa35f3391a5f9/645d3c9323b2e666845605cb_BD%20Head%20-%20Purple.png",
+            "src": "./images/BlockdaemonLogo.jpg",
+            "alt": "Blockdaemon Logo"
         },
         "description": "Why Choose Blockdaemon Stake?\nStake is safe, reliable and backed by 100% slashing insurance guarantee. Blockdaemon is the choice for major financial institutions and has helped leading crypto and TradFi companies deploy $1+ billion worth of staking infrastructure to date.",
         "validatorKey": {
