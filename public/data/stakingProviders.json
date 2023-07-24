@@ -396,8 +396,8 @@
         "name": "Stereum",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2020-11-26",
+            "evidenceLink": "https://discord.com/channels/769190437050122311/769190851992617000/781508073260974080"
         },
         "stakingType": "solo",
         "providerType": "no",
@@ -408,7 +408,8 @@
         "links": {
             "website": "https://stereum.net/ethereum-node-setup/",
             "twitter": "https://twitter.com/stereumdev",
-            "discord": "https://discord.com/invite/df8r5PVX9P"
+            "discord": "https://discord.com/invite/df8r5PVX9P",
+            "repo": "https://github.com/stereum-dev/ethereum-node"
         },
         "minStake": {
             "type": "eth",
@@ -425,8 +426,8 @@
             "evidenceLink": "https://github.com/stereum-dev/ethereum-node"
         },
         "audited": {
-            "value": false,
-            "evidenceLink": ""
+            "value": true,
+            "evidenceLink": "https://stereum.net/downloads/audits/202211_sba-research.pdf"
         },
         "bugBounty": {
             "value": false,
@@ -452,7 +453,8 @@
             "value": true,
             "evidenceLink": ""
         },
-        "stakeFromHome": true
+        "stakeFromHome": true,
+        "description": "Decentralization with ease: Stereum - your one-stop tool for Ethereum Node installation, setup, and management!\n\nStereum is a toolkit to simplify the process of setting up and maintaining an Ethereum Node. Developed over the last years out of a simple docker compose setup, released before even the beacon chain went to the mainnet, our efforts focus on helping to decentralize the Ethereum network even further by lessening the technical entry barrier for the average person to stake their own coins using their machines, as well as the possibility to run different node-related protocols.\n\nStereum's Ethereum Node Installation, Setup & Management tool aims to be the most flexible way to leverage your node for ETH staking, data science, dApp hosting & development!"
     },
     {
         "id": 11,
