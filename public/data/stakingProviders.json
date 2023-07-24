@@ -3092,12 +3092,12 @@
     {
         "id": 257648,
         "status": "active",
-        "stakeFromHome": true,
+        "stakeFromHome": false,
         "stakingType": "lst",
         "providerType": "no",
         "fee": {
-            "type": "percentage",
-            "value": 0
+            "type": "other",
+            "value": "Custom"
         },
         "minStake": {
             "type": "eth",
@@ -3137,7 +3137,9 @@
         },
         "name": "Stakehouse",
         "logo": {
-            "evidenceLink": "https://downloads.intercomcdn.com/i/o/329506/6dce3b35947f6488038e1870/e42fec327903e6b5620ffc0bcd228ea6.png"
+            "evidenceLink": "https://downloads.intercomcdn.com/i/o/329506/6dce3b35947f6488038e1870/e42fec327903e6b5620ffc0bcd228ea6.png",
+            "src": "./images/StakehouseLogo.svg",
+            "alt": "Stakehouse Logo"
         },
         "mainnetLaunch": {
             "date": "2022-09-30",
