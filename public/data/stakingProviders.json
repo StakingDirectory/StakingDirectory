@@ -865,8 +865,8 @@
         "name": "Kiln",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2021-05-01",
+            "evidenceLink": "https://beaconcha.in/validator/a9a3317328428afa90f13dd2823ec9bd5aacc8ad34f83418f639637268543b2ba64c964a38fc21d90776b48f5d3545fd"
         },
         "stakingType": "managed",
         "providerType": "no",
@@ -876,7 +876,7 @@
         },
         "links": {
             "website": "https://www.kiln.fi/protocols/ethereum",
-            "twitter": ""
+            "twitter": "https://twitter.com/Kiln_finance"
         },
         "minStake": {
             "type": "eth",
