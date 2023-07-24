@@ -3088,5 +3088,75 @@
             "website": "https://chorus.one",
             "twitter": "https://twitter.com/chorusone"
         }
+    },
+    {
+        "id": 257648,
+        "status": "active",
+        "stakeFromHome": true,
+        "stakingType": "lst",
+        "providerType": "no",
+        "fee": {
+            "type": "percentage",
+            "value": 0
+        },
+        "minStake": {
+            "type": "eth",
+            "value": "0.001"
+        },
+        "openSource": {
+            "value": true,
+            "evidenceLink": "https://github.com/stakehouse-dev"
+        },
+        "audited": {
+            "value": true,
+            "evidenceLink": "https://github.com/stakehouse-dev/Audits"
+        },
+        "bugBounty": {
+            "value": true,
+            "evidenceLink": "https://github.com/code-423n4/2022-11-stakehouse"
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "evidenceLink": "https://blog.pon.network/a-revolutionary-decentralized-mev-relay-599de11e2da2?gi=57cf0a4f8e26"
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "evidenceLink": ""
+        },
+        "permissionlessOperators": {
+            "value": true,
+            "evidenceLink": ""
+        },
+        "diverseExecutionClients": {
+            "value": true,
+            "evidenceLink": ""
+        },
+        "diverseBeaconClients": {
+            "value": true,
+            "evidenceLink": ""
+        },
+        "name": "Stakehouse",
+        "logo": {
+            "evidenceLink": "https://downloads.intercomcdn.com/i/o/329506/6dce3b35947f6488038e1870/e42fec327903e6b5620ffc0bcd228ea6.png"
+        },
+        "mainnetLaunch": {
+            "date": "2022-09-30",
+            "evidenceLink": "https://blog.blockswap.network/stakehouse-mainnet-ebf63ab12a2d"
+        },
+        "description": "The Stakehouse protocol is tooling around the Ethereum Deposit Contract (EDC) which enables stakers to have fungible staking derivatives without compromising the unique yield of each ETH thus upholding the atomic dependency of a single ETH validator. Stakers now have increased optionality when it comes to staking. Solo stakers can now access a true derivative that is not based on a pool and take control of their own ETH. Users maintain full autonomy by having the ability to select any node operator they would like. The Stakehouse protocol will provide staking and validator rewards at mass.",
+        "validatorKey": {
+            "userValidator": false,
+            "nodeOperator": true
+        },
+        "withdrawalKey": {
+            "smartContract": false,
+            "userWithdrawal": true
+        },
+        "links": {
+            "website": "https://joinstakehouse.com/",
+            "twitter": "https://twitter.com/stakehouse_BSN",
+            "discord": "https://discord.gg/HUqnbKAES5",
+            "repo": "https://github.com/stakehouse-dev"
+        }
     }
 ]
