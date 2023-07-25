@@ -1277,7 +1277,7 @@
         "links": {
             "website": "https://rocketpool.net/node-operators",
             "twitter": "https://twitter.com/Rocket_Pool",
-            "discord": "",
+            "discord": "https://discord.gg/rocketpool",
             "telegram": "",
             "repo": "https://github.com/rocket-pool"
         },
@@ -1318,7 +1318,7 @@
             "value": true
         },
         "stakeFromHome": true,
-        "description": "Rocket Pool is the base layer protocol for decentralised and trustless Ethereum staking.\n\nDesigned to support stakers of all shapes and sizes, Rocket Pool was built with the intent to allow anyone to trustlessly stake ETH to a network of decentralised node operators with full autonomy underpinned by RPL token collateral.\n\nThe core premise behind a protocol is to ensure the network is not beholden to any one party. This is a principle directly linked to Ethereum itself, and a mindset used at every stage of the process as we continue to upgrade the protocol.\n\nRocket Pool strives to embody the core ethos of Ethereum and DeFi, specifically the non-custodial, trustless nature that allows self-sovereignty to truly thrive."
+        "description": "Rocket Pool is the base layer protocol for decentralised and trustless Ethereum staking.\n\nDesigned to support stakers of all shapes and sizes, Rocket Pool was built with the intent to allow anyone to permissionlessly stake ETH to a network of decentralised node operators with full autonomy underpinned by RPL token collateral.\n\nThe core premise behind a protocol is to ensure the network is not beholden to any one party. This is a principle directly linked to Ethereum itself, and a mindset used at every stage of the process as we continue to upgrade the protocol.\n\nRocket Pool strives to embody the core ethos of Ethereum and DeFi, specifically the non-custodial, trustless nature that allows self-sovereignty to truly thrive."
     },
     {
         "id": 24,
@@ -2080,7 +2080,8 @@
         "links": {
             "website": "https://stake.rocketpool.net/",
             "twitter": "https://twitter.com/Rocket_Pool",
-            "repo": "https://github.com/rocket-pool"
+            "repo": "https://github.com/rocket-pool",
+            "discord": "https://discord.gg/rocketpool"
         },
         "minStake": {
             "type": "eth",
@@ -2126,7 +2127,7 @@
         },
         "lstName": "rETH",
         "stakeFromHome": false,
-        "description": "Rocket Pool is the base layer protocol for decentralised and trustless Ethereum staking.\n\nDesigned to support stakers of all shapes and sizes, Rocket Pool was built with the intent to allow anyone to trustlessly stake ETH to a network of decentralised node operators with full autonomy underpinned by RPL token collateral.\n\nThe core premise behind a protocol is to ensure the network is not beholden to any one party. This is a principle directly linked to Ethereum itself, and a mindset used at every stage of the process as we continue to upgrade the protocol.\n\nRocket Pool strives to embody the core ethos of Ethereum and DeFi, specifically the non-custodial, trustless nature that allows self-sovereignty to truly thrive."
+        "description": "Rocket Pool is the base layer protocol for decentralised and trustless Ethereum staking.\n\nDesigned to support stakers of all shapes and sizes, Rocket Pool was built with the intent to allow anyone to permissionlessly stake ETH to a network of decentralised node operators with full autonomy underpinned by RPL token collateral.\n\nThe core premise behind a protocol is to ensure the network is not beholden to any one party. This is a principle directly linked to Ethereum itself, and a mindset used at every stage of the process as we continue to upgrade the protocol.\n\nRocket Pool strives to embody the core ethos of Ethereum and DeFi, specifically the non-custodial, trustless nature that allows self-sovereignty to truly thrive."
     },
     {
         "id": 36,
@@ -2886,7 +2887,7 @@
     },
     {
         "id": 873344,
-        "status": "active",
+        "status": "dev",
         "stakeFromHome": true,
         "stakingType": "pooled",
         "providerType": "no",
@@ -2959,7 +2960,7 @@
     },
     {
         "id": 335266,
-        "status": "active",
+        "status": "dev",
         "stakeFromHome": false,
         "stakingType": "lst",
         "providerType": "no",
