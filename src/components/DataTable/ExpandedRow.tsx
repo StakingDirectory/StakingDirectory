@@ -99,7 +99,8 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
                     <Box as={FontAwesomeIcon} icon={faMapPin} size={"3x"} />
                 </Flex>
             </Flex>
-            <ChecklistList provider={provider} expandedChecklistRows={expandedChecklistRows} setExpandedChecklistRows={setExpandedChecklistRows} />
+            {/* TODO: Add checklist back when the options are inarguable */}
+            {/* <ChecklistList provider={provider} expandedChecklistRows={expandedChecklistRows} setExpandedChecklistRows={setExpandedChecklistRows} /> */}
         </Flex>
     )
 }

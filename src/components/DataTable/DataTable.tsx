@@ -101,7 +101,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                         <Text fontWeight={"extrabold"} fontSize={"lg"} pb={2}>
                                             How is the list ordered?
                                         </Text>
-                                        <Flex alignItems={"start"}>
+                                        {/* <Flex alignItems={"start"}>
                                             <Text minW={6} fontWeight={"extrabold"} textAlign={"start"}>
                                                 1.
                                             </Text>
@@ -111,13 +111,13 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                                     green
                                                 </Box>
                                             </Text>
-                                        </Flex>
+                                        </Flex> */}
                                         <Flex alignItems={"start"}>
                                             <Text minW={6} fontWeight={"extrabold"} textAlign={"start"}>
-                                                2.
+                                                1.
                                             </Text>
                                             <Text textAlign={"left"}>
-                                                Then, by the staking type &nbsp;(
+                                                By the staking type &nbsp;(
                                                 <Box as="span" color={"green"}>
                                                     Solo
                                                 </Box>
@@ -142,9 +142,9 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                         </Flex>
                                         <Flex alignItems={"start"}>
                                             <Text minW={6} fontWeight={"extrabold"} textAlign={"start"}>
-                                                3.
+                                                2.
                                             </Text>
-                                            <Text textAlign={"left"}>Finally, if all the previous steps are identical, they are ordered by name</Text>
+                                            <Text textAlign={"left"}>Then, if all the previous steps are identical, they are ordered by name</Text>
                                         </Flex>
                                     </Flex>
                                 </PopoverContent>
@@ -304,14 +304,14 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                         <Td textAlign={"center"} fontWeight={"bold"}>
                                             {provider.minStake?.type == "anyAmount" ? "Any amount" : `${provider.minStake?.value} ETH`}
                                         </Td>
-                                        <Td>
+                                        {/* <Td>
                                             <ChecklistBar
                                                 provider={provider}
                                                 tableRowIndex={index}
                                                 expandedRows={expandedRows}
                                                 setExpandedChecklistRows={setExpandedChecklistRows}
                                             />
-                                        </Td>
+                                        </Td> */}
                                         <Td w={5}>
                                             <DataRowMenuButton provider={provider} />
                                         </Td>

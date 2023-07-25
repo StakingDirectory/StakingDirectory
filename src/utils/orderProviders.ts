@@ -10,12 +10,12 @@ const orderFilteredProviders = (filteredProviders, checklistProperties) => {
 
     // Copy the filteredProviders array before sorting
     const sortedProviders = [...filteredProviders].sort((a, b) => {
-        const checklistTruesA = countChecklistTrues(a, checklistProperties)
-        const checklistTruesB = countChecklistTrues(b, checklistProperties)
+        // const checklistTruesA = countChecklistTrues(a, checklistProperties)
+        // const checklistTruesB = countChecklistTrues(b, checklistProperties)
 
         // Sort by number of checklist options that are true
-        if (checklistTruesA > checklistTruesB) return -1
-        if (checklistTruesA < checklistTruesB) return 1
+        // if (checklistTruesA > checklistTruesB) return -1
+        // if (checklistTruesA < checklistTruesB) return 1
 
         // Then sort by stakingType first
         const stakingOrderA = stakingTypeOrder.indexOf(a.stakingType)

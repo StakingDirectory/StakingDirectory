@@ -265,7 +265,7 @@ const dataProps = [
         ],
     },
     {
-        isTableHeader: true,
+        isTableHeader: false,
         type: "checkbox",
         id: "checklist",
         name: "Checklist",

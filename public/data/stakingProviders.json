@@ -2887,7 +2887,7 @@
     },
     {
         "id": 873344,
-        "status": "dev",
+        "status": "active",
         "stakeFromHome": true,
         "stakingType": "pooled",
         "providerType": "no",
@@ -2960,7 +2960,7 @@
     },
     {
         "id": 335266,
-        "status": "dev",
+        "status": "active",
         "stakeFromHome": false,
         "stakingType": "lst",
         "providerType": "no",
