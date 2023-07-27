@@ -1011,7 +1011,9 @@
         },
         "links": {
             "website": "https://dashboard.senseinode.com/en/senseistake",
-            "twitter": ""
+            "twitter": "https://twitter.com/SenseiNode",
+            "telegram": "https://t.me/senseinodechat",
+            "repo": "https://github.com/Sensei-Node"
         },
         "minStake": {
             "type": "eth",
