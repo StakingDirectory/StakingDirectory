@@ -2972,7 +2972,7 @@
         },
         "minStake": {
             "type": "eth",
-            "value": "0.01"
+            "value": "0.0001"
         },
         "openSource": {
             "value": true,
