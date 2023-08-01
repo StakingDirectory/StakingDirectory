@@ -3232,5 +3232,67 @@
             "website": "https://www.blockdaemon.com/",
             "twitter": "https://twitter.com/BlockdaemonHQ"
         }
+    },
+    {
+        "id": 511558,
+        "status": "dev",
+        "stakeFromHome": false,
+        "stakingType": "managed",
+        "providerType": "no",
+        "fee": {
+            "type": "other",
+            "value": 0
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": ""
+        },
+        "openSource": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "audited": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "bugBounty": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "nonCensoringRelays": {
+            "value": true,
+            "evidenceLink": ""
+        },
+        "permissionlessUsage": {
+            "value": true,
+            "evidenceLink": ""
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "diverseExecutionClients": {
+            "value": true,
+            "evidenceLink": ""
+        },
+        "diverseBeaconClients": {
+            "value": true,
+            "evidenceLink": ""
+        },
+        "name": "Serenita",
+        "logo": {
+            "evidenceLink": "https://serenita.io/logo.png"
+        },
+        "description": "At Serenita, we understand the complexities involved in efficiently managing digital assets, particularly when it comes to Ethereum. Our team of seasoned professionals possesses a wealth of knowledge and experience in the field of blockchain technology, managing infrastructure and cybersecurity.\n\nWe leverage this expertise to offer a suite of reliable and secure services designed to optimize returns on digital assets.",
+        "validatorKey": {
+            "nodeOperator": true
+        },
+        "withdrawalKey": {
+            "userWithdrawal": true
+        },
+        "links": {
+            "website": "https://serenita.io",
+            "twitter": "https://twitter.com/SerenitaIO"
+        }
     }
 ]
