@@ -3235,17 +3235,17 @@
     },
     {
         "id": 511558,
-        "status": "dev",
+        "status": "active",
         "stakeFromHome": false,
         "stakingType": "managed",
         "providerType": "no",
         "fee": {
             "type": "other",
-            "value": 0
+            "value": "Custom"
         },
         "minStake": {
-            "type": "anyAmount",
-            "value": ""
+            "type": "eth",
+            "value": "32"
         },
         "openSource": {
             "value": false,
@@ -3281,7 +3281,9 @@
         },
         "name": "Serenita",
         "logo": {
-            "evidenceLink": "https://serenita.io/logo.png"
+            "evidenceLink": "https://serenita.io/logo.png",
+            "src": "./images/SerenitaLogo.png",
+            "alt": "Serenita Logo"
         },
         "description": "At Serenita, we understand the complexities involved in efficiently managing digital assets, particularly when it comes to Ethereum. Our team of seasoned professionals possesses a wealth of knowledge and experience in the field of blockchain technology, managing infrastructure and cybersecurity.\n\nWe leverage this expertise to offer a suite of reliable and secure services designed to optimize returns on digital assets.",
         "validatorKey": {
@@ -3293,6 +3295,10 @@
         "links": {
             "website": "https://serenita.io",
             "twitter": "https://twitter.com/SerenitaIO"
+        },
+        "mainnetLaunch": {
+            "date": "2023-08-04",
+            "evidenceLink": "https://github.com/StakingDirectory/StakingDirectory/pull/49#issuecomment-1664448632"
         }
     }
 ]
