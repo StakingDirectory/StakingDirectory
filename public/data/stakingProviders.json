@@ -3287,7 +3287,8 @@
         },
         "description": "At Serenita, we understand the complexities involved in efficiently managing digital assets, particularly when it comes to Ethereum. Our team of seasoned professionals possesses a wealth of knowledge and experience in the field of blockchain technology, managing infrastructure and cybersecurity.\n\nWe leverage this expertise to offer a suite of reliable and secure services designed to optimize returns on digital assets.",
         "validatorKey": {
-            "nodeOperator": true
+            "nodeOperator": false,
+            "service": true
         },
         "withdrawalKey": {
             "userWithdrawal": true
