@@ -531,8 +531,8 @@
         "name": "Allnodes",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2018-10-08",
+            "evidenceLink": "https://twitter.com/Allnodes/status/1689998185140211713"
         },
         "stakingType": "managed",
         "providerType": "no",
@@ -586,7 +586,8 @@
             "value": false,
             "evidenceLink": ""
         },
-        "stakeFromHome": false
+        "stakeFromHome": false,
+        "description": "Allnodes is a leading platform, which provides reliable non-custodial nodes hosting and staking services."
     },
     {
         "id": 13,
