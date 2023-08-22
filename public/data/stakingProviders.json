@@ -3303,5 +3303,72 @@
             "date": "2023-08-04",
             "evidenceLink": "https://github.com/StakingDirectory/StakingDirectory/pull/49#issuecomment-1664448632"
         }
+    },
+    {
+        "id": 416543,
+        "status": "active",
+        "stakeFromHome": false,
+        "stakingType": "managed",
+        "providerType": "no",
+        "fee": {
+            "type": "percentage",
+            "value": 0
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "openSource": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "audited": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "bugBounty": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "nonCensoringRelays": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "permissionlessUsage": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "permissionlessOperators": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "diverseExecutionClients": {
+            "value": true,
+            "evidenceLink": ""
+        },
+        "diverseBeaconClients": {
+            "value": false,
+            "evidenceLink": ""
+        },
+        "name": "Twinstake",
+        "logo": {
+            "evidenceLink": "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftwinstake.io%2Fabout%2F&psig=AOvVaw2CRRFVeW3poP6tDiP8NJUV&ust=1692777878850000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCNDUjpTn74ADFQAAAAAdAAAAABAD"
+        },
+        "mainnetLaunch": {
+            "date": "20222-07-01"
+        },
+        "description": "Twinstake is an institutional-grade, non-custodial staking provider designed and built in collaboration with leaders in the digital assets space.",
+        "validatorKey": {
+            "nodeOperator": true,
+            "service": true
+        },
+        "withdrawalKey": {
+            "userWithdrawal": true
+        },
+        "links": {
+            "website": "https://twinstake.io",
+            "twitter": "https://twitter.com/twinstake_io",
+            "repo": "https://github.com/twinstake"
+        }
     }
 ]
