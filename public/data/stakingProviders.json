@@ -2484,7 +2484,7 @@
         "providerType": "no",
         "fee": {
             "type": "percentage",
-            "value": "10%"
+            "value": "10"
         },
         "links": {
             "website": "https://diva.community",
