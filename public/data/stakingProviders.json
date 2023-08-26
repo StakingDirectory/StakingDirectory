@@ -3311,8 +3311,8 @@
         "stakingType": "managed",
         "providerType": "no",
         "fee": {
-            "type": "percentage",
-            "value": 0
+            "type": "other",
+            "value": "Custom"
         },
         "minStake": {
             "type": "eth",
