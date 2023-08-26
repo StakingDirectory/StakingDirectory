@@ -2474,7 +2474,7 @@
             "src": "./images/DivaLogo.png",
             "alt": "Logo"
         },
-        "name": "Diva (LST)",
+        "name": "Diva Staking (LST)",
         "status": "dev",
         "mainnetLaunch": {
             "date": "",
@@ -2483,25 +2483,28 @@
         "stakingType": "lst",
         "providerType": "no",
         "fee": {
-            "type": "other",
-            "value": "🤔"
+            "type": "percentage",
+            "value": "10%"
         },
         "links": {
-            "website": "https://stake.divalabs.org/",
-            "twitter": ""
+            "website": "https://diva.community",
+            "twitter": "https://twitter.com/divastaking",
+            "discord": "https://discord.gg/diva",
+            "telegram": "https://t.me/followdiva",
+            "repo": "https://github.com/staking-foundation"
         },
         "minStake": {
-            "type": "anyAmount",
+            "type": "eth",
             "value": "Any amount"
         },
         "validatorKey": {
-            "service": true
+            "service": false
         },
         "withdrawalKey": {
             "smartContract": true
         },
         "openSource": {
-            "value": false,
+            "value": true,
             "evidenceLink": ""
         },
         "audited": {
@@ -2513,27 +2516,28 @@
             "evidenceLink": ""
         },
         "nonCensoringRelays": {
-            "value": false,
+            "value": true,
             "evidenceLink": ""
         },
         "permissionlessUsage": {
-            "value": false,
+            "value": true,
             "evidenceLink": ""
         },
         "permissionlessOperators": {
-            "value": false,
+            "value": true,
             "evidenceLink": ""
         },
         "diverseExecutionClients": {
-            "value": false,
+            "value": true,
             "evidenceLink": ""
         },
         "diverseBeaconClients": {
-            "value": false,
+            "value": true,
             "evidenceLink": ""
         },
-        "lstName": "dvETH",
-        "stakeFromHome": false
+        "lstName": "divETH",
+        "stakeFromHome": true,
+        "description": "Diva is an Ethereum Liquid Staking protocol powered by Distributed Validator Technology (DVT).\n\nIt extends Ethereums Proof of Stake providing new functionality for Stakers and Operators:\n\n- Liquid Stakers receive divETH, a Liquid Staking Token which accrues Ethereum Staking Rewards.\n- Operators run a Distributed Validation node to fulfill staking duties and earn additional Operator Rewards.\n\ndivETH is a receipt token and its balance updates daily to reflect the deposited ETH balance plus its accrued Ethereum staking rewards.\n\nWhile other solutions have some of these features, Diva is the first solution that fully integrates Liquid Staking with Distributed Validation, offering both Liquid Stakers and Operators the most efficient functionality.\n\n**Liquid Staking**\n\n🌱 No minimum ETH to stake.\n👏 No requirement to run a node.\n💧 Liquid Staking Tokens without lockups.\n\n**More Resilient Operations**\n\n🌳 Resilient: Nodes are fully disposable.\n❤️‍🔥 Self-healing: Ability to regenerate lost keys.\n💠 Redundancy: ~500x better uptime thanks to DVT fallbacks.\n\n**Incentives and Penalties**\n\n📈 Smooth Staking Rewards.\n⛔️ Quick ejection of bad actors.\n"
     },
     {
         "id": 43,
