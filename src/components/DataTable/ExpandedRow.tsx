@@ -41,7 +41,7 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
                     direction={"column"}
                     gap={3}
                     className={"expandContentBox"}
-                    minH={provider.providerType === "hardware" ? 180 : 250}
+                    minH={provider.providerType === "hardware" ? 150 : 230}
                     overflow={"hidden"}
                     position={"relative"}
                     pb={isDescriptionOverflowing ? 50 : 2}
@@ -49,7 +49,7 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
                     <Flex
                         direction={"column"}
                         gap={3}
-                        maxH={isDescriptionExpanded ? "1000px" : provider.providerType === "hardware" ? "105px" : "180px"}
+                        maxH={isDescriptionExpanded ? "1000px" : provider.providerType === "hardware" ? "80px" : "150px"}
                         overflow={isDescriptionExpanded ? "scroll" : "hidden"}
                         ref={markdownRef}
                         transition={isDescriptionExpanded ? "all 1s" : "all 0.2s"}

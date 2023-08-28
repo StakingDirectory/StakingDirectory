@@ -43,6 +43,13 @@ import ExpandedRow from "./ExpandedRow"
 
 import dataProps from "public/data/dataProps"
 
+function getFormattedDate(dateString) {
+    const date = new Date(dateString)
+    const month = date.toLocaleString("default", { month: "short" })
+    const year = date.getFullYear()
+    return `${month} ${year}`
+}
+
 export default function DataTable({ stakingProviders, status, dataFilter, setDataFilter }) {
     const isSSR = typeof window === "undefined"
     const nameInputRef = useRef<HTMLInputElement>(null)
@@ -281,6 +288,11 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                         </Td>
                                         <Td textAlign={"center"} fontWeight={"bold"}>
                                             {provider.minStake?.type == "anyAmount" ? "Any amount" : `${provider.minStake?.value} ETH`}
+                                        </Td>
+                                        <Td textAlign={"center"} fontWeight={"bold"}>
+                                            <Text fontWeight={"bold"}>
+                                                {provider?.mainnetLaunch?.date ? getFormattedDate(provider?.mainnetLaunch?.date) : "-"}
+                                            </Text>
                                         </Td>
                                         <Td>
                                             <ChecklistBar

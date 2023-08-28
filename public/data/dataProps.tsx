@@ -214,6 +214,14 @@ const dataProps = [
         options: [],
     },
     {
+        isTableHeader: true,
+        type: "other",
+        id: "mainnetLaunch",
+        name: "Mainnet Launch",
+        headerText: "MAINNET <br /> LAUNCH",
+        options: [],
+    },
+    {
         isTableHeader: false,
         type: "checkboxKeyOwner",
         id: "validatorKey",
