@@ -14,7 +14,6 @@ export default function Links({ provider }) {
                 { type: "Twitter", icon: faXTwitter },
                 { type: "Discord", icon: faDiscord },
                 { type: "Telegram", icon: faTelegram },
-                { type: "Repo", icon: faCode },
             ].map((linkData) => {
                 const href = provider.links?.[linkData.type.toLowerCase()]
                 const button = (

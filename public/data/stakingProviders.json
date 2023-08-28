@@ -60,8 +60,7 @@
         },
         "links": {
             "website": "https://ava.do/",
-            "twitter": "https://twitter.com/AvadoCloud",
-            "repo": "https://github.com/AvadoDServer/"
+            "twitter": "https://twitter.com/AvadoCloud"
         },
         "minStake": {
             "type": "eth",
@@ -128,8 +127,7 @@
         "links": {
             "website": "https://dappnode.io/",
             "twitter": "https://twitter.com/DAppNode",
-            "discord": "https://discord.gg/dappnode",
-            "repo": "https://github.com/dappnode"
+            "discord": "https://discord.gg/dappnode"
         },
         "minStake": {
             "type": "eth",
@@ -197,8 +195,7 @@
         "links": {
             "website": "https://ethereum-on-arm-documentation.readthedocs.io/",
             "twitter": "https://twitter.com/EthereumOnARM",
-            "discord": "https://t.co/HyeqBMjtnS",
-            "repo": "https://github.com/diglos/ethereumonarm"
+            "discord": "https://t.co/HyeqBMjtnS"
         },
         "minStake": {
             "type": "eth",
@@ -400,8 +397,7 @@
         "links": {
             "website": "https://stereum.net/ethereum-node-setup/",
             "twitter": "https://twitter.com/stereumdev",
-            "discord": "https://discord.com/invite/df8r5PVX9P",
-            "repo": "https://github.com/stereum-dev/ethereum-node"
+            "discord": "https://discord.com/invite/df8r5PVX9P"
         },
         "minStake": {
             "type": "eth",
@@ -602,8 +598,7 @@
         "links": {
             "website": "https://www.attestant.io/",
             "twitter": "https://twitter.com/attestantio",
-            "discord": "https://discord.gg/egRsdKp",
-            "repo": "https://github.com/attestantio"
+            "discord": "https://discord.gg/egRsdKp"
         },
         "minStake": {
             "type": "eth",
@@ -737,8 +732,7 @@
         "links": {
             "website": "https://www.bloxstaking.com/",
             "twitter": "",
-            "discord": "https://discord.gg/Aw2dH6cX6j",
-            "repo": "https://github.com/bloxapp/blox-live"
+            "discord": "https://discord.gg/Aw2dH6cX6j"
         },
         "minStake": {
             "type": "eth",
@@ -752,7 +746,7 @@
         },
         "sourceCode": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/bloxapp/blox-live"
         },
         "auditReports": {
             "value": true,
@@ -1005,8 +999,7 @@
         "links": {
             "website": "https://dashboard.senseinode.com/en/senseistake",
             "twitter": "https://twitter.com/SenseiNode",
-            "telegram": "https://t.me/senseinodechat",
-            "repo": "https://github.com/Sensei-Node"
+            "telegram": "https://t.me/senseinodechat"
         },
         "minStake": {
             "type": "eth",
@@ -1020,7 +1013,7 @@
         },
         "sourceCode": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/Sensei-Node"
         },
         "auditReports": {
             "value": false,
@@ -1273,8 +1266,7 @@
             "website": "https://rocketpool.net/node-operators",
             "twitter": "https://twitter.com/Rocket_Pool",
             "discord": "https://discord.gg/rocketpool",
-            "telegram": "",
-            "repo": "https://github.com/rocket-pool"
+            "telegram": ""
         },
         "minStake": {
             "type": "eth",
@@ -1867,8 +1859,7 @@
         },
         "links": {
             "website": "https://app.stakewise.io/",
-            "twitter": "https://twitter.com/stakewise_io",
-            "repo": "https://github.com/stakewise"
+            "twitter": "https://twitter.com/stakewise_io"
         },
         "minStake": {
             "type": "anyAmount",
@@ -1882,7 +1873,7 @@
         },
         "sourceCode": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/stakewise"
         },
         "auditReports": {
             "value": false,
@@ -2005,7 +1996,6 @@
         "links": {
             "website": "https://app.frax.finance/frxeth/mint",
             "twitter": "https://twitter.com/fraxfinance",
-            "repo": "https://github.com/FraxFinance",
             "discord": "https://discord.gg/MTZu6Hf57d",
             "telegram": "https://t.me/fraxfinance"
         },
@@ -2021,7 +2011,7 @@
         },
         "sourceCode": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/FraxFinance"
         },
         "auditReports": {
             "value": false,
@@ -2075,7 +2065,6 @@
         "links": {
             "website": "https://stake.rocketpool.net/",
             "twitter": "https://twitter.com/Rocket_Pool",
-            "repo": "https://github.com/rocket-pool",
             "discord": "https://discord.gg/rocketpool"
         },
         "minStake": {
@@ -2482,8 +2471,7 @@
             "website": "https://diva.community",
             "twitter": "https://twitter.com/divastaking",
             "discord": "https://discord.gg/diva",
-            "telegram": "https://t.me/followdiva",
-            "repo": "https://github.com/staking-foundation"
+            "telegram": "https://t.me/followdiva"
         },
         "minStake": {
             "type": "eth",
@@ -2497,7 +2485,7 @@
         },
         "sourceCode": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/staking-foundation"
         },
         "auditReports": {
             "value": false,
@@ -2552,8 +2540,7 @@
         "links": {
             "website": "https://www.swellnetwork.io/",
             "twitter": "https://twitter.com/swellnetworkio",
-            "discord": "https://discord.gg/swellnetworkdao",
-            "repo": "https://github.com/SwellNetwork"
+            "discord": "https://discord.gg/swellnetworkdao"
         },
         "minStake": {
             "type": "anyAmount",
@@ -2567,7 +2554,7 @@
         },
         "sourceCode": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/SwellNetwork"
         },
         "auditReports": {
             "value": true,
@@ -2624,7 +2611,6 @@
             "website": "https://stake.lido.fi/",
             "twitter": "https://twitter.com/LidoFinance",
             "discord": "https://discord.com/invite/lido",
-            "repo": "https://github.com/lidofinance",
             "telegram": "https://t.me/lidofinance"
         },
         "minStake": {
@@ -2738,8 +2724,7 @@
         },
         "description": "An Ethereum validator installation wizard meant to guide anyone through the different steps to become a fully functional validator on the Ethereum network. It will install and configure all the software needed to become a validator. It will test your installation. It will help you avoid the common pitfalls. It will help you maintain and keep your setup updated.",
         "links": {
-            "website": "https://github.com/stake-house/eth-wizard",
-            "repo": "https://github.com/stake-house/eth-wizard"
+            "website": "https://github.com/stake-house/eth-wizard"
         }
     },
     {
@@ -2880,7 +2865,6 @@
         "links": {
             "website": "https://docs.sedge.nethermind.io/",
             "twitter": "https://twitter.com/NethermindEth",
-            "repo": "https://github.com/NethermindEth/sedge",
             "discord": "https://discord.com/invite/PaCMRFdvWT"
         },
         "description": "Sedge is a one-click node setup tool for PoS network/chain validators and nodes written entirely in the Go programming language.\n\nSedge takes care of the entire on-premise full node setup based on the chosen client, using generated docker-compose scripts based on the desired configuration."
@@ -2953,8 +2937,7 @@
             "website": "https://www.staderlabs.com/eth/node-operators/",
             "twitter": "https://twitter.com/staderlabs_eth",
             "discord": "https://discord.com/invite/xJURAhSmav",
-            "telegram": "https://t.me/Staderlabs_Ethereum_Official",
-            "repo": "https://github.com/stader-labs"
+            "telegram": "https://t.me/Staderlabs_Ethereum_Official"
         },
         "description": "Stader empowers node operators to decentralize ETH staking.\n\nStader has lowered the entry barrier for permissionless validators to an industry-low bond: 4 ETH + 0.4 ETH worth of SD as collateral."
     },
@@ -3020,8 +3003,7 @@
             "website": "https://www.staderlabs.com/eth/stake/",
             "twitter": "https://twitter.com/staderlabs_eth",
             "discord": "https://discord.com/invite/xJURAhSmav",
-            "telegram": "https://t.me/Staderlabs_Ethereum_Official",
-            "repo": "https://github.com/stader-labs"
+            "telegram": "https://t.me/Staderlabs_Ethereum_Official"
         },
         "logo": {
             "evidenceLink": "https://www.staderlabs.com/assets/images/stader-icon.svg",
@@ -3162,8 +3144,7 @@
         "links": {
             "website": "https://joinstakehouse.com/",
             "twitter": "https://twitter.com/stakehouse_BSN",
-            "discord": "https://discord.gg/HUqnbKAES5",
-            "repo": "https://github.com/stakehouse-dev"
+            "discord": "https://discord.gg/HUqnbKAES5"
         },
         "lstName": "dETH"
     },
@@ -3316,7 +3297,7 @@
         },
         "sourceCode": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/twinstake"
         },
         "auditReports": {
             "value": false,
@@ -3363,8 +3344,7 @@
         },
         "links": {
             "website": "https://twinstake.io",
-            "twitter": "https://twitter.com/twinstake_io",
-            "repo": "https://github.com/twinstake"
+            "twitter": "https://twitter.com/twinstake_io"
         }
     }
 ]

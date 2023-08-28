@@ -41,7 +41,7 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
                     direction={"column"}
                     gap={3}
                     className={"expandContentBox"}
-                    minH={provider.providerType === "hardware" ? 228 : 305}
+                    minH={provider.providerType === "hardware" ? 180 : 250}
                     overflow={"hidden"}
                     position={"relative"}
                     pb={isDescriptionOverflowing ? 50 : 2}
@@ -49,7 +49,7 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
                     <Flex
                         direction={"column"}
                         gap={3}
-                        maxH={isDescriptionExpanded ? "1000px" : provider.providerType === "hardware" ? "150px" : "235px"}
+                        maxH={isDescriptionExpanded ? "1000px" : provider.providerType === "hardware" ? "105px" : "180px"}
                         overflow={isDescriptionExpanded ? "scroll" : "hidden"}
                         ref={markdownRef}
                         transition={isDescriptionExpanded ? "all 1s" : "all 0.2s"}
@@ -90,14 +90,14 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
                     <KeyOwner provider={provider} id={"validatorKey"} />
                     <KeyOwner provider={provider} id={"withdrawalKey"} />
                 </Flex>
-                <Flex direction={"column"} className={"expandContentBox"} gap={3}>
+                {/* <Flex direction={"column"} className={"expandContentBox"} gap={3}>
                     <Flex gap={1}>
                         <Text fontWeight={"bold"}>Locations </Text>
                         <Text fontSize={"sm"}> (Coming soon!)</Text>
                     </Flex>
 
                     <Box as={FontAwesomeIcon} icon={faMapPin} size={"3x"} />
-                </Flex>
+                </Flex> */}
             </Flex>
             <ChecklistList provider={provider} expandedChecklistRows={expandedChecklistRows} setExpandedChecklistRows={setExpandedChecklistRows} />
         </Flex>
