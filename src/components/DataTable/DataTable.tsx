@@ -32,6 +32,7 @@ import HeaderMenuType from "./TableHeaders/HeaderMenuType"
 import HeaderMenuNameSearch from "./TableHeaders/HeaderMenuNameSearch"
 import HeaderMenuPlaceholder from "./TableHeaders/HeaderMenuPlaceholder"
 
+import MainnetLaunchDate from "./TableCells/MainnetLaunchDate"
 import StakeFromHome from "./TableCells/StakeFromHome"
 import ChecklistBar from "./TableCells/ChecklistBar"
 import StakingType from "./TableCells/StakingType"
@@ -42,13 +43,6 @@ import ClearFiltersButton from "./ClearFiltersButton"
 import ExpandedRow from "./ExpandedRow"
 
 import dataProps from "public/data/dataProps"
-
-function getFormattedDate(dateString) {
-    const date = new Date(dateString)
-    const month = date.toLocaleString("default", { month: "short" })
-    const year = date.getFullYear()
-    return `${month} ${year}`
-}
 
 export default function DataTable({ stakingProviders, status, dataFilter, setDataFilter }) {
     const isSSR = typeof window === "undefined"
@@ -290,9 +284,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                             {provider.minStake?.type == "anyAmount" ? "Any amount" : `${provider.minStake?.value} ETH`}
                                         </Td>
                                         <Td textAlign={"center"} fontWeight={"bold"}>
-                                            <Text fontWeight={"bold"}>
-                                                {provider?.mainnetLaunch?.date ? getFormattedDate(provider?.mainnetLaunch?.date) : "-"}
-                                            </Text>
+                                            <MainnetLaunchDate provider={provider} />
                                         </Td>
                                         <Td>
                                             <ChecklistBar

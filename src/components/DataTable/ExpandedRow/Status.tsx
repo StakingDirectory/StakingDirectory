@@ -19,7 +19,7 @@ export default function Status({ provider }) {
                     onClick={() => hasEvidenceLink && window.open(provider.mainnetLaunch.evidenceLink, "_blank")}
                 >
                     {provider.status == "active" ? (
-                        <Flex gap={2} justifyContent={"center"} alignItems={"center"}>
+                        <Flex gap={3} justifyContent={"center"} alignItems={"center"}>
                             <Text>Active</Text>
                             {hasEvidenceLink && <FontAwesomeIcon icon={faArrowUpRightFromSquare} />}
                         </Flex>

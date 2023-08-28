@@ -385,7 +385,7 @@
         "name": "Stereum",
         "status": "active",
         "mainnetLaunch": {
-            "date": "2020-11-26",
+            "date": "2020-12-01",
             "evidenceLink": "https://discord.com/channels/769190437050122311/769190851992617000/781508073260974080"
         },
         "stakingType": "solo",
@@ -519,7 +519,7 @@
         "name": "Allnodes",
         "status": "active",
         "mainnetLaunch": {
-            "date": "2018-10-08",
+            "date": "2020-12-01",
             "evidenceLink": "https://twitter.com/Allnodes/status/1689998185140211713"
         },
         "stakingType": "managed",
@@ -2597,7 +2597,7 @@
         "name": "Lido",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
+            "date": "2020-12-01",
             "evidenceLink": ""
         },
         "stakingType": "lst",

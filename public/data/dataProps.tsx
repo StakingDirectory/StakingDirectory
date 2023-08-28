@@ -250,13 +250,13 @@ const dataProps = [
         name: "Checklist",
         headerText: "DO YOUR <br /> OWN RESEARCH",
         options: [
+            { value: "howToUse", color: "", icon: faUsers },
             { value: "sourceCode", color: "", icon: faBookOpen },
-            { value: "bugBounty", color: "", icon: faBug },
             { value: "auditReports", color: "", icon: faMagnifyingGlass },
-            { value: "mevRelays", color: "", icon: faVolumeHigh },
+            { value: "bugBounty", color: "", icon: faBug },
             { value: "executionClients", color: "", icon: faShapes },
             { value: "beaconClients", color: "", icon: faListUl },
-            { value: "howToUse", color: "", icon: faUsers },
+            { value: "mevRelays", color: "", icon: faVolumeHigh },
         ],
     },
 ]
