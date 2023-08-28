@@ -28,9 +28,6 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
         const value = provider[id.value]?.evidenceLink
         const description = id.description
         const href = provider[id.value]?.evidenceLink
-        const iconColor = value ? "blueLink" : "gray"
-        const icon = value ? faInfo : faLinkSlash
-        const size = value ? "sm" : "xs"
 
         const isOpen = expandedChecklistRows.some((row) => row.index === index && row.providerId === provider.id)
 
@@ -52,20 +49,8 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
                             transition="all 0.2s"
                             size={"sm"}
                             transform={`rotate(${isOpen ? 90 : 0}deg)`}
-                            mr={3}
-                            ml={2}
+                            mx={2}
                         />
-                        <Flex
-                            className="pageBackgroundInverted"
-                            justifyContent={"center"}
-                            alignItems={"center"}
-                            borderRadius={"100%"}
-                            boxSize={6}
-                            mr={1}
-                            bgColor={iconColor}
-                        >
-                            <FontAwesomeIcon icon={icon} size={size} />
-                        </Flex>
                         <Text>{name}</Text>
                     </HStack>
                     {href ? (

@@ -102,23 +102,12 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                         <Text fontWeight={"extrabold"} fontSize={"lg"} pb={2}>
                                             How is the list ordered?
                                         </Text>
-                                        {/* <Flex alignItems={"start"}>
-                                            <Text minW={6} fontWeight={"extrabold"} textAlign={"start"}>
-                                                1.
-                                            </Text>
-                                            <Text textAlign={"left"}>
-                                                First, by the number of checklist items that are&nbsp;
-                                                <Box as="span" color={"green"}>
-                                                    green
-                                                </Box>
-                                            </Text>
-                                        </Flex> */}
                                         <Flex alignItems={"start"}>
                                             <Text minW={6} fontWeight={"extrabold"} textAlign={"start"}>
                                                 1.
                                             </Text>
                                             <Text textAlign={"left"}>
-                                                By the staking type &nbsp;(
+                                                First, by the staking type &nbsp;(
                                                 <Box as="span" color={"green"}>
                                                     Solo
                                                 </Box>
@@ -144,6 +133,18 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                         <Flex alignItems={"start"}>
                                             <Text minW={6} fontWeight={"extrabold"} textAlign={"start"}>
                                                 2.
+                                            </Text>
+                                            <Text textAlign={"left"}>Then, by the number of checklist items that are available</Text>
+                                        </Flex>
+                                        <Flex alignItems={"start"}>
+                                            <Text minW={6} fontWeight={"extrabold"} textAlign={"start"}>
+                                                3.
+                                            </Text>
+                                            <Text textAlign={"left"}>Then, by the mainnet launch date</Text>
+                                        </Flex>
+                                        <Flex alignItems={"start"}>
+                                            <Text minW={6} fontWeight={"extrabold"} textAlign={"start"}>
+                                                4.
                                             </Text>
                                             <Text textAlign={"left"}>Then, if all the previous steps are identical, they are ordered by name</Text>
                                         </Flex>

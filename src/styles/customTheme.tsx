@@ -46,10 +46,11 @@ const customTheme = extendTheme({
             ".borderColorDivider": {
                 borderColor: props.colorMode === "dark" ? "divider.dark" : "divider.light",
             },
-            ".checklistBar": {
-                bg: props.colorMode === "dark" ? "checklistBar.dark" : "checklistBar.light",
+            ".checklistBarBorder": {
                 borderColor: props.colorMode === "dark" ? "checklistBar.dark" : "checklistBar.light",
             },
+            ".checklistBarBackground": { bg: "purple" },
+            ".checklistBarBackgroundTransparent": { bg: "purpleTransparent" },
             ".expandedTableRow": {
                 _hover: {
                     bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
@@ -450,8 +451,7 @@ const customTheme = extendTheme({
         pink: "#b124b1",
         purple: "#54199b",
         orange: "#d66b13",
-        blueLink: "#3a29c1",
-        gray: "#808080",
+        purpleTransparent: "rgba(83, 25, 155, 0.3)",
     },
 })
 

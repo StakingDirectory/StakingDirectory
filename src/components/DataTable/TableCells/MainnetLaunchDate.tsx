@@ -13,7 +13,7 @@ export default function MainnetLaunchDate({ provider }) {
             placement={"top"}
             gutter={8}
             openDelay={300}
-            label={<Box className={"tooltipLabel"}>{provider.name} was live at the time the Beacon Chain launched</Box>}
+            label={<Box className={"tooltipLabel"}>{provider.name} was live when the Beacon Chain launched</Box>}
             className="tooltipArrow"
             hasArrow={true}
         >
