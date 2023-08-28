@@ -265,11 +265,11 @@ const dataProps = [
         ],
     },
     {
-        isTableHeader: false,
+        isTableHeader: true,
         type: "checkbox",
         id: "checklist",
         name: "Checklist",
-        headerText: "CHECKLIST",
+        headerText: "DO YOUR <br /> OWN RESEARCH",
         options: [
             { value: "openSource", color: "", icon: faBookOpen },
             { value: "bugBounty", color: "", icon: faBug },

@@ -1,7 +1,7 @@
 import { Flex, Box, Tooltip, Text, HStack } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCheck, faCircleCheck, faCircleXmark, faXmark } from "@fortawesome/free-solid-svg-icons"
+import { faCircleInfo, faCircleCheck, faCircleXmark, faCircleQuestion } from "@fortawesome/free-solid-svg-icons"
 
 import dataProps from "public/data/dataProps"
 const checklistProperties = dataProps.find((prop) => prop.id === "checklistProperties").checklistProperties
@@ -11,8 +11,8 @@ export default function ChecklistBar({ provider, tableRowIndex, expandedRows, se
     const renderBox = (id, index: number) => {
         const name = providerProperties.find((prop) => prop.value === id.value).name
         const value = provider[id.value]?.value
-        const iconColor = value ? "green" : "red"
-        const icon = value ? faCircleCheck : faCircleXmark
+        const iconColor = value ? "blueLink" : "gray"
+        const icon = value ? faCircleInfo : faCircleQuestion
 
         const isFirst = index === 0
         const isLast = index === checklistProperties.length - 1
@@ -34,11 +34,22 @@ export default function ChecklistBar({ provider, tableRowIndex, expandedRows, se
                 key={index}
                 gutter={8}
                 label={
-                    <Flex direction={"column"} alignItems={"center"} gap={2} className="tooltipLabel">
+                    <Flex direction={"column"} alignItems={"center"} className="tooltipLabel">
                         <HStack>
-                            <Box color={iconColor}>
-                                <FontAwesomeIcon icon={icon} size="lg" />
-                            </Box>
+                            <Flex
+                                className="pageBackgroundInverted"
+                                justifyContent={"center"}
+                                alignItems={"center"}
+                                color={iconColor}
+                                borderRadius={50}
+                                minW={3}
+                                maxW={3}
+                                minH={3}
+                                maxH={3}
+                                mr={1}
+                            >
+                                <FontAwesomeIcon icon={icon} size="xl" />
+                            </Flex>
                             <Text>{name}</Text>
                         </HStack>
                     </Flex>
@@ -55,8 +66,9 @@ export default function ChecklistBar({ provider, tableRowIndex, expandedRows, se
                     borderLeftWidth={borderLeftWidth}
                     borderRightWidth={borderRightWidth}
                     className={"checklistBar"}
-                    w={10}
-                    bg={value ? "green" : "red"}
+                    minW={6}
+                    maxW={6}
+                    bg={value ? "blueLink" : "gray"}
                     onClick={(e) => {
                         // Prevent propagation of the event if tableRowIndex is in expandedRows
                         if (expandedRows.includes(tableRowIndex)) {
@@ -65,7 +77,7 @@ export default function ChecklistBar({ provider, tableRowIndex, expandedRows, se
                         setExpandedChecklistRows([{ providerId: provider.id, index }])
                     }}
                 >
-                    <Box as={FontAwesomeIcon} icon={value ? faCheck : faXmark} size={"xs"} pt={{ base: "1", sm: "0" }} mr={1} ml={1} />
+                    <Box as={FontAwesomeIcon} icon={value ? faCircleInfo : faCircleQuestion} pt={{ base: "1", sm: "0" }} mr={1} ml={1} />
                 </Flex>
             </Tooltip>
         )
@@ -73,7 +85,7 @@ export default function ChecklistBar({ provider, tableRowIndex, expandedRows, se
 
     return (
         <Flex justifyContent={"center"}>
-            <Flex borderRadius={10} borderWidth={3} borderStyle="solid" className={"checklistBar"} w={200} h={10} overflow={"hidden"}>
+            <Flex borderRadius={10} borderWidth={3} borderStyle="solid" className={"checklistBar"} h={10} overflow={"hidden"}>
                 {checklistProperties.map((id, index) => renderBox(id, index))}
             </Flex>
         </Flex>

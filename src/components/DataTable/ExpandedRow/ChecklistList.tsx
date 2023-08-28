@@ -2,7 +2,7 @@ import { Flex, Box, Text, HStack, Collapse, Button, Link } from "@chakra-ui/reac
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faArrowUpRightFromSquare, faChevronRight, faLink } from "@fortawesome/free-solid-svg-icons"
-import { faCircleCheck, faCircleXmark } from "@fortawesome/free-solid-svg-icons"
+import { faCircleInfo, faCircleQuestion } from "@fortawesome/free-solid-svg-icons"
 
 import NextLink from "next/link"
 
@@ -29,8 +29,8 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
         const value = provider[id.value]?.value
         const description = id.description[value ? "true" : "false"]
         const href = provider[id.value]?.evidenceLink
-        const iconColor = value ? "green" : "red"
-        const icon = value ? faCircleCheck : faCircleXmark
+        const iconColor = value ? "blueLink" : "gray"
+        const icon = value ? faCircleInfo : faCircleQuestion
 
         const isOpen = expandedChecklistRows.some((row) => row.index === index && row.providerId === provider.id)
 
@@ -53,9 +53,20 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
                         mr={3}
                         ml={2}
                     />
-                    <Box color={iconColor}>
+                    <Flex
+                        className="pageBackgroundInverted"
+                        justifyContent={"center"}
+                        alignItems={"center"}
+                        color={iconColor}
+                        borderRadius={50}
+                        minW={3}
+                        maxW={3}
+                        minH={3}
+                        maxH={3}
+                        mr={1}
+                    >
                         <FontAwesomeIcon icon={icon} size="lg" />
-                    </Box>
+                    </Flex>
                     <Text>{name}</Text>
                 </HStack>
                 <Collapse in={isOpen}>

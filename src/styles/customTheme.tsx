@@ -132,6 +132,9 @@ const customTheme = extendTheme({
                 borderWidth: "3px",
                 borderRadius: "20px",
             },
+            ".pageBackgroundInverted": {
+                bg: props.colorMode === "dark" ? "pageBackground.light" : "pageBackground.dark",
+            },
         }),
     },
     components: {
@@ -447,6 +450,8 @@ const customTheme = extendTheme({
         pink: "#b124b1",
         purple: "#54199b",
         orange: "#d66b13",
+        blueLink: "#3a29c1",
+        gray: "#808080",
     },
 })
 

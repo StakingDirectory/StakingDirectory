@@ -304,14 +304,14 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                         <Td textAlign={"center"} fontWeight={"bold"}>
                                             {provider.minStake?.type == "anyAmount" ? "Any amount" : `${provider.minStake?.value} ETH`}
                                         </Td>
-                                        {/* <Td>
+                                        <Td>
                                             <ChecklistBar
                                                 provider={provider}
                                                 tableRowIndex={index}
                                                 expandedRows={expandedRows}
                                                 setExpandedChecklistRows={setExpandedChecklistRows}
                                             />
-                                        </Td> */}
+                                        </Td>
                                         <Td w={5}>
                                             <DataRowMenuButton provider={provider} />
                                         </Td>
