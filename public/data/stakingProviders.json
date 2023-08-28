@@ -13,36 +13,28 @@
             "type": "eth",
             "value": 32
         },
-        "openSource": {
-            "value": false,
+        "sourceCode": {
             "evidenceLink": ""
         },
-        "audited": {
-            "value": false,
+        "auditReports": {
             "evidenceLink": ""
         },
         "bugBounty": {
-            "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
-            "value": false,
+        "mevRelays": {
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
-            "value": false,
+        "howToUse": {
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
-            "value": false,
+        "operatorRequirements": {
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
-            "value": false,
+        "executionClients": {
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
-            "value": false,
+        "beaconClients": {
             "evidenceLink": ""
         }
     },
@@ -81,11 +73,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/AvadoDServer/"
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -93,23 +85,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
-            "evidenceLink": "https://github.com/AvadoDServer/"
+            "evidenceLink": "https://docs.ava.do/packages/mev-boost/"
         },
-        "permissionlessUsage": {
-            "value": true,
-            "evidenceLink": ""
-        },
-        "permissionlessOperators": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "operatorRequirements": {
+            "value": true,
+            "evidenceLink": ""
+        },
+        "executionClients": {
             "value": true,
             "evidenceLink": "https://github.com/AvadoDServer/"
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": "https://github.com/AvadoDServer/"
         },
@@ -149,11 +141,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/dappnode/DAppNode"
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -161,23 +153,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": "https://dappnode.github.io/explorer/#/"
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": "https://dappnode.github.io/explorer/#/"
         },
@@ -218,11 +210,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/diglos/ethereumonarm"
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -230,23 +222,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": "https://ethereum-on-arm-documentation.readthedocs.io/en/latest/user-guide/mev-boost.html"
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": "https://github.com/diglos/ethereumonarm"
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": "https://github.com/diglos/ethereumonarm"
         },
@@ -286,11 +278,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -298,23 +290,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -352,11 +344,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/eth-educators/eth-docker"
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": "https://gist.github.com/yorickdowne/ebd82c3c43520811ee9b289efc0efe78"
         },
@@ -364,23 +356,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -421,11 +413,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/stereum-dev/ethereum-node"
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": "https://stereum.net/downloads/audits/202211_sba-research.pdf"
         },
@@ -433,23 +425,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -488,11 +480,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -500,23 +492,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -554,11 +546,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -566,23 +558,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -624,11 +616,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/attestantio"
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -636,23 +628,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -690,11 +682,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -702,23 +694,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -758,11 +750,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": ""
         },
@@ -770,23 +762,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -825,11 +817,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -837,23 +829,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -891,11 +883,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": "https://security.kiln.fi/"
         },
@@ -903,23 +895,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -958,11 +950,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": ""
         },
@@ -970,23 +962,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1026,11 +1018,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1038,23 +1030,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1092,11 +1084,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1104,23 +1096,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1158,11 +1150,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": ""
         },
@@ -1170,23 +1162,23 @@
             "value": true,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1224,11 +1216,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1236,23 +1228,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1294,30 +1286,30 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/rocket-pool"
         },
-        "audited": {
+        "auditReports": {
             "value": true
         },
         "bugBounty": {
             "value": true
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true
         },
         "stakeFromHome": true,
@@ -1355,11 +1347,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1367,23 +1359,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1421,11 +1413,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1433,23 +1425,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1488,11 +1480,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1500,23 +1492,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1554,11 +1546,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1566,23 +1558,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1620,11 +1612,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": ""
         },
@@ -1632,23 +1624,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1687,11 +1679,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1699,23 +1691,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1753,11 +1745,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1765,23 +1757,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1820,11 +1812,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1832,23 +1824,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1888,11 +1880,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1900,23 +1892,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1957,11 +1949,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": ""
         },
@@ -1969,23 +1961,23 @@
             "value": true,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2027,11 +2019,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2039,23 +2031,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2096,11 +2088,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/rocket-pool"
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": ""
         },
@@ -2108,23 +2100,23 @@
             "value": true,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -2164,11 +2156,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2176,23 +2168,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2231,11 +2223,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2243,23 +2235,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2298,11 +2290,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2310,23 +2302,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2366,11 +2358,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2378,23 +2370,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2433,11 +2425,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2445,23 +2437,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2503,11 +2495,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2515,23 +2507,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -2573,11 +2565,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": "https://github.com/SwellNetwork/v3-core-public/blob/master/Audit%20Reports/Sigma_Prime_Swell_Network_Security_Assessment_Report_v2_0.pdf"
         },
@@ -2585,23 +2577,23 @@
             "value": true,
             "evidenceLink": "https://immunefi.com/bounty/swell/"
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": "https://www.rated.network/o/Swell?network=mainnet&timeWindow=1d&viewBy=operator&page=1"
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": "https://www.rated.network/o/Swell?network=mainnet&timeWindow=1d&viewBy=operator&page=1"
         },
@@ -2645,11 +2637,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/lidofinance"
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": ""
         },
@@ -2657,23 +2649,23 @@
             "value": true,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": "https://execution-diversity.info/"
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": "https://www.rated.network/o/Lido?network=mainnet"
         },
@@ -2702,11 +2694,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/stake-house/eth-wizard"
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2714,23 +2706,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": "https://github.com/stake-house/eth-wizard"
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": "https://github.com/stake-house/eth-wizard"
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": "https://github.com/stake-house/eth-wizard"
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": "https://github.com/stake-house/eth-wizard"
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": "https://github.com/stake-house/eth-wizard"
         },
@@ -2776,11 +2768,11 @@
             "userWithdrawal": false,
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2788,23 +2780,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2836,11 +2828,11 @@
             "type": "eth",
             "value": 32
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/NethermindEth/sedge"
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2848,23 +2840,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -2907,11 +2899,11 @@
             "type": "eth",
             "value": "4.4"
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/stader-labs"
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": "https://www.staderlabs.com/audits/ethereum/smartcontracts/ETHx_SmartContract_audit_report_by_SigmaPrime_v2.pdf"
         },
@@ -2919,23 +2911,23 @@
             "value": true,
             "evidenceLink": "https://immunefi.com/bounty/staderforeth/"
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": "https://staderlabs.gitbook.io/ethereum/node-operator/permissionless-node-operator/node-registration-and-adding-validators/step-4-configure-stader-services/step-4.10-mev-boost"
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": "https://www.staderlabs.com/eth/node-operators/"
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": "https://www.staderlabs.com/eth/node-operators/"
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": "https://staderlabs.gitbook.io/ethereum/node-operator/permissionless-node-operator/node-registration-and-adding-validators/step-4-configure-stader-services/step-4.3-eth1-execution-client-selection"
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": "https://staderlabs.gitbook.io/ethereum/node-operator/permissionless-node-operator/node-registration-and-adding-validators/step-4-configure-stader-services/step-4.4-eth2-consensus-client-selection"
         },
@@ -2981,11 +2973,11 @@
             "type": "eth",
             "value": "0.0001"
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/stader-labs"
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": "https://www.staderlabs.com/audits/ethereum/smartcontracts/ETHx_SmartContract_audit_report_by_SigmaPrime_v2.pdf"
         },
@@ -2993,23 +2985,23 @@
             "value": true,
             "evidenceLink": "https://immunefi.com/bounty/staderforeth/"
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": "https://staderlabs.gitbook.io/ethereum/node-operator/permissionless-node-operator/node-registration-and-adding-validators/step-4-configure-stader-services/step-4.10-mev-boost"
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": "https://www.staderlabs.com/eth/stake/"
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": "https://www.staderlabs.com/eth/node-operators/"
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": "https://staderlabs.gitbook.io/ethereum/node-operator/permissionless-node-operator/node-registration-and-adding-validators/step-4-configure-stader-services/step-4.3-eth1-execution-client-selection"
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": "https://staderlabs.gitbook.io/ethereum/node-operator/permissionless-node-operator/node-registration-and-adding-validators/step-4-configure-stader-services/step-4.4-eth2-consensus-client-selection"
         },
@@ -3052,11 +3044,11 @@
             "type": "anyAmount",
             "value": ""
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -3064,23 +3056,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -3116,11 +3108,11 @@
             "type": "eth",
             "value": "0.001"
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/stakehouse-dev"
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": "https://github.com/stakehouse-dev/Audits"
         },
@@ -3128,23 +3120,23 @@
             "value": true,
             "evidenceLink": "https://github.com/code-423n4/2022-11-stakehouse"
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": "https://blog.pon.network/a-revolutionary-decentralized-mev-relay-599de11e2da2?gi=57cf0a4f8e26"
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -3189,11 +3181,11 @@
             "type": "eth",
             "value": 32
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": "https://docs.blockdaemon.com/reference/security-audit-certificate"
         },
@@ -3201,23 +3193,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -3253,11 +3245,11 @@
             "type": "eth",
             "value": "32"
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -3265,23 +3257,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -3322,11 +3314,11 @@
             "type": "eth",
             "value": 32
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -3334,23 +3326,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },

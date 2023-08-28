@@ -1,8 +1,7 @@
 import { Flex, Box, Text, HStack, Collapse, Button, Link } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowUpRightFromSquare, faChevronRight, faLink } from "@fortawesome/free-solid-svg-icons"
-import { faCircleInfo, faCircleQuestion } from "@fortawesome/free-solid-svg-icons"
+import { faArrowUpRightFromSquare, faChevronRight, faLink, faCircleQuestion, faInfo, faLinkSlash } from "@fortawesome/free-solid-svg-icons"
 
 import NextLink from "next/link"
 
@@ -26,11 +25,12 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
 
     const renderBox = (id, index: number) => {
         const name = providerProperties.find((prop) => prop.value === id.value).name
-        const value = provider[id.value]?.value
-        const description = id.description[value ? "true" : "false"]
+        const value = provider[id.value]?.evidenceLink
+        const description = id.description
         const href = provider[id.value]?.evidenceLink
         const iconColor = value ? "blueLink" : "gray"
-        const icon = value ? faCircleInfo : faCircleQuestion
+        const icon = value ? faInfo : faLinkSlash
+        const size = value ? "sm" : "xs"
 
         const isOpen = expandedChecklistRows.some((row) => row.index === index && row.providerId === provider.id)
 
@@ -57,15 +57,12 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
                         className="pageBackgroundInverted"
                         justifyContent={"center"}
                         alignItems={"center"}
-                        color={iconColor}
-                        borderRadius={50}
-                        minW={3}
-                        maxW={3}
-                        minH={3}
-                        maxH={3}
+                        borderRadius={"100%"}
+                        boxSize={6}
                         mr={1}
+                        bgColor={iconColor}
                     >
-                        <FontAwesomeIcon icon={icon} size="lg" />
+                        <FontAwesomeIcon icon={icon} size={size} />
                     </Flex>
                     <Text>{name}</Text>
                 </HStack>
@@ -76,7 +73,7 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
                             <Link as={NextLink} href={href} target="_blank">
                                 <Button w={"fit-content"} justifyContent={"start"} borderRadius={10}>
                                     <Flex gap={3}>
-                                        <Text>Evidence link</Text>
+                                        <Text>View {name}</Text>
                                         <Box>
                                             <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
                                         </Box>
@@ -84,13 +81,12 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
                                 </Button>
                             </Link>
                         ) : (
-                            value && (
-                                <Button isDisabled w={"fit-content"} justifyContent={"start"} borderRadius={10}>
-                                    <Flex gap={3}>
-                                        <Text>🤔 Evidence link missing</Text>
-                                    </Flex>
-                                </Button>
-                            )
+                            <Button isDisabled w={"fit-content"} justifyContent={"start"} borderRadius={10}>
+                                <Flex gap={3}>
+                                    <FontAwesomeIcon icon={faCircleQuestion} />
+                                    <Text>Link missing</Text>
+                                </Flex>
+                            </Button>
                         )}
                     </Flex>
                 </Collapse>

@@ -53,16 +53,7 @@ const filterStakingProviders = (dataFilter) => {
                     }
                 } else if (key === "checklist") {
                     let showTechnicalIndicators = true
-                    for (let feature of [
-                        "openSource",
-                        "audited",
-                        "bugBounty",
-                        "nonCensoringRelays",
-                        "permissionlessUsage",
-                        "permissionlessOperators",
-                        "diverseExecutionClients",
-                        "diverseBeaconClients",
-                    ]) {
+                    for (let feature of ["sourceCode", "auditReports", "bugBounty", "mevRelays", "howToUse", "executionClients", "beaconClients"]) {
                         if (dataFilter[key].includes(feature) && !provider[feature]?.value) {
                             showTechnicalIndicators = false
                         }

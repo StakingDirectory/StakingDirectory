@@ -1,7 +1,7 @@
 import { Flex, Box, Tooltip, Text, HStack } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCircleInfo, faCircleCheck, faCircleXmark, faCircleQuestion } from "@fortawesome/free-solid-svg-icons"
+import { faCircleInfo, faInfo, faLinkSlash } from "@fortawesome/free-solid-svg-icons"
 
 import dataProps from "public/data/dataProps"
 const checklistProperties = dataProps.find((prop) => prop.id === "checklistProperties").checklistProperties
@@ -10,9 +10,9 @@ const providerProperties = dataProps.find((prop) => prop.id === "providerPropert
 export default function ChecklistBar({ provider, tableRowIndex, expandedRows, setExpandedChecklistRows }) {
     const renderBox = (id, index: number) => {
         const name = providerProperties.find((prop) => prop.value === id.value).name
-        const value = provider[id.value]?.value
+        const value = provider[id.value]?.evidenceLink
         const iconColor = value ? "blueLink" : "gray"
-        const icon = value ? faCircleInfo : faCircleQuestion
+        const icon = value ? faInfo : faLinkSlash
 
         const isFirst = index === 0
         const isLast = index === checklistProperties.length - 1
@@ -40,15 +40,12 @@ export default function ChecklistBar({ provider, tableRowIndex, expandedRows, se
                                 className="pageBackgroundInverted"
                                 justifyContent={"center"}
                                 alignItems={"center"}
-                                color={iconColor}
-                                borderRadius={50}
-                                minW={3}
-                                maxW={3}
-                                minH={3}
-                                maxH={3}
+                                borderRadius={"100%"}
+                                boxSize={7}
                                 mr={1}
+                                bgColor={iconColor}
                             >
-                                <FontAwesomeIcon icon={icon} size="xl" />
+                                <FontAwesomeIcon icon={icon} />
                             </Flex>
                             <Text>{name}</Text>
                         </HStack>
@@ -77,7 +74,14 @@ export default function ChecklistBar({ provider, tableRowIndex, expandedRows, se
                         setExpandedChecklistRows([{ providerId: provider.id, index }])
                     }}
                 >
-                    <Box as={FontAwesomeIcon} icon={value ? faCircleInfo : faCircleQuestion} pt={{ base: "1", sm: "0" }} mr={1} ml={1} />
+                    <Box
+                        as={FontAwesomeIcon}
+                        icon={value ? faCircleInfo : faLinkSlash}
+                        size={value ? "1x" : "xs"}
+                        pt={{ base: "1", sm: "0" }}
+                        mr={1}
+                        ml={1}
+                    />
                 </Flex>
             </Tooltip>
         )

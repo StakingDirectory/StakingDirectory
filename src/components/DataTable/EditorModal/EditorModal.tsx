@@ -282,17 +282,11 @@ const allOptions = [
         ],
     },
     {
-        id: "openSource",
-        headerName: "Open Source",
+        id: "howToUse",
+        headerName: "How to use",
         fields: [
             {
-                id: "openSource.value",
-                name: "Open Source?",
-                inputType: "selectBool",
-                description: checklistProperties.find((prop) => prop.value === "openSource").description,
-            },
-            {
-                id: "openSource.evidenceLink",
+                id: "howToUse.evidenceLink",
                 name: "Evidence Link",
                 inputType: "input",
                 placeholder: "https://...",
@@ -300,17 +294,23 @@ const allOptions = [
         ],
     },
     {
-        id: "audited",
-        headerName: "Audited",
+        id: "sourceCode",
+        headerName: "Source Code",
         fields: [
             {
-                id: "audited.value",
-                name: "Audited?",
-                inputType: "selectBool",
-                description: checklistProperties.find((prop) => prop.value === "audited").description,
+                id: "sourceCode.evidenceLink",
+                name: "Evidence Link",
+                inputType: "input",
+                placeholder: "https://...",
             },
+        ],
+    },
+    {
+        id: "auditReports",
+        headerName: "Audit reports",
+        fields: [
             {
-                id: "audited.evidenceLink",
+                id: "auditReports.evidenceLink",
                 name: "Evidence Link",
                 inputType: "input",
                 placeholder: "https://...",
@@ -322,12 +322,6 @@ const allOptions = [
         headerName: "Bug Bounty",
         fields: [
             {
-                id: "bugBounty.value",
-                name: "Bug Bounty?",
-                inputType: "selectBool",
-                description: checklistProperties.find((prop) => prop.value === "bugBounty").description,
-            },
-            {
                 id: "bugBounty.evidenceLink",
                 name: "Evidence Link",
                 inputType: "input",
@@ -336,17 +330,11 @@ const allOptions = [
         ],
     },
     {
-        id: "permissionlessUsage",
-        headerName: "Permissionless Usage",
+        id: "executionClients",
+        headerName: "Execution clients",
         fields: [
             {
-                id: "permissionlessUsage.value",
-                name: "Permissionless Usage?",
-                inputType: "selectBool",
-                description: checklistProperties.find((prop) => prop.value === "permissionlessUsage").description,
-            },
-            {
-                id: "permissionlessUsage.evidenceLink",
+                id: "executionClients.evidenceLink",
                 name: "Evidence Link",
                 inputType: "input",
                 placeholder: "https://...",
@@ -354,17 +342,11 @@ const allOptions = [
         ],
     },
     {
-        id: "permissionlessOperators",
-        headerName: "Permissionless Operators",
+        id: "beaconClients",
+        headerName: "Beacon clients",
         fields: [
             {
-                id: "permissionlessOperators.value",
-                name: "Permissionless Operators?",
-                inputType: "selectBool",
-                description: checklistProperties.find((prop) => prop.value === "permissionlessOperators").description,
-            },
-            {
-                id: "permissionlessOperators.evidenceLink",
+                id: "beaconClients.evidenceLink",
                 name: "Evidence Link",
                 inputType: "input",
                 placeholder: "https://...",
@@ -372,53 +354,11 @@ const allOptions = [
         ],
     },
     {
-        id: "nonCensoringRelays",
-        headerName: "Censorship Resistant Relays",
+        id: "mevRelays",
+        headerName: "MEV relays",
         fields: [
             {
-                id: "nonCensoringRelays.value",
-                name: "Censorship Resistant Relays?",
-                inputType: "selectBool",
-                description: checklistProperties.find((prop) => prop.value === "nonCensoringRelays").description,
-            },
-            {
-                id: "nonCensoringRelays.evidenceLink",
-                name: "Evidence Link",
-                inputType: "input",
-                placeholder: "https://...",
-            },
-        ],
-    },
-    {
-        id: "diverseExecutionClients",
-        headerName: "Diverse Execution Clients",
-        fields: [
-            {
-                id: "diverseExecutionClients.value",
-                name: "Diverse Execution Clients?",
-                inputType: "selectBool",
-                description: checklistProperties.find((prop) => prop.value === "diverseExecutionClients").description,
-            },
-            {
-                id: "diverseExecutionClients.evidenceLink",
-                name: "Evidence Link",
-                inputType: "input",
-                placeholder: "https://...",
-            },
-        ],
-    },
-    {
-        id: "diverseBeaconClients",
-        headerName: "Diverse Beacon Clients",
-        fields: [
-            {
-                id: "diverseBeaconClients.value",
-                name: "Diverse Beacon Clients?",
-                inputType: "selectBool",
-                description: checklistProperties.find((prop) => prop.value === "diverseBeaconClients").description,
-            },
-            {
-                id: "diverseBeaconClients.evidenceLink",
+                id: "mevRelays.evidenceLink",
                 name: "Evidence Link",
                 inputType: "input",
                 placeholder: "https://...",
