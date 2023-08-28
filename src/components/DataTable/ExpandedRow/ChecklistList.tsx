@@ -37,57 +37,67 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
         return (
             <Flex key={index} direction={"column"} minH={10} className={isOpen ? "checklistListOpen checklistList" : "checklistList"}>
                 <HStack
-                    py={3}
+                    justifyContent={"space-between"}
+                    py={2}
                     px={2}
                     onClick={() => {
                         expandRow(index)
                     }}
                     cursor={"pointer"}
                 >
-                    <Box
-                        as={FontAwesomeIcon}
-                        icon={faChevronRight}
-                        transition="all 0.2s"
-                        size={"sm"}
-                        transform={`rotate(${isOpen ? 90 : 0}deg)`}
-                        mr={3}
-                        ml={2}
-                    />
-                    <Flex
-                        className="pageBackgroundInverted"
-                        justifyContent={"center"}
-                        alignItems={"center"}
-                        borderRadius={"100%"}
-                        boxSize={6}
-                        mr={1}
-                        bgColor={iconColor}
-                    >
-                        <FontAwesomeIcon icon={icon} size={size} />
-                    </Flex>
-                    <Text>{name}</Text>
+                    <HStack>
+                        <Box
+                            as={FontAwesomeIcon}
+                            icon={faChevronRight}
+                            transition="all 0.2s"
+                            size={"sm"}
+                            transform={`rotate(${isOpen ? 90 : 0}deg)`}
+                            mr={3}
+                            ml={2}
+                        />
+                        <Flex
+                            className="pageBackgroundInverted"
+                            justifyContent={"center"}
+                            alignItems={"center"}
+                            borderRadius={"100%"}
+                            boxSize={6}
+                            mr={1}
+                            bgColor={iconColor}
+                        >
+                            <FontAwesomeIcon icon={icon} size={size} />
+                        </Flex>
+                        <Text>{name}</Text>
+                    </HStack>
+                    {href ? (
+                        <Link as={NextLink} href={href} target="_blank">
+                            <Button
+                                w={"fit-content"}
+                                size={"sm"}
+                                justifyContent={"start"}
+                                borderRadius={10}
+                                onClick={(e) => {
+                                    e.stopPropagation()
+                                }}
+                            >
+                                <Flex gap={3}>
+                                    <Text>View</Text>
+                                    <Box>
+                                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                                    </Box>
+                                </Flex>
+                            </Button>
+                        </Link>
+                    ) : (
+                        <Button isDisabled size={"sm"} w={"fit-content"} justifyContent={"start"} borderRadius={10}>
+                            <Flex gap={3}>
+                                <Text>Link missing</Text>
+                            </Flex>
+                        </Button>
+                    )}
                 </HStack>
                 <Collapse in={isOpen}>
                     <Flex direction={"column"} gap={3} pl={12} pt={1} pb={3} pr={3}>
                         <Text>{description}</Text>
-                        {href ? (
-                            <Link as={NextLink} href={href} target="_blank">
-                                <Button w={"fit-content"} justifyContent={"start"} borderRadius={10}>
-                                    <Flex gap={3}>
-                                        <Text>View {name}</Text>
-                                        <Box>
-                                            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-                                        </Box>
-                                    </Flex>
-                                </Button>
-                            </Link>
-                        ) : (
-                            <Button isDisabled w={"fit-content"} justifyContent={"start"} borderRadius={10}>
-                                <Flex gap={3}>
-                                    <FontAwesomeIcon icon={faCircleQuestion} />
-                                    <Text>Link missing</Text>
-                                </Flex>
-                            </Button>
-                        )}
                     </Flex>
                 </Collapse>
             </Flex>
