@@ -1,6 +1,6 @@
 import { useState } from "react"
 import Header from "./Header/Header"
-import CommunityUpdatePhase from "./CommunityUpdatePhase"
+import CommunityUpdatePhase from "./CommunityUpdates"
 import MainFilterButtons from "./MainFilterButtons"
 import DataTableTabs from "./DataTable/DataTableTabs"
 import Footer from "./Footer"

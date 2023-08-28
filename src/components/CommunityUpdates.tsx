@@ -44,7 +44,7 @@ export default function CommunityUpdatePhase() {
                     />
                     <Flex alignItems={"center"} gap={15} wrap={"wrap"}>
                         <Text fontSize={{ base: "xl", sm: "2lx" }} fontWeight={"extrabold"} mr={5}>
-                            Community Update Phase
+                            Community Updates
                         </Text>
                         {!isOpen && (
                             <Flex gap={15}>
@@ -61,7 +61,7 @@ export default function CommunityUpdatePhase() {
                     <Box px={"1rem"}>
                         <Box mt={{ base: 0, sm: 3 }}></Box>
                         <InfoBlock icon={faMagnifyingGlass} color={"blue"}>
-                            The Community Update Phase is a crucial step before our main launch. It&apos;s an opportunity for the Ethereum staking
+                            Community updates are a crucial part of maintaining this resource. It&apos;s an opportunity for the Ethereum staking
                             community to help us ensure the accuracy of our data. We understand the importance of trust in this space, and that trust
                             is built on accurate, up-to-date information.
                         </InfoBlock>
@@ -71,8 +71,8 @@ export default function CommunityUpdatePhase() {
                             </Flex>
                         )}
                         <InfoBlock icon={faPencil} color={"orange"}>
-                            During this phase, we encourage you to review our data and make any necessary updates. If you notice any inaccuracies, or
-                            if you have more current information, simply click the{" "}
+                            We encourage you to review our data and make any necessary updates. If you notice any inaccuracies, or if you have more
+                            current information, simply click the{" "}
                             <Menu variant={"DataTableOption"} placement="right" gutter={3}>
                                 <MenuButton aria-label="Options" borderRadius={10} h={8} cursor={"default"}>
                                     <Flex justifyContent={"center"} alignItems={"center"} height={"100%"} gap={2} px={2}>
@@ -99,8 +99,9 @@ export default function CommunityUpdatePhase() {
                             </Flex>
                         )}
                         <InfoBlock icon={faPaperPlane} color={"gold"}>
-                            When the community update phase has been completed and all the PRs have been merged, we will be ready to launch! You will
-                            always be able to update the information in future, so don&apos;t worry if you miss the community update phase.
+                            When the Staking Directory team review has been completed and your PR has been merged, your updates will be live! Please
+                            continue to add new providers and update existing data as it changes to ensure that this resource remains relevant and
+                            up-to-date.
                         </InfoBlock>
                         <Box pb={8}></Box>
                     </Box>
