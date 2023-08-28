@@ -222,28 +222,6 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                 }
                             }
                         })}
-                        <Th w={"32px"}>
-                            {/* TODO: After launch switch this back to the ClearFiltersButton component */}
-                            {/* <ClearFiltersButton dataFilter={dataFilter} setDataFilter={setDataFilter} /> */}
-                            <Tooltip
-                                placement={"top"}
-                                gutter={10}
-                                label={
-                                    <Flex className={"tooltipLabel"} direction={"column"} gap={2}>
-                                        <Box fontWeight={"extrabold"} fontSize={"md"}>
-                                            Does something need fixing?
-                                        </Box>
-                                        <Box>Let us know!</Box>
-                                    </Flex>
-                                }
-                                className="tooltipArrow"
-                                hasArrow={true}
-                            >
-                                <Text fontWeight={"extrabold"} fontSize={"sm"} pb={2} cursor={"default"} color={"blue"} minW={"120px"}>
-                                    COMMUNITY UPDATE PHASE
-                                </Text>
-                            </Tooltip>
-                        </Th>
                     </Tr>
                 </Thead>
                 <Tbody>
@@ -312,7 +290,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                                 setExpandedChecklistRows={setExpandedChecklistRows}
                                             />
                                         </Td>
-                                        <Td w={5}>
+                                        <Td>
                                             <DataRowMenuButton provider={provider} />
                                         </Td>
                                     </Tr>

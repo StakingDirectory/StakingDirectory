@@ -257,7 +257,7 @@ const allOptions = [
             },
             {
                 id: "links.twitter",
-                name: "Twitter",
+                name: "X (Twitter)",
                 inputType: "input",
                 placeholder: "https://...",
             },

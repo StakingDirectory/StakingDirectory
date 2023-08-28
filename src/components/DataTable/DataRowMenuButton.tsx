@@ -70,7 +70,6 @@ export default function DataRowMenuButton({ provider }) {
                     <MenuButton
                         aria-label="Options"
                         borderRadius={10}
-                        w={"130px"}
                         h={8}
                         cursor={"pointer"}
                         onMouseEnter={() => setIsHovered(true)}
@@ -80,9 +79,8 @@ export default function DataRowMenuButton({ provider }) {
                             onOpen()
                         }}
                     >
-                        <Flex justifyContent={"center"} alignItems={"center"} height={"100%"} gap={2}>
+                        <Flex justifyContent={"center"} alignItems={"center"} height={"100%"} gap={2} px={2}>
                             <FontAwesomeIcon icon={faPencil} />
-                            <Box>Update me!</Box>
                         </Flex>
                     </MenuButton>
                 </Tooltip>

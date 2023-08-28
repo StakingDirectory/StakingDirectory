@@ -74,10 +74,9 @@ export default function CommunityUpdatePhase() {
                             During this phase, we encourage you to review our data and make any necessary updates. If you notice any inaccuracies, or
                             if you have more current information, simply click the{" "}
                             <Menu variant={"DataTableOption"} placement="right" gutter={3}>
-                                <MenuButton aria-label="Options" borderRadius={10} w={"130px"} h={8} cursor={"default"}>
-                                    <Flex justifyContent={"center"} alignItems={"center"} height={"100%"} gap={2}>
+                                <MenuButton aria-label="Options" borderRadius={10} h={8} cursor={"default"}>
+                                    <Flex justifyContent={"center"} alignItems={"center"} height={"100%"} gap={2} px={2}>
                                         <FontAwesomeIcon icon={faPencil} />
-                                        <Box>Update me!</Box>
                                     </Flex>
                                 </MenuButton>
                             </Menu>{" "}

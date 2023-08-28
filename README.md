@@ -1,7 +1,5 @@
 # Staking Directory
 
-> COMMUNITY UPDATE PHASE IN PROGRESS
-
 A community-maintained directory of Ethereum staking providers.
 
 For any questions or comments please contact [@EridianAlpha](https://github.com/EridianAlpha) on [Twitter](https://twitter.com/EridianAlpha) or [Telegram](https://t.me/EridianAlpha).
