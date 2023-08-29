@@ -90,7 +90,7 @@
         },
         "howToUse": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://docs.ava.do/getting-started/"
         },
         "operatorRequirements": {
             "value": true,
@@ -115,8 +115,8 @@
         "name": "DAppNode",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2020-12-01",
+            "evidenceLink": "https://dappnode.github.io/explorer/#/repo/0x4a114ee013cf54405b2950a7724a33d52600ed45"
         },
         "stakingType": "solo",
         "providerType": "hardware",
@@ -153,11 +153,11 @@
         },
         "mevRelays": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://dappnode.github.io/explorer/#/repo/0xa8f41112dd9536c92498c8f8aeb2c8ad5a9ffb75"
         },
         "howToUse": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://docs.dappnode.com/user/quick-start/first-steps"
         },
         "operatorRequirements": {
             "value": true,
@@ -172,7 +172,7 @@
             "evidenceLink": "https://dappnode.github.io/explorer/#/"
         },
         "stakeFromHome": true,
-        "description": "With Dappnode, anyone can run decentralized networks like Ethereum and earn rewards. Dappnode takes care of the technical stuff so anyone can play a role in creating an open, equitable internet and access the rewards that are offered in return."
+        "description": "With Dappnode, anyone can run decentralized networks like Ethereum and earn rewards. Dappnode takes care of the technical stuff so anyone can play a role in creating an open, equitable internet and access the rewards that are offered in return.\n\nWith Dappnode, anyone can run decentralized networks like Ethereum and earn rewards. Dappnode takes care of the technical stuff so anyone can play a role in creating an open, equitable internet and access the rewards that are offered in return."
     },
     {
         "id": 5,
@@ -183,8 +183,8 @@
         "name": "Ethereum on ARM",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2020-12-15",
+            "evidenceLink": "https://github.com/diglos/ethereumonarm/commit/57b815d39cfddad80169c7fd018e2e21eb368613"
         },
         "stakingType": "solo",
         "providerType": "no",
@@ -225,7 +225,7 @@
         },
         "howToUse": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/about-quick-start.html"
         },
         "operatorRequirements": {
             "value": true,
@@ -586,8 +586,8 @@
         "name": "Attestant",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2020-12-01",
+            "evidenceLink": "https://github.com/attestantio/vouch/releases/tag/v1.0.0"
         },
         "stakingType": "managed",
         "providerType": "no",
@@ -3332,7 +3332,7 @@
             "evidenceLink": "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftwinstake.io%2Fabout%2F&psig=AOvVaw2CRRFVeW3poP6tDiP8NJUV&ust=1692777878850000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCNDUjpTn74ADFQAAAAAdAAAAABAD"
         },
         "mainnetLaunch": {
-            "date": "20222-07-01"
+            "date": "2022-07-01"
         },
         "description": "Twinstake is an institutional-grade, non-custodial staking provider designed and built in collaboration with leaders in the digital assets space.",
         "validatorKey": {

@@ -35,7 +35,7 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
             <Flex key={index} direction={"column"} minH={10} className={isOpen ? "checklistListOpen checklistList" : "checklistList"}>
                 <HStack
                     justifyContent={"space-between"}
-                    py={2}
+                    py={"9.5px"}
                     px={2}
                     onClick={() => {
                         expandRow(index)
