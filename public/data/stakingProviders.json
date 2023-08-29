@@ -2068,7 +2068,7 @@
             "discord": "https://discord.gg/rocketpool"
         },
         "minStake": {
-            "type": "eth",
+            "type": "anyAmount",
             "value": "0.01"
         },
         "validatorKey": {
@@ -2953,8 +2953,8 @@
             "value": "10"
         },
         "minStake": {
-            "type": "eth",
-            "value": "0.0001"
+            "type": "anyAmount",
+            "value": ""
         },
         "sourceCode": {
             "value": true,
@@ -3087,7 +3087,7 @@
             "value": "Custom"
         },
         "minStake": {
-            "type": "eth",
+            "type": "anyAmount",
             "value": "0.001"
         },
         "sourceCode": {
