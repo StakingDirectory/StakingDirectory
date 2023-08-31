@@ -248,7 +248,7 @@ const dataProps = [
         type: "checkbox",
         id: "checklist",
         name: "Checklist",
-        headerText: "RESEARCH LINKS",
+        headerText: "DO YOUR OWN <br /> RESEARCH - LINKS",
         options: [
             { value: "howToUse", color: "", icon: faUsers },
             { value: "sourceCode", color: "", icon: faBookOpen },

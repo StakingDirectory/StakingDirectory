@@ -9,20 +9,26 @@ function getFormattedDate(dateString) {
 
 export default function MainnetLaunchDate({ provider }) {
     return (
-        <Tooltip
-            placement={"top"}
-            gutter={8}
-            openDelay={300}
-            label={<Box className={"tooltipLabel"}>{provider.name} was live when the Beacon Chain launched</Box>}
-            className="tooltipArrow"
-            hasArrow={true}
-        >
-            <Flex direction={"column"} alignItems={"center"} gap={1}>
-                {provider?.mainnetLaunch?.date === "2020-12-01" && (
-                    <Image maxW={3} objectFit={"cover"} src={"./EthereumBeaconChainLogo.svg"} alt={"Staking Directory Logo"} />
-                )}
-                <Text fontWeight={"bold"}>{provider?.mainnetLaunch?.date ? getFormattedDate(provider?.mainnetLaunch?.date) : "-"}</Text>
-            </Flex>
-        </Tooltip>
+        <>
+            {provider?.mainnetLaunch?.date === "2020-12-01" ? (
+                <Tooltip
+                    placement={"top"}
+                    gutter={8}
+                    openDelay={300}
+                    label={<Box className={"tooltipLabel"}>{provider.name} was live when the Beacon Chain launched</Box>}
+                    className="tooltipArrow"
+                    hasArrow={true}
+                >
+                    <Flex direction={"column"} alignItems={"center"} gap={1}>
+                        <Image maxW={3} objectFit={"cover"} src={"./EthereumBeaconChainLogo.svg"} alt={"Staking Directory Logo"} />
+                        <Text fontWeight={"bold"}>{getFormattedDate(provider?.mainnetLaunch?.date)}</Text>
+                    </Flex>
+                </Tooltip>
+            ) : (
+                <Flex direction={"column"} alignItems={"center"} gap={1}>
+                    <Text fontWeight={"bold"}>{provider?.mainnetLaunch?.date ? getFormattedDate(provider?.mainnetLaunch?.date) : "-"}</Text>
+                </Flex>
+            )}
+        </>
     )
 }

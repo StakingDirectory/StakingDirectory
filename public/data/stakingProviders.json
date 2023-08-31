@@ -318,8 +318,8 @@
         "name": "EthDocker",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2021-06-12",
+            "evidenceLink": "https://github.com/eth-educators/eth-docker/releases/tag/v1.2.4"
         },
         "stakingType": "solo",
         "providerType": "no",
@@ -427,7 +427,7 @@
         },
         "howToUse": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://stereum.net/"
         },
         "operatorRequirements": {
             "value": true,
@@ -720,8 +720,8 @@
         "name": "BloxStaking",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2020-12-09",
+            "evidenceLink": "https://www.bloxstaking.com/blog/product-updates/were-live-blox-mainnet-staking-has-arrived/"
         },
         "stakingType": "managed",
         "providerType": "no",
@@ -1283,26 +1283,31 @@
             "evidenceLink": "https://github.com/rocket-pool"
         },
         "auditReports": {
-            "value": true
+            "value": true,
+            "evidenceLink": "https://rocketpool.community/audits/"
         },
         "bugBounty": {
-            "value": true
+            "value": true,
+            "evidenceLink": "https://immunefi.com/bounty/rocketpool/"
         },
         "mevRelays": {
-            "value": true
+            "value": true,
+            "evidenceLink": "https://docs.rocketpool.net/guides/node/mev.html#block-builders-and-relays"
         },
         "howToUse": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://rocketpool.net/node-operators"
         },
         "operatorRequirements": {
             "value": true
         },
         "executionClients": {
-            "value": true
+            "value": true,
+            "evidenceLink": "https://docs.rocketpool.net/guides/node/eth-clients.html#execution-clients"
         },
         "beaconClients": {
-            "value": true
+            "value": true,
+            "evidenceLink": "https://docs.rocketpool.net/guides/node/eth-clients.html#consensus-clients"
         },
         "stakeFromHome": true,
         "description": "Rocket Pool is the base layer protocol for decentralised and trustless Ethereum staking.\n\nDesigned to support stakers of all shapes and sizes, Rocket Pool was built with the intent to allow anyone to permissionlessly stake ETH to a network of decentralised node operators with full autonomy underpinned by RPL token collateral.\n\nThe core premise behind a protocol is to ensure the network is not beholden to any one party. This is a principle directly linked to Ethereum itself, and a mindset used at every stage of the process as we continue to upgrade the protocol.\n\nRocket Pool strives to embody the core ethos of Ethereum and DeFi, specifically the non-custodial, trustless nature that allows self-sovereignty to truly thrive."
@@ -1341,7 +1346,7 @@
         },
         "sourceCode": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/staking-foundation"
         },
         "auditReports": {
             "value": false,
@@ -1781,8 +1786,8 @@
         "name": "Coinbase",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2022-02-01",
+            "evidenceLink": "https://etherscan.io/token/0xBe9895146f7AF43049ca1c1AE358B0541Ea49704#code"
         },
         "stakingType": "lst",
         "providerType": "no",
@@ -1848,8 +1853,8 @@
         "name": "StakeWise V2 (LST)",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2021-01-16",
+            "evidenceLink": "https://etherscan.io/token/0xFe2e637202056d30016725477c5da089Ab0A043A#code"
         },
         "stakingType": "lst",
         "providerType": "no",
@@ -1915,8 +1920,8 @@
         "name": "Ankr",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2020-12-01",
+            "evidenceLink": "https://etherscan.io/token/0xE95A203B1a91a908F9B9CE46459d101078c2c3cb#code"
         },
         "stakingType": "lst",
         "providerType": "no",
@@ -1984,8 +1989,8 @@
         "name": "Frax",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2022-10-19",
+            "evidenceLink": "https://etherscan.io/token/0xac3e018457b222d93114458476f3e3416abbe38f#code"
         },
         "stakingType": "lst",
         "providerType": "no",
@@ -2083,19 +2088,19 @@
         },
         "auditReports": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://rocketpool.community/audits/"
         },
         "bugBounty": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://immunefi.com/bounty/rocketpool/"
         },
         "mevRelays": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://docs.rocketpool.net/guides/node/mev.html#block-builders-and-relays"
         },
         "howToUse": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://stake.rocketpool.net/"
         },
         "operatorRequirements": {
             "value": true,
@@ -2103,82 +2108,15 @@
         },
         "executionClients": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://docs.rocketpool.net/guides/node/eth-clients.html#execution-clients"
         },
         "beaconClients": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://docs.rocketpool.net/guides/node/eth-clients.html#consensus-clients"
         },
         "lstName": "rETH",
         "stakeFromHome": false,
         "description": "Rocket Pool is the base layer protocol for decentralised and trustless Ethereum staking.\n\nDesigned to support stakers of all shapes and sizes, Rocket Pool was built with the intent to allow anyone to permissionlessly stake ETH to a network of decentralised node operators with full autonomy underpinned by RPL token collateral.\n\nThe core premise behind a protocol is to ensure the network is not beholden to any one party. This is a principle directly linked to Ethereum itself, and a mindset used at every stage of the process as we continue to upgrade the protocol.\n\nRocket Pool strives to embody the core ethos of Ethereum and DeFi, specifically the non-custodial, trustless nature that allows self-sovereignty to truly thrive."
-    },
-    {
-        "id": 36,
-        "logo": {
-            "src": "./images/SharedStakeLogo.png",
-            "alt": "Logo"
-        },
-        "name": "SharedStake",
-        "status": "active",
-        "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
-        },
-        "stakingType": "lst",
-        "providerType": "no",
-        "fee": {
-            "type": "percentage",
-            "value": 5
-        },
-        "links": {
-            "website": "https://www.sharedstake.org/stake",
-            "twitter": ""
-        },
-        "minStake": {
-            "type": "anyAmount",
-            "value": "Any amount"
-        },
-        "validatorKey": {
-            "service": true
-        },
-        "withdrawalKey": {
-            "smartContract": true
-        },
-        "sourceCode": {
-            "value": false,
-            "evidenceLink": ""
-        },
-        "auditReports": {
-            "value": false,
-            "evidenceLink": ""
-        },
-        "bugBounty": {
-            "value": false,
-            "evidenceLink": ""
-        },
-        "mevRelays": {
-            "value": false,
-            "evidenceLink": ""
-        },
-        "howToUse": {
-            "value": true,
-            "evidenceLink": ""
-        },
-        "operatorRequirements": {
-            "value": false,
-            "evidenceLink": ""
-        },
-        "executionClients": {
-            "value": false,
-            "evidenceLink": ""
-        },
-        "beaconClients": {
-            "value": false,
-            "evidenceLink": ""
-        },
-        "lstName": "vETH2",
-        "stakeFromHome": false
     },
     {
         "id": 37,
@@ -2189,8 +2127,8 @@
         "name": "Guarda",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2021-10-20",
+            "evidenceLink": "https://etherscan.io/token/0x3802c218221390025bceabbad5d8c59f40eb74b8#code"
         },
         "stakingType": "lst",
         "providerType": "no",
@@ -2256,8 +2194,8 @@
         "name": "RockX",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2022-09-29",
+            "evidenceLink": "https://etherscan.io/token/0xF1376bceF0f78459C0Ed0ba5ddce976F1ddF51F4#code"
         },
         "stakingType": "lst",
         "providerType": "no",
@@ -2608,7 +2546,7 @@
             "value": 10
         },
         "links": {
-            "website": "https://stake.lido.fi/",
+            "website": "https://lido.fi",
             "twitter": "https://twitter.com/LidoFinance",
             "discord": "https://discord.com/invite/lido",
             "telegram": "https://t.me/lidofinance"
@@ -2629,19 +2567,19 @@
         },
         "auditReports": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/lidofinance/audits"
         },
         "bugBounty": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://lido.fi/bug-bounty"
         },
         "mevRelays": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://hackmd.io/No2SULzlSVytoWOJ2Wqa7g"
         },
         "howToUse": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://stake.lido.fi/"
         },
         "operatorRequirements": {
             "value": false,
@@ -3329,7 +3267,9 @@
         },
         "name": "Twinstake",
         "logo": {
-            "evidenceLink": "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftwinstake.io%2Fabout%2F&psig=AOvVaw2CRRFVeW3poP6tDiP8NJUV&ust=1692777878850000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCNDUjpTn74ADFQAAAAAdAAAAABAD"
+            "evidenceLink": "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftwinstake.io%2Fabout%2F&psig=AOvVaw2CRRFVeW3poP6tDiP8NJUV&ust=1692777878850000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCNDUjpTn74ADFQAAAAAdAAAAABAD",
+            "src": "./images/TwinStakeLogo.png",
+            "alt": "Twinstake Logo"
         },
         "mainnetLaunch": {
             "date": "2022-07-01"
