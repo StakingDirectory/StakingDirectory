@@ -167,6 +167,17 @@ const customTheme = extendTheme({
                         },
                     },
                 }),
+                NameSearchInput: (props: StyleFunctionProps) => ({
+                    field: {
+                        bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackground.light",
+                        borderRadius: "10px",
+                        _focus: {
+                            borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
+                            borderWidth: "3px",
+                            marginLeft: "-3px",
+                        },
+                    },
+                }),
             },
         },
         Textarea: {

@@ -93,6 +93,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                         borderRadius={"10px"}
                                         className={"borderColor"}
                                         cursor={"help"}
+                                        h={"40px"}
                                     >
                                         <FontAwesomeIcon icon={faArrowDownShortWide} size="2xl" />
                                     </Flex>
@@ -157,26 +158,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                 if (headerValue.type == "text") {
                                     return (
                                         <Th key={headerValue.id} textAlign={"start"}>
-                                            <Menu placement="right" variant={"DataTableHeader"} gutter={2} initialFocusRef={nameInputRef}>
-                                                {({ isOpen }) => (
-                                                    <>
-                                                        <Box>
-                                                            <HeaderButton
-                                                                dataFilter={dataFilter}
-                                                                id="name"
-                                                                text="NAME"
-                                                                filterDisabledColor={filterDisabledColor}
-                                                            />
-                                                        </Box>
-                                                        <HeaderMenuNameSearch
-                                                            isOpen={isOpen}
-                                                            nameInputRef={nameInputRef}
-                                                            dataFilter={dataFilter}
-                                                            setDataFilter={setDataFilter}
-                                                        />
-                                                    </>
-                                                )}
-                                            </Menu>
+                                            <HeaderMenuNameSearch nameInputRef={nameInputRef} dataFilter={dataFilter} setDataFilter={setDataFilter} />
                                         </Th>
                                     )
                                 } else if (headerValue.type == "checkbox") {
