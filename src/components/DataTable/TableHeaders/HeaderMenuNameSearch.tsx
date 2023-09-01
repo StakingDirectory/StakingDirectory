@@ -10,13 +10,6 @@ export default function HeaderMenuNameSearch({ nameInputRef, dataFilter, setData
     const [searchText, setSearchText] = useState(dataFilter?.name ? dataFilter?.name : "")
     const [debouncedSearchText, setDebouncedSearchText] = useState(searchText)
 
-    // Keep the focus on the input when typing
-    useEffect(() => {
-        if (nameInputRef.current) {
-            nameInputRef.current.focus()
-        }
-    }, [dataFilter?.name, nameInputRef])
-
     useEffect(() => {
         setSearchText(dataFilter?.name || "")
     }, [dataFilter?.name])
