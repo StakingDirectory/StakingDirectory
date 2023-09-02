@@ -13,36 +13,28 @@
             "type": "eth",
             "value": 32
         },
-        "openSource": {
-            "value": false,
+        "sourceCode": {
             "evidenceLink": ""
         },
-        "audited": {
-            "value": false,
+        "auditReports": {
             "evidenceLink": ""
         },
         "bugBounty": {
-            "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
-            "value": false,
+        "mevRelays": {
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
-            "value": false,
+        "howToUse": {
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
-            "value": false,
+        "operatorRequirements": {
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
-            "value": false,
+        "executionClients": {
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
-            "value": false,
+        "beaconClients": {
             "evidenceLink": ""
         }
     },
@@ -68,8 +60,7 @@
         },
         "links": {
             "website": "https://ava.do/",
-            "twitter": "https://twitter.com/AvadoCloud",
-            "repo": "https://github.com/AvadoDServer/"
+            "twitter": "https://twitter.com/AvadoCloud"
         },
         "minStake": {
             "type": "eth",
@@ -81,11 +72,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/AvadoDServer/"
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -93,23 +84,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
-            "evidenceLink": "https://github.com/AvadoDServer/"
+            "evidenceLink": "https://docs.ava.do/packages/mev-boost/"
         },
-        "permissionlessUsage": {
+        "howToUse": {
+            "value": true,
+            "evidenceLink": "https://docs.ava.do/getting-started/"
+        },
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
-            "value": true,
-            "evidenceLink": ""
-        },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": "https://github.com/AvadoDServer/"
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": "https://github.com/AvadoDServer/"
         },
@@ -124,8 +115,8 @@
         "name": "DAppNode",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2020-12-01",
+            "evidenceLink": "https://dappnode.github.io/explorer/#/repo/0x4a114ee013cf54405b2950a7724a33d52600ed45"
         },
         "stakingType": "solo",
         "providerType": "hardware",
@@ -136,8 +127,7 @@
         "links": {
             "website": "https://dappnode.io/",
             "twitter": "https://twitter.com/DAppNode",
-            "discord": "https://discord.gg/dappnode",
-            "repo": "https://github.com/dappnode"
+            "discord": "https://discord.gg/dappnode"
         },
         "minStake": {
             "type": "eth",
@@ -149,11 +139,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/dappnode/DAppNode"
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -161,28 +151,28 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
+            "value": true,
+            "evidenceLink": "https://dappnode.github.io/explorer/#/repo/0xa8f41112dd9536c92498c8f8aeb2c8ad5a9ffb75"
+        },
+        "howToUse": {
+            "value": true,
+            "evidenceLink": "https://docs.dappnode.com/user/quick-start/first-steps"
+        },
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
-            "value": true,
-            "evidenceLink": ""
-        },
-        "permissionlessOperators": {
-            "value": true,
-            "evidenceLink": ""
-        },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": "https://dappnode.github.io/explorer/#/"
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": "https://dappnode.github.io/explorer/#/"
         },
         "stakeFromHome": true,
-        "description": "With Dappnode, anyone can run decentralized networks like Ethereum and Bitcoin and earn rewards. Dappnode takes care of the technical stuff so anyone can play a role in creating an open, equitable internet and access the rewards that are offered in return."
+        "description": "With Dappnode, anyone can run decentralized networks like Ethereum and earn rewards. Dappnode takes care of the technical stuff so anyone can play a role in creating an open, equitable internet and access the rewards that are offered in return.\n\nWith Dappnode, anyone can run decentralized networks like Ethereum and earn rewards. Dappnode takes care of the technical stuff so anyone can play a role in creating an open, equitable internet and access the rewards that are offered in return."
     },
     {
         "id": 5,
@@ -193,8 +183,8 @@
         "name": "Ethereum on ARM",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2020-12-15",
+            "evidenceLink": "https://github.com/diglos/ethereumonarm/commit/57b815d39cfddad80169c7fd018e2e21eb368613"
         },
         "stakingType": "solo",
         "providerType": "no",
@@ -205,8 +195,7 @@
         "links": {
             "website": "https://ethereum-on-arm-documentation.readthedocs.io/",
             "twitter": "https://twitter.com/EthereumOnARM",
-            "discord": "https://t.co/HyeqBMjtnS",
-            "repo": "https://github.com/diglos/ethereumonarm"
+            "discord": "https://t.co/HyeqBMjtnS"
         },
         "minStake": {
             "type": "eth",
@@ -218,11 +207,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/diglos/ethereumonarm"
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -230,23 +219,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": "https://ethereum-on-arm-documentation.readthedocs.io/en/latest/user-guide/mev-boost.html"
         },
-        "permissionlessUsage": {
+        "howToUse": {
+            "value": true,
+            "evidenceLink": "https://ethereum-on-arm-documentation.readthedocs.io/en/latest/quick-guide/about-quick-start.html"
+        },
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
-            "value": true,
-            "evidenceLink": ""
-        },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": "https://github.com/diglos/ethereumonarm"
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": "https://github.com/diglos/ethereumonarm"
         },
@@ -286,11 +275,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -298,23 +287,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -329,8 +318,8 @@
         "name": "EthDocker",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2021-06-12",
+            "evidenceLink": "https://github.com/eth-educators/eth-docker/releases/tag/v1.2.4"
         },
         "stakingType": "solo",
         "providerType": "no",
@@ -352,11 +341,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/eth-educators/eth-docker"
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": "https://gist.github.com/yorickdowne/ebd82c3c43520811ee9b289efc0efe78"
         },
@@ -364,23 +353,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -396,7 +385,7 @@
         "name": "Stereum",
         "status": "active",
         "mainnetLaunch": {
-            "date": "2020-11-26",
+            "date": "2020-12-01",
             "evidenceLink": "https://discord.com/channels/769190437050122311/769190851992617000/781508073260974080"
         },
         "stakingType": "solo",
@@ -408,8 +397,7 @@
         "links": {
             "website": "https://stereum.net/ethereum-node-setup/",
             "twitter": "https://twitter.com/stereumdev",
-            "discord": "https://discord.com/invite/df8r5PVX9P",
-            "repo": "https://github.com/stereum-dev/ethereum-node"
+            "discord": "https://discord.com/invite/df8r5PVX9P"
         },
         "minStake": {
             "type": "eth",
@@ -421,11 +409,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/stereum-dev/ethereum-node"
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": "https://stereum.net/downloads/audits/202211_sba-research.pdf"
         },
@@ -433,23 +421,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
+            "value": true,
+            "evidenceLink": "https://stereum.net/"
+        },
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
-            "value": true,
-            "evidenceLink": ""
-        },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -488,11 +476,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -500,23 +488,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -531,7 +519,7 @@
         "name": "Allnodes",
         "status": "active",
         "mainnetLaunch": {
-            "date": "2018-10-08",
+            "date": "2020-12-01",
             "evidenceLink": "https://twitter.com/Allnodes/status/1689998185140211713"
         },
         "stakingType": "managed",
@@ -554,11 +542,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -566,23 +554,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -598,8 +586,8 @@
         "name": "Attestant",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2020-12-01",
+            "evidenceLink": "https://github.com/attestantio/vouch/releases/tag/v1.0.0"
         },
         "stakingType": "managed",
         "providerType": "no",
@@ -610,8 +598,7 @@
         "links": {
             "website": "https://www.attestant.io/",
             "twitter": "https://twitter.com/attestantio",
-            "discord": "https://discord.gg/egRsdKp",
-            "repo": "https://github.com/attestantio"
+            "discord": "https://discord.gg/egRsdKp"
         },
         "minStake": {
             "type": "eth",
@@ -624,11 +611,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/attestantio"
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -636,23 +623,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -690,11 +677,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -702,23 +689,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -733,8 +720,8 @@
         "name": "BloxStaking",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2020-12-09",
+            "evidenceLink": "https://www.bloxstaking.com/blog/product-updates/were-live-blox-mainnet-staking-has-arrived/"
         },
         "stakingType": "managed",
         "providerType": "no",
@@ -745,8 +732,7 @@
         "links": {
             "website": "https://www.bloxstaking.com/",
             "twitter": "",
-            "discord": "https://discord.gg/Aw2dH6cX6j",
-            "repo": "https://github.com/bloxapp/blox-live"
+            "discord": "https://discord.gg/Aw2dH6cX6j"
         },
         "minStake": {
             "type": "eth",
@@ -758,11 +744,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/bloxapp/blox-live"
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": ""
         },
@@ -770,23 +756,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -825,11 +811,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -837,23 +823,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -891,11 +877,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": "https://security.kiln.fi/"
         },
@@ -903,23 +889,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -958,11 +944,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": ""
         },
@@ -970,23 +956,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1013,8 +999,7 @@
         "links": {
             "website": "https://dashboard.senseinode.com/en/senseistake",
             "twitter": "https://twitter.com/SenseiNode",
-            "telegram": "https://t.me/senseinodechat",
-            "repo": "https://github.com/Sensei-Node"
+            "telegram": "https://t.me/senseinodechat"
         },
         "minStake": {
             "type": "eth",
@@ -1026,11 +1011,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/Sensei-Node"
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1038,23 +1023,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1092,11 +1077,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1104,23 +1089,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1158,11 +1143,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": ""
         },
@@ -1170,23 +1155,23 @@
             "value": true,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1224,11 +1209,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1236,23 +1221,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1281,8 +1266,7 @@
             "website": "https://rocketpool.net/node-operators",
             "twitter": "https://twitter.com/Rocket_Pool",
             "discord": "https://discord.gg/rocketpool",
-            "telegram": "",
-            "repo": "https://github.com/rocket-pool"
+            "telegram": ""
         },
         "minStake": {
             "type": "eth",
@@ -1294,31 +1278,36 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/rocket-pool"
         },
-        "audited": {
-            "value": true
+        "auditReports": {
+            "value": true,
+            "evidenceLink": "https://rocketpool.community/audits/"
         },
         "bugBounty": {
-            "value": true
-        },
-        "nonCensoringRelays": {
-            "value": true
-        },
-        "permissionlessUsage": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://immunefi.com/bounty/rocketpool/"
         },
-        "permissionlessOperators": {
+        "mevRelays": {
+            "value": true,
+            "evidenceLink": "https://docs.rocketpool.net/guides/node/mev.html#block-builders-and-relays"
+        },
+        "howToUse": {
+            "value": true,
+            "evidenceLink": "https://rocketpool.net/node-operators"
+        },
+        "operatorRequirements": {
             "value": true
         },
-        "diverseExecutionClients": {
-            "value": true
+        "executionClients": {
+            "value": true,
+            "evidenceLink": "https://docs.rocketpool.net/guides/node/eth-clients.html#execution-clients"
         },
-        "diverseBeaconClients": {
-            "value": true
+        "beaconClients": {
+            "value": true,
+            "evidenceLink": "https://docs.rocketpool.net/guides/node/eth-clients.html#consensus-clients"
         },
         "stakeFromHome": true,
         "description": "Rocket Pool is the base layer protocol for decentralised and trustless Ethereum staking.\n\nDesigned to support stakers of all shapes and sizes, Rocket Pool was built with the intent to allow anyone to permissionlessly stake ETH to a network of decentralised node operators with full autonomy underpinned by RPL token collateral.\n\nThe core premise behind a protocol is to ensure the network is not beholden to any one party. This is a principle directly linked to Ethereum itself, and a mindset used at every stage of the process as we continue to upgrade the protocol.\n\nRocket Pool strives to embody the core ethos of Ethereum and DeFi, specifically the non-custodial, trustless nature that allows self-sovereignty to truly thrive."
@@ -1355,11 +1344,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/staking-foundation"
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1367,23 +1356,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1421,11 +1410,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1433,23 +1422,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1488,11 +1477,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1500,23 +1489,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1554,11 +1543,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1566,23 +1555,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1620,11 +1609,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": ""
         },
@@ -1632,23 +1621,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1687,11 +1676,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1699,23 +1688,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1753,11 +1742,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1765,23 +1754,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1797,8 +1786,8 @@
         "name": "Coinbase",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2022-02-01",
+            "evidenceLink": "https://etherscan.io/token/0xBe9895146f7AF43049ca1c1AE358B0541Ea49704#code"
         },
         "stakingType": "lst",
         "providerType": "no",
@@ -1820,11 +1809,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1832,23 +1821,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1864,8 +1853,8 @@
         "name": "StakeWise V2 (LST)",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2021-01-16",
+            "evidenceLink": "https://etherscan.io/token/0xFe2e637202056d30016725477c5da089Ab0A043A#code"
         },
         "stakingType": "lst",
         "providerType": "no",
@@ -1875,8 +1864,7 @@
         },
         "links": {
             "website": "https://app.stakewise.io/",
-            "twitter": "https://twitter.com/stakewise_io",
-            "repo": "https://github.com/stakewise"
+            "twitter": "https://twitter.com/stakewise_io"
         },
         "minStake": {
             "type": "anyAmount",
@@ -1888,11 +1876,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/stakewise"
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1900,23 +1888,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -1932,8 +1920,8 @@
         "name": "Ankr",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2020-12-01",
+            "evidenceLink": "https://etherscan.io/token/0xE95A203B1a91a908F9B9CE46459d101078c2c3cb#code"
         },
         "stakingType": "lst",
         "providerType": "no",
@@ -1957,11 +1945,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": ""
         },
@@ -1969,23 +1957,23 @@
             "value": true,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2001,8 +1989,8 @@
         "name": "Frax",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2022-10-19",
+            "evidenceLink": "https://etherscan.io/token/0xac3e018457b222d93114458476f3e3416abbe38f#code"
         },
         "stakingType": "lst",
         "providerType": "no",
@@ -2013,7 +2001,6 @@
         "links": {
             "website": "https://app.frax.finance/frxeth/mint",
             "twitter": "https://twitter.com/fraxfinance",
-            "repo": "https://github.com/FraxFinance",
             "discord": "https://discord.gg/MTZu6Hf57d",
             "telegram": "https://t.me/fraxfinance"
         },
@@ -2027,11 +2014,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/FraxFinance"
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2039,23 +2026,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2083,11 +2070,10 @@
         "links": {
             "website": "https://stake.rocketpool.net/",
             "twitter": "https://twitter.com/Rocket_Pool",
-            "repo": "https://github.com/rocket-pool",
             "discord": "https://discord.gg/rocketpool"
         },
         "minStake": {
-            "type": "eth",
+            "type": "anyAmount",
             "value": "0.01"
         },
         "validatorKey": {
@@ -2096,108 +2082,41 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/rocket-pool"
         },
-        "audited": {
+        "auditReports": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://rocketpool.community/audits/"
         },
         "bugBounty": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://immunefi.com/bounty/rocketpool/"
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
+            "value": true,
+            "evidenceLink": "https://docs.rocketpool.net/guides/node/mev.html#block-builders-and-relays"
+        },
+        "howToUse": {
+            "value": true,
+            "evidenceLink": "https://stake.rocketpool.net/"
+        },
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "executionClients": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://docs.rocketpool.net/guides/node/eth-clients.html#execution-clients"
         },
-        "permissionlessOperators": {
+        "beaconClients": {
             "value": true,
-            "evidenceLink": ""
-        },
-        "diverseExecutionClients": {
-            "value": true,
-            "evidenceLink": ""
-        },
-        "diverseBeaconClients": {
-            "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://docs.rocketpool.net/guides/node/eth-clients.html#consensus-clients"
         },
         "lstName": "rETH",
         "stakeFromHome": false,
         "description": "Rocket Pool is the base layer protocol for decentralised and trustless Ethereum staking.\n\nDesigned to support stakers of all shapes and sizes, Rocket Pool was built with the intent to allow anyone to permissionlessly stake ETH to a network of decentralised node operators with full autonomy underpinned by RPL token collateral.\n\nThe core premise behind a protocol is to ensure the network is not beholden to any one party. This is a principle directly linked to Ethereum itself, and a mindset used at every stage of the process as we continue to upgrade the protocol.\n\nRocket Pool strives to embody the core ethos of Ethereum and DeFi, specifically the non-custodial, trustless nature that allows self-sovereignty to truly thrive."
-    },
-    {
-        "id": 36,
-        "logo": {
-            "src": "./images/SharedStakeLogo.png",
-            "alt": "Logo"
-        },
-        "name": "SharedStake",
-        "status": "active",
-        "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
-        },
-        "stakingType": "lst",
-        "providerType": "no",
-        "fee": {
-            "type": "percentage",
-            "value": 5
-        },
-        "links": {
-            "website": "https://www.sharedstake.org/stake",
-            "twitter": ""
-        },
-        "minStake": {
-            "type": "anyAmount",
-            "value": "Any amount"
-        },
-        "validatorKey": {
-            "service": true
-        },
-        "withdrawalKey": {
-            "smartContract": true
-        },
-        "openSource": {
-            "value": false,
-            "evidenceLink": ""
-        },
-        "audited": {
-            "value": false,
-            "evidenceLink": ""
-        },
-        "bugBounty": {
-            "value": false,
-            "evidenceLink": ""
-        },
-        "nonCensoringRelays": {
-            "value": false,
-            "evidenceLink": ""
-        },
-        "permissionlessUsage": {
-            "value": true,
-            "evidenceLink": ""
-        },
-        "permissionlessOperators": {
-            "value": false,
-            "evidenceLink": ""
-        },
-        "diverseExecutionClients": {
-            "value": false,
-            "evidenceLink": ""
-        },
-        "diverseBeaconClients": {
-            "value": false,
-            "evidenceLink": ""
-        },
-        "lstName": "vETH2",
-        "stakeFromHome": false
     },
     {
         "id": 37,
@@ -2208,8 +2127,8 @@
         "name": "Guarda",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2021-10-20",
+            "evidenceLink": "https://etherscan.io/token/0x3802c218221390025bceabbad5d8c59f40eb74b8#code"
         },
         "stakingType": "lst",
         "providerType": "no",
@@ -2231,11 +2150,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2243,23 +2162,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2275,8 +2194,8 @@
         "name": "RockX",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2022-09-29",
+            "evidenceLink": "https://etherscan.io/token/0xF1376bceF0f78459C0Ed0ba5ddce976F1ddF51F4#code"
         },
         "stakingType": "lst",
         "providerType": "no",
@@ -2298,11 +2217,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2310,23 +2229,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2366,11 +2285,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2378,23 +2297,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2433,11 +2352,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2445,23 +2364,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2490,8 +2409,7 @@
             "website": "https://diva.community",
             "twitter": "https://twitter.com/divastaking",
             "discord": "https://discord.gg/diva",
-            "telegram": "https://t.me/followdiva",
-            "repo": "https://github.com/staking-foundation"
+            "telegram": "https://t.me/followdiva"
         },
         "minStake": {
             "type": "eth",
@@ -2503,11 +2421,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/staking-foundation"
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2515,23 +2433,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -2560,8 +2478,7 @@
         "links": {
             "website": "https://www.swellnetwork.io/",
             "twitter": "https://twitter.com/swellnetworkio",
-            "discord": "https://discord.gg/swellnetworkdao",
-            "repo": "https://github.com/SwellNetwork"
+            "discord": "https://discord.gg/swellnetworkdao"
         },
         "minStake": {
             "type": "anyAmount",
@@ -2573,11 +2490,11 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/SwellNetwork"
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": "https://github.com/SwellNetwork/v3-core-public/blob/master/Audit%20Reports/Sigma_Prime_Swell_Network_Security_Assessment_Report_v2_0.pdf"
         },
@@ -2585,23 +2502,23 @@
             "value": true,
             "evidenceLink": "https://immunefi.com/bounty/swell/"
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": "https://www.rated.network/o/Swell?network=mainnet&timeWindow=1d&viewBy=operator&page=1"
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": "https://www.rated.network/o/Swell?network=mainnet&timeWindow=1d&viewBy=operator&page=1"
         },
@@ -2618,7 +2535,7 @@
         "name": "Lido",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
+            "date": "2020-12-01",
             "evidenceLink": ""
         },
         "stakingType": "lst",
@@ -2629,10 +2546,9 @@
             "value": 10
         },
         "links": {
-            "website": "https://stake.lido.fi/",
+            "website": "https://lido.fi",
             "twitter": "https://twitter.com/LidoFinance",
             "discord": "https://discord.com/invite/lido",
-            "repo": "https://github.com/lidofinance",
             "telegram": "https://t.me/lidofinance"
         },
         "minStake": {
@@ -2645,35 +2561,35 @@
         "withdrawalKey": {
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/lidofinance"
         },
-        "audited": {
+        "auditReports": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/lidofinance/audits"
         },
         "bugBounty": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://lido.fi/bug-bounty"
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://hackmd.io/No2SULzlSVytoWOJ2Wqa7g"
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://stake.lido.fi/"
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": "https://execution-diversity.info/"
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": "https://www.rated.network/o/Lido?network=mainnet"
         },
@@ -2702,11 +2618,11 @@
         "withdrawalKey": {
             "userWithdrawal": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/stake-house/eth-wizard"
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2714,23 +2630,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": "https://github.com/stake-house/eth-wizard"
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": "https://github.com/stake-house/eth-wizard"
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": "https://github.com/stake-house/eth-wizard"
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": "https://github.com/stake-house/eth-wizard"
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": "https://github.com/stake-house/eth-wizard"
         },
@@ -2746,8 +2662,7 @@
         },
         "description": "An Ethereum validator installation wizard meant to guide anyone through the different steps to become a fully functional validator on the Ethereum network. It will install and configure all the software needed to become a validator. It will test your installation. It will help you avoid the common pitfalls. It will help you maintain and keep your setup updated.",
         "links": {
-            "website": "https://github.com/stake-house/eth-wizard",
-            "repo": "https://github.com/stake-house/eth-wizard"
+            "website": "https://github.com/stake-house/eth-wizard"
         }
     },
     {
@@ -2776,11 +2691,11 @@
             "userWithdrawal": false,
             "smartContract": true
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2788,23 +2703,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2836,11 +2751,11 @@
             "type": "eth",
             "value": 32
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/NethermindEth/sedge"
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -2848,23 +2763,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -2888,7 +2803,6 @@
         "links": {
             "website": "https://docs.sedge.nethermind.io/",
             "twitter": "https://twitter.com/NethermindEth",
-            "repo": "https://github.com/NethermindEth/sedge",
             "discord": "https://discord.com/invite/PaCMRFdvWT"
         },
         "description": "Sedge is a one-click node setup tool for PoS network/chain validators and nodes written entirely in the Go programming language.\n\nSedge takes care of the entire on-premise full node setup based on the chosen client, using generated docker-compose scripts based on the desired configuration."
@@ -2907,11 +2821,11 @@
             "type": "eth",
             "value": "4.4"
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/stader-labs"
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": "https://www.staderlabs.com/audits/ethereum/smartcontracts/ETHx_SmartContract_audit_report_by_SigmaPrime_v2.pdf"
         },
@@ -2919,23 +2833,23 @@
             "value": true,
             "evidenceLink": "https://immunefi.com/bounty/staderforeth/"
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": "https://staderlabs.gitbook.io/ethereum/node-operator/permissionless-node-operator/node-registration-and-adding-validators/step-4-configure-stader-services/step-4.10-mev-boost"
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": "https://www.staderlabs.com/eth/node-operators/"
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": "https://www.staderlabs.com/eth/node-operators/"
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": "https://staderlabs.gitbook.io/ethereum/node-operator/permissionless-node-operator/node-registration-and-adding-validators/step-4-configure-stader-services/step-4.3-eth1-execution-client-selection"
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": "https://staderlabs.gitbook.io/ethereum/node-operator/permissionless-node-operator/node-registration-and-adding-validators/step-4-configure-stader-services/step-4.4-eth2-consensus-client-selection"
         },
@@ -2961,8 +2875,7 @@
             "website": "https://www.staderlabs.com/eth/node-operators/",
             "twitter": "https://twitter.com/staderlabs_eth",
             "discord": "https://discord.com/invite/xJURAhSmav",
-            "telegram": "https://t.me/Staderlabs_Ethereum_Official",
-            "repo": "https://github.com/stader-labs"
+            "telegram": "https://t.me/Staderlabs_Ethereum_Official"
         },
         "description": "Stader empowers node operators to decentralize ETH staking.\n\nStader has lowered the entry barrier for permissionless validators to an industry-low bond: 4 ETH + 0.4 ETH worth of SD as collateral."
     },
@@ -2978,14 +2891,14 @@
             "value": "10"
         },
         "minStake": {
-            "type": "eth",
-            "value": "0.0001"
+            "type": "anyAmount",
+            "value": ""
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/stader-labs"
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": "https://www.staderlabs.com/audits/ethereum/smartcontracts/ETHx_SmartContract_audit_report_by_SigmaPrime_v2.pdf"
         },
@@ -2993,23 +2906,23 @@
             "value": true,
             "evidenceLink": "https://immunefi.com/bounty/staderforeth/"
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": "https://staderlabs.gitbook.io/ethereum/node-operator/permissionless-node-operator/node-registration-and-adding-validators/step-4-configure-stader-services/step-4.10-mev-boost"
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": "https://www.staderlabs.com/eth/stake/"
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": "https://www.staderlabs.com/eth/node-operators/"
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": "https://staderlabs.gitbook.io/ethereum/node-operator/permissionless-node-operator/node-registration-and-adding-validators/step-4-configure-stader-services/step-4.3-eth1-execution-client-selection"
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": "https://staderlabs.gitbook.io/ethereum/node-operator/permissionless-node-operator/node-registration-and-adding-validators/step-4-configure-stader-services/step-4.4-eth2-consensus-client-selection"
         },
@@ -3028,8 +2941,7 @@
             "website": "https://www.staderlabs.com/eth/stake/",
             "twitter": "https://twitter.com/staderlabs_eth",
             "discord": "https://discord.com/invite/xJURAhSmav",
-            "telegram": "https://t.me/Staderlabs_Ethereum_Official",
-            "repo": "https://github.com/stader-labs"
+            "telegram": "https://t.me/Staderlabs_Ethereum_Official"
         },
         "logo": {
             "evidenceLink": "https://www.staderlabs.com/assets/images/stader-icon.svg",
@@ -3052,11 +2964,11 @@
             "type": "anyAmount",
             "value": ""
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -3064,23 +2976,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -3113,14 +3025,14 @@
             "value": "Custom"
         },
         "minStake": {
-            "type": "eth",
+            "type": "anyAmount",
             "value": "0.001"
         },
-        "openSource": {
+        "sourceCode": {
             "value": true,
             "evidenceLink": "https://github.com/stakehouse-dev"
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": "https://github.com/stakehouse-dev/Audits"
         },
@@ -3128,23 +3040,23 @@
             "value": true,
             "evidenceLink": "https://github.com/code-423n4/2022-11-stakehouse"
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": "https://blog.pon.network/a-revolutionary-decentralized-mev-relay-599de11e2da2?gi=57cf0a4f8e26"
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -3170,8 +3082,7 @@
         "links": {
             "website": "https://joinstakehouse.com/",
             "twitter": "https://twitter.com/stakehouse_BSN",
-            "discord": "https://discord.gg/HUqnbKAES5",
-            "repo": "https://github.com/stakehouse-dev"
+            "discord": "https://discord.gg/HUqnbKAES5"
         },
         "lstName": "dETH"
     },
@@ -3189,11 +3100,11 @@
             "type": "eth",
             "value": 32
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": true,
             "evidenceLink": "https://docs.blockdaemon.com/reference/security-audit-certificate"
         },
@@ -3201,23 +3112,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
@@ -3253,11 +3164,11 @@
             "type": "eth",
             "value": "32"
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
             "evidenceLink": ""
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -3265,23 +3176,23 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": true,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": true,
             "evidenceLink": ""
         },
@@ -3322,11 +3233,11 @@
             "type": "eth",
             "value": 32
         },
-        "openSource": {
+        "sourceCode": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/twinstake"
         },
-        "audited": {
+        "auditReports": {
             "value": false,
             "evidenceLink": ""
         },
@@ -3334,32 +3245,34 @@
             "value": false,
             "evidenceLink": ""
         },
-        "nonCensoringRelays": {
+        "mevRelays": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessUsage": {
+        "howToUse": {
             "value": false,
             "evidenceLink": ""
         },
-        "permissionlessOperators": {
+        "operatorRequirements": {
             "value": false,
             "evidenceLink": ""
         },
-        "diverseExecutionClients": {
+        "executionClients": {
             "value": true,
             "evidenceLink": ""
         },
-        "diverseBeaconClients": {
+        "beaconClients": {
             "value": false,
             "evidenceLink": ""
         },
         "name": "Twinstake",
         "logo": {
-            "evidenceLink": "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftwinstake.io%2Fabout%2F&psig=AOvVaw2CRRFVeW3poP6tDiP8NJUV&ust=1692777878850000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCNDUjpTn74ADFQAAAAAdAAAAABAD"
+            "evidenceLink": "https://www.google.com/url?sa=i&url=https%3A%2F%2Ftwinstake.io%2Fabout%2F&psig=AOvVaw2CRRFVeW3poP6tDiP8NJUV&ust=1692777878850000&source=images&cd=vfe&opi=89978449&ved=0CA8QjRxqFwoTCNDUjpTn74ADFQAAAAAdAAAAABAD",
+            "src": "./images/TwinStakeLogo.png",
+            "alt": "Twinstake Logo"
         },
         "mainnetLaunch": {
-            "date": "20222-07-01"
+            "date": "2022-07-01"
         },
         "description": "Twinstake is an institutional-grade, non-custodial staking provider designed and built in collaboration with leaders in the digital assets space.",
         "validatorKey": {
@@ -3371,8 +3284,7 @@
         },
         "links": {
             "website": "https://twinstake.io",
-            "twitter": "https://twitter.com/twinstake_io",
-            "repo": "https://github.com/twinstake"
+            "twitter": "https://twitter.com/twinstake_io"
         }
     }
 ]

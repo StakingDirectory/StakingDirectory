@@ -1,7 +1,7 @@
 import { Box, Flex, HStack, Image } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons"
+import { faGithub, faXTwitter } from "@fortawesome/free-brands-svg-icons"
 
 import ColorModeToggle from "./ColorModeToggle"
 import Link from "next/link"
@@ -30,7 +30,7 @@ export default function Header({}) {
                         <HStack spacing={5}>
                             <Link href={"https://twitter.com/StakeDirectory"} target="_blank">
                                 <Box w="24px" cursor={"pointer"} aria-label={"Staking Directory Twitter Profile"}>
-                                    <FontAwesomeIcon icon={faTwitter} size={"xl"} />
+                                    <FontAwesomeIcon icon={faXTwitter} size={"xl"} />
                                 </Box>
                             </Link>
                             <Link href={"https://github.com/StakingDirectory/StakingDirectory"} target="_blank">

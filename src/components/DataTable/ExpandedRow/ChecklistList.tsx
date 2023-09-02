@@ -1,8 +1,7 @@
 import { Flex, Box, Text, HStack, Collapse, Button, Link } from "@chakra-ui/react"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faArrowUpRightFromSquare, faChevronRight, faLink } from "@fortawesome/free-solid-svg-icons"
-import { faCircleCheck, faCircleXmark } from "@fortawesome/free-solid-svg-icons"
+import { faArrowUpRightFromSquare, faChevronRight, faLink, faCircleQuestion, faInfo, faLinkSlash } from "@fortawesome/free-solid-svg-icons"
 
 import NextLink from "next/link"
 
@@ -26,61 +25,64 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
 
     const renderBox = (id, index: number) => {
         const name = providerProperties.find((prop) => prop.value === id.value).name
-        const value = provider[id.value]?.value
-        const description = id.description[value ? "true" : "false"]
+        const value = provider[id.value]?.evidenceLink
+        const description = id.description
         const href = provider[id.value]?.evidenceLink
-        const iconColor = value ? "green" : "red"
-        const icon = value ? faCircleCheck : faCircleXmark
 
         const isOpen = expandedChecklistRows.some((row) => row.index === index && row.providerId === provider.id)
 
         return (
             <Flex key={index} direction={"column"} minH={10} className={isOpen ? "checklistListOpen checklistList" : "checklistList"}>
                 <HStack
-                    py={3}
+                    justifyContent={"space-between"}
+                    py={"9.5px"}
                     px={2}
                     onClick={() => {
                         expandRow(index)
                     }}
                     cursor={"pointer"}
                 >
-                    <Box
-                        as={FontAwesomeIcon}
-                        icon={faChevronRight}
-                        transition="all 0.2s"
-                        size={"sm"}
-                        transform={`rotate(${isOpen ? 90 : 0}deg)`}
-                        mr={3}
-                        ml={2}
-                    />
-                    <Box color={iconColor}>
-                        <FontAwesomeIcon icon={icon} size="lg" />
-                    </Box>
-                    <Text>{name}</Text>
+                    <HStack>
+                        <Box
+                            as={FontAwesomeIcon}
+                            icon={faChevronRight}
+                            transition="all 0.2s"
+                            size={"sm"}
+                            transform={`rotate(${isOpen ? 90 : 0}deg)`}
+                            mx={2}
+                        />
+                        <Text>{name}</Text>
+                    </HStack>
+                    {href ? (
+                        <Link as={NextLink} href={href} target="_blank">
+                            <Button
+                                w={"fit-content"}
+                                size={"sm"}
+                                justifyContent={"start"}
+                                borderRadius={10}
+                                onClick={(e) => {
+                                    e.stopPropagation()
+                                }}
+                            >
+                                <Flex gap={3}>
+                                    <Text>View</Text>
+                                    <Box>
+                                        <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
+                                    </Box>
+                                </Flex>
+                            </Button>
+                        </Link>
+                    ) : (
+                        <Button isDisabled size={"sm"} w={"fit-content"} justifyContent={"start"} borderRadius={10}>
+                            <Flex gap={3}>
+                                <Text>Link missing</Text>
+                            </Flex>
+                        </Button>
+                    )}
                 </HStack>
                 <Collapse in={isOpen}>
                     <Flex direction={"column"} gap={3} pl={12} pt={1} pb={3} pr={3}>
                         <Text>{description}</Text>
-                        {href ? (
-                            <Link as={NextLink} href={href} target="_blank">
-                                <Button w={"fit-content"} justifyContent={"start"} borderRadius={10}>
-                                    <Flex gap={3}>
-                                        <Text>Evidence link</Text>
-                                        <Box>
-                                            <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
-                                        </Box>
-                                    </Flex>
-                                </Button>
-                            </Link>
-                        ) : (
-                            value && (
-                                <Button isDisabled w={"fit-content"} justifyContent={"start"} borderRadius={10}>
-                                    <Flex gap={3}>
-                                        <Text>🤔 Evidence link missing</Text>
-                                    </Flex>
-                                </Button>
-                            )
-                        )}
                     </Flex>
                 </Collapse>
             </Flex>

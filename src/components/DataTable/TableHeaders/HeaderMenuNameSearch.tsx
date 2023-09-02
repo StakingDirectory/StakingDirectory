@@ -6,16 +6,9 @@ import { MenuList, IconButton, Input, InputGroup, InputRightElement } from "@cha
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { faTimesCircle } from "@fortawesome/free-solid-svg-icons"
 
-export default function HeaderMenuNameSearch({ isOpen, nameInputRef, dataFilter, setDataFilter }) {
+export default function HeaderMenuNameSearch({ nameInputRef, dataFilter, setDataFilter }) {
     const [searchText, setSearchText] = useState(dataFilter?.name ? dataFilter?.name : "")
     const [debouncedSearchText, setDebouncedSearchText] = useState(searchText)
-
-    // Keep the focus on the input when typing
-    useEffect(() => {
-        if (nameInputRef.current) {
-            nameInputRef.current.focus()
-        }
-    }, [isOpen, dataFilter?.name, nameInputRef])
 
     useEffect(() => {
         setSearchText(dataFilter?.name || "")
@@ -24,7 +17,7 @@ export default function HeaderMenuNameSearch({ isOpen, nameInputRef, dataFilter,
     useEffect(() => {
         const handler = setTimeout(() => {
             setDebouncedSearchText(searchText)
-        }, 300)
+        }, 500)
 
         return () => {
             clearTimeout(handler)
@@ -49,29 +42,36 @@ export default function HeaderMenuNameSearch({ isOpen, nameInputRef, dataFilter,
     }
 
     return (
-        <MenuList p={0} overflow={"hidden"}>
-            <InputGroup borderRadius="lg">
-                <Input ref={nameInputRef} onChange={handleInputChange} border={0} placeholder="Search names..." value={searchText} />
-                {searchText && (
-                    <InputRightElement>
-                        <IconButton
-                            icon={<FontAwesomeIcon icon={faTimesCircle} size="sm" />}
-                            variant="ghost"
-                            aria-label="Clear search"
-                            borderRadius={8}
-                            onClick={() => {
-                                setDataFilter(
-                                    ((newDataFilter) => {
-                                        delete newDataFilter.name
-                                        return newDataFilter
-                                    })({ ...dataFilter })
-                                )
-                                setSearchText("")
-                            }}
-                        />
-                    </InputRightElement>
-                )}
-            </InputGroup>
-        </MenuList>
+        <InputGroup borderRadius="lg" pb={1} pl={2} maxW={"200px"} overflow={"hidden"}>
+            <Input
+                ref={nameInputRef}
+                onChange={handleInputChange}
+                placeholder="Search names..."
+                value={searchText}
+                variant={"NameSearchInput"}
+                fontWeight={"bold"}
+            />
+            {searchText && (
+                <InputRightElement>
+                    <IconButton
+                        size={"sm"}
+                        pl={"1px"}
+                        icon={<FontAwesomeIcon icon={faTimesCircle} size="lg" />}
+                        variant="ghost"
+                        aria-label="Clear search"
+                        borderRadius={"100%"}
+                        onClick={() => {
+                            setDataFilter(
+                                ((newDataFilter) => {
+                                    delete newDataFilter.name
+                                    return newDataFilter
+                                })({ ...dataFilter })
+                            )
+                            setSearchText("")
+                        }}
+                    />
+                </InputRightElement>
+            )}
+        </InputGroup>
     )
 }

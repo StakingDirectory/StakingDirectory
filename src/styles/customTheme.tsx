@@ -46,10 +46,11 @@ const customTheme = extendTheme({
             ".borderColorDivider": {
                 borderColor: props.colorMode === "dark" ? "divider.dark" : "divider.light",
             },
-            ".checklistBar": {
-                bg: props.colorMode === "dark" ? "checklistBar.dark" : "checklistBar.light",
+            ".checklistBarBorder": {
                 borderColor: props.colorMode === "dark" ? "checklistBar.dark" : "checklistBar.light",
             },
+            ".checklistBarBackground": { bg: "purple" },
+            ".checklistBarBackgroundTransparent": { bg: "purpleTransparent" },
             ".expandedTableRow": {
                 _hover: {
                     bg: props.colorMode === "dark" ? "pageBackground.dark" : "pageBackground.light",
@@ -132,6 +133,9 @@ const customTheme = extendTheme({
                 borderWidth: "3px",
                 borderRadius: "20px",
             },
+            ".pageBackgroundInverted": {
+                bg: props.colorMode === "dark" ? "pageBackground.light" : "pageBackground.dark",
+            },
         }),
     },
     components: {
@@ -160,6 +164,17 @@ const customTheme = extendTheme({
                             borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
                             borderWidth: "2px",
                             marginLeft: "-2px",
+                        },
+                    },
+                }),
+                NameSearchInput: (props: StyleFunctionProps) => ({
+                    field: {
+                        bg: props.colorMode === "dark" ? "pageBackgroundHover.dark" : "pageBackground.light",
+                        borderRadius: "10px",
+                        _focus: {
+                            borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
+                            borderWidth: "3px",
+                            marginLeft: "-3px",
                         },
                     },
                 }),
@@ -447,6 +462,7 @@ const customTheme = extendTheme({
         pink: "#b124b1",
         purple: "#54199b",
         orange: "#d66b13",
+        purpleTransparent: "rgba(83, 25, 155, 0.3)",
     },
 })
 

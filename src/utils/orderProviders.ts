@@ -1,6 +1,6 @@
 const countChecklistTrues = (provider, checklistProperties) => {
     return checklistProperties.reduce((count, checklistItem) => {
-        return count + (provider[checklistItem.value]?.value ? 1 : 0)
+        return count + (provider[checklistItem.value]?.evidenceLink ? 1 : 0)
     }, 0)
 }
 
@@ -10,18 +10,28 @@ const orderFilteredProviders = (filteredProviders, checklistProperties) => {
 
     // Copy the filteredProviders array before sorting
     const sortedProviders = [...filteredProviders].sort((a, b) => {
-        // const checklistTruesA = countChecklistTrues(a, checklistProperties)
-        // const checklistTruesB = countChecklistTrues(b, checklistProperties)
-
-        // Sort by number of checklist options that are true
-        // if (checklistTruesA > checklistTruesB) return -1
-        // if (checklistTruesA < checklistTruesB) return 1
-
-        // Then sort by stakingType first
+        // First, sort by stakingType
         const stakingOrderA = stakingTypeOrder.indexOf(a.stakingType)
         const stakingOrderB = stakingTypeOrder.indexOf(b.stakingType)
         if (stakingOrderA < stakingOrderB) return -1
         if (stakingOrderA > stakingOrderB) return 1
+
+        // Then sort by number of checklist evidence links
+        const checklistTruesA = countChecklistTrues(a, checklistProperties)
+        const checklistTruesB = countChecklistTrues(b, checklistProperties)
+        if (checklistTruesA > checklistTruesB) return -1
+        if (checklistTruesA < checklistTruesB) return 1
+
+        // Then sort by mainnetLaunch date
+        const dateA = a.mainnetLaunch?.date
+        const dateB = b.mainnetLaunch?.date
+
+        if (!dateA && dateB) return 1
+        if (dateA && !dateB) return -1
+        if (dateA && dateB) {
+            if (dateA < dateB) return -1
+            if (dateA > dateB) return 1
+        }
 
         // If counts are equal, sort by name
         const nameA = a.name?.toLowerCase()

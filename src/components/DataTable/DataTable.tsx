@@ -32,6 +32,7 @@ import HeaderMenuType from "./TableHeaders/HeaderMenuType"
 import HeaderMenuNameSearch from "./TableHeaders/HeaderMenuNameSearch"
 import HeaderMenuPlaceholder from "./TableHeaders/HeaderMenuPlaceholder"
 
+import MainnetLaunchDate from "./TableCells/MainnetLaunchDate"
 import StakeFromHome from "./TableCells/StakeFromHome"
 import ChecklistBar from "./TableCells/ChecklistBar"
 import StakingType from "./TableCells/StakingType"
@@ -92,6 +93,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                         borderRadius={"10px"}
                                         className={"borderColor"}
                                         cursor={"help"}
+                                        h={"40px"}
                                     >
                                         <FontAwesomeIcon icon={faArrowDownShortWide} size="2xl" />
                                     </Flex>
@@ -101,23 +103,12 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                         <Text fontWeight={"extrabold"} fontSize={"lg"} pb={2}>
                                             How is the list ordered?
                                         </Text>
-                                        {/* <Flex alignItems={"start"}>
-                                            <Text minW={6} fontWeight={"extrabold"} textAlign={"start"}>
-                                                1.
-                                            </Text>
-                                            <Text textAlign={"left"}>
-                                                First, by the number of checklist items that are&nbsp;
-                                                <Box as="span" color={"green"}>
-                                                    green
-                                                </Box>
-                                            </Text>
-                                        </Flex> */}
                                         <Flex alignItems={"start"}>
                                             <Text minW={6} fontWeight={"extrabold"} textAlign={"start"}>
                                                 1.
                                             </Text>
                                             <Text textAlign={"left"}>
-                                                By the staking type &nbsp;(
+                                                First, by the staking type &nbsp;(
                                                 <Box as="span" color={"green"}>
                                                     Solo
                                                 </Box>
@@ -144,6 +135,18 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                             <Text minW={6} fontWeight={"extrabold"} textAlign={"start"}>
                                                 2.
                                             </Text>
+                                            <Text textAlign={"left"}>Then, by the number of checklist items that are available</Text>
+                                        </Flex>
+                                        <Flex alignItems={"start"}>
+                                            <Text minW={6} fontWeight={"extrabold"} textAlign={"start"}>
+                                                3.
+                                            </Text>
+                                            <Text textAlign={"left"}>Then, by the mainnet launch date</Text>
+                                        </Flex>
+                                        <Flex alignItems={"start"}>
+                                            <Text minW={6} fontWeight={"extrabold"} textAlign={"start"}>
+                                                4.
+                                            </Text>
                                             <Text textAlign={"left"}>Then, if all the previous steps are identical, they are ordered by name</Text>
                                         </Flex>
                                     </Flex>
@@ -155,26 +158,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                 if (headerValue.type == "text") {
                                     return (
                                         <Th key={headerValue.id} textAlign={"start"}>
-                                            <Menu placement="right" variant={"DataTableHeader"} gutter={2} initialFocusRef={nameInputRef}>
-                                                {({ isOpen }) => (
-                                                    <>
-                                                        <Box>
-                                                            <HeaderButton
-                                                                dataFilter={dataFilter}
-                                                                id="name"
-                                                                text="NAME"
-                                                                filterDisabledColor={filterDisabledColor}
-                                                            />
-                                                        </Box>
-                                                        <HeaderMenuNameSearch
-                                                            isOpen={isOpen}
-                                                            nameInputRef={nameInputRef}
-                                                            dataFilter={dataFilter}
-                                                            setDataFilter={setDataFilter}
-                                                        />
-                                                    </>
-                                                )}
-                                            </Menu>
+                                            <HeaderMenuNameSearch nameInputRef={nameInputRef} dataFilter={dataFilter} setDataFilter={setDataFilter} />
                                         </Th>
                                     )
                                 } else if (headerValue.type == "checkbox") {
@@ -222,28 +206,6 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                 }
                             }
                         })}
-                        <Th w={"32px"}>
-                            {/* TODO: After launch switch this back to the ClearFiltersButton component */}
-                            {/* <ClearFiltersButton dataFilter={dataFilter} setDataFilter={setDataFilter} /> */}
-                            <Tooltip
-                                placement={"top"}
-                                gutter={10}
-                                label={
-                                    <Flex className={"tooltipLabel"} direction={"column"} gap={2}>
-                                        <Box fontWeight={"extrabold"} fontSize={"md"}>
-                                            Does something need fixing?
-                                        </Box>
-                                        <Box>Let us know!</Box>
-                                    </Flex>
-                                }
-                                className="tooltipArrow"
-                                hasArrow={true}
-                            >
-                                <Text fontWeight={"extrabold"} fontSize={"sm"} pb={2} cursor={"default"} color={"blue"} minW={"120px"}>
-                                    COMMUNITY UPDATE PHASE
-                                </Text>
-                            </Tooltip>
-                        </Th>
                     </Tr>
                 </Thead>
                 <Tbody>
@@ -304,15 +266,18 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                         <Td textAlign={"center"} fontWeight={"bold"}>
                                             {provider.minStake?.type == "anyAmount" ? "Any amount" : `${provider.minStake?.value} ETH`}
                                         </Td>
-                                        {/* <Td>
+                                        <Td textAlign={"center"} fontWeight={"bold"}>
+                                            <MainnetLaunchDate provider={provider} />
+                                        </Td>
+                                        <Td>
                                             <ChecklistBar
                                                 provider={provider}
                                                 tableRowIndex={index}
                                                 expandedRows={expandedRows}
                                                 setExpandedChecklistRows={setExpandedChecklistRows}
                                             />
-                                        </Td> */}
-                                        <Td w={5}>
+                                        </Td>
+                                        <Td>
                                             <DataRowMenuButton provider={provider} />
                                         </Td>
                                     </Tr>
