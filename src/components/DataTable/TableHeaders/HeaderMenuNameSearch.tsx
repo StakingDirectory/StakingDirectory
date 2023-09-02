@@ -42,7 +42,7 @@ export default function HeaderMenuNameSearch({ nameInputRef, dataFilter, setData
     }
 
     return (
-        <InputGroup borderRadius="lg" pb={1} pl={2} maxW={"200px"} overflow={"hidden"}>
+        <InputGroup borderRadius="lg" pb={1} pl={2} maxW={"200px"} minW={"200px"} overflow={"hidden"}>
             <Input
                 ref={nameInputRef}
                 onChange={handleInputChange}

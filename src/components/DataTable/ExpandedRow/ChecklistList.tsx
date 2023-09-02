@@ -37,20 +37,25 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
                     justifyContent={"space-between"}
                     py={"9.5px"}
                     px={2}
-                    onClick={() => {
-                        expandRow(index)
-                    }}
-                    cursor={"pointer"}
+                    // TODO: Uncomment when explanations for sections have been written
+                    // onClick={() => {
+                    //     expandRow(index)
+                    // }}
+                    // cursor={"pointer"}
                 >
                     <HStack>
-                        <Box
+                        {/* 
+                            TODO: Uncomment when explanations for sections have been written
+                            <Box
                             as={FontAwesomeIcon}
                             icon={faChevronRight}
                             transition="all 0.2s"
                             size={"sm"}
                             transform={`rotate(${isOpen ? 90 : 0}deg)`}
                             mx={2}
-                        />
+                        /> */}
+                        {/* TODO: Remove box when expand is added back in above */}
+                        <Box pl={1} />
                         <Text>{name}</Text>
                     </HStack>
                     {href ? (
