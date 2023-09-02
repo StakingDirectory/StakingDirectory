@@ -1,14 +1,16 @@
-import { Flex, Box, Tooltip, Text, HStack } from "@chakra-ui/react"
+import { Flex, Box, Tooltip, Text, HStack, Link } from "@chakra-ui/react"
+
+import NextLink from "next/link"
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCircleInfo, faInfo, faCircle, faMinus } from "@fortawesome/free-solid-svg-icons"
+import { faCircleInfo, faMinus } from "@fortawesome/free-solid-svg-icons"
 import {} from "@fortawesome/free-regular-svg-icons"
 
 import dataProps from "public/data/dataProps"
 const checklistProperties = dataProps.find((prop) => prop.id === "checklistProperties").checklistProperties
 const providerProperties = dataProps.find((prop) => prop.id === "providerProperties").providerProperties
 
-export default function ChecklistBar({ provider, tableRowIndex, expandedRows, setExpandedChecklistRows }) {
+export default function ChecklistBar({ provider }) {
     const renderBox = (id, index: number) => {
         const name = providerProperties.find((prop) => prop.value === id.value).name
         const value = provider[id.value]?.evidenceLink
@@ -53,22 +55,34 @@ export default function ChecklistBar({ provider, tableRowIndex, expandedRows, se
                     minW={6}
                     maxW={6}
                     className={value ? "checklistBarBorder checklistBarBackground" : "checklistBarBorder checklistBarBackgroundTransparent"}
-                    onClick={(e) => {
-                        // Prevent propagation of the event if tableRowIndex is in expandedRows
-                        if (expandedRows.includes(tableRowIndex)) {
-                            e.stopPropagation()
-                        }
-                        setExpandedChecklistRows([{ providerId: provider.id, index }])
-                    }}
                 >
-                    <Box
-                        as={FontAwesomeIcon}
-                        icon={value ? faCircleInfo : faMinus}
-                        size={value ? "1x" : "xs"}
-                        pt={{ base: "1", sm: "0" }}
-                        mr={1}
-                        ml={1}
-                    />
+                    {value ? (
+                        <Link as={NextLink} href={value} target="_blank">
+                            <Box
+                                as={FontAwesomeIcon}
+                                icon={faCircleInfo}
+                                size={"1x"}
+                                pt={{ base: "1", sm: "0" }}
+                                mr={1}
+                                ml={1}
+                                onClick={(e) => {
+                                    e.stopPropagation()
+                                }}
+                            />
+                        </Link>
+                    ) : (
+                        <Box
+                            as={FontAwesomeIcon}
+                            icon={faMinus}
+                            size={"xs"}
+                            pt={{ base: "1", sm: "0" }}
+                            mr={1}
+                            ml={1}
+                            onClick={(e) => {
+                                e.stopPropagation()
+                            }}
+                        />
+                    )}
                 </Flex>
             </Tooltip>
         )

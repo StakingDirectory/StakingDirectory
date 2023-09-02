@@ -270,12 +270,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                             <MainnetLaunchDate provider={provider} />
                                         </Td>
                                         <Td>
-                                            <ChecklistBar
-                                                provider={provider}
-                                                tableRowIndex={index}
-                                                expandedRows={expandedRows}
-                                                setExpandedChecklistRows={setExpandedChecklistRows}
-                                            />
+                                            <ChecklistBar provider={provider} />
                                         </Td>
                                         <Td>
                                             <DataRowMenuButton provider={provider} />
