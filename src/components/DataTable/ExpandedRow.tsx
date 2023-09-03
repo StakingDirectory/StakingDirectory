@@ -12,6 +12,7 @@ import Status from "./ExpandedRow/Status"
 import Links from "./ExpandedRow/Links"
 import StakingType from "./ExpandedRow/StakingType"
 import ProviderType from "./ExpandedRow/ProviderType"
+import SelfLimit from "./ExpandedRow/SelfLimit"
 
 export default function ExpandedRow({ provider, expandedRows, expandedChecklistRows, setExpandedChecklistRows }) {
     const [isDescriptionExpanded, setIsDescriptionExpanded] = useState(false)
@@ -55,7 +56,9 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
                         transition={isDescriptionExpanded ? "all 1s" : "all 0.2s"}
                         fontWeight={"medium"}
                     >
-                        <Text fontWeight={"bold"}>About {provider.name}</Text>
+                        <Text fontWeight={"bold"} cursor={"default"}>
+                            📖 About {provider.name}
+                        </Text>
                         {provider.description ? (
                             <ReactMarkdown
                                 components={{
@@ -86,10 +89,11 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
                 {provider.providerType === "hardware" && <ProviderType provider={provider} />}
             </Flex>
             <Flex direction={"column"} gap={5} w={220}>
-                <Flex direction={"column"} className={"expandContentBox"} p={0} overflow={"hidden"}>
+                <Flex direction={"column"} className={"expandContentBox"} p={0} overflow={"hidden"} gap={2}>
                     <KeyOwner provider={provider} id={"validatorKey"} />
                     <KeyOwner provider={provider} id={"withdrawalKey"} />
                 </Flex>
+                {provider.stakingType == "lst" && <SelfLimit provider={provider} />}
             </Flex>
             <ChecklistList provider={provider} expandedChecklistRows={expandedChecklistRows} setExpandedChecklistRows={setExpandedChecklistRows} />
         </Flex>

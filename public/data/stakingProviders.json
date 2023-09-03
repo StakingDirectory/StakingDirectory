@@ -1851,6 +1851,10 @@
             "alt": "Logo"
         },
         "name": "StakeWise V2 (LST)",
+        "selfLimit": {
+            "value": 22,
+            "evidenceLink": "https://twitter.com/stakewise_io/status/1525225299146944513"
+        },
         "status": "active",
         "mainnetLaunch": {
             "date": "2021-01-16",
@@ -2114,6 +2118,10 @@
             "value": true,
             "evidenceLink": "https://docs.rocketpool.net/guides/node/eth-clients.html#consensus-clients"
         },
+        "selfLimit": {
+            "value": 22,
+            "evidenceLink": "https://twitter.com/langerstwit/status/1525343792772939777?s=20&t=35_8P57H2TkY-GkhnwODUQ"
+        },
         "lstName": "rETH",
         "stakeFromHome": false,
         "description": "Rocket Pool is the base layer protocol for decentralised and trustless Ethereum staking.\n\nDesigned to support stakers of all shapes and sizes, Rocket Pool was built with the intent to allow anyone to permissionlessly stake ETH to a network of decentralised node operators with full autonomy underpinned by RPL token collateral.\n\nThe core premise behind a protocol is to ensure the network is not beholden to any one party. This is a principle directly linked to Ethereum itself, and a mindset used at every stage of the process as we continue to upgrade the protocol.\n\nRocket Pool strives to embody the core ethos of Ethereum and DeFi, specifically the non-custodial, trustless nature that allows self-sovereignty to truly thrive."
@@ -2327,6 +2335,10 @@
             "alt": "Logo"
         },
         "name": "StakeWise V3 (LST)",
+        "selfLimit": {
+            "value": 22,
+            "evidenceLink": "https://twitter.com/stakewise_io/status/1525225299146944513"
+        },
         "status": "dev",
         "mainnetLaunch": {
             "date": "",
@@ -2464,6 +2476,10 @@
             "alt": "Logo"
         },
         "name": "Swell",
+        "selfLimit": {
+            "value": 22,
+            "evidenceLink": "https://twitter.com/swellnetworkio/status/1697441725567119487"
+        },
         "status": "active",
         "mainnetLaunch": {
             "date": "2023-04-25",
@@ -2927,6 +2943,10 @@
             "evidenceLink": "https://staderlabs.gitbook.io/ethereum/node-operator/permissionless-node-operator/node-registration-and-adding-validators/step-4-configure-stader-services/step-4.4-eth2-consensus-client-selection"
         },
         "name": "Stader (LST)",
+        "selfLimit": {
+            "value": 22,
+            "evidenceLink": "https://blog.staderlabs.com/staders-ethx-power-pledge-our-promise-to-keep-ethereum-decentralized-c482ec66641c"
+        },
         "mainnetLaunch": {
             "date": "2023-07-10",
             "evidenceLink": "https://www.staderlabs.com/blogs/staders-ethx-now-live-on-mainnet/"
