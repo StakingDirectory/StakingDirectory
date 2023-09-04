@@ -10,7 +10,7 @@ export default function RewardFee({ provider }) {
                 className="tooltipArrow"
                 hasArrow={true}
             >
-                <Box
+                <Flex
                     borderRadius={10}
                     border={provider.fee?.value == 0 ? "" : "2px solid"}
                     borderColor="red"
@@ -20,10 +20,12 @@ export default function RewardFee({ provider }) {
                     py={"2px"}
                     className={"bgPage"}
                     fontWeight={provider.fee?.value == 0 ? "bold" : "semibold"}
+                    wrap={"wrap"}
+                    maxW={"80px"}
                 >
                     {provider.fee?.value}
                     {provider.fee?.type == "percentage" ? "%" : ""}
-                </Box>
+                </Flex>
             </Tooltip>
         </Flex>
     )

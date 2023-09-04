@@ -526,7 +526,7 @@
         "providerType": "no",
         "fee": {
             "type": "other",
-            "value": "$5/month"
+            "value": "$5 per month"
         },
         "links": {
             "website": "https://www.allnodes.com/eth2/staking",
@@ -1726,7 +1726,7 @@
         "providerType": "no",
         "fee": {
             "type": "other",
-            "value": "LST+0.25%"
+            "value": "LST +0.25%"
         },
         "links": {
             "website": "https://indexcoop.com/dseth-diversified-staked-eth-index",
@@ -2694,7 +2694,7 @@
         "providerType": "no",
         "fee": {
             "type": "other",
-            "value": "LST+0.25%"
+            "value": "LST +0.25%"
         },
         "minStake": {
             "type": "anyAmount",
