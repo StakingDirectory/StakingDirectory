@@ -1,7 +1,4 @@
-import { Flex, Tooltip, Box, Text, Image } from "@chakra-ui/react"
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faGift } from "@fortawesome/free-solid-svg-icons"
+import { Flex, Tooltip, Box, Text } from "@chakra-ui/react"
 
 import ratedNetworkApiData from "public/data/ratedNetworkApiData.json"
 
@@ -54,7 +51,6 @@ export default function RewardFee({ provider }) {
                     fontWeight={"bold"}
                     borderWidth={0}
                 >
-                    {/* <Image maxW={3} objectFit={"cover"} src={"./EthereumBeaconChainLogo.svg"} alt={"Staking Directory Logo"} /> */}
                     {ratedNetworkApiData.filter((apiData) => apiData.id === 0)[0].aprPercentage7Day.toFixed(1) + "%"}
                 </Flex>
             </Tooltip>
