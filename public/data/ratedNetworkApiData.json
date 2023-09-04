@@ -1,0 +1,22 @@
+[
+    {
+        "id": 0,
+        "aprPercentage7Day": 4.47,
+        "lastUpdated": "2023-09-04"
+    },
+    {
+        "id": 38,
+        "networkPenetration": 0.3205822398170963,
+        "aprPercentage7Day": 4.51
+    },
+    {
+        "id": 31,
+        "networkPenetration": 0.097468595874547,
+        "aprPercentage7Day": 4.54
+    },
+    {
+        "id": 35,
+        "networkPenetration": 0.030116300041911095,
+        "aprPercentage7Day": 4.41
+    }
+]

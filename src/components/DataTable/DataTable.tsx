@@ -135,7 +135,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                             <Text minW={6} fontWeight={"extrabold"} textAlign={"start"}>
                                                 2.
                                             </Text>
-                                            <Text textAlign={"left"}>Then, by the number of checklist items that are available</Text>
+                                            <Text textAlign={"left"}>Then, by the number of research links that are available</Text>
                                         </Flex>
                                         <Flex alignItems={"start"}>
                                             <Text minW={6} fontWeight={"extrabold"} textAlign={"start"}>

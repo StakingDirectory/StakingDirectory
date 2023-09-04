@@ -194,7 +194,7 @@ const dataProps = [
         type: "other",
         id: "reward",
         name: "Reward",
-        headerText: "REWARD",
+        headerText: "7 DAY <br /> APR",
         options: [],
     },
     {

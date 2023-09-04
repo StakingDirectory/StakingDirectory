@@ -2544,6 +2544,7 @@
     },
     {
         "id": 38,
+        "ratedId": "Lido",
         "logo": {
             "src": "./images/LidoLogo.png",
             "alt": "Lido Logo"

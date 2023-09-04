@@ -57,7 +57,7 @@ export default function KeyOwner({ provider, id }) {
     }
 
     return (
-        <Box pt={4}>
+        <Box pt={"13px"}>
             <Text fontWeight={"bold"} pl={3} pb={2} cursor={"default"}>
                 <Flex>
                     <Box>{id === "validatorKey" ? "🔑" : "💰"}</Box>

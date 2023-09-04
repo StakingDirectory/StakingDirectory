@@ -4,7 +4,7 @@ export default function RewardFee({ provider }) {
     return (
         <Flex direction="column" gap={"2px"} alignItems={"center"}>
             <Tooltip
-                label={<Box className={"tooltipLabel"}>Cost to use this provider</Box>}
+                label={<Box className={"tooltipLabel"}>Fee charged by {provider.name}</Box>}
                 placement={"top"}
                 gutter={10}
                 className="tooltipArrow"
