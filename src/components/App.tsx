@@ -10,7 +10,8 @@ import orderProviders from "../utils/orderProviders"
 
 import dataProps from "public/data/dataProps"
 
-import { Box, Flex, Text, Image, Button } from "@chakra-ui/react"
+import { Box, Flex, Text, Image, Link, Code } from "@chakra-ui/react"
+import NextLink from "next/link"
 import AddProviderButton from "./AddProviderButton"
 
 const App = () => {
@@ -49,9 +50,17 @@ const App = () => {
                     </Box>
                     <Box height={50} />
                     <DataTableTabs orderedFilteredProviders={orderedFilteredProviders} dataFilter={dataFilter} setDataFilter={setDataFilter} />
-                    <Box mb={20}>
+                    <Box mb={10}>
                         <AddProviderButton />
                     </Box>
+                    <Code mx={1} px={2} py={1} borderRadius={10} fontWeight={"extrabold"}>
+                        Live data provided by{" "}
+                        <Link as={NextLink} href={"https://www.rated.network/"} color={"blue"} textDecoration={"underline"} target="_blank">
+                            Rated.Network
+                        </Link>{" "}
+                        📡
+                    </Code>
+                    <Box mb={20} />
                 </Flex>
             </Flex>
             <Box flex="1" />
