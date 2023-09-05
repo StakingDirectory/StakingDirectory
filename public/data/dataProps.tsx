@@ -211,7 +211,7 @@ const dataProps = [
         type: "other",
         id: "minStake",
         name: "Min Stake",
-        headerText: "MIN STAKE",
+        headerText: "MINIMUM <br /> STAKE",
         options: [],
     },
     {

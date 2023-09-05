@@ -30,7 +30,7 @@ import HeaderButton from "./TableHeaders/HeaderButton"
 import HeaderMenuCheckbox from "./TableHeaders/HeaderMenuCheckbox"
 import HeaderMenuType from "./TableHeaders/HeaderMenuType"
 import HeaderMenuNameSearch from "./TableHeaders/HeaderMenuNameSearch"
-import HeaderMenuPlaceholder from "./TableHeaders/HeaderMenuPlaceholder"
+import HeaderTextOnly from "./TableHeaders/HeaderTextOnly"
 
 import MainnetLaunchDate from "./TableCells/MainnetLaunchDate"
 import StakeFromHome from "./TableCells/StakeFromHome"
@@ -193,13 +193,7 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                     return (
                                         <Th key={headerValue.id}>
                                             <Menu placement="right-start" variant={"DataTableHeader"} closeOnSelect={false} gutter={2}>
-                                                <HeaderButton
-                                                    id={headerValue.id}
-                                                    dataFilter={dataFilter}
-                                                    text={headerValue.headerText}
-                                                    filterDisabledColor={filterDisabledColor}
-                                                />
-                                                <HeaderMenuPlaceholder id={headerValue.id} dataFilter={dataFilter} setDataFilter={setDataFilter} />
+                                                <HeaderTextOnly text={headerValue.headerText} />
                                             </Menu>
                                         </Th>
                                     )
