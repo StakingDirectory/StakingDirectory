@@ -2547,7 +2547,8 @@
         },
         "lstName": "swETH",
         "stakeFromHome": false,
-        "description": "A non-custodial ETH liquid staking protocol that helps you optimize yield in DeFi."
+        "description": "A non-custodial ETH liquid staking protocol that helps you optimize yield in DeFi.",
+        "ratedId": "Swell"
     },
     {
         "id": 38,
