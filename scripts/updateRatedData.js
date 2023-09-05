@@ -34,6 +34,12 @@ async function updateStakingProviders() {
                 if (index !== -1) {
                     ratedNetworkApiData[index].networkPenetration = networkPenetration
                     ratedNetworkApiData[index].aprPercentage30Day = aprPercentage
+                } else {
+                    ratedNetworkApiData.push({
+                        id: provider.id,
+                        networkPenetration: networkPenetration,
+                        aprPercentage30Day: aprPercentage,
+                    })
                 }
 
                 await delay(2000)
