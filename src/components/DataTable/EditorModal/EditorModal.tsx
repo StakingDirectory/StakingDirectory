@@ -149,6 +149,35 @@ const allOptions = [
         ],
     },
     {
+        id: "ratedId",
+        headerName: "Rated Network ID",
+        fields: [
+            {
+                id: "ratedId",
+                name: "Rated Network ID",
+                inputType: "input",
+            },
+        ],
+    },
+    {
+        id: "selfLimit",
+        headerName: "Network Share Self Limit Pledge",
+        fields: [
+            {
+                id: "selfLimit.value",
+                name: "Self Limit %",
+                inputType: "input",
+                placeholder: " ",
+            },
+            {
+                id: "selfLimit.evidenceLink",
+                name: "Evidence Link",
+                inputType: "input",
+                placeholder: "https://...",
+            },
+        ],
+    },
+    {
         id: "providerType",
         headerName: "Provider Type",
         fields: [
@@ -438,13 +467,14 @@ export default function EditorModal({ isOpen, onClose, provider, newProvider = f
                             <Text isTruncated>{provider.name}</Text>
                             {newProvider && <Text>Create new provider</Text>}
                         </Flex>
-                        <OptionSelector
+                        {/* TODO: Fix this so it shows all the available fields */}
+                        {/* <OptionSelector
                             zIndex={999}
                             provider={provider}
                             currentSelection={currentSelection}
                             setCurrentSelection={setCurrentSelection}
                             updatedValues={updatedValues}
-                        />
+                        /> */}
                     </Flex>
                 </ModalHeader>
                 <ModalBody overflowY={"scroll"} pt={0}>

@@ -5,14 +5,14 @@ import ratedNetworkApiData from "public/data/ratedNetworkApiData.json"
 export default function RewardFee({ provider }) {
     const apiData = ratedNetworkApiData.filter((apiData) => apiData.id === provider.id)
 
-    return provider.stakingType === "lst" && apiData[0] && apiData[0].aprPercentage7Day ? (
+    return provider.stakingType === "lst" && apiData[0] && apiData[0].aprPercentage30Day ? (
         <Flex direction="column" gap={"2px"} alignItems={"center"}>
             <Tooltip
                 label={
                     <Box className={"tooltipLabel"}>
                         {provider.name} average APR
                         <br />
-                        Past 7 day
+                        Past 30 day
                     </Box>
                 }
                 placement={"top"}
@@ -21,7 +21,7 @@ export default function RewardFee({ provider }) {
                 hasArrow={true}
             >
                 <Box borderRadius={10} w={"fit-content"} px={"8px"} py={"5px"} fontWeight={"bold"} borderWidth={2}>
-                    <Text>{apiData[0].aprPercentage7Day.toFixed(1)}%</Text>
+                    <Text>{apiData[0].aprPercentage30Day.toFixed(1)}%</Text>
                 </Box>
             </Tooltip>
         </Flex>
@@ -32,7 +32,7 @@ export default function RewardFee({ provider }) {
                     <Box className={"tooltipLabel"}>
                         Ethereum network average APR
                         <br />
-                        Past 7 days
+                        Past 30 days
                     </Box>
                 }
                 placement={"top"}
@@ -51,7 +51,7 @@ export default function RewardFee({ provider }) {
                     fontWeight={"bold"}
                     borderWidth={0}
                 >
-                    {ratedNetworkApiData.filter((apiData) => apiData.id === 0)[0].aprPercentage7Day.toFixed(1) + "%"}
+                    {ratedNetworkApiData.filter((apiData) => apiData.id === 0)[0].aprPercentage30Day.toFixed(1) + "%"}
                 </Flex>
             </Tooltip>
         </Flex>

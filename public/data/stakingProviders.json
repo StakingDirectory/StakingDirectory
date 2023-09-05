@@ -5,6 +5,11 @@
         "stakeFromHome": false,
         "stakingType": "",
         "providerType": "no",
+        "ratedId": "",
+        "selfLimit": {
+            "value": null,
+            "evidenceLink": ""
+        },
         "fee": {
             "type": "percentage",
             "value": 0
@@ -1842,7 +1847,8 @@
             "evidenceLink": ""
         },
         "lstName": "cbETH",
-        "stakeFromHome": false
+        "stakeFromHome": false,
+        "ratedId": "Coinbase"
     },
     {
         "id": 32,
@@ -2124,7 +2130,8 @@
         },
         "lstName": "rETH",
         "stakeFromHome": false,
-        "description": "Rocket Pool is the base layer protocol for decentralised and trustless Ethereum staking.\n\nDesigned to support stakers of all shapes and sizes, Rocket Pool was built with the intent to allow anyone to permissionlessly stake ETH to a network of decentralised node operators with full autonomy underpinned by RPL token collateral.\n\nThe core premise behind a protocol is to ensure the network is not beholden to any one party. This is a principle directly linked to Ethereum itself, and a mindset used at every stage of the process as we continue to upgrade the protocol.\n\nRocket Pool strives to embody the core ethos of Ethereum and DeFi, specifically the non-custodial, trustless nature that allows self-sovereignty to truly thrive."
+        "description": "Rocket Pool is the base layer protocol for decentralised and trustless Ethereum staking.\n\nDesigned to support stakers of all shapes and sizes, Rocket Pool was built with the intent to allow anyone to permissionlessly stake ETH to a network of decentralised node operators with full autonomy underpinned by RPL token collateral.\n\nThe core premise behind a protocol is to ensure the network is not beholden to any one party. This is a principle directly linked to Ethereum itself, and a mindset used at every stage of the process as we continue to upgrade the protocol.\n\nRocket Pool strives to embody the core ethos of Ethereum and DeFi, specifically the non-custodial, trustless nature that allows self-sovereignty to truly thrive.",
+        "ratedId": "Rocketpool"
     },
     {
         "id": 37,
@@ -2611,7 +2618,11 @@
             "evidenceLink": "https://www.rated.network/o/Lido?network=mainnet"
         },
         "stakeFromHome": false,
-        "description": "Lido is the name of a family of open-source peer-to-system software tools deployed and functioning on Ethereum.\n\nUsers mint transferable utility tokens, which receive rewards linked to the related validation activities of writing data to the blockchain, while the tokens can be used in other on-chain activities."
+        "description": "Lido is the name of a family of open-source peer-to-system software tools deployed and functioning on Ethereum.\n\nUsers mint transferable utility tokens, which receive rewards linked to the related validation activities of writing data to the blockchain, while the tokens can be used in other on-chain activities.",
+        "selfLimit": {
+            "value": "",
+            "evidenceLink": ""
+        }
     },
     {
         "id": 666346,
