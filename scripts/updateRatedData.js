@@ -36,11 +36,43 @@ async function updateStakingProviders() {
                     ratedNetworkApiData[index].aprPercentage30Day = aprPercentage
                 }
 
-                await delay(1000)
+                await delay(2000)
             } catch (error) {
                 console.error(`Error fetching data for ${provider.ratedId}: ${error}`)
             }
         }
+    }
+
+    try {
+        const networkOverviewResponse = await axios.get("https://api.rated.network/v0/eth/network/overview", {
+            headers: {
+                accept: "application/json",
+                "X-Rated-Network": "mainnet",
+                Authorization: `Bearer ${process.env.RATED_NETWORK_API_KEY}`,
+            },
+        })
+
+        const networkData = networkOverviewResponse.data.find((item) => item.timeWindow === "30d")
+
+        if (networkData) {
+            const { avgNetworkAprPercentage } = networkData
+
+            console.log("avgNetworkAprPercentage", avgNetworkAprPercentage)
+
+            const generalNetworkIndex = ratedNetworkApiData.findIndex((item) => item.id === 0)
+            if (generalNetworkIndex !== -1) {
+                ratedNetworkApiData[generalNetworkIndex].aprPercentage30Day = avgNetworkAprPercentage
+                ratedNetworkApiData[generalNetworkIndex].lastUpdated = new Date().toISOString().slice(0, 10)
+            } else {
+                ratedNetworkApiData.push({
+                    id: 0,
+                    aprPercentage30Day: avgNetworkAprPercentage,
+                    lastUpdated: new Date().toISOString().slice(0, 10),
+                })
+            }
+        }
+    } catch (error) {
+        console.error(`Error fetching general network data: ${error}`)
     }
 
     fs.writeFileSync(ratedNetworkApiDataPath, JSON.stringify(ratedNetworkApiData, null, 4))

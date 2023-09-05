@@ -12,7 +12,7 @@ export default function SelfLimit({ provider }) {
 
     const apiData = ratedNetworkApiData.filter((apiData) => apiData.id === provider.id)
 
-    const networkShareHref = apiData ? "https://" : null
+    const networkShareHref = apiData ? `https://www.rated.network/o/${provider.ratedId}` : null
     const networkShareValue = apiData[0] ? Math.ceil(apiData[0].networkPenetration * 1000) / 10 : null
 
     return (
