@@ -18,5 +18,10 @@
         "id": 35,
         "networkPenetration": 0.03010557390367303,
         "aprPercentage30Day": 4.73
+    },
+    {
+        "id": 43,
+        "networkPenetration": 0.001792984076593796,
+        "aprPercentage30Day": 4.76
     }
 ]
