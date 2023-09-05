@@ -1,0 +1,35 @@
+# .github/workflows/updateRatedData.yml
+name: Update Rated Data
+
+on:
+    workflow_dispatch:
+    schedule:
+        - cron: "0 0 * * *"
+
+jobs:
+    updateData:
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+            pull-requests: write
+
+        steps:
+            - name: Check out repository
+              uses: actions/checkout@v2
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v2
+              with:
+                  node-version: 14
+
+            - name: Install dependencies
+              run: yarn install --frozen-lockfile
+
+            - name: Update data
+              run: node scripts/updateRatedData.js
+
+            - name: Commit and push changes
+              uses: stefanzweifel/git-auto-commit-action@v4
+              with:
+                  commit_message: BOT - Update rated network data
+                  branch: main

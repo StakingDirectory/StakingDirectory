@@ -60,6 +60,7 @@ const dataProps = [
             { value: "percentage", name: "Percentage" },
             { value: "eth", name: "ETH" },
             { value: "anyAmount", name: "Any Amount" },
+            { value: "ratedId", name: "Rated Network ID" },
         ],
     },
     {
@@ -194,7 +195,7 @@ const dataProps = [
         type: "other",
         id: "reward",
         name: "Reward",
-        headerText: "REWARD",
+        headerText: "30 DAY <br /> APR",
         options: [],
     },
     {

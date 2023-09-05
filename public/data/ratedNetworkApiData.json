@@ -1,0 +1,22 @@
+[
+    {
+        "id": 0,
+        "aprPercentage30Day": 4.47,
+        "lastUpdated": "2023-09-04"
+    },
+    {
+        "id": 38,
+        "networkPenetration": 1,
+        "aprPercentage30Day": 2
+    },
+    {
+        "id": 31,
+        "networkPenetration": 3,
+        "aprPercentage30Day": 4
+    },
+    {
+        "id": 35,
+        "networkPenetration": 5,
+        "aprPercentage30Day": 6
+    }
+]

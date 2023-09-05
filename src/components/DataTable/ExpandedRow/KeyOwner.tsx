@@ -24,9 +24,6 @@ export default function KeyOwner({ provider, id }) {
     }
 
     const renderBox = (ownerId, index) => {
-        const value = provider[ownerId]?.value
-        const description = provider[ownerId]?.description
-
         const isOpen = expandedRows.some((row) => row.index === index && row.providerId === provider.id)
 
         return (
@@ -60,10 +57,14 @@ export default function KeyOwner({ provider, id }) {
     }
 
     return (
-        <Box pt={4}>
-            <Text fontWeight={"bold"} pl={4} pb={2}>
-                {id === "validatorKey" ? "Validator Key" : "Withdrawal Key"}
+        <Box pt={"13px"}>
+            <Text fontWeight={"bold"} pl={3} pb={2} cursor={"default"}>
+                <Flex>
+                    <Box>{id === "validatorKey" ? "🔑" : "💰"}</Box>
+                    <Box ml={2}>{id === "validatorKey" ? "Validator Key" : "Withdrawal Key"}</Box>
+                </Flex>
             </Text>
+
             <Flex grow={1} className={""} p={0} gap={1} direction={"column"} overflow={"hidden"}>
                 {provider[id] &&
                     Object.entries(provider[id])

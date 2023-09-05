@@ -77,6 +77,14 @@ const customTheme = extendTheme({
                 padding: "1rem",
                 borderRadius: "20px",
             },
+            ".expandContentBoxSmall": {
+                bg: props.colorMode === "dark" ? "contentBackground.dark" : "contentBackground.light",
+                borderColor: props.colorMode === "dark" ? "border.dark" : "border.light",
+                borderWidth: "3px",
+                paddingX: "0.5rem",
+                paddingY: "15px",
+                borderRadius: "20px",
+            },
             ".editorOptionContainer": {
                 paddingTop: "0.6rem",
                 paddingBottom: "1rem",

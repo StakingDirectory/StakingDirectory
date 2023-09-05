@@ -44,7 +44,7 @@ export default function CommunityUpdatePhase() {
                     />
                     <Flex alignItems={"center"} gap={15} wrap={"wrap"}>
                         <Text fontSize={{ base: "xl", sm: "2lx" }} fontWeight={"extrabold"} mr={5}>
-                            Community Updates
+                            Community updates
                         </Text>
                         {!isOpen && (
                             <Flex gap={15}>
