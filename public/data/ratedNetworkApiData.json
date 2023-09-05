@@ -6,17 +6,17 @@
     },
     {
         "id": 38,
-        "networkPenetration": 1,
-        "aprPercentage30Day": 2
+        "networkPenetration": 0.32059227981935623,
+        "aprPercentage30Day": 4.62
     },
     {
         "id": 31,
-        "networkPenetration": 3,
-        "aprPercentage30Day": 4
+        "networkPenetration": 0.0975908555224815,
+        "aprPercentage30Day": 4.68
     },
     {
         "id": 35,
-        "networkPenetration": 5,
-        "aprPercentage30Day": 6
+        "networkPenetration": 0.03010557390367303,
+        "aprPercentage30Day": 4.73
     }
 ]
