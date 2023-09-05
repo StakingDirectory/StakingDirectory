@@ -99,8 +99,8 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
             grow={1}
             h={"fit-content"}
             className={"expandContentBox"}
-            minW={{ base: 350, xl: 370 }}
-            maxW={{ base: 350, xl: 370 }}
+            minW={{ base: 220, xl: 350 }}
+            maxW={{ base: 350, xl: 350 }}
             p={0}
             gap={1}
             direction={"column"}
