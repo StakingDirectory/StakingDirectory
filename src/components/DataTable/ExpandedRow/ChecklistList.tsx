@@ -56,7 +56,9 @@ export default function ChecklistList({ provider, expandedChecklistRows, setExpa
                         /> */}
                         {/* TODO: Remove box when expand is added back in above */}
                         <Box pl={1} />
-                        <Text cursor={"default"}>{name}</Text>
+                        <Text cursor={"default"} fontWeight={"semibold"}>
+                            {name}
+                        </Text>
                     </HStack>
                     {href ? (
                         <Link as={NextLink} href={href} target="_blank">
