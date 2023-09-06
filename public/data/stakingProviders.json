@@ -731,8 +731,8 @@
         "stakingType": "managed",
         "providerType": "no",
         "fee": {
-            "type": "other",
-            "value": "🤔"
+            "type": "percentage",
+            "value": "0"
         },
         "links": {
             "website": "https://www.bloxstaking.com/",
@@ -744,7 +744,9 @@
             "value": 32
         },
         "validatorKey": {
-            "userValidator": true
+            "userValidator": true,
+            "service": false,
+            "nodeOperator": false
         },
         "withdrawalKey": {
             "userWithdrawal": true
@@ -781,7 +783,8 @@
             "value": false,
             "evidenceLink": ""
         },
-        "stakeFromHome": false
+        "stakeFromHome": false,
+        "description": "BloxStaking is a fully non-custodial staking solution that allows the user to retain both the validator key and withdrawal key. Utilizing a highly secure HashiCorp plugin (KeyVault).\n\nBloxStaking never has access to your validator key or any sensitive information."
     },
     {
         "id": 16,
