@@ -833,7 +833,7 @@
         },
         "mevRelays": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://ethpool.org/faq"
         },
         "howToUse": {
             "value": false,
@@ -845,11 +845,11 @@
         },
         "executionClients": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://ethpool.org/faq"
         },
         "beaconClients": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://ethpool.org/faq"
         },
         "stakeFromHome": false
     },
