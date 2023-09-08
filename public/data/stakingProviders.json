@@ -465,7 +465,7 @@
         "providerType": "no",
         "fee": {
             "type": "other",
-            "value": "20$ pcm"
+            "value": "$20 per month"
         },
         "links": {
             "website": "https://www.launchnodes.com/",
