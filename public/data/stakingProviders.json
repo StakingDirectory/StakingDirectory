@@ -465,11 +465,12 @@
         "providerType": "no",
         "fee": {
             "type": "other",
-            "value": "AWS Image"
+            "value": "20$ pcm"
         },
         "links": {
             "website": "https://www.launchnodes.com/",
-            "twitter": "https://twitter.com/launchnodes"
+            "twitter": "https://twitter.com/launchnodes",
+            "discord": "https://discord.gg/zVPtHNEh"
         },
         "minStake": {
             "type": "eth",
@@ -499,7 +500,7 @@
         },
         "howToUse": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://launchnodes.gitbook.io/node-set-up-instructions/"
         },
         "operatorRequirements": {
             "value": false,
@@ -511,9 +512,10 @@
         },
         "beaconClients": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://www.launchnodes.com/proof-of-stake-nodes-blockchain/"
         },
-        "stakeFromHome": false
+        "stakeFromHome": false,
+        "description": "Launchnodes acts as an orchestration layer enabling enterprises and individuals to solo stake Ethereum on public cloud (AWS, GCP, Azure) and bare metal. \n\nProducts and services include: Prysm and Teku validator nodes, pre-synced beacon nodes and RPC, beacon node connection, white label staking solutions, impact staking."
     },
     {
         "id": 12,
