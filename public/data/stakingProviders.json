@@ -109,7 +109,7 @@
             "value": true,
             "evidenceLink": "https://github.com/AvadoDServer/"
         },
-        "description": "After starting out as a fork of Dappnode in 2018, AVADO has since advanced in its own right and gone all-in on streamlining the “run your own node” process for Ethereum PoS and other blockchains. (Description taken from Bankless) Avado only sell hardware and do not offer the software free. "
+        "description": "After starting out as a fork of Dappnode in 2018, AVADO has since advanced in its own right and gone all-in on streamlining the “run your own node” process for Ethereum PoS and other blockchains. Avado only sell hardware and do not offer their software standalone."
     },
     {
         "id": 4,
