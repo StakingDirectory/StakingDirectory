@@ -65,7 +65,8 @@
         },
         "links": {
             "website": "https://ava.do/",
-            "twitter": "https://twitter.com/AvadoCloud"
+            "twitter": "https://twitter.com/AvadoCloud",
+            "discord": "https://discord.gg/wAKPBjFzaB"
         },
         "minStake": {
             "type": "eth",
