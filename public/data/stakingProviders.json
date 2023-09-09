@@ -2002,7 +2002,7 @@
             "src": "./images/FraxLogo.png",
             "alt": "Logo"
         },
-        "name": "Frax",
+        "name": "Frax (LST)",
         "status": "active",
         "mainnetLaunch": {
             "date": "2022-10-19",
@@ -2011,8 +2011,8 @@
         "stakingType": "lst",
         "providerType": "no",
         "fee": {
-            "type": "other",
-            "value": "🤔"
+            "type": "percentage",
+            "value": "10"
         },
         "links": {
             "website": "https://app.frax.finance/frxeth/mint",
@@ -2062,7 +2062,7 @@
             "value": false,
             "evidenceLink": ""
         },
-        "lstName": "frxETH",
+        "lstName": "sfrxETH",
         "stakeFromHome": false
     },
     {
