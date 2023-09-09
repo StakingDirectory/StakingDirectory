@@ -2001,7 +2001,7 @@
             "src": "./images/FraxLogo.png",
             "alt": "Logo"
         },
-        "name": "Staked Frax Ethereum (sfrxETH)",
+        "name": "Frax (LST)",
         "status": "active",
         "mainnetLaunch": {
             "date": "2022-10-19",
