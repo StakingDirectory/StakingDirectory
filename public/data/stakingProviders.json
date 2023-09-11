@@ -2801,11 +2801,11 @@
         },
         "mevRelays": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/NethermindEth/sedge/blob/develop/configs/init.go"
         },
         "howToUse": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://docs.sedge.nethermind.io/docs/quickstart/complete-guide"
         },
         "operatorRequirements": {
             "value": true,
@@ -2813,11 +2813,11 @@
         },
         "executionClients": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/NethermindEth/sedge#supported-networks-and-clients"
         },
         "beaconClients": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/NethermindEth/sedge#supported-networks-and-clients"
         },
         "name": "Nethermind Sedge",
         "logo": {
