@@ -3327,5 +3327,63 @@
             "twitter": "https://twitter.com/twinstake_io"
         },
         "ratedId": "Twinstake"
+    },
+    {
+        "id": 451469,
+        "status": "dev",
+        "stakeFromHome": false,
+        "stakingType": "pooled",
+        "providerType": "no",
+        "ratedId": "",
+        "selfLimit": {
+            "value": "20",
+            "evidenceLink": "https://www.stakepark.xyz/stakeparks-alternative-staking-pool/"
+        },
+        "fee": {
+            "type": "percentage",
+            "value": "10"
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": ""
+        },
+        "sourceCode": {
+            "evidenceLink": ""
+        },
+        "auditReports": {
+            "evidenceLink": ""
+        },
+        "bugBounty": {
+            "evidenceLink": ""
+        },
+        "mevRelays": {
+            "evidenceLink": ""
+        },
+        "howToUse": {
+            "evidenceLink": "https://www.stakepark.xyz/stakeparks-alternative-staking-pool/"
+        },
+        "operatorRequirements": {
+            "evidenceLink": ""
+        },
+        "executionClients": {
+            "evidenceLink": ""
+        },
+        "beaconClients": {
+            "evidenceLink": ""
+        },
+        "lstName": "spETH",
+        "name": "StakePark Staking Pool",
+        "logo": {
+            "evidenceLink": "https://pbs.twimg.com/profile_images/1656273152945651714/fCrvL3Bw_400x400.jpg"
+        },
+        "description": "StakePark is an independent, staking pool alternative for the good of the Ethereum mainnet.\n\n- Capped 🚫 total # of validators\n\n- Minority🌈client software\n\n- Alternative⚡hosting infra",
+        "withdrawalKey": {
+            "userWithdrawal": true,
+            "smartContract": true
+        },
+        "links": {
+            "website": "https://www.stakepark.xyz/",
+            "twitter": "https://twitter.com/StakePark_xyz"
+        }
     }
 ]
