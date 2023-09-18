@@ -1,32 +1,32 @@
 [
     {
         "id": 0,
-        "lastUpdated": "2023-09-17",
-        "aprPercentage30Day": 4.483998417855848
+        "lastUpdated": "2023-09-18",
+        "aprPercentage30Day": 4.400439644331787
     },
     {
         "id": 38,
-        "networkPenetration": 0.32384216165665,
-        "aprPercentage30Day": 4.53
+        "networkPenetration": 0.3245942104869474,
+        "aprPercentage30Day": 4.45
     },
     {
         "id": 31,
-        "networkPenetration": 0.0976718831853229,
-        "aprPercentage30Day": 4.64
-    },
-    {
-        "id": 35,
-        "networkPenetration": 0.029449971306438484,
+        "networkPenetration": 0.09746926970354303,
         "aprPercentage30Day": 4.5
     },
     {
+        "id": 35,
+        "networkPenetration": 0.02962325778542399,
+        "aprPercentage30Day": 4.47
+    },
+    {
         "id": 43,
-        "networkPenetration": 0.0018016305944630804,
-        "aprPercentage30Day": 4.51
+        "networkPenetration": 0.0018238711446879597,
+        "aprPercentage30Day": 4.4
     },
     {
         "id": 416543,
-        "networkPenetration": 0.01096481631744706,
-        "aprPercentage30Day": 4.44
+        "networkPenetration": 0.01093325354676241,
+        "aprPercentage30Day": 4.4
     }
 ]
