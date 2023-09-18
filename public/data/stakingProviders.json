@@ -3329,6 +3329,73 @@
         "ratedId": "Twinstake"
     },
     {
+        "id": 318159,
+        "status": "active",
+        "stakeFromHome": true,
+        "stakingType": "managed",
+        "providerType": "no",
+        "ratedId": "",
+        "selfLimit": {
+            "value": null,
+            "evidenceLink": ""
+        },
+        "fee": {
+            "type": "other",
+            "value": "Custom"
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "sourceCode": {
+            "evidenceLink": "https://github.com/bloxapp/ssv"
+        },
+        "auditReports": {
+            "evidenceLink": "https://github.com/bloxapp/ssv/tree/main/audits"
+        },
+        "bugBounty": {
+            "evidenceLink": "https://immunefi.com/bounty/ssvnetwork/"
+        },
+        "mevRelays": {
+            "evidenceLink": "https://docs.ssv.network/run-a-node/operator-node/mev-configuration"
+        },
+        "howToUse": {
+            "evidenceLink": "https://docs.ssv.network"
+        },
+        "operatorRequirements": {
+            "evidenceLink": ""
+        },
+        "executionClients": {
+            "evidenceLink": "https://docs.ssv.network/run-a-node/operator-node/installation"
+        },
+        "beaconClients": {
+            "evidenceLink": "https://docs.ssv.network/run-a-node/operator-node/installation"
+        },
+        "name": "ssv.network",
+        "validatorKey": {
+            "userValidator": true
+        },
+        "withdrawalKey": {
+            "userWithdrawal": true
+        },
+        "links": {
+            "website": "https://ssv.network",
+            "twitter": "https://twitter.com/ssv_network",
+            "discord": "https://discord.gg/ssvnetworkofficial",
+            "repo": "https://github.com/bloxapp/ssv"
+        },
+        "mainnetLaunch": {
+            "date": "2023-09-14",
+            "evidenceLink": "https://ssv.network/blog/technology/the-ssv-network-launch-phase-revolutionizing-the-staking-landscape/"
+        },
+        "description": "ssv.network is a fully decentralized, open-source ETH staking network based on Secret Shared Validator (SSV) technology.\n\nSSV is also known as DVT, or Distributed Validator Technology, as it provides an open and simple infrastructure for splitting and distributing a validator key into multiple Key-Shares, for the purpose of running an Ethereum validator across multiple non-trusting nodes.\n\nRunning an Ethereum validator on ssv.network achieves active-active redundancy, introduces new levels of validator key security, and benefits the Ethereum network, staking pools, staking services, and solo stakers.",
+        "logo": {
+            "evidenceLink": "https://ssv.network/media-kit/",
+            "src": "./images/SSVLogo.png",
+            "alt": "SSV Logo"
+        }
+    },
+    {
         "id": 451469,
         "status": "dev",
         "stakeFromHome": false,
