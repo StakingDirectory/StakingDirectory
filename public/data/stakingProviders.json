@@ -3464,7 +3464,7 @@
         "stakeFromHome": false,
         "stakingType": "managed",
         "providerType": "no",
-        "ratedId": "NA",
+        "ratedId": "",
         "selfLimit": {
             "value": "NA",
             "evidenceLink": ""
@@ -3474,11 +3474,11 @@
             "value": "10"
         },
         "minStake": {
-            "type": "eth",
-            "value": "0"
+            "type": "anyAmount",
+            "value": ""
         },
         "sourceCode": {
-            "evidenceLink": "NA"
+            "evidenceLink": ""
         },
         "auditReports": {
             "evidenceLink": "https://drive.google.com/file/d/1Nkr74LlwrzG-Q6JUgdjXsESaoAB8pWFC/view?ref=blog.cakedefi.com"
@@ -3487,7 +3487,7 @@
             "evidenceLink": "https://bake.io/security/"
         },
         "mevRelays": {
-            "evidenceLink": "7 MEV relays but no public evidence"
+            "evidenceLink": ""
         },
         "howToUse": {
             "evidenceLink": "support.bake.io"
@@ -3496,10 +3496,10 @@
             "evidenceLink": ""
         },
         "executionClients": {
-            "evidenceLink": "Erigon"
+            "evidenceLink": ""
         },
         "beaconClients": {
-            "evidenceLink": "Lighthouse"
+            "evidenceLink": ""
         },
         "logo": {
             "evidenceLink": "https://drive.google.com/file/d/1vmNSWlj1nitI-6BBfYHIdITFSyV5IpiA/view?usp=sharing"
@@ -3509,7 +3509,7 @@
             "evidenceLink": "https://bake.io/blog/eth-staking",
             "date": "2022-10-06"
         },
-        "lstName": "NA",
+        "lstName": "",
         "validatorKey": {
             "userValidator": true
         },
