@@ -30,7 +30,7 @@ export default function RewardFee({ provider }) {
             <Tooltip
                 label={
                     <Box className={"tooltipLabel"}>
-                        Ethereum network average APR
+                        *Ethereum network average APR
                         <br />
                         Past 30 days
                     </Box>
@@ -51,7 +51,7 @@ export default function RewardFee({ provider }) {
                     fontWeight={"bold"}
                     borderWidth={0}
                 >
-                    {ratedNetworkApiData.filter((apiData) => apiData.id === 0)[0].aprPercentage30Day.toFixed(1) + "%"}
+                    {ratedNetworkApiData.filter((apiData) => apiData.id === 0)[0].aprPercentage30Day.toFixed(1) + "%*"}
                 </Flex>
             </Tooltip>
         </Flex>
