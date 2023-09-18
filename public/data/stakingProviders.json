@@ -3466,7 +3466,7 @@
         "providerType": "no",
         "ratedId": "",
         "selfLimit": {
-            "value": "NA",
+            "value": "",
             "evidenceLink": ""
         },
         "fee": {
@@ -3502,7 +3502,9 @@
             "evidenceLink": ""
         },
         "logo": {
-            "evidenceLink": "https://drive.google.com/file/d/1vmNSWlj1nitI-6BBfYHIdITFSyV5IpiA/view?usp=sharing"
+            "evidenceLink": "https://drive.google.com/file/d/1vmNSWlj1nitI-6BBfYHIdITFSyV5IpiA/view?usp=sharing",
+            "src": "./images/BakeLogo.png",
+            "alt": "Bake Logo"
         },
         "name": "Bake",
         "mainnetLaunch": {
@@ -3518,6 +3520,7 @@
             "twitter": "https://twitter.com/bake_io",
             "discord": "https://discord.gg/eb92nypmSa",
             "telegram": "https://t.me/Bake_EN"
-        }
+        },
+        "description": "Control your financial destiny. Bake is the most transparent, safe and easy way to get returns on your crypto investments."
     }
 ]
