@@ -3372,13 +3372,15 @@
             "evidenceLink": ""
         },
         "lstName": "spETH",
-        "name": "StakePark Staking Pool",
+        "name": "StakePark",
         "logo": {
-            "evidenceLink": "https://pbs.twimg.com/profile_images/1656273152945651714/fCrvL3Bw_400x400.jpg"
+            "evidenceLink": "https://pbs.twimg.com/profile_images/1656273152945651714/fCrvL3Bw_400x400.jpg",
+            "src": "./images/StakeParkLogo.png",
+            "alt": "StakePark Logo"
         },
         "description": "StakePark is an independent, staking pool alternative for the good of the Ethereum mainnet.\n\n- Capped 🚫 total # of validators\n\n- Minority🌈client software\n\n- Alternative⚡hosting infra",
         "withdrawalKey": {
-            "userWithdrawal": true,
+            "userWithdrawal": false,
             "smartContract": true
         },
         "links": {
