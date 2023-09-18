@@ -302,12 +302,6 @@ const allOptions = [
                 inputType: "input",
                 placeholder: "https://...",
             },
-            {
-                id: "links.repo",
-                name: "Repo",
-                inputType: "input",
-                placeholder: "https://...",
-            },
         ],
     },
     {

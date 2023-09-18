@@ -155,7 +155,9 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                         </Th>
                         {dataProps.map((headerValue) => {
                             if (headerValue.isTableHeader) {
-                                if (headerValue.type == "text") {
+                                if ((headerValue.id == "mainnetLaunch" || headerValue.id == "reward") && status == "dev") {
+                                    return null
+                                } else if (headerValue.type == "text") {
                                     return (
                                         <Th key={headerValue.id} textAlign={"start"}>
                                             <HeaderMenuNameSearch nameInputRef={nameInputRef} dataFilter={dataFilter} setDataFilter={setDataFilter} />
@@ -251,18 +253,22 @@ export default function DataTable({ stakingProviders, status, dataFilter, setDat
                                         <Td textAlign={"center"}>
                                             <StakingType provider={provider} />
                                         </Td>
-                                        <Td textAlign={"center"}>
-                                            <Reward provider={provider} />
-                                        </Td>
+                                        {provider.status == "active" && (
+                                            <Td textAlign={"center"}>
+                                                <Reward provider={provider} />
+                                            </Td>
+                                        )}
                                         <Td textAlign={"center"}>
                                             <Fee provider={provider} />
                                         </Td>
                                         <Td textAlign={"center"} fontWeight={"bold"}>
                                             {provider.minStake?.type == "anyAmount" ? "Any amount" : `${provider.minStake?.value} ETH`}
                                         </Td>
-                                        <Td textAlign={"center"} fontWeight={"bold"}>
-                                            <MainnetLaunchDate provider={provider} />
-                                        </Td>
+                                        {provider.status == "active" && (
+                                            <Td textAlign={"center"} fontWeight={"bold"}>
+                                                <MainnetLaunchDate provider={provider} />
+                                            </Td>
+                                        )}
                                         <Td>
                                             <ChecklistBar provider={provider} />
                                         </Td>

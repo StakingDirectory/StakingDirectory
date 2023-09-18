@@ -2441,7 +2441,7 @@
             "telegram": "https://t.me/followdiva"
         },
         "minStake": {
-            "type": "eth",
+            "type": "anyAmount",
             "value": "Any amount"
         },
         "validatorKey": {
@@ -3457,6 +3457,5 @@
             "website": "https://www.stakepark.xyz/",
             "twitter": "https://twitter.com/StakePark_xyz"
         }
-
     }
 ]

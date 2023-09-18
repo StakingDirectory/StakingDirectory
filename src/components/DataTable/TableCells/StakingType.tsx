@@ -9,7 +9,6 @@ export default function StakingType({ provider }) {
             <Flex
                 direction={"row"}
                 justifyContent={"center"}
-                alignContent={"center"}
                 color={dataProps.flatMap((d) => d.options).find((opt) => opt?.value === provider.stakingType)?.color}
                 fontWeight={"bold"}
             >
@@ -17,9 +16,9 @@ export default function StakingType({ provider }) {
                     {providerProperties.find((prop) => prop.value === provider.stakingType)?.name}
                 </Flex>
             </Flex>
-            <Flex direction={"row"} justifyContent={"center"} alignContent={"center"} fontWeight={"bold"} mt={1}>
-                {provider.stakingType == "indexToken" && <Flex>{provider?.lstName}</Flex>}
-                {provider.stakingType == "lst" && <Flex>{provider?.lstName}</Flex>}
+            <Flex direction={"row"} justifyContent={"center"} alignContent={"center"} fontWeight={"bold"}>
+                {provider.stakingType == "indexToken" && <Flex mt={1}>{provider?.lstName}</Flex>}
+                {provider.stakingType == "lst" && <Flex mt={1}>{provider?.lstName}</Flex>}
             </Flex>
         </>
     )
