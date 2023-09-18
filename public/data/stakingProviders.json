@@ -1535,7 +1535,7 @@
             "date": "",
             "evidenceLink": ""
         },
-        "stakingType": "pooled",
+        "stakingType": "managed",
         "providerType": "no",
         "fee": {
             "type": "percentage",
@@ -1589,7 +1589,7 @@
             "evidenceLink": ""
         },
         "stakeFromHome": false,
-        "ratedId": "https://www.rated.network/o/Everstake?timeWindow=all&network=mainnet",
+        "ratedId": "Everstake",
         "description": "Everstake is a responsible validator trusted by 625k+ users across 70+ blockchain networks. Created by engineers for the entire community in 2018.\n\nEverstake 0.1+ ETH staking solution works as a set of pools where separate delegations are put together in order to collect 32 ETH required to launch a validator, as required by the rules of the Ethereum protocol.\n\nEverstake lifetime APR for Ethereum staking of ~7% is the highest among top-tier validators, which makes the 0.1+ ETH staking solution from Everstake the most high-yielding staking service available for wider audiences. In addition, Everstake’s solution is non-custodial, meaning that the user retains complete control over their ETH. \n\nEverstake boasts zero slashing events recorded on the Ethereum network, near-100% uptime, and over 10k ETH validators running, making it one of the most reliable validator choices."
     },
     {
