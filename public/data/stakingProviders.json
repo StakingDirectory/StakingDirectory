@@ -3457,6 +3457,67 @@
             "website": "https://www.stakepark.xyz/",
             "twitter": "https://twitter.com/StakePark_xyz"
         }
-
+    },
+    {
+        "id": 876584,
+        "status": "active",
+        "stakeFromHome": false,
+        "stakingType": "managed",
+        "providerType": "no",
+        "ratedId": "NA",
+        "selfLimit": {
+            "value": "NA",
+            "evidenceLink": ""
+        },
+        "fee": {
+            "type": "percentage",
+            "value": "10"
+        },
+        "minStake": {
+            "type": "eth",
+            "value": "0"
+        },
+        "sourceCode": {
+            "evidenceLink": "NA"
+        },
+        "auditReports": {
+            "evidenceLink": "https://drive.google.com/file/d/1Nkr74LlwrzG-Q6JUgdjXsESaoAB8pWFC/view?ref=blog.cakedefi.com"
+        },
+        "bugBounty": {
+            "evidenceLink": "https://bake.io/security/"
+        },
+        "mevRelays": {
+            "evidenceLink": "7 MEV relays but no public evidence"
+        },
+        "howToUse": {
+            "evidenceLink": "support.bake.io"
+        },
+        "operatorRequirements": {
+            "evidenceLink": ""
+        },
+        "executionClients": {
+            "evidenceLink": "Erigon"
+        },
+        "beaconClients": {
+            "evidenceLink": "Lighthouse"
+        },
+        "logo": {
+            "evidenceLink": "https://drive.google.com/file/d/1vmNSWlj1nitI-6BBfYHIdITFSyV5IpiA/view?usp=sharing"
+        },
+        "name": "Bake",
+        "mainnetLaunch": {
+            "evidenceLink": "https://bake.io/blog/eth-staking",
+            "date": "2022-10-06"
+        },
+        "lstName": "NA",
+        "validatorKey": {
+            "userValidator": true
+        },
+        "links": {
+            "website": "https://bake.io/",
+            "twitter": "https://twitter.com/bake_io",
+            "discord": "https://discord.gg/eb92nypmSa",
+            "telegram": "https://t.me/Bake_EN"
+        }
     }
 ]
