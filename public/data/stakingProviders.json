@@ -3340,8 +3340,8 @@
             "evidenceLink": ""
         },
         "fee": {
-            "type": "percentage",
-            "value": "0.5%"
+            "type": "other",
+            "value": "Custom"
         },
         "minStake": {
             "type": "eth",
@@ -3390,7 +3390,9 @@
         },
         "description": "ssv.network is a fully decentralized, open-source ETH staking network based on Secret Shared Validator (SSV) technology.\n\nSSV is also known as DVT, or Distributed Validator Technology, as it provides an open and simple infrastructure for splitting and distributing a validator key into multiple Key-Shares, for the purpose of running an Ethereum validator across multiple non-trusting nodes.\n\nRunning an Ethereum validator on ssv.network achieves active-active redundancy, introduces new levels of validator key security, and benefits the Ethereum network, staking pools, staking services, and solo stakers.",
         "logo": {
-            "evidenceLink": "https://ssv.network/media-kit/"
+            "evidenceLink": "https://ssv.network/media-kit/",
+            "src": "./images/SSVLogo.png",
+            "alt": "SSV Logo"
         }
     }
 ]
