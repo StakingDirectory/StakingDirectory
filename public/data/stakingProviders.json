@@ -3457,5 +3457,70 @@
             "website": "https://www.stakepark.xyz/",
             "twitter": "https://twitter.com/StakePark_xyz"
         }
+    },
+    {
+        "id": 876584,
+        "status": "active",
+        "stakeFromHome": false,
+        "stakingType": "managed",
+        "providerType": "no",
+        "ratedId": "",
+        "selfLimit": {
+            "value": "",
+            "evidenceLink": ""
+        },
+        "fee": {
+            "type": "percentage",
+            "value": "10"
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": ""
+        },
+        "sourceCode": {
+            "evidenceLink": ""
+        },
+        "auditReports": {
+            "evidenceLink": "https://drive.google.com/file/d/1Nkr74LlwrzG-Q6JUgdjXsESaoAB8pWFC/view?ref=blog.cakedefi.com"
+        },
+        "bugBounty": {
+            "evidenceLink": "https://bake.io/security/"
+        },
+        "mevRelays": {
+            "evidenceLink": ""
+        },
+        "howToUse": {
+            "evidenceLink": "support.bake.io"
+        },
+        "operatorRequirements": {
+            "evidenceLink": ""
+        },
+        "executionClients": {
+            "evidenceLink": ""
+        },
+        "beaconClients": {
+            "evidenceLink": ""
+        },
+        "logo": {
+            "evidenceLink": "https://drive.google.com/file/d/1vmNSWlj1nitI-6BBfYHIdITFSyV5IpiA/view?usp=sharing",
+            "src": "./images/BakeLogo.png",
+            "alt": "Bake Logo"
+        },
+        "name": "Bake",
+        "mainnetLaunch": {
+            "evidenceLink": "https://bake.io/blog/eth-staking",
+            "date": "2022-10-06"
+        },
+        "lstName": "",
+        "validatorKey": {
+            "userValidator": true
+        },
+        "links": {
+            "website": "https://bake.io/",
+            "twitter": "https://twitter.com/bake_io",
+            "discord": "https://discord.gg/eb92nypmSa",
+            "telegram": "https://t.me/Bake_EN"
+        },
+        "description": "Bake is the retail arm of Cake Group, one of the fastest growing digital assets innovators. Bake is a one-stop platform that provides easy access to decentralized finance (DeFi) services and applications, empowering customers to generate returns on their cryptocurrencies in a secure and transparent way."
     }
 ]
