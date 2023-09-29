@@ -3522,5 +3522,72 @@
             "telegram": "https://t.me/Bake_EN"
         },
         "description": "Bake is the retail arm of Cake Group, one of the fastest growing digital assets innovators. Bake is a one-stop platform that provides easy access to decentralized finance (DeFi) services and applications, empowering customers to generate returns on their cryptocurrencies in a secure and transparent way."
+    },
+    {
+        "id": 129392,
+        "status": "active",
+        "stakeFromHome": false,
+        "stakingType": "managed",
+        "providerType": "no",
+        "selfLimit": {
+            "value": null,
+            "evidenceLink": ""
+        },
+        "fee": {
+            "type": "other",
+            "value": ""
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "sourceCode": {
+            "evidenceLink": "https://github.com/xhash-com/xhash-batch-deposit-contract"
+        },
+        "auditReports": {
+            "evidenceLink": "https://github.com/xhash-com/xhash-batch-deposit-contract-aduit-report"
+        },
+        "bugBounty": {
+            "evidenceLink": ""
+        },
+        "mevRelays": {
+            "evidenceLink": ""
+        },
+        "howToUse": {
+            "evidenceLink": "https://docs.xhash.com/staking/non-custodial-staking/quick-mode"
+        },
+        "operatorRequirements": {
+            "evidenceLink": ""
+        },
+        "executionClients": {
+            "evidenceLink": ""
+        },
+        "beaconClients": {
+            "evidenceLink": ""
+        },
+        "name": "XHash",
+        "logo": {
+            "evidenceLink": "https://pbs.twimg.com/profile_images/1679748076268036101/Gh6t4lCV_400x400.jpg"
+        },
+        "mainnetLaunch": {
+            "evidenceLink": "https://etherscan.io/tx/0x2eba40d5c87ca9cc4c0b193204923f59d574b8e253f6e548ab7a63b37f4af784",
+            "date": "2023-03-24"
+        },
+        "description": "XHash specializes in non-custodial staking with top of the line developers who have more than 5 years of experience since POW.",
+        "ratedId": "https://www.rated.network/o/XHash?network=mainnet&timeWindow=30d",
+        "validatorKey": {
+            "userValidator": true,
+            "service": true,
+            "nodeOperator": true
+        },
+        "withdrawalKey": {
+            "userWithdrawal": true
+        },
+        "links": {
+            "website": "https://xhash.com/",
+            "twitter": "https://twitter.com/XHash_com",
+            "discord": "https://discord.gg/sry8MCNjwj",
+            "telegram": "https://t.me/XHash_en"
+        }
     }
 ]
