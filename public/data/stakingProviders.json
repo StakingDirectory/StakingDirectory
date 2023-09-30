@@ -2376,7 +2376,9 @@
             "value": "Any amount"
         },
         "validatorKey": {
-            "service": true
+            "service": false,
+            "userValidator": true,
+            "nodeOperator": true
         },
         "withdrawalKey": {
             "smartContract": true
@@ -2414,7 +2416,7 @@
             "evidenceLink": ""
         },
         "lstName": "osETH",
-        "stakeFromHome": false
+        "stakeFromHome": true
     },
     {
         "id": 42,
