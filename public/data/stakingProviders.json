@@ -2454,7 +2454,7 @@
         },
         "sourceCode": {
             "value": true,
-            "evidenceLink": "https://github.com/staking-foundation"
+            "evidenceLink": "https://github.com/shamirlabs"
         },
         "auditReports": {
             "value": false,
@@ -2470,7 +2470,7 @@
         },
         "howToUse": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://docs.staking.foundation/"
         },
         "operatorRequirements": {
             "value": true,
@@ -2486,7 +2486,11 @@
         },
         "lstName": "divETH",
         "stakeFromHome": true,
-        "description": "Diva is an Ethereum Liquid Staking protocol powered by Distributed Validator Technology (DVT).\n\nIt extends Ethereums Proof of Stake providing new functionality for Stakers and Operators:\n\n- Liquid Stakers receive divETH, a Liquid Staking Token which accrues Ethereum Staking Rewards.\n- Operators run a Distributed Validation node to fulfill staking duties and earn additional Operator Rewards.\n\ndivETH is a receipt token and its balance updates daily to reflect the deposited ETH balance plus its accrued Ethereum staking rewards.\n\nWhile other solutions have some of these features, Diva is the first solution that fully integrates Liquid Staking with Distributed Validation, offering both Liquid Stakers and Operators the most efficient functionality.\n\n**Liquid Staking**\n\n🌱 No minimum ETH to stake.\n👏 No requirement to run a node.\n💧 Liquid Staking Tokens without lockups.\n\n**More Resilient Operations**\n\n🌳 Resilient: Nodes are fully disposable.\n❤️‍🔥 Self-healing: Ability to regenerate lost keys.\n💠 Redundancy: ~500x better uptime thanks to DVT fallbacks.\n\n**Incentives and Penalties**\n\n📈 Smooth Staking Rewards.\n⛔️ Quick ejection of bad actors.\n"
+        "description": "Diva is an Ethereum Liquid Staking protocol powered by Distributed Validator Technology (DVT).\n\nIt extends Ethereums Proof of Stake providing new functionality for Stakers and Operators:\n\n- Liquid Stakers receive divETH, a Liquid Staking Token which accrues Ethereum Staking Rewards.\n- Operators run a Distributed Validation node to fulfill staking duties and earn additional Operator Rewards.\n\ndivETH is a receipt token and its balance updates daily to reflect the deposited ETH balance plus its accrued Ethereum staking rewards.\n\nWhile other solutions have some of these features, Diva is the first solution that fully integrates Liquid Staking with Distributed Validation, offering both Liquid Stakers and Operators the most efficient functionality.\n\n**Liquid Staking**\n\n🌱 No minimum ETH to stake.\n👏 No requirement to run a node.\n💧 Liquid Staking Tokens without lockups.\n\n**More Resilient Operations**\n\n🌳 Resilient: Nodes are fully disposable.\n❤️‍🔥 Self-healing: Ability to regenerate lost keys.\n💠 Redundancy: ~500x better uptime thanks to DVT fallbacks.\n\n**Incentives and Penalties**\n\n📈 Smooth Staking Rewards.\n⛔️ Quick ejection of bad actors.\n",
+        "selfLimit": {
+            "value": "22",
+            "evidenceLink": "https://www.tally.xyz/gov/diva/proposal/44802814205789959072230810924382136907393872780309912200640771189684983862410"
+        }
     },
     {
         "id": 43,
