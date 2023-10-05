@@ -3576,7 +3576,7 @@
             "date": "2023-03-24"
         },
         "description": "XHash specializes in non-custodial staking with top of the line developers who have more than 5 years of experience since POW.",
-        "ratedId": "https://www.rated.network/o/XHash?network=mainnet&timeWindow=30d",
+        "ratedId": "XHash",
         "validatorKey": {
             "userValidator": true,
             "service": false,
