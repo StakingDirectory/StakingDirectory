@@ -930,17 +930,17 @@
             "src": "./images/RockXLogo.png",
             "alt": "Logo"
         },
-        "name": "RockX",
+        "name": "RockX (Node)",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2020-12-01",
+            "evidenceLink": "https://medium.com/rockx/introducing-rockx-86c43f3df378"
         },
         "stakingType": "managed",
         "providerType": "no",
         "fee": {
             "type": "other",
-            "value": "🤔"
+            "value": "~3-5%"
         },
         "links": {
             "website": "https://stake.rockx.com/",
@@ -962,7 +962,7 @@
         },
         "auditReports": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/RockX-SG/stake/blob/main/PeckShield-Audit-Report-RockXStaking-v1.0.pdf"
         },
         "bugBounty": {
             "value": false,
@@ -974,7 +974,7 @@
         },
         "howToUse": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://www.rockx.com/staking"
         },
         "operatorRequirements": {
             "value": false,
@@ -988,7 +988,8 @@
             "value": false,
             "evidenceLink": ""
         },
-        "stakeFromHome": false
+        "stakeFromHome": false,
+        "description": "RockX is a global blockchain node network and gateway for users to seamlessly access Web3, offering institutional-grade solutions and a full suite of developer tools for users to stake and build on all major Proof-of-Stake blockchains. \n\nWith its foundations rooted in staking, protocol research and infrastructure design, RockX has built countless access nodes for users to interact with over 20 layer 1 and 2 protocols — driving greater accessibility and furthering adoption of blockchain technologies.\n\nWith over 20 major tokens available and over USD 1 billion staked in cumulative token value since 2018, RockX is one of Asia’s leading staking platforms, offering institutional clients new ways to do more with their crypto.\n"
     },
     {
         "id": 19,
@@ -2216,7 +2217,7 @@
             "src": "./images/RockXLogo.png",
             "alt": "Logo"
         },
-        "name": "RockX",
+        "name": "RockX (LST)",
         "status": "active",
         "mainnetLaunch": {
             "date": "2022-09-29",
@@ -2454,7 +2455,7 @@
         },
         "sourceCode": {
             "value": true,
-            "evidenceLink": "https://github.com/staking-foundation"
+            "evidenceLink": "https://github.com/shamirlabs"
         },
         "auditReports": {
             "value": false,
@@ -2470,7 +2471,7 @@
         },
         "howToUse": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://docs.staking.foundation/"
         },
         "operatorRequirements": {
             "value": true,
@@ -2486,7 +2487,11 @@
         },
         "lstName": "divETH",
         "stakeFromHome": true,
-        "description": "Diva is an Ethereum Liquid Staking protocol powered by Distributed Validator Technology (DVT).\n\nIt extends Ethereums Proof of Stake providing new functionality for Stakers and Operators:\n\n- Liquid Stakers receive divETH, a Liquid Staking Token which accrues Ethereum Staking Rewards.\n- Operators run a Distributed Validation node to fulfill staking duties and earn additional Operator Rewards.\n\ndivETH is a receipt token and its balance updates daily to reflect the deposited ETH balance plus its accrued Ethereum staking rewards.\n\nWhile other solutions have some of these features, Diva is the first solution that fully integrates Liquid Staking with Distributed Validation, offering both Liquid Stakers and Operators the most efficient functionality.\n\n**Liquid Staking**\n\n🌱 No minimum ETH to stake.\n👏 No requirement to run a node.\n💧 Liquid Staking Tokens without lockups.\n\n**More Resilient Operations**\n\n🌳 Resilient: Nodes are fully disposable.\n❤️‍🔥 Self-healing: Ability to regenerate lost keys.\n💠 Redundancy: ~500x better uptime thanks to DVT fallbacks.\n\n**Incentives and Penalties**\n\n📈 Smooth Staking Rewards.\n⛔️ Quick ejection of bad actors.\n"
+        "description": "Diva is an Ethereum Liquid Staking protocol powered by Distributed Validator Technology (DVT).\n\nIt extends Ethereums Proof of Stake providing new functionality for Stakers and Operators:\n\n- Liquid Stakers receive divETH, a Liquid Staking Token which accrues Ethereum Staking Rewards.\n- Operators run a Distributed Validation node to fulfill staking duties and earn additional Operator Rewards.\n\ndivETH is a receipt token and its balance updates daily to reflect the deposited ETH balance plus its accrued Ethereum staking rewards.\n\nWhile other solutions have some of these features, Diva is the first solution that fully integrates Liquid Staking with Distributed Validation, offering both Liquid Stakers and Operators the most efficient functionality.\n\n**Liquid Staking**\n\n🌱 No minimum ETH to stake.\n👏 No requirement to run a node.\n💧 Liquid Staking Tokens without lockups.\n\n**More Resilient Operations**\n\n🌳 Resilient: Nodes are fully disposable.\n❤️‍🔥 Self-healing: Ability to regenerate lost keys.\n💠 Redundancy: ~500x better uptime thanks to DVT fallbacks.\n\n**Incentives and Penalties**\n\n📈 Smooth Staking Rewards.\n⛔️ Quick ejection of bad actors.\n",
+        "selfLimit": {
+            "value": "22",
+            "evidenceLink": "https://www.tally.xyz/gov/diva/proposal/44802814205789959072230810924382136907393872780309912200640771189684983862410"
+        }
     },
     {
         "id": 43,
@@ -2543,7 +2548,7 @@
         },
         "howToUse": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "http://docs.swellnetwork.io/"
         },
         "operatorRequirements": {
             "value": false,
@@ -3526,6 +3531,75 @@
         "description": "Bake is the retail arm of Cake Group, one of the fastest growing digital assets innovators. Bake is a one-stop platform that provides easy access to decentralized finance (DeFi) services and applications, empowering customers to generate returns on their cryptocurrencies in a secure and transparent way."
     },
     {
+        "id": 129392,
+        "status": "active",
+        "stakeFromHome": false,
+        "stakingType": "managed",
+        "providerType": "no",
+        "selfLimit": {
+            "value": null,
+            "evidenceLink": ""
+        },
+        "fee": {
+            "type": "other",
+            "value": "Custom"
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "sourceCode": {
+            "evidenceLink": "https://github.com/xhash-com/xhash-batch-deposit-contract"
+        },
+        "auditReports": {
+            "evidenceLink": "https://github.com/xhash-com/xhash-batch-deposit-contract-aduit-report"
+        },
+        "bugBounty": {
+            "evidenceLink": ""
+        },
+        "mevRelays": {
+            "evidenceLink": ""
+        },
+        "howToUse": {
+            "evidenceLink": "https://docs.xhash.com/staking/non-custodial-staking/quick-mode"
+        },
+        "operatorRequirements": {
+            "evidenceLink": ""
+        },
+        "executionClients": {
+            "evidenceLink": ""
+        },
+        "beaconClients": {
+            "evidenceLink": ""
+        },
+        "name": "XHash",
+        "logo": {
+            "evidenceLink": "https://pbs.twimg.com/profile_images/1679748076268036101/Gh6t4lCV_400x400.jpg",
+            "src": "./images/XhashLogo.png",
+            "alt": "XHash Logo"
+        },
+        "mainnetLaunch": {
+            "evidenceLink": "https://etherscan.io/tx/0x2eba40d5c87ca9cc4c0b193204923f59d574b8e253f6e548ab7a63b37f4af784",
+            "date": "2023-03-24"
+        },
+        "description": "XHash specializes in non-custodial staking services which are Secure, Easy and Audited.\nWe are dedicated to forging the foundation of Web3.0 with stable, reliable, and secure blockchain infrastructure to empower your journey in the decentralized world.",
+        "ratedId": "XHash",
+        "validatorKey": {
+            "userValidator": true,
+            "service": false,
+            "nodeOperator": true
+        },
+        "withdrawalKey": {
+            "userWithdrawal": true
+        },
+        "links": {
+            "website": "https://xhash.com/",
+            "twitter": "https://twitter.com/XHash_com",
+            "discord": "https://discord.gg/sry8MCNjwj",
+            "telegram": "https://t.me/XHash_en"
+        }
+    },
+    {
         "id": 298269,
         "status": "active",
         "stakeFromHome": false,
@@ -3572,7 +3646,7 @@
         "mainnetLaunch": {
             "date": "2020-12-09"
         },
-        "description": "Consensys offers a complete suite of products to create and participate in web3, including MetaMask, Infura, Linea, Consensys Staking and more. \nConsensys Staking is a leading institutional grade Ethereum staking platform, enabling customers to stake programmatically their digital assets and build white label staking applications.",
+        "description": "Consensys offers a complete suite of products to create and participate in web3, including MetaMask, Infura, Linea, Consensys Staking and more.\n\nConsensys Staking is a leading institutional grade Ethereum staking platform, enabling customers to stake programmatically their digital assets and build white label staking applications.",
         "validatorKey": {
             "service": false,
             "nodeOperator": true
