@@ -933,14 +933,14 @@
         "name": "RockX",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2019-11-12",
+            "evidenceLink": "https://medium.com/rockx/introducing-rockx-86c43f3df378"
         },
         "stakingType": "managed",
         "providerType": "no",
         "fee": {
             "type": "other",
-            "value": "🤔"
+            "value": "~3-5%"
         },
         "links": {
             "website": "https://stake.rockx.com/",
@@ -962,7 +962,7 @@
         },
         "auditReports": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/RockX-SG/stake/blob/main/PeckShield-Audit-Report-RockXStaking-v1.0.pdf"
         },
         "bugBounty": {
             "value": false,
@@ -974,7 +974,7 @@
         },
         "howToUse": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://www.rockx.com/staking"
         },
         "operatorRequirements": {
             "value": false,
@@ -988,7 +988,8 @@
             "value": false,
             "evidenceLink": ""
         },
-        "stakeFromHome": false
+        "stakeFromHome": false,
+        "description": "RockX is a global blockchain node network and gateway for users to seamlessly access Web3, offering institutional-grade solutions and a full suite of developer tools for users to stake and build on all major Proof-of-Stake blockchains. \n\nWith its foundations rooted in staking, protocol research and infrastructure design, RockX has built countless access nodes for users to interact with over 20 layer 1 and 2 protocols — driving greater accessibility and furthering adoption of blockchain technologies.\n\nWith over 20 major tokens available and over USD 1 billion staked in cumulative token value since 2018, RockX is one of Asia’s leading staking platforms, offering institutional clients new ways to do more with their crypto.\n"
     },
     {
         "id": 19,
