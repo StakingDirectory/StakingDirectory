@@ -930,10 +930,10 @@
             "src": "./images/RockXLogo.png",
             "alt": "Logo"
         },
-        "name": "RockX",
+        "name": "RockX (Node)",
         "status": "active",
         "mainnetLaunch": {
-            "date": "2019-11-12",
+            "date": "2020-12-01",
             "evidenceLink": "https://medium.com/rockx/introducing-rockx-86c43f3df378"
         },
         "stakingType": "managed",
@@ -2217,7 +2217,7 @@
             "src": "./images/RockXLogo.png",
             "alt": "Logo"
         },
-        "name": "RockX",
+        "name": "RockX (LST)",
         "status": "active",
         "mainnetLaunch": {
             "date": "2022-09-29",
