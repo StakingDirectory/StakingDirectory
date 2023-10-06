@@ -2548,7 +2548,7 @@
         },
         "howToUse": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "http://docs.swellnetwork.io/"
         },
         "operatorRequirements": {
             "value": false,
