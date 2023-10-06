@@ -3598,5 +3598,70 @@
             "discord": "https://discord.gg/sry8MCNjwj",
             "telegram": "https://t.me/XHash_en"
         }
+    },
+    {
+        "id": 298269,
+        "status": "active",
+        "stakeFromHome": false,
+        "stakingType": "managed",
+        "providerType": "no",
+        "ratedId": "Consensys",
+        "selfLimit": {
+            "value": null,
+            "evidenceLink": ""
+        },
+        "fee": {
+            "type": "other",
+            "value": "Custom"
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "sourceCode": {
+            "evidenceLink": ""
+        },
+        "auditReports": {
+            "evidenceLink": ""
+        },
+        "bugBounty": {
+            "evidenceLink": ""
+        },
+        "mevRelays": {
+            "evidenceLink": ""
+        },
+        "howToUse": {
+            "evidenceLink": "https://consensys.io/staking/"
+        },
+        "operatorRequirements": {
+            "evidenceLink": ""
+        },
+        "executionClients": {
+            "evidenceLink": ""
+        },
+        "beaconClients": {
+            "evidenceLink": ""
+        },
+        "name": "Consensys",
+        "mainnetLaunch": {
+            "date": "2020-12-09"
+        },
+        "description": "Consensys offers a complete suite of products to create and participate in web3, including MetaMask, Infura, Linea, Consensys Staking and more.\n\nConsensys Staking is a leading institutional grade Ethereum staking platform, enabling customers to stake programmatically their digital assets and build white label staking applications.",
+        "validatorKey": {
+            "service": false,
+            "nodeOperator": true
+        },
+        "withdrawalKey": {
+            "userWithdrawal": true,
+            "smartContract": false
+        },
+        "links": {
+            "website": "https://consensys.io/staking"
+        },
+        "logo": {
+            "evidenceLink": "https://www.google.com/search?newwindow=1&sca_esv=570303733&rlz=1C5GCEM_enFR1033FR1034&q=Consensys+Logo+PNG&uds=H4sIAAAAAAAA_-PS5mIO8HMX4kvOzytOzSuuLFbIyU_PNxAqEnKGi_gARRSAqozQVAEAR_lVsD0AAAA&tbm=isch&source=lnms&sa=X&ved=2ahUKEwiV482-z9mBAxV9U6QEHdhTDQ8Q0pQJegQIGBAB&biw=1397&bih=737&dpr=1#imgrc=7d9ltJhy_67utM",
+            "src": "./images/ConsensysLogo.png",
+            "alt": "Consensys Logo"
+        }
     }
 ]
