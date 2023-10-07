@@ -1341,7 +1341,7 @@
         "providerType": "no",
         "fee": {
             "type": "other",
-            "value": "🤔"
+            "value": "10%"
         },
         "links": {
             "website": "https://stake.divalabs.org/operator",
