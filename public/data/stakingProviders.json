@@ -3676,7 +3676,7 @@
             "evidenceLink": ""
         },
         "fee": {
-            "type": "other",
+            "type": "percentage",
             "value": 0
         },
         "minStake": {
@@ -3714,7 +3714,9 @@
         },
         "description": "DxPool is your trusted destination for cryptocurrency staking, offering a professional and user-friendly platform to enhance your staking experience. In a world where blockchain complexities can be overwhelming, DxPool simplifies the process, empowering you to maximize rewards while minimizing technical challenges.\nThis is our deposit contract address: 0x1a0fFC5d6a8F14bAcfb21056355394128fA6B955\nOne of our Public Key: 0x8088385ccc4ce1aecd627363f7099cd73a657ed60041922b8a26cbd65baa74b1df04ec438b649d270adedda90278891b",
         "logo": {
-            "evidenceLink": "https://twitter.com/dxpoolOfficial/photo"
+            "evidenceLink": "https://twitter.com/dxpoolOfficial/photo",
+            "src": "./images/DxPoolLogo.png",
+            "alt": "DxPool Logo"
         },
         "links": {
             "website": "stake.dxpool.com",
