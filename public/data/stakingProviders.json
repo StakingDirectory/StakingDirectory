@@ -1389,7 +1389,11 @@
             "value": false,
             "evidenceLink": ""
         },
-        "stakeFromHome": true
+        "stakeFromHome": true,
+        "selfLimit": {
+            "evidenceLink": "https://www.tally.xyz/gov/diva/proposal/44802814205789959072230810924382136907393872780309912200640771189684983862410",
+            "value": "22"
+        }
     },
     {
         "id": 25,
@@ -3730,6 +3734,72 @@
         },
         "withdrawalKey": {
             "userWithdrawal": true
+        }
+    },
+    {
+        "id": 791995,
+        "status": "dev",
+        "stakeFromHome": true,
+        "stakingType": "pooled",
+        "providerType": "no",
+        "ratedId": "",
+        "selfLimit": {
+            "value": "22%",
+            "evidenceLink": "https://docs.puffer.fi/arch/overview#burst-threshold"
+        },
+        "fee": {
+            "type": "percentage",
+            "value": 0
+        },
+        "minStake": {
+            "type": "eth",
+            "value": "1.5"
+        },
+        "sourceCode": {
+            "evidenceLink": ""
+        },
+        "auditReports": {
+            "evidenceLink": ""
+        },
+        "bugBounty": {
+            "evidenceLink": ""
+        },
+        "mevRelays": {
+            "evidenceLink": ""
+        },
+        "howToUse": {
+            "evidenceLink": ""
+        },
+        "operatorRequirements": {
+            "evidenceLink": ""
+        },
+        "executionClients": {
+            "evidenceLink": ""
+        },
+        "beaconClients": {
+            "evidenceLink": ""
+        },
+        "name": "Puffer Finance",
+        "logo": {
+            "evidenceLink": "https://drive.google.com/file/d/1a0SeA1D0S6jSd2kyQCrjH8PvvAT3cAbJ/view?usp=share_link",
+            "src": "./images/PufferLogo.png",
+            "alt": "Puffer Logo"
+        },
+        "description": "Puffer is the first native liquid restaking protocol built on Eigenlayer. Puffer is much more than just a staking pool; it's a protocol that works to fortify Ethereum's heart.\n\nAt its core, Ethereum's security and credible neutrality relies on a vast network of nodes. We're on a mission to ensure a thriving decentralized pocket amidst the broader validator set, making home-staking not just feasible but extraordinarily viable!",
+        "lstName": "pufETH",
+        "validatorKey": {
+            "userValidator": false,
+            "nodeOperator": false,
+            "service": false
+        },
+        "withdrawalKey": {
+            "smartContract": true
+        },
+        "links": {
+            "website": "https://www.puffer.fi/",
+            "twitter": "https://twitter.com/puffer_finance",
+            "discord": "https://discord.gg/pufferfi",
+            "telegram": "https://t.me/puffer_fi"
         }
     }
 ]

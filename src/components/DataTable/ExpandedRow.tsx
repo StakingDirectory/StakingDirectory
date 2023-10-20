@@ -93,7 +93,7 @@ export default function ExpandedRow({ provider, expandedRows, expandedChecklistR
                     <KeyOwner provider={provider} id={"validatorKey"} />
                     <KeyOwner provider={provider} id={"withdrawalKey"} />
                 </Flex>
-                {provider.stakingType == "lst" && <SelfLimit provider={provider} />}
+                {provider.stakingType != "solo" && <SelfLimit provider={provider} />}
             </Flex>
             <ChecklistList provider={provider} expandedChecklistRows={expandedChecklistRows} setExpandedChecklistRows={setExpandedChecklistRows} />
         </Flex>
