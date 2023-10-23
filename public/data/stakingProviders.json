@@ -2221,7 +2221,7 @@
             "src": "./images/RockXLogo.png",
             "alt": "Logo"
         },
-        "name": "RockX (LST)",
+        "name": "Bedrock by RockX (LST)",
         "status": "active",
         "mainnetLaunch": {
             "date": "2022-09-29",
@@ -2235,7 +2235,7 @@
         },
         "links": {
             "website": "https://bedrock.rockx.com/unieth/stake",
-            "twitter": ""
+            "twitter": "https://twitter.com/Bedrock_DeFi"
         },
         "minStake": {
             "type": "anyAmount",
@@ -2249,11 +2249,11 @@
         },
         "sourceCode": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/Bedrock-Technology/E2LSServe"
         },
         "auditReports": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/RockX-SG/stake/blob/main/PeckShield-Audit-Report-RockXStaking-v1.0.pdf"
         },
         "bugBounty": {
             "value": false,
@@ -2265,7 +2265,7 @@
         },
         "howToUse": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://www.bedrock.technology/"
         },
         "operatorRequirements": {
             "value": false,
@@ -2280,7 +2280,8 @@
             "evidenceLink": ""
         },
         "lstName": "uniETH",
-        "stakeFromHome": false
+        "stakeFromHome": false,
+        "description": "Bedrock is RockX’s proprietary liquid staking solution designed with the specific needs of institutions and high net worth individuals in mind. Built on the pillars of transparency, decentralisation, security, and compliance, Bedrock presents a liquid staking protocol of the highest standard, with the goal of bridging DeFi and CeFi seamlessly."
     },
     {
         "id": 40,
