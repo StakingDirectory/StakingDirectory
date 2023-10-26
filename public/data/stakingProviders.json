@@ -2219,7 +2219,8 @@
         "id": 39,
         "logo": {
             "src": "./images/RockXLogo.png",
-            "alt": "Logo"
+            "alt": "Logo",
+            "evidenceLink": "https://drive.google.com/file/d/1mv30a5Df6usrNfaeAe8novF9gdKMOoWy/view?usp=drive_link"
         },
         "name": "Bedrock by RockX (LST)",
         "status": "active",
