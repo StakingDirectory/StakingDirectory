@@ -2287,13 +2287,14 @@
         "id": 40,
         "logo": {
             "src": "./images/EtherFiLogo.png",
-            "alt": "Logo"
+            "alt": "Logo",
+            "evidenceLink": "https://drive.google.com/drive/folders/1qgYpcz8b4mgry96O9OL36C4e5zN5IRKd"
         },
-        "name": "Ether.fi (LST)",
-        "status": "dev",
+        "name": "ether.fi (LST)",
+        "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2023-11-08",
+            "evidenceLink": "https://medium.com/etherfi/were-finally-launching-our-lst-af3e68944707"
         },
         "stakingType": "lst",
         "providerType": "no",
@@ -2303,38 +2304,42 @@
         },
         "links": {
             "website": "https://ether.fi/",
-            "twitter": ""
+            "twitter": "https://twitter.com/ether_fi",
+            "discord": "discord.gg/xfFtMA35rm",
+            "telegram": "https://t.me/+C3fpSjmPqzA5NTVh"
         },
         "minStake": {
             "type": "anyAmount",
             "value": "Any amount"
         },
         "validatorKey": {
-            "service": true,
-            "nodeOperator": true
+            "service": false,
+            "nodeOperator": true,
+            "userValidator": true
         },
         "withdrawalKey": {
-            "smartContract": true
+            "smartContract": true,
+            "userWithdrawal": true
         },
         "sourceCode": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://etherfi.gitbook.io/etherfi/deployed-contracts"
         },
         "auditReports": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://etherfi.gitbook.io/etherfi/security/audits"
         },
         "bugBounty": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://etherfi.gitbook.io/etherfi/security/bug-bounty"
         },
         "mevRelays": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "n/a"
         },
         "howToUse": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://etherfi.gitbook.io/etherfi/getting-started/stake-with-ether.fi"
         },
         "operatorRequirements": {
             "value": false,
@@ -2342,14 +2347,19 @@
         },
         "executionClients": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "n/a"
         },
         "beaconClients": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "n/a"
         },
         "lstName": "eETH",
-        "stakeFromHome": false
+        "stakeFromHome": true,
+        "description": "The first natively restaked liquid staking token. Stakers keep their keys. The protocol is decentralized and non-custodial. ",
+        "selfLimit": {
+            "value": "22",
+            "evidenceLink": "https://medium.com/etherfi/self-limiting-and-decentralization-roadmap-f44b9f016b1e"
+        }
     },
     {
         "id": 41,
