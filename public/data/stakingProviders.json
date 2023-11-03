@@ -2305,7 +2305,7 @@
         "links": {
             "website": "https://ether.fi/",
             "twitter": "https://twitter.com/ether_fi",
-            "discord": "discord.gg/xfFtMA35rm",
+            "discord": "https://discord.gg/xfFtMA35rm",
             "telegram": "https://t.me/+C3fpSjmPqzA5NTVh"
         },
         "minStake": {
@@ -2319,7 +2319,7 @@
         },
         "withdrawalKey": {
             "smartContract": true,
-            "userWithdrawal": true
+            "userWithdrawal": false
         },
         "sourceCode": {
             "value": false,
@@ -2335,7 +2335,7 @@
         },
         "mevRelays": {
             "value": false,
-            "evidenceLink": "n/a"
+            "evidenceLink": ""
         },
         "howToUse": {
             "value": false,
@@ -2347,11 +2347,11 @@
         },
         "executionClients": {
             "value": false,
-            "evidenceLink": "n/a"
+            "evidenceLink": ""
         },
         "beaconClients": {
             "value": false,
-            "evidenceLink": "n/a"
+            "evidenceLink": ""
         },
         "lstName": "eETH",
         "stakeFromHome": true,
