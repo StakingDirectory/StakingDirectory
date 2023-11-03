@@ -2335,7 +2335,7 @@
         },
         "mevRelays": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://etherfi.gitbook.io/etherfi/node-operators/node-operators-guide"
         },
         "howToUse": {
             "value": false,
@@ -2347,11 +2347,11 @@
         },
         "executionClients": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://etherfi.gitbook.io/etherfi/node-operators/node-operators-guide"
         },
         "beaconClients": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://etherfi.gitbook.io/etherfi/node-operators/node-operators-guide"
         },
         "lstName": "eETH",
         "stakeFromHome": true,
