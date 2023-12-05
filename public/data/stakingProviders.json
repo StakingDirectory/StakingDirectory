@@ -2372,10 +2372,10 @@
             "value": 22,
             "evidenceLink": "https://twitter.com/stakewise_io/status/1525225299146944513"
         },
-        "status": "dev",
+        "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2023 12 01",
+            "evidenceLink": "https://app.stakewise.io/"
         },
         "stakingType": "lst",
         "providerType": "no",
