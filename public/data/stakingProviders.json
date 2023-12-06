@@ -2380,8 +2380,8 @@
         "stakingType": "lst",
         "providerType": "no",
         "fee": {
-            "type": "other",
-            "value": "🤔"
+            "type": "percentage",
+            "value": "5% (using the stakewise run vault - note - there are a bunch of other vaults with custom fees."
         },
         "links": {
             "website": "https://stakewise.medium.com/what-is-oseth-a-deep-dive-into-the-overcollateralized-staked-ether-token-of-stakewise-v3-part-1-37d14e28282a",
