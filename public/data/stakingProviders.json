@@ -2380,7 +2380,7 @@
         "stakingType": "lst",
         "providerType": "no",
         "fee": {
-            "type": "custom",
+            "type": "other",
             "value": "~10%"
         },
         "links": {
