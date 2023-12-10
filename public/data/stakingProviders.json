@@ -2381,7 +2381,7 @@
         "providerType": "no",
         "fee": {
             "type": "other",
-            "value": "🤔"
+            "value": "~10%"
         },
         "links": {
             "website": "https://stakewise.medium.com/what-is-oseth-a-deep-dive-into-the-overcollateralized-staked-ether-token-of-stakewise-v3-part-1-37d14e28282a",
