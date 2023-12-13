@@ -1537,8 +1537,8 @@
         "name": "Everstake",
         "status": "active",
         "mainnetLaunch": {
-            "date": "",
-            "evidenceLink": ""
+            "date": "2023-09-14",
+            "evidenceLink": "https://twitter.com/everstake_pool/status/1702349102795686237"
         },
         "stakingType": "managed",
         "providerType": "no",
@@ -1579,7 +1579,7 @@
         },
         "howToUse": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://everstake.one/blog/how-to-stake-01-ether-or-more-on-the-everstake-website"
         },
         "operatorRequirements": {
             "value": false,
@@ -1591,7 +1591,7 @@
         },
         "beaconClients": {
             "value": false,
-            "evidenceLink": ""
+            "evidenceLink": "https://www.rated.network/o/Everstake?network=mainnet&timeWindow=1d&idType=nodeOperator"
         },
         "stakeFromHome": false,
         "ratedId": "Everstake",
