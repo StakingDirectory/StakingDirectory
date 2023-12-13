@@ -1587,11 +1587,11 @@
         },
         "executionClients": {
             "value": false,
-            "evidenceLink": "60% of Geth and 40% of Nethermind"
+            "evidenceLink": ""
         },
         "beaconClients": {
             "value": false,
-            "evidenceLink": "https://www.rated.network/o/Everstake?network=mainnet&timeWindow=1d&idType=nodeOperator#:~:text=0-,Client%20distribution,-0"
+            "evidenceLink": "https://www.rated.network/o/Everstake?network=mainnet&timeWindow=1d&idType=nodeOperator"
         },
         "stakeFromHome": false,
         "ratedId": "Everstake",
