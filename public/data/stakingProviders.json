@@ -3833,7 +3833,7 @@
             "value": ""
         },
         "sourceCode": {
-            "evidenceLink": ""
+            "evidenceLink": "https://github.com/lanternfi"
         },
         "auditReports": {
             "evidenceLink": ""
@@ -3873,7 +3873,11 @@
         },
         "links": {
             "website": "https://www.lantern.finance/",
-            "twitter": "https://x.com/LanternFi"
-        }
+            "twitter": "https://x.com/LanternFi",
+            "telegram": "",
+            "discord": ""
+        },
+        "description": "Lantern is a US-based, custodial staking platform for everyday crypto users. Lantern is currently live in 15 states including California, Pennsylvania, Illinois, Virginia, Massachusetts, Tennessee, Missouri, Wisconsin, Colorado, South Carolina, Utah, Kansas, New Hampshire, Montana, and Wyoming. ",
+        "lstName": "N/A"
     }
 ]
