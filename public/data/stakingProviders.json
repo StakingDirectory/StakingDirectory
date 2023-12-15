@@ -3812,5 +3812,68 @@
             "discord": "https://discord.gg/pufferfi",
             "telegram": "https://t.me/puffer_fi"
         }
+    },
+    {
+        "id": 848778,
+        "status": "active",
+        "stakeFromHome": false,
+        "stakingType": "managed",
+        "providerType": "no",
+        "ratedId": "",
+        "selfLimit": {
+            "value": null,
+            "evidenceLink": ""
+        },
+        "fee": {
+            "type": "percentage",
+            "value": "15"
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": ""
+        },
+        "sourceCode": {
+            "evidenceLink": ""
+        },
+        "auditReports": {
+            "evidenceLink": ""
+        },
+        "bugBounty": {
+            "evidenceLink": ""
+        },
+        "mevRelays": {
+            "evidenceLink": ""
+        },
+        "howToUse": {
+            "evidenceLink": "https://app.lantern.finance/"
+        },
+        "operatorRequirements": {
+            "evidenceLink": ""
+        },
+        "executionClients": {
+            "evidenceLink": ""
+        },
+        "beaconClients": {
+            "evidenceLink": ""
+        },
+        "name": "Lantern Finance",
+        "mainnetLaunch": {
+            "evidenceLink": "https://x.com/LanternFi/status/1727450312674250983?s=20",
+            "date": "2023-11-30"
+        },
+        "logo": {
+            "evidenceLink": "https://assets-global.website-files.com/64dae78b77795d650764a167/64f0c8d2d065ec0e03986b18_Lantern_logo.svg"
+        },
+        "validatorKey": {
+            "service": false,
+            "nodeOperator": true
+        },
+        "withdrawalKey": {
+            "userWithdrawal": false
+        },
+        "links": {
+            "website": "https://www.lantern.finance/",
+            "twitter": "https://x.com/LanternFi"
+        }
     }
 ]
