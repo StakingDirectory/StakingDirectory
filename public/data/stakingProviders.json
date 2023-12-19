@@ -2432,7 +2432,7 @@
             "evidenceLink": ""
         },
         "lstName": "osETH",
-        "stakeFromHome": true
+        "stakeFromHome": false
     },
     {
         "id": 42,
