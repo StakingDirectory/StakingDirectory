@@ -2144,7 +2144,7 @@
             "evidenceLink": "https://twitter.com/langerstwit/status/1525343792772939777?s=20&t=35_8P57H2TkY-GkhnwODUQ"
         },
         "lstName": "rETH",
-        "stakeFromHome": false,
+        "stakeFromHome": true,
         "description": "Rocket Pool is the base layer protocol for decentralised and trustless Ethereum staking.\n\nDesigned to support stakers of all shapes and sizes, Rocket Pool was built with the intent to allow anyone to permissionlessly stake ETH to a network of decentralised node operators with full autonomy underpinned by RPL token collateral.\n\nThe core premise behind a protocol is to ensure the network is not beholden to any one party. This is a principle directly linked to Ethereum itself, and a mindset used at every stage of the process as we continue to upgrade the protocol.\n\nRocket Pool strives to embody the core ethos of Ethereum and DeFi, specifically the non-custodial, trustless nature that allows self-sovereignty to truly thrive.",
         "ratedId": "Rocketpool"
     },
