@@ -35,4 +35,6 @@ jobs:
               with:
                   commit_message: BOT - Update rated network data
                   branch: main
+                  author_name: EridianAlpha-Bot
+                  author_email: 132172290+EridianAlpha-Bot@users.noreply.github.com
                   token: ${{ secrets.PAT_BOT_RATED_UPDATES }}
