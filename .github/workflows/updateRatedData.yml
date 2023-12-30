@@ -35,3 +35,4 @@ jobs:
               with:
                   commit_message: BOT - Update rated network data
                   branch: main
+                  token: ${{ secrets.PAT_BOT_RATED_UPDATES }}
