@@ -1,47 +1,47 @@
 [
     {
         "id": 0,
-        "lastUpdated": "2024-01-05",
-        "aprPercentage30Day": 4.142395612834986
+        "lastUpdated": "2024-01-06",
+        "aprPercentage30Day": 4.121006362055068
     },
     {
         "id": 38,
-        "networkPenetration": 0.317472451950178,
-        "aprPercentage30Day": 4.16
-    },
-    {
-        "id": 31,
-        "networkPenetration": 0.15325419439673382,
-        "aprPercentage30Day": 4.21
-    },
-    {
-        "id": 35,
-        "networkPenetration": 0.029031215423598496,
-        "aprPercentage30Day": 4.06
-    },
-    {
-        "id": 43,
-        "networkPenetration": 0.004865930434072765,
-        "aprPercentage30Day": 4.18
-    },
-    {
-        "id": 416543,
-        "networkPenetration": 0.009664569606191678,
-        "aprPercentage30Day": 4
-    },
-    {
-        "id": 27,
-        "networkPenetration": 0.009973447529914276,
+        "networkPenetration": 0.3176111370668453,
         "aprPercentage30Day": 4.13
     },
     {
+        "id": 31,
+        "networkPenetration": 0.15309169524246083,
+        "aprPercentage30Day": 4.18
+    },
+    {
+        "id": 35,
+        "networkPenetration": 0.028994146737070372,
+        "aprPercentage30Day": 4.05
+    },
+    {
+        "id": 43,
+        "networkPenetration": 0.004878086406149452,
+        "aprPercentage30Day": 4.15
+    },
+    {
+        "id": 416543,
+        "networkPenetration": 0.00965369663525533,
+        "aprPercentage30Day": 3.89
+    },
+    {
+        "id": 27,
+        "networkPenetration": 0.009962227060762864,
+        "aprPercentage30Day": 4.11
+    },
+    {
         "id": 129392,
-        "networkPenetration": 0.0025813369339674156,
-        "aprPercentage30Day": 4.09
+        "networkPenetration": 0.002576229052987897,
+        "aprPercentage30Day": 4.12
     },
     {
         "id": 298269,
-        "networkPenetration": 0.00979032704656445,
-        "aprPercentage30Day": 4.25
+        "networkPenetration": 0.00977931259421197,
+        "aprPercentage30Day": 4.22
     }
 ]
