@@ -1,47 +1,47 @@
 [
     {
         "id": 0,
-        "lastUpdated": "2024-01-07",
-        "aprPercentage30Day": 4.0964988899501815
+        "lastUpdated": "2024-01-08",
+        "aprPercentage30Day": 4.060225956292081
     },
     {
         "id": 38,
-        "networkPenetration": 0.31829222823533043,
-        "aprPercentage30Day": 4.11
+        "networkPenetration": 0.31893081642868115,
+        "aprPercentage30Day": 4.07
     },
     {
         "id": 31,
-        "networkPenetration": 0.15326880947075577,
-        "aprPercentage30Day": 4.16
-    },
-    {
-        "id": 35,
-        "networkPenetration": 0.029047872234809792,
-        "aprPercentage30Day": 4.01
-    },
-    {
-        "id": 43,
-        "networkPenetration": 0.004905475556457644,
-        "aprPercentage30Day": 4.15
-    },
-    {
-        "id": 416543,
-        "networkPenetration": 0.009552826246665888,
-        "aprPercentage30Day": 3.87
-    },
-    {
-        "id": 27,
-        "networkPenetration": 0.009973106477610426,
-        "aprPercentage30Day": 4.06
-    },
-    {
-        "id": 129392,
-        "networkPenetration": 0.0025790424670559865,
+        "networkPenetration": 0.1535357508671012,
         "aprPercentage30Day": 4.1
     },
     {
+        "id": 35,
+        "networkPenetration": 0.029164875744038577,
+        "aprPercentage30Day": 3.93
+    },
+    {
+        "id": 43,
+        "networkPenetration": 0.004924714953255538,
+        "aprPercentage30Day": 4.13
+    },
+    {
+        "id": 416543,
+        "networkPenetration": 0.009568775296206632,
+        "aprPercentage30Day": 3.85
+    },
+    {
+        "id": 27,
+        "networkPenetration": 0.009989757211663298,
+        "aprPercentage30Day": 4.04
+    },
+    {
+        "id": 129392,
+        "networkPenetration": 0.002583348342093661,
+        "aprPercentage30Day": 3.95
+    },
+    {
         "id": 298269,
-        "networkPenetration": 0.009789992256254012,
-        "aprPercentage30Day": 4.18
+        "networkPenetration": 0.009806337269495827,
+        "aprPercentage30Day": 4.14
     }
 ]
