@@ -3433,14 +3433,14 @@
         },
         "fee": {
             "type": "percentage",
-            "value": "10"
+            "value": "3"
         },
         "minStake": {
             "type": "anyAmount",
             "value": ""
         },
         "sourceCode": {
-            "evidenceLink": ""
+            "evidenceLink": "https://etherscan.io/address/0x9DDa86923b79aa00A4033A10e035884227bd2CdD"
         },
         "auditReports": {
             "evidenceLink": ""
@@ -3463,7 +3463,7 @@
         "beaconClients": {
             "evidenceLink": ""
         },
-        "lstName": "spETH",
+        "lstName": "",
         "name": "StakePark",
         "logo": {
             "evidenceLink": "https://pbs.twimg.com/profile_images/1656273152945651714/fCrvL3Bw_400x400.jpg",
