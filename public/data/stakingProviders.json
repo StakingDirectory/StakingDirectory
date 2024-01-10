@@ -395,7 +395,7 @@
             "evidenceLink": "https://discord.com/channels/769190437050122311/769190851992617000/781508073260974080"
         },
         "stakingType": "solo",
-        "providerType": "no",
+        "providerType": "hardware",
         "fee": {
             "type": "percentage",
             "value": 0
@@ -411,10 +411,12 @@
             "value": 32
         },
         "validatorKey": {
-            "userValidator": true
+            "userValidator": true,
+            "nodeOperator": true
         },
         "withdrawalKey": {
-            "userWithdrawal": true
+            "userWithdrawal": true,
+            "smartContract": true
         },
         "sourceCode": {
             "value": true,
@@ -449,7 +451,9 @@
             "evidenceLink": "https://stereum.net/downloads/updates.json"
         },
         "stakeFromHome": true,
-        "description": "Decentralization with ease: Stereum - your one-stop tool for Ethereum Node installation, setup, and management!\n\nStereum is a toolkit to simplify the process of setting up and maintaining an Ethereum Node. Developed over the last years out of a simple docker compose setup, released before even the beacon chain went to the mainnet, our efforts focus on helping to decentralize the Ethereum network even further by lessening the technical entry barrier for the average person to stake their own coins using their machines, as well as the possibility to run different node-related protocols.\n\nStereum's Ethereum Node Installation, Setup & Management tool aims to be the most flexible way to leverage your node for ETH staking, data science, dApp hosting & development!"
+        "description": "Decentralization with ease: Stereum - your one-stop tool for Ethereum Node installation, setup, and management!\n\nStereum is a toolkit to simplify the process of setting up and maintaining an Ethereum Node. Developed over the last years out of a simple docker compose setup, released before even the beacon chain went to the mainnet, our efforts focus on helping to decentralize the Ethereum network even further by lessening the technical entry barrier for the average person to stake their own coins using their machines, as well as the possibility to run different node-related protocols.\n\nStereum's Ethereum Node Installation, Setup & Management tool aims to be the most flexible way to leverage your node for ETH staking, data science, dApp hosting & development!",
+        "lstName": "Saudin1",
+        "ratedId": "Saudin"
     },
     {
         "id": 11,
