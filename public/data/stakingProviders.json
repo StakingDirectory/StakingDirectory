@@ -2078,7 +2078,8 @@
         "id": 35,
         "logo": {
             "src": "./images/RocketPoolLogo.png",
-            "alt": "Logo"
+            "alt": "Logo",
+            "evidenceLink": "https://beaconcha.in/user/authorize?redirect_uri=beaconchainmobile://callback&state=zpJeRzHKbaPUmVnuXafp"
         },
         "name": "Rocket Pool (LST)",
         "status": "active",
@@ -2086,7 +2087,7 @@
             "date": "2021-11-09",
             "evidenceLink": "https://www.reddit.com/r/rocketpool/comments/qmz639/rocket_pool_announcement/"
         },
-        "stakingType": "lst",
+        "stakingType": "managed",
         "providerType": "no",
         "fee": {
             "type": "percentage",
@@ -2095,17 +2096,21 @@
         "links": {
             "website": "https://stake.rocketpool.net/",
             "twitter": "https://twitter.com/Rocket_Pool",
-            "discord": "https://discord.gg/rocketpool"
+            "discord": "https://discord.gg/rocketpool",
+            "telegram": "https://t.me/farshidfshekarab"
         },
         "minStake": {
-            "type": "anyAmount",
-            "value": "0.01"
+            "type": "eth",
+            "value": "1"
         },
         "validatorKey": {
-            "nodeOperator": true
+            "nodeOperator": true,
+            "userValidator": true,
+            "service": true
         },
         "withdrawalKey": {
-            "smartContract": true
+            "smartContract": true,
+            "userWithdrawal": true
         },
         "sourceCode": {
             "value": true,
