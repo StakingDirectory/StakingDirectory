@@ -1210,7 +1210,7 @@
         },
         "links": {
             "website": "https://www.figment.io/staking-with-figment",
-            "twitter": ""
+            "twitter": "https://twitter.com/Figment_io"
         },
         "minStake": {
             "type": "eth",
@@ -1254,7 +1254,8 @@
             "value": false,
             "evidenceLink": ""
         },
-        "stakeFromHome": false
+        "stakeFromHome": false,
+        "description": "Figment is the leading provider of staking infrastructure. Figment provides the complete staking solution for over 250 institutional clients, including asset managers, exchanges, wallets, foundations, custodians, and large token holders, to earn rewards on their digital assets. On Ethereum, Figment is the largest non-custodial staking provider with nearly 5% of staked ETH on Figment validators. Figment’s institutional staking service offers seamless point-and-click staking, portfolio reward tracking, API integrations, audited infrastructure, and slashing protection. This all leads Figment’s mission to support the adoption, growth, and long-term success of the digital asset ecosystem. To learn more about Figment, please visit figment.io."
     },
     {
         "id": 23,
