@@ -16,13 +16,6 @@ export default function Footer() {
                     Spacesider
                 </Link>
             </Text>
-            <Flex wrap={"wrap"} justifyContent={"center"} alignItems={"baseline"} fontWeight={"bold"} gap={1}>
-                Please support this project by donating to
-                <Code mx={1} px={2} py={1} borderRadius={10}>
-                    StakingDirectory.eth
-                </Code>
-                🙏
-            </Flex>
         </Flex>
     )
 }
