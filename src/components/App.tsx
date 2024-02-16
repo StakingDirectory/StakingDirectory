@@ -31,14 +31,6 @@ const App = () => {
                     <Text fontWeight={"extrabold"} fontSize={"3xl"} textAlign={"center"}>
                         The Ethereum Staking Directory
                     </Text>
-                    <Image
-                        src={"./images/StakeFromHome.png"}
-                        alt={"Staking Directory Cover Image"}
-                        objectFit="contain"
-                        boxSize={"200px"}
-                        borderRadius={"100%"}
-                        my={4}
-                    />
                     <Text fontWeight={"bold"} fontSize={"1xl"} pt={2} px={5} textAlign={"center"}>
                         A community-maintained directory of Ethereum staking providers
                     </Text>

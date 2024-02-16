@@ -28,11 +28,11 @@ export default function Header({}) {
                             </Box>
                         </HStack>
                         <HStack spacing={5}>
-                            <Link href={"https://twitter.com/StakeDirectory"} target="_blank">
+                            {/* <Link href={"https://twitter.com/StakeDirectory"} target="_blank">
                                 <Box w="24px" cursor={"pointer"} aria-label={"Staking Directory Twitter Profile"}>
                                     <FontAwesomeIcon icon={faXTwitter} size={"xl"} />
                                 </Box>
-                            </Link>
+                            </Link> */}
                             <Link href={"https://github.com/StakingDirectory/StakingDirectory"} target="_blank">
                                 <Box w="24px" cursor={"pointer"} aria-label={"View GitHub Source"}>
                                     <FontAwesomeIcon icon={faGithub} size={"xl"} />
