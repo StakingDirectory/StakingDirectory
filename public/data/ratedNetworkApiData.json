@@ -1,47 +1,47 @@
 [
     {
         "id": 0,
-        "lastUpdated": "2024-02-21",
-        "aprPercentage30Day": 3.7857420040022873
+        "lastUpdated": "2024-02-22",
+        "aprPercentage30Day": 3.797609076053579
     },
     {
         "id": 38,
-        "networkPenetration": 0.31902997557793317,
-        "aprPercentage30Day": 3.84
+        "networkPenetration": 0.3182383220843797,
+        "aprPercentage30Day": 3.86
     },
     {
         "id": 31,
-        "networkPenetration": 0.14639858151282995,
-        "aprPercentage30Day": 3.75
-    },
-    {
-        "id": 35,
-        "networkPenetration": 0.027446597638085043,
-        "aprPercentage30Day": 3.67
-    },
-    {
-        "id": 43,
-        "networkPenetration": 0.008134764644876384,
-        "aprPercentage30Day": 4.4
-    },
-    {
-        "id": 416543,
-        "networkPenetration": 0.014351100665752233,
-        "aprPercentage30Day": 3.81
-    },
-    {
-        "id": 27,
-        "networkPenetration": 0.009346458800307786,
-        "aprPercentage30Day": 4.15
-    },
-    {
-        "id": 129392,
-        "networkPenetration": 0.0022665685323341473,
+        "networkPenetration": 0.14627741671741906,
         "aprPercentage30Day": 3.76
     },
     {
+        "id": 35,
+        "networkPenetration": 0.02739377455928852,
+        "aprPercentage30Day": 3.68
+    },
+    {
+        "id": 43,
+        "networkPenetration": 0.008114472355939697,
+        "aprPercentage30Day": 4.37
+    },
+    {
+        "id": 416543,
+        "networkPenetration": 0.014314258778772432,
+        "aprPercentage30Day": 3.88
+    },
+    {
+        "id": 27,
+        "networkPenetration": 0.00932314392264502,
+        "aprPercentage30Day": 4.19
+    },
+    {
+        "id": 129392,
+        "networkPenetration": 0.0022609145441045194,
+        "aprPercentage30Day": 3.78
+    },
+    {
         "id": 298269,
-        "networkPenetration": 0.00931091298384129,
-        "aprPercentage30Day": 3.89
+        "networkPenetration": 0.009287686775735632,
+        "aprPercentage30Day": 3.86
     }
 ]
