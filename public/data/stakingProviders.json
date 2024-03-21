@@ -2736,7 +2736,7 @@
         "status": "active",
         "stakeFromHome": false,
         "stakingType": "indexToken",
-        "providerType": "no",
+        "providerType": "hardware",
         "fee": {
             "type": "other",
             "value": "LST +0.25%"
@@ -2746,11 +2746,12 @@
             "value": ""
         },
         "validatorKey": {
-            "userValidator": false,
-            "nodeOperator": true
+            "userValidator": true,
+            "nodeOperator": true,
+            "service": true
         },
         "withdrawalKey": {
-            "userWithdrawal": false,
+            "userWithdrawal": true,
             "smartContract": true
         },
         "sourceCode": {
