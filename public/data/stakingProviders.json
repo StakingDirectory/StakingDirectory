@@ -386,7 +386,8 @@
         "id": 10,
         "logo": {
             "src": "./images/StereumLogo.png",
-            "alt": "Logo"
+            "alt": "Logo",
+            "evidenceLink": "https://stereum.net/icons/home/stereum-app-store-icon.svg"
         },
         "name": "Stereum",
         "status": "active",
