@@ -385,7 +385,7 @@
     {
         "id": 10,
         "logo": {
-            "src": "./images/StereumLogo.png",
+            "src": "./images/StereumLogo.svg",
             "alt": "Logo"
         },
         "name": "Stereum",
