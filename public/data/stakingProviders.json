@@ -401,7 +401,7 @@
             "value": 0
         },
         "links": {
-            "website": "https://stereum.net/ethereum-node-setup/",
+            "website": "https://stereum.com/",
             "twitter": "https://twitter.com/stereumdev",
             "discord": "https://discord.com/invite/df8r5PVX9P",
             "repo": "https://github.com/stereum-dev/ethereum-node"
@@ -434,7 +434,7 @@
         },
         "howToUse": {
             "value": true,
-            "evidenceLink": "https://stereum.net/"
+            "evidenceLink": "https://stereum.com/"
         },
         "operatorRequirements": {
             "value": true,
