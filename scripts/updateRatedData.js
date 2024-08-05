@@ -80,8 +80,6 @@ async function updateStakingProviders() {
                     accept: "application/json",
                 },
             })
-
-            console.log("beaconchainResponse.data.data", beaconchainResponse.data.data)
             const avgNetworkAprPercentage = beaconchainResponse.data.data.avgapr31d
             ratedNetworkApiData = updateAvgNetworkAprPercentage(ratedNetworkApiData, avgNetworkAprPercentage * 100)
         } catch (error) {
