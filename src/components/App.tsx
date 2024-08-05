@@ -45,10 +45,14 @@ const App = () => {
                     <Box mb={10}>
                         <AddProviderButton />
                     </Box>
-                    <Code mx={1} px={2} py={1} borderRadius={10} fontWeight={"extrabold"}>
+                    <Code mx={1} px={2} py={1} borderRadius={10} fontWeight={"extrabold"} textAlign={"center"} display={"block"}>
                         Live data provided by{" "}
                         <Link as={NextLink} href={"https://www.rated.network/"} color={"blue"} textDecoration={"underline"} target="_blank">
                             Rated.Network
+                        </Link>{" "}
+                        and{" "}
+                        <Link as={NextLink} href={"https://beaconcha.in/"} color={"blue"} textDecoration={"underline"} target="_blank">
+                            Beaconcha.in
                         </Link>{" "}
                         📡
                     </Code>
