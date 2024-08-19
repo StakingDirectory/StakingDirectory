@@ -3397,7 +3397,7 @@
         "beaconClients": {
             "evidenceLink": "https://docs.ssv.network/run-a-node/operator-node/installation"
         },
-        "name": "ssv.network",
+        "name": "Thuan nguyen",
         "validatorKey": {
             "userValidator": true
         },
@@ -3411,7 +3411,7 @@
             "repo": "https://github.com/bloxapp/ssv"
         },
         "mainnetLaunch": {
-            "date": "2023-09-14",
+            "date": "2024-09-14",
             "evidenceLink": "https://ssv.network/blog/technology/the-ssv-network-launch-phase-revolutionizing-the-staking-landscape/"
         },
         "description": "ssv.network is a fully decentralized, open-source ETH staking network based on Secret Shared Validator (SSV) technology.\n\nSSV is also known as DVT, or Distributed Validator Technology, as it provides an open and simple infrastructure for splitting and distributing a validator key into multiple Key-Shares, for the purpose of running an Ethereum validator across multiple non-trusting nodes.\n\nRunning an Ethereum validator on ssv.network achieves active-active redundancy, introduces new levels of validator key security, and benefits the Ethereum network, staking pools, staking services, and solo stakers.",
@@ -3419,7 +3419,8 @@
             "evidenceLink": "https://ssv.network/media-kit/",
             "src": "./images/SSVLogo.png",
             "alt": "SSV Logo"
-        }
+        },
+        "lstName": "Nguyen thanh thuan"
     },
     {
         "id": 451469,
