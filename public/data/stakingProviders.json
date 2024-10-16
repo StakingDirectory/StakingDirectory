@@ -1265,15 +1265,15 @@
             "evidenceLink": ""
         },
         "name": "Rocket Pool (Node)",
-        "status": "active",
+        "status": "dev",
         "mainnetLaunch": {
             "evidenceLink": "https://www.reddit.com/r/rocketpool/comments/qmz639/rocket_pool_announcement/",
             "date": "2021-11-09"
         },
-        "stakingType": "pooled",
-        "providerType": "no",
+        "stakingType": "indexToken",
+        "providerType": "hardware",
         "fee": {
-            "type": "percentage",
+            "type": "other",
             "value": "0"
         },
         "links": {
@@ -1283,14 +1283,17 @@
             "telegram": ""
         },
         "minStake": {
-            "type": "eth",
+            "type": "anyAmount",
             "value": "10.4"
         },
         "validatorKey": {
-            "userValidator": true
+            "userValidator": true,
+            "service": true,
+            "nodeOperator": true
         },
         "withdrawalKey": {
-            "smartContract": true
+            "smartContract": true,
+            "userWithdrawal": true
         },
         "sourceCode": {
             "value": true,
