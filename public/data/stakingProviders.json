@@ -3876,5 +3876,69 @@
             "website": "https://www.lantern.finance/",
             "twitter": "https://x.com/LanternFi"
         }
+    },
+    {
+        "id": 391158,
+        "status": "active",
+        "stakeFromHome": false,
+        "stakingType": "managed",
+        "providerType": "no",
+        "ratedId": "https://explorer.rated.network/o/Stakin?network=mainnet&timeWindow=1d&viewBy=operator&page=1&pageSize=15&idType=nodeOperator",
+        "selfLimit": {
+            "value": null,
+            "evidenceLink": ""
+        },
+        "fee": {
+            "type": "percentage",
+            "value": 0
+        },
+        "minStake": {
+            "type": "eth",
+            "value": "0"
+        },
+        "sourceCode": {
+            "evidenceLink": ""
+        },
+        "auditReports": {
+            "evidenceLink": ""
+        },
+        "bugBounty": {
+            "evidenceLink": ""
+        },
+        "mevRelays": {
+            "evidenceLink": ""
+        },
+        "howToUse": {
+            "evidenceLink": "https://stakin.com/blog/introducing-stakin-vault-on-stakewise-v3-stake-eth-with-0-commission/"
+        },
+        "operatorRequirements": {
+            "evidenceLink": ""
+        },
+        "executionClients": {
+            "evidenceLink": ""
+        },
+        "beaconClients": {
+            "evidenceLink": "https://explorer.rated.network/o/Stakin?network=mainnet&timeWindow=1d&viewBy=operator&page=1&pageSize=15&idType=nodeOperator"
+        },
+        "name": "Stakin",
+        "logo": {
+            "evidenceLink": "https://drive.google.com/file/d/1_H8fPUiAY3U_6xxklZ8ZycMkYlLuueKL/view?usp=sharing"
+        },
+        "links": {
+            "website": "https://stakin.com/",
+            "twitter": "https://x.com/StakinOfficial",
+            "telegram": "https://t.me/StakinOfficial"
+        },
+        "validatorKey": {
+            "nodeOperator": true
+        },
+        "withdrawalKey": {
+            "userWithdrawal": true
+        },
+        "description": "Stakin is an infrastructure operator for Proof-of-Stake public blockchains offering non-custodial delegation services. We enable PoS cryptocurrency holders to earn interests on their holdings, and shape the future of networks in which they believe.\n\nWe provide institutional customers with secure, scalable, and reliable blockchain infrastructure solutions. Our Dedicated and Whitelabel node services adapt to enterprise-level security, commercial, and compliance needs.\n\nStakin has been active on ETH since 2019, running validators on Casper PoS early testnet.\n",
+        "mainnetLaunch": {
+            "date": "2023-12-07",
+            "evidenceLink": "https://app.stakewise.io/vault/mainnet/0x05e393ec11d0197a88d84457908edd4ff235f323"
+        }
     }
 ]
