@@ -3893,8 +3893,8 @@
             "value": 0
         },
         "minStake": {
-            "type": "eth",
-            "value": "0"
+            "type": "anyAmount",
+            "value": ""
         },
         "sourceCode": {
             "evidenceLink": ""
@@ -3922,7 +3922,9 @@
         },
         "name": "Stakin",
         "logo": {
-            "evidenceLink": "https://drive.google.com/file/d/1_H8fPUiAY3U_6xxklZ8ZycMkYlLuueKL/view?usp=sharing"
+            "evidenceLink": "https://drive.google.com/file/d/1_H8fPUiAY3U_6xxklZ8ZycMkYlLuueKL/view?usp=sharing",
+            "src": "./images/StakinLogo.png",
+            "alt": "Stakin Logo"
         },
         "links": {
             "website": "https://stakin.com/",
