@@ -3863,7 +3863,9 @@
             "date": "2023-11-30"
         },
         "logo": {
-            "evidenceLink": "https://assets-global.website-files.com/64dae78b77795d650764a167/64f0c8d2d065ec0e03986b18_Lantern_logo.svg"
+            "evidenceLink": "https://assets-global.website-files.com/64dae78b77795d650764a167/64f0c8d2d065ec0e03986b18_Lantern_logo.svg",
+            "src": "./images/LanternFinanceLogo.png",
+            "alt": "Lantern Finance Logo"
         },
         "validatorKey": {
             "service": false,
