@@ -1284,7 +1284,7 @@
         },
         "minStake": {
             "type": "eth",
-            "value": "10.4"
+            "value": "8"
         },
         "validatorKey": {
             "userValidator": true
