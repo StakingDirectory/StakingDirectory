@@ -2366,7 +2366,8 @@
         "id": 41,
         "logo": {
             "src": "./images/StakeWiseLogo.png",
-            "alt": "Logo"
+            "alt": "Logo",
+            "evidenceLink": "Ether"
         },
         "name": "StakeWise V3 (LST)",
         "selfLimit": {
