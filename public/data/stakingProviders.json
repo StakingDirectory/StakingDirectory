@@ -3223,16 +3223,16 @@
         "stakingType": "managed",
         "providerType": "no",
         "fee": {
-            "type": "other",
-            "value": "Custom"
+            "type": "percentage",
+            "value": 5
         },
         "minStake": {
-            "type": "eth",
-            "value": "32"
+            "type": "anyAmount",
+            "value": "Any amount"
         },
         "sourceCode": {
-            "value": false,
-            "evidenceLink": ""
+            "value": true,
+            "evidenceLink": "https://github.com/serenita-org"
         },
         "auditReports": {
             "value": false,
@@ -3244,11 +3244,11 @@
         },
         "mevRelays": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://explorer.rated.network/o/Serenita?network=mainnet&timeWindow=all&idType=nodeOperator"
         },
         "howToUse": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://serenita.io/blog/2024/stakewise-v3-guide"
         },
         "operatorRequirements": {
             "value": false,
@@ -3256,11 +3256,11 @@
         },
         "executionClients": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://serenita.io/dashboard/operations"
         },
         "beaconClients": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://serenita.io/dashboard/operations"
         },
         "name": "Serenita",
         "logo": {
@@ -3268,7 +3268,7 @@
             "src": "./images/SerenitaLogo.png",
             "alt": "Serenita Logo"
         },
-        "description": "At Serenita, we understand the complexities involved in efficiently managing digital assets, particularly when it comes to Ethereum. Our team of seasoned professionals possesses a wealth of knowledge and experience in the field of blockchain technology, managing infrastructure and cybersecurity.\n\nWe leverage this expertise to offer a suite of reliable and secure services designed to optimize returns on digital assets.",
+        "description": "Serenita provides enterprise-grade staking services with a focus on top-tier performance and minimal risk. Our exclusive focus is on the Ethereum ecosystem and we are dedicated to its long-term sustainability and neutrality.",
         "validatorKey": {
             "nodeOperator": false,
             "service": true
