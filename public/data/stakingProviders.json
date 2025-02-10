@@ -3944,5 +3944,70 @@
             "date": "2023-12-07",
             "evidenceLink": "https://app.stakewise.io/vault/mainnet/0x05e393ec11d0197a88d84457908edd4ff235f323"
         }
+    },
+    {
+        "id": 562518,
+        "status": "active",
+        "stakeFromHome": false,
+        "stakingType": "managed",
+        "providerType": "hardware",
+        "ratedId": "",
+        "selfLimit": {
+            "value": null,
+            "evidenceLink": ""
+        },
+        "fee": {
+            "type": "other",
+            "value": "CUSTOM"
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": ""
+        },
+        "sourceCode": {
+            "evidenceLink": ""
+        },
+        "auditReports": {
+            "evidenceLink": ""
+        },
+        "bugBounty": {
+            "evidenceLink": ""
+        },
+        "mevRelays": {
+            "evidenceLink": ""
+        },
+        "howToUse": {
+            "evidenceLink": "https://www.youtube.com/watch?v=iNAC8d_gYSU&ab_channel=Stereum"
+        },
+        "operatorRequirements": {
+            "evidenceLink": ""
+        },
+        "executionClients": {
+            "evidenceLink": ""
+        },
+        "beaconClients": {
+            "evidenceLink": ""
+        },
+        "name": "StereumPlus",
+        "logo": {
+            "evidenceLink": "https://stereumplus.com/_next/image?url=%2Flogos%2Fstereumplus-icon-circle.png&w=128&q=75"
+        },
+        "mainnetLaunch": {
+            "date": "2024-11-05",
+            "evidenceLink": "https://stereum.com/content/news/77pk5YdMTi8M18EdIpm9gf"
+        },
+        "description": "Operating an Ethereum node shouldn’t mean sacrificing security, paying high costs, or dealing with regulatory risks. Yet, for many stakers and developers relying on major hosting providers, that’s the reality. StereumPlus changes the game by providing more control, optimized infrastructure, and enhanced security for Ethereum nodes.",
+        "validatorKey": {
+            "userValidator": true,
+            "service": false
+        },
+        "withdrawalKey": {
+            "userWithdrawal": true
+        },
+        "links": {
+            "website": "https://stereumplus.com/",
+            "twitter": "https://x.com/stereumdev",
+            "discord": "https://discord.com/invite/df8r5PVX9P"
+        }
     }
 ]
