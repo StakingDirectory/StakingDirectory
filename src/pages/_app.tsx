@@ -7,6 +7,8 @@ import customTheme from "../styles/customTheme"
 
 import { ChakraProvider, ColorModeScript, useColorModeValue } from "@chakra-ui/react"
 
+import GoogleAnalytics from "@/components/GoogleAnalytics"
+
 import { config } from "@fortawesome/fontawesome-svg-core"
 import "@fortawesome/fontawesome-svg-core/styles.css"
 config.autoAddCss = false
@@ -50,6 +52,7 @@ function MyApp({ Component, pageProps }: AppProps) {
             <ColorModeScript initialColorMode="dark" />
             <style>{style}</style>
             <div id="app" className="hideUntilReady">
+                <GoogleAnalytics />
                 <Component {...pageProps} />
                 <Analytics />
             </div>
