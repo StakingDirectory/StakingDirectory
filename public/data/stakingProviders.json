@@ -3944,5 +3944,53 @@
             "date": "2023-12-07",
             "evidenceLink": "https://app.stakewise.io/vault/mainnet/0x05e393ec11d0197a88d84457908edd4ff235f323"
         }
+    },
+    {
+        "id": 976614,
+        "status": "active",
+        "stakeFromHome": true,
+        "stakingType": "solo",
+        "providerType": "no",
+        "ratedId": "",
+        "selfLimit": {
+            "value": null,
+            "evidenceLink": ""
+        },
+        "fee": {
+            "type": "percentage",
+            "value": 0
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "sourceCode": {
+            "evidenceLink": ""
+        },
+        "auditReports": {
+            "evidenceLink": ""
+        },
+        "bugBounty": {
+            "evidenceLink": ""
+        },
+        "mevRelays": {
+            "evidenceLink": ""
+        },
+        "howToUse": {
+            "evidenceLink": ""
+        },
+        "operatorRequirements": {
+            "evidenceLink": ""
+        },
+        "executionClients": {
+            "evidenceLink": ""
+        },
+        "beaconClients": {
+            "evidenceLink": ""
+        },
+        "name": "Obol",
+        "logo": {
+            "evidenceLink": "https://blog.obol.org/branding/"
+        }
     }
 ]
