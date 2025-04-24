@@ -3944,5 +3944,71 @@
             "date": "2023-12-07",
             "evidenceLink": "https://app.stakewise.io/vault/mainnet/0x05e393ec11d0197a88d84457908edd4ff235f323"
         }
+    },
+    {
+        "id": 512539,
+        "status": "active",
+        "stakeFromHome": false,
+        "stakingType": "managed",
+        "providerType": "no",
+        "ratedId": "Blockshard",
+        "selfLimit": {
+            "value": null,
+            "evidenceLink": ""
+        },
+        "fee": {
+            "type": "percentage",
+            "value": "5"
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": 32
+        },
+        "sourceCode": {
+            "evidenceLink": ""
+        },
+        "auditReports": {
+            "evidenceLink": ""
+        },
+        "bugBounty": {
+            "evidenceLink": ""
+        },
+        "mevRelays": {
+            "evidenceLink": ""
+        },
+        "howToUse": {
+            "evidenceLink": "https://blockshard.io"
+        },
+        "operatorRequirements": {
+            "evidenceLink": ""
+        },
+        "executionClients": {
+            "evidenceLink": ""
+        },
+        "beaconClients": {
+            "evidenceLink": ""
+        },
+        "name": "Blockshard",
+        "logo": {
+            "evidenceLink": "https://data.blockshard.io/blockshard.png",
+            "src": "./images/BlockshardLogo.png",
+            "alt": "Blockshard Logo"
+        },
+        "mainnetLaunch": {
+            "date": "2022-09-01"
+        },
+        "description": "Blockshard specializes in Ethereum staking using Distributed Validator Technology (DVT) with SSV and Obol, enhancing decentralization and resilience. Stakers can receive osETH, a liquid staking token, by staking through our DVT Pioneers Vault built on StakeWise V3—combining non-custodial security with added flexibility.",
+        "validatorKey": {
+            "service": true,
+            "nodeOperator": true
+        },
+        "withdrawalKey": {
+            "userWithdrawal": false
+        },
+        "links": {
+            "website": "https://blockshard.io",
+            "twitter": "https://x.com/blockshard1",
+            "telegram": "https://t.me/blockshard"
+        }
     }
 ]
