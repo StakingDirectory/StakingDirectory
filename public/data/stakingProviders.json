@@ -365,7 +365,7 @@
         },
         "howToUse": {
             "value": true,
-            "evidenceLink": ""
+            "evidenceLink": "https://ethdocker.com/Usage/QuickStart"
         },
         "operatorRequirements": {
             "value": true,
