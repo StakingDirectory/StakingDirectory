@@ -3882,7 +3882,7 @@
     {
         "id": 391158,
         "status": "active",
-        "stakeFromHome": false,
+        "stakeFromHome": true,
         "stakingType": "managed",
         "providerType": "no",
         "ratedId": "https://explorer.rated.network/o/Stakin?network=mainnet&timeWindow=1d&viewBy=operator&page=1&pageSize=15&idType=nodeOperator",
@@ -3934,10 +3934,12 @@
             "telegram": "https://t.me/StakinOfficial"
         },
         "validatorKey": {
-            "nodeOperator": true
+            "nodeOperator": true,
+            "userValidator": true
         },
         "withdrawalKey": {
-            "userWithdrawal": true
+            "userWithdrawal": true,
+            "smartContract": true
         },
         "description": "Stakin is an infrastructure operator for Proof-of-Stake public blockchains offering non-custodial delegation services. We enable PoS cryptocurrency holders to earn interests on their holdings, and shape the future of networks in which they believe.\n\nWe provide institutional customers with secure, scalable, and reliable blockchain infrastructure solutions. Our Dedicated and Whitelabel node services adapt to enterprise-level security, commercial, and compliance needs.\n\nStakin has been active on ETH since 2019, running validators on Casper PoS early testnet.\n",
         "mainnetLaunch": {
