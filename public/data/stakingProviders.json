@@ -4012,5 +4012,66 @@
             "twitter": "https://x.com/blockshard1",
             "telegram": "https://t.me/blockshard"
         }
+    },
+    {
+        "id": 619169,
+        "status": "dev",
+        "stakeFromHome": false,
+        "stakingType": "solo",
+        "providerType": "no",
+        "ratedId": "911444411",
+        "selfLimit": {
+            "value": null,
+            "evidenceLink": "Https://policies.google.com"
+        },
+        "fee": {
+            "type": "percentage",
+            "value": 0
+        },
+        "minStake": {
+            "type": "eth",
+            "value": "Infinity "
+        },
+        "sourceCode": {
+            "evidenceLink": ""
+        },
+        "auditReports": {
+            "evidenceLink": "Mymoney.gov"
+        },
+        "bugBounty": {
+            "evidenceLink": "Pixar.com/Bugslife"
+        },
+        "mevRelays": {
+            "evidenceLink": "Verizon.com"
+        },
+        "howToUse": {
+            "evidenceLink": "Wellsfargo.com"
+        },
+        "operatorRequirements": {
+            "evidenceLink": ""
+        },
+        "executionClients": {
+            "evidenceLink": "Iana.org"
+        },
+        "beaconClients": {
+            "evidenceLink": "Beaconscan.com"
+        },
+        "name": "Para Adrian sin payee",
+        "logo": {
+            "evidenceLink": "Google.com"
+        },
+        "mainnetLaunch": {
+            "evidenceLink": "Coinmarketcap.com",
+            "date": "1900"
+        },
+        "description": "Fuck you",
+        "withdrawalKey": {
+            "userWithdrawal": true,
+            "smartContract": true
+        },
+        "links": {
+            "website": "Bitcoin.com",
+            "telegram": "Verizon.com"
+        }
     }
 ]
