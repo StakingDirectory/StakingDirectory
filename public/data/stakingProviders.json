@@ -4012,5 +4012,54 @@
             "twitter": "https://x.com/blockshard1",
             "telegram": "https://t.me/blockshard"
         }
+    },
+    {
+        "id": 856646,
+        "status": "dev",
+        "stakeFromHome": false,
+        "stakingType": "",
+        "providerType": "no",
+        "ratedId": "",
+        "selfLimit": {
+            "value": null,
+            "evidenceLink": ""
+        },
+        "fee": {
+            "type": "percentage",
+            "value": 0
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "sourceCode": {
+            "evidenceLink": ""
+        },
+        "auditReports": {
+            "evidenceLink": ""
+        },
+        "bugBounty": {
+            "evidenceLink": ""
+        },
+        "mevRelays": {
+            "evidenceLink": ""
+        },
+        "howToUse": {
+            "evidenceLink": ""
+        },
+        "operatorRequirements": {
+            "evidenceLink": ""
+        },
+        "executionClients": {
+            "evidenceLink": ""
+        },
+        "beaconClients": {
+            "evidenceLink": ""
+        },
+        "name": "jasmy",
+        "mainnetLaunch": {
+            "date": "y",
+            "evidenceLink": "0x7420B4b9a0110cdC71fB720908340C03F9Bc03EC"
+        }
     }
 ]
