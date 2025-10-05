@@ -4012,5 +4012,68 @@
             "twitter": "https://x.com/blockshard1",
             "telegram": "https://t.me/blockshard"
         }
+    },
+    {
+        "id": 519883,
+        "status": "active",
+        "stakeFromHome": true,
+        "stakingType": "solo",
+        "providerType": "no",
+        "ratedId": "",
+        "selfLimit": {
+            "value": null,
+            "evidenceLink": ""
+        },
+        "fee": {
+            "type": "percentage",
+            "value": 0
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "sourceCode": {
+            "evidenceLink": "https://github.com/coincashew/EthPillar"
+        },
+        "auditReports": {
+            "evidenceLink": ""
+        },
+        "bugBounty": {
+            "evidenceLink": ""
+        },
+        "mevRelays": {
+            "evidenceLink": ""
+        },
+        "howToUse": {
+            "evidenceLink": "https://docs.coincashew.com/ethpillar"
+        },
+        "operatorRequirements": {
+            "evidenceLink": ""
+        },
+        "executionClients": {
+            "evidenceLink": ""
+        },
+        "beaconClients": {
+            "evidenceLink": ""
+        },
+        "name": "EthPillar",
+        "logo": {
+            "evidenceLink": "https://docs.coincashew.com/img/EthPillar.final.png"
+        },
+        "mainnetLaunch": {
+            "evidenceLink": "https://docs.coincashew.com/ethpillar"
+        },
+        "description": "EthPillar is a fully open-source tool that simplifies running and managing Ethereum nodes and validators via a text-based user interface (TUI).",
+        "validatorKey": {
+            "userValidator": true
+        },
+        "withdrawalKey": {
+            "userWithdrawal": true
+        },
+        "links": {
+            "website": "https://docs.coincashew.com/",
+            "twitter": "https://x.com/coincashew_/",
+            "discord": "https://discord.com/invite/dEpAVWgFNB"
+        }
     }
 ]
