@@ -4042,7 +4042,7 @@
             "evidenceLink": ""
         },
         "mevRelays": {
-            "evidenceLink": ""
+            "evidenceLink": "https://docs.coincashew.com/guides/mev-boost/mev-relay-list"
         },
         "howToUse": {
             "evidenceLink": "https://docs.coincashew.com/ethpillar"
@@ -4051,17 +4051,18 @@
             "evidenceLink": ""
         },
         "executionClients": {
-            "evidenceLink": ""
+            "evidenceLink": "https://docs.coincashew.com/guides/mainnet/step-3-installing-execution-client"
         },
         "beaconClients": {
-            "evidenceLink": ""
+            "evidenceLink": "https://docs.coincashew.com/guides/mainnet/step-4-installing-consensus-client"
         },
         "name": "EthPillar",
         "logo": {
-            "evidenceLink": "https://docs.coincashew.com/img/EthPillar.final.png"
+            "evidenceLink": "https://raw.githubusercontent.com/coincashew/docs/761a174f013a7b6058a582961502b633daddfea4/static/img/EthPillarLogo.png"
         },
         "mainnetLaunch": {
-            "evidenceLink": "https://docs.coincashew.com/ethpillar"
+            "evidenceLink": "https://github.com/coincashew/coincashew/blob/e6bce0a1de268ab12ee8620d052d01a4a255539d/coins/overview-eth/guide-how-to-stake-on-eth-2.0-onyx-testnet.md",
+            "date": "2020-06-12"
         },
         "description": "EthPillar is a fully open-source tool that simplifies running and managing Ethereum nodes and validators via a text-based user interface (TUI).",
         "validatorKey": {
