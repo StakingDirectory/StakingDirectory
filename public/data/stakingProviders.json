@@ -4058,7 +4058,8 @@
         },
         "name": "EthPillar",
         "logo": {
-            "evidenceLink": "https://raw.githubusercontent.com/coincashew/docs/761a174f013a7b6058a582961502b633daddfea4/static/img/EthPillarLogo.png"
+            "src": "./images/EthPillarLogo.png",
+            "alt": "Logo"
         },
         "mainnetLaunch": {
             "evidenceLink": "https://github.com/coincashew/coincashew/blob/e6bce0a1de268ab12ee8620d052d01a4a255539d/coins/overview-eth/guide-how-to-stake-on-eth-2.0-onyx-testnet.md",
