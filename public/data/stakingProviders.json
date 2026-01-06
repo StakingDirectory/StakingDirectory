@@ -4077,5 +4077,54 @@
             "twitter": "https://x.com/coincashew_/",
             "discord": "https://discord.com/invite/dEpAVWgFNB"
         }
+    },
+    {
+        "id": 275414,
+        "status": "dev",
+        "stakeFromHome": false,
+        "stakingType": "",
+        "providerType": "no",
+        "ratedId": "",
+        "selfLimit": {
+            "value": null,
+            "evidenceLink": ""
+        },
+        "fee": {
+            "type": "percentage",
+            "value": 0
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "sourceCode": {
+            "evidenceLink": ""
+        },
+        "auditReports": {
+            "evidenceLink": ""
+        },
+        "bugBounty": {
+            "evidenceLink": ""
+        },
+        "mevRelays": {
+            "evidenceLink": ""
+        },
+        "howToUse": {
+            "evidenceLink": ""
+        },
+        "operatorRequirements": {
+            "evidenceLink": ""
+        },
+        "executionClients": {
+            "evidenceLink": ""
+        },
+        "beaconClients": {
+            "evidenceLink": ""
+        },
+        "name": "Compund",
+        "withdrawalKey": {
+            "userWithdrawal": true,
+            "smartContract": true
+        }
     }
 ]
