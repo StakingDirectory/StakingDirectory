@@ -4077,5 +4077,63 @@
             "twitter": "https://x.com/coincashew_/",
             "discord": "https://discord.com/invite/dEpAVWgFNB"
         }
+    },
+    {
+        "id": 965922,
+        "status": "active",
+        "stakeFromHome": false,
+        "stakingType": "",
+        "providerType": "no",
+        "ratedId": "",
+        "selfLimit": {
+            "value": null,
+            "evidenceLink": ""
+        },
+        "fee": {
+            "type": "percentage",
+            "value": 0
+        },
+        "minStake": {
+            "type": "anyAmount",
+            "value": 32
+        },
+        "sourceCode": {
+            "evidenceLink": ""
+        },
+        "auditReports": {
+            "evidenceLink": "https://hazecrypto.net/audit/CryptoFather"
+        },
+        "bugBounty": {
+            "evidenceLink": ""
+        },
+        "mevRelays": {
+            "evidenceLink": ""
+        },
+        "howToUse": {
+            "evidenceLink": ""
+        },
+        "operatorRequirements": {
+            "evidenceLink": ""
+        },
+        "executionClients": {
+            "evidenceLink": ""
+        },
+        "beaconClients": {
+            "evidenceLink": ""
+        },
+        "name": "CryptoFather",
+        "logo": {
+            "evidenceLink": "https://cryptofather.network/img/t-2.webp"
+        },
+        "mainnetLaunch": {
+            "date": "2026-01-16",
+            "evidenceLink": "https://cryptofather.network/"
+        },
+        "links": {
+            "website": "https://cryptofather.network/",
+            "twitter": "https://x.com/CryptoFather_X",
+            "telegram": "https://t.me/cryptofather_chat"
+        },
+        "description": "CryptoFather Network is a decentralized USDT-based staking platform designed to provide transparent, automated, and sustainable reward distribution through smart contracts.\n\nThe platform allows users to participate in staking using USDT, with rewards calculated and distributed automatically by blockchain logic. All core processes — including deposits, reward accrual, and withdrawals — are executed via smart contracts, ensuring transparency and eliminating manual intervention.\n\nCryptoFather Network also features a multi-level referral system that enables community-driven growth while rewarding active participants for network expansion. Referral rewards are calculated on-chain and follow predefined rules embedded in the smart contracts.\n\nThe project focuses on simplicity, accessibility, and trust. Users can connect their wallets directly, monitor their staking activity in real time, and track rewards through a dedicated dashboard. No centralized custody of funds is involved — users interact directly with the smart contracts.\n\nCryptoFather Network aims to build a long-term staking ecosystem powered by transparency, automation, and community participation."
     }
 ]
