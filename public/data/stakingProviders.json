@@ -806,7 +806,7 @@
         "providerType": "no",
         "fee": {
             "type": "percentage",
-            "value": 2
+            "value": "15"
         },
         "links": {
             "website": "https://ethpool.org",
