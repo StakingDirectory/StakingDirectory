@@ -4077,5 +4077,58 @@
             "twitter": "https://x.com/coincashew_/",
             "discord": "https://discord.com/invite/dEpAVWgFNB"
         }
+    },
+    {
+        "id": 784914,
+        "status": "active",
+        "stakeFromHome": true,
+        "stakingType": "",
+        "providerType": "no",
+        "ratedId": "",
+        "selfLimit": {
+            "value": null,
+            "evidenceLink": ""
+        },
+        "fee": {
+            "type": "percentage",
+            "value": 0
+        },
+        "minStake": {
+            "type": "eth",
+            "value": 32
+        },
+        "sourceCode": {
+            "evidenceLink": ""
+        },
+        "auditReports": {
+            "evidenceLink": ""
+        },
+        "bugBounty": {
+            "evidenceLink": ""
+        },
+        "mevRelays": {
+            "evidenceLink": ""
+        },
+        "howToUse": {
+            "evidenceLink": ""
+        },
+        "operatorRequirements": {
+            "evidenceLink": ""
+        },
+        "executionClients": {
+            "evidenceLink": ""
+        },
+        "beaconClients": {
+            "evidenceLink": ""
+        },
+        "name": "Ubik Capital",
+        "logo": {
+            "evidenceLink": "https://34fa313a.delivery.rocketcdn.me/wordpress/wp-content/uploads/2022/10/ubik-capital-logo-light.svg"
+        },
+        "mainnetLaunch": {
+            "date": "2012-12-12",
+            "evidenceLink": "https://ubik.capital/solana/"
+        },
+        "description": "The professionals at Ubik Capital have extensive experience operating blockchain validators and supporting Proof-of-Stake networks. Their expertise in Solana infrastructure enables delegators to participate with confidence through secure, professionally managed validator services. By emphasizing operational excellence and long-term reliability, the team helps strengthen the future of decentralized blockchain networks."
     }
 ]
